@@ -85,8 +85,8 @@
   - type: PointLight
     rotation: 180
     autoRot: true
-    radius: 15
-    energy: 15
+    radius: 8
+    energy: 8
     color: "#4677ff"
     offset: "0, 0.2"
     # castShadows: true
