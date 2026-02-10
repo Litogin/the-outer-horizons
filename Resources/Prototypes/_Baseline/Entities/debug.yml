@@ -1,0 +1,26 @@
+- type: entity
+  parent: HandheldHealthAnalyzer
+  id: BaselineHealthAnalyzer
+  categories: [ ForkFiltered ]
+
+- type: entity
+  parent: WallSolid
+  id: BaselineWall
+  categories: [ ForkFiltered ]
+
+- type: entity
+  parent: LightPostSmall
+  id: BaselineLight
+  categories: [ ForkFiltered ]
+
+- type: entity
+  id: BaselineSpawnPoint
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: spawn point
+  components:
+  - type: SpawnPoint
+    job_id: BaselineRole
+  - type: Sprite
+    layers:
+      - state: green

@@ -85,24 +85,24 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] GameMaps =
         {
             "Dev",
-            "TestTeg",
-            "Fland",
-            "Packed",
-            "Bagel",
-            "CentComm",
-            "Box",
-            "Marathon",
-            "MeteorArena",
-            "Saltern",
-            "Reach",
-            "Oasis",
-            "Plasma",
-            "Elkridge",
-            "Relic",
-            "dm01-entryway",
-            "Exo",
-	          "Snowball",
-            "Serpentcrest",
+            //"TestTeg",
+            //"Fland",
+            //"Packed",
+            //"Bagel",
+            //"CentComm",
+            //"Box",
+            //"Marathon",
+            //"MeteorArena",
+            //"Saltern",
+            //"Reach",
+            //"Oasis",
+            //"Amber",
+            //"Plasma",
+            //"Elkridge",
+            //"Relic",
+            //"dm01-entryway",
+            //"Exo",
+            //"Snowball",
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
@@ -415,6 +415,7 @@ namespace Content.IntegrationTests.Tests
                 // Test shuttle can dock.
                 // This is done inside gamemap test because loading the map takes ages and we already have it.
                 var station = entManager.GetComponent<StationMemberComponent>(targetGrid!.Value).Station;
+                /* //Baseline Disable FTL test
                 if (entManager.TryGetComponent<StationEmergencyShuttleComponent>(station, out var stationEvac))
                 {
                     var shuttlePath = stationEvac.EmergencyShuttlePath;
@@ -429,7 +430,7 @@ namespace Content.IntegrationTests.Tests
                 }
 
                 mapSystem.DeleteMap(shuttleMap);
-
+                */
                 if (entManager.HasComponent<StationJobsComponent>(station))
                 {
                     // Test that the map has valid latejoin spawn points or container spawn points

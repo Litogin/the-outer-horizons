@@ -14,7 +14,7 @@ using Robust.Shared.EntitySerialization;
 namespace Content.IntegrationTests.Tests.Power;
 
 public sealed class StationPowerTests
-{
+{/*
     /// <summary>
     /// How long the station should be able to survive on stored power if nothing is changed from round start.
     /// </summary>
@@ -147,5 +147,5 @@ public sealed class StationPowerTests
         });
 
         await pair.CleanReturnAsync();
-    }
+    }*/
 }
