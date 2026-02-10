@@ -1,7 +1,6 @@
 - type: marking
   id: TarraBaseEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
   groupWhitelist: [OH14_Tarrantok]
   sprites:
   - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: TarraBaseTail
   bodyPart: Tail
-  markingCategory: Tail
   groupWhitelist: [OH14_Tarrantok]
   sprites:
   - sprite: _OuterHorizons/Mobs/Customization/tails.rsi
