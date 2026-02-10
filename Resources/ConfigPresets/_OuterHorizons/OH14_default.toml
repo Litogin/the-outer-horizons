@@ -1,0 +1,34 @@
+# Дефолт для хоста, поправьте потом порты
+
+[game]
+hostname = "The Outer Horizons"
+desc = "Ничем не примечательный форк про hard sci-fi."
+maxplayers = 40
+soft_max_players = 40
+map_pool = "DefaultMapPool"
+
+[net]
+tickrate = 30
+# port = 1212
+# bindto = "::,0.0.0.0"
+
+[movement]
+mob_pushing = true
+
+[build]
+fork_id = "outer_horizons"
+version = "demo"
+
+# [hub]
+# advertise = true
+# tags = "lang:ru,rp:med,region:eu_e"
+# hub_urls = "https://hub.spacestation14.com/"
+
+# [log]
+# path = "logs"
+# format = "log_%(date)s-%(time)s.txt"
+# level = 1
+# enabled = false
+
+# [status]
+# enabled = true
