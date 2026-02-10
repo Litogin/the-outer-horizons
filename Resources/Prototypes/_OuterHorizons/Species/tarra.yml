@@ -1,0 +1,18 @@
+- type: species
+  id: OH14_Tarrantok
+  name: species-name-tarrantok
+  roundStart: true
+  prototype: OH14_MobTarrantok
+  defaultSkinTone: "#faf7f7"
+  dollPrototype: OH14_TarrantokAppearance
+  skinColoration: Hues
+  maleFirstNames: OH14_NamesFirstMale
+  femaleFirstNames: OH14_NamesFirstFemale
+  naming: First
+  sexes:
+  - Male
+  - Female
+  minAge: 21
+  youngAge: 40
+  oldAge: 70
+  maxAge: 120

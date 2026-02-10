@@ -1,0 +1,290 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: OH14_Tarrantok
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ TarraBaseTail ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 3
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ TarraBaseEars ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: OH14_TarrantokAppearance
+  name: внешность Тарра
+  components:
+  - type: Inventory
+    templateId: OH14_Tarrantok
+    speciesId: OH14_Tarrantok
+    # femaleDisplacements:
+    #   jumpsuit:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Human/displacement.rsi
+    #         state: jumpsuit-female
+  - type: InitialBody
+    organs:
+      Torso: OH14_TarrantokOrganTorso
+      Head: OH14_TarrantokOrganHead
+      ArmLeft: OH14_TarrantokOrganArmLeft
+      ArmRight: OH14_TarrantokOrganArmRight
+      HandRight: OH14_TarrantokOrganHandRight
+      HandLeft: OH14_TarrantokOrganHandLeft
+      LegLeft: OH14_TarrantokOrganLegLeft
+      LegRight: OH14_TarrantokOrganLegRight
+      FootLeft: OH14_TarrantokOrganFootLeft
+      FootRight: OH14_TarrantokOrganFootRight
+      Brain: OH14_TarrantokOrganBrain
+      Eyes: OH14_TarrantokOrganEyes
+      Tongue: OH14_TarrantokOrganTongue
+      Appendix: OH14_TarrantokOrganAppendix
+      Ears: OH14_TarrantokOrganEars
+      Lungs: OH14_TarrantokOrganLungs
+      Heart: OH14_TarrantokOrganHeart
+      Stomach: OH14_TarrantokOrganStomach
+      Liver: OH14_TarrantokOrganLiver
+      Kidneys: OH14_TarrantokOrganKidneys
+  - type: HumanoidProfile
+    species: OH14_Tarrantok
+  - type: Sprite
+    layers:
+    # Torso
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    # Head
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    # Limbs
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    # Underwear
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    # Extremities
+    - map: ["enum.HumanoidVisualLayers.LFoot"]
+    - map: ["enum.HumanoidVisualLayers.RFoot"]
+    - map: ["enum.HumanoidVisualLayers.LHand"]
+    - map: ["enum.HumanoidVisualLayers.RHand"]
+    # Clothing
+    - map: ["pants"]
+    - map: ["jumpsuit"]
+    # Tail
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "enum.HumanoidVisualLayers.TailOverlay" ]
+    - map: ["tailbag"]
+    # Stuff that goes over the body but below equipment
+    - map: ["enum.HumanoidVisualLayers.Overlay"]
+    # More equipment
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "outerClothing" ]
+    - map: [ "back" ]
+    - map: [ "neck" ]
+    - map: [ "suitstorage" ]
+    # Stuff that goes in front of equipment
+    - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    # Stuff that goes in front of stuff that goes in front of equipment
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    # Extra stuff
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "clownedon" ] # Dynamically generated
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+
+- type: entity
+  parent:
+  - OH14_TarrantokAppearance
+  - BaseSpeciesMobOrganic
+  id: OH14_MobTarrantok
+  categories: [ ForkFiltered ]
+  name: Урист МакТарранток
+  components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+
+- type: entity
+  parent: OrganBase
+  id: OH14_TarrantokOrgan
+  abstract: true
+  suffix: Тарра
+
+- type: entity
+  id: OH14_TarrantokOrganMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Human ]
+
+- type: entity
+  parent: OH14_TarrantokOrgan
+  id: OH14_TarrantokOrganInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+
+- type: entity
+  parent: OH14_TarrantokOrgan
+  id: OH14_TarrantokOrganExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: OH14_Tarrantok
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OH14_TarrantokOrganInternal ]
+  id: OH14_TarrantokOrganBrain
+
+- type: entity
+  parent: [ OrganBaseEyes, OH14_TarrantokOrganInternal, OH14_TarrantokOrganExternal ]
+  id: OH14_TarrantokOrganEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTongue, OH14_TarrantokOrganInternal ]
+  id: OH14_TarrantokOrganTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OH14_TarrantokOrganInternal ]
+  id: OH14_TarrantokOrganAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OH14_TarrantokOrganInternal ]
+  id: OH14_TarrantokOrganEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OH14_TarrantokOrganInternal, OH14_TarrantokOrganMetabolizer ]
+  id: OH14_TarrantokOrganLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OH14_TarrantokOrganInternal, OH14_TarrantokOrganMetabolizer ]
+  id: OH14_TarrantokOrganHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OH14_TarrantokOrganInternal, OH14_TarrantokOrganMetabolizer ]
+  id: OH14_TarrantokOrganStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OH14_TarrantokOrganInternal, OH14_TarrantokOrganMetabolizer ]
+  id: OH14_TarrantokOrganLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OH14_TarrantokOrganInternal, OH14_TarrantokOrganMetabolizer ]
+  id: OH14_TarrantokOrganKidneys

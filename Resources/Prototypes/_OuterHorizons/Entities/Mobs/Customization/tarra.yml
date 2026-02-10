@@ -1,17 +1,17 @@
-# - type: marking
-#   id: TarraBaseEars
-#   bodyPart: HeadTop
-#   markingCategory: HeadTop
-#   speciesRestriction: [OH14_Tarrantok]
-#   sprites:
-#   - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
-#     state: Tarrantok
+- type: marking
+  id: TarraBaseEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
+    state: Tarrantok
 
-# - type: marking
-#   id: TarraBaseTail
-#   bodyPart: Tail
-#   markingCategory: Tail
-#   speciesRestriction: [OH14_Tarrantok]
-#   sprites:
-#   - sprite: _OuterHorizons/Mobs/Customization/tails.rsi
-#     state: tarrantok
+- type: marking
+  id: TarraBaseTail
+  bodyPart: Tail
+  markingCategory: Tail
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/tails.rsi
+    state: tarrantok
