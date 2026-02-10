@@ -108,11 +108,12 @@
     # Extremities
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
-    - map: ["enum.HumanoidVisualLayers.LHand"]
-    - map: ["enum.HumanoidVisualLayers.RHand"]
     # Clothing
     - map: ["pants"]
     - map: ["jumpsuit"]
+    # Extremities
+    - map: ["enum.HumanoidVisualLayers.LHand"]
+    - map: ["enum.HumanoidVisualLayers.RHand"]
     # Tail
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
     - map: [ "enum.HumanoidVisualLayers.TailOverlay" ]
