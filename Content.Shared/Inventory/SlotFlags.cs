@@ -26,6 +26,11 @@ public enum SlotFlags
     LEGS = 1 << 13,
     FEET = 1 << 14,
     SUITSTORAGE = 1 << 15,
+    // OH14-Changes start, new slots
+    PANTS = 1 << 16,
+    BANGLE = 1 << 17,
+    TAILBAG = 1 << 17,
+    // OH14-Changes end, new slots
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET

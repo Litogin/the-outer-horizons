@@ -236,6 +236,7 @@ public sealed class ThrusterSystem : EntitySystem
     private void OnThrusterInit(EntityUid uid, ThrusterComponent component, ComponentInit args)
     {
         _ambient.SetAmbience(uid, false);
+        _light.SetEnabled(uid, false); // OH14-Changes
 
         if (!component.Enabled)
         {
@@ -256,6 +257,8 @@ public sealed class ThrusterSystem : EntitySystem
     private void OnThrusterShutdown(EntityUid uid, ThrusterComponent component, ComponentShutdown args)
     {
         DisableThruster(uid, component);
+        _ambient.SetAmbience(uid, false);
+        _light.SetEnabled(uid, false); // OH14-Changes
     }
 
     private void OnPowerChange(EntityUid uid, ThrusterComponent component, ref PowerChangedEvent args)
@@ -267,6 +270,10 @@ public sealed class ThrusterSystem : EntitySystem
         else
         {
             DisableThruster(uid, component);
+            // OH14-Changes start
+            _ambient.SetAmbience(uid, false);
+            _light.SetEnabled(uid, false);
+            // OH14-Changes end
         }
     }
 
@@ -321,12 +328,14 @@ public sealed class ThrusterSystem : EntitySystem
             _appearance.SetData(uid, ThrusterVisualState.State, true, appearance);
         }
 
-        if (_light.TryGetLight(uid, out var pointLightComponent))
-        {
-            _light.SetEnabled(uid, true, pointLightComponent);
-        }
+        // OH14-Changes start
+        // if (_light.TryGetLight(uid, out var pointLightComponent))
+        // {
+        //     _light.SetEnabled(uid, true, pointLightComponent);
+        // }
 
-        _ambient.SetAmbience(uid, true);
+        // _ambient.SetAmbience(uid, true);
+        // OH14-Changes end
         RefreshCenter(uid, shuttleComponent);
     }
 
@@ -522,6 +531,11 @@ public sealed class ThrusterSystem : EntitySystem
             comp.Firing = true;
             appearanceQuery.TryGetComponent(uid, out var appearance);
             _appearance.SetData(uid, ThrusterVisualState.Thrusting, true, appearance);
+
+            // OH14-Changes start
+            _ambient.SetAmbience(uid, true);
+            _light.SetEnabled(uid, true);
+            // OH14-Changes end
         }
     }
 
@@ -547,6 +561,11 @@ public sealed class ThrusterSystem : EntitySystem
             appearanceQuery.TryGetComponent(uid, out var appearance);
             comp.Firing = false;
             _appearance.SetData(uid, ThrusterVisualState.Thrusting, false, appearance);
+
+            // OH14-Changes start
+            _ambient.SetAmbience(uid, false);
+            _light.SetEnabled(uid, false);
+            // OH14-Changes end
         }
     }
 
@@ -575,6 +594,11 @@ public sealed class ThrusterSystem : EntitySystem
                 appearanceQuery.TryGetComponent(uid, out var appearance);
                 comp.Firing = true;
                 _appearance.SetData(uid, ThrusterVisualState.Thrusting, true, appearance);
+
+                // OH14-Changes start
+                _ambient.SetAmbience(uid, true);
+                _light.SetEnabled(uid, true);
+                // OH14-Changes end
             }
         }
         else
@@ -587,6 +611,11 @@ public sealed class ThrusterSystem : EntitySystem
                 appearanceQuery.TryGetComponent(uid, out var appearance);
                 comp.Firing = false;
                 _appearance.SetData(uid, ThrusterVisualState.Thrusting, false, appearance);
+
+                // OH14-Changes start
+                _ambient.SetAmbience(uid, false);
+                _light.SetEnabled(uid, false);
+                // OH14-Changes end
             }
         }
     }

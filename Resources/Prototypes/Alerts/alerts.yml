@@ -4,29 +4,29 @@
   # If item is not in list it will go at the bottom (ties broken by alert type enum value)
   id: BaseAlertOrder
   order:
+    - category: Internals # OH14-Changes start, ребаланс алертов
     - category: Health
     - category: Stamina
     - alertType: SuitPower
-    - category: Internals
-    - alertType: Fire
-    - alertType: Handcuffed
-    - alertType: Ensnared
-    - category: Buckled
-    - alertType: Pulling
-    - alertType: Walking
-    - category: Piloting
-    - alertType: Corporeal
-    - alertType: Stun
-    - category: Breathing # Vox gang not calling this oxygen
-    - category: Pressure
-    - alertType: Bleed
-    - category: Temperature
+    - alertType: Breathing
+    - alertType: Pressure
+    - alertType: Temperature
+    - category: Bleed
     - category: Hunger
     - category: Thirst
+    - alertType: Stun
+    - category: Fire
+    - alertType: Corporeal
+    - category: Handcuffed
+    - alertType: Buckled
+    - category: Ensnared
     - alertType: Magboots
     - alertType: Rooted
     - alertType: Pacified
     - alertType: Stealthy
+    - alertType: Pulling
+    - alertType: Walking
+    - category: Piloting # OH14-Changes end, ребаланс алертов
 
 - type: entity
   id: AlertSpriteView
@@ -40,7 +40,7 @@
   id: LowOxygen
   category: Breathing
   icons:
-  - sprite: /Textures/Interface/Alerts/breathing.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/breathing.rsi # OH14-Changes, new UI
     state: not_enough_oxy
   name: alerts-low-oxygen-name
   description: alerts-low-oxygen-desc
@@ -49,7 +49,7 @@
   id: LowNitrogen
   category: Breathing
   icons:
-    - sprite: /Textures/Interface/Alerts/breathing.rsi
+    - sprite: /Textures/_OuterHorizons/Interface/Alerts/breathing.rsi # OH14-Changes, new UI
       state: not_enough_nitro
   name: alerts-low-nitrogen-name
   description: alerts-low-nitrogen-desc
@@ -58,7 +58,7 @@
   id: Toxins
   category: Toxins
   icons:
-  - sprite: /Textures/Interface/Alerts/breathing.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/breathing.rsi # OH14-Changes, new UI
     state: too_much_tox
   name: alerts-high-toxin-name
   description: alerts-high-toxin-desc
@@ -67,9 +67,9 @@
   id: LowPressure
   category: Pressure
   icons:
-  - sprite: /Textures/Interface/Alerts/pressure.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/pressure.rsi # OH14-Changes, new UI
     state: lowpressure1
-  - sprite: /Textures/Interface/Alerts/pressure.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/pressure.rsi # OH14-Changes, new UI
     state: lowpressure2
   maxSeverity: 2
   name: alerts-low-pressure-name
@@ -79,9 +79,9 @@
   id: HighPressure
   category: Pressure
   icons:
-  - sprite: /Textures/Interface/Alerts/pressure.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/pressure.rsi # OH14-Changes, new UI
     state: highpressure1
-  - sprite: /Textures/Interface/Alerts/pressure.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/pressure.rsi # OH14-Changes, new UI
     state: highpressure2
   maxSeverity: 2
   name: alerts-high-pressure-name
@@ -89,7 +89,7 @@
 
 - type: alert
   id: Fire
-  icons: [ /Textures/Interface/Alerts/Fire/fire.png ]
+  icons: [ /Textures/_OuterHorizons/Interface/Alerts/Fire/fire.png ] # OH14-Changes, new UI
   clickEvent: !type:ResistFireAlertEvent
   name: alerts-on-fire-name
   description: alerts-on-fire-desc
@@ -99,11 +99,11 @@
   id: Cold
   category: Temperature
   icons:
-  - sprite: /Textures/Interface/Alerts/temperature.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/temperature.rsi # OH14-Changes, new UI
     state: cold1
-  - sprite: /Textures/Interface/Alerts/temperature.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/temperature.rsi # OH14-Changes, new UI
     state: cold2
-  - sprite: /Textures/Interface/Alerts/temperature.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/temperature.rsi # OH14-Changes, new UI
     state: cold3
   maxSeverity: 3
   name: alerts-too-cold-name
@@ -113,11 +113,11 @@
   id: Hot
   category: Temperature
   icons:
-  - sprite: /Textures/Interface/Alerts/temperature.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/temperature.rsi # OH14-Changes, new UI
     state: hot1
-  - sprite: /Textures/Interface/Alerts/temperature.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/temperature.rsi # OH14-Changes, new UI
     state: hot2
-  - sprite: /Textures/Interface/Alerts/temperature.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/temperature.rsi # OH14-Changes, new UI
     state: hot3
   maxSeverity: 3
   name: alerts-too-hot-name
@@ -125,7 +125,7 @@
 
 - type: alert
   id: Weightless
-  icons: [ /Textures/Interface/Alerts/Weightless/weightless.png ]
+  icons: [ /Textures/_OuterHorizons/Interface/Alerts/Weightless/weightless.png ] # OH14-Changes, new UI
   name: alerts-weightless-name
   description: alerts-weightless-desc
 
@@ -141,8 +141,8 @@
 - type: alert
   id: Stun
   icons:
-  - sprite: /Textures/Objects/Weapons/Melee/stunbaton.rsi #Should probably draw a proper icon
-    state: stunbaton_off
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/crawling.rsi # OH14-Changes, new UI
+    state: crawling
   name: alerts-stunned-name
   description: alerts-stunned-desc
 
@@ -150,15 +150,15 @@
   id: Knockdown
   clickEvent: !type:KnockedDownAlertEvent
   icons:
-  - sprite: /Textures/Interface/Alerts/stunnable.rsi
-    state: knocked-down
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/crawling.rsi # OH14-Changes, new UI
+    state: crawling
   name: alerts-knockdown-name
   description: alerts-knockdown-desc
 
 - type: alert
   id: Handcuffed
   clickEvent: !type:RemoveCuffsAlertEvent
-  icons: [ /Textures/Interface/Alerts/Handcuffed/Handcuffed.png ]
+  icons: [ /Textures/_OuterHorizons/Interface/Alerts/Handcuffed/Handcuffed.png ] # OH14-Changes, new UI
   name: alerts-handcuffed-name
   description: alerts-handcuffed-desc
 
@@ -166,7 +166,7 @@
   id: Ensnared
   clickEvent: !type:RemoveEnsnareAlertEvent
   icons:
-  - sprite: /Textures/Interface/Alerts/ensnared.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/ensnared.rsi # OH14-Changes, new UI
     state: ensnared
   name: alerts-ensnared-name
   description: alerts-ensnared-desc
@@ -175,7 +175,7 @@
   id: Buckled
   category: Buckled
   clickEvent: !type:UnbuckleAlertEvent
-  icons: [ /Textures/Interface/Alerts/Buckle/buckled.png ]
+  icons: [ /Textures/_OuterHorizons/Interface/Alerts/Buckle/buckled.png ]
   name: alerts-buckled-name
   description: alerts-buckled-desc
 
@@ -183,7 +183,7 @@
   id: HumanCrit
   category: Health
   icons:
-  - sprite: /Textures/Interface/Alerts/human_critical.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/human_critical.rsi # OH14-Changes, new UI
     state: critical
   name: alerts-crit-name
   description: alerts-crit-desc
@@ -192,7 +192,7 @@
   id: HumanDead
   category: Health
   icons:
-  - sprite: /Textures/Interface/Alerts/human_dead.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/human_dead.rsi # OH14-Changes, new UI
     state: dead
   name: alerts-dead-name
   description: alerts-dead-desc
@@ -201,15 +201,15 @@
   id: HumanHealth
   category: Health
   icons:
-  - sprite: /Textures/Interface/Alerts/human_alive.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/human_alive.rsi # OH14-Changes, new UI
     state: health0
-  - sprite: /Textures/Interface/Alerts/human_alive.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/human_alive.rsi # OH14-Changes, new UI
     state: health1
-  - sprite: /Textures/Interface/Alerts/human_alive.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/human_alive.rsi # OH14-Changes, new UI
     state: health2
-  - sprite: /Textures/Interface/Alerts/human_alive.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/human_alive.rsi # OH14-Changes, new UI
     state: health3
-  - sprite: /Textures/Interface/Alerts/human_alive.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/human_alive.rsi # OH14-Changes, new UI
     state: health4
   name: alerts-health-name
   description: alerts-health-desc
@@ -305,11 +305,11 @@
   category: Internals
   clickEvent: !type:ToggleInternalsAlertEvent
   icons:
-  - sprite: /Textures/Interface/Alerts/internals.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/internals.rsi # OH14-Changes, new UI
     state: internal0
-  - sprite: /Textures/Interface/Alerts/internals.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/internals.rsi # OH14-Changes, new UI
     state: internal1
-  - sprite: /Textures/Interface/Alerts/internals.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/internals.rsi # OH14-Changes, new UI
     state: internal2
   name: alerts-internals-name
   description: alerts-internals-desc
@@ -320,9 +320,7 @@
   id: PilotingShuttle
   category: Piloting
   clickEvent: !type:StopPilotingAlertEvent
-  icons:
-  - sprite: /Textures/Interface/Alerts/shuttle.rsi
-    state: piloting
+  icons: [ /Textures/_OuterHorizons/Interface/Alerts/piloting.png ] # OH14-Changes, new UI
   name: alerts-piloting-name
   description: alerts-piloting-desc
 
@@ -330,7 +328,7 @@
   id: Peckish
   category: Hunger
   icons:
-  - sprite: /Textures/Interface/Alerts/hunger.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/hunger.rsi # OH14-Changes, new UI
     state: peckish
   name: alerts-hunger-name
   description: alerts-hunger-desc
@@ -339,19 +337,19 @@
   id: Stamina
   category: Stamina
   icons:
-  - sprite: /Textures/Interface/Alerts/stamina.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/stamina.rsi # OH14-Changes, new UI
     state: stamina0
-  - sprite: /Textures/Interface/Alerts/stamina.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/stamina.rsi # OH14-Changes, new UI
     state: stamina1
-  - sprite: /Textures/Interface/Alerts/stamina.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/stamina.rsi # OH14-Changes, new UI
     state: stamina2
-  - sprite: /Textures/Interface/Alerts/stamina.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/stamina.rsi # OH14-Changes, new UI
     state: stamina3
-  - sprite: /Textures/Interface/Alerts/stamina.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/stamina.rsi # OH14-Changes, new UI
     state: stamina4
-  - sprite: /Textures/Interface/Alerts/stamina.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/stamina.rsi # OH14-Changes, new UI
     state: stamina5
-  - sprite: /Textures/Interface/Alerts/stamina.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/stamina.rsi # OH14-Changes, new UI
     state: stamina6
   name: alerts-stamina-name
   description: alerts-stamina-desc
@@ -362,7 +360,7 @@
   id: Starving
   category: Hunger
   icons:
-  - sprite: /Textures/Interface/Alerts/hunger.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/hunger.rsi # OH14-Changes, new UI
     state: starving
   name: alerts-starving-name
   description: alerts-starving-desc
@@ -371,7 +369,7 @@
   id: Thirsty
   category: Thirst
   icons:
-  - sprite: /Textures/Interface/Alerts/thirst.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/thirst.rsi # OH14-Changes, new UI
     state: thirsty
   name: alerts-thirsty-name
   description: alerts-thirsty-desc
@@ -380,7 +378,7 @@
   id: Parched
   category: Thirst
   icons:
-  - sprite: /Textures/Interface/Alerts/thirst.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/thirst.rsi # OH14-Changes, new UI
     state: parched
   name: alerts-parched-name
   description: alerts-parched-desc
@@ -407,14 +405,14 @@
 
 - type: alert
   id: Pulled
-  icons: [ /Textures/Interface/Alerts/Pull/pulled.png ]
+  icons: [ /Textures/_OuterHorizons/Interface/Alerts/Pull/pulled.png ] # OH14-Changes, new UI
   clickEvent: !type:StopBeingPulledAlertEvent
   name: alerts-pulled-name
   description: alerts-pulled-desc
 
 - type: alert
   id: Pulling
-  icons: [ /Textures/Interface/Alerts/Pull/pulling.png ]
+  icons: [ /Textures/_OuterHorizons/Interface/Alerts/Pull/pulling.png ] # OH14-Changes, new UI
   clickEvent: !type:StopPullingAlertEvent
   name: alerts-pulling-name
   description: alerts-pulling-desc
@@ -422,27 +420,27 @@
 - type: alert
   id: Bleed
   icons:
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed0
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed1
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed2
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed3
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed4
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed5
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed6
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed7
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed8
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed9
-  - sprite: /Textures/Interface/Alerts/bleed.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/bleed.rsi # OH14-Changes, new UI
     state: bleed10
   name: alerts-bleed-name
   description: alerts-bleed-desc
@@ -452,7 +450,7 @@
 - type: alert
   id: Pacified
   icons:
-  - sprite: /Textures/Interface/Alerts/pacified.rsi
+  - sprite: /Textures/_OuterHorizons/Interface/Alerts/pacified.rsi # OH14-Changes, new UI
     state: icon
   name: alerts-pacified-name
   description: alerts-pacified-desc
