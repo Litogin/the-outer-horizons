@@ -1,0 +1,95 @@
+- type: entity
+  parent: BaseStructure
+  id: OH14_RackBasic
+  categories: [ ForkFiltered ]
+  name: стойка
+  suffix: Обычная
+  description: Стойка, в основном для рабочих инструментов.
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/dodgeball.ogg"
+  # - type: Construction
+  #   graph: Rack
+  #   node: Rack
+  - type: Anchorable
+  - type: InteractionOutline
+  - type: PlaceableSurface
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
+    state: rack
+    snapCardinals: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.3,0.3,0.3"
+        density: 140
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Climbable
+  - type: StaticPrice
+    price: 30
+
+- type: entity
+  parent: OH14_RackBasic
+  id: OH14_RackEngi
+  suffix: Инженерная
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
+    state: rack-engi
+    snapCardinals: true
+
+- type: entity
+  parent: OH14_RackBasic
+  id: OH14_RackMed
+  suffix: Медецинская
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
+    state: rack-med
+    snapCardinals: true
+
+- type: entity
+  parent: OH14_RackBasic
+  id: OH14_RackAlt
+  name: полки
+  description: Устали от скучных стоек для инструментов? А что насчет двухэтажной?!
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
+    state: racks
+    snapCardinals: true

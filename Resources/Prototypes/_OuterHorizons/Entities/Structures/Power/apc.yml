@@ -1,0 +1,204 @@
+- type: entity
+  parent: BaseWallmount
+  categories: [ HideSpawnMenu ]
+  id: OH14_BaseAPC
+  name: ЛКП
+  description: Щиток для подачи энергии к вашему оборудованию.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -10
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/hdd_buzz.ogg
+  - type: PointLight
+    radius: 1.5
+    energy: 1.0
+    color: "#3db83b"
+    castShadows: false
+    netsync: false
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _OuterHorizons/Structures/Power/apc.rsi
+    layers:
+    - state: base
+    - state: display_charging
+      shader: unshaded
+      map: ["enum.ApcVisualLayers.ChargeState"]
+    - state: panel_open
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      visible: false
+    - state: panel_closed
+      map: ["enum.WiresVisualLayers.MaintenancePanelClosed"]
+      visible: true
+  - type: GenericVisualizer
+    visuals:
+      enum.WiresVisuals.MaintenancePanelState:
+        enum.WiresVisualLayers.MaintenancePanelClosed:
+          True: { visible: false }
+          False: { visible: true }
+  - type: Appearance
+  # - type: ApcVisuals
+  - type: Battery
+    # Very important:
+    # Disable networking to prevent the battery getting continuously dirtied every tick as it interacts with the power network.
+    # This can not be done by changing the charge rate as the power supply ramps up over time.
+    # This disables prediction for this battery.
+    netsync: false
+    maxCharge: 50000
+    startingCharge: 0
+  - type: ExaminableBattery
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: MVPower
+      output:
+        !type:CableDeviceNode
+        nodeGroupID: Apc
+  - type: PowerMonitoringDevice
+    group: APC
+    sourceNode: input
+    loadNode: output
+    collectionName: apc
+    sprite: _OuterHorizons/Structures/Power/apc.rsi
+    state: static
+  - type: BatteryCharger
+    voltage: Medium
+  - type: PowerProvider
+    voltage: Apc
+  - type: Apc
+    voltage: Apc
+  - type: ExtensionCableProvider
+  - type: UserInterface
+    interfaces:
+      enum.ApcUiKey.Key:
+        type: ApcBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: false
+    key: enum.ApcUiKey.Key
+  - type: Construction
+    graph: OH14_APC
+    node: OH14_APC
+  - type: PowerNetworkBattery
+    maxSupply: 10000
+    maxChargeRate: 5000
+    supplyRampTolerance: 1000
+    supplyRampRate: 500
+  - type: WallMount
+  - type: WiresPanel
+  - type: Wires
+    alwaysRandomize: true
+    boardName: wires-board-name-apc
+    layoutId: APC
+  - type: WiresVisuals
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors: #excess damage, don't spawn entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 2
+          OH14_SheetElectronics1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+  - type: StationInfiniteBatteryTarget
+  - type: Electrified
+    onHandInteract: false
+    onInteractUsing: false
+    onBump: false
+    requirePower: true
+    mediumVoltageNode: input
+    lowVoltageNode: output
+  - type: LightningTarget
+    priority: 1
+  - type: GuideHelp
+    guides:
+    - VoltageNetworks
+    - Power
+
+# APC under construction
+- type: entity
+  parent: BaseWallmountMetallic
+  categories: [ ForkFiltered ]
+  id: OH14_FrameAPC
+  name: каркас ЛКП
+  description: A control terminal for the area's electrical systems, lacking the electronics.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Power/apc.rsi
+    state: frame
+  - type: Construction
+    graph: OH14_APC
+    node: apcFrame
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors: #excess damage, don't spawn entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# Constructed APC
+- type: entity
+  parent: OH14_BaseAPC
+  id: OH14_APC_Open
+  categories: [ ForkFiltered ]
+  suffix: Вскрыт
+  components:
+  - type: WiresPanel
+    open: true
+
+# APCs in use
+- type: entity
+  parent: OH14_BaseAPC
+  id: OH14_APC_Basic
+  categories: [ ForkFiltered ]
+  suffix: Закрыт, 50kJ
+  components:
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000

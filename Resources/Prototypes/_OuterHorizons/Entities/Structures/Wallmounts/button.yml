@@ -1,0 +1,58 @@
+- type: entity
+  parent: BaseWallmountMetallic
+  id: OH14_ButtonBasic
+  name: кнопка
+  categories: [ ForkFiltered ]
+  description: Оно нажимается, оно посылает сигналы, оно взрывает закладку С4 в другой части галлактики.
+  components:
+  - type: Construction
+    graph: OH14_Button
+    node: OH14_Button
+  - type: WallMount
+    arc: 175
+  - type: StationAiWhitelist
+  - type: Sprite
+    drawdepth: SmallObjects
+    sprite: _OuterHorizons/Structures/Wallmounts/button.rsi
+    state: button
+  - type: SignalSwitch
+    onPort: Pressed
+    offPort: Pressed
+    statusPort: Pressed
+    clickSound: /Audio/_OuterHorizons/Machines/button.ogg
+  - type: UseDelay
+    delay: 0.5 # prevent light-toggling auto-clickers.
+  - type: Rotatable
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSource
+    ports:
+    - Pressed
+    # - On
+    # - Off
+    # - Status
+    # lastSignals:
+    #   Status: false
+  - type: Transform
+    anchored: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -8

@@ -1,0 +1,95 @@
+- type: decal
+  id: OH14_WarnLineCornerNe
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_corner_ne
+
+- type: decal
+  id: OH14_WarnLineCornerSe
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_corner_se
+
+- type: decal
+  id: OH14_WarnLineCornerNw
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_corner_nw
+
+- type: decal
+  id: OH14_WarnLineCornerSw
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_corner_sw
+
+- type: decal
+  id: OH14_WarnLineInnerNe
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_inner_ne
+
+- type: decal
+  id: OH14_WarnLineInnerSe
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_inner_se
+
+- type: decal
+  id: OH14_WarnLineInnerNw
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_inner_nw
+
+- type: decal
+  id: OH14_WarnLineInnerSw
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_inner_sw
+
+- type: decal
+  id: OH14_WarnLineLineN
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_line_n
+
+- type: decal
+  id: OH14_WarnLineLineE
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_line_e
+
+- type: decal
+  id: OH14_WarnLineLineS
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_line_s
+
+- type: decal
+  id: OH14_WarnLineLineW
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: thin_line_w

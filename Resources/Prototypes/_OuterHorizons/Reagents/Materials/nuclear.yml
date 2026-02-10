@@ -1,0 +1,6 @@
+- type: material
+  id: OH14_NuclearRod
+  stackEntity: OH14_NuclearRod
+  name: ядерный стержень
+  icon: { sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi, state: icon }
+  price: 10

@@ -1,0 +1,26 @@
+- type: constructionGraph
+  id: OH14_WallDirectional
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_WallDirectional
+          steps:
+            - material: OH14_Materials
+              amount: 2
+              doAfter: 2
+    - node: OH14_WallDirectional
+      entity: OH14_WallDirectional
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 1

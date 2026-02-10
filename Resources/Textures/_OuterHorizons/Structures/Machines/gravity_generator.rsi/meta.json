@@ -1,0 +1,59 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "size":
+    {
+        "x": 32,
+        "y": 32
+    },
+    "states":
+    [
+        {
+            "name": "off"
+        },
+        {
+            "name": "on"
+        },
+        {
+            "name": "idle",
+            "delays": [
+                [
+                  1,
+                  1
+                ]
+              ]
+        },
+        {
+            "name": "activating",
+            "delays": [
+                [
+                  0.3,
+                  0.3,
+                  0.3,
+                  0.3
+                ]
+              ]
+        },
+        {
+            "name": "activated",
+            "delays": [
+                [
+                  1,
+                  1
+                ]
+              ]
+        },
+        {
+            "name": "startup",
+            "delays": [
+                [
+                  0.3,
+                  0.3,
+                  0.3,
+                  0.3
+                ]
+              ]
+        }
+    ]
+}

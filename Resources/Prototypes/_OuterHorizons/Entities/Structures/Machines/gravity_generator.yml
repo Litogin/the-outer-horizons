@@ -1,0 +1,64 @@
+- type: entity
+  id: OH14_GravityGeneratorMini
+  parent: [ GravityGenerator, ConstructibleMachine ]
+  categories: [ ForkFiltered ]
+  name: генератор гравитации
+  description: Вы не знаете как это работает, ваши коллеги не знают как это работает, никто не знает как это работает, используйте на свой страх и риск.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/gravity_generator.rsi
+    snapCardinals: true
+    layers:
+      - state: on
+        map: ["enum.GravityGeneratorVisualLayers.Base"]
+      - state: idle
+        shader: unshaded
+        map: ["enum.GravityGeneratorVisualLayers.Core"]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 3125
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MachineFrameDestroyed:
+            min: 1
+            max: 1
+  - type: WiresPanel
+  # - type: Machine
+  #   board: MiniGravityGeneratorCircuitboard
+  - type: ApcPowerReceiver
+    powerLoad: 500
+  - type: PowerCharge
+    idlePower: 15
+    activePower: 500
+  - type: GravityGenerator
+    lightRadiusMin: 0.75
+    lightRadiusMax: 3
+    coreStartupState: "startup"
+    coreIdleState: "idle"
+    coreActivatedState: "activated"
+  - type: PointLight
+    radius: 0.75
+    energy: 1
+    castShadows: true
+    color: "#b0a531"
+  - type: StaticPrice
+    price: 2000

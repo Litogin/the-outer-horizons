@@ -1,0 +1,91 @@
+- type: constructionGraph
+  id: OH14_Airlock
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_AirlockGirder
+          # completed:
+          #   - !type:SnapToGrid
+          #     southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 1
+    - node: OH14_AirlockGirder
+      entity: OH14_AirlockAssembly
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+        - to: OH14_Airlock
+          steps:
+            - material: OH14_Materials
+              amount: 3
+              doAfter: 1
+            - material: OH14_Electronic
+              amount: 1
+              doAfter: 1
+        - to: OH14_AirlockDock
+          steps:
+            - material: OH14_Components
+              amount: 3
+              doAfter: 1
+            - material: OH14_Materials
+              amount: 3
+              doAfter: 1
+            - material: OH14_Electronic
+              amount: 1
+              doAfter: 1
+    - node: OH14_Airlock
+      entity: OH14_Airlock
+      edges:
+        - to: OH14_AirlockGirder
+          conditions:
+          - !type:EntityAnchored {}
+          - !type:DoorWelded {}
+          - !type:DoorBolted
+            value: false
+          - !type:WirePanel {}
+          - !type:AllWiresCut
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: OH14_AirlockDock
+      entity: OH14_ShuttleDock
+      edges:
+        - to: OH14_AirlockGirder
+          conditions:
+          - !type:EntityAnchored {}
+          - !type:DoorWelded {}
+          - !type:DoorBolted
+            value: false
+          - !type:WirePanel {}
+          - !type:AllWiresCut
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1

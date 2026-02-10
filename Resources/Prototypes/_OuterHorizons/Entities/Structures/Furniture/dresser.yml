@@ -1,0 +1,58 @@
+- type: entity
+  id: OH14_Dresser
+  categories: [ ForkFiltered ]
+  parent: BaseStructure
+  name: комод
+  description: Маленький серый комод для нижнего белья и ядерных стержней.
+  components:
+  - type: Transform
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
+    state: dresser_dark
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 5
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Storage
+    storageOpenSound: /Audio/_OuterHorizons/Storage/dresser_open.ogg
+    storageCloseSound: /Audio/_OuterHorizons/Storage/dresser_close.ogg
+    grid:
+    - 0,0,3,3
+    maxItemSize: Normal
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Anchorable
+  # - type: Rotatable
+  # - type: Construction
+  #   graph: Dresser
+  #   node: dresser

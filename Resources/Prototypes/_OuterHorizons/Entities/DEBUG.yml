@@ -1,0 +1,51 @@
+- type: entity
+  name: DEBUG1
+  id: OH14_DEBUG1
+  parent: BaseStructure
+  categories: [ ForkFiltered ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/DEBUG.rsi
+    state: icon
+    # noRot: true
+    # offset: "0, -0.4"
+    # snapCardinals: true # вроде то же самое что и noRot
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.5
+        density: 120
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: DEBUG2
+  id: OH14_DEBUG2
+  parent: BaseStructure
+  categories: [ ForkFiltered ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/DEBUG.rsi
+    state: no_image
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.5
+        density: 120
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: WallDebug
+  id: OH14_WallDebug
+  categories: [ ForkFiltered ]

@@ -1,0 +1,109 @@
+- type: entity
+  abstract: true
+  parent: OH14_BaseItem
+  id: OH14_GasTankBase
+  name: газовый баллон
+  description: Ручной газовый баллон, который можно носить с собой. Любые теории того что вы дышите воздухом из огнетушителя - ложь.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tanks/white.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: _OuterHorizons/Objects/Tanks/white.rsi
+  - type: Clothing
+    quickEquip: false
+    sprite: _OuterHorizons/Objects/Tanks/white.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: UseDelay
+    delays:
+      gasTank:
+        length: 1.0
+  - type: ActivatableUI
+    key: enum.SharedGasTankUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SharedGasTankUiKey.Key:
+        type: GasTankBoundUserInterface
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # If gas tank volume is changed, adjust MinimumTritiumOxyburnEnergy in Atmospherics.cs by the same proportions
+      volume: 5
+      temperature: 293.15
+    tankLowPressure: 30.0
+  - type: Explosive
+    explosionType: MicroBomb
+    maxIntensity: 20
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    attackRate: 0.8
+    damage:
+      types:
+        Blunt: 10
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 185
+  - type: StaticPrice
+    price: 30
+
+- type: entity
+  parent: OH14_GasTankBase
+  id: OH14_OxygenTankRed
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tanks/red.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tanks/red.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Objects/Tanks/red.rsi
+
+- type: entity
+  id: OH14_OxygenTankRedFilled
+  parent: OH14_OxygenTankRed
+  suffix: Заполнен
+  components:
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # 31 minutes
+      volume: 5
+      moles:
+        Oxygen: 2.051379050 # oxygen
+      temperature: 293.15
+
+- type: entity
+  parent: OH14_GasTankBase
+  id: OH14_OxygenTankWhite
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tanks/white.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tanks/white.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Objects/Tanks/white.rsi
+
+- type: entity
+  id: OH14_OxygenTankWhiteFilled
+  parent: OH14_OxygenTankWhite
+  suffix: Заполнен
+  components:
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # 31 minutes
+      volume: 5
+      moles:
+        Oxygen: 2.051379050 # oxygen
+      temperature: 293.15

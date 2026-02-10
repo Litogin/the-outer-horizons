@@ -1,0 +1,96 @@
+# - type: entity
+#   parent: BaseMobSpeciesOrganic
+#   id: BaseMobTarrantok
+#   name: Urist McHands
+#   abstract: true
+#   components:
+#   - type: Hunger
+#   - type: Icon
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: full
+#   - type: Thirst
+#   - type: Butcherable
+#     butcheringType: Spike
+#     spawned:
+#     - id: FoodMeatHuman
+#       amount: 5
+#   - type: Sprite
+#     layers:
+#     - map: [ "enum.HumanoidVisualLayers.Chest" ]
+#     - map: [ "enum.HumanoidVisualLayers.Head" ]
+#     - map: [ "enum.HumanoidVisualLayers.Snout" ]
+#     - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+#     - map: [ "enum.HumanoidVisualLayers.RArm" ]
+#     - map: [ "enum.HumanoidVisualLayers.LArm" ]
+#     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+#     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+#     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+#     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+#     - map: ["enum.HumanoidVisualLayers.LFoot"]
+#     - map: ["enum.HumanoidVisualLayers.RFoot"]
+#     - map: ["pants"]
+#     - map: ["jumpsuit"]
+#     - map: [ "enum.HumanoidVisualLayers.Tail" ]
+#     - map: ["tailbag"]
+#     - map: ["enum.HumanoidVisualLayers.LHand"]
+#     - map: ["enum.HumanoidVisualLayers.RHand"]
+#     - map: [ "gloves" ]
+#     - map: [ "shoes" ]
+#     - map: [ "ears" ]
+#     - map: [ "eyes" ]
+#     - map: [ "belt" ]
+#     - map: [ "id" ]
+#     - map: [ "outerClothing" ]
+#     - map: [ "back" ]
+#     - map: [ "neck" ]
+#     - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
+#     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+#     - map: [ "enum.HumanoidVisualLayers.Hair" ]
+#     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+#     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+#     - map: [ "mask" ]
+#     - map: [ "head" ]
+#     - map: [ "pocket1" ]
+#     - map: [ "pocket2" ]
+#     - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+#       color: "#ffffff"
+#       sprite: Objects/Misc/handcuffs.rsi
+#       state: body-overlay-2
+#       visible: false
+#     - map: [ "clownedon" ] # Dynamically generated
+#       sprite: "Effects/creampie.rsi"
+#       state: "creampie_human"
+#       visible: false
+#   - type: Inventory
+#     templateId: OH14_Tarrantok
+#   # - type: EyeCursorOffset
+#   #   maxOffset: 1
+#   - type: HumanoidAppearance
+#     species: OH14_Tarrantok
+#   - type: Body
+#     prototype: OH14_TarrantokBody
+#     requiredLegs: 2
+#     # hideLayersOnEquip:
+#     # - Hair
+#     # - Snout
+#   # - type: Inventory
+#   #   femaleDisplacements:
+#   #     jumpsuit:
+#   #       sizeMaps:
+#   #         32:
+#   #           sprite: Mobs/Species/Human/displacement.rsi
+#   #           state: jumpsuit-female
+
+
+# - type: entity
+#   parent: BaseMobTarrantok
+#   id: MobTarrantokDummy
+#   categories: [ HideSpawnMenu ]
+#   # components:
+#   # - type: Inventory
+#   #   femaleDisplacements:
+#   #     jumpsuit:
+#   #       sizeMaps:
+#   #         32:
+#   #           sprite: Mobs/Species/Human/displacement.rsi
+#   #           state: jumpsuit-female

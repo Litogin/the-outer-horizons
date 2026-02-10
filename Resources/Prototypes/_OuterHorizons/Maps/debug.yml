@@ -1,0 +1,52 @@
+- type: gameMap
+  id: Empty
+  mapName: Empty
+  mapPath: /Maps/Test/empty.yml
+  minPlayers: 0
+  stations:
+    Empty:
+      stationProto: OH14_StandardStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Empty"
+        - type: StationJobs
+          availableJobs:
+            BaselineRole: [ -1, -1 ]
+
+- type: gameMap
+  id: Dev
+  mapName: Dev
+  mapPath: /Maps/_Baseline/baseline.yml
+  minPlayers: 0
+  stations:
+    Dev:
+      stationProto: OH14_StandardStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Dev"
+        - type: StationJobs
+          availableJobs:
+            BaselineRole: [ -1, -1 ]
+
+- type: gameMap
+  id: Dev22
+  mapName: Dev22
+  mapPath: /Maps/_OuterHorizons/megatest.yml
+  minPlayers: 0
+  stations:
+    Dev:
+      stationProto: OH14_StandardStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Dev"
+        - type: StationJobs
+          availableJobs:
+            OH14_RreRole: [ -1, -1 ]
+    Dev2:
+      stationProto: OH14_StandardStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Dev2"
+        - type: StationJobs
+          availableJobs:
+            OH14_UcoRole: [ -1, -1 ]

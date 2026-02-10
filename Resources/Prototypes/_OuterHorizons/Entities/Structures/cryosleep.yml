@@ -1,0 +1,79 @@
+- type: entity
+  parent: BaseStructure
+  id: OH14_CryogenicSleepUnit
+  categories: [ ForkFiltered ]
+  name: капсула криосна
+  description: Капсула криосна, способная защитить вас от самых разных внешних невзгод, пока вы заморожены. Хотели бы сыграть в ящик?
+  components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
+  - type: Sprite
+    noRot: true
+    sprite: _OuterHorizons/Structures/cryostorage.rsi
+    layers:
+    - state: sleeper_0
+      map: ["base"]
+    - state: glow
+      shader: unshaded
+  - type: UserInterface
+    interfaces:
+      enum.CryostorageUIKey.Key:
+        type: CryostorageBoundUserInterface
+  - type: ActivatableUI
+    key: enum.CryostorageUIKey.Key
+  # - type: AccessReader
+  #   breakOnAccessBreaker: false
+  #   access: [["Cryogenics"]]
+  #   examinationText: access-reader-examination-functionality-restricted
+  - type: InteractionOutline
+  - type: Cryostorage
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.05"
+        density: 190
+        mask:
+        - TableMask
+  - type: DragInsertContainer
+    containerId: storage
+    entryDelay: 2
+  - type: ExitContainerOnMove
+    containerId: storage
+  - type: PointLight
+    color: Lime
+    radius: 1.5
+    energy: 0.5
+    castShadows: false
+  - type: ContainerContainer
+    containers:
+      storage: !type:ContainerSlot
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.CryostorageVisuals.Full:
+        base:
+          True: { state: sleeper_1 }
+          False: { state: sleeper_0 }
+
+# This one handles all spawns, latejoin and roundstart.
+- type: entity
+  parent: OH14_CryogenicSleepUnit
+  id: OH14_CryogenicSleepUnitSpawner
+  suffix: Spawner, Roundstart AllJobs
+  components:
+  - type: ContainerSpawnPoint
+    containerId: storage
+
+# This one only handles latejoin spawns.
+- type: entity
+  parent: OH14_CryogenicSleepUnit
+  id: OH14_CryogenicSleepUnitSpawnerLateJoin
+  suffix: Spawner, LateJoin
+  components:
+    - type: ContainerSpawnPoint
+      containerId: storage
+      spawnType: LateJoin

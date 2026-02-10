@@ -1,0 +1,137 @@
+- type: constructionGraph
+  id: OH14_GasPumpsVent
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: OH14_GasVentPump
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasPassiveVent
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasVentScrubber
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasOutletInjector
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_AirSensor
+      steps:
+      - material: OH14_Materials
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+
+  - node: OH14_AirSensor
+    entity: OH14_AirSensor
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetMaterials1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasVentPump
+    entity: OH14_GasVentPump
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasPassiveVent
+    entity: OH14_GasPassiveVent
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasVentScrubber
+    entity: OH14_GasVentScrubber
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasOutletInjector
+    entity: OH14_GasOutletInjector
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1

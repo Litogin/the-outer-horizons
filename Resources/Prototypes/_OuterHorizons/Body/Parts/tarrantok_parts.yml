@@ -1,0 +1,119 @@
+# # TODO: Add descriptions (many)
+# # TODO BODY: Part damage
+# - type: entity
+#   id: OH14_PartTarra
+#   parent: [BaseItem, BasePart]
+#   name: "Tarrantok body part"
+#   abstract: true
+#   components:
+#   - type: Extractable
+#     juiceSolution:
+#       reagents:
+#       - ReagentId: Fat
+#         Quantity: 3
+#       - ReagentId: Blood
+#         Quantity: 10
+
+# - type: entity
+#   id: OH14_TorsoTarrantok
+#   name: "Tarrantok torso"
+#   parent: [OH14_PartTarra, BaseTorso]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "torso_m"
+#   - type: Extractable
+#     juiceSolution:
+#       reagents:
+#       - ReagentId: Fat
+#         Quantity: 10
+#       - ReagentId: Blood
+#         Quantity: 20
+
+# - type: entity
+#   id: OH14_HeadTarrantok
+#   name: "Tarrantok head"
+#   parent: [OH14_PartTarra, BaseHead]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "head_m"
+#   - type: Extractable
+#     juiceSolution:
+#       reagents:
+#       - ReagentId: Fat
+#         Quantity: 5
+#       - ReagentId: Blood
+#         Quantity: 10
+
+# - type: entity
+#   id: OH14_LeftArmTarrantok
+#   name: "left Tarrantok arm"
+#   parent: [OH14_PartTarra, BaseLeftArm]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "l_arm"
+
+# - type: entity
+#   id: OH14_RightArmTarrantok
+#   name: "right Tarrantok arm"
+#   parent: [OH14_PartTarra, BaseRightArm]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "r_arm"
+
+# - type: entity
+#   id: OH14_LeftHandTarrantok
+#   name: "left Tarrantok hand"
+#   parent: [OH14_PartTarra, BaseLeftHand]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "l_hand"
+
+# - type: entity
+#   id: OH14_RightHandTarrantok
+#   name: "right Tarrantok hand"
+#   parent: [OH14_PartTarra, BaseRightHand]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "r_hand"
+
+# - type: entity
+#   id: OH14_LeftLegTarrantok
+#   name: "left Tarrantok leg"
+#   parent: [OH14_PartTarra, BaseLeftLeg]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "l_leg"
+
+# - type: entity
+#   id: OH14_RightLegTarrantok
+#   name: "right Tarrantok leg"
+#   parent: [OH14_PartTarra, BaseRightLeg]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "r_leg"
+
+# - type: entity
+#   id: OH14_LeftFootTarrantok
+#   name: "left Tarrantok foot"
+#   parent: [OH14_PartTarra, BaseLeftFoot]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "l_foot"
+
+# - type: entity
+#   id: OH14_RightFootTarrantok
+#   name: "right Tarrantok foot"
+#   parent: [OH14_PartTarra, BaseRightFoot]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: "r_foot"

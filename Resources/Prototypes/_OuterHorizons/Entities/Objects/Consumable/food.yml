@@ -1,0 +1,65 @@
+- type: entity
+  parent: BaseItem
+  id: OH14_FoodHrumka
+  categories: [ ForkFiltered ]
+  name: сухой перекус Hrumka
+  suffix: Еда
+  description: Питательный батончик неизвестного происхождения, ешьте на свой страх и риск.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Food/hrumka.rsi
+    state: icon
+  - type: Item
+    size: Tiny
+    storedOffset: 1,-1
+  - type: Tag
+    tags:
+      - FoodSnack
+  - type: SpawnItemsOnUse
+    items:
+      - id: OH14_FoodHrumkaTrash
+      - id: OH14_FoodHrumkaBar
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: FoodSnackBase
+  id: OH14_FoodHrumkaBar
+  categories: [ ForkFiltered ]
+  name: сухой перекус Hrumka
+  suffix: Еда
+  description: Питательный батончик неизвестного происхождения, ешьте на свой страх и риск.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - chocolate
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Food/hrumka.rsi
+    state: icon-open
+  - type: Item
+    storedOffset: 1,-2
+  - type: Tag
+    tags:
+      - FoodSnack
+      - ReptilianFood
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Theobromine
+          Quantity: 3
+        - ReagentId: CocoaPowder
+          Quantity: 1
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: OH14_FoodHrumkaTrash
+  name: обертка
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Food/hrumka.rsi
+    state: trash

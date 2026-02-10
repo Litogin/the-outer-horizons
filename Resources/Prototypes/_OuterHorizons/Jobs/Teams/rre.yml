@@ -1,0 +1,24 @@
+- type: job
+  id: OH14_RreRole
+  name: Ringnova Resources Exstraction
+  description: Рингнова Р.Е. Остатки бывшей компании, что была развернута в кольцах сатурна для, как ни странно, добычи ресурсов.
+  playTimeTracker: OH14_RreRole
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-everyone
+  setPreference: true
+  startingGear: OH14_RreGear
+
+- type: startingGear
+  id: OH14_RreGear
+  equipment:
+    jumpsuit: OH14_ClothingJumpsuitXimura
+    pants: OH14_ClothingPantsBasic
+    back: OH14_ClothingBackpackBasic
+    shoes: OH14_ClothingShoesBasic
+    pocket1: OH14_IDCardBasic
+  storage:
+    back:
+    - OH14_CrowbarBasic
+
+- type: playTimeTracker
+  id: OH14_RreRole

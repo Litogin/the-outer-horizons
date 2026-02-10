@@ -1,0 +1,122 @@
+- type: constructionGraph
+  id: OH14_GasPipe
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: OH14_GasPipeStraight
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasPipeBend
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasPipeTJunction
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasPipeFourway
+      steps:
+      - material: OH14_Piping
+        amount: 2
+        doAfter: 1
+    - to: OH14_GasPipeManifold
+      steps:
+      - material: OH14_Piping
+        amount: 3
+        doAfter: 1
+
+  - node: OH14_GasPipeStraight
+    entity: OH14_GasPipeStraight
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasPipeBend
+    entity: OH14_GasPipeBend
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasPipeTJunction
+    entity: OH14_GasPipeTJunction
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasPipeFourway
+    entity: OH14_GasPipeFourway
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 2
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasPipeManifold
+    entity: OH14_GasPipeManifold
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 3
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasPipeBroken
+    entity: OH14_GasPipeBroken
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1

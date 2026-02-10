@@ -1,0 +1,23 @@
+- type: entity
+  parent: OH14_BaseItem
+  id: OH14_NuclearRod
+  name: стержень ядерного реактора
+  description: Стержень для КМП-ЯР Мк1. Гарантия снимается после получения на руки.
+  categories: [ ForkFiltered ]
+  components:
+  - type: PointLight
+    radius: 1.5
+    energy: 1.0
+    color: "#81b981"
+    castShadows: false
+    netsync: false
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_NuclearRod: 100
+  - type: Material
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi
+    layers:
+      - state: icon
+      - state: unshaded
+        shader: unshaded

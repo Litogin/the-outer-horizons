@@ -1,0 +1,32 @@
+- type: entity
+  id: OH14_FrameThrusterR
+  parent: OH14_FrameBasic
+  name: каркас ракетного двигателя
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Rotatable
+  - type: Construction
+    graph: OH14_ThrusterR
+    node: frame1
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame1: { state: r1 }
+          frame2: { state: r2 }
+          frame3: { state: r3 }
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Shuttles/frames.rsi
+    layers:
+    - state: r1
+      map: [ "enum.ConstructionVisuals.Layer" ]

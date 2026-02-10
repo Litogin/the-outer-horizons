@@ -1,0 +1,10 @@
+- type: entity
+  parent: OH14_ClothingPantsBase
+  id: OH14_ClothingPantsBasic
+  name: шорты
+  description: Простые короткие шорты для хвостатых.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Pants/basic.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Pants/basic.rsi

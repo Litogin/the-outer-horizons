@@ -1,0 +1,536 @@
+# Layer 1
+- type: entity
+  abstract: true
+  id: OH14_BasicGasPipeLayerAlt1
+  components:
+  - type: AtmosPipeLayers
+    pipeLayer: 1
+
+# Layer 2
+- type: entity
+  abstract: true
+  id: OH14_BasicGasPipeLayerAlt2
+  components:
+  - type: AtmosPipeLayers
+    pipeLayer: 2
+
+# GasPipeStraight
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasPipeStraight]
+  id: OH14_GasPipeStraightAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt1
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasPipeStraight]
+  id: OH14_GasPipeStraightAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt2
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+
+# GasPipeHalf
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasPipeHalf]
+  id: OH14_GasPipeHalfAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt1
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasPipeHalf]
+  id: OH14_GasPipeHalfAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt2
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+
+# GasPipeBend
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasPipeBend]
+  id: OH14_GasPipeBendAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt1
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasPipeBend]
+  id: OH14_GasPipeBendAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt2
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+
+# GasPipeTJunction
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasPipeTJunction]
+  id: OH14_GasPipeTJunctionAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt1
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasPipeTJunction]
+  id: OH14_GasPipeTJunctionAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt2
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+
+# GasPipeFourway
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasPipeFourway]
+  id: OH14_GasPipeFourwayAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt1
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasPipeFourway]
+  id: OH14_GasPipeFourwayAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: ThinPipeAlt2
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+
+# GasPressurePump
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasPressurePump]
+  id: OH14_GasPressurePumpAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt1.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpPressure
+      map: ["enum.SubfloorLayers.FirstLayer"]
+    - state: pumpPressureOn
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasPressurePump]
+  id: OH14_GasPressurePumpAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt2.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpPressure
+      map: ["enum.SubfloorLayers.FirstLayer"]
+    - state: pumpPressureOn
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+
+# GasVolumePump
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasVolumePump]
+  id: OH14_GasVolumePumpAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt1.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpVolume
+      map: ["enum.SubfloorLayers.FirstLayer"]
+    - state: pumpVolumeOn
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasVolumePump]
+  id: OH14_GasVolumePumpAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt2.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpVolume
+      map: ["enum.SubfloorLayers.FirstLayer"]
+    - state: pumpVolumeOn
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+
+# GasPassiveGate
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasPassiveGate]
+  id: OH14_GasPassiveGateAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt1.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpPassiveGate
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+    - state: pumpPassiveGateOn
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer" ]
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasPassiveGate]
+  id: OH14_GasPassiveGateAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt2.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpPassiveGate
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+    - state: pumpPassiveGateOn
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer" ]
+
+# GasValve
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt1, OH14_GasValve]
+  id: OH14_GasValveAlt1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt1.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpManualValve
+      map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+
+- type: entity
+  parent: [OH14_BasicGasPipeLayerAlt2, OH14_GasValve]
+  id: OH14_GasValveAlt2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt2.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpManualValve
+      map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+
+# # SignalControlledValve
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt1, SignalControlledValve]
+#   id: SignalControlledValveAlt1
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt1.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+#       state: pipeStraight
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#     - state: pumpSignalValve
+#       map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+#   - type: Construction
+#     node: signalvalveAlt1
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt2, SignalControlledValve]
+#   id: SignalControlledValveAlt2
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt2.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+#       state: pipeStraight
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#     - state: pumpSignalValve
+#       map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+#   - type: Construction
+#     node: signalvalveAlt2
+
+# # GasPipeSensor
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt1, GasPipeSensor]
+#   id: OH14_GasPipeSensorAlt1
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt1.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+#   - type: Construction
+#     node: sensorAlt1
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt2, GasPipeSensor]
+#   id: OH14_GasPipeSensorAlt2
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt2.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+#   - type: Construction
+#     node: sensorAlt2
+
+# # GasPipeSensorDistribution
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt1, GasPipeSensorDistribution]
+#   id: OH14_GasPipeSensorDistributionAlt1
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt1.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt2, GasPipeSensorDistribution]
+#   id: OH14_GasPipeSensorDistributionAlt2
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt2.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# # GasPipeSensorWaste
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt1, GasPipeSensorWaste]
+#   id: OH14_GasPipeSensorWasteAlt1
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt1.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt2, GasPipeSensorWaste]
+#   id: OH14_GasPipeSensorWasteAlt2
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt2.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# # GasPipeSensorMixedAir
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt1, GasPipeSensorMixedAir]
+#   id: OH14_GasPipeSensorMixedAirAlt1
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt1.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt2, GasPipeSensorMixedAir]
+#   id: OH14_GasPipeSensorMixedAirAlt2
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt2.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# # GasPipeSensorTEGHot
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt1, GasPipeSensorTEGHot]
+#   id: OH14_GasPipeSensorTEGHotAlt1
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt1.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt2, GasPipeSensorTEGHot]
+#   id: OH14_GasPipeSensorTEGHotAlt2
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt2.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# # GasPipeTEGCold
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt1, GasPipeSensorTEGCold]
+#   id: OH14_GasPipeSensorTEGColdAlt1
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt1.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt2, GasPipeSensorTEGCold]
+#   id: OH14_GasPipeSensorTEGColdAlt2
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/gas_pipe_sensor_alt2.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#       state: pipeStraight
+#     - map: ["base"]
+#       state: base
+#     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+#       state: lights
+#       shader: unshaded
+
+# # GasPressureRegulator
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt1, GasPressureRegulator]
+#   id: OH14_GasPressureRegulatorAlt1
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt1.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+#       state: pipeStraight
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#     - state: pumpPressureRegulator
+#       map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+#   - type: Construction
+#     node: pressureregulatorAlt1
+
+# - type: entity
+#   parent: [OH14_BasicGasPipeLayerAlt2, GasPressureRegulator]
+#   id: OH14_GasPressureRegulatorAlt2
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt2.rsi
+#     layers:
+#     - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+#       state: pipeStraight
+#       map: [ "enum.PipeVisualLayers.Pipe" ]
+#     - state: pumpPressureRegulator
+#       map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+#   - type: Construction
+#     node: pressureregulatorAlt2

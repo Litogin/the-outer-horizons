@@ -1,0 +1,74 @@
+- type: entity
+  id: OH14_DebugGenerator
+  name: генератор
+  categories: [ ForkFiltered ]
+  parent: BaseGenerator
+  suffix: Генератор, DEBUG
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Power/debug_generator.rsi
+    state: icon
+  - type: PowerSupplier
+    supplyRate: 300000
+    supplyRampRate: 50000
+    supplyRampTolerance: 500
+
+- type: entity
+  name: КМП Ядерный Реактор Мк1
+  description: Комически маленький портативный ядерный реактор (КМП-ЯР). 2 стрежня, 2 гига.
+  parent: OH14_BasicGeneratorSwitchable
+  id: OH14_GeneratorMiniNuclearReactor
+  suffix: Генератор, 50 kW
+  components:
+    - type: Transform
+      anchored: true
+    - type: Anchorable
+    - type: Pullable
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Power/nuclear_generator.rsi
+      noRot: true
+      offset: 0, 0.3
+      layers:
+        - state: icon
+          map: [ "enum.GeneratorVisualLayers.Body" ]
+        - state: off_unshaded
+          map: [ "enum.GeneratorVisualLayers.Unlit" ]
+          shader: unshaded
+        - state: loaded
+    - type: GenericVisualizer
+      visuals:
+        enum.GeneratorVisuals.Running:
+          enum.GeneratorVisualLayers.Body:
+            True: { state: icon_on }
+            False: { state: icon }
+          enum.GeneratorVisualLayers.Unlit:
+            True: { state: on_unshaded }
+            False: { state: off_unshaded }
+    # - type: Machine
+    #   board: PortableGeneratorSuperPacmanMachineCircuitboard
+    - type: FuelGenerator
+      minTargetPower: 10000
+      maxTargetPower: 50000
+      targetPower: 50000
+      optimalPower: 50000
+      # 30 minutes at full power
+      optimalBurnRate: 0.016666666
+      # Barely save any fuel from reducing power output
+      fuelEfficiencyConstant: 0.1
+    - type: SolidFuelGeneratorAdapter
+      fuelMaterial: OH14_NuclearRod
+      multiplier: 0.15
+    - type: MaterialStorage
+      storageLimit: 200
+      materialWhiteList: [OH14_NuclearRod]
+    - type: PortableGenerator
+    - type: PowerMonitoringDevice
+      group: Generator
+      loadNodes:
+        - output_hv
+        - output_mv
+      sprite: _OuterHorizons/Structures/Power/nuclear_generator.rsi
+      state: icon
+    - type: PowerSupplier
+      supplyRampRate: 7500
+      supplyRampTolerance: 2500

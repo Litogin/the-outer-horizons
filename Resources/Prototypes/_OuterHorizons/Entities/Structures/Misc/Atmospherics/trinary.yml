@@ -1,0 +1,236 @@
+- type: entity
+  parent: OH14_GasPipeBasic
+  abstract: true
+  id: OH14_GasPipeTrinaryBasic
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: AtmosDevice
+    - type: Tag
+      tags:
+        - Unstackable
+    - type: SubFloorHide
+      blockInteractions: false
+      blockAmbience: false
+    - type: NodeContainer
+      nodes:
+        inlet:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: North
+        filter:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: West
+        outlet:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: South
+
+- type: entity
+  parent: OH14_GasPipeTrinaryBasic
+  id: OH14_GasFilter
+  name: газовый фильтр
+  description: Используется для фильтрации газов, весь мусор выходит в оранжевый порт.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+      - enum.SubfloorLayers.SecondLayer
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/gasfilter.rsi
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeTrinaryConnectors
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: gasFilter
+          map: ["enum.SubfloorLayers.FirstLayer"]
+        - state: gasFilter_on
+          shader: unshaded
+          map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.FilterVisuals.Enabled:
+          enabled:
+            True: { state: gasFilter_unshaded }
+            False: { state: gasFilter_on }
+    - type: PipeColorVisuals
+    - type: UserInterface
+      interfaces:
+        enum.GasFilterUiKey.Key:
+          type: GasFilterBoundUserInterface
+    - type: GasFilter
+      enabled: false
+      transferRate: 1000
+      maxTransferRate: 1000
+    - type: Flippable
+      mirrorEntity: GasFilterFlipped
+    - type: Construction
+      graph: OH14_GasPumpsTrinary
+      node: OH14_GasFilter
+    - type: AmbientSound
+      enabled: false
+      volume: -9
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/gas_hiss.ogg
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasFlowRegulator
+    - type: GuideHelp
+      guides:
+      - MixingAndFiltering
+
+- type: entity
+  parent: OH14_GasFilter
+  id: OH14_GasFilterF
+  suffix: Flipped
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+    - enum.SubfloorLayers.SecondLayer
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/gasfilter.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+      state: pipeTrinaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: gasFilterF
+      map: ["enum.SubfloorLayers.FirstLayer"]
+    - state: gasFilterF_on
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+  - type: Flippable
+    mirrorEntity: GasFilter
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.FilterVisuals.Enabled:
+        enabled:
+          True: { state: gasFilterF_unshaded }
+          False: { state: gasFilterF_on }
+  - type: Construction
+    graph: OH14_GasPumpsTrinary
+    node: OH14_GasFilterF
+  - type: PipeColorVisuals
+  - type: NodeContainer
+    nodes:
+      inlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+      filter:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: West
+      outlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+
+- type: entity
+  parent: OH14_GasPipeTrinaryBasic
+  id: OH14_GasMixer
+  name: газовый миксер
+  description: Используется для смещения газов, получаемая смесь выходит в оранжевый порт.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+      - enum.SubfloorLayers.SecondLayer
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/gasmixer.rsi
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeTrinaryConnectors
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: gasMixer
+          map: ["enum.SubfloorLayers.FirstLayer"]
+        - state: gasMixer_on
+          shader: unshaded
+          map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.FilterVisuals.Enabled:
+          enabled:
+            True: { state: gasMixer_unshaded }
+            False: { state: gasMixer_on }
+    - type: PipeColorVisuals
+    - type: UserInterface
+      interfaces:
+        enum.GasMixerUiKey.Key:
+          type: GasMixerBoundUserInterface
+    - type: GasMixer
+      enabled: false
+      inletOne: inlet
+      inletTwo: filter
+    - type: Flippable
+      mirrorEntity: GasMixerFlipped
+    - type: Construction
+      graph: OH14_GasPumpsTrinary
+      node: OH14_GasMixer
+    - type: AmbientSound
+      enabled: false
+      volume: -9
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/gas_hiss.ogg
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasFlowRegulator
+    - type: GuideHelp
+      guides:
+      - MixingAndFiltering
+
+- type: entity
+  parent: OH14_GasMixer
+  id: OH14_GasMixerF
+  suffix: Flipped
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/gasmixer.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+      state: pipeTrinaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: gasMixerF
+      map: ["enum.SubfloorLayers.FirstLayer"]
+    - state: gasMixerF_on
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.FilterVisuals.Enabled:
+        enabled:
+          True: { state: gasMixerF_unshaded }
+          False: { state: gasMixerF_on }
+  - type: PipeColorVisuals
+  - type: Flippable
+    mirrorEntity: GasMixer
+  - type: NodeContainer
+    nodes:
+      inlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+      filter:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: West
+      outlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+  - type: Construction
+    graph: OH14_GasPumpsTrinary
+    node: OH14_GasMixerF

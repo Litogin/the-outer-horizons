@@ -1,0 +1,73 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: OH14_ClothingShirtBase
+  categories: [ ForkFiltered ]
+  components:
+  - type: Sprite
+    state: icon
+  - type: Clothing
+    slots: [innerclothing]
+    equipSound: /Audio/_OuterHorizons/Items/shirt_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Items/shirt_un.ogg
+    equipDelay: 1
+    unequipDelay: 0.5
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 3
+  - type: PhysicalComposition # 50% of the amount of cloth you'd obtain upon butchering
+    materialComposition:
+      Cloth: 150
+  - type: Edible
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: Clothing
+  categories: [ ForkFiltered ]
+  id: OH14_ClothingPantsBase
+  components:
+  - type: Sprite
+    state: icon
+  - type: Clothing
+    slots: [pants]
+    equipSound: /Audio/_OuterHorizons/Items/shirt_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Items/shirt_un.ogg
+    equipDelay: 1.5
+    unequipDelay: 1
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 3
+  - type: PhysicalComposition # 50% of the amount of cloth you'd obtain upon butchering
+    materialComposition:
+      Cloth: 150
+  - type: Edible
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon

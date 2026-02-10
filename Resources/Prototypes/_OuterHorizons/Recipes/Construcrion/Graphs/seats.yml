@@ -1,0 +1,25 @@
+- type: constructionGraph
+  id: OH14_Seat
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_Chair
+          steps:
+            - material: OH14_Materials
+              amount: 1
+              doAfter: 1
+    - node: OH14_Chair
+      entity: OH14_BasicChair
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 1

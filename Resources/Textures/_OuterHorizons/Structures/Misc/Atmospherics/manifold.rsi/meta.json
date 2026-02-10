@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "states": [
+        {
+            "name": "pipeManifold",
+            "directions": 4
+        },
+        {
+            "name": "storageManifold"
+        },
+        {
+            "name": "pipeConnector",
+            "directions": 4
+        },
+        {
+            "name": "pipeConnector_alt1",
+            "directions": 4
+        },
+        {
+            "name": "pipeConnector_alt2",
+            "directions": 4
+        }
+    ]
+}

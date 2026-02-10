@@ -1,0 +1,87 @@
+- type: decal
+  id: OH14_SignsDock
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: dock
+
+- type: decal
+  id: OH14_SignsDockChina
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: dock_china
+
+- type: decal
+  id: OH14_SignsCargo
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: cargo
+
+- type: decal
+  id: OH14_SignsCargoChina
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: cargo_china
+
+- type: decal
+  id: OH14_SignsDorm
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: dorm
+
+- type: decal
+  id: OH14_SignsDormChina
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: dorm_china
+
+- type: decal
+  id: OH14_SignsTrade
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: trade
+
+- type: decal
+  id: OH14_SignsTradeChina
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: trade_china
+
+- type: decal
+  id: OH14_SignsWelcome1
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: welcome1
+
+- type: decal
+  id: OH14_SignsWelcome2
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: welcome2
+
+- type: decal
+  id: OH14_SignsWelcomeChina
+  showMenu: true
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _OuterHorizons/Decals/signs.rsi
+    state: welcome_china

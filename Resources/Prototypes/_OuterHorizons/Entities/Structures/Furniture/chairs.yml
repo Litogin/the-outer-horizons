@@ -1,0 +1,90 @@
+- type: entity
+  name: стул
+  id: OH14_SeatBase
+  categories: [ ForkFiltered ]
+  abstract: true
+  description: Ты можешь сесть на это своим жирным хвостом.
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Animateable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - TableMask
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Decoration/chairs.rsi
+    state: basic
+    noRot: true
+  - type: Strap
+    position: Stand
+    buckleOffset: "0,-0.05"
+  - type: Pullable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: StaticPrice
+    price: 50
+
+- type: entity
+  id: OH14_SeatBaseUnanchored
+  parent: OH14_SeatBase
+  abstract: true
+  components:
+  - type: Anchorable
+  - type: Rotatable
+
+#Start anchored, cannot be rotated while anchored
+- type: entity
+  id: OH14_BasicChair
+  parent: OH14_SeatBaseUnanchored
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true
+  - type: Construction
+    graph: OH14_Seat
+    node: OH14_Chair
+
+- type: entity
+  id: OH14_ChairShuttle
+  name: кресло пилота
+  parent: OH14_SeatBaseUnanchored
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    state: shuttle
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true

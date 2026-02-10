@@ -1,0 +1,217 @@
+- type: entity
+  parent: OH14_GasPipeBasic
+  abstract: true
+  id: OH14_GasUnaryBase
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: AtmosDevice
+    - type: Tag
+      tags:
+        - Unstackable
+    - type: SubFloorHide
+      blockInteractions: false
+      blockAmbience: false
+    - type: NodeContainer
+      nodes:
+        pipe:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: South
+    - type: CollideOnAnchor
+
+- type: entity
+  parent: [OH14_GasUnaryBase, AirSensorBase]
+  id: OH14_GasVentPump
+  name: вентиляция
+  description: Выпускает необходимое количество газа в атмосферу.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: ApcPowerReceiver
+    - type: ExtensionCableReceiver
+    - type: DeviceNetwork
+      prefix: device-address-prefix-vent
+    - type: Tag
+      tags:
+        - GasVent
+        - Unstackable
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+    - type: Sprite
+      drawdepth: FloorObjects
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/vent.rsi
+      noRot: true
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeUnaryConnectors
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: vent_off
+          map: [ "enabled", "enum.SubfloorLayers.FirstLayer" ]
+    - type: Appearance
+    - type: PipeColorVisuals
+    - type: GenericVisualizer
+      visuals:
+        enum.VentPumpVisuals.State:
+          enabled:
+            Off: { state: vent_off }
+            In: { state: vent_out }
+            Out: { state: vent_out }
+            Welded: { state: vent_welded }
+            Lockout: { state: vent_off }
+    - type: GasVentPump
+    - type: Construction
+      graph: OH14_GasPumpsVent
+      node: OH14_GasVentPump
+    - type: VentCritterSpawnLocation
+    - type: AmbientSound
+      enabled: true
+      volume: -12
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/gas_vent.ogg
+    - type: Weldable
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasVentOpening
+    - type: GuideHelp
+      guides:
+      - AirVent
+      - DeviceMonitoringAndControl
+
+- type: entity
+  parent: OH14_GasUnaryBase
+  id: OH14_GasPassiveVent
+  name: пассивная вентиляция
+  description: Пропускает бесконтрольное количество газа в и из атмосферы.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+    - type: Sprite
+      drawdepth: FloorObjects
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/vent.rsi
+      noRot: true
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeUnaryConnectors
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: vent_passive
+          map: [ "enum.SubfloorLayers.FirstLayer" ]
+    - type: Appearance
+    - type: PipeColorVisuals
+    - type: GasPassiveVent
+    - type: Construction
+      graph: OH14_GasPumpsVent
+      node: OH14_GasPassiveVent
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasVentOpening
+    - type: GuideHelp
+      guides:
+      - PassiveVent
+
+- type: entity
+  parent: [OH14_GasUnaryBase, AirSensorBase]
+  id: OH14_GasVentScrubber
+  name: скруббер
+  description: Забирает необходимое количество газа из атмосферы.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: ApcPowerReceiver
+    - type: ExtensionCableReceiver
+    - type: DeviceNetwork
+      prefix: device-address-prefix-scrubber
+    - type: Tag
+      tags:
+        - GasScrubber
+        - Unstackable
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+    - type: Sprite
+      drawdepth: FloorObjects
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/scrubber.rsi
+      noRot: true
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeUnaryConnectors
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: scrub_off
+          map: [ "enabled", "enum.SubfloorLayers.FirstLayer" ]
+    - type: Appearance
+    - type: PipeColorVisuals
+    - type: GenericVisualizer
+      visuals:
+        enum.ScrubberVisuals.State:
+          enabled:
+            Off: { state: scrub_off }
+            Scrub: { state: scrub_on }
+            Siphon: { state: scrub_on }
+            WideScrub: { state: scrub_on }
+            Welded: { state: scrub_welded }
+    - type: AtmosDevice
+    - type: GasVentScrubber
+    - type: Construction
+      graph: OH14_GasPumpsVent
+      node: OH14_GasVentScrubber
+    - type: AmbientSound
+      enabled: true
+      volume: -12
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/gas_vent.ogg
+    - type: Weldable
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasVentScrubber
+    - type: GuideHelp
+      guides:
+      - AirScrubber
+      - DeviceMonitoringAndControl
+
+- type: entity
+  parent: OH14_GasUnaryBase
+  id: OH14_GasOutletInjector
+  name: инжектор
+  description: Выпускает в атмосферу дозированное количество газа.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Sprite
+      drawdepth: FloorObjects
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/outletinjector.rsi
+      noRot: true
+      layers:
+        - state: pipeUnaryConnectors
+          sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: injector
+          map: [ "enum.SubfloorLayers.FirstLayer" ]
+        - state: injector-unshaded
+          shader: unshaded
+          map: [ "enum.LightLayers.Unshaded" ]
+          color: "#990000"
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+       # toggle color of the unshaded light:
+       enum.OutletInjectorVisuals.Enabled:
+         enum.LightLayers.Unshaded:
+           True: { color: "#5eff5e" }
+           False: { color: "#990000" }
+    - type: PipeColorVisuals
+    - type: GasOutletInjector
+    - type: Construction
+      graph: OH14_GasPumpsVent
+      node: OH14_GasOutletInjector
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+      - enum.LightLayers.Unshaded
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasVentOpening
+    - type: GuideHelp
+      guides:
+      - AirInjector

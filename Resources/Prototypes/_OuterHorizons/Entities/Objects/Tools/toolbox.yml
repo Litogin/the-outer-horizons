@@ -1,0 +1,76 @@
+- type: entity
+  id: OH14_ToolboxBase
+  parent: OH14_BaseStorageOpenClose
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
+    state: icon
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/toolbox_drop.ogg
+  - type: Storage
+    whitelist:
+      tags:
+      - OH14_Tools
+    maxItemSize: Normal
+    grid:
+    - 0,0,4,1
+    storageOpenSound: /Audio/Items/toolbox_open.ogg
+    storageCloseSound: /Audio/Items/toolbox_close.ogg
+    storageInsertSound: /Audio/Items/toolbox_insert.ogg
+    storageRemoveSound: /Audio/Items/toolbox_remove.ogg
+  - type: Item
+    size: Normal
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 12
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+  - type: Tag
+    tags:
+    - Toolbox
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: icon_open }
+          False: { state: icon }
+
+- type: entity
+  name: ящик для инструментов
+  parent: OH14_ToolboxBase
+  id: OH14_ToolboxRed
+  description: Большой красный ящик для инструментов. Возможно за этим стоят робастики.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
+    state: icon
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
+
+- type: entity
+  name: ящик для инструментов
+  parent: OH14_ToolboxBase
+  id: OH14_ToolboxBlue
+  description: Большой синий ящик для инструментов. Возможно за этим стоят робастики.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/toolbox_blue.rsi
+    state: icon
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/toolbox_blue.rsi
+
+- type: entity
+  name: ящик для инструментов
+  parent: OH14_ToolboxBase
+  id: OH14_ToolboxYellow
+  description: Большой желтый ящик для инструментов. Возможно за этим стоят робастики.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/toolbox_yellow.rsi
+    state: icon
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/toolbox_yellow.rsi

@@ -1,0 +1,9 @@
+- type: construction
+  hide: false
+  id: OH14_ThrusterR
+  graph: OH14_ThrusterR
+  startNode: start
+  targetNode: OH14_ThrusterR
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false

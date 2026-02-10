@@ -1,0 +1,133 @@
+# - type: species
+#   id: OH14_Tarrantok
+#   name: Тарра
+#   roundStart: true
+#   prototype: OH14_MobTarrantok
+#   sprites: MobTarrantokSprites
+#   defaultSkinTone: "#faf7f7"
+#   markingLimits: MobTarrantokMarkingLimits
+#   maleFirstNames: OH14_NamesFirstMale
+#   femaleFirstNames: OH14_NamesFirstFemale
+#   naming: First
+#   dollPrototype: MobTarrantokDummy
+#   skinColoration: Hues
+
+# - type: speciesBaseSprites
+#   id: MobTarrantokSprites
+#   sprites:
+#     Head: MobTarrantokHead
+#     Chest: MobTarrantokTorso
+#     Eyes: MobTarrantokEyes
+#     LArm: MobTarrantokLArm
+#     RArm: MobTarrantokRArm
+#     LHand: MobTarrantokLHand
+#     RHand: MobTarrantokRHand
+#     LLeg: MobTarrantokLLeg
+#     RLeg: MobTarrantokRLeg
+#     LFoot: MobTarrantokLFoot
+#     RFoot: MobTarrantokRFoot
+#     Tail: MobHumanoidAnyMarking
+#     HeadTop: MobHumanoidAnyMarking
+
+# - type: markingPoints
+#   id: MobTarrantokMarkingLimits
+#   onlyWhitelisted: true
+#   points:
+#     Tail:
+#       points: 1
+#       required: true
+#       defaultMarkings: [ TarraBaseTail ]
+#     HeadTop:
+#       points: 1
+#       required: true
+#       defaultMarkings: [ TarraBaseEars ]
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokEyes
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: eyes
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokHead
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: head_m
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokHeadMale
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: head_m
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokHeadFemale
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: head_f
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokTorso
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: torso_m
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokTorsoMale
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: torso_m
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokTorsoFemale
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: torso_f
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokLLeg
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: l_leg
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokLArm
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: l_arm
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokLHand
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: l_hand
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokLFoot
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: l_foot
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokRLeg
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: r_leg
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokRArm
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: r_arm
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokRHand
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: r_hand
+
+# - type: humanoidBaseSprite
+#   id: MobTarrantokRFoot
+#   baseSprite:
+#     sprite: _OuterHorizons/Mobs/Species/Tarrantok/parts.rsi
+#     state: r_foot

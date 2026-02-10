@@ -1,0 +1,51 @@
+- type: entity
+  parent: OH14_BaseItem
+  id: OH14_BasicCircuitboard
+  name: плата
+  description: Простецкая зеленая плата для консолей или оборудования.
+  abstract: true
+  components:
+    - type: ComputerBoard
+    - type: Sprite
+      sprite: _OuterHorizons/Objects/Materials/circuitboard.rsi
+      state: Board
+    - type: StaticPrice
+      price: 100
+    - type: PhysicalComposition
+      materialComposition:
+        Glass: 230
+      chemicalComposition:
+        Silicon: 20
+    - type: Circuitboard
+
+- type: entity
+  parent: OH14_BasicCircuitboard
+  id: OH14_CircuitboardShuttle
+  name: плата управления шаттлом
+  components:
+    - type: ComputerBoard
+      prototype: OH14_BaseConsoleShuttle
+
+- type: entity
+  parent: OH14_BasicCircuitboard
+  id: OH14_CircuitboardRadar
+  name: плата мониторинга масс
+  components:
+    - type: ComputerBoard
+      prototype: OH14_ConsoleRadar
+
+- type: entity
+  parent: OH14_BasicCircuitboard
+  id: OH14_CircuitboardAtmos
+  name: плата мониторинга атмосферы
+  components:
+    - type: ComputerBoard
+      prototype: OH14_ConsoleAtmos
+
+- type: entity
+  parent: OH14_BasicCircuitboard
+  id: OH14_CircuitboardPower
+  name: плата мониторинга энергосети
+  components:
+    - type: ComputerBoard
+      prototype: OH14_ConsolePower

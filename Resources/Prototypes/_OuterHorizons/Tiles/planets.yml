@@ -1,0 +1,11 @@
+- type: tile
+  id: OH14_IceMoon
+  editorHidden: false
+  name: поверхность астероида
+  sprite: /Textures/_OuterHorizons/Tiles/asteroid.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+  indestructible: true

@@ -1,0 +1,23 @@
+- type: constructionGraph
+  id: OH14_Button
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_Button
+          steps:
+            - material: OH14_Components
+              amount: 1
+              doAfter: 1
+    - node: OH14_Button
+      entity: OH14_ButtonBasic
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+          steps:
+            - tool: Screwing
+              doAfter: 1

@@ -1,0 +1,23 @@
+- type: gameMap
+  id: OH14_GameMap
+  mapName: OH14_GameMap
+  mapPath: /Maps/_OuterHorizons/_GameStationMap.yml
+  maxRandomOffset: 50
+  minPlayers: 0
+  stations:
+    UcoStation:
+      stationProto: OH14_StandardStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "UCO Station"
+        - type: StationJobs
+          availableJobs:
+            OH14_UcoRole: [ 8, 8 ]
+    RreStation:
+      stationProto: OH14_StandardStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "RRE Station"
+        - type: StationJobs
+          availableJobs:
+            OH14_RreRole: [ 8, 8 ]

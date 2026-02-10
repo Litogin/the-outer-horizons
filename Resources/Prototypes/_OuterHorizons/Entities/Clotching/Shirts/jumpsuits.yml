@@ -1,0 +1,32 @@
+- type: entity
+  parent: OH14_ClothingShirtBase
+  id: OH14_ClothingJumpsuitUco
+  name: красный комбинезон
+  description: Но ведь он... белый?
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Jumpsuit/uco.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Jumpsuit/uco.rsi
+
+- type: entity
+  parent: OH14_ClothingShirtBase
+  id: OH14_ClothingJumpsuitAcorp
+  name: темный комбинезон
+  description: Темно-синий комбез, ничего странного?
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Jumpsuit/acorp.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Jumpsuit/acorp.rsi
+
+- type: entity
+  parent: OH14_ClothingShirtBase
+  id: OH14_ClothingJumpsuitXimura
+  name: серый комбинезон
+  description: Эй! Это не похоже на комбез грейтайда...
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Jumpsuit/ximura.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Jumpsuit/ximura.rsi

@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: OH14_ClothingShoesBasic
+  name: туфли
+  description: Революционное изобретение в области ношения одежды, защищает паши ступни от холодного металлического пола.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Shoes/basic.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Shoes/basic.rsi
+    equipDelay: 2
+    unequipDelay: 1.5
+  - type: Matchbox

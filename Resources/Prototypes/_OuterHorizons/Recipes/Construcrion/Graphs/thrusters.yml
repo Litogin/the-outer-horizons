@@ -1,0 +1,101 @@
+- type: constructionGraph
+  id: OH14_ThrusterR
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SetAnchor
+              value: false
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 1
+    - node: frame1
+      entity: OH14_FrameThrusterR
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 2
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Materials
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameThrusterR
+      edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame3
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Components
+              amount: 5
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: frame3
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameThrusterR
+      edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 5
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: OH14_ThrusterR
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Materials
+              amount: 5
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: OH14_ThrusterR
+      entity: OH14_ThrusterPressureRed
+      edges:
+        - to: frame3
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 5
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 5

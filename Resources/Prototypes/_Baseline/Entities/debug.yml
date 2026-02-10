@@ -21,6 +21,7 @@
   components:
   - type: SpawnPoint
     job_id: BaselineRole
+    spawn_type: Observer
   - type: Sprite
     layers:
       - state: green

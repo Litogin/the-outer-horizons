@@ -1,0 +1,27 @@
+- type: material
+  id: OH14_Materials
+  stackEntity: OH14_SheetMaterials1
+  name: материалы
+  icon: { sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi, state: material_3 }
+  price: 0.1
+
+- type: material
+  id: OH14_Components
+  stackEntity: OH14_SheetComponents1
+  name: компоненты
+  icon: { sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi, state: mechanic_3 }
+  price: 0.1
+
+- type: material
+  id: OH14_Electronics
+  stackEntity: OH14_SheetElectronics1
+  name: электроника
+  icon: { sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi, state: electronic_3 }
+  price: 0.1
+
+- type: material
+  id: OH14_Ore
+  stackEntity: OH14_SheetOre1
+  name: руда
+  icon: { sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi, state: ore_3 }
+  price: 0.1

@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: OH14_NamesFirstMale
+  values:
+    prefix: names-oh14-first-male-dataset-
+    count: 20
+
+- type: localizedDataset
+  id: OH14_NamesFirstFemale
+  values:
+    prefix: names-oh14-first-female-dataset-
+    count: 20

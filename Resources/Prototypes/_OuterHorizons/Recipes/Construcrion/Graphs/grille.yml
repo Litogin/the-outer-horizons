@@ -1,0 +1,49 @@
+- type: constructionGraph
+  id: OH14_Grille
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: grille
+          completed:
+            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+              message: "Construction"
+              impact: High
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Materials
+              amount: 1
+              doAfter: 1
+
+    - node: grille
+      entity: OH14_Grille
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+              message: "A grille was cut"
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 0.25
+
+    - node: grilleBroken
+      entity: OH14_GrilleBroken
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+        - to: grille
+          steps:
+            - material: OH14_Materials
+              amount: 1
+              doAfter: 0.5

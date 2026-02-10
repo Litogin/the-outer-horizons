@@ -4,10 +4,19 @@
     - secret
     - sekrit
   name: secret-title
-  showInVote: true
+  showInVote: false
   description: secret-description
   rules:
     - Secret
+
+- type: gamePreset
+  id: OH14_Extended
+  alias:
+  - extended
+  - shittersafari
+  name: extended-title
+  showInVote: true
+  description: extended-description
 
 - type: gamePreset
   id: BaselineSandbox

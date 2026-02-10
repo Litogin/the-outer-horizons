@@ -1,0 +1,33 @@
+- type: entity
+  parent: Window
+  id: OH14_BaseWindow
+  categories: [ ForkFiltered ]
+  name: обыкновенное окно
+  components:
+  - type: Construction
+    graph: OH14_Window
+    node: OH14_Window
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Windows/basic.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Windows/basic.rsi
+  - type: IconSmooth
+    key: walls
+    base: wall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 2
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+          volume: -5

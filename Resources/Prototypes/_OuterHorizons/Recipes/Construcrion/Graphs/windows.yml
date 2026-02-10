@@ -1,0 +1,45 @@
+- type: constructionGraph
+  id: OH14_Window
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_WindowGirder
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 1
+    - node: OH14_WindowGirder
+      entity: OH14_WindowGirder
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+        - to: OH14_Window
+          steps:
+            - material: OH14_Materials
+              amount: 3
+              doAfter: 1
+    - node: OH14_Window
+      entity: OH14_BaseWindow
+      edges:
+        - to: OH14_WindowGirder
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 3
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 1

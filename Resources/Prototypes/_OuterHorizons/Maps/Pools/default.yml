@@ -1,0 +1,4 @@
+- type: gameMapPool
+  id: DefaultMapPool
+  maps:
+  - OH14_GameMap

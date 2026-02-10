@@ -1,0 +1,169 @@
+- type: entity
+  parent: BaseStructure
+  categories: [ ForkFiltered ]
+  id: OH14_BaseGasStorage
+  abstract: true
+  name: газовое хранилище
+  description: Большое хранилище для хранения газов, переносу не подлежит.
+  components:
+    - type: InteractionOutline
+    - type: Transform
+      noRot: true
+    - type: Appearance
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Metallic
+    - type: AtmosDevice
+      requireAnchored: false
+      joinSystem: true
+    - type: NodeContainer
+      nodes:
+        port:
+          !type:PortablePipeNode
+          nodeGroupID: Pipe
+          pipeDirection: Fourway
+          volume: 1
+    - type: Sprite
+      noRot: true
+      sprite: _OuterHorizons/Structures/Storage/gas_storage.rsi
+      layers:
+        - state: yellow
+    - type: GasCanister
+      gasMixture:
+        volume: 5000
+        moles: # List of gasses for easy reference
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # Water vapor
+          - 0 # Ammonia
+          - 0 # N2O
+          - 0 # Frezon
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+
+- type: entity
+  parent: OH14_BaseGasStorage
+  id: OH14_GasStorageGrey
+  suffix: Пусто, Серый
+  components:
+   - type: Sprite
+     layers:
+       - state: grey
+
+- type: entity
+  parent: OH14_BaseGasStorage
+  id: OH14_GasStorageYellow
+  suffix: Пусто, Желтый
+  components:
+   - type: Sprite
+     layers:
+       - state: yellow
+
+- type: entity
+  parent: OH14_BaseGasStorage
+  id: OH14_GasStorageBlue
+  suffix: Пусто, Синий
+  components:
+   - type: Sprite
+     layers:
+       - state: blue
+
+- type: entity
+  parent: OH14_BaseGasStorage
+  id: OH14_GasStorageRed
+  suffix: Пусто, Красный
+  components:
+   - type: Sprite
+     layers:
+       - state: red
+
+- type: entity
+  parent: OH14_BaseGasStorage
+  id: OH14_GasStorageOrange
+  suffix: Пусто, Оранжевый
+  components:
+   - type: Sprite
+     layers:
+       - state: orange
+
+# ----------------- Заполенное
+
+- type: entity
+  parent: OH14_GasStorageBlue
+  id: OH14_GasStorageBlueFilled
+  suffix: Заполнен, Синий
+  components:
+   - type: GasCanister
+     gasMixture:
+      volume: 5000
+      moles: # List of gasses for easy reference
+        - 5000 # oxygen
+        - 0 # nitrogen
+        - 0 # CO2
+        - 0 # Plasma
+        - 0 # Tritium
+        - 0 # Water vapor
+        - 0 # Ammonia
+        - 0 # N2O
+        - 0 # Frezon
+      temperature: 293.15
+
+- type: entity
+  parent: OH14_GasStorageRed
+  id: OH14_GasStorageRedFilled
+  suffix: Заполнен, Красный
+  components:
+   - type: GasCanister
+     gasMixture:
+      volume: 5000
+      moles: # List of gasses for easy reference
+        - 0 # oxygen
+        - 5000 # nitrogen
+        - 0 # CO2
+        - 0 # Plasma
+        - 0 # Tritium
+        - 0 # Water vapor
+        - 0 # Ammonia
+        - 0 # N2O
+        - 0 # Frezon
+      temperature: 293.15
+
+- type: entity
+  parent: OH14_GasStorageOrange
+  id: OH14_GasStorageOrangeFilled
+  suffix: Заполнен, Оранжевый
+  components:
+   - type: GasCanister
+     gasMixture:
+      volume: 5000
+      moles: # List of gasses for easy reference
+        - 0 # oxygen
+        - 0 # nitrogen
+        - 0 # CO2
+        - 5000 # Plasma
+        - 0 # Tritium
+        - 0 # Water vapor
+        - 0 # Ammonia
+        - 0 # N2O
+        - 0 # Frezon
+      temperature: 293.15

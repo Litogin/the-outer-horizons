@@ -1,0 +1,144 @@
+- type: entity
+  parent: OH14_BaseItem
+  id: OH14_BasicLightBulb
+  name: лампа
+  description: Светящаяся лапочка.
+  abstract: true
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmash
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Power/light_bulb.rsi
+    layers:
+      - map: [ enum.LightBulbVisualLayers.Base ]
+        state: normal
+  - type: LightBulb
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors: #excess damage (nuke?). avoid computational cost of spawning entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+          params:
+            volume: -8
+      - !type:DoActsBehavior
+        acts: [ "Breakage" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+          params:
+            volume: -8
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Appearance
+  - type: Tag
+    tags:
+    - Trash
+  # - type: PhysicalComposition
+  #   materialComposition:
+  #     Glass: 25
+  - type: SpaceGarbage
+  # - type: ToolRefinable
+  #   refineResult:
+  #   - id: SheetGlass1
+
+- type: entity
+  parent: OH14_BasicLightBulb
+  id: OH14_BasicLightTube
+  name: лампа-трубка
+  description: Светящаяся лапочка-трубка.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Power/light_tube.rsi
+  - type: LightBulb
+    bulb: Tube
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors: #excess damage (nuke?). avoid computational cost of spawning entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Breakage" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: OH14_BasicLightBulb
+  id: OH14_LightBulb
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#dabeab" # FFE4CE > dabeab
+    lightEnergy: 1.0
+    lightRadius: 6
+    lightSoftness: 1.1
+  - type: Tag
+    tags:
+    - LightBulb
+    - Trash
+
+- type: entity
+  parent: OH14_BasicLightTube
+  id: OH14_LightTubeWarm
+  name: теплая лампа-трубка
+  components:
+  - type: LightBulb
+    color: "#c5967e" # dabeab > c5967e
+    lightEnergy: 0.8
+    lightRadius: 10
+    lightSoftness: 1
+    PowerUse: 25
+
+- type: entity
+  parent: OH14_BasicLightTube
+  id: OH14_LightTube
+  components:
+  - type: LightBulb
+    color: "#c1cbce" # FFE4CE > c1cbce
+    lightEnergy: 0.8
+    lightRadius: 10
+    lightSoftness: 1
+    PowerUse: 25

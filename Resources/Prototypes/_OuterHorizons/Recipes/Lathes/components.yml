@@ -1,0 +1,7 @@
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Components
+  completetime: 1
+  result: OH14_SheetComponents1
+  materials:
+    OH14_Materials: 200

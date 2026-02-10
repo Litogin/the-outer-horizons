@@ -1,0 +1,58 @@
+- type: construction
+  hide: false
+  id: OH14_Console
+  graph: OH14_Console
+  startNode: start
+  targetNode: computer
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_AutolatheFrame
+  graph: OH14_AutolatheFrame
+  startNode: start
+  targetNode: OH14_Autolathe
+  category: construction-category-machines
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_ProtolatheFrame
+  graph: OH14_ProtolatheFrame
+  startNode: start
+  targetNode: OH14_ProtoLathe
+  category: construction-category-machines
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_ArcFurnanceFrame
+  graph: OH14_ArcFurnanceFrame
+  startNode: start
+  targetNode: OH14_ArcFurnance
+  category: construction-category-machines
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_Button
+  graph: OH14_Button
+  startNode: start
+  targetNode: OH14_Button
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
