@@ -42,6 +42,14 @@
       - !type:AppearanceChange
       entity: OH14_FrameAutolathe
       edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
         - to: frame3
           conditions:
             - !type:EntityAnchored
@@ -57,6 +65,14 @@
       - !type:AppearanceChange
       entity: OH14_FrameAutolathe
       edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
         - to: OH14_Autolathe
           conditions:
             - !type:EntityAnchored
@@ -70,31 +86,16 @@
     - node: OH14_Autolathe
       entity: OH14_AutoLathe
       edges:
-        - to: start
+        - to: frame3
           completed:
-            - !type:EmptyAllContainers {}
             - !type:SpawnPrototype
               prototype: OH14_SheetMaterials1
-              amount: 4
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
-              amount: 1
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
               amount: 2
-            - !type:DeleteEntity {}
-          conditions:
-            - !type:EntityAnchored
-              anchored: false
           steps:
-            - tool: Prying
-              doAfter: 1
             - tool: Screwing
               doAfter: 1
             - tool: Prying
               doAfter: 1
-
-
 
 - type: constructionGraph
   id: OH14_ProtolatheFrame
@@ -140,6 +141,14 @@
       - !type:AppearanceChange
       entity: OH14_FrameProtolathe
       edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 3
+          steps:
+            - tool: Prying
+              doAfter: 1
         - to: frame3
           conditions:
             - !type:EntityAnchored
@@ -155,6 +164,14 @@
       - !type:AppearanceChange
       entity: OH14_FrameProtolathe
       edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
         - to: OH14_ProtoLathe
           conditions:
             - !type:EntityAnchored
@@ -168,31 +185,16 @@
     - node: OH14_ProtoLathe
       entity: OH14_ProtoLathe
       edges:
-        - to: start
+        - to: frame3
           completed:
-            - !type:EmptyAllContainers {}
             - !type:SpawnPrototype
               prototype: OH14_SheetMaterials1
-              amount: 4
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
               amount: 2
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
-              amount: 3
-            - !type:DeleteEntity {}
-          conditions:
-            - !type:EntityAnchored
-              anchored: false
           steps:
-            - tool: Prying
-              doAfter: 1
             - tool: Screwing
               doAfter: 1
             - tool: Prying
               doAfter: 1
-
-
 
 - type: constructionGraph
   id: OH14_ArcFurnanceFrame
@@ -238,6 +240,14 @@
       - !type:AppearanceChange
       entity: OH14_FrameArcFurnance
       edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
         - to: frame3
           conditions:
             - !type:EntityAnchored
@@ -253,6 +263,14 @@
       - !type:AppearanceChange
       entity: OH14_FrameArcFurnance
       edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 5
+          steps:
+            - tool: Prying
+              doAfter: 1
         - to: OH14_ArcFurnance
           conditions:
             - !type:EntityAnchored
@@ -266,22 +284,12 @@
     - node: OH14_ArcFurnance
       entity: OH14_ArcFurnance
       edges:
-        - to: start
+        - to: frame3
           completed:
-            - !type:EmptyAllContainers {}
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
-              amount: 8
             - !type:SpawnPrototype
               prototype: OH14_SheetComponents1
-              amount: 4
-            - !type:DeleteEntity {}
-          conditions:
-            - !type:EntityAnchored
-              anchored: false
+              amount: 2
           steps:
-            - tool: Prying
-              doAfter: 1
             - tool: Screwing
               doAfter: 1
             - tool: Prying
