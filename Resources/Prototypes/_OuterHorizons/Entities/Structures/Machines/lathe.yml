@@ -155,8 +155,6 @@
       map: ["enum.PowerDeviceVisualLayers.Powered"]
     - state: inserting
       map: ["enum.MaterialStorageVisualLayers.Inserting"]
-  - type: Machine
-    board: ProtolatheMachineCircuitboard
   - type: MaterialStorage
     whitelist: *OH14_MaterialWhitelist
   # - type: OreSiloClient
