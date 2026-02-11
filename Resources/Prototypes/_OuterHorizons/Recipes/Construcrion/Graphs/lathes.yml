@@ -172,7 +172,7 @@
           steps:
             - tool: Prying
               doAfter: 1
-        - to: OH14_ProtoLathe
+        - to: OH14_Protolathe
           conditions:
             - !type:EntityAnchored
               anchored: true
@@ -182,7 +182,7 @@
               doAfter: 1
             - tool: Screwing
               doAfter: 1
-    - node: OH14_ProtoLathe
+    - node: OH14_Protolathe
       entity: OH14_ProtoLathe
       edges:
         - to: frame3
