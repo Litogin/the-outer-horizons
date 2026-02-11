@@ -3,7 +3,7 @@
   slots:
     - name: shoes
       slotTexture: shoes
-      fullTextureName: SlotBackground_down
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_down
       slotFlags: FEET
       stripTime: 3
       uiWindowPos: 1,0
@@ -11,7 +11,7 @@
       displayName: Shoes
     - name: jumpsuit
       slotTexture: uniform
-      fullTextureName: SlotBackground_center
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_center
       slotFlags: INNERCLOTHING
       stripTime: 6
       uiWindowPos: 1,2
@@ -19,7 +19,7 @@
       displayName: Jumpsuit
     - name: outerClothing
       slotTexture: suit
-      fullTextureName: SlotBackground_down
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_down
       slotFlags: OUTERCLOTHING
       stripTime: 6
       uiWindowPos: 2,0
@@ -27,21 +27,21 @@
       displayName: Suit
     - name: gloves
       slotTexture: gloves
-      fullTextureName: SlotBackground_center
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_center
       slotFlags: GLOVES
       uiWindowPos: 2,1
       strippingWindowPos: 2,2
       displayName: Gloves
     - name: pants
       slotTexture: pants
-      fullTextureName: SlotBackground_center
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_center
       slotFlags: PANTS
       uiWindowPos: 1,1
       strippingWindowPos: 0,3
       displayName: Pants
     - name: id
       slotTexture: id
-      fullTextureName: SlotBackground_center
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_center
       slotFlags: IDCARD
       dependsOn: jumpsuit
       uiWindowPos: 0,1
@@ -49,7 +49,7 @@
       displayName: ID
     - name: neck
       slotTexture: neck
-      fullTextureName: SlotBackground_center
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_center
       slotFlags: NECK
       uiWindowPos: 0,2
       strippingWindowPos: 0,1
@@ -62,7 +62,7 @@
       displayName: Mask
     - name: eyes
       slotTexture: glasses
-      fullTextureName: SlotBackground_center
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_center
       slotFlags: EYES
       stripTime: 3
       uiWindowPos: 2,2
@@ -83,7 +83,7 @@
       displayName: Head
     - name: pocket1
       slotTexture: pocket
-      fullTextureName: SlotBackground_down
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_down
       slotFlags: POCKET
       slotGroup: MainHotbar
       stripTime: 3
@@ -94,7 +94,7 @@
       stripHidden: true
     - name: pocket2
       slotTexture: pocket
-      fullTextureName: SlotBackground_down
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_down
       slotFlags: POCKET
       slotGroup: MainHotbar
       stripTime: 3
@@ -105,7 +105,7 @@
       stripHidden: true
     - name: suitstorage
       slotTexture: suit_storage
-      fullTextureName: SlotBackground_down
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_down
       slotFlags: SUITSTORAGE
       slotGroup: MainHotbar
       stripTime: 3
@@ -117,7 +117,7 @@
       displayName: Suit Storage
     - name: tailbag
       slotTexture: tailbag
-      fullTextureName: SlotBackground_down
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_down
       slotFlags: TAILBAG
       slotGroup: SecondHotbar
       stripTime: 6
@@ -126,7 +126,7 @@
       displayName: Tailbag
     - name: belt
       slotTexture: belt
-      fullTextureName: SlotBackground_down
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_down
       slotFlags: BELT
       slotGroup: SecondHotbar
       stripTime: 6
@@ -135,7 +135,7 @@
       displayName: Belt
     - name: back
       slotTexture: back
-      fullTextureName: SlotBackground_down
+      fullTextureName: /Textures/Interface/_OuterHorizons/SlotBackground_down
       slotFlags: BACK
       slotGroup: SecondHotbar
       stripTime: 6

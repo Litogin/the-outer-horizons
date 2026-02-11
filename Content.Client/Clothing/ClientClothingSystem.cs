@@ -46,7 +46,6 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"suitstorage", "SUITSTORAGE"},
         // OH14-Changes start, new slots
         {"pants", "PANTS"},
-        {"bangle", "BANGLE"},
         {"tailbag", "TAILBAG"},
         // OH14-Changes end, new slots
     };

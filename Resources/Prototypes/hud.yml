@@ -1,7 +1,7 @@
 - type: hudTheme
   id: SS14DefaultTheme
   name: ui-options-hud-theme-default
-  path: Default
+  path: _OuterHorizons
   order: -1
 
 # OH14-Changes start

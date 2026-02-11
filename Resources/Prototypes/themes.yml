@@ -1,6 +1,6 @@
 - type: uiTheme
   id: SS14DefaultTheme
-  path: /Textures/_OuterHorizons/Interface/NES_Theme/
+  path: /Textures/Interface/_OuterHorizons/
   colors:
     # whiteText: "#FFF5EE"
     # slotSelectedGold: "#e6b812"
