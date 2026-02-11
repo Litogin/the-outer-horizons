@@ -1,5 +1,5 @@
-﻿defaultWindowTitle: Space Station 14
-windowIconSet: /Textures/Logo/icon
-splashLogo: /Textures/Logo/logo.png
+﻿defaultWindowTitle: Outer Horizons [DEMO] # OH14-Changes start
+windowIconSet: /Textures/_OuterHorizons/Logo/icon
+splashLogo: /Textures/_OuterHorizons/Logo/logo.png # OH14-Changes end
 
 # PJB PLEASE

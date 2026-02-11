@@ -1,0 +1,32 @@
+- type: entity
+  id: OH14_Crate
+  parent: OH14_CabinetBasic
+  name: ящик
+  description: Маленькое хранилище для ваших инструментов. Не хотели бы сыграть в ящик?.
+  components:
+  - type: Construction
+    graph: OH14_Crate
+    node: OH14_Crate
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/crate.rsi
+    layers:
+    - state: basic
+    - state: basic_open
+      map: [ top ]
+      visible: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 200
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+  - type: Storage
+    storageOpenSound: /Audio/_OuterHorizons/Storage/cabinet_open.ogg # TODO, оба под замену
+    storageCloseSound: /Audio/_OuterHorizons/Storage/cabinet_close.ogg
+    grid:
+    - 0,0,5,3

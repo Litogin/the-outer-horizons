@@ -1,0 +1,417 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: OH14_BasicGasPipeLayer
+  categories: [ ForkFiltered ]
+  name: газовая труба
+  description: Опасайтесь газонюхов, любят грызть и нюхать.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/pipe_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/pipe_kick.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/pipe_drop.ogg
+  - type: Visibility
+    layer: 1
+  - type: Item
+    size: Normal
+  - type: Transform
+    anchored: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: SubFloorHide
+  - type: CollideOnAnchor
+  - type: Anchorable
+  - type: Rotatable
+  - type: Destructible
+    thresholds:
+    - trigger: # for nukes
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger: # regular damage trigger (replace with broken pipe)
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -8
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_GasPipeBroken:
+            min: 1
+            max: 1
+        offset: 0
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+    drawdepth: ThinPipe
+    visible: false
+  - type: Appearance
+  - type: PipeAppearance
+  - type: PipeColorVisuals
+  - type: NodeContainer
+  - type: PipeRestrictOverlap
+  - type: AtmosUnsafeUnanchor
+  - type: AtmosPipeColor
+  - type: AtmosMonitoringConsoleDevice
+  - type: Tag
+    tags:
+    - Pipe
+  - type: Physics
+    canCollide: false
+    bodyType: static
+  - type: StaticPrice
+    price: 30
+
+- type: entity
+  abstract: true
+  parent: OH14_BasicGasPipeLayer
+  id: OH14_GasPipeBasic
+  components:
+  - type: AtmosPipeLayers
+    spriteLayersRsiPaths:
+      enum.PipeVisualLayers.Pipe:
+        Primary: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        Secondary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi # TODO
+        Tertiary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi # TODO
+
+#Note: The PipeDirection of the PipeNode should be the south-facing version, because the entity starts at an angle of 0 (south)
+
+- type: entity
+  parent: OH14_GasPipeBasic
+  id: OH14_GasPipeHalf
+  suffix: Half Life
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+  - type: Sprite
+    layers:
+    - state: pipeHalf
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: OH14_GasPipeHalf
+      Secondary: OH14_GasPipeHalfAlt1
+      Tertiary: OH14_GasPipeHalfAlt2
+  # - type: Construction
+  #   graph: OH14_GasPipe
+  #   node: half
+  - type: Item
+    size: Small
+    storedSprite:
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+      state: storageHalf
+  - type: GuideHelp
+    guides:
+    - Pipes
+    - PipeNetworks
+
+- type: entity
+  parent: OH14_GasPipeBasic
+  id: OH14_GasPipeStraight
+  suffix: Straight
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: Longitudinal
+  - type: Sprite
+    layers:
+    - state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: OH14_GasPipeStraight
+      Secondary: OH14_GasPipeStraightAlt1
+      Tertiary: OH14_GasPipeStraightAlt2
+  - type: Construction
+    graph: OH14_GasPipe
+    node: OH14_GasPipeStraight
+  - type: Item
+    storedSprite:
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+      state: storageStraight
+    shape:
+    - 0,0,0,2
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 8
+    soundHit:
+      collection: MetalThud # this NEEDS to changed to the metal pipe falling sound effect on april first every year
+  - type: GuideHelp
+    guides:
+    - Pipes
+    - PipeNetworks
+
+- type: entity
+  parent: OH14_GasPipeBasic
+  id: OH14_GasPipeBend
+  suffix: Bend
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: SWBend
+  - type: Sprite
+    layers:
+      - state: pipeBend
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: OH14_GasPipeBend
+      Secondary: OH14_GasPipeBendAlt1
+      Tertiary: OH14_GasPipeBendAlt2
+  - type: Construction
+    graph: OH14_GasPipe
+    node: OH14_GasPipeBend
+  - type: Item
+    shape:
+    - 0,0,1,0
+    - 1,1,1,1
+    heldPrefix: Bend
+    storedSprite:
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+      state: storageBend
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 6
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 8 # Woe, pipe be upon ye!
+  - type: GuideHelp
+    guides:
+    - Pipes
+    - PipeNetworks
+
+- type: entity
+  parent: OH14_GasPipeBasic
+  id: OH14_GasPipeTJunction
+  placement:
+    mode: AlignAtmosPipeLayers
+  suffix: TJunction
+  components:
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: TSouth
+  - type: Sprite
+    layers:
+      - state: pipeTJunction
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: OH14_GasPipeTJunction
+      Secondary: OH14_GasPipeTJunctionAlt1
+      Tertiary: OH14_GasPipeTJunctionAlt2
+  - type: Construction
+    graph: OH14_GasPipe
+    node: OH14_GasPipeTJunction
+  - type: Item
+    heldPrefix: TJunction
+    storedSprite:
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+      state: storageTJunction
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 0.75
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud
+  - type: GuideHelp
+    guides:
+    - Pipes
+    - PipeNetworks
+
+- type: entity
+  parent: OH14_GasPipeBasic
+  id: OH14_GasPipeFourway
+  suffix: Fourway
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: Transform
+    noRot: true
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: Fourway
+  - type: Sprite
+    layers:
+      - state: pipeFourway
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: OH14_GasPipeFourway
+      Secondary: OH14_GasPipeFourwayAlt1
+      Tertiary: OH14_GasPipeFourwayAlt2
+  - type: Construction
+    graph: OH14_GasPipe
+    node: OH14_GasPipeFourway
+  - type: Item
+    heldPrefix: Fourway
+    storedSprite:
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+      state: storageFourway
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 0.75
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud
+  - type: GuideHelp
+    guides:
+    - Pipes
+    - PipeNetworks
+
+- type: entity
+  id: OH14_GasPipeBroken
+  parent: OH14_GasPipeBasic
+  name: сломаная труба
+  description: Газонюхи донюхались.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+    drawdepth: ThinPipe
+    state: pipeBroken
+    layers:
+      - state: pipeBroken
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    numberOfPipeLayers: 1
+  - type: Construction
+    graph: OH14_GasPipe
+    node: OH14_GasPipeBroken
+  - type: Item
+    size: Small
+  - type: Destructible
+    thresholds: # override parent to avoid recursive destruction
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: GuideHelp
+    guides:
+    - Pipes
+    - PipeNetworks
+
+- type: entity
+  parent: OH14_BasicGasPipeLayer
+  id: OH14_GasPipeManifold
+  name: коннектор газовых труб
+  description: Позволяет соеденить трубы разрозненных конфигураций в одну и наоборот.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/manifold.rsi
+    layers:
+    - state: pipeManifold
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    pipeLayersLocked: true
+  - type: PipeAppearance
+    sprite:
+    - { sprite: _OuterHorizons/Structures/Misc/Atmospherics/manifold.rsi, state: pipeConnector }
+    - { sprite: _OuterHorizons/Structures/Misc/Atmospherics/manifold.rsi, state: pipeConnector_alt1 }
+    - { sprite: _OuterHorizons/Structures/Misc/Atmospherics/manifold.rsi, state: pipeConnector_alt2 }
+  - type: Construction
+    graph: OH14_GasPipe
+    node: OH14_GasPipeManifold
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    storedSprite:
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/manifold.rsi
+      state: storageManifold
+  - type: NodeContainer
+    nodes:
+      south0:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 0
+        volume: 50
+      south1:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 1
+        volume: 50
+      south2:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 2
+        volume: 50
+      north0:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+        pipeLayer: 0
+        volume: 50
+      north1:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+        pipeLayer: 1
+        volume: 50
+      north2:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+        pipeLayer: 2
+        volume: 50
+  - type: GasPipeManifold
+  - type: AtmosMonitoringConsoleDevice
+    navMapBlip: GasPipeManifold
+    showAbsentConnections: false
+  - type: AtmosDevice
+  - type: Tag
+    tags:
+    - Unstackable

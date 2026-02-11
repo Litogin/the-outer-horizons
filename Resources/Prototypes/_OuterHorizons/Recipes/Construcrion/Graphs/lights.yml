@@ -1,0 +1,40 @@
+- type: constructionGraph
+  id: OH14_Lights
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_PoweredlightEmpty
+          steps:
+            - material: OH14_Materials
+              amount: 2
+              doAfter: 1
+        - to: OH14_PoweredSmallLightEmpty
+          steps:
+            - material: OH14_Materials
+              amount: 1
+              doAfter: 1
+    - node: OH14_PoweredlightEmpty
+      entity: OH14_PoweredlightEmpty
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: OH14_PoweredSmallLightEmpty
+      entity: OH14_PoweredSmallLightEmpty
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 1

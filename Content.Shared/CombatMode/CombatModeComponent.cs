@@ -48,5 +48,6 @@ namespace Content.Shared.CombatMode
         /// </summary>
         [DataField, AutoNetworkedField]
         public bool ToggleMouseRotator = true;
+        public bool SmoothRotation = true; // OH14-Changes, фонарик на 360
     }
 }

@@ -1,0 +1,238 @@
+- type: entity
+  parent: OH14_BaseItem
+  id: OH14_BaseHealingItem
+  abstract: true
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
+  - type: Item
+    size: Small
+    sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
+    heldPrefix: ointment
+  # Inherited
+  - type: StaticPrice
+    price: 0
+  - type: Tag
+    tags:
+    - OH14_Medicines
+
+- type: entity
+  name: мазь
+  description: Мазь от ожогов 4й степени. Да чувак, я тоже в ахуе.
+  parent: OH14_BaseHealingItem
+  id: OH14_Ointment
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - Ointment
+    - OH14_Medicines
+  - type: Sprite
+    state: ointment_3
+    layers:
+    - state: ointment_3
+      map: ["base"]
+  - type: Stack
+    stackType: OH14_Ointment
+    baseLayer: base
+    layerStates:
+    - ointment
+    - ointment_2
+    - ointment_3
+    count: 10
+  - type: Item
+    heldPrefix: ointment
+    storedRotation: 90
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Heat: -5
+        Cold: -5
+        Shock: -5
+        Caustic: -1.5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: StackPrice
+    price: 5
+
+- type: entity
+  id: OH14_Ointment1
+  parent: OH14_Ointment
+  suffix: Single
+  components:
+  - type: Sprite
+    state: ointment
+  - type: Stack
+    stackType: OH14_Ointment
+    count: 1
+
+- type: entity
+  name: пластырь
+  description: Пластыри от ушибов, переломов и вскрытых черепушек. Да чувак, я тоже в ахуе.
+  parent: OH14_BaseHealingItem
+  id: OH14_Brutepack
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - Brutepack
+    - OH14_Medicines
+  - type: Sprite
+    state: brutepack
+    layers:
+    - state: brutepack
+      map: ["base"]
+  - type: Stack
+    stackType: OH14_Brutepack
+    baseLayer: base
+    layerStates:
+    - brutepack-2
+    - brutepack-1
+    - brutepack
+    count: 10
+  - type: Item
+    heldPrefix: brutepack
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      groups:
+        Brute: -15 # 5 for each type in the group
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: StackPrice
+    price: 5
+
+- type: entity
+  id: OH14_Brutepack1
+  parent: OH14_Brutepack
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: OH14_Brutepack
+    count: 1
+
+# - type: entity
+#   name: blood pack
+#   description: Contains a groundbreaking universal blood replacement created by Nanotrasen's advanced medical science.
+#   parent: OH14_BaseHealingItem
+#   id: Bloodpack
+#   suffix: Full
+#   components:
+#   - type: Item
+#     heldPrefix: bloodpack
+#   - type: Tag
+#     tags:
+#     - Bloodpack
+#   - type: Sprite
+#     state: bloodpack
+#   - type: Healing
+#     damageContainers:
+#       - Biological
+#     damage:
+#       types:
+#         Bloodloss: -0.5 #lowers bloodloss damage
+#     modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
+#     healingBeginSound:
+#       path: "/Audio/Items/Medical/brutepack_begin.ogg"
+#       params:
+#         volume: 1.0
+#         variation: 0.125
+#     healingEndSound:
+#       path: "/Audio/Items/Medical/brutepack_end.ogg"
+#       params:
+#         volume: 1.0
+#         variation: 0.125
+#   - type: Stack
+#     stackType: OH14_ Bloodpack
+#     count: 10
+#   - type: StackPrice
+#     price: 10
+
+# - type: entity
+#   parent: Bloodpack
+#   id: Bloodpack1
+#   suffix: Single
+#   components:
+#   - type: Stack
+#     stackType: OH14_ Bloodpack
+#     count: 1
+
+- type: entity
+  name: бинты
+  description: Кучка грязных тряпок, лечящих внутряк и порезы. Да чувак, я тоже в ахуе.
+  parent: OH14_BaseHealingItem
+  id: OH14_Gauze
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - Gauze
+    - OH14_Medicines
+  - type: Sprite
+    state: gauze
+    layers:
+    - state: gauze
+      map: ["base"]
+  - type: Stack
+    stackType: OH14_Gauze
+    baseLayer: base
+    layerStates:
+    - gauze-2
+    - gauze-1
+    - gauze
+    count: 10
+  - type: Item
+    heldPrefix: gauze
+  - type: Construction
+    graph: Gauze
+    node: gauze
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Slash: -5
+        Piercing: -10
+    bloodlossModifier: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  id: OH14_Gauze1
+  parent: OH14_Gauze
+  suffix: Single
+  components:
+  - type: Sprite
+    state: gauze-2
+  - type: Stack
+    count: 1

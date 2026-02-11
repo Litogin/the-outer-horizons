@@ -1,0 +1,10 @@
+- type: entity
+  parent: OH14_ClothingShirtBase
+  id: OH14_ClothingShirtBasic
+  name: майка
+  description: Простая серая майка, в которой очень удобно мерзнуть.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Shirt/basic.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Shirt/basic.rsi

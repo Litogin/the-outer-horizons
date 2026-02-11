@@ -1,0 +1,152 @@
+- type: constructionGraph
+  id: OH14_Console
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frameUnsecured
+          completed:
+            - !type:SetAnchor
+              value: false
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 2
+
+    - node: frameUnsecured
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_ConsoleFrame
+      edges:
+        - to: boardUnsecured
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - component: ComputerBoard
+              store: board
+              name: construction-graph-component-any-computer-circuit-board
+              icon:
+                sprite: "Objects/Misc/module.rsi"
+                state: "id_mod"
+
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: boardUnsecured
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: missingWires
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+        - to: frameUnsecured
+          conditions:
+            - !type:EntityAnchored { }
+          completed:
+            - !type:EmptyAllContainers {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: missingWires
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: monitorMissing
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: OH14_Components
+              amount: 1
+              doAfter: 1
+
+        - to: boardUnsecured
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+    - node: monitorMissing
+      entity: OH14_ConsoleFrame
+      actions:
+        - !type:SetAnchor { }
+        - !type:AppearanceChange
+      edges:
+        - to: monitorUnsecured
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: OH14_Electronic
+              amount: 2
+              doAfter: 1
+
+        - to: missingWires
+          conditions:
+            - !type:EntityAnchored { }
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: monitorUnsecured
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_ConsoleFrame
+      edges:
+        - to: computer
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+        - to: monitorMissing
+          conditions:
+            - !type:EntityAnchored {}
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: computer
+      entity: !type:BoardNodeEntity { container: board }
+      edges:
+        - to: monitorUnsecured
+          completed:
+            - !type:RaiseEvent
+                event: !type:MachineDeconstructedEvent
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: monitorBroken
+      entity: OH14_ConsoleBroken
+      edges:
+        - to: monitorMissing
+          conditions:
+            - !type:EntityAnchored {}
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2

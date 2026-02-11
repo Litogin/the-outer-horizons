@@ -1,0 +1,282 @@
+﻿# ------------------------ Базик
+- type: entity
+  id: OH14_BaseThruster
+  suffix: "Двигатель"
+  categories: [ ForkFiltered ]
+  parent: BaseStructureDynamic
+  name: ракетный двигатель
+  abstract: true
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 800
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Anchorable
+    delay: 5
+  - type: AmbientSound
+    enabled: false
+    range: 10
+    volume: -1
+    sound:
+      path: /Audio/_OuterHorizons/Machines/rokit.ogg
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Rotatable
+    # rotateWhileAnchored: true
+  - type: Thruster
+    damage:
+      types:
+        Heat: 40
+  - type: InteractionOutline
+  - type: Sprite
+  - type: Appearance
+  - type: ThrusterVisuals
+  - type: ExtensionCableReceiver
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100  # Considering we need a lot of thrusters didn't want to make an individual one too tanky
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+          spawn:
+            OH14_SheetMaterials1:
+              min: 1
+              max: 2
+      - !type:SpawnEntitiesBehavior
+          spawn:
+            OH14_SheetComponents1:
+              min: 1
+              max: 2
+  - type: StaticPrice
+    price: 300
+  - type: GuideHelp
+    guides:
+    - ShuttleCraft
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  id: OH14_BaseThrusterPressure
+  categories: [ ForkFiltered ]
+  parent: OH14_BaseThruster
+  name: ракетный двигатель
+  abstract: true
+  components:
+  - type: PointLight
+    rotation: 180
+    autoRot: true
+    radius: 15
+    energy: 15
+    color: "#4677ff"
+    offset: "0, 0.2"
+    # castShadows: true
+    enabled: false
+    mask: /Textures/_OuterHorizons/Effects/LightMasks/cone_alt.png
+  # - type: PressureThruster
+  #   inletName: inlet
+  - type: NodeContainer
+    nodes:
+      inlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+
+# ------------------------ Разгонные двигла
+
+- type: entity
+  id: OH14_ThrusterPressureBlue
+  name: продвинутый ракетный двигатель
+  description: Продвинутый ракетный двигатель с двумя сведенными соплами, потребляющий топливо для своей работы. За ним имеется порт для трубы.
+  parent: OH14_BaseThrusterPressure
+  components:
+  - type: Thruster
+    thrust: 250
+  # - type: PressureThruster
+  #   inletName: inlet
+  #   pressureСonsumption: 40
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Shuttles/b_thruster.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+
+- type: entity
+  id: OH14_ThrusterPressureRed
+  name: ракетный двигатель
+  description: Ракетный двигатель с двумя сведенными соплами, потребляющий топливо для своей работы. За ним имеется порт для трубы.
+  parent: OH14_BaseThrusterPressure
+  components:
+  - type: Construction
+    graph: OH14_ThrusterR
+    node: OH14_ThrusterR
+  - type: PointLight
+    color: "#eca664"
+  - type: Thruster
+    thrust: 125
+  # - type: PressureThruster
+  #   inletName: inlet
+  #   pressureСonsumption: 25
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Shuttles/r_thruster.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+
+- type: entity
+  id: OH14_ThrusterPressureOrange
+  name: тяжелый ракетный двигатель
+  description: Тяжелый ракетный двигатель с двумя сведенными соплами, потребляющий топливо для своей работы. За ним имеется порт для трубы.
+  parent: OH14_BaseThrusterPressure
+  components:
+  - type: PointLight
+    color: "#eca664"
+  - type: Thruster
+    thrust: 500
+  # - type: PressureThruster
+  #   inletName: inlet
+  #   pressureСonsumption: 100
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Shuttles/o_thruster.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+
+# ------------------------ RCS
+
+- type: entity
+  id: OH14_ThrusterPressureRCS
+  suffix: СТАРОЕ
+  name: ракетное РСУ
+  description: Старый, но вполне рабочий RCS, потребляющий топливо для своей работы. За ним имеется порт для трубы.
+  parent: OH14_BaseThrusterPressure
+  components:
+  - type: Machine
+    board: ThrusterMachineCircuitboard
+  - type: Thruster
+    thrust: 60
+  # - type: PressureThruster
+  #   inletName: inlet
+  #   pressureСonsumption: 20
+  - type: PointLight
+    color: "#eca664"
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Shuttles/OldThrusters/rcs.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - sprite: _OuterHorizons/Structures/Shuttles/burn.rsi
+      state: rcs
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      color: "#e5e3e4"
+      offset: "0, 1"
+
+- type: entity
+  id: OH14_ThrusterPressureSmallRCS
+  suffix: СТАРОЕ
+  name: малое ракетное РСУ
+  description: Малый, но вполне рабочий RCS, потребляющий топливо для своей работы. За ним имеется порт для трубы.
+  parent: OH14_ThrusterPressureRCS
+  components:
+  - type: Thruster
+    thrust: 30
+  # - type: PressureThruster
+  #   inletName: inlet
+  #   pressureСonsumption: 12
+  - type: PointLight
+    color: "#eca664"
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Shuttles/OldThrusters/small_rcs.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - sprite: _OuterHorizons/Structures/Shuttles/burn.rsi
+      state: small_rcs
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      color: "#e5e3e4"
+      offset: "0, 1"
+
+# ------------------------ Гироскоп
+
+- type: entity
+  id: OH14_Gyroscope
+  categories: [ ForkFiltered ]
+  parent: [ OH14_BaseThruster, ConstructibleMachine ]
+  name: гиродин
+  description: 2 вращающихся механизма, иронично вращающих вас.
+  components:
+  - type: Sprite
+    # Listen I'm not the biggest fan of the sprite but it was the most appropriate thing I could find.
+    sprite: _OuterHorizons/Structures/Shuttles/gyroscope.rsi
+    snapCardinals: true
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn
+      map: [ "enum.ThrusterVisualLayers.Thrusting" ]
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+  - type: Thruster
+    thrusterType: Angular
+    requireSpace: false
+    thrust: 250

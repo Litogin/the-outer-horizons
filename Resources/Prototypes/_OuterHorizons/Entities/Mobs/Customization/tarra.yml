@@ -1,0 +1,15 @@
+- type: marking
+  id: TarraBaseEars
+  bodyPart: HeadTop
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
+    state: Tarrantok
+
+- type: marking
+  id: TarraBaseTail
+  bodyPart: Tail
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/tails.rsi
+    state: tarrantok

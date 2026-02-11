@@ -1,0 +1,6 @@
+- type: latheRecipe
+  id: OH14_Ore
+  completetime: 20
+  result: OH14_SheetIngot
+  materials:
+    OH14_Ore: 1000

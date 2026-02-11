@@ -1,0 +1,58 @@
+{
+    "version": 1,
+    "size":
+    {
+        "x": 32,
+        "y": 48
+    },
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "states":
+    [
+        {
+            "name": "icon"
+        },
+        {
+      "name": "frame0"
+    },
+    {
+      "name": "frame1"
+    },
+    {
+      "name": "frame2"
+    },
+        {
+            "name": "icon_on",
+            "delays": [
+                [
+                    0.11,
+                    0.11,
+                    0.11
+                ]
+            ]
+        },
+        {
+            "name": "loaded"
+        },
+        {
+            "name": "off_unshaded",
+            "delays": [
+                [
+                    0.3,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "on_unshaded",
+            "delays": [
+                [
+                    0.15,
+                    0.15,
+                    0.15,
+                    0.15
+                ]
+            ]
+        }
+    ]
+}

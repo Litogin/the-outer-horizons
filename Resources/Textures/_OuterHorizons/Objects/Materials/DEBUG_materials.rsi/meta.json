@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "electronic"
+    },
+    {
+      "name": "electronic_2"
+    },
+    {
+      "name": "electronic_3"
+    },
+    {
+      "name": "electronic-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "electronic-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "material"
+    },
+    {
+      "name": "material_2"
+    },
+    {
+      "name": "material_3"
+    },
+    {
+      "name": "material-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "material-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "ingot"
+    },
+    {
+      "name": "ingot_2"
+    },
+    {
+      "name": "ingot_3"
+    },
+    {
+      "name": "ingot-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "ingot-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "ore"
+    },
+    {
+      "name": "ore_2"
+    },
+    {
+      "name": "ore_3"
+    },
+    {
+      "name": "ore-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "ore-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "mechanic"
+    },
+    {
+      "name": "mechanic_2"
+    },
+    {
+      "name": "mechanic_3"
+    },
+    {
+      "name": "mechanic-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "mechanic-inhand-right",
+      "directions": 4
+    }
+  ]
+}

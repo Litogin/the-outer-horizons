@@ -1,0 +1,157 @@
+- type: entity
+  parent: BaseWallmountMachine
+  id: OH14_AirAlarm
+  categories: [ ForkFiltered ]
+  name: атмос терминал
+  description: Терминал для работы с вентиляцией и датчиками газа, не вайбовостью.
+  components:
+  - type: StationAiWhitelist
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: DeviceNetwork
+    deviceNetId: AtmosDevices
+    receiveFrequencyId: AtmosMonitor
+    transmitFrequencyId: AtmosMonitor
+    prefix: device-address-prefix-air-alarm
+    sendBroadcastAttemptEvent: true
+  - type: WiredNetworkConnection
+  # for output status ports
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceList
+  - type: DeviceNetworkRequiresPower
+  - type: DeviceLinkSource
+    ports:
+    - AirDanger
+    - AirWarning
+    - AirNormal
+    lastSignals:
+      AirDanger: false
+      AirWarning: false
+      AirNormal: false
+  - type: AtmosAlarmable
+    alarmSound: /Audio/_OuterHorizons/Machines/basic_alarm.ogg
+    syncWith:
+    - AirAlarm
+    - AirSensor
+    - GasVent
+    - GasScrubber
+  - type: AtmosAlarmableVisuals
+    layerMap: "airAlarmState"
+    alarmStates:
+      Normal: screen
+      Warning: screen_warn
+      Danger: screen_alarm
+    setOnDepowered:
+      airAlarmBase: screen_nil
+  - type: Tag
+    tags:
+      - AirAlarm
+  - type: AtmosDevice
+  - type: AirAlarm
+  - type: AtmosAlertsDevice
+    group: AirAlarm
+  - type: Clickable
+  - type: InteractionOutline
+  - type: UserInterface
+    interfaces:
+      enum.SharedAirAlarmInterfaceKey.Key:
+        type: AirAlarmBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: WiresPanel
+  - type: Wires
+    boardName: wires-board-name-airalarm
+    layoutId: AirAlarm
+  # - type: AccessReader
+  #   access: [["Atmospherics"]]
+  - type: ContainerFill
+    containers:
+      board: [ AirAlarmElectronics ]
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: Appearance
+  - type: WiresVisuals
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Wallmounts/air_monitors.rsi
+    layers:
+    - state: icon
+    - state: icon_panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: screen
+      map: ["airAlarmState"]
+      shader: unshaded
+  - type: Construction
+    graph: OH14_AirControl
+    node: OH14_AirControl
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              OH14_SheetMaterials1:
+                min: 1
+                max: 2
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalGlassBreak
+              params:
+                volume: -4
+  - type: GuideHelp
+    guides:
+    - AirAlarms
+    - DeviceMonitoringAndControl
+
+- type: entity
+  parent: BaseWallmountMetallic
+  id: OH14_AirAlarmAssembly
+  categories: [ ForkFiltered ]
+  name: каркас атмос терминала
+  description: Вайбик не засчитан.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Wallmounts/air_monitors.rsi
+    layers:
+    - state: frame
+      # map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Appearance
+  - type: Construction
+    graph: OH14_AirControl
+    node: Frame
+  - type: Transform
+    anchored: true
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 20
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 15
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalGlassBreak
+              params:
+                volume: -4

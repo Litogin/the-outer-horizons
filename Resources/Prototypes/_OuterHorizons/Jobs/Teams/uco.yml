@@ -1,0 +1,24 @@
+- type: job
+  id: OH14_UcoRole
+  name: United Colonial Organization
+  description: О.К.О. (Или UCO). Остатки бывшей корпорации по застройке и расширению колоний на дальних планетах.
+  playTimeTracker: OH14_UcoRole
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-everyone
+  setPreference: true
+  startingGear: OH14_UcoGear
+
+- type: startingGear
+  id: OH14_UcoGear
+  equipment:
+    jumpsuit: OH14_ClothingJumpsuitUco
+    pants: OH14_ClothingPantsBasic
+    back: OH14_ClothingBackpackBasic
+    shoes: OH14_ClothingShoesBasic
+    pocket1: OH14_IDCardBasic
+  storage:
+    back:
+    - OH14_CrowbarBasic
+
+- type: playTimeTracker
+  id: OH14_UcoRole

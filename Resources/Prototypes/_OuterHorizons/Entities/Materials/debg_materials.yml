@@ -1,0 +1,242 @@
+- type: entity
+  abstract: true
+  parent: OH14_BaseItem
+  id: OH14_SheetBase
+  description: Различные приколы из которых можно сделать все что душе угодно. Я не шучу.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+    size: Normal
+  - type: StaticPrice
+    price: 0
+  - type: Tag
+    tags:
+    - OH14_Sheet
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_SheetMaterials
+  name: Материалы
+  suffix: Full
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Materials: 100
+  - type: Stack
+    count: 10
+    stackType: OH14_Materials
+    baseLayer: base
+    layerStates:
+    - material
+    - material_2
+    - material_3
+  - type: Sprite
+    state: material_3
+    layers:
+    - state: material_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: material
+  - type: Appearance
+  - type: FloorTile
+    outputs:
+    - OH14_PlatingLattice
+    - OH14_Plating
+
+- type: entity
+  parent: OH14_SheetMaterials
+  id: OH14_SheetMaterials1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: material
+  - type: Stack
+    stackType: OH14_Materials
+    count: 1
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_SheetComponents
+  name: Компоненты
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Components: 100
+  - type: Stack
+    count: 10
+    stackType: OH14_Components
+    baseLayer: base
+    layerStates:
+    - mechanic
+    - mechanic_2
+    - mechanic_3
+  - type: Sprite
+    state: mechanic_3
+    layers:
+    - state: mechanic_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: mechanic
+  - type: Appearance
+
+- type: entity
+  parent: OH14_SheetComponents
+  id: OH14_SheetComponents1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: mechanic
+  - type: Stack
+    stackType: OH14_Components
+    count: 1
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_SheetElectronics
+  name: Электроника
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Electronics: 100
+  - type: Stack
+    count: 10
+    stackType: OH14_Electronic
+    baseLayer: base
+    layerStates:
+    - electronic
+    - electronic_2
+    - electronic_3
+  - type: Sprite
+    state: electronic_3
+    layers:
+    - state: electronic_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: electronic
+  - type: Appearance
+
+- type: entity
+  parent: OH14_SheetElectronics
+  id: OH14_SheetElectronics1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: electronic
+  - type: Stack
+    stackType: OH14_Electronic
+    count: 1
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_SheetIngot
+  name: Слиток
+  suffix: Full
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Materials: 300
+  - type: Stack
+    count: 10
+    stackType: OH14_Ingot
+    baseLayer: base
+    layerStates:
+    - ingot
+    - ingot_2
+    - ingot_3
+  - type: Sprite
+    state: ingot_3
+    layers:
+    - state: ingot_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: ingot
+  - type: Appearance
+
+- type: entity
+  parent: OH14_SheetIngot
+  id: OH14_SheetIngot1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: ingot
+  - type: Stack
+    stackType: OH14_Ingot
+    count: 1
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_SheetOre
+  name: Руда
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Ore: 100
+  - type: Stack
+    count: 10
+    stackType: OH14_Ore
+    baseLayer: base
+    layerStates:
+    - ore
+    - ore_2
+    - ore_3
+  - type: Sprite
+    state: ore_3
+    layers:
+    - state: ore_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: ore
+  - type: Appearance
+  - type: Tag
+    tags:
+    - OH14_Ore
+
+- type: entity
+  parent: OH14_SheetOre
+  id: OH14_SheetOre1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: ore
+  - type: Stack
+    stackType: OH14_Ore
+    count: 1

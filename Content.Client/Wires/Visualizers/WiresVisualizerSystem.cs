@@ -27,6 +27,7 @@ namespace Content.Client.Wires.Visualizers
 
     public enum WiresVisualLayers : byte
     {
-        MaintenancePanel
+        MaintenancePanel,
+        MaintenancePanelClosed // OH14-Changes
     }
 }

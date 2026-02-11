@@ -1,0 +1,6 @@
+- type: soundCollection
+  id: OH14_Grille
+  files:
+  - /Audio/_OuterHorizons/Effects/fence1.ogg
+  - /Audio/_OuterHorizons/Effects/fence2.ogg
+  - /Audio/_OuterHorizons/Effects/fence3.ogg

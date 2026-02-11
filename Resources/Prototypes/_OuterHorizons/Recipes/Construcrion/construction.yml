@@ -1,0 +1,111 @@
+- type: construction
+  hide: false
+  id: OH14_Girder
+  graph: OH14_Girder
+  startNode: start
+  targetNode: OH14_Girder
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_Window
+  graph: OH14_Window
+  startNode: start
+  targetNode: OH14_WindowGirder
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  hide: false
+  id: OH14_WallDirectional
+  graph: OH14_WallDirectional
+  startNode: start
+  targetNode: OH14_WallDirectional
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_Airlock
+  graph: OH14_Airlock
+  startNode: start
+  targetNode: OH14_Airlock
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_AirlockDock
+  graph: OH14_Airlock
+  startNode: start
+  targetNode: OH14_AirlockDock
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_Grille
+  graph: OH14_Grille
+  startNode: start
+  targetNode: grille
+  category: construction-category-structures
+  conditions:
+    - !type:TileNotBlocked
+      failIfSpace: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  hide: false
+  id: OH14_PoweredlightEmpty
+  graph: OH14_Lights
+  startNode: start
+  targetNode: OH14_PoweredlightEmpty
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_PoweredSmallLightEmpty
+  graph: OH14_Lights
+  startNode: start
+  targetNode: OH14_PoweredSmallLightEmpty
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

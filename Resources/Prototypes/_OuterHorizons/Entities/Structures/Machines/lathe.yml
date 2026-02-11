@@ -1,0 +1,249 @@
+- type: entity
+  id: OH14_BasicLathe
+  parent: BaseMachinePowered
+  categories: [ ForkFiltered ]
+  suffix: Латы, Крафт
+  abstract: true
+  name: lathe
+  components:
+  - type: Appearance
+  # - type: WiresVisuals
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+          - MachineLayer
+  - type: Lathe
+  - type: MaterialStorage
+    insertionTime: 1
+    insertingSound: /Audio/_OuterHorizons/Machines/vend.ogg # TODO, поставить другой
+    storageLimit: 15000
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: frame3
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  # - type: WiresPanel
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: StaticPrice
+    price: 800
+  - type: ResearchClient
+  - type: TechnologyDatabase
+  # - type: ReagentSpeed
+  #   solution: lube
+  #   modifiers:
+  #     SpaceLube: 0.25
+  #     SpaceGlue: 5
+  # - type: SolutionContainerManager
+  #   solutions:
+  #     lube:
+  #       maxVol: 250
+  # - type: Spillable
+  #   solution: lube
+  # - type: RefillableSolution
+  #   solution: lube
+  # - type: ExaminableSolution
+  #   solution: lube
+
+- type: entity
+  id: OH14_AutoLathe
+  parent: OH14_BasicLathe
+  name: автолат
+  description: Базовая автоматизированная установка для вашего крафта, чья крышка забрала на себя половину дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
+  components:
+  - type: Construction
+    graph: OH14_AutolatheFrame
+    node: OH14_Autolathe
+  - type: PointLight
+    radius: 2
+    energy: 5.0
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.5" # shine from the top, not bottom of the computer
+    castShadows: false
+    color: "#4eec45"
+  - type: LitOnPowered
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/autolathe.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: MaterialStorage
+    whitelist: &OH14_MaterialWhitelist
+      tags:
+        - OH14_Sheet
+  - type: Lathe
+    producingSound: /Audio/_OuterHorizons/Machines/print.ogg
+    idleState: icon
+    runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - OH14_ToolsStatic
+    - OH14_MaterialsStatic
+    - OH14_MiscStatic
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - BlueprintAutolathe
+  - type: ContainerContainer
+    containers:
+      blueprint: !type:Container
+  - type: EmptyOnMachineDeconstruct
+    containers:
+    - blueprint
+
+- type: entity
+  id: OH14_ProtoLathe
+  parent: OH14_BasicLathe
+  name: протолат
+  description: Продвинутая автоматизированная установка для вашего крафта, чья крышка забрала на себя половину дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
+  components:
+  - type: Construction
+    graph: OH14_ProtolatheFrame
+    node: OH14_Protolathe
+  - type: PointLight
+    radius: 2
+    energy: 5.0
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.5" # shine from the top, not bottom of the computer
+    castShadows: false
+    color: "#4eec45"
+  - type: LitOnPowered
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/protolathe.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: MaterialStorage
+    whitelist: *OH14_MaterialWhitelist
+  # - type: OreSiloClient
+  - type: Lathe
+    producingSound: /Audio/_OuterHorizons/Machines/print.ogg
+    idleState: icon
+    runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - OH14_ElectronicStatic
+
+- type: entity
+  id: OH14_ArcFurnance
+  parent: OH14_BasicLathe
+  name: дуговая печь
+  description: Электрическая печь для плавки простых металлов (не сплавов). При работе имеет свойство нагревать атмосферу, из-за нелепого радиатора сбоку.
+  components:
+  - type: Construction
+    graph: OH14_ArcFurnanceFrame
+    node: OH14_ArcFurnance
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/arcfurnace.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: MaterialStorage
+    ignoreColor: true
+    whitelist: &OH14_MaterialWhitelistFurnance
+      tags:
+        - OH14_Ore
+  - type: Lathe
+    producingSound: /Audio/_OuterHorizons/Machines/furnance.ogg
+    idleState: icon
+    runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - OH14_OreStatic
+  - type: LatheHeatProducing
+    energyPerSecond: 20000
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+
+# - type: entity
+#   id: OH14_AtmosLathe
+#   parent: OH14_BasicLathe
+#   name: изгибатель труб
+#   description: Ака гидравлический изгибатель труб, но в целом позволит тебе сделать много полезных штук для атмоса.
+#   components:
+#   - type: Construction
+#     graph: OH14_AutolatheFrame
+#     node: OH14_Autolathe
+#   - type: PointLight
+#     radius: 2
+#     energy: 5.0
+#     enabled: false
+#     mask: /Textures/Effects/LightMasks/cone.png
+#     autoRot: true
+#     offset: "0, 0.5" # shine from the top, not bottom of the computer
+#     castShadows: false
+#     color: "#4eec45"
+#   - type: LitOnPowered
+#   - type: Sprite
+#     sprite: _OuterHorizons/Structures/Machines/atmoslathe.rsi
+#     snapCardinals: true
+#     layers:
+#     - state: icon
+#       map: ["enum.LatheVisualLayers.IsRunning"]
+#     - state: unlit
+#       shader: unshaded
+#       map: ["enum.PowerDeviceVisualLayers.Powered"]
+#     - state: inserting
+#       map: ["enum.MaterialStorageVisualLayers.Inserting"]
+#   - type: MaterialStorage
+#     whitelist: *OH14_MaterialWhitelist
+#   - type: Lathe
+#     producingSound: /Audio/_OuterHorizons/Machines/print.ogg
+#     idleState: icon
+#     runningState: building
+#     unlitIdleState: unlit
+#     unlitRunningState: unlit-building
+#     staticPacks:
+#     - OH14_PipingStatic

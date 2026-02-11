@@ -1,0 +1,320 @@
+- type: entity
+  parent: OH14_GasPipeBasic
+  abstract: true
+  id: OH14_GasBinaryBase
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: AtmosDevice
+  - type: Tag
+    tags:
+      - Unstackable
+  - type: SubFloorHide
+    blockInteractions: false
+    blockAmbience: false
+  - type: NodeContainer
+    nodes:
+      inlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+      outlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+  - type: AtmosPipeLayers
+    spriteRsiPaths:
+      Primary: _OuterHorizons/Structures/Misc/Atmospherics/pump.rsi
+      Secondary: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt1.rsi
+      Tertiary: _OuterHorizons/Structures/Misc/Atmospherics/pump_alt2.rsi
+
+- type: entity
+  parent: OH14_GasBinaryBase
+  id: OH14_GasPort
+  name: газовый коннектор
+  description: Подрубает девайсы и баллоны к подключенной сети труб.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Construction
+      graph: OH14_GasPumps
+      node: OH14_GasPort
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/gascanisterport.rsi
+      noRot: true
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeUnaryConnectors
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: gasCanisterPort
+          map: [ "enum.SubfloorLayers.FirstLayer" ]
+    - type: AtmosPipeLayers
+      spriteRsiPaths: {}
+    - type: Appearance
+    - type: PipeColorVisuals
+    - type: GasPort
+    - type: NodeContainer
+      nodes:
+        connected:
+          !type:PortPipeNode
+          nodeGroupID: Pipe
+          pipeDirection: South
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasVentOpening
+    - type: GuideHelp
+      guides:
+      - GasCanisters
+
+- type: entity
+  parent: OH14_GasBinaryBase
+  id: OH14_GasPressurePump
+  name: газовый насос
+  description: Гонит газ из порта А в Б, в отключенном состоянии блокирует поток.
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: Construction
+    graph: OH14_GasPumps
+    node: OH14_GasPressurePump
+  - type: ExtensionCableReceiver
+  - type: LightningTarget
+    priority: 1
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: Rotatable
+  - type: Transform
+    noRot: false
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+    - enum.SubfloorLayers.SecondLayer
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump.rsi
+    layers:
+    - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+      state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: pumpPressure
+      map: ["enum.SubfloorLayers.FirstLayer"]
+    - state: pumpPressureOn
+      shader: unshaded
+      map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: OH14_GasPressurePump
+      Secondary: OH14_GasPressurePumpAlt1
+      Tertiary: OH14_GasPressurePumpAlt2
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PumpVisuals.Enabled:
+        enabled:
+          True: { state: pumpPressure_unshaded }
+          False: { state: pumpPressureOn }
+  - type: PipeColorVisuals
+  - type: GasPressurePump
+    enabled: false
+  - type: ActivatableUI
+    key: enum.GasPressurePumpUiKey.Key
+  - type: ActivatableUIRequiresAnchor
+  - type: UserInterface
+    interfaces:
+      enum.GasPressurePumpUiKey.Key:
+        type: GasPressurePumpBoundUserInterface
+  - type: AmbientSound
+    enabled: false
+    volume: -9
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/gas_pump.ogg
+  - type: AtmosMonitoringConsoleDevice
+    navMapBlip: GasFlowRegulator
+  - type: GuideHelp
+    guides:
+    - Pumps
+
+- type: entity
+  parent: OH14_GasBinaryBase
+  id: OH14_GasVolumePump
+  name: объемный газовый насос
+  description: Автор не играл за атмоса и не ебет для чего это.
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+    - type: Construction
+      graph: OH14_GasPumps
+      node: OH14_GasVolumePump
+    - type: ExtensionCableReceiver
+    - type: LightningTarget
+      priority: 1
+    - type: ApcPowerReceiver
+      powerLoad: 200
+    - type: Rotatable
+    - type: Transform
+      noRot: false
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+      - enum.SubfloorLayers.SecondLayer
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump.rsi
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeStraight
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: pumpVolume
+          map: ["enum.SubfloorLayers.FirstLayer"]
+        - state: pumpVolumeOn
+          shader: unshaded
+          map: [ "enum.SubfloorLayers.SecondLayer", "enabled" ]
+    - type: AtmosPipeLayers
+      alternativePrototypes:
+        Primary: OH14_GasVolumePump
+        Secondary: OH14_GasVolumePumpAlt1
+        Tertiary: OH14_GasVolumePumpAlt2
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.GasVolumePumpVisuals.State:
+          enabled:
+            On: { state: pumpVolume_unshaded }
+            Off: { state: pumpVolumeOn }
+            Blocked: { state: pumpVolumeBlocked }
+    - type: PipeColorVisuals
+    - type: GasVolumePump
+      enabled: false
+    - type: ActivatableUI
+      key: enum.GasVolumePumpUiKey.Key
+    - type: ActivatableUIRequiresAnchor
+    - type: UserInterface
+      interfaces:
+        enum.GasVolumePumpUiKey.Key:
+          type: GasVolumePumpBoundUserInterface
+    - type: AmbientSound
+      enabled: false
+      volume: -9
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/gas_pump.ogg
+    - type: DeviceNetwork
+      deviceNetId: AtmosDevices
+      receiveFrequencyId: AtmosMonitor
+      transmitFrequencyId: AtmosMonitor
+      sendBroadcastAttemptEvent: true
+      examinableAddress: true
+      prefix: device-address-prefix-volume-pump
+    - type: WiredNetworkConnection
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasFlowRegulator
+    - type: GuideHelp
+      guides:
+      - Pumps
+
+- type: entity
+  parent: OH14_GasBinaryBase
+  id: OH14_GasPassiveGate
+  name: пассивный газовый насос
+  description: Ограничевает поток газа только в одну сторону.
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+    - type: Construction
+      graph: OH14_GasPumps
+      node: OH14_GasPassiveGate
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+      - enum.SubfloorLayers.SecondLayer
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump.rsi
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeStraight
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: pumpPassiveGate
+          map: [ "enum.SubfloorLayers.FirstLayer" ]
+        - state: pumpPassiveGateOn
+          shader: unshaded
+          map: [ "enum.SubfloorLayers.SecondLayer" ]
+    - type: AtmosPipeLayers
+      alternativePrototypes:
+        Primary: OH14_GasPassiveGate
+        Secondary: OH14_GasPassiveGateAlt1
+        Tertiary: OH14_GasPassiveGateAlt2
+    - type: Appearance
+    - type: PipeColorVisuals
+    - type: GasPassiveGate
+    - type: AmbientSound
+      enabled: true
+      volume: -9
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/gas_hiss.ogg
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasValve
+    - type: GuideHelp
+      guides:
+      - PassiveGate
+
+- type: entity
+  parent: OH14_GasBinaryBase
+  id: OH14_GasValve
+  name: газовый вентиль
+  description: Да, ты можешь перекрыть неконтролируемый поток вони.
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+    - type: Construction
+      graph: OH14_GasPumps
+      node: OH14_GasValve
+    - type: SubFloorHide
+      visibleLayers:
+      - enum.SubfloorLayers.FirstLayer
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Misc/Atmospherics/pump.rsi
+      layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeStraight
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: pumpManualValve
+          map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+    - type: AtmosPipeLayers
+      alternativePrototypes:
+        Primary: OH14_GasValve
+        Secondary: OH14_GasValveAlt1
+        Tertiary: OH14_GasValveAlt2
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.FilterVisuals.Enabled:
+          enabled:
+            True: { state: pumpManualValveOn }
+            False: { state: pumpManualValve }
+    - type: PipeColorVisuals
+    - type: GasValve
+    - type: NodeContainer
+      nodes:
+        inlet:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: North
+          volume: 100
+        outlet:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: South
+          volume: 100
+    - type: AmbientSound
+      enabled: true
+      volume: -9
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/gas_hiss.ogg
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasValve
+    - type: GuideHelp
+      guides:
+      - ManualValve

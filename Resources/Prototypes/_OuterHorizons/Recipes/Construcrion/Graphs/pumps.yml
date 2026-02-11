@@ -1,0 +1,137 @@
+- type: constructionGraph
+  id: OH14_GasPumps
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: OH14_GasPort
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasPressurePump
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasVolumePump
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasPassiveGate
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasValve
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+
+  - node: OH14_GasPort
+    entity: OH14_GasPort
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasPressurePump
+    entity: OH14_GasPressurePump
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasVolumePump
+    entity: OH14_GasVolumePump
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasPassiveGate
+    entity: OH14_GasPassiveGate
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasValve
+    entity: OH14_GasValve
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1

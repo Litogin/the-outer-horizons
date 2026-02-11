@@ -1,0 +1,15 @@
+- type: latheRecipe
+  id: OH14_Electronics
+  completetime: 5
+  result: OH14_SheetElectronics1
+  materials:
+    OH14_Materials: 200
+    OH14_Components: 500
+
+- type: latheRecipe
+  id: OH14_NuclearRod
+  completetime: 5
+  result: OH14_NuclearRod
+  materials:
+    OH14_Materials: 1000
+    OH14_Components: 1000

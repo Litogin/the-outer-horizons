@@ -1,0 +1,31 @@
+- type: latheRecipe
+  id: OH14_CircuitboardShuttle
+  completetime: 5
+  result: OH14_CircuitboardShuttle
+  materials:
+    OH14_Components: 100
+    OH14_Electronics: 500
+
+- type: latheRecipe
+  id: OH14_CircuitboardRadar
+  completetime: 5
+  result: OH14_CircuitboardRadar
+  materials:
+    OH14_Components: 100
+    OH14_Electronics: 100
+
+- type: latheRecipe
+  id: OH14_CircuitboardAtmos
+  completetime: 5
+  result: OH14_CircuitboardAtmos
+  materials:
+    OH14_Components: 100
+    OH14_Electronics: 250
+
+- type: latheRecipe
+  id: OH14_CircuitboardPower
+  completetime: 5
+  result: OH14_CircuitboardPower
+  materials:
+    OH14_Components: 100
+    OH14_Electronics: 250

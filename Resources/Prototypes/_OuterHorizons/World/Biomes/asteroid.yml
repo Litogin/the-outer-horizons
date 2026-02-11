@@ -1,0 +1,28 @@
+- type: spaceBiome
+  id: OH14_AsteroidsStandard
+  priority: 0 # This probably shouldn't get selected.
+  noiseRanges: {}
+  chunkComponents:
+    - type: DebrisFeaturePlacerController
+      densityNoiseChannel: Density
+    - type: SimpleDebrisSelector
+      debrisTable:
+        - id: OH14_AsteroidDebrisSmall
+          prob: 0.5
+        - id: OH14_AsteroidDebrisMedium
+          prob: 0.4
+        - id: OH14_AsteroidDebrisLarge
+          prob: 0.3
+        - id: OH14_AsteroidDebrisLarger
+          prob: 0.2
+    # - type: NoiseDrivenDebrisSelector
+    #   noiseChannel: Wreck
+    #   debrisTable:
+    #     - id: ScrapDebrisSmall
+    #     - id: ScrapDebrisMedium
+    #     - id: ScrapDebrisLarge
+    #       prob: 0.5
+    - type: NoiseRangeCarver
+      ranges:
+        - 0.4, 0.6
+      noiseChannel: Temperature

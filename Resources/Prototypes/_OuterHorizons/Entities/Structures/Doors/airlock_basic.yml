@@ -1,0 +1,280 @@
+- type: entity
+  id: OH14_Airlock
+  categories: [ ForkFiltered ]
+  parent: BaseStructure
+  name: шлюз
+  description: Он открывается, он закрывается, он давит неосторожных грейтайдов.
+  components:
+  - type: StationAiWhitelist
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/smash.ogg"
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Doors/Airlocks/Standard/basic.rsi
+    # snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: closed_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+      visible: false
+    - state: welded
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: bolted_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseBolted"]
+    - state: emergency_unlit
+      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
+      shader: unshaded
+    - state: panel_open
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: electrified_ai
+      sprite: Interface/Misc/ai_hud.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.HUD"]
+    - state: electrified
+      sprite: Effects/electricity.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.Sparks"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: LayerChangeOnWeld
+    unWeldedLayer: AirlockLayer
+    weldedLayer: WallLayer
+  # - type: ContainerFill
+  #   containers:
+  #     board: [ DoorElectronics ]
+  # - type: AccessReader
+  #   containerAccessProvider: board
+  - type: Door
+    bumpOpen: true
+    clickOpen: true
+    closeTimeOne: 0.1
+    closeTimeTwo: 0.8
+    openTimeOne: 0.8
+    openTimeTwo: 0.1
+    crushDamage:
+      types:
+        Blunt: 15
+    openSound:
+      path: /Audio/_OuterHorizons/Machines/Airlock/airlock_open.ogg
+    closeSound:
+      path: /Audio/_OuterHorizons/Machines/Airlock/airlock_close.ogg
+    denySound:
+      path: /Audio/_OuterHorizons/Machines/Airlock/airlock_deny.ogg
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: Weldable
+    fuel: 5
+    time: 3
+  - type: Airlock
+  - type: NavMapDoor
+  - type: DoorBolt
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ElectrifiedVisuals.ShowSparks:
+        enum.ElectrifiedLayers.Sparks:
+          True: { visible: True }
+          False: { visible: False }
+  - type: WiresVisuals
+  - type: ElectrocutionHUDVisuals
+  - type: ApcPowerReceiver
+    powerLoad: 20
+  - type: ExtensionCableReceiver
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: WiresPanel
+  - type: WiresPanelSecurity
+  - type: Wires
+    boardName: wires-board-name-airlock
+    layoutId: Airlock
+  - type: DoorSignalControl
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Open
+      - Close
+      - Toggle
+      - AutoClose
+      - DoorBolt
+  - type: DeviceLinkSource
+    ports:
+      - DoorStatus
+    lastSignals:
+      DoorStatus: false
+  - type: SoundOnOverload
+  - type: SpawnOnOverload
+  - type: UserInterface
+    interfaces:
+      enum.AiUi.Key:
+        type: StationAiBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+  - type: RadiationBlocker
+    resistance: 3
+  - type: Occluder
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      # TODO this should go to the broken node first
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: Construction
+    graph: OH14_Airlock
+    node: OH14_Airlock
+    containers:
+    - board
+  - type: PlacementReplacement
+    key: walls
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  # - type: PaintableAirlock
+  #   group: Standard
+  #   department: Civilian
+  - type: StaticPrice
+    price: 150
+  - type: LightningTarget
+    priority: 1
+  - type: Tag
+    tags:
+      - Airlock
+      # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
+  - type: PryUnpowered
+  - type: BlockWeather
+  - type: GuideHelp
+    guides:
+    - Airlocks
+    - WirePanels
+    - Networking
+  placement:
+    mode: SnapgridCenter
+
+# Варики
+
+- type: entity
+  id: OH14_AirlockExternal
+  parent: OH14_Airlock
+  name: внешний шлюз
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Doors/Airlocks/Standard/external.rsi
+  - type: Door
+    bumpOpen: false
+    openSound:
+      path: /Audio/_OuterHorizons/Machines/Airlock/heavy_open.ogg
+    closeSound:
+      path: /Audio/_OuterHorizons/Machines/Airlock/heavy_close.ogg
+
+# Shuttle
+
+- type: entity
+  parent: OH14_Airlock
+  id: OH14_ShuttleDock
+  name: стыковочный шлюз
+  description: Как ни странно, используется для стыковки шаттлов.
+  components:
+  - type: Docking
+  - type: DockingSignalControl
+  - type: DeviceLinkSource
+    ports:
+      - DoorStatus
+      - DockStatus
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+        density: 100
+        mask:
+          - FullTileMask
+        layer:
+          - AirlockLayer
+      docking:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+          position: "0,-0.5"
+        hard: false
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Doors/Airlocks/Standard/dock.rsi
+    # snapCardinals: false
+  - type: Wires
+    layoutId: Docking
+  - type: Door
+    bumpOpen: false
+    clickOpen: false
+    closeTimeTwo: 0.6
+    openTimeTwo: 0.6
+    crushDamage:
+      types:
+        Blunt: 15
+    openSound:
+      path: /Audio/_OuterHorizons/Machines/Airlock/dock.ogg
+    closeSound:
+      path: /Audio/_OuterHorizons/Machines/Airlock/undock.ogg
+    denySound:
+      path: /Audio/Machines/airlock_deny.ogg
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+      - South
+  - type: Tag
+    tags:
+      - ForceNoFixRotations
+  # - type: PaintableAirlock
+  #   group: Shuttle
+  #   department: null
+  - type: Construction
+    graph: OH14_Airlock
+    node: OH14_AirlockDock
+  - type: StaticPrice
+    price: 350
+  - type: Destructible # Mono - buff docking port health
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      # TODO this should go to the broken node first
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam

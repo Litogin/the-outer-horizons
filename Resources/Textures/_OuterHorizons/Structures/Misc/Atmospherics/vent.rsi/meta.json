@@ -1,0 +1,24 @@
+{
+   "version":1,
+   "size":{
+      "x":32,
+      "y":32
+   },
+   "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+   "states":[
+      {
+         "name":"vent_passive"
+      },
+      {
+         "name":"vent_off"
+      },
+      {
+         "name":"vent_welded"
+      },
+      {
+         "name":"vent_out",
+         "delays":[ [ 0.08, 0.08, 0.08 ]]
+      }
+   ]
+}

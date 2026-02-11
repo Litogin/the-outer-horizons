@@ -1,0 +1,11 @@
+- type: jukebox
+  id: Simpsonwave
+  name: Simpsonwave 1995 x 1989
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/simpsonwave.ogg
+
+- type: jukebox
+  id: DistantRunning
+  name: Distant Running
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/distantrun.ogg

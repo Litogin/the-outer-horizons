@@ -1,0 +1,54 @@
+- type: construction
+  hide: false
+  id: OH14_Chair
+  graph: OH14_Seat
+  startNode: start
+  targetNode: OH14_Chair
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_Crate
+  graph: OH14_Crate
+  startNode: start
+  targetNode: OH14_Crate
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  canRotate: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_CabinetBasic
+  graph: OH14_CabinetBasic
+  startNode: start
+  targetNode: OH14_CabinetBasic
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  canRotate: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_CabinetBig
+  graph: OH14_CabinetBig
+  startNode: start
+  targetNode: OH14_CabinetBig
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  canRotate: false
+  conditions:
+    - !type:TileNotBlocked

@@ -1,0 +1,28 @@
+- type: entity
+  parent: [ BaseMagazinePistolSubMachineGun, OH14_BaseItem ]
+  id: OH14_MagazineSMGAtarch
+  name: магазин ПП (.35)
+  description: Нет, это зарядают в оружие, а не бьют по голове.
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 15
+    proto: CartridgePistol
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Weapons/Guns/Ammunition/atarch.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag

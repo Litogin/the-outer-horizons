@@ -1,0 +1,29 @@
+- type: entity
+  id: OH14_CompromateBox
+  parent: OH14_BaseItem
+  name: секретный кейс
+  components:
+  - type: PointLight
+    radius: 1.5
+    energy: 1.0
+    color: "#b85b3b"
+    castShadows: false
+    netsync: false
+  - type: WarpPoint
+    follow: true
+    location: кейс
+    blacklist:
+      tags:
+      - GhostOnlyWarp
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Misc/compromate_box.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 12
+    # soundHit:
+    #   path: "/Audio/Weapons/smash.ogg"
+  # - type: Appearance

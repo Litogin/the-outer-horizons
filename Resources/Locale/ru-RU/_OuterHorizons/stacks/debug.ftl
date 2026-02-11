@@ -1,8 +1,7 @@
-stack-materials = Материалы
-stack-mechanic = Компоненты
-stack-electronic = Электроника
-stack-ingot = Слитки
-stack-ore = Руда
-stack-girders = Каркасы
+stack-materials = материалы
+stack-mechanic = компоненты
+stack-electronic = электроника
+stack-ingot = слитки
+stack-ore = руда
 
 cmd-replay-toggle-screenshot-mode-desc = я че ебу?

@@ -1,0 +1,178 @@
+- type: constructionGraph
+  id: OH14_APC
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: apcFrame
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: apcFrame
+      entity: OH14_FrameAPC
+      edges:
+        - to: OH14_APC
+          steps:
+            - material: OH14_Components
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: OH14_APC
+      entity: OH14_APC_Open
+      edges:
+        - to: apcFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 2
+          conditions:
+            - !type:WirePanel
+              open: true
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+- type: constructionGraph
+  id: OH14_SubstationWallmount
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: subFrame
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: subFrame
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_SubstationWallFrame
+      edges:
+        - to: subFrame2
+          steps:
+            - material: OH14_Components
+              amount: 4
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: subFrame2
+      entity: OH14_SubstationWallFrame
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: OH14_SubstationWallmount
+          steps:
+            - material: OH14_Electronic
+              amount: 1
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+        - to: subFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 4
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: OH14_SubstationWallmount
+      entity: OH14_BaseSubstationWall
+      edges:
+        - to: subFrame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 1
+          conditions:
+            - !type:WirePanel
+              open: true
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+- type: constructionGraph
+  id: OH14_SubstationFrame
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: subFrame
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: subFrame
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_SubstationFrame
+      edges:
+        - to: subFrame2
+          steps:
+            - material: OH14_Components
+              amount: 4
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: subFrame2
+      entity: OH14_SubstationFrame
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: OH14_Substation
+          steps:
+            - material: OH14_Electronic
+              amount: 1
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+        - to: subFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 4
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: OH14_Substation
+      entity: OH14_SubstationEmpty
+      edges:
+        - to: subFrame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 1
+          conditions:
+            - !type:WirePanel
+              open: true
+          steps:
+            - tool: Prying
+              doAfter: 2

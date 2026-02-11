@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingBackpack
+  id: OH14_ClothingBackpackBasic
+  categories: [ ForkFiltered ]
+  name: темный рюкзак
+  description: Большой, черный рюкзак с нашивкой логотипа A-CORP. По бокам имеются дополнительные карманы
+  components:
+  - type: Storage
+    grid:
+    - 0,0,5,3
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Back/Backpacks/backpack.rsi

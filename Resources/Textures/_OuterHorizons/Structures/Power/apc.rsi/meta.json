@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base",
+      "directions": 4
+    },
+	{
+      "name": "static"
+    },
+    {
+      "name": "frame",
+      "directions": 4
+    },
+    {
+      "name": "panel_closed",
+      "directions": 4
+    },
+    {
+      "name": "panel_open",
+      "directions": 4
+    },
+    {
+      "name": "display_lack",
+      "directions": 4,
+      "delays": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "display_charging",
+      "directions": 4,
+      "delays": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "display_full",
+      "directions": 4
+    },
+    {
+      "name": "display_remote"
+    },
+    {
+      "name": "emag_unlit"
+    },
+    {
+      "name": "sparks_unlit",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

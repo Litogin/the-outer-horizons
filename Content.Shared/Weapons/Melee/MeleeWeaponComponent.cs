@@ -84,20 +84,20 @@ public sealed partial class MeleeWeaponComponent : Component
     /// Multiplies damage by this amount for single-target attacks.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public FixedPoint2 ClickDamageModifier = FixedPoint2.New(1);
+    public FixedPoint2 ClickDamageModifier = FixedPoint2.New(1.5); // OH14-Changes. 1 > 1.5
 
     // TODO: Temporarily 1.5 until interactionoutline is adjusted to use melee, then probably drop to 1.2
     /// <summary>
     /// Nearest edge range to hit an entity.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float Range = 1.5f;
+    public float Range = 1.2f; // OH14-Changes. 1.5 > 1.2
 
     /// <summary>
     /// Total width of the angle for wide attacks.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public Angle Angle = Angle.FromDegrees(60);
+    public Angle Angle = Angle.FromDegrees(25); // OH14-Changes. 60 > 25
 
     [DataField, AutoNetworkedField]
     public EntProtoId Animation = "WeaponArcThrust";

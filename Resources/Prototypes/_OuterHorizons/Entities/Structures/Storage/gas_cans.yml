@@ -1,0 +1,313 @@
+- type: entity
+  parent: GasCanister
+  categories: [ ForkFiltered ]
+  id: OH14_StorageCanister
+  name: газовая канистра
+  description: Футуристичная бочка газа, с навороченными ручками, дисплеем и клапанами. Крайне не практичная хрень, но у тебя не особо есть выбор.
+  suffix: Пустая
+  components:
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Storage/canister.rsi
+      layers:
+        - state: yellow
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.35
+          density: 400
+          mask:
+          - CrateMask #this is so they can go under plastic flaps
+          layer:
+          - MachineLayer
+    - type: GasCanister
+      gasMixture:
+        volume: 1500
+        moles: # List of gasses for easy reference
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # Water vapor
+          - 0 # Ammonia
+          - 0 # N2O
+          - 0 # Frezon
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            OH14_StorageCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+
+- type: entity
+  parent: OH14_StorageCanister
+  id: OH14_AirCanister
+  suffix: Воздух
+  components:
+  - type: Sprite
+    layers:
+      - state: grey
+  - type: GasCanister
+    gasMixture:
+      volume: 1500
+      moles:
+      - 581.56 # oxygen 21%
+      - 2187.79 # nitrogen 79%
+      temperature: 293.15
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_AirCanisterBroken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:DumpCanisterBehavior
+
+- type: entity
+  parent: OH14_StorageCanister
+  id: OH14_OxygenCanister
+  suffix: Кислород
+  components:
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: GasCanister
+    gasMixture:
+      volume: 1500
+      moles:
+      - 2769.36 # oxygen
+      temperature: 293.15
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_OxygenCanisterBroken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:DumpCanisterBehavior
+
+- type: entity
+  parent: OH14_StorageCanister
+  id: OH14_NitrogenCanister
+  suffix: Азот
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: GasCanister
+      gasMixture:
+        volume: 1500
+        moles:
+          - 0 # oxygen
+          - 2769.36 # nitrogen
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            OH14_NitrogenCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+
+- type: entity
+  parent: OH14_StorageCanister
+  id: OH14_PlasmaCanister
+  suffix: Плазма
+  components:
+    - type: Sprite
+      layers:
+        - state: orange
+    - type: GasCanister
+      gasMixture:
+        volume: 1500
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # carbon dioxide
+          - 2769.36 # plasma
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            OH14_PlasmaCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+
+# Broken
+
+- type: entity
+  parent: BaseStructureDynamic
+  id: OH14_GasCanisterBrokenBase
+  name: лопнувшая газовая канистра
+  description: Лопнувшая под воздействием давления или деформации, футуристичная и не практичная, в прошлом, бочка для газа.
+  components:
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            OH14_SheetMaterials1:
+              min: 1
+              max: 2
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Metallic
+    - type: InteractionOutline
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Storage/canister.rsi
+      state: grey-1
+    - type: Physics
+      bodyType: Dynamic
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.4,-0.3,0.4,0.3"
+          density: 190
+          mask:
+          - MachineMask
+          layer:
+          - MachineLayer
+    - type: PhysicalComposition
+      materialComposition:
+        Steel: 500
+    - type: StaticPrice
+      price: 60
+
+- type: entity
+  parent: OH14_GasCanisterBrokenBase
+  id: OH14_StorageCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: yellow-1
+
+- type: entity
+  parent: OH14_GasCanisterBrokenBase
+  id: OH14_AirCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: grey-1
+
+- type: entity
+  parent: OH14_GasCanisterBrokenBase
+  id: OH14_OxygenCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: blue-1
+
+- type: entity
+  parent: OH14_GasCanisterBrokenBase
+  id: OH14_NitrogenCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: red-1
+
+- type: entity
+  parent: OH14_GasCanisterBrokenBase
+  id: OH14_PlasmaCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: orange-1

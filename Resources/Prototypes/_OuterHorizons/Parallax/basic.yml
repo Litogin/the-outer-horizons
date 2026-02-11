@@ -1,0 +1,133 @@
+- type: parallax
+  id: OH14_Saturn
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/Starfield.png"
+      slowness: 0.996625
+      scale: "1, 1"
+    # - texture:
+    #     !type:ImageParallaxTextureSource
+    #     path: "/Textures/_OuterHorizons/Parallaxes/Stars.png"
+    #   slowness: 0.984352
+    #   scale: "1, 1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/PlxPlanet_Saturn01.png"
+      slowness: 0.992
+      scale: "1, 1"
+      tiled: false
+    - texture: # Debris
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/DebrisSmall.png"
+      slowness: 0.978852
+      scale: "1, 1"
+      tiled: false
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/AsteroidsSmall.png"
+      slowness: 0.978852
+      scale: "0.6, 0.6"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/AsteroidsMedium.png"
+      slowness: 0.949852
+      scale: "0.8, 0.8"
+    - texture: # Debris
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/DebrisMedium.png"
+      slowness: 0.949852
+      scale: "1, 1"
+      tiled: false
+    - texture: # Debris
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/DebrisBig2.png"
+      slowness: 0.908652
+      scale: "1, 1"
+      tiled: false
+    - texture: # Debris
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/DebrisBig.png"
+      slowness: 0.9
+      scale: "1, 1"
+      tiled: false
+  layersLQ:
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: ""
+        configPath: "/Prototypes/Parallaxes/parallax_config.toml"
+      slowness: 0.875
+  layersLQUseHQ: false
+
+- type: parallax
+  id: OH14_SaturnRings
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/Starfield.png"
+      slowness: 0.999966
+      scale: "1, 1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/Cloud2.png"
+      slowness: 0.999
+      scale: "5, 5"
+      scrolling: "0, -0.05"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/AsteroidsSmall.png"
+      slowness: 0.9984
+      scale: "0.6, 0.6"
+      scrolling: "0, -0.08"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/Cloud1.png"
+      slowness: 0.9942
+      scale: "1, 1"
+      scrolling: "0, -0.09"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/Cloud2.png"
+      slowness: 0.9899
+      scale: "1, 1"
+      scrolling: "0, -0.1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/AsteroidsSmall.png"
+      slowness: 0.978852
+      scale: "0.8, 0.8"
+      scrolling: "0, -0.12"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/AsteroidsMedium.png"
+      slowness: 0.949852
+      scale: "1, 1"
+      scrolling: "0, -0.15"
+  layersLQ:
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: ""
+        configPath: "/Prototypes/Parallaxes/parallax_config.toml"
+      slowness: 0.875
+  layersLQUseHQ: false
+
+- type: parallax
+  id: OH14_Frontier
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/Starfield.png"
+      slowness: 0.999966
+      scale: "1, 1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/Stars.png"
+      slowness: 0.999
+      scale: "5, 5"
+  layersLQ:
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: ""
+        configPath: "/Prototypes/Parallaxes/parallax_config.toml"
+      slowness: 0.875
+  layersLQUseHQ: false

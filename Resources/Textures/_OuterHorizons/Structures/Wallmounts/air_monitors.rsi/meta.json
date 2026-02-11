@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "frame",
+      "directions": 4
+    },
+    {
+      "name": "icon",
+      "directions": 4
+    },
+    {
+      "name": "screen_nil",
+      "directions": 4
+    },
+    {
+      "name": "icon_panel",
+      "directions": 4
+    },
+    {
+      "name": "screen",
+      "directions": 4
+    },
+    {
+      "name": "screen_alarm",
+      "directions": 4,
+      "delays": [
+        [
+          1,
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          1,
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          1,
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          1,
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ]
+      ]
+    },
+    {
+      "name": "screen_warn",
+      "directions": 4,
+      "delays": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "fire",
+      "directions": 4
+    },
+    {
+      "name": "fire_0"
+    },
+    {
+      "name": "fire_1"
+    },
+    {
+      "name": "fire_2"
+    },
+    {
+      "name": "fire_3"
+    },
+    {
+      "name": "fire_frame",
+      "directions": 4
+    },
+    {
+      "name": "fire_on",
+      "directions": 4
+    },
+    {
+      "name": "fire_off",
+      "directions": 4
+    }
+  ]
+}

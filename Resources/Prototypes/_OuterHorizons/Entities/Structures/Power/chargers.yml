@@ -1,0 +1,112 @@
+- type: entity
+  abstract: true
+  parent: [ BaseMachinePowered, OH14_BaseItem ]
+  id: OH14_BasicRecharger
+  categories: [ ForkFiltered ]
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+    noRot: false
+  - type: Sprite
+    snapCardinals: true
+  - type: Appearance
+  - type: Charger
+    slotId: charger_slot
+  - type: ApcPowerReceiver
+    powerLoad: 1 # same as draw given in ChargerComponent.PassiveDraw; increased when it is actually charging something
+  - type: Anchorable
+    delay: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:EmptyAllContainersBehaviour
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+
+- type: entity
+  abstract: true
+  parent: OH14_BasicRecharger
+  id: OH14_BasicItemRecharger
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["enum.PowerChargerVisualLayers.Base"]
+      state: "empty"
+    - map: ["enum.PowerChargerVisualLayers.Light"]
+      state: "light-off"
+      shader: "unshaded"
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.10,-0.10,0.10,0.10"
+        density: 500
+        mask:
+        - TabletopMachineMask
+        layer:
+        - BulletImpassable
+  - type: PowerChargerVisuals
+  - type: ContainerContainer
+    containers:
+      charger_slot: !type:ContainerSlot
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: RequireProjectileTarget
+
+- type: entity
+  parent: OH14_BasicItemRecharger
+  id: OH14_CellRecharger
+  name: зарядник
+  description: Имеет порт для батареек МКП3 класса, крайне не рекомендуется совать в него пальцы и вилки.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Power/cell_recharger.rsi
+    layers:
+    - map: ["enum.PowerChargerVisualLayers.Base"]
+      state: "empty"
+    - map: ["enum.PowerChargerVisualLayers.Light"]
+      state: "light-off"
+      shader: "unshaded"
+    - state: open
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      visible: false
+  - type: Machine
+    board: CellRechargerCircuitboard
+  - type: WiresPanel
+  - type: GenericVisualizer
+    visuals:
+      enum.WiresVisuals.MaintenancePanelState:
+        enum.WiresVisualLayers.MaintenancePanel:
+          True: { visible: true }
+          False: { visible: false }
+  - type: PowerCellSlot
+    cellSlotId: charger_slot
+    # fitsInCharger is true i dont think this will ever affect anything negatively but it lets it function
+  - type: ItemSlots
+    slots:
+      charger_slot:
+        ejectOnInteract: true
+        name: power-cell-slot-component-slot-name-default
+        whitelist:
+          tags:
+          - PowerCell
+          - PowerCellSmall
+        blacklist:
+          tags:
+          - PotatoBattery

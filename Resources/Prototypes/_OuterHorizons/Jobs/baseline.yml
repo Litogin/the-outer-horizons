@@ -1,0 +1,39 @@
+- type: job
+  id: BaselineRole
+  name: baseline-job-name-role
+  description: baseline-job-desc-role
+  playTimeTracker: BaselineRole
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-everyone
+  setPreference: true
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  startingGear: OH14_Baseline
+
+- type: startingGear
+  id: OH14_Baseline
+  equipment:
+    jumpsuit: OH14_ClothingShirtBasic
+    pants: OH14_ClothingPantsBasic
+    back: OH14_ClothingBackpackBasic
+    shoes: OH14_ClothingShoesBasic
+    pocket1: OH14_IDCardBasic
+  storage:
+    back:
+    - OH14_CrowbarBasic
+
+- type: playTimeTracker
+  id: BaselineRole
+
+- type: department
+  id: BaselineDepartment
+  name: baseline-department
+  description: baseline-department-description
+  color: "#A46106"
+  editorHidden: false
+  roles:
+  - BaselineRole
+  - OH14_UcoRole
+  - OH14_RreRole

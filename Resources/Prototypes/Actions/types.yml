@@ -229,8 +229,8 @@
   description: Enter combat mode
   components:
   - type: Action
-    icon: Interface/Actions/harmOff.png
-    iconOn: Interface/Actions/harm.png
+    icon: _OuterHorizons/Interface/Actions/harmOff.png # OH14-Changes
+    iconOn: _OuterHorizons/Interface/Actions/harm.png # OH14-Changes
     priority: -100
   - type: InstantAction
     event: !type:ToggleCombatActionEvent

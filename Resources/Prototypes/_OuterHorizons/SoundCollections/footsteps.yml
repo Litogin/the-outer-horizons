@@ -1,0 +1,8 @@
+- type: soundCollection
+  id: OH14_FootstepsHeavySuit
+  files:
+  - /Audio/_OuterHorizons/Effects/Footsteps/suit_heavy1.ogg
+  - /Audio/_OuterHorizons/Effects/Footsteps/suit_heavy2.ogg
+  - /Audio/_OuterHorizons/Effects/Footsteps/suit_heavy3.ogg
+  - /Audio/_OuterHorizons/Effects/Footsteps/suit_heavy4.ogg
+  - /Audio/_OuterHorizons/Effects/Footsteps/suit_heavy5.ogg

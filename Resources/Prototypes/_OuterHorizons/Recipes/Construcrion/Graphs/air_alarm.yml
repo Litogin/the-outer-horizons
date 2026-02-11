@@ -1,0 +1,49 @@
+- type: constructionGraph
+  id: OH14_AirControl
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: Frame
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: Frame
+      entity: OH14_AirAlarmAssembly
+      edges:
+        - to: OH14_AirControl
+          steps:
+            - material: OH14_Components
+              amount: 1
+              doAfter: 1
+            - material: OH14_Electronic
+              amount: 1
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: OH14_AirControl
+      entity: OH14_AirAlarm
+      edges:
+        - to: Frame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 1
+          conditions:
+            - !type:WirePanel
+          steps:
+            - tool: Prying
+              doAfter: 2

@@ -1,0 +1,38 @@
+- type: entity
+  name: аптечка
+  description: Аптечка для оказания первой помощи! Чтобы оказать помощь вашему товарищу - ударьте его этим по голове.
+  parent: OH14_BaseStorageOpenClose
+  id: OH14_MedkitBasic
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Specific/Medical/firstaidkits.rsi
+    state: firstaid
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: firstaid_open }
+          False: { state: firstaid }
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 6
+    # soundHit:
+    #   path: "/Audio/Weapons/smash.ogg"
+  - type: Storage
+    whitelist:
+      tags:
+      - OH14_Medicines
+    maxItemSize: Small
+    grid:
+    - 0,0,4,1
+  - type: Item
+    size: Normal
+    sprite: _OuterHorizons/Objects/Specific/Medical/firstaidkits.rsi
+    heldPrefix: firstaid
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 150
+  - type: Tag
+    tags:
+    - Medkit

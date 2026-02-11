@@ -1,0 +1,93 @@
+- type: entity
+  id: OH14_BasicDirectionalStructure
+  categories: [ ForkFiltered ]
+  abstract: true
+  parent: BaseStructure
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: WallMount
+    arc: 360 # interact despite grilles
+  - type: Tag
+    tags:
+      - Wall
+  - type: Occluder
+    boundingBox: "-0.5,-0.5,0.5,-0.3"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: state0
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: state0
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,-0.28125"
+        density: 1500
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Repairable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150 #excess damage (nuke?). avoid computational cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 45
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+  # - type: Construction
+  #   graph: WindowDirectional
+  #   node: windowDirectional
+  # - type: Appearance
+
+- type: entity
+  id: OH14_WallDirectional
+  parent: OH14_BasicDirectionalStructure
+  name: направленная стена
+  description: Крайне восприимчима к повреждениям, не протыкать отверткой!
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Construction
+    graph: OH14_WallDirectional
+    node: OH14_WallDirectional
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: state0
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: state0

@@ -1,0 +1,32 @@
+- type: entity
+  parent: OH14_BaseItem
+  id: OH14_BaseBlueprint
+  name: чертеж
+  description: Старый-синий чертеж, возможно в нем есть что-нибудь полезное.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/blueprint.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,0
+    storedSprite:
+      sprite: _OuterHorizons/Objects/Tools/blueprint.rsi
+      state: storage
+  - type: Blueprint
+  - type: StaticPrice
+    price: 1000
+  - type: Tag
+    tags:
+    - BlueprintAutolathe
+
+- type: entity
+  parent: OH14_BaseBlueprint
+  id: OH14_BlueprintTest
+  name: тестовый чертеж
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - SeismicCharge

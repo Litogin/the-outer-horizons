@@ -1,0 +1,73 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "pumpManualValve",
+            "directions": 4
+        },
+        {
+            "name": "pumpManualValveOn",
+            "directions": 4
+        },
+        {
+            "name": "pumpPassiveGate",
+            "directions": 4
+        },
+        {
+            "name": "pumpPassiveGateOn",
+            "directions": 4
+        },
+        {
+            "name": "pumpPressure",
+            "directions": 4
+        },
+        {
+            "name": "pumpPressureOn",
+            "directions": 4
+        },
+        {
+            "name": "pumpPressure_unshaded",
+            "directions": 4
+        },
+        {
+            "name": "pumpVolume",
+            "directions": 4
+        },
+        {
+            "name": "pumpVolume_unshaded",
+            "directions": 4
+        },
+        {
+            "name": "pumpVolumeOn",
+            "directions": 4
+        },
+        {
+            "name": "pumpVolumeBlocked",
+            "directions": 4,
+            "delays": [
+                [
+                    0.5,
+                    0.5
+                ],
+                [
+                    0.5,
+                    0.5
+                ],
+                [
+                    0.5,
+                    0.5
+                ],
+                [
+                    0.5,
+                    0.5
+                ]
+            ]
+        }
+    ]
+}

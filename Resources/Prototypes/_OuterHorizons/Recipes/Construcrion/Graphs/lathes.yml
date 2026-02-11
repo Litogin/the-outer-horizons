@@ -1,0 +1,296 @@
+- type: constructionGraph
+  id: OH14_AutolatheFrame
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 1
+    - node: frame1
+      entity: OH14_FrameAutolathe
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 2
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Components
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameAutolathe
+      edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: frame3
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Electronic
+              amount: 1
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: frame3
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameAutolathe
+      edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: OH14_Autolathe
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Materials
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: OH14_Autolathe
+      entity: OH14_AutoLathe
+      edges:
+        - to: frame3
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 1
+
+- type: constructionGraph
+  id: OH14_ProtolatheFrame
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 1
+    - node: frame1
+      entity: OH14_FrameProtolathe
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 2
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Components
+              amount: 3
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameProtolathe
+      edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 3
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: frame3
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Electronic
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: frame3
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameProtolathe
+      edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: OH14_Protolathe
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Materials
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: OH14_Protolathe
+      entity: OH14_ProtoLathe
+      edges:
+        - to: frame3
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 1
+
+- type: constructionGraph
+  id: OH14_ArcFurnanceFrame
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 3
+              doAfter: 1
+    - node: frame1
+      entity: OH14_FrameArcFurnance
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 3
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Components
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameArcFurnance
+      edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: frame3
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Materials
+              amount: 5
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: frame3
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameArcFurnance
+      edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 5
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: OH14_ArcFurnance
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Components
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+    - node: OH14_ArcFurnance
+      entity: OH14_ArcFurnance
+      edges:
+        - to: frame3
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 1

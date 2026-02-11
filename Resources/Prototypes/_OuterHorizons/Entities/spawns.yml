@@ -1,0 +1,55 @@
+- type: entity
+  id: OH14_SpawnPointUcoLateJoin
+  suffix: UCO, Latejoin
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: точка спавна
+  components:
+  - type: SpawnPoint
+    job_id: OH14_UcoRole
+    spawn_type: LateJoin
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: OH14_SpawnPointRreLateJoin
+  suffix: RRE, Latejoin
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: точка спавна
+  components:
+  - type: SpawnPoint
+    job_id: OH14_RreRole
+    spawn_type: LateJoin
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: OH14_SpawnPointUco
+  suffix: UCO
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: точка спавна
+  components:
+  - type: SpawnPoint
+    job_id: OH14_UcoRole
+    spawn_type: Job
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: OH14_SpawnPointRre
+  suffix: RRE
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: точка спавна
+  components:
+  - type: SpawnPoint
+    job_id: OH14_RreRole
+    spawn_type: Job
+  - type: Sprite
+    layers:
+      - state: green

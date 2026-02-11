@@ -1,0 +1,111 @@
+- type: constructionGraph
+  id: OH14_GasPumpsTrinary
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: OH14_GasFilter
+      steps:
+      - material: OH14_Piping
+        amount: 2
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasFilterF
+      steps:
+      - material: OH14_Piping
+        amount: 2
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasMixer
+      steps:
+      - material: OH14_Piping
+        amount: 2
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_GasMixerF
+      steps:
+      - material: OH14_Piping
+        amount: 2
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+
+  - node: OH14_GasFilter
+    entity: OH14_GasFilter
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 2
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasFilterF
+    entity: OH14_GasFilterF
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 2
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasMixer
+    entity: OH14_GasMixer
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 2
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_GasMixerF
+    entity: OH14_GasMixerF
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 2
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1

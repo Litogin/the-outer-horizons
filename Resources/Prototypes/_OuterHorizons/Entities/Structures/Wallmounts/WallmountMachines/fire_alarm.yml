@@ -1,0 +1,140 @@
+- type: entity
+  parent: BaseWallmountMachine
+  id: OH14_WallmountFireAlarm
+  categories: [ ForkFiltered ]
+  name: сигнализация
+  description: Жмакать только в экстренном случае, за ложную тревогу Сережа даст вам леща или сломает колени.
+  components:
+  - type: LightningTarget
+    priority: 0
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: ExtensionCableReceiver
+  - type: DeviceNetwork
+    deviceNetId: AtmosDevices
+    receiveFrequencyId: AtmosMonitor
+    transmitFrequencyId: AtmosMonitor
+    prefix: device-address-prefix-fire-alarm
+    sendBroadcastAttemptEvent: true
+    examinableAddress: true
+  - type: DeviceList
+  - type: WiredNetworkConnection
+  - type: DeviceNetworkRequiresPower
+  - type: AtmosDevice
+  - type: AtmosAlarmable
+    syncWith:
+      - FireAlarm
+      - AirSensor
+      - GasVent
+      - GasScrubber
+    monitorAlertTypes:
+      - Temperature
+  - type: AtmosAlarmableVisuals
+    layerMap: "fireAlarmState"
+    alarmStates:
+      Normal: fire_off
+      Warning: fire_off
+      Danger: fire_on
+      Emagged: fire_off
+    hideOnDepowered: [ "fireAlarmState" ]
+  - type: Tag
+    tags:
+      - FireAlarm
+  - type: FireAlarm
+  - type: AtmosAlertsDevice
+    group: FireAlarm
+  - type: ContainerFill
+    containers:
+      board: [ FireAlarmElectronics ]
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: Appearance
+  # - type: WiresVisuals
+  - type: UserInterface
+    interfaces:
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: WiresPanel
+  - type: Wires
+    boardName: wires-board-name-firealarm
+    layoutId: FireAlarm
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Wallmounts/air_monitors.rsi
+    layers:
+    - state: fire
+      map: ["fireAlarmBase"]
+    - state: fire_off
+      map: ["fireAlarmState"]
+  - type: Transform
+    anchored: true
+  # - type: Construction
+  #   graph: FireAlarm
+  #   node: fire_alarm
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: GuideHelp
+    guides:
+    - Networking
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 160
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 80
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              OH14_SheetMaterials1:
+                min: 1
+                max: 2
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalGlassBreak
+              params:
+                volume: -4
+  - type: StationAiWhitelist
+
+- type: entity
+  parent: BaseWallmountMetallic
+  id: OH14_WallmountFireAlarmAssembly
+  categories: [ ForkFiltered ]
+  name: каркас сигнализации
+  description: Ну.. Каркас
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Wallmounts/air_monitors.rsi
+    layers:
+    - state: fire_frame
+  - type: Appearance
+  # - type: Construction
+  #   graph: FireAlarm
+  #   node: assembly
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 20
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 15
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalGlassBreak
+              params:
+                volume: -4

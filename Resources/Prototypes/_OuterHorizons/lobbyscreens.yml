@@ -1,0 +1,11 @@
+- type: lobbyBackground
+  id: OH14_Station
+  background: /Textures/_OuterHorizons/LobbyScreens/station.webp
+  title: title-station
+  artist: title-aserovich
+
+- type: lobbyBackground
+  id: OH14_Traitor
+  background: /Textures/_OuterHorizons/LobbyScreens/traitor.png
+  title: title-traitor
+  artist: title-aserovich

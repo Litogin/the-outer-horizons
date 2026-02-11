@@ -1,0 +1,111 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+          "name": "stamina6",
+          "delays": [
+            [
+              0.1,
+              0.1,
+              5,
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "name": "stamina5",
+          "delays": [
+            [
+              0.5,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "name": "stamina4",
+          "delays": [
+            [
+              0.5,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "name": "stamina3",
+          "delays": [
+            [
+              0.5,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "name": "stamina2",
+          "delays": [
+            [
+              0.5,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "name": "stamina1",
+          "delays": [
+            [
+              0.5,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.2
+            ]
+          ]
+        },
+        {
+          "name": "stamina0",
+          "delays": [
+            [
+              0.5,
+              0.5
+            ]
+          ]
+        }
+      ]
+}

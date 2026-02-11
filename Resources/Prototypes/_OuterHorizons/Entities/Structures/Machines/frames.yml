@@ -1,0 +1,148 @@
+- type: entity
+  id: OH14_FrameBasic
+  categories: [ ForkFiltered ]
+  parent: BaseStructureDynamic
+  abstract: true
+  name: каркас
+  description: Каркас вашего оборудования, ветхий и не надежный.
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame1: { state: frame0 }
+          frame2: { state: frame1 }
+          frame3: { state: frame2 }
+  - type: Appearance
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/autolathe.rsi
+    state: frame0
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Anchorable
+
+# Латы
+
+- type: entity
+  id: OH14_FrameAutolathe
+  parent: OH14_FrameBasic
+  name: каркас автолата
+  components:
+  - type: Construction
+    graph: OH14_AutolatheFrame
+    node: frame1
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/autolathe.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+
+- type: entity
+  id: OH14_FrameProtolathe
+  parent: OH14_FrameBasic
+  name: каркас протолата
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/protolathe.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_ProtolatheFrame
+    node: frame1
+
+- type: entity
+  id: OH14_FrameArcFurnance
+  parent: OH14_FrameBasic
+  name: каркас дуговой печи
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/arcfurnace.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_ArcFurnanceFrame
+    node: frame1
+
+# Подстанции
+
+- type: entity
+  id: OH14_SubstationFrame
+  parent: OH14_FrameBasic
+  name: каркас подстанции
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          subFrame: { state: substation_frame }
+          subFrame2: { state: substation }
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Power/substation.rsi
+    layers:
+    - state: substation_frame
+      # map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_SubstationFrame
+    node: subFrame
+
+- type: entity
+  id: OH14_SubstationWallFrame
+  categories: [ ForkFiltered ]
+  name: каркас настенной подстанции
+  description: Каркас подстанции, да.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Fixtures
+  - type: Transform
+    anchored: true
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          subFrame: { state: substation_wall_frame }
+          subFrame2: { state: substation_wall }
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _OuterHorizons/Structures/Power/substation.rsi
+    layers:
+    - state: substation_wall_frame
+  - type: Construction
+    graph: OH14_SubstationWallmount
+    node: subFrame
+  - type: WallMount

@@ -1,0 +1,43 @@
+- type: entity
+  id: OH14_AirlockAssembly
+  categories: [ ForkFiltered ]
+  name: каркас шлюза
+  description: Нет, он не может задушить тебя своими дверьми, пока что.
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Doors/Airlocks/Standard/basic.rsi
+    state: assembly
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 110
+        mask:
+        - FullTileMask
+  - type: Anchorable
+    delay: 2
+  - type: Pullable
+  - type: Transform
+    anchored: true
+    # noRot: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Construction
+    graph: OH14_Airlock
+    node: OH14_AirlockGirder
+  placement:
+    mode: SnapgridCenter

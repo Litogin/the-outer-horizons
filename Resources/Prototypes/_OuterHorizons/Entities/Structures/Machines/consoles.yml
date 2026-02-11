@@ -1,0 +1,261 @@
+- type: entity
+  parent: OH14_BasicStructureConsole
+  id: OH14_BaseConsole
+  description: Старая консоль со старыми рабочими программмами и крафтмайном.
+  name: консоль
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Animateable
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmash
+  - type: Construction
+    graph: OH14_Console
+    node: computer
+    containers:
+      - board
+  - type: Computer
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: ExtensionCableReceiver
+  - type: ActivatableUIRequiresPower
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/consoles.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: keyboard
+    - map: ["computerLayerScreen"]
+      state: screen
+    # - map: ["computerLayerKeys"]
+    #   state: screen
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: panel_open
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ComputerVisuals.Powered:
+        computerLayerScreen:
+          True: { visible: true, shader: unshaded }
+          False: { visible: false }
+        # computerLayerKeys:
+        #   True: { visible: true, shader: unshaded }
+        #   False: { visible: true, shader: shaded }
+      enum.WiresVisuals.MaintenancePanelState:
+        enum.WiresVisualLayers.MaintenancePanel:
+          True: { visible: false }
+          False: { visible: true }
+  - type: LitOnPowered
+  - type: PointLight
+    radius: 2
+    energy: 5.0
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.5" # shine from the top, not bottom of the computer
+    castShadows: false
+    color: "#4eec45"
+  - type: EmitSoundOnUIOpen
+    sound:
+      collection: Keyboard
+      params:
+        volume: -1
+        variation: 0.10
+        pitch: 1.10  # low pitch keyboard sounds feel kinda weird
+    blacklist:
+      tags:
+      - NoConsoleSound
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+        ents: []
+  - type: LightningTarget
+    priority: 1
+  - type: RequireProjectileTarget
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: Computer
+
+- type: entity
+  parent: OH14_BaseConsole
+  id: OH14_ConsolePower
+  name: консоль мониторинга энергоснабжения
+  description: Не скажет зачем, но покажет кто и где сосет вашу энергию.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/consoles.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: keyboard
+    - map: ["computerLayerScreen"]
+      state: screen_map
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: panel_open
+  - type: PointLight
+    color: "#45b1af"
+  - type: Computer
+    board: PowerComputerCircuitboard
+  - type: PowerMonitoringConsole
+  - type: PowerMonitoringCableNetworks
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      hv:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: ActivatableUI
+    singleUser: true
+    key: enum.PowerMonitoringConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.PowerMonitoringConsoleUiKey.Key:
+        type: PowerMonitoringConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+
+- type: entity
+  parent: OH14_BaseConsole
+  id: OH14_ConsoleAtmos
+  name: консоль мониторинга атмосферы
+  description: Мониторинг вайбика в комплект не входит.
+  components:
+  - type: PointLight
+    color: "#45b1af"
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/consoles.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: keyboard
+    - map: ["computerLayerScreen"]
+      state: screen_map
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: panel_open
+  - type: Computer
+    board: AlertsComputerCircuitboard
+  - type: AtmosAlertsComputer
+  - type: ActivatableUI
+    singleUser: true
+    key: enum.AtmosAlertsComputerUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.AtmosAlertsComputerUiKey.Key:
+            type: AtmosAlertsComputerBoundUserInterface
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+  - type: GuideHelp
+    guides:
+    - AtmosphericAlertsComputer
+    - DeviceMonitoringAndControl
+
+- type: entity
+  parent: OH14_BaseConsole
+  id: OH14_ConsoleRadar
+  name: консоль мониторинга масс
+  description: Покажет вам самые крупные и жирные объекты в радиусе ~250м.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/consoles.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: keyboard
+    - map: ["computerLayerScreen"]
+      state: screen_radar
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: panel_open
+  - type: RadarConsole
+  - type: ActivatableUI
+    key: enum.RadarConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.RadarConsoleUiKey.Key:
+          type: RadarConsoleBoundUserInterface
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+  - type: Computer
+    board: RadarConsoleCircuitboard
+  - type: PointLight
+    color: "#45b1af"
+
+- type: entity
+  parent: OH14_BaseConsole
+  id: OH14_BaseConsoleShuttle
+  name: консоль шаттла
+  description: Заместо рулей, теперь вы используете клавиши WASD и QE, иногда насилуя кнопку шифта или пробела.
+  components:
+  - type: PointLight
+    color: "#45b1af"
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/consoles.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_shuttle
+    # - map: ["computerLayerKeyboard"]
+    #   state: keyboard
+    - map: ["computerLayerScreen"]
+      state: screen_shuttle
+    # - map: ["computerLayerKeys"]
+    #   state: screen
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: panel_open
+  - type: ShuttleConsole
+  - type: ActivatableUI
+    key: enum.ShuttleConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.ShuttleConsoleUiKey.Key:
+          type: ShuttleConsoleBoundUserInterface
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+  - type: RadarConsole
+  - type: WorldLoader
+    radius: 256
+  # - type: PointLight
+  #   radius: 1.5
+  #   energy: 4.0
+  #   color: "#43ccb5"
+  - type: ItemSlots
+    slots:
+      disk_slot:
+        name: Disk
+        insertSound:
+          path: /Audio/Machines/terminal_insert_disc.ogg
+        ejectSound:
+          path: /Audio/Machines/terminal_insert_disc.ogg
+        whitelist:
+          components:
+          - ShuttleDestinationCoordinates
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+        ents: []
+      disk_slot: !type:ContainerSlot {}
+  - type: GuideHelp
+    guides:
+    - ShuttleCraft
+  - type: DeviceNetwork
+    deviceNetId: AtmosDevices
+    receiveFrequencyId: AtmosMonitor
+    transmitFrequencyId: AtmosMonitor
+    prefix: device-address-prefix-air-alarm
+    sendBroadcastAttemptEvent: true
+  - type: WiredNetworkConnection
+  # for output status ports
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceList
+  - type: DeviceNetworkRequiresPower
+  - type: AtmosDevice
