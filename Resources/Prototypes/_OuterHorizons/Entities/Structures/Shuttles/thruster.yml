@@ -90,8 +90,8 @@
     # castShadows: true
     enabled: false
     mask: /Textures/_OuterHorizons/Effects/LightMasks/cone_alt.png
-  # - type: PressureThruster
-  #   inletName: inlet
+  - type: PressureThruster
+    inletName: inlet
   - type: NodeContainer
     nodes:
       inlet:
@@ -109,9 +109,9 @@
   components:
   - type: Thruster
     thrust: 250
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 40
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 40
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/b_thruster.rsi
     layers:
@@ -139,9 +139,9 @@
     color: "#eca664"
   - type: Thruster
     thrust: 125
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 25
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 25
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/r_thruster.rsi
     layers:
@@ -166,9 +166,9 @@
     color: "#eca664"
   - type: Thruster
     thrust: 500
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 100
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 100
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/o_thruster.rsi
     layers:
@@ -196,9 +196,9 @@
     board: ThrusterMachineCircuitboard
   - type: Thruster
     thrust: 60
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 20
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 20
   - type: PointLight
     color: "#eca664"
   - type: Sprite
@@ -227,9 +227,9 @@
   components:
   - type: Thruster
     thrust: 30
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 12
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 12
   - type: PointLight
     color: "#eca664"
   - type: Sprite
