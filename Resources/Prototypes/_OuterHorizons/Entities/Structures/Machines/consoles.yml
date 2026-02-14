@@ -104,7 +104,7 @@
   - type: PointLight
     color: "#45b1af"
   - type: Computer
-    board: PowerComputerCircuitboard
+    board: OH14_CircuitboardPower
   - type: PowerMonitoringConsole
   - type: PowerMonitoringCableNetworks
   - type: NodeContainer
@@ -143,7 +143,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: panel_open
   - type: Computer
-    board: AlertsComputerCircuitboard
+    board: OH14_CircuitboardAtmos
   - type: AtmosAlertsComputer
   - type: ActivatableUI
     singleUser: true
@@ -186,7 +186,7 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: Computer
-    board: RadarConsoleCircuitboard
+    board: OH14_CircuitboardRadar
   - type: PointLight
     color: "#45b1af"
 
@@ -259,3 +259,5 @@
   - type: DeviceList
   - type: DeviceNetworkRequiresPower
   - type: AtmosDevice
+  - type: Computer
+    board: OH14_CircuitboardShuttle
