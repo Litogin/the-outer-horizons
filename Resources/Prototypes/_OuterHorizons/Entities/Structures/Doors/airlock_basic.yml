@@ -104,6 +104,8 @@
     enabled: false
     usesApcPower: true
   - type: WiresPanel
+    screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
   - type: WiresPanelSecurity
   - type: Wires
     boardName: wires-board-name-airlock

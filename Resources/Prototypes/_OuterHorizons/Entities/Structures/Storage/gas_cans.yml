@@ -22,6 +22,9 @@
           layer:
           - MachineLayer
     - type: GasCanister
+      gasTankSlot:
+        insertSound: /Audio/_OuterHorizons/Storage/canister_in.ogg
+        ejectSound: /Audio/_OuterHorizons/Storage/canister_out.ogg
       gasMixture:
         volume: 1500
         moles: # List of gasses for easy reference

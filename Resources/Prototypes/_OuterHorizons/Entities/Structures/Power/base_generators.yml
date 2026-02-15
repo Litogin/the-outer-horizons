@@ -40,6 +40,8 @@
     - type: Appearance
     # Construction, interaction
     - type: WiresPanel
+      screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+      screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
     - type: UserInterface
       interfaces:
         enum.GeneratorComponentUiKey.Key:

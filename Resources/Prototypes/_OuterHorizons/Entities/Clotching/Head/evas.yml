@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHeadEVAHelmetBase
+  parent: [ OH14_BaseItem, ClothingHeadEVAHelmetBase ]
   id: OH14_ClothingHeadHelmetEVABasic
   categories: [ ForkFiltered ]
   name: шлем ЕВА "Пилигримм"

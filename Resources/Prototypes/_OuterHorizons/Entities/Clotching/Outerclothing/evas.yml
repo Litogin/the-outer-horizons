@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterEVASuitBase
+  parent: [ OH14_BaseItem, ClothingOuterEVASuitBase ]
   id: OH14_ClothingOuterHardsuitEVABasic
   categories: [ ForkFiltered ]
   name: ЕВА "Пилигримм"
