@@ -1,5 +1,5 @@
 - type: entity
-  parent: OH14_ItemSFXGlass
+  parent: [ OH14_ItemSFXGlass, OH14_BaseItem ]
   id: OH14_BasicLightBulb
   name: лампа
   description: Светящаяся лапочка.

@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: OH14_ItemSFXMetallic
+  parent: [ OH14_ItemSFXMetallic, OH14_BaseItem ]
   id: OH14_GasTankBase
   name: газовый баллон
   description: Ручной газовый баллон, который можно носить с собой. Любые теории того что вы дышите воздухом из огнетушителя - ложь.

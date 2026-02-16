@@ -54,7 +54,6 @@
 # Металл
 
 - type: entity
-  parent: OH14_BaseItem
   id: OH14_ItemSFXMetallic # Металл
   abstract: true
   components:
@@ -72,7 +71,6 @@
       path: /Audio/_OuterHorizons/Items/metal_drop.ogg
 
 - type: entity
-  parent: OH14_BaseItem
   id: OH14_ItemSFXLowMetallic # Трубки
   abstract: true
   components:
@@ -92,7 +90,6 @@
 # Стекло
 
 - type: entity
-  parent: OH14_BaseItem
   id: OH14_ItemSFXGlass # Стакан
   abstract: true
   components:
@@ -110,7 +107,6 @@
       path: /Audio/_OuterHorizons/Items/glass_drop.ogg
 
 - type: entity
-  parent: OH14_BaseItem
   id: OH14_ItemSFXHightGlass # Стопка стекла
   abstract: true
   components:
@@ -130,7 +126,6 @@
 # Предметы
 
 - type: entity
-  parent: OH14_BaseItem
   id: OH14_ItemSFXAlt # Альтернативное
   abstract: true
   components:
@@ -148,7 +143,6 @@
       path: /Audio/_OuterHorizons/Items/alt_drop.ogg
 
 - type: entity
-  parent: OH14_BaseItem
   id: OH14_ItemSFXTool # Инструменты
   abstract: true
   components:
@@ -168,7 +162,6 @@
 # Бумага
 
 - type: entity
-  parent: OH14_BaseItem
   id: OH14_ItemSFXPaper # Лист
   abstract: true
   components:
@@ -184,6 +177,25 @@
   - type: EmitSoundOnDrop
     sound:
       path: /Audio/_OuterHorizons/Items/paper_drop.ogg
+
+# Ткань
+
+- type: entity
+  id: OH14_ItemSFXFabric # Ткань
+  abstract: true
+  components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/fabric_eu.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/fabric_eu.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/fabric_un.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/fabric_un.ogg
 
 # Хранилища
 

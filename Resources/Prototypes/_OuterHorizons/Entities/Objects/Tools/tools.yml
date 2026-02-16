@@ -78,7 +78,7 @@
 
 - type: entity
   name: гаечный ключ
-  parent: OH14_ItemSFXTool
+  parent: [ OH14_ItemSFXTool, OH14_BaseItem ]
   id: OH14_WrenchBasic
   description: Универсальный инструмент для закрепа и открепа вашего оборудования.
   components:
@@ -171,7 +171,7 @@
 
 - type: entity
   name: дрель
-  parent: OH14_ItemSFXAlt
+  parent: OH14_BaseItem
   id: OH14_DrillBasic
   description: Простая ручная дрель.
   components:

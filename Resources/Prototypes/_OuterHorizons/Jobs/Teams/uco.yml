@@ -11,6 +11,7 @@
 - type: startingGear
   id: OH14_UcoGear
   equipment:
+    outerClothing: OH14_ClothingOuterCoatUco
     jumpsuit: OH14_ClothingJumpsuitUco
     pants: OH14_ClothingPantsBasic
     back: OH14_ClothingBackpackBasic

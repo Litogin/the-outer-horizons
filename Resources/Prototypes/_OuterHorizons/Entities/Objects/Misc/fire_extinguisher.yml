@@ -1,6 +1,6 @@
 - type: entity
   name: огнетушитель
-  parent: OH14_ItemSFXMetallic
+  parent: [ OH14_ItemSFXMetallic, OH14_BaseItem ]
   id: OH14_FireExtinguisher
   description: О! Это же этот, как его... Ах да! Наипростейший реактивный двигатель!
   components:
