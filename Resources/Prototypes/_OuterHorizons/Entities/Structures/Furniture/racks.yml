@@ -11,16 +11,16 @@
       Brute:
         path:
           "/Audio/Weapons/dodgeball.ogg"
-  # - type: Construction
-  #   graph: Rack
-  #   node: Rack
+  - type: Construction
+    graph: OH14_Racks
+    node: OH14_Racks
   - type: Anchorable
   - type: InteractionOutline
   - type: PlaceableSurface
   - type: Sprite
     sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
     state: rack
-    snapCardinals: true
+    noRot: true
   - type: Fixtures
     fixtures:
       fix1:
