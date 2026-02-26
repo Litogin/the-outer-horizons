@@ -75,6 +75,9 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated += LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated += LobbyLateJoinStatusUpdated;
+
+            var logoTexture = _resourceCache.GetResource<TextureResource>("/Textures/_OuterHorizons/Logo/logo_smoll.png");
+            Lobby!.Logo.Texture = logoTexture;
         }
 
         protected override void Shutdown()

@@ -8,7 +8,8 @@
     xmlns:style="clr-namespace:Content.Client.Stylesheets"
     xmlns:lobbyUi="clr-namespace:Content.Client.Lobby.UI"
     xmlns:info="clr-namespace:Content.Client.Info"
-    xmlns:widgets="clr-namespace:Content.Client.UserInterface.Systems.Chat.Widgets">
+    xmlns:widgets="clr-namespace:Content.Client.UserInterface.Systems.Chat.Widgets"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client">
     <!-- Background -->
     <TextureRect Access="Public" VerticalExpand="True" HorizontalExpand="True" Name="Background"
                  Stretch="KeepAspectCovered" />
@@ -18,10 +19,59 @@
             <!-- LHS Controls -->
             <BoxContainer Name="LeftSide" Orientation="Vertical" SeparationOverride="4" HorizontalExpand="True">
                 <Control Name="DefaultState" VerticalExpand="True">
+                    <!-- я не заметил что ебашу все в этом контейнере, увы -->
                     <BoxContainer Name="TopLeft" Orientation="Vertical">
+
+
+
+                        <!-- Новая панелька -->
+                        <PanelContainer StyleClasses="PdaBackgroundRect" HorizontalAlignment="Center" VerticalExpand="True"
+                            Name="NewBackground" ModulateSelfOverride="#22232e" MaxWidth="450" MinWidth="350" MinHeight="480">
+                        <PanelContainer StyleClasses="PdaBorderRect"/>
+
+                        <PanelContainer ModulateSelfOverride="#FFFFFF" StyleClasses="PdaBackground">
+                            <PanelContainer.PanelOverride>
+                                <gfx:StyleBoxFlat BackgroundColor="#050c0d" BorderColor="#1d1e27" BorderThickness="3"/>
+                            </PanelContainer.PanelOverride>
+
+                            <!-- Содержимое -->
+                            <BoxContainer Margin="3 3 3 3" Orientation="Horizontal" SeparationOverride="20">
+                                <TextureRect Access="Public" Name="Logo" HorizontalAlignment="Left"/>
+                                <BoxContainer Orientation="Vertical" HorizontalAlignment="Right">
+                                    <!-- Server info -->
+                                    <Label Name="StationTime" Access="Public" FontColorOverride="{x:Static maths:Color.LightGray}" Margin="3 3 3 3" HorizontalAlignment="Left" />
+                                    <controls:HSpacer Spacing="5" />
+                                    <lobbyUi:LobbyCharacterPreviewPanel Name="CharacterPreview" Access="Public" />
+                                    <controls:HSpacer Spacing="5" />
+                                </BoxContainer>
+                            </BoxContainer>
+
+                        </PanelContainer>
+
+                        </PanelContainer>
+
+                        <!-- Чат -->
+                        <PanelContainer StyleClasses="PdaBackgroundRect" HorizontalAlignment="Center" VerticalExpand="True"
+                            Name="ChatBackground" ModulateSelfOverride="#22232e" MaxWidth="450" MinWidth="350" MaxHeight="360">
+                        <PanelContainer StyleClasses="PdaBorderRect"/>
+
+                        <PanelContainer ModulateSelfOverride="#FFFFFF" StyleClasses="PdaBackground">
+                            <PanelContainer.PanelOverride>
+                                <gfx:StyleBoxFlat BackgroundColor="#050c0d" BorderColor="#1d1e27" BorderThickness="3"/>
+                            </PanelContainer.PanelOverride>
+
+                            <!-- Чат -->
+                            <BoxContainer HorizontalAlignment="Center">
+                            <widgets:ChatBox Name="Chat" Access="Public" VerticalExpand="True" Margin="3 3 3 3" MinHeight="50" MaxHeight="350" MinWidth="350" MaxWidth="440"/>
+                            </BoxContainer>
+
+                        </PanelContainer>
+                        </PanelContainer>
+
+
                         <!-- Left Top Panel -->
                         <PanelContainer StyleClasses="BackgroundPanel" HorizontalAlignment="Left" Name="LeftSideTop"
-                                        VerticalAlignment="Top">
+                                        VerticalAlignment="Top" Visible="False">
                             <BoxContainer Orientation="Vertical" HorizontalAlignment="Center" MaxWidth="800">
                                 <info:LinkBanner Name="LinkBanner" VerticalExpand="false" HorizontalAlignment="Center"
                                                  Margin="3 3 3 3" />
@@ -51,7 +101,7 @@
                     <!-- Vertical Padding-->
                     <Control VerticalExpand="True" />
                     <!-- Left Bot Panel -->
-                    <BoxContainer Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                    <BoxContainer Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visible="False">
                         <info:DevInfoBanner Name="DevInfoBanner" VerticalExpand="false" Margin="3 3 3 3" />
                         <PanelContainer StyleClasses="BackgroundPanel" Margin="3 3 3 3">
                             <BoxContainer Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="3 3 3 3">
@@ -67,7 +117,7 @@
             </BoxContainer>
             <!-- Right Panel -->
             <PanelContainer Name="RightSide" Access="Public" StyleClasses="BackgroundPanel" HorizontalAlignment="Right" VerticalExpand="True"
-                            VerticalAlignment="Stretch">
+                            VerticalAlignment="Stretch" Visible="False">
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                     <!-- Top row -->
                     <BoxContainer Orientation="Horizontal" MinSize="0 40" Name="HeaderContainer" Access="Public"
@@ -93,16 +143,16 @@
                     <controls:NanoHeading Text="{Loc 'ui-lobby-server-info-block'}" />
                     <info:ServerInfo Name="ServerInfo" Access="Public" MinSize="0 30" VerticalExpand="false"
                                      Margin="3 3 3 3" MaxWidth="400" HorizontalAlignment="Left" />
-                    <Label Name="StationTime" Access="Public" FontColorOverride="{x:Static maths:Color.LightGray}"
-                           Margin="3 3 3 3" HorizontalAlignment="Left" />
+                    <!-- <Label Name="StationTime" Access="Public" FontColorOverride="{x:Static maths:Color.LightGray}"
+                           Margin="3 3 3 3" HorizontalAlignment="Left" /> -->
                     <controls:HSpacer Spacing="5" />
-                    <lobbyUi:LobbyCharacterPreviewPanel Name="CharacterPreview" Access="Public" />
+                    <!-- <lobbyUi:LobbyCharacterPreviewPanel Name="CharacterPreview" Access="Public" /> -->
                     <controls:HSpacer Spacing="5" />
                     <BoxContainer MinHeight="10" />
                     <!-- Gold line -->
                     <controls:HLine StyleClasses="highlight" Thickness="2" Access="Public" />
                     <controls:HSpacer Spacing="10" />
-                    <widgets:ChatBox Name="Chat" Access="Public" VerticalExpand="True" Margin="3 3 3 3" MinHeight="50" />
+                    <!-- <widgets:ChatBox Name="Chat" Access="Public" VerticalExpand="True" Margin="3 3 3 3" MinHeight="50" /> -->
                 </BoxContainer>
                 <TextureButton Name="CollapseButton"
                                 TexturePath="filled_right_arrow.svg.192dpi"
