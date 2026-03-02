@@ -5,6 +5,7 @@
   name: атмос терминал
   description: Терминал для работы с вентиляцией и датчиками газа, не вайбовостью.
   components:
+  - type: PowerSwitch
   - type: StationAiWhitelist
   - type: Electrified
     enabled: false

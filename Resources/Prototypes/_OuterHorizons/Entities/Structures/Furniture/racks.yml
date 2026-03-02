@@ -94,10 +94,12 @@
     maxFillLevels: 4
     fillBaseName: racks
   - type: Storage
+    storageInsertSound: /Audio/_OuterHorizons/Items/drop.ogg # TODO, звуки предметов под замену
+    storageRemoveSound: /Audio/_OuterHorizons/Items/pickup.ogg
     grid:
     - 0,0,6,1
     - 0,3,6,4
-    maxItemSize: Normal
+    maxItemSize: Huge
   - type: ContainerContainer
     containers:
       storagebase: !type:Container

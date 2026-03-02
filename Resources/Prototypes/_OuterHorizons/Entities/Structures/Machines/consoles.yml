@@ -6,6 +6,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: PowerSwitch
   - type: Animateable
   - type: MeleeSound
     soundGroups:

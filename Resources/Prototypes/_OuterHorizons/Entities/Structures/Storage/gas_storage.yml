@@ -3,18 +3,20 @@
   id: OH14_BaseGasStorage
   abstract: true
   name: газовое хранилище
-  description: Большое хранилище для хранения газов, переносу не подлежит.
+  description: Большое хранилище для хранения газов, имеет сразу 4 выхода с 4х сторон для первого слоя труб. Переносу не подлежит.
   components:
     - type: InteractionOutline
     - type: Transform
-      noRot: true
+      # noRot: true
     - type: Appearance
     - type: Damageable
       damageContainer: Inorganic
       damageModifierSet: Metallic
     - type: AtmosDevice
-      requireAnchored: false
+      requireAnchored: true
       joinSystem: true
+    - type: PipeColorVisuals
+    - type: AtmosPipeColor
     - type: NodeContainer
       nodes:
         port:
@@ -23,9 +25,12 @@
           pipeDirection: Fourway
           volume: 1
     - type: Sprite
-      noRot: true
+      # noRot: true
       sprite: _OuterHorizons/Structures/Storage/gas_storage.rsi
       layers:
+        - state: pipe
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+          renderingStrategy: Default
         - state: yellow
     - type: GasCanister
       gasMixture:
@@ -63,54 +68,69 @@
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageGrey
-  suffix: Пусто, Серый
+  suffix: Пусто, Пустой
   components:
    - type: Sprite
      layers:
-       - state: grey
+      - state: pipe
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+        renderingStrategy: Default
+      - state: grey
 
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageYellow
-  suffix: Пусто, Желтый
+  suffix: Пусто, Смеси
   components:
    - type: Sprite
      layers:
-       - state: yellow
+      - state: pipe
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+        renderingStrategy: Default
+      - state: yellow
 
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageBlue
-  suffix: Пусто, Синий
+  suffix: Пусто, Кислород
   components:
    - type: Sprite
      layers:
-       - state: blue
+      - state: pipe
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+        renderingStrategy: Default
+      - state: blue
 
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageRed
-  suffix: Пусто, Красный
+  suffix: Пусто, Азот
   components:
    - type: Sprite
      layers:
-       - state: red
+      - state: pipe
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+        renderingStrategy: Default
+      - state: red
 
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageOrange
-  suffix: Пусто, Оранжевый
+  suffix: Пусто, Плазма
   components:
    - type: Sprite
      layers:
-       - state: orange
+      - state: pipe
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+        renderingStrategy: Default
+      - state: orange
 
 # ----------------- Заполенное
 
 - type: entity
   parent: OH14_GasStorageBlue
   id: OH14_GasStorageBlueFilled
-  suffix: Заполнен, Синий
+  suffix: Заполнен, Кислород
   components:
    - type: GasCanister
      gasMixture:
@@ -130,7 +150,7 @@
 - type: entity
   parent: OH14_GasStorageRed
   id: OH14_GasStorageRedFilled
-  suffix: Заполнен, Красный
+  suffix: Заполнен, Азот
   components:
    - type: GasCanister
      gasMixture:
@@ -150,7 +170,7 @@
 - type: entity
   parent: OH14_GasStorageOrange
   id: OH14_GasStorageOrangeFilled
-  suffix: Заполнен, Оранжевый
+  suffix: Заполнен, Плазма
   components:
    - type: GasCanister
      gasMixture:
