@@ -29,15 +29,6 @@
       - Structure
 
 - type: entity
-  id: OH14_BaseStructure
-  parent: OH14_BaseStructure
-  abstract: true
-  components:
-  - type: Transform
-    anchored: true
-    noRot: true
-
-- type: entity
   id: OH14_BaseStructureDynamic
   parent: OH14_BaseStructure
   abstract: true
@@ -49,8 +40,8 @@
         Blunt: 25
     soundHit:
       collection: MetalThud
-  - type: TileFrictionModifier # УБрать если будут рофлы
-    modifier: 0.5
+  # - type: TileFrictionModifier # УБрать если будут рофлы
+  #   modifier: 0.5
   - type: Transform
     anchored: false
   - type: Clickable

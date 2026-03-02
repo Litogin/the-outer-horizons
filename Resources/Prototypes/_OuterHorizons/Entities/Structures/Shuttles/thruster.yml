@@ -32,6 +32,7 @@
   - type: Rotatable
     # rotateWhileAnchored: true
   - type: Thruster
+    canToggle: true
     damage:
       types:
         Heat: 40

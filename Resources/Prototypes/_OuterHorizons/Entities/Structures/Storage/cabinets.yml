@@ -11,7 +11,7 @@
         top:
           True: { visible: true }
           False: { visible: false }
-  - type: Climbable
+  # - type: Climbable
   - type: Transform
     noRot: true
   - type: Sprite
