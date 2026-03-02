@@ -2,7 +2,7 @@
   abstract: true
   id: OH14_BasicGenerator
   categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   components:
     # Basic properties
     # - type: Transform

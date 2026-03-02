@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   id: OH14_RackBasic
   categories: [ ForkFiltered ]
   name: стойка
@@ -27,7 +27,7 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.3,-0.3,0.3,0.3"
-        density: 140
+        density: 300
         mask:
         - TableMask
         layer:

@@ -222,7 +222,7 @@
 # Broken
 
 - type: entity
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructureDynamic
   id: OH14_GasCanisterBrokenBase
   name: лопнувшая газовая канистра
   description: Лопнувшая под воздействием давления или деформации, футуристичная и не практичная, в прошлом, бочка для газа.

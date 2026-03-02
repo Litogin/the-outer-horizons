@@ -1,11 +1,14 @@
 - type: entity
   id: OH14_FrameBasic
   categories: [ ForkFiltered ]
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructureDynamic
   abstract: true
   name: каркас
   description: Каркас вашего оборудования, ветхий и не надежный.
   components:
+  - type: Transform
+    anchored: false
+    noRot: true
   - type: GenericVisualizer
     visuals:
       enum.ConstructionVisuals.Key:
@@ -15,6 +18,7 @@
           frame3: { state: frame2 }
   - type: Appearance
   - type: Sprite
+    noRot: true
     sprite: _OuterHorizons/Structures/Machines/autolathe.rsi
     state: frame0
   - type: Damageable

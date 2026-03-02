@@ -1,7 +1,6 @@
 - type: entity
   id: OH14_Grille
-  categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   name: решетка
   description: Эй друг, видишь провод подомной? Не бойся! Иди ко мне, обними меня! :3
   components:
@@ -88,8 +87,7 @@
 - type: entity
   id: OH14_GrilleBroken
   suffix: Сломаная
-  categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   name: решетка
   description: Она просто хотела чтобы ее обняли.
   components:

@@ -2,8 +2,7 @@
 - type: entity
   id: OH14_BaseThruster
   suffix: "Двигатель"
-  categories: [ ForkFiltered ]
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructure
   name: ракетный двигатель
   abstract: true
   components:

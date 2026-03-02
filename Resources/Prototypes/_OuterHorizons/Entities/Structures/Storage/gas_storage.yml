@@ -1,6 +1,5 @@
 - type: entity
-  parent: BaseStructure
-  categories: [ ForkFiltered ]
+  parent: OH14_BaseStructure
   id: OH14_BaseGasStorage
   abstract: true
   name: газовое хранилище

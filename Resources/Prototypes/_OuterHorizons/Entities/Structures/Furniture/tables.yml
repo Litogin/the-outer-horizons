@@ -63,7 +63,7 @@
 - type: entity
   id: OH14_TableFrame
   categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   name: каркас стола
   description: Металлический каркас стола, у меня нет идеи для этого описания.
   components:

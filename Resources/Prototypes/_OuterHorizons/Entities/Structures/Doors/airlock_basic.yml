@@ -1,7 +1,6 @@
 - type: entity
   id: OH14_Airlock
-  categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   name: шлюз
   description: Он открывается, он закрывается, он давит неосторожных грейтайдов.
   components:

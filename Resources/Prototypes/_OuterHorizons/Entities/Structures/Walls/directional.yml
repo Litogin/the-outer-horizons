@@ -1,8 +1,7 @@
 - type: entity
   id: OH14_BasicDirectionalStructure
-  categories: [ ForkFiltered ]
   abstract: true
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   placement:
     mode: SnapgridCenter
     snap:
