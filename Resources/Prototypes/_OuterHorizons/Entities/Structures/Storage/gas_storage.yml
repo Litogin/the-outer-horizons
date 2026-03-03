@@ -2,9 +2,10 @@
   parent: OH14_BaseStructure
   id: OH14_BaseGasStorage
   abstract: true
-  name: газовое хранилище
+  name: цистерна
   description: Большое хранилище для хранения газов, имеет сразу 4 выхода с 4х сторон для первого слоя труб. Переносу не подлежит.
   components:
+    - type: Anchorable
     - type: InteractionOutline
     - type: Transform
       # noRot: true
@@ -17,6 +18,9 @@
       joinSystem: true
     - type: PipeColorVisuals
     - type: AtmosPipeColor
+    - type: Construction
+      graph: OH14_GasStorage
+      node: OH14_GasStorage
     - type: NodeContainer
       nodes:
         port:
@@ -45,7 +49,7 @@
           - 0 # Ammonia
           - 0 # N2O
           - 0 # Frezon
-        temperature: 293.15
+        temperature: 273.15
     - type: Destructible
       thresholds:
       - trigger:
@@ -145,7 +149,7 @@
         - 0 # Ammonia
         - 0 # N2O
         - 0 # Frezon
-      temperature: 293.15
+      temperature: 273.15
 
 - type: entity
   parent: OH14_GasStorageRed
@@ -165,7 +169,7 @@
         - 0 # Ammonia
         - 0 # N2O
         - 0 # Frezon
-      temperature: 293.15
+      temperature: 273.15
 
 - type: entity
   parent: OH14_GasStorageOrange
@@ -185,4 +189,49 @@
         - 0 # Ammonia
         - 0 # N2O
         - 0 # Frezon
-      temperature: 293.15
+      temperature: 273.15
+
+- type: entity
+  id: OH14_GasStorageFrame
+  parent: OH14_BaseStructureDynamic
+  name: каркас цистерны
+  description: Каркас вашего газового хранилища, ветхий и не надежный.
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/gas_storage.rsi
+    state: frame
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Anchorable
+  - type: Construction
+    graph: OH14_GasStorage
+    node: frame

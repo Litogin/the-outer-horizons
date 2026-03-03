@@ -1,6 +1,5 @@
 - type: entity
   id: OH14_FrameBasic
-  categories: [ ForkFiltered ]
   parent: OH14_BaseStructureDynamic
   abstract: true
   name: каркас
