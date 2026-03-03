@@ -3,6 +3,9 @@
   parent: OH14_FrameBasic
   name: каркас ракетного двигателя
   components:
+  - type: Transform
+    anchored: false
+    noRot: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -26,7 +29,10 @@
           frame2: { state: r2 }
           frame3: { state: r3 }
   - type: Sprite
+    noRot: false
     sprite: _OuterHorizons/Structures/Shuttles/frames.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: r1
       map: [ "enum.ConstructionVisuals.Layer" ]

@@ -117,6 +117,8 @@
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/b_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -147,6 +149,8 @@
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/r_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -174,6 +178,8 @@
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/o_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
