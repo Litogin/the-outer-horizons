@@ -28,7 +28,7 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.5,-0.5,0.5,-0.28125"
-        density: 1500
+        density: 200
         mask:
         - FullTileMask
         layer:
@@ -90,3 +90,68 @@
   - type: Icon
     sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
     state: state0
+
+- type: entity
+  id: OH14_WallDirectionalFrame
+  name: каркас направленной стены
+  parent: OH14_BaseStructure
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Construction
+    graph: OH14_WallDirectional
+    node: frame
+  - type: WallMount
+    arc: 360 # interact despite grilles
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: frame
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: frame
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,-0.28125"
+        density: 150
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50 #excess damage (nuke?). avoid computational cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
