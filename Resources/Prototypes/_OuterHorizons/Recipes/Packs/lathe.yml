@@ -33,6 +33,8 @@
   - OH14_CircuitboardAtmos
   - OH14_CircuitboardPower
   - OH14_NuclearRod # ВРЕМЕННО
+  - OH14_PowerCellMedium
+  - OH14_PowerCellBig
 
 - type: latheRecipePack
   id: OH14_MiscStatic
@@ -44,6 +46,7 @@
   - OH14_LightTubeWarm
   - OH14_LightBulb
   - OH14_Igniter
+  - OH14_PowerCellMedium
 
 - type: latheRecipePack
   id: OH14_OreStatic

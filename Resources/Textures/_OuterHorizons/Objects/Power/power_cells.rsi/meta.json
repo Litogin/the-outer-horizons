@@ -8,31 +8,30 @@
     "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project.",
     "states": [
         {
-            "name": "light-off"
+            "name": "small"
         },
         {
-            "name": "empty"
+            "name": "small_o1"
         },
         {
-            "name": "full"
+            "name": "small_o2"
         },
         {
-            "name": "open"
+            "name": "medium"
         },
         {
-            "name": "light-charging",
-            "delays": [
-                [
-                    0.5,
-                    0.5
-                ]
-            ]
+            "name": "medium_o1"
         },
         {
-            "name": "light-charged"
+            "name": "medium_o2"
         },
         {
-            "name": "light-empty"
+            "name": "medium-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "medium-inhand-right",
+            "directions": 4
         }
     ]
 }
