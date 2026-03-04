@@ -29,6 +29,9 @@
       "name": "dresser_dark"
     },
     {
+      "name": "dresser_dark_open"
+    },
+    {
         "name": "rack-engi"
       },
       {
@@ -36,6 +39,18 @@
       },
       {
         "name": "racks"
+      },
+      {
+        "name": "racks-0"
+      },
+      {
+        "name": "racks-1"
+      },
+      {
+        "name": "racks-2"
+      },
+      {
+        "name": "racks-3"
       },
       {
         "name": "tv"

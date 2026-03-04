@@ -1,7 +1,6 @@
 - type: entity
   id: OH14_CabinetBasic
-  categories: [ ForkFiltered ]
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructureDynamic
   name: шкаф
   description: Большой вертикальный шкаф для рабочих иструментов. Не предназначен для спаривания внутри.
   components:
@@ -12,7 +11,7 @@
         top:
           True: { visible: true }
           False: { visible: false }
-  - type: Climbable
+  # - type: Climbable
   - type: Transform
     noRot: true
   - type: Sprite

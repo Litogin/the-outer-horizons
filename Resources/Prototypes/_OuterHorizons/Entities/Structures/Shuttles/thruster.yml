@@ -2,8 +2,7 @@
 - type: entity
   id: OH14_BaseThruster
   suffix: "Двигатель"
-  categories: [ ForkFiltered ]
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructure
   name: ракетный двигатель
   abstract: true
   components:
@@ -33,6 +32,7 @@
   - type: Rotatable
     # rotateWhileAnchored: true
   - type: Thruster
+    canToggle: false
     damage:
       types:
         Heat: 40
@@ -80,6 +80,8 @@
   name: ракетный двигатель
   abstract: true
   components:
+  - type: AtmosDevice
+    joinSystem: true
   - type: PointLight
     rotation: 180
     autoRot: true
@@ -90,8 +92,8 @@
     # castShadows: true
     enabled: false
     mask: /Textures/_OuterHorizons/Effects/LightMasks/cone_alt.png
-  # - type: PressureThruster
-  #   inletName: inlet
+  - type: PressureThruster
+    inletName: inlet
   - type: NodeContainer
     nodes:
       inlet:
@@ -109,12 +111,14 @@
   components:
   - type: Thruster
     thrust: 250
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 40
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 40
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/b_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -139,12 +143,14 @@
     color: "#eca664"
   - type: Thruster
     thrust: 125
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 25
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 25
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/r_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -166,12 +172,14 @@
     color: "#eca664"
   - type: Thruster
     thrust: 500
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 100
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 100
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/o_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -196,9 +204,9 @@
     board: ThrusterMachineCircuitboard
   - type: Thruster
     thrust: 60
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 20
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 20
   - type: PointLight
     color: "#eca664"
   - type: Sprite
@@ -227,9 +235,9 @@
   components:
   - type: Thruster
     thrust: 30
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 12
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 12
   - type: PointLight
     color: "#eca664"
   - type: Sprite
@@ -254,10 +262,13 @@
 - type: entity
   id: OH14_Gyroscope
   categories: [ ForkFiltered ]
-  parent: [ OH14_BaseThruster, ConstructibleMachine ]
+  parent: OH14_BaseThruster
   name: гиродин
   description: 2 вращающихся механизма, иронично вращающих вас.
   components:
+  - type: Construction
+    graph: OH14_Gyroscope
+    node: OH14_Gyroscope
   - type: Sprite
     # Listen I'm not the biggest fan of the sprite but it was the most appropriate thing I could find.
     sprite: _OuterHorizons/Structures/Shuttles/gyroscope.rsi

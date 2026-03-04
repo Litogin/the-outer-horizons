@@ -27,20 +27,11 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  parent: OH14_SheetBase
+  parent: [ OH14_ItemSFXMetallic, OH14_SheetBase ]
   id: OH14_SheetMaterials
   name: Материалы
   suffix: Full
   components:
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -154,20 +145,11 @@
     count: 1
 
 - type: entity
-  parent: OH14_SheetBase
+  parent: [ OH14_ItemSFXMetallic, OH14_SheetBase ]
   id: OH14_SheetIngot
   name: Слиток
   suffix: Full
   components:
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
   - type: Material
   - type: PhysicalComposition
     materialComposition:

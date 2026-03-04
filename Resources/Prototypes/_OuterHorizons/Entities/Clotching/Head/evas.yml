@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHeadEVAHelmetBase
+  parent: [ ClothingHeadEVAHelmetBase, OH14_BaseItem ]
   id: OH14_ClothingHeadHelmetEVABasic
   categories: [ ForkFiltered ]
   name: шлем ЕВА "Пилигримм"
@@ -9,8 +9,8 @@
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/eva.rsi
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/eva.rsi
-    equipSound: /Audio/_OuterHorizons/Items/helmet_eq.ogg
-    unequipSound: /Audio/_OuterHorizons/Items/helmet_un.ogg
+    equipSound: /Audio/_OuterHorizons/Clothing/helmet_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/helmet_un.ogg
     equipDelay: 0.2
     unequipDelay: 0.5
   - type: Tag
@@ -26,7 +26,7 @@
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/uco.rsi
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/uco.rsi
-    equipSound: /Audio/_OuterHorizons/Items/helmet_eq.ogg
-    unequipSound: /Audio/_OuterHorizons/Items/helmet_un.ogg
+    equipSound: /Audio/_OuterHorizons/Clothing/helmet_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/helmet_un.ogg
     equipDelay: 0.2
     unequipDelay: 0.5

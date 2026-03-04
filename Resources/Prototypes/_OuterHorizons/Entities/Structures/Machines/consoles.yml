@@ -6,6 +6,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: PowerSwitch
   - type: Animateable
   - type: MeleeSound
     soundGroups:
@@ -79,6 +80,8 @@
     enabled: false
     usesApcPower: true
   - type: WiresPanel
+    screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
   - type: WiresVisuals
   - type: Wires
     boardName: wires-board-name-computer
@@ -104,7 +107,7 @@
   - type: PointLight
     color: "#45b1af"
   - type: Computer
-    board: PowerComputerCircuitboard
+    board: OH14_CircuitboardPower
   - type: PowerMonitoringConsole
   - type: PowerMonitoringCableNetworks
   - type: NodeContainer
@@ -143,7 +146,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: panel_open
   - type: Computer
-    board: AlertsComputerCircuitboard
+    board: OH14_CircuitboardAtmos
   - type: AtmosAlertsComputer
   - type: ActivatableUI
     singleUser: true
@@ -186,7 +189,7 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: Computer
-    board: RadarConsoleCircuitboard
+    board: OH14_CircuitboardRadar
   - type: PointLight
     color: "#45b1af"
 
@@ -259,3 +262,5 @@
   - type: DeviceList
   - type: DeviceNetworkRequiresPower
   - type: AtmosDevice
+  - type: Computer
+    board: OH14_CircuitboardShuttle

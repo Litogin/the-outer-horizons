@@ -4,6 +4,7 @@
   name: ящик
   description: Маленькое хранилище для ваших инструментов. Не хотели бы сыграть в ящик?.
   components:
+  - type: Climbable
   - type: Construction
     graph: OH14_Crate
     node: OH14_Crate
