@@ -262,10 +262,13 @@
 - type: entity
   id: OH14_Gyroscope
   categories: [ ForkFiltered ]
-  parent: [ OH14_BaseThruster, ConstructibleMachine ]
+  parent: OH14_BaseThruster
   name: гиродин
   description: 2 вращающихся механизма, иронично вращающих вас.
   components:
+  - type: Construction
+    graph: OH14_Gyroscope
+    node: OH14_Gyroscope
   - type: Sprite
     # Listen I'm not the biggest fan of the sprite but it was the most appropriate thing I could find.
     sprite: _OuterHorizons/Structures/Shuttles/gyroscope.rsi
