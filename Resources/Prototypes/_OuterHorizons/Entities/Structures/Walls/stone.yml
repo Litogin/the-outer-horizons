@@ -10,10 +10,10 @@
     tags:
       - Wall
   - type: Sprite
-    sprite: _OuterHorizons/Structures/Walls/asteroid_rock.rsi
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_rock.rsi
     state: full
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/asteroid_rock.rsi
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_rock.rsi
     state: full
   - type: Destructible
     thresholds:
@@ -46,12 +46,12 @@
     tags:
       - Wall
   - type: Sprite
-    sprite: _OuterHorizons/Structures/Walls/asteroid_ore_rock.rsi
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_ore_rock.rsi
     layers:
     - state: full
     - state: ore
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/asteroid_ore_rock.rsi
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_ore_rock.rsi
     state: full
   - type: Destructible
     thresholds:
