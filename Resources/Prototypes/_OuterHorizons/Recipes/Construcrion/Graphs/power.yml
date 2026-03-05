@@ -176,3 +176,67 @@
           steps:
             - tool: Prying
               doAfter: 2
+
+- type: constructionGraph
+  id: OH14_BatteryArray
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: frame1
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_BatteryArrayFrame
+      edges:
+        - to: frame2
+          steps:
+            - material: OH14_Materials
+              amount: 4
+              doAfter: 1
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: frame2
+      entity: OH14_BatteryArrayFrame
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: OH14_BatteryArray
+          steps:
+            - tag: OH14_PowerCellBig
+              store: powercell
+              name: construction-graph-tag-power-cell
+              doAfter: 1
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 4
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: OH14_BatteryArray
+      entity: OH14_BatteryArrayEmpty
+      edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetElectronics1
+              amount: 1
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
+          steps:
+            - tool: Prying
+              doAfter: 2

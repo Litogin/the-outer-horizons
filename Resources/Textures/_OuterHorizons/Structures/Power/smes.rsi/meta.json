@@ -10,11 +10,23 @@
     {
       "name": "smes"
     },
-		{
-      "name": "static"
+    {
+      "name": "frame"
     },
     {
-      "name": "smes-open"
+      "name": "empty"
+    },
+    {
+      "name": "fill1"
+    },
+    {
+      "name": "fill2"
+    },
+    {
+      "name": "fill3"
+    },
+	{
+      "name": "static"
     },
     {
       "name": "smes-oc0"
@@ -74,28 +86,10 @@
       "name": "smes-op0"
     },
     {
-      "name": "smes-op1",
-      "delays": [
-        [
-          0.25,
-          0.25,
-          0.25,
-          0.25,
-          0.25
-        ]
-      ]
+      "name": "smes-op1"
     },
     {
-      "name": "smes-op2",
-      "delays": [
-        [
-          0.25,
-          0.25,
-          0.25,
-          0.25,
-          0.25
-        ]
-      ]
+      "name": "smes-op2"
     }
   ]
 }

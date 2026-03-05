@@ -86,11 +86,14 @@
 
 - type: entity
   id: OH14_PowerCellBig # Аккум
-  parent: OH14_BasicPowerCell
+  parent: [ OH14_ItemSFXAlt, OH14_BasicPowerCell ]
   name: аккамулятор
   description: Огромная батарейка, большая батарейка, хорошая батарейка.
   suffix: Full
   components:
+  - type: Tag
+    tags:
+      - OH14_PowerCellBig
   - type: Item
     heldPrefix: medium
     size: Normal
@@ -117,6 +120,9 @@
   suffix: Empty
   parent: OH14_PowerCellBig
   components:
+  - type: Tag
+    tags:
+      - OH14_PowerCellBig
   - type: Sprite
     layers:
       - map: [ "enum.PowerCellVisualLayers.Base" ]
