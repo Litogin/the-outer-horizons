@@ -132,7 +132,7 @@ namespace Content.Shared.Maps
         /// <summary>
         ///     Hide this tile in the tile placement editor.
         /// </summary>
-        [DataField] public bool EditorHidden { get; private set; } = false;
+        [DataField] public bool EditorHidden { get; private set; } = true; // OH14-Changes
 
         public void AssignTileId(ushort id)
         {

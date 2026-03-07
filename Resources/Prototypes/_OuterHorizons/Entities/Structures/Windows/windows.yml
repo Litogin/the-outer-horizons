@@ -1,5 +1,5 @@
 - type: entity
-  parent: Window
+  parent: [ BaseDeltaPressureGlassQuarter, Window ]
   id: OH14_BaseWindow
   categories: [ ForkFiltered ]
   name: обыкновенное окно
@@ -34,9 +34,8 @@
           volume: -5
 
 - type: entity
-  parent: Window
+  parent: [ BaseDeltaPressureReinforcedGlassQuarter, OH14_BaseWindow ]
   id: OH14_WindowReinforced
-  categories: [ ForkFiltered ]
   name: укрепленное окно
   description: И... И это все укрепленное окно?! Но это же просто окно с укрепленной рамкой-...
   components:
@@ -55,6 +54,37 @@
     - trigger:
         !type:DamageTrigger
         damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+          volume: -5
+
+- type: entity
+  parent: OH14_WindowReinforced
+  id: OH14_WindowShuttle
+  name: окно шаттла
+  description: И... И это все окно шаттла?! Но это же просто стена с дырками для стеклянных панелей-...
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Windows/shuttle.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Windows/shuttle.rsi
+  - type: IconSmooth
+    key: walls
+    base: wall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
