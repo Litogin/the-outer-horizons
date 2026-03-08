@@ -1,7 +1,8 @@
 - type: entity
   parent: [ OH14_BaseItem, BaseHypospray ]
   id: OH14_BasicMedipen
-  name: chemical medipen
+  abstract: true
+  name: медипен
   description: Одноразовый автоинъектор дозы лекарств, что в критической ситуации могут спасти жизнь. ПРЕДУПРЕЖДЕНИЕ! Производитель не несет ответственности за случайные передозировки.
   components:
   - type: Sprite
