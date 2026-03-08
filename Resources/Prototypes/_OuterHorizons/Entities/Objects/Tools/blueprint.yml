@@ -21,6 +21,7 @@
   - type: Tag
     tags:
     - BlueprintAutolathe
+    - OH14_Tools
 
 - type: entity
   parent: OH14_BaseBlueprint

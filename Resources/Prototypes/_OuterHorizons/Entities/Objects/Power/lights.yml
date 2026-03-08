@@ -59,6 +59,7 @@
   - type: Tag
     tags:
     - Trash
+    - OH14_Tools
   # - type: PhysicalComposition
   #   materialComposition:
   #     Glass: 25
@@ -119,6 +120,7 @@
     tags:
     - LightBulb
     - Trash
+    - OH14_Tools
 
 - type: entity
   parent: OH14_BasicLightTube

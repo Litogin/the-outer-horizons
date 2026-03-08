@@ -5,6 +5,9 @@
   name: медипен
   description: Одноразовый автоинъектор дозы лекарств, что в критической ситуации могут спасти жизнь. ПРЕДУПРЕЖДЕНИЕ! Производитель не несет ответственности за случайные передозировки.
   components:
+  - type: Tag
+    tags:
+    - OH14_Medicines
   - type: Sprite
     sprite: _OuterHorizons/Objects/Specific/Medical/medipen.rsi
     layers:

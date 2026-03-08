@@ -74,6 +74,10 @@
   name: Компоненты
   suffix: Full
   components:
+  - type: Tag
+    tags:
+    - OH14_Sheet
+    - OH14_Tools
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -112,6 +116,10 @@
   name: Электроника
   suffix: Full
   components:
+  - type: Tag
+    tags:
+    - OH14_Sheet
+    - OH14_Tools
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -132,6 +140,17 @@
   - type: Item
     heldPrefix: electronic
   - type: Appearance
+
+- type: entity
+  parent: OH14_SheetElectronics
+  id: OH14_SheetElectronics5
+  suffix: Single
+  components:
+  - type: Sprite
+    state: electronic
+  - type: Stack
+    stackType: OH14_Electronic
+    count: 5
 
 - type: entity
   parent: OH14_SheetElectronics

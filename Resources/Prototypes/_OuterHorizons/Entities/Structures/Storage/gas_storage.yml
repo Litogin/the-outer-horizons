@@ -50,7 +50,7 @@
           state: pipeConnector
           map: [ "enum.PipeVisualLayers.Pipe" ]
         - state: yellow
-          map: [ "enum.SubfloorLayers.FirstLayer" ]
+          # map: [ "enum.SubfloorLayers.FirstLayer" ]
     - type: GasCanister
       gasMixture:
         volume: 5000
@@ -95,7 +95,7 @@
         state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
       - state: grey
-        map: [ "enum.SubfloorLayers.FirstLayer" ]
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
@@ -108,7 +108,7 @@
         state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
       - state: yellow
-        map: [ "enum.SubfloorLayers.FirstLayer" ]
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
@@ -121,7 +121,7 @@
         state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
       - state: blue
-        map: [ "enum.SubfloorLayers.FirstLayer" ]
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
@@ -134,7 +134,7 @@
         state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
       - state: red
-        map: [ "enum.SubfloorLayers.FirstLayer" ]
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
@@ -147,7 +147,7 @@
         state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
       - state: orange
-        map: [ "enum.SubfloorLayers.FirstLayer" ]
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 # ----------------- Заполенное
 

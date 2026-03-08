@@ -3,6 +3,9 @@
   id: OH14_BaseHealingItem
   abstract: true
   components:
+  - type: Healing
+    delay: 1
+    selfHealPenaltyMultiplier: 1.5
   - type: Appearance
   - type: Sprite
     sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
@@ -143,6 +146,7 @@
   - type: Tag
     tags:
     - Bloodpack
+    - OH14_Medicines
   - type: Sprite
     layers:
     - state: bloodpack-liquid-5
@@ -190,7 +194,7 @@
 - type: entity
   name: бинты
   description: Кучка грязных тряпок, лечящих внутряк и порезы. Да чувак, я тоже в ахуе.
-  parent: OH14_BaseHealingItem
+  parent: [ OH14_ItemSFXFabric, OH14_BaseHealingItem ]
   id: OH14_Gauze
   suffix: Full
   components:

@@ -49,6 +49,7 @@
   - type: Tag
     tags:
       - PowerCell
+      - OH14_Tools
   - type: Sprite
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
@@ -123,6 +124,7 @@
   - type: Tag
     tags:
       - OH14_PowerCellBig
+      - OH14_Tools
   - type: Sprite
     layers:
       - map: [ "enum.PowerCellVisualLayers.Base" ]
