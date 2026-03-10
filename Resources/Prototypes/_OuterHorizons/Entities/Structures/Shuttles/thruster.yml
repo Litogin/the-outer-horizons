@@ -267,6 +267,12 @@
   name: гиродин
   description: 2 вращающихся механизма, иронично вращающих вас.
   components:
+  - type: AmbientSound
+    enabled: false
+    range: 5
+    volume: -8
+    sound:
+      path: /Audio/_OuterHorizons/Machines/rokit.ogg
   - type: Construction
     graph: OH14_Gyroscope
     node: OH14_Gyroscope
