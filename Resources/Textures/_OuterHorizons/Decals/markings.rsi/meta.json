@@ -8,25 +8,7 @@
     },
     "states": [
         {
-            "name": "warn_corner"
-        },
-        {
-            "name": "warn_corner_flipped"
-        },
-        {
-            "name": "warn_corner_flipped_greyscale"
-        },
-        {
-            "name": "warn_corner_greyscale"
-        },
-        {
-            "name": "warn_corner_greyscale_ne"
-        },
-        {
-            "name": "warn_corner_greyscale_nw"
-        },
-        {
-            "name": "warn_corner_greyscale_se"
+            "name": "bot"
         },
         {
             "name": "warn_corner_greyscale_sw"
@@ -102,6 +84,78 @@
         },
         {
             "name": "warningline_greyscale"
+        },
+        {
+            "name": "bot_greyscale"
+        },
+        {
+            "name": "bot_left"
+        },
+        {
+            "name": "bot_left_greyscale"
+        },
+        {
+            "name": "bot_right"
+        },
+        {
+            "name": "bot_right_greyscale"
+        },
+        {
+            "name": "box"
+        },
+        {
+            "name": "box_alt"
+        },
+        {
+            "name": "box_greyscale"
+        },
+        {
+            "name": "box_greyscale_alt"
+        },
+        {
+            "name": "delivery"
+        },
+        {
+            "name": "delivery_greyscale"
+        },
+        {
+            "name": "loading_area"
+        },
+        {
+            "name": "loading_area_greyscale"
+        },
+        {
+            "name": "standclear"
+        },
+        {
+            "name": "standclear_greyscale"
+        },
+        {
+            "name": "warn_box"
+        },
+        {
+            "name": "warn_box_greyscale"
+        },
+        {
+            "name": "warn_corner"
+        },
+        {
+            "name": "warn_corner_flipped"
+        },
+        {
+            "name": "warn_corner_flipped_greyscale"
+        },
+        {
+            "name": "warn_corner_greyscale"
+        },
+        {
+            "name": "warn_corner_greyscale_ne"
+        },
+        {
+            "name": "warn_corner_greyscale_nw"
+        },
+        {
+            "name": "warn_corner_greyscale_se"
         }
     ]
 }
