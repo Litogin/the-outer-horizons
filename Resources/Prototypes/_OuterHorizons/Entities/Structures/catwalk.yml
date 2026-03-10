@@ -1,5 +1,6 @@
 - type: entity
   id: OH14_Catwalk
+  categories: [ ForkFiltered ]
   name: мостик
   description: Мостик, да, это мостик, для пола, для техов, для пропастей.
   placement:
