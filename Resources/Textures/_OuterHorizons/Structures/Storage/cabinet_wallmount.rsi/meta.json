@@ -8,22 +8,12 @@
   },
   "states": [
     {
-      "name": "basic"
+      "name": "basic",
+      "directions": 4
     },
     {
-      "name": "basic_open"
-    },
-    {
-      "name": "freezer"
-    },
-    {
-      "name": "freezer_open"
-    },
-    {
-      "name": "spacesuit"
-    },
-    {
-      "name": "spacesuit_open"
+      "name": "basic_open",
+      "directions": 4
     }
   ]
 }

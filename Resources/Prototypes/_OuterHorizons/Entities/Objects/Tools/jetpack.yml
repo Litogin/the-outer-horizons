@@ -33,6 +33,8 @@
   - type: Item
     sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
     size: Huge
+    shape:
+    - 0,0,3,2
   - type: UserInterface
     interfaces:
       enum.SharedGasTankUiKey.Key:
@@ -54,7 +56,7 @@
   - type: Jetpack
     # acceleration: 3
     # friction: 0.05
-    moleUsage: 0.00085
+    moleUsage: 0.00185
   - type: Appearance
   - type: GenericVisualizer
     visuals:

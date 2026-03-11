@@ -1,7 +1,7 @@
 # Большие шкафы
 
 - type: entity
-  parent: OH14_CabinetBig
+  parent: OH14_CabinetSpacesuits
   id: OH14_CabinetBigFillEVAUco
   suffix: Заполнен, ЕВА UCO
   components:
@@ -9,19 +9,19 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: OH14_ClothingOuterHardsuitUCO
-          amount: 2
         - id: OH14_ClothingHeadHelmetUCO
           amount: 2
-        - id: OH14_OxygenTankWhiteFilled
+        - id: OH14_ClothingOuterHardsuitUCO
           amount: 2
-        - id: OH14_MedkitBasicFilled
-          prob: 0.4
-        - id: OH14_ToolboxRedFilled
-          prob: 0.4
+        # - id: OH14_OxygenTankWhiteFilled
+        #   amount: 2
+        # - id: OH14_MedkitBasicFilled
+        #   prob: 0.4
+        # - id: OH14_ToolboxRedFilled
+        #   prob: 0.4
 
 - type: entity
-  parent: OH14_CabinetBig
+  parent: OH14_CabinetSpacesuits
   id: OH14_CabinetBigFillEVARre
   suffix: Заполнен, ЕВА RRE
   components:
@@ -29,16 +29,16 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: OH14_ClothingOuterHardsuitEVABasic
-          amount: 2
         - id: OH14_ClothingHeadHelmetEVABasic
           amount: 2
-        - id: OH14_OxygenTankRedFilled
+        - id: OH14_ClothingOuterHardsuitEVABasic
           amount: 2
-        - id: OH14_MedkitBasicFilled
-          prob: 0.4
-        - id: OH14_ToolboxRedFilled
-          prob: 0.4
+        # - id: OH14_OxygenTankRedFilled
+        #   amount: 2
+        # - id: OH14_MedkitBasicFilled
+        #   prob: 0.4
+        # - id: OH14_ToolboxRedFilled
+        #   prob: 0.4
 
 # Обычные шкафы
 
@@ -65,9 +65,9 @@
           prob: 0.5
 
 - type: entity
-  parent: OH14_CabinetBasic
+  parent: OH14_CabinetFreezer
   id: OH14_CabinetBasicFillFood
-  suffix: Заполнен, Еда
+  suffix: Заполнен, Провиант
   components:
   - type: EntityTableContainerFill
     containers:
