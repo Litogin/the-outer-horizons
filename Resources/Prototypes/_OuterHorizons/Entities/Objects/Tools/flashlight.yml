@@ -1,5 +1,5 @@
 - type: entity
-  name: светильник
+  name: фонарик
   parent: OH14_BaseItem
   id: OH14_FlashlightBasic
   description: Освещает путь к свободе.
