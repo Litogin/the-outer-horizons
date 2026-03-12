@@ -48,6 +48,10 @@
     quickEquip: false
     slots:
     - Back
+    equipDelay: 1
+    unequipDelay: 0.5
+    equipSound: /Audio/_OuterHorizons/Clothing/suit_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/suit_un.ogg
   - type: GasTank
     outputPressure: 21.3
     air:

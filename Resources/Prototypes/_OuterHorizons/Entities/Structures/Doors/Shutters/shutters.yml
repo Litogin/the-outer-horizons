@@ -7,6 +7,9 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
   - type: Anchorable
     flags:
     - Anchorable

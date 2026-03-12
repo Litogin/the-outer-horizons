@@ -2,7 +2,7 @@
   parent: OH14_ClothingBackpackBasic
   id: ClothingBackpackSatchelBasic
   name: сумка
-  description: Изначально тарра использовали свой хвост для ношения различных сумок и рюкзачков, но в конце концов, они догадались что это можно ночить и на спине.
+  description: Изначально тарра использовали свой хвост для ношения различных сумок и рюкзачков, но в конце концов, они догадались что это можно носить и на спине.
   components:
   - type: Clothing
     quickEquip: false
