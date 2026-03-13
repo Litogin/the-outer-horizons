@@ -1,12 +1,14 @@
 - type: entity
   id: OH14_BasicDirectionalStructure
   abstract: true
-  parent: OH14_BaseStructure
+  parent: [ BaseDeltaPressureReinforcedGlassQuarter, OH14_BaseStructure ]
   placement:
     mode: SnapgridCenter
     snap:
     - Window
   components:
+  - type: ExaminableDamage
+    messages: OH14_WallMessages
   - type: WallMount
     arc: 360 # interact despite grilles
   - type: Tag
@@ -55,6 +57,8 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: frame
       - !type:SpawnEntitiesBehavior
         spawn:
           OH14_SheetMaterials1:
@@ -66,9 +70,9 @@
     noAirWhenFullyAirBlocked: false
     airBlockedDirection:
     - South
-  # - type: Construction
-  #   graph: WindowDirectional
-  #   node: windowDirectional
+  - type: Construction
+    graph: OH14_WallDirectional
+    node: OH14_WallDirectional
   # - type: Appearance
 
 - type: entity
@@ -81,9 +85,6 @@
     snap:
     - Wall
   components:
-  - type: Construction
-    graph: OH14_WallDirectional
-    node: OH14_WallDirectional
   - type: Sprite
     sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
     state: state0

@@ -3,21 +3,33 @@
   id: OH14_BaseGasStorage
   abstract: true
   name: цистерна
-  description: Большое хранилище для хранения газов, имеет сразу 4 выхода с 4х сторон для первого слоя труб. Переносу не подлежит.
+  description: Большое хранилище для хранения газов. Переносу не подлежит.
   components:
+    - type: Appearance
+    - type: PipeColorVisuals
+    - type: AtmosPipeColor
+    - type: AtmosPipeLayers
+      # spriteRsiPaths: {}
+      spriteLayersRsiPaths:
+        enum.PipeVisualLayers.Pipe:
+          Primary: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          Secondary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+          Tertiary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+    - type: DeviceNetwork
+      deviceNetId: AtmosDevices
+      receiveFrequencyId: AtmosMonitor
+      transmitFrequencyId: AtmosMonitor
+      sendBroadcastAttemptEvent: true
+      examinableAddress: true
+    - type: AtmosDevice
+      joinSystem: true
     - type: Anchorable
     - type: InteractionOutline
     - type: Transform
       # noRot: true
-    - type: Appearance
     - type: Damageable
       damageContainer: Inorganic
       damageModifierSet: Metallic
-    - type: AtmosDevice
-      requireAnchored: true
-      joinSystem: true
-    - type: PipeColorVisuals
-    - type: AtmosPipeColor
     - type: Construction
       graph: OH14_GasStorage
       node: OH14_GasStorage
@@ -26,16 +38,19 @@
         port:
           !type:PortablePipeNode
           nodeGroupID: Pipe
-          pipeDirection: Fourway
-          volume: 1
+          pipeDirection: South
+          # volume: 1
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasVentOpening
     - type: Sprite
       # noRot: true
       sprite: _OuterHorizons/Structures/Storage/gas_storage.rsi
       layers:
-        - state: pipe
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeConnector
           map: [ "enum.PipeVisualLayers.Pipe" ]
-          renderingStrategy: Default
         - state: yellow
+          # map: [ "enum.SubfloorLayers.FirstLayer" ]
     - type: GasCanister
       gasMixture:
         volume: 5000
@@ -76,10 +91,11 @@
   components:
    - type: Sprite
      layers:
-      - state: pipe
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
-        renderingStrategy: Default
       - state: grey
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
@@ -88,10 +104,11 @@
   components:
    - type: Sprite
      layers:
-      - state: pipe
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
-        renderingStrategy: Default
       - state: yellow
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
@@ -100,10 +117,11 @@
   components:
    - type: Sprite
      layers:
-      - state: pipe
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
-        renderingStrategy: Default
       - state: blue
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
@@ -112,10 +130,11 @@
   components:
    - type: Sprite
      layers:
-      - state: pipe
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
-        renderingStrategy: Default
       - state: red
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
@@ -124,10 +143,11 @@
   components:
    - type: Sprite
      layers:
-      - state: pipe
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
         map: [ "enum.PipeVisualLayers.Pipe" ]
-        renderingStrategy: Default
       - state: orange
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 # ----------------- Заполенное
 

@@ -65,10 +65,12 @@
   - type: Door
     bumpOpen: true
     clickOpen: true
-    closeTimeOne: 0.1
-    closeTimeTwo: 0.8
-    openTimeOne: 0.8
-    openTimeTwo: 0.1
+    # closeTimeOne: 0.3
+    # closeTimeTwo: 0.6
+    # openTimeOne: 0.3
+    # openTimeTwo: 0.6
+    openingAnimationTime: 1
+    closingAnimationTime: 1
     crushDamage:
       types:
         Blunt: 15
@@ -85,6 +87,7 @@
     fuel: 5
     time: 3
   - type: Airlock
+    openPanelVisible: true
   - type: NavMapDoor
   - type: DoorBolt
   - type: Appearance

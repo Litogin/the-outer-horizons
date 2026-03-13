@@ -5,6 +5,9 @@
   description: Простецкая зеленая плата для консолей или оборудования.
   abstract: true
   components:
+    - type: Tag
+      tags:
+      - OH14_Tools
     - type: ComputerBoard
     - type: Sprite
       sprite: _OuterHorizons/Objects/Materials/circuitboard.rsi

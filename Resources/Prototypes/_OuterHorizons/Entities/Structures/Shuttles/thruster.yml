@@ -100,6 +100,7 @@
         !type:PipeNode
         nodeGroupID: Pipe
         pipeDirection: South
+        volume: 50
 
 # ------------------------ Разгонные двигла
 
@@ -113,7 +114,7 @@
     thrust: 250
   - type: PressureThruster
     inletName: inlet
-    pressureСonsumption: 40
+    pressureСonsumption: 25
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/b_thruster.rsi
     layers:
@@ -142,10 +143,10 @@
   - type: PointLight
     color: "#eca664"
   - type: Thruster
-    thrust: 125
+    thrust: 150
   - type: PressureThruster
     inletName: inlet
-    pressureСonsumption: 25
+    pressureСonsumption: 20
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/r_thruster.rsi
     layers:
@@ -171,10 +172,10 @@
   - type: PointLight
     color: "#eca664"
   - type: Thruster
-    thrust: 500
+    thrust: 450
   - type: PressureThruster
     inletName: inlet
-    pressureСonsumption: 100
+    pressureСonsumption: 50
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/o_thruster.rsi
     layers:
@@ -266,6 +267,12 @@
   name: гиродин
   description: 2 вращающихся механизма, иронично вращающих вас.
   components:
+  - type: AmbientSound
+    enabled: false
+    range: 5
+    volume: -8
+    sound:
+      path: /Audio/_OuterHorizons/Machines/rokit.ogg
   - type: Construction
     graph: OH14_Gyroscope
     node: OH14_Gyroscope

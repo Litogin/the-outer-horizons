@@ -5,6 +5,8 @@
   name: шлем ЕВА "Пилигримм"
   description: Интерфейс в комплект не входит.
   components:
+  - type: Item
+    storedRotation: 0
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/eva.rsi
   - type: Clothing

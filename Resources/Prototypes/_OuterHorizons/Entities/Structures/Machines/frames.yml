@@ -149,3 +149,31 @@
     graph: OH14_SubstationWallmount
     node: subFrame
   - type: WallMount
+
+# Аккумы
+
+- type: entity
+  id: OH14_BatteryArrayFrame
+  parent: OH14_FrameBasic
+  name: каркас массива аккамуляторов
+  components:
+  - type: ContainerContainer
+    containers:
+      powercell: !type:Container
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame1: { state: frame }
+          frame2: { state: empty }
+          # frame3: { state: fill1 }
+          # frame4: { state: fill2 }
+          # frame5: { state: fill3 }
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Power/smes.rsi
+    layers:
+    - state: frame
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_BatteryArray
+    node: frame1

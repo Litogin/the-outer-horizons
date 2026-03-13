@@ -5,6 +5,11 @@
   name: ЕВА "Пилигримм"
   description: Наипростейший скафандр с наилучшей гибкостью для работы в открытом космосе.
   components:
+  - type: Item
+    storedRotation: 90
+    size: Huge
+    shape:
+    - 0,0,3,2
   - type: Sprite
     sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/basic.rsi
   - type: Clothing

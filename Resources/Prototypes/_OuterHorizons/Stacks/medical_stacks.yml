@@ -21,9 +21,9 @@
   icon: { sprite: "_OuterHorizons/Objects/Specific/Medical/medical.rsi", state: brutepack }
   spawn: OH14_Brutepack1
 
-# - type: stack
-#   parent: BaseSmallStack
-#   id: OH14_Bloodpack
-#   name: stack-bloodpack
-#   icon: { sprite: "_OuterHorizons/Objects/Specific/Medical/medical.rsi", state: bloodpack }
-#   spawn: OH14_Bloodpack1
+- type: stack
+  parent: BaseSmallStack
+  id: OH14_Bloodpack
+  name: stack-bloodpack
+  icon: { sprite: "_OuterHorizons/Objects/Specific/Medical/medical.rsi", state: bloodpack }
+  spawn: OH14_Bloodpack1
