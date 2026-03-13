@@ -6,7 +6,6 @@
   description: Наипростейший скафандр с наилучшей гибкостью для работы в открытом космосе.
   components:
   - type: Item
-    sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
     storedRotation: 90
     size: Huge
     shape:

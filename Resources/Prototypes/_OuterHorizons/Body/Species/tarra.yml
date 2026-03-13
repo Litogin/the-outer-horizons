@@ -152,6 +152,16 @@
       sprite: "Effects/creampie.rsi"
       state: "creampie_human"
       visible: false
+  - type: DamageVisuals
+    thresholds: [ 15, 30, 45, 60, 75 ]
+    targetLayers:
+    - "enum.HumanoidVisualLayers.Overlay"
+    damageOverlayGroups:
+      Brute:
+        sprite: _OuterHorizons/Mobs/Effects/brute_damage.rsi
+        # color: "#FF0000"
+      Burn:
+        sprite: _OuterHorizons/Mobs/Effects/burn_damage.rsi
 
 - type: entity
   parent:
