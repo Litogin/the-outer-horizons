@@ -8,10 +8,12 @@
   },
   "states": [
     {
-      "name": "bed"
+      "name": "bed",
+      "directions": 4
     },
     {
-      "name": "bed-MED"
+      "name": "bed-MED",
+      "directions": 4
     },
     {
       "name": "mattress"

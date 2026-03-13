@@ -12,6 +12,7 @@
   - OH14_Drill
   - OH14_GeigerCounter
   - OH14_Pickaxe
+  - OH14_ToolMassScanner
 
 - type: latheRecipePack
   id: OH14_MaterialsStatic

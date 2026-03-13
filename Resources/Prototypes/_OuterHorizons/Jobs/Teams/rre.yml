@@ -11,6 +11,7 @@
 - type: startingGear
   id: OH14_RreGear
   equipment:
+    belt: OH14_ClothingBeltWaistbag
     outerClothing: OH14_ClothingOuterCoatRre
     jumpsuit: OH14_ClothingJumpsuitXimura
     pants: OH14_ClothingPantsBasic

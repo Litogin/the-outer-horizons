@@ -24,6 +24,18 @@
     },
     {
       "name": "spacesuit_open"
+    },
+    {
+      "name": "medical"
+    },
+    {
+      "name": "medical_open"
+    },
+    {
+      "name": "engi"
+    },
+    {
+      "name": "engi_open"
     }
   ]
 }

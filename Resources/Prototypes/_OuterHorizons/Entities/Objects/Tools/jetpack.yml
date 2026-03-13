@@ -60,7 +60,7 @@
   - type: Jetpack
     # acceleration: 3
     # friction: 0.05
-    moleUsage: 0.00185
+    # moleUsage: 0.00185
   - type: Appearance
   - type: GenericVisualizer
     visuals:

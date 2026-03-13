@@ -43,7 +43,32 @@
 # Обычные шкафы
 
 - type: entity
-  parent: OH14_CabinetBasic
+  parent: OH14_CabinetMedical
+  id: OH14_CabinetBasicFillHeals
+  suffix: Заполнен, Медикаменты
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_Ointment
+        - id: OH14_Ointment
+          prob: 0.4
+        - id: OH14_Brutepack
+        - id: OH14_Brutepack
+          prob: 0.8
+        - id: OH14_Bloodpack
+        - id: OH14_Gauze
+          amount: 2
+        - id: OH14_Gauze
+          prob: 0.5
+        - id: OH14_MedipenEmergency
+          amount: 4
+        - id: OH14_MedipenPuncturase
+          amount: 4
+
+- type: entity
+  parent: OH14_CabinetEngi
   id: OH14_CabinetBasicFillResources
   suffix: Заполнен, Ресурсы
   components:
@@ -81,7 +106,7 @@
           amount: 16
 
 - type: entity
-  parent: OH14_CabinetBasic
+  parent: OH14_CabinetEngi
   id: OH14_CabinetBasicFillTools
   suffix: Заполнен, Инструменты
   components:

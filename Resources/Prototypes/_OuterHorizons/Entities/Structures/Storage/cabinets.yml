@@ -16,6 +16,7 @@
     noRot: true
   - type: Sprite
     sprite: _OuterHorizons/Structures/Storage/cabinet.rsi
+    noRot: true
     layers:
     - state: basic
     - state: basic_open
@@ -139,13 +140,41 @@
   name: хранилище скафандров
   description: Я должен тебе баллон с О2.
   components:
-  # - type: Construction
-  #   graph: OH14_Crate
-  #   node: OH14_Crate
+  - type: Storage
+    storageOpenSound: /Audio/_OuterHorizons/Storage/spacesuit_open.ogg
+    storageCloseSound: /Audio/_OuterHorizons/Storage/spacesuit_close.ogg
   - type: Sprite
     sprite: _OuterHorizons/Structures/Storage/cabinet.rsi
     layers:
     - state: spacesuit
     - state: spacesuit_open
+      map: [ top ]
+      visible: false
+
+- type: entity
+  id: OH14_CabinetMedical
+  parent: OH14_CabinetBasic
+  description: Я должен тебе апчечку.
+  suffix: Мед
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/cabinet.rsi
+    layers:
+    - state: medical
+    - state: medical_open
+      map: [ top ]
+      visible: false
+
+- type: entity
+  id: OH14_CabinetEngi
+  parent: OH14_CabinetBasic
+  description: Я должен тебе тулбокс.
+  suffix: Инж
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/cabinet.rsi
+    layers:
+    - state: engi
+    - state: engi_open
       map: [ top ]
       visible: false
