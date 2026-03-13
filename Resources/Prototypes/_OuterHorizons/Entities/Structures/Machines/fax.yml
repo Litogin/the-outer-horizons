@@ -48,8 +48,8 @@
       types:
         Blunt: 100
   - type: FaxMachine
-    insertionTime: 0.8
-    printingTime: 2.4
+    # insertionTime: 0.8
+    # printingTime: 2.4
     paperSlot:
       insertSound: /Audio/Machines/scanning.ogg
       ejectSound: /Audio/Machines/tray_eject.ogg
