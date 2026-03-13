@@ -18,6 +18,7 @@
     tailbag: ClothingBackpackSatchelBasic
     shoes: OH14_ClothingShoesBasic
     pocket1: OH14_IDCardBasic
+    pocket2: OH14_ClothingMaskGas
   # storage:
   #   tailbag:
   #   - OH14_CrowbarBasic
