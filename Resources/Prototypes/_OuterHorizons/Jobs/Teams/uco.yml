@@ -17,7 +17,7 @@
     pants: OH14_ClothingPantsBasic
     tailbag: ClothingBackpackSatchelUco
     shoes: OH14_ClothingShoesBasic
-    pocket1: OH14_IDCardBasic
+    pocket1: OH14_PDA
     pocket2: OH14_ClothingMaskGas
   # storage:
   #   tailbag:
