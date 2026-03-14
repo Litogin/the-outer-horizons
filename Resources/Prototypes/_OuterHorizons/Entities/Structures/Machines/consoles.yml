@@ -283,7 +283,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: panel_open
   - type: Computer
-    board: OH14_CircuitboardRadar
+    board: OH14_CircuitboardComms
   - type: PointLight
     color: "#45b1af"
   - type: ActivatableUI

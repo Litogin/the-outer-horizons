@@ -37,7 +37,7 @@
     materialComposition:
       OH14_Materials: 100
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Materials
     baseLayer: base
     layerStates:
@@ -83,7 +83,7 @@
     materialComposition:
       OH14_Components: 100
   - type: Stack
-    count: 10
+    count: 8
     stackType: OH14_Components
     baseLayer: base
     layerStates:
@@ -136,7 +136,7 @@
     materialComposition:
       OH14_Electronics: 100
   - type: Stack
-    count: 10
+    count: 8
     stackType: OH14_Electronic
     baseLayer: base
     layerStates:
@@ -185,7 +185,7 @@
     materialComposition:
       OH14_Materials: 300
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Ingot
     baseLayer: base
     layerStates:
@@ -223,7 +223,7 @@
     materialComposition:
       OH14_Ore: 100
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Ore
     baseLayer: base
     layerStates:

@@ -52,3 +52,11 @@
   components:
     - type: ComputerBoard
       prototype: OH14_ConsolePower
+
+- type: entity
+  parent: OH14_BasicCircuitboard
+  id: OH14_CircuitboardComms
+  name: плата связи
+  components:
+    - type: ComputerBoard
+      prototype: OH14_ConsoleCommsFilled
