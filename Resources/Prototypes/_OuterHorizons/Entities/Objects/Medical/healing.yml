@@ -43,7 +43,7 @@
     - ointment
     - ointment_2
     - ointment_3
-    count: 10
+    count: 8
   - type: Item
     heldPrefix: ointment
     storedRotation: 90
@@ -103,7 +103,7 @@
     - brutepack-2
     - brutepack-1
     - brutepack
-    count: 10
+    count: 8
   - type: Item
     heldPrefix: brutepack
   - type: Healing
@@ -178,7 +178,7 @@
     - bloodpack-liquid-3
     - bloodpack-liquid-4
     - bloodpack-liquid-5
-    count: 10
+    count: 8
   - type: StackPrice
     price: 10
 
@@ -214,7 +214,7 @@
     - gauze-2
     - gauze-1
     - gauze
-    count: 10
+    count: 8
   - type: Item
     heldPrefix: gauze
   - type: Construction

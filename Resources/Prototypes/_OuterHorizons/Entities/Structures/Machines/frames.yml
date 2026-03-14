@@ -177,3 +177,23 @@
   - type: Construction
     graph: OH14_BatteryArray
     node: frame1
+
+- type: entity
+  id: OH14_GeneratorTEFFrame
+  parent: OH14_FrameBasic
+  name: каркас ТЭТ Генератора
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame: { state: frame0 }
+          frame2: { state: frame1 }
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Power/fuel_generator.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_GeneratorTEF
+    node: frame

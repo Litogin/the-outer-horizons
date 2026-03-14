@@ -1,3 +1,5 @@
+# ЛКП
+
 - type: constructionGraph
   id: OH14_APC
   start: start
@@ -42,6 +44,8 @@
           steps:
             - tool: Prying
               doAfter: 2
+
+# Подстанции
 
 - type: constructionGraph
   id: OH14_SubstationWallmount
@@ -110,6 +114,8 @@
             - tool: Prying
               doAfter: 2
 
+# Обычная подстанция
+
 - type: constructionGraph
   id: OH14_SubstationFrame
   start: start
@@ -177,6 +183,8 @@
             - tool: Prying
               doAfter: 2
 
+# Аккумы
+
 - type: constructionGraph
   id: OH14_BatteryArray
   start: start
@@ -238,5 +246,74 @@
               pickup: true
               emptyAtUser: true
           steps:
+            - tool: Prying
+              doAfter: 2
+
+# Генератор
+
+- type: constructionGraph
+  id: OH14_GeneratorTEF
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: frame
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_GeneratorTEFFrame
+      edges:
+        - to: frame2
+          steps:
+            - material: OH14_Materials
+              amount: 5
+              doAfter: 1
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: frame2
+      entity: OH14_GeneratorTEFFrame
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: OH14_GeneratorTEF
+          steps:
+            - material: OH14_Components
+              amount: 4
+              doAfter: 1
+        - to: frame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 5
+          steps:
+            - tool: Screwing
+              doAfter: 2
+    - node: OH14_GeneratorTEF
+      entity: OH14_GeneratorTEF
+      edges:
+        - to: frame2
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 4
+          # conditions:
+          #   - !type:WirePanel
+          #     open: true
+          steps:
+            - tool: Screwing
+              doAfter: 1
             - tool: Prying
               doAfter: 2

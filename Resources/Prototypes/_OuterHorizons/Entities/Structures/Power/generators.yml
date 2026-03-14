@@ -80,6 +80,9 @@
   id: OH14_GeneratorTEF
   suffix: Топливо, 20 kW
   components:
+    - type: Construction
+      graph: OH14_GeneratorTEF
+      node: OH14_GeneratorTEF
     - type: AmbientSound
       range: 4
       volume: -5

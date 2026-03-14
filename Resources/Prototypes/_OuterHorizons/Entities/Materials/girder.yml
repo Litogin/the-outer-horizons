@@ -9,7 +9,7 @@
     materialComposition:
       OH14_Girders: 100
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Girders
     baseLayer: base
     layerStates:
@@ -51,7 +51,7 @@
     materialComposition:
       OH14_Piping: 100
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Piping
     baseLayer: base
     layerStates:
