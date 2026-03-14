@@ -42,7 +42,7 @@
 
 - type: entity
   parent: OH14_CabinetSpacesuits
-  id: OH14_CabinetBigFillEVAUco
+  id: OH14_CabinetBigFillJetpacks
   suffix: Заполнен, УКПМ Джетта
   components:
   - type: EntityTableContainerFill

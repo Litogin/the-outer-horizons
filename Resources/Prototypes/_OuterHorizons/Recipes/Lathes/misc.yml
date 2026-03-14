@@ -96,3 +96,10 @@
   materials:
     OH14_Materials: 100
     OH14_Components: 100
+
+- type: latheRecipe
+  id: OH14_DrinkCanister
+  completetime: 2
+  result: OH14_DrinkCanister
+  materials:
+    OH14_Materials: 100
