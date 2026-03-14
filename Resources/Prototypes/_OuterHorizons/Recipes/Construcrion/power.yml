@@ -65,3 +65,14 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_CableTerminal
+  graph: OH14_CableTerminal
+  startNode: start
+  targetNode: cable_terminal
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false

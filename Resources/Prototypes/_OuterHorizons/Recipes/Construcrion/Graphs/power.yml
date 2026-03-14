@@ -317,3 +317,29 @@
               doAfter: 1
             - tool: Prying
               doAfter: 2
+
+# Кабельный терминал
+
+- type: constructionGraph
+  id: OH14_CableTerminal
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: cable_terminal
+          steps:
+            - material: OH14_CableCoilHV
+              amount: 5
+              doAfter: 2
+    - node: cable_terminal
+      entity: OH14_CableTerminal
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_CableCoilHV1
+              amount: 5
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 3
