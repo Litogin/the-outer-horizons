@@ -40,6 +40,26 @@
         # - id: OH14_ToolboxRedFilled
         #   prob: 0.4
 
+- type: entity
+  parent: OH14_CabinetSpacesuits
+  id: OH14_CabinetBigFillEVAUco
+  suffix: Заполнен, УКПМ Джетта
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_OxygenTankWhiteFilled
+          amount: 2
+        - id: OH14_JetpackWhite
+          amount: 2
+        # - id: OH14_OxygenTankWhiteFilled
+        #   amount: 2
+        # - id: OH14_MedkitBasicFilled
+        #   prob: 0.4
+        # - id: OH14_ToolboxRedFilled
+        #   prob: 0.4
+
 # Обычные шкафы
 
 - type: entity

@@ -33,6 +33,7 @@
   - OH14_CircuitboardRadar
   - OH14_CircuitboardAtmos
   - OH14_CircuitboardPower
+  - OH14_CircuitboardComms
   - OH14_NuclearRod # ВРЕМЕННО
   - OH14_PowerCellMedium
   - OH14_PowerCellBig
@@ -48,6 +49,8 @@
   - OH14_LightBulb
   - OH14_Igniter
   - OH14_PowerCellMedium
+  - OH14_ClothingHeadWeldingMask
+  - OH14_Radio
 
 - type: latheRecipePack
   id: OH14_OreStatic
