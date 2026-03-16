@@ -1,6 +1,5 @@
 - type: entity
-  parent:
-  - BaseStructure
+  parent: OH14_BaseStructure
   id: OH14_BaseWorkbench
   categories: [ ForkFiltered ]
   abstract: true
@@ -28,9 +27,9 @@
     interfaces:
       enum.CEWorkbenchUiKey.Key:
         type: CEWorkbenchBoundUserInterface
-  - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: CEWood
+  # - type: Damageable
+  #   damageContainer: Inorganic
+  #   damageModifierSet: CEWood
   - type: Destructible
     thresholds:
     - trigger:
@@ -52,11 +51,11 @@
       - !type:PlaySoundBehavior
         sound:
           collection: WoodDestroy
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          CEWoodenPlanks1:
-            min: 1
-            max: 2
+      # - !type:SpawnEntitiesBehavior
+      #   spawn:
+      #     CEWoodenPlanks1:
+      #       min: 1
+      #       max: 2
   - type: PlaceableSurface
   - type: CEWorkbenchPlaceableProvider
   - type: ItemPlacer
