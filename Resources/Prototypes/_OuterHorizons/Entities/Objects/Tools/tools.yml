@@ -4,6 +4,14 @@
   id: OH14_WirecutterBasic
   description: Проводам очень неприятно когда их кусают, но в целом похуй.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: cutters}
+          False: {state: inworld}
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/wirecutter_drop.ogg
@@ -14,7 +22,9 @@
     - Wirecutter
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/wirecutters.rsi
-    state: cutters
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: MeleeWeapon
     wideAnimationRotation: -90
     damage:
@@ -44,6 +54,14 @@
   id: OH14_ScrewdriverBasic
   description: Отвертка?
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: screwdriver}
+          False: {state: inworld}
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/screwdriver_drop.ogg
@@ -53,6 +71,9 @@
     - Screwdriver
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/screwdriver.rsi
+    layers:
+    - state: inworld
+      map: ["base"]
     state: screwdriver
   - type: Item
     sprite: _OuterHorizons/Objects/Tools/screwdriver.rsi
@@ -82,6 +103,14 @@
   id: OH14_WrenchBasic
   description: Универсальный инструмент для закрепа и открепа вашего оборудования.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/wrench_drop.ogg
@@ -91,7 +120,9 @@
     - Wrench
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/wrench.rsi
-    state: icon
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Item
     sprite: _OuterHorizons/Objects/Tools/wrench.rsi
     storedSprite:
@@ -125,14 +156,27 @@
   id: OH14_MultitoolBasic
   description: В этой оранжевой коробочке кроется великая сила.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/multitool.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/multitool_inworld.rsi}
+        screen:
+          True: {sprite: _OuterHorizons/Objects/Tools/multitool.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/multitool_inworld.rsi}
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/multitool_drop.ogg
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/multitool.rsi
+    sprite: _OuterHorizons/Objects/Tools/multitool_inworld.rsi
     layers:
     - state: icon
+      map: ["base"]
     - state: green-unlit
+      map: ["screen"]
       shader: unshaded
   - type: Item
     size: Small

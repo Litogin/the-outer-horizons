@@ -8,18 +8,13 @@
   },
   "states": [
     {
-      "name": "cutters"
+      "name": "flashlight"
     },
     {
-      "name": "inworld"
+      "name": "flashlight-on"
     },
     {
-      "name": "inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "inhand-right",
-      "directions": 4
+      "name": "flashlight-overlay"
     }
   ]
 }

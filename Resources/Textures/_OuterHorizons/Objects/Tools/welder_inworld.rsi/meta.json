@@ -8,18 +8,16 @@
   },
   "states": [
     {
-      "name": "cutters"
+      "name": "icon"
     },
     {
-      "name": "inworld"
-    },
-    {
-      "name": "inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "inhand-right",
-      "directions": 4
+      "name": "welder_flame",
+      "delays": [
+        [
+          0.2,
+          0.1
+        ]
+      ]
     }
   ]
 }

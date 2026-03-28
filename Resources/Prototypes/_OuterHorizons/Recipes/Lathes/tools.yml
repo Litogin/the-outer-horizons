@@ -3,6 +3,9 @@
   id: OH14_Crowbar
   completetime: 3
   result: OH14_CrowbarBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/crowbar.rsi
+    state: icon
   materials:
     OH14_Materials: 600
 
@@ -11,6 +14,9 @@
   id: OH14_Flashlight
   completetime: 3
   result: OH14_FlashlightBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/flashlight.rsi
+    state: flashlight
   materials:
     OH14_Materials: 200
 
@@ -19,6 +25,9 @@
   id: OH14_Wirecutter
   completetime: 3
   result: OH14_WirecutterBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/wirecutters.rsi
+    state: cutters
   materials:
     OH14_Materials: 200
 
@@ -27,6 +36,9 @@
   id: OH14_Screwdriver
   completetime: 3
   result: OH14_ScrewdriverBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/screwdriver.rsi
+    state: screwdriver
   materials:
     OH14_Materials: 200
 
@@ -35,6 +47,9 @@
   id: OH14_Wrench
   completetime: 3
   result: OH14_WrenchBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/wrench.rsi
+    state: icon
   materials:
     OH14_Materials: 700
 
@@ -43,6 +58,9 @@
   id: OH14_Pickaxe
   completetime: 3
   result: OH14_Pickaxe
+  icon:
+    sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
+    state: pickaxe
   materials:
     OH14_Materials: 800
 
@@ -51,6 +69,9 @@
   id: OH14_Multitool
   completetime: 3
   result: OH14_MultitoolBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/multitool.rsi
+    state: icon
   materials:
     OH14_Materials: 300
     OH14_Components: 100
@@ -61,6 +82,9 @@
   id: OH14_Welder
   completetime: 3
   result: OH14_WelderBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/welder.rsi
+    state: icon
   materials:
     OH14_Materials: 500
     OH14_Components: 400
@@ -107,5 +131,8 @@
   id: OH14_Knife
   completetime: 3
   result: OH14_Knife
+  icon:
+    sprite: _OuterHorizons/Objects/Weapons/Melee/knife.rsi
+    state: icon
   materials:
     OH14_Materials: 300

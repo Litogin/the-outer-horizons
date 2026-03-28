@@ -4,23 +4,32 @@
   id: OH14_WelderBasic
   description: Скажи похуй внешним условиям ваккума!
   components:
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Items/welder_drop.ogg
-  - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/welder.rsi
-    layers:
-    - state: icon
-    - state: welder_flame
-      visible: false
-      shader: unshaded
-      map: ["enum.ToggleableVisuals.Layer"]
+  - type: InworldSprite
   - type: GenericVisualizer
     visuals:
       enum.ToggleableVisuals.Enabled:
         enum.ToggleableVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/welder.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/welder_inworld.rsi}
+        enum.ToggleableVisuals.Layer:
+          True: {sprite: _OuterHorizons/Objects/Tools/welder.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/welder_inworld.rsi}
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/welder_inworld.rsi
+    layers:
+    - state: icon
+      map: ["base"]
+    - state: welder_flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleableVisuals.Layer"]
   - type: Item
     size: Normal
     sprite: _OuterHorizons/Objects/Tools/welder.rsi

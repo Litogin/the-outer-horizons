@@ -8,18 +8,22 @@
   },
   "states": [
     {
-      "name": "cutters"
+      "name": "icon"
     },
     {
-      "name": "inworld"
+      "name": "green-unlit"
     },
     {
-      "name": "inhand-left",
-      "directions": 4
+      "name": "yellow-unlit",
+	  "delays": [
+        [
+          0.2,
+          0.2
+        ]
+      ]
     },
     {
-      "name": "inhand-right",
-      "directions": 4
+      "name": "red-unlit"
     }
   ]
 }
