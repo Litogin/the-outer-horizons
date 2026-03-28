@@ -177,7 +177,7 @@
       map: ["base"]
     - state: green-unlit
       map: ["screen"]
-      shader: unshaded
+      # shader: unshaded
   - type: Item
     size: Small
   - type: Tool
