@@ -95,7 +95,7 @@
   completetime: 3
   result: OH14_DrillBasic
   icon:
-    sprite: _OuterHorizons/Objects/Weapons/Melee/drill.rsi
+    sprite: _OuterHorizons/Objects/Tools/drill.rsi
     state: drill_screw
   materials:
     OH14_Materials: 500
@@ -107,7 +107,7 @@
   completetime: 3
   result: OH14_GeigerCounter
   icon:
-    sprite: _OuterHorizons/Objects/Weapons/Melee/geiger.rsi
+    sprite: _OuterHorizons/Objects/Tools/geiger.rsi
     state: geiger_base
   materials:
     OH14_Materials: 200
@@ -129,7 +129,7 @@
   completetime: 3
   result: OH14_ToolMassScannerEmpty
   icon:
-    sprite: _OuterHorizons/Objects/Weapons/Melee/mass_scaner.rsi
+    sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi
     state: icon
   materials:
     OH14_Materials: 200
