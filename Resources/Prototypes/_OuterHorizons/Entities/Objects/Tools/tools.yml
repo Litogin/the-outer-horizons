@@ -219,13 +219,23 @@
   id: OH14_DrillBasic
   description: Простая ручная дрель.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/drill.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/drill_inworld.rsi}
   - type: Tag
     tags:
     - OH14_Tools
     - Powerdrill
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/drill.rsi
-    state: drill_screw
+    sprite: _OuterHorizons/Objects/Tools/drill_inworld.rsi
+    layers:
+    - state: drill_screw
+      map: ["base"]
   - type: Item
     sprite: _OuterHorizons/Objects/Tools/drill.rsi
     size: Small
@@ -239,7 +249,7 @@
     entries:
       - behavior: Screwing
         sprite:
-          sprite: _OuterHorizons/Objects/Tools/drill.rsi
+          sprite: _OuterHorizons/Objects/Tools/drill_inworld.rsi
           state: drill_screw
         useSound:
           path: /Audio/Items/drill_use.ogg
@@ -247,7 +257,7 @@
           path: /Audio/Items/change_drill.ogg
       - behavior: Anchoring
         sprite:
-          sprite: _OuterHorizons/Objects/Tools/drill.rsi
+          sprite: _OuterHorizons/Objects/Tools/drill_inworld.rsi
           state: drill_bolt
         useSound:
           path: /Audio/Items/drill_use.ogg
@@ -274,10 +284,12 @@
   name: счетчик гейгера
   description: Ручное устройство для измерения уровня радиации.
   components:
+  - type: InworldSprite
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/geiger.rsi
+    sprite: _OuterHorizons/Objects/Tools/geiger_inworld.rsi
     layers:
       - state: geiger_base
+        map: ["base"]
       - state: geiger_on_idle
         map: ["enum.GeigerLayers.Screen"]
         shader: unshaded
@@ -291,6 +303,13 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/geiger.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/geiger_inworld.rsi}
+        GeigerLayers.Screen:
+          True: {sprite: _OuterHorizons/Objects/Tools/geiger.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/geiger_inworld.rsi}
       enum.GeigerVisuals.IsEnabled:
         GeigerLayers.Screen:
           True: { visible: True }

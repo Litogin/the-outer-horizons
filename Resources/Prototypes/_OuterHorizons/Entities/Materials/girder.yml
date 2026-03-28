@@ -4,6 +4,13 @@
   name: Каркасы
   suffix: Full
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/girder.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/girder_inworld.rsi}
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -17,7 +24,7 @@
     - girder_2
     - girder_3
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/girder.rsi
+    sprite: _OuterHorizons/Objects/Materials/girder_inworld.rsi
     state: girder_3
     layers:
     - state: girder_3
@@ -46,6 +53,13 @@
   name: Трубки
   suffix: Full
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/piping.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/piping_inworld.rsi}
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -59,7 +73,7 @@
     - girder_2
     - girder_3
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/piping.rsi
+    sprite: _OuterHorizons/Objects/Materials/piping_inworld.rsi
     state: girder_3
     layers:
     - state: girder_3

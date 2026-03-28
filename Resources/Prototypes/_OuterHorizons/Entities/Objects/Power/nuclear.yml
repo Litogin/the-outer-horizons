@@ -5,6 +5,17 @@
   description: Стержень для КМП-ЯР Мк1. Гарантия снимается после получения на руки.
   categories: [ ForkFiltered ]
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/nuclear_tube_inworld.rsi}
+        unshaded:
+          True: {sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/nuclear_tube_inworld.rsi}
   - type: PointLight
     radius: 1.5
     energy: 1.0
@@ -16,8 +27,10 @@
       OH14_NuclearRod: 100
   - type: Material
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi
+    sprite: _OuterHorizons/Objects/Power/nuclear_tube_inworld.rsi
     layers:
       - state: icon
+        map: ["base"]
       - state: unshaded
+        map: ["unshaded"]
         shader: unshaded

@@ -4,8 +4,16 @@
   id: OH14_SheetBase
   description: Различные приколы из которых можно сделать все что душе угодно. Я не шучу.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials_inworld.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
     size: Normal
