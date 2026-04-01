@@ -4,8 +4,16 @@
   id: OH14_Pen
   description: После изобретения разноцветных вариаций ручек, акции компании БюрократКо сильно увеличились, однако конкуренты, копировав их идею, не оставили им и шанса
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        color:
+          True: {sprite: _OuterHorizons/Objects/Misc/pens.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/pens_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/pens.rsi
+    sprite: _OuterHorizons/Objects/Misc/pens_inworld.rsi
     layers:
     - state: 1
       map: ["color"]

@@ -2,6 +2,9 @@
   id: OH14_Electronics
   completetime: 5
   result: OH14_SheetElectronics1
+  icon:
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+    state: electronic_3
   materials:
     OH14_Materials: 200
     OH14_Components: 500
