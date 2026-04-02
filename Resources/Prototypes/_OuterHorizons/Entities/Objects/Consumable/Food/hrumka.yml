@@ -6,9 +6,19 @@
   suffix: Еда
   description: Питательный батончик неизвестного происхождения, ешьте на свой страх и риск.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: icon_inworld}
   - type: Sprite
     sprite: _OuterHorizons/Objects/Consumable/Food/hrumka.rsi
-    state: icon
+    layers:
+    - state: icon_inworld
+      map: ["base"]
   - type: Item
     size: Tiny
     storedOffset: 1,-1
@@ -30,12 +40,22 @@
   suffix: Еда
   description: Питательный батончик неизвестного происхождения, ешьте на свой страх и риск.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon-open}
+          False: {state: icon-open_inworld}
   - type: FlavorProfile
     flavors:
       - chocolate
   - type: Sprite
     sprite: _OuterHorizons/Objects/Consumable/Food/hrumka.rsi
-    state: icon-open
+    layers:
+    - state: icon-open_inworld
+      map: ["base"]
   - type: Item
     storedOffset: 1,-2
   - type: Tag
