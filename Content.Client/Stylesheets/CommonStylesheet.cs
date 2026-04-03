@@ -58,6 +58,7 @@ public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWin
     ResPath IWindowConfig.TransparentWindowBackgroundBorderedPath => new("transparent_window_background_bordered.png");
 
     ResPath IButtonConfig.BaseButtonPath => new("button.svg.96dpi.png");
+    ResPath IButtonConfig.BaseNewButtonPath => new("button_new.svg.96dpi.png"); // OH14-Changes
     ResPath IButtonConfig.OpenLeftButtonPath => new("button.svg.96dpi.png");
     ResPath IButtonConfig.OpenRightButtonPath => new("button.svg.96dpi.png");
     ResPath IButtonConfig.OpenBothButtonPath => new("button.svg.96dpi.png");
