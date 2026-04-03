@@ -127,6 +127,20 @@ public static class StyleBoxHelpers
     {
         var baseBox = new StyleBoxTexture
         {
+            Texture = sheet.GetTextureOr(sheet.BaseNewButtonPath, NanotrasenStylesheet.TextureRoot), // OH14-Changes, UI
+        };
+        baseBox.SetPatchMargin(StyleBox.Margin.All, 10);
+        baseBox.SetPadding(StyleBox.Margin.All, 1);
+        baseBox.SetContentMarginOverride(StyleBox.Margin.Vertical, 2);
+        baseBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 14);
+        return baseBox;
+    }
+
+    // OH14-Changes start, UI
+    public static StyleBoxTexture OldStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
+    {
+        var baseBox = new StyleBoxTexture
+        {
             Texture = sheet.GetTextureOr(sheet.BaseButtonPath, NanotrasenStylesheet.TextureRoot),
         };
         baseBox.SetPatchMargin(StyleBox.Margin.All, 10);
@@ -135,6 +149,7 @@ public static class StyleBoxHelpers
         baseBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 14);
         return baseBox;
     }
+    // OH14-Changes end
 
     public static StyleBoxTexture OpenLeftStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
     {

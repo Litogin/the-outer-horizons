@@ -6,6 +6,7 @@ namespace Content.Client.Stylesheets.SheetletConfigs;
 public interface IButtonConfig : ISheetletConfig
 {
     public ResPath BaseButtonPath { get; }
+    public ResPath BaseNewButtonPath { get; }
     public ResPath OpenLeftButtonPath { get; }
     public ResPath OpenRightButtonPath { get; }
     public ResPath OpenBothButtonPath { get; }
