@@ -5,13 +5,28 @@
   name: ID карта
   description: Паспорт, кошелек, все в одной пластиковой карточке, которую легко потерять.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi}
+        icon:
+          True: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
     layers:
-    - state: default
+    - state: silver
+      map: ["base"]
     - state: idpilot
+      map: ["icon"]
   - type: PresetIdCard
     job: Passenger
+  - type: Item
+    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
   - type: Clothing
     slots:
     - neck

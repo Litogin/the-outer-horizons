@@ -4,8 +4,19 @@
   name: подсумки
   description: Пояс с подсумками для ваших вещей.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Belt/basic.rsi
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Belt/basic.rsi
   - type: Storage

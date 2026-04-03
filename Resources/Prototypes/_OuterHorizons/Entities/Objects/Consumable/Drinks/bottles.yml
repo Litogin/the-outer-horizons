@@ -56,7 +56,7 @@
   - type: Appearance
   - type: InworldSprite
   - type: Item
-    sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi
     size: Small
   - type: SolutionContainerManager
     solutions:
