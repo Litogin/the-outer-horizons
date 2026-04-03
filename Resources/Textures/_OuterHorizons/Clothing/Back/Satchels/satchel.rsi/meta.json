@@ -11,6 +11,9 @@
       "name": "icon"
     },
     {
+      "name": "inworld"
+    },
+    {
       "name": "equipped-BACKPACK",
       "directions": 4
     },

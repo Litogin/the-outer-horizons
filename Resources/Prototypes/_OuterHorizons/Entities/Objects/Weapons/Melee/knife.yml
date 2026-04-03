@@ -34,13 +34,23 @@
   id: OH14_Knife
   description: После резни на целадонском флойд мисс, вооружение было удалено из баз данных Автолатов. В качестве исключения оставлены лишь кирка и нож.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: Tag
     tags:
     - CombatKnife
     - Knife
   - type: Sprite
     sprite: _OuterHorizons/Objects/Weapons/Melee/knife.rsi
-    state: icon
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: MeleeWeapon
     wideAnimationRotation: -135
     attackRate: 1
@@ -59,7 +69,7 @@
   - type: DisarmMalus
     malus: 0.225
   - type: ThrowingAngle
-    angle: 225
+    angle: -45
   - type: Fixtures
     fixtures:
       fix1:

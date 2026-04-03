@@ -3,8 +3,9 @@
   parent: [ OH14_ItemSFXAlt, OH14_BaseStorageOpenClose ]
   abstract: true
   components:
+  - type: InworldSprite
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
+    sprite: _OuterHorizons/Objects/Tools/toolbox_red_inworld.rsi
     state: icon
   - type: EmitSoundOnLand
     sound:
@@ -38,6 +39,10 @@
         base:
           True: { state: icon_open }
           False: { state: icon }
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/toolbox_red_inworld.rsi}
 
 - type: entity
   name: ящик для инструментов
@@ -46,10 +51,20 @@
   description: Большой красный ящик для инструментов. Возможно за этим стоят робастики.
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
+    sprite: _OuterHorizons/Objects/Tools/toolbox_red_inworld.rsi
     state: icon
   - type: Item
     sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: icon_open }
+          False: { state: icon }
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/toolbox_red_inworld.rsi}
 
 - type: entity
   name: ящик для инструментов
@@ -58,10 +73,20 @@
   description: Большой синий ящик для инструментов. Возможно за этим стоят робастики.
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/toolbox_blue.rsi
+    sprite: _OuterHorizons/Objects/Tools/toolbox_blue_inworld.rsi
     state: icon
   - type: Item
     sprite: _OuterHorizons/Objects/Tools/toolbox_blue.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: icon_open }
+          False: { state: icon }
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/toolbox_blue.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/toolbox_blue_inworld.rsi}
 
 - type: entity
   name: ящик для инструментов
@@ -70,7 +95,17 @@
   description: Большой желтый ящик для инструментов. Возможно за этим стоят робастики.
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/toolbox_yellow.rsi
+    sprite: _OuterHorizons/Objects/Tools/toolbox_yellow_inworld.rsi
     state: icon
   - type: Item
     sprite: _OuterHorizons/Objects/Tools/toolbox_yellow.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: icon_open }
+          False: { state: icon }
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/toolbox_yellow.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/toolbox_yellow_inworld.rsi}

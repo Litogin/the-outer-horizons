@@ -5,9 +5,19 @@
   description: Старый-синий чертеж, возможно в нем есть что-нибудь полезное.
   abstract: true
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/blueprint.rsi
-    state: icon
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Item
     size: Normal
     shape:

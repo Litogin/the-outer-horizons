@@ -5,9 +5,20 @@
   name: темный рюкзак
   description: Большой, черный рюкзак с нашивкой логотипа A-CORP. По бокам имеются дополнительные карманы
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: Storage
     grid:
     - 0,0,1,3
     - 3,0,6,3
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Back/Backpacks/backpack.rsi
+    layers:
+    - state: inworld
+      map: ["base"]

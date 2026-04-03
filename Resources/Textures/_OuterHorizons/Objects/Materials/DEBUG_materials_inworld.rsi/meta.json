@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "electronic"
+    },
+    {
+      "name": "electronic_2"
+    },
+    {
+      "name": "electronic_3"
+    },
+    {
+      "name": "material"
+    },
+    {
+      "name": "material_2"
+    },
+    {
+      "name": "material_3"
+    },
+    {
+      "name": "ingot"
+    },
+    {
+      "name": "ingot_2"
+    },
+    {
+      "name": "ingot_3"
+    },
+    {
+      "name": "ore"
+    },
+    {
+      "name": "ore_2"
+    },
+    {
+      "name": "ore_3"
+    },
+    {
+      "name": "mechanic"
+    },
+    {
+      "name": "mechanic_2"
+    },
+    {
+      "name": "mechanic_3"
+    }
+  ]
+}

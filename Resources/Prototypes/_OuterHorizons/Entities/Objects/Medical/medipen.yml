@@ -5,11 +5,19 @@
   name: медипен
   description: Одноразовый автоинъектор дозы лекарств, что в критической ситуации могут спасти жизнь. ПРЕДУПРЕЖДЕНИЕ! Производитель не несет ответственности за случайные передозировки.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        enum.SolutionContainerLayers.Fill:
+          True: {sprite: _OuterHorizons/Objects/Specific/Medical/medipen.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Medical/medipen_inworld.rsi}
   - type: Tag
     tags:
     - OH14_Medicines
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Specific/Medical/medipen.rsi
+    sprite: _OuterHorizons/Objects/Specific/Medical/medipen_inworld.rsi
     layers:
     - state: medipen
       map: ["enum.SolutionContainerLayers.Fill"]

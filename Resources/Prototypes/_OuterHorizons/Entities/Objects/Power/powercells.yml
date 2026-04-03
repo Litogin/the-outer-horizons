@@ -3,7 +3,9 @@
   abstract: true
   parent: OH14_BaseItem
   components:
+  - type: InworldSprite
   - type: Item
+    sprite: _OuterHorizons/Objects/Power/power_cells.rsi
   - type: Battery
     pricePerJoule: 0.15
   - type: PowerCell
@@ -12,7 +14,7 @@
     maxIntensity: 200
     intensitySlope: 1.5
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Power/power_cells.rsi
+    sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi
   - type: SolutionContainerManager
     solutions:
       battery:
@@ -36,6 +38,13 @@
           Full: {visible: true, state: o2}
           Neither: {visible: true, state: o1}
           Empty: {visible: false}
+      enum.InworldSpriteState.State:
+        enum.PowerCellVisualLayers.Base:
+          True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+        enum.PowerCellVisualLayers.Unshaded:
+          True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
 
 # Основные
 
@@ -67,6 +76,13 @@
           Full: {visible: true, state: small_o2}
           Neither: {visible: true, state: small_o1}
           Empty: {visible: false}
+      enum.InworldSpriteState.State:
+        enum.PowerCellVisualLayers.Base:
+          True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+        enum.PowerCellVisualLayers.Unshaded:
+          True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
 
 - type: entity
   id: OH14_PowerCellMediumEmpty
@@ -115,6 +131,13 @@
           Full: {visible: true, state: medium_o2}
           Neither: {visible: true, state: medium_o1}
           Empty: {visible: false}
+      enum.InworldSpriteState.State:
+        enum.PowerCellVisualLayers.Base:
+          True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+        enum.PowerCellVisualLayers.Unshaded:
+          True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
 
 - type: entity
   id: OH14_PowerCellBigEmpty

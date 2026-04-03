@@ -1,0 +1,109 @@
+- type: entity
+  parent: [ OH14_DrinkBaseOpenable, OH14_DrinkBase, OH14_DrinkVisualsFill ]
+  id: OH14_DrinkBottleWater
+  name: бутылка
+  description: Небольшая бутылка для жидкостей, с навороченой крышкой для питья. Роскошь.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: Item
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle_inworld.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"} # lid off
+          False: {state: "icon_empty"} # lid on
+      enum.InworldSpriteState.State:
+        enum.SolutionContainerLayers.Fill:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle_inworld.rsi}
+        enum.OpenableVisuals.Layer:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle_inworld.rsi}
+  - type: FitsInDispenser
+    solution: drink
+
+- type: entity
+  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkBottleWater]
+  id: OH14_DrinkBottleWaterFull
+  suffix: Вода
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 30
+  - type: Label
+    currentLabel: reagent-name-water
+
+# Канистра
+
+- type: entity
+  parent: [ OH14_DrinkBaseOpenable, OH14_DrinkBase, OH14_DrinkVisualsFill ]
+  id: OH14_DrinkCanister
+  name: канистра
+  description: Большая канистра для жидкостей, большая как ваша мать.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: Item
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 120
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/canister_inworld.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"} # lid off
+          False: {state: "icon_empty"} # lid on
+      enum.InworldSpriteState.State:
+        enum.SolutionContainerLayers.Fill:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister_inworld.rsi}
+        enum.OpenableVisuals.Layer:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister_inworld.rsi}
+  - type: FitsInDispenser
+    solution: drink
+
+- type: entity
+  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkCanister]
+  id: OH14_DrinkCanisterFullWater
+  suffix: Вода
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 120
+  - type: Label
+    currentLabel: reagent-name-water
+
+- type: entity
+  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkCanister]
+  id: OH14_DrinkCanisterFullFuel
+  suffix: Топливо
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 120
+  - type: Label
+    currentLabel: reagent-name-welding-fuel

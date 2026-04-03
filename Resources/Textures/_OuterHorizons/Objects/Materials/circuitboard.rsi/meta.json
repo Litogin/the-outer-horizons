@@ -9,6 +9,9 @@
   "states": [
     {
       "name": "Board"
+    },
+    {
+      "name": "Board_inworld"
     }
   ]
 }

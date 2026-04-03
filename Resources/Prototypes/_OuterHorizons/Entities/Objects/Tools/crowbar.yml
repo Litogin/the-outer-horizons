@@ -5,6 +5,14 @@
   id: OH14_BaseCrowbar
   abstract: true
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/crowbar_drop.ogg
@@ -44,7 +52,9 @@
   id: OH14_CrowbarBasic
   components:
   - type: Sprite
-    state: icon
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Item
     storedSprite:
       sprite: _OuterHorizons/Objects/Tools/crowbar.rsi

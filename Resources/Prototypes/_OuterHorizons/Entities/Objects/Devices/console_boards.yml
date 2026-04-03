@@ -5,13 +5,23 @@
   description: Простецкая зеленая плата для консолей или оборудования.
   abstract: true
   components:
+    - type: Appearance
+    - type: InworldSprite
+    - type: GenericVisualizer
+      visuals:
+        enum.InworldSpriteState.State:
+          base:
+            True: {state: Board}
+            False: {state: Board_inworld}
     - type: Tag
       tags:
       - OH14_Tools
     - type: ComputerBoard
     - type: Sprite
       sprite: _OuterHorizons/Objects/Materials/circuitboard.rsi
-      state: Board
+      layers:
+      - state: Board_inworld
+        map: ["base"]
     - type: StaticPrice
       price: 100
     - type: PhysicalComposition

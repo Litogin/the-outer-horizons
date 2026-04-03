@@ -11,15 +11,6 @@
       "name": "id_overlay"
     },
     {
-      "name": "id_overlay_alt"
-    },
-    {
-      "name": "id_overlay_mobile"
-    },
-    {
-      "name": "id_overlay_nokia"
-    },
-    {
       "name": "equipped-IDCARD",
       "directions": 4
     },
@@ -39,18 +30,6 @@
     },
     {
       "name": "pda"
-    },
-    {
-      "name": "nokia"
-    },
-    {
-      "name": "pda_uco"
-    },
-    {
-      "name": "pda_alt"
-    },
-    {
-      "name": "mobile"
     }
   ]
 }

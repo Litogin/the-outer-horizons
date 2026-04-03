@@ -4,13 +4,25 @@
   id: OH14_WeaponSMGAtarch
   description: Оружие для самообороны в космосе. В стародавние времена космонавтам было крайне нелегко справляться с отдачей и отлетающими гильзами, данное оружие (почти) решает эти проблемы.
   components:
+  - type: Item
+    sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        enum.GunVisualLayers.Base:
+          True: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi}
+          False: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch_inworld.rsi}
+        enum.GunVisualLayers.Mag:
+          True: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi}
+          False: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch_inworld.rsi}
   - type: Clothing
     sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi
     quickEquip: false
     slots:
     - suitStorage
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi
+    sprite: _OuterHorizons/Objects/Weapons/Guns/atarch_inworld.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -22,7 +34,7 @@
     - FullAuto
     fireRate: 5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+      path: /Audio/_OuterHorizons/Guns/Gun/smg_fire.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 1

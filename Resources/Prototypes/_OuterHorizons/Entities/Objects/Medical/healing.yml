@@ -3,12 +3,19 @@
   id: OH14_BaseHealingItem
   abstract: true
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Medical/medical_inworld.rsi}
   - type: Healing
     delay: 1
     selfHealPenaltyMultiplier: 1.5
   - type: Appearance
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
+    sprite: _OuterHorizons/Objects/Specific/Medical/medical_inworld.rsi
   - type: Item
     size: Small
     sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
@@ -147,11 +154,21 @@
     tags:
     - Bloodpack
     - OH14_Medicines
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Medical/medical_inworld.rsi}
+        fill:
+          True: {sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Medical/medical_inworld.rsi}
   - type: Sprite
     layers:
     - state: bloodpack-liquid-5
       map: ["base"]
     - state: bloodpack-empty
+      map: ["fill"]
   - type: Healing
     damageContainers:
       - Biological

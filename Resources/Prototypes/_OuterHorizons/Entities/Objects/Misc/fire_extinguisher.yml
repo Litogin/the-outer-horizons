@@ -5,7 +5,7 @@
   description: О! Это же этот, как его... Ах да! Наипростейший реактивный двигатель!
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/fire_extinguisher.rsi
+    sprite: _OuterHorizons/Objects/Misc/fire_extinguisher_inworld.rsi
     layers:
     - state: fire_extinguisher_closed
       map: [ "enum.ToggleableVisuals.Layer" ]
@@ -62,6 +62,7 @@
     - Rolling
     speedModifier: 0.5 # its very big, awkward to use
   - type: Appearance
+  - type: InworldSprite
   - type: Tag
     tags:
       - FireExtinguisher
@@ -71,6 +72,10 @@
         enum.ToggleableVisuals.Layer:
           True: { state: fire_extinguisher_open }
           False: { state: fire_extinguisher_closed }
+      enum.InworldSpriteState.State:
+        enum.ToggleableVisuals.Layer:
+          True: {sprite: _OuterHorizons/Objects/Misc/fire_extinguisher.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/fire_extinguisher_inworld.rsi}
   - type: PhysicalComposition
     materialComposition:
       Steel: 100

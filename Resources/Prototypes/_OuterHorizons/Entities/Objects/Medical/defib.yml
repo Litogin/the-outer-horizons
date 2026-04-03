@@ -5,6 +5,7 @@
   description: РАЗРЯД! БЗЗ-З-з-з!-
   abstract: true
   components:
+    - type: InworldSprite
     - type: PowerCellSlot
       cellSlotId: cell_slot
     - type: ContainerContainer
@@ -16,9 +17,10 @@
           name: power-cell-slot-component-slot-name-default
           startingItem: OH14_PowerCellMedium
     - type: Sprite
-      sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi
+      sprite: _OuterHorizons/Objects/Specific/Medical/defib_inworld.rsi
       layers:
         - state: icon
+          map: ["base"]
         - state: screen
           map: [ "enum.ToggleableVisuals.Layer" ]
           visible: false
@@ -30,7 +32,15 @@
           enum.ToggleableVisuals.Layer:
             True: { visible: true }
             False: { visible: false }
+        enum.InworldSpriteState.State:
+          base:
+            True: {sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi}
+            False: {sprite: _OuterHorizons/Objects/Specific/Medical/defib_inworld.rsi}
+          enum.ToggleableVisuals.Layer:
+            True: {sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi}
+            False: {sprite: _OuterHorizons/Objects/Specific/Medical/defib_inworld.rsi}
     - type: Item
+      sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi
       size: Normal
     - type: Speech
       speechVerb: Robotic

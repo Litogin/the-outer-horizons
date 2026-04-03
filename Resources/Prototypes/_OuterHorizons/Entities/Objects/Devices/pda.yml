@@ -5,13 +5,26 @@
   name: КПК
   description: Думаю итак ясно что обычные мобилки не подходят для работы в космосе, по крайней мере, по той причине что туда можно установить крафтмайн.
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        enum.PdaVisualLayers.Base:
+          True: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
+          False: {sprite: _OuterHorizons/Objects/Devices/pda_inworld.rsi}
+        enum.PdaVisualLayers.IdLight:
+          True: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
+          False: {sprite: _OuterHorizons/Objects/Devices/pda_inworld.rsi}
+        enum.PdaVisualLayers.Flashlight:
+          True: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
+          False: {sprite: _OuterHorizons/Objects/Devices/pda_inworld.rsi}
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
        pda
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Devices/pda.rsi
+    sprite: _OuterHorizons/Objects/Devices/pda_inworld.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
       state: "pda"
@@ -47,6 +60,7 @@
         - IdCard
   - type: PdaVisuals
   - type: Item
+    sprite: _OuterHorizons/Objects/Devices/pda.rsi
     size: Small
   - type: ContainerContainer
     containers:

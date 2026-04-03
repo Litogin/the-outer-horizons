@@ -1,0 +1,127 @@
+# ------------------------------------------------- Какой же конченый прототип у всего этого сука
+# ------------------------------------------------- Постарался сократить
+- type: entity
+  abstract: true
+  parent: OH14_BaseItem
+  id: OH14_DrinkBase
+  components:
+  - type: Sprite
+    state: icon
+  - type: MeleeWeapon
+    soundNoDamage:
+      path: "/Audio/Effects/Fluids/splat.ogg"
+    damage:
+      types:
+        Blunt: 0
+  - type: DnaSubstanceTrace
+  - type: Edible
+    edible: Drink # Namesake. This entity is a sort of cup you can drink directly from.
+    destroyOnEmpty: false
+    utensil: None # Spoons don't fit in cups, also conflicts with bar spoon stirring
+    solution: &sol drink # solution name alias
+  - type: Spillable
+    solution: *sol
+  - type: MixableSolution
+    solution: *sol
+  - type: DrawableSolution
+    solution: *sol
+  - type: RefillableSolution
+    solution: *sol
+  - type: DrainableSolution
+    solution: *sol
+  - type: InjectableSolution # Injectors (syringe) will fall back to RefillableSolution. This adds support for hyposprays and liquid anomalies.
+    solution: *sol
+  - type: ExaminableSolution
+    solution: *sol
+  - type: SolutionItemStatus
+    solution: *sol
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+
+# ------------------------------------------------- Визулизирует блять заполненность, по умолчанию полу-пустое
+- type: entity
+  abstract: true
+  id: OH14_DrinkVisualsFill
+  # parent: OH14_DrinkBase
+  components:
+  - type: Appearance
+  - type: Sprite
+    layers:
+    - state: fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+    - state: icon
+      map: ["enum.OpenableVisuals.Layer"]
+  - type: SolutionContainerVisuals
+    solutionName: *sol
+    maxFillLevels: 5
+    fillBaseName: fill-
+    inHandsMaxFillLevels: 3
+    inHandsFillBaseName: -fill-
+
+# ------------------------------------------------- ЗАПОЛНЕННО, ДЛЯ МАППИНГА
+- type: entity
+  abstract: true
+  parent: OH14_DrinkVisualsFill
+  id: OH14_DrinkVisualsFillFilled
+  components:
+  - type: Sprite
+    layers:
+    - state: fill-5
+      map: ["enum.SolutionContainerLayers.Fill"]
+    - state: icon
+      map: ["enum.OpenableVisuals.Layer"]
+
+# ------------------------------------------------- С крышкой
+- type: entity
+  abstract: true
+  # parent: OH14_DrinkBase
+  id: OH14_DrinkBaseOpenable
+  components:
+  - type: Openable
+    sound:
+      collection: bottleOpenSounds
+    closeable: true
+    closeSound:
+      collection: bottleCloseSounds
+  - type: PressurizedSolution
+    solution: *sol
+  - type: Shakeable
+  - type: Sealable
+  - type: ExaminableSolution
+    solution: *sol
+    examinableWhileClosed: false
+    heldOnly: true
+
+
+
+
+
+# Basic visualizer for an openable entity. Requires DrinkBaseOpenable
+# - type: entity
+#   abstract: true
+#   id: OH14_DrinkVisualsOpenable
+#   components:
+#   - type: Appearance
+#   - type: GenericVisualizer
+#     visuals:
+#       enum.OpenableVisuals.Opened:
+#         enum.OpenableVisuals.Layer:
+#           True: {state: "icon_open"} # lid off
+#           False: {state: "icon"} # lid on
+#   - type: Sprite
+#     layers:
+#     - state: icon
+#       map: ["enum.OpenableVisuals.Layer"]
+#   - type: ExaminableSolution
+#     solution: *sol
+#     examinableWhileClosed: false # If you can't see the fill levels on the sprite, we can assume it's opaque
+#     heldOnly: true # If it's opaque, you probably can't see through the open lid from a distance

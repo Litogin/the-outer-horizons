@@ -5,10 +5,21 @@
   name: шлем ЕВА "Пилигримм"
   description: Интерфейс в комплект не входит.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: Item
     storedRotation: 0
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/eva.rsi
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/eva.rsi
     equipSound: /Audio/_OuterHorizons/Clothing/helmet_eq.ogg
@@ -28,6 +39,9 @@
   components:
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/uco.rsi
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/uco.rsi
     equipSound: /Audio/_OuterHorizons/Clothing/helmet_eq.ogg

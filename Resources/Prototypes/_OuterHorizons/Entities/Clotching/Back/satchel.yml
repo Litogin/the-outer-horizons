@@ -4,6 +4,14 @@
   name: сумка
   description: Изначально тарра использовали свой хвост для ношения различных сумок и рюкзачков, но в конце концов, они догадались что это можно носить и на спине.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: Clothing
     quickEquip: false
     slots:
@@ -11,6 +19,9 @@
     - tailbag
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Back/Satchels/satchel.rsi
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Storage
     # maxItemSize: Normal
     grid:
@@ -23,3 +34,6 @@
   components:
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Back/Satchels/satchel_uco.rsi
+    layers:
+    - state: inworld
+      map: ["base"]

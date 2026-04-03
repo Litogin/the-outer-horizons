@@ -4,9 +4,20 @@
   name: изолированные перчатки
   description: Низачто не поверишь, но они спасут тебя от удара молнии нахуй.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: FingerprintMask
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Hands/lessinsuls.rsi
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Hands/lessinsuls.rsi
     equipSound: /Audio/_OuterHorizons/Clothing/insuls_eq.ogg

@@ -14,7 +14,7 @@
   - OH14_Pickaxe
   - OH14_ToolMassScanner
   - OH14_Knife
-  - OH14_Radio
+  # - OH14_Radio
 
 - type: latheRecipePack
   id: OH14_MaterialsStatic

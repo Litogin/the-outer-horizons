@@ -5,11 +5,21 @@
   name: газовый баллон
   description: Ручной газовый баллон, который можно носить с собой. Любые теории того что вы дышите воздухом из огнетушителя - ложь.
   components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tanks/white.rsi
-    state: icon
+    layers:
+    - state: inworld
+      map: ["base"]
   - type: Item
-    size: Normal
+    size: Small
     sprite: _OuterHorizons/Objects/Tanks/white.rsi
   - type: Clothing
     quickEquip: false
