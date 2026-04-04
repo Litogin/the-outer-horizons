@@ -8,6 +8,7 @@
     - BaseStationRecords
     - BaseStationGateway
     # - BaseStationShuttles
+    # - OH14_BaseStationDirelicts
     - BaseStationAlertLevels
     - BaseStationMagnet
     - BaseStationExpeditions
@@ -18,3 +19,57 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform
+
+- type: entity
+  id: OH14_StationWithDirelicts
+  parent:
+    - OH14_StandardStation
+    - OH14_BaseStationDirelicts
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform
+
+- type: entity
+  id: OH14_BaseStationDirelicts
+  abstract: true
+  components:
+    - type: GridSpawn
+      groups:
+        discovery: !type:GridSpawnGroup
+          minimumDistance: 5000
+          maximumDistance: 10000
+          hide: true
+          nameGrid: true
+          minCount: 1
+          maxCount: 1
+          stationGrid: false
+          paths:
+          - /Maps/_OuterHorizons/Direlicts/Discovery.yml
+          - /Maps/_OuterHorizons/Direlicts/Discovery_2.yml
+          - /Maps/_OuterHorizons/Direlicts/Discovery_3.yml
+        kurlum: !type:GridSpawnGroup
+          minimumDistance: 5000
+          maximumDistance: 10000
+          hide: true
+          nameGrid: true
+          minCount: 1
+          maxCount: 1
+          stationGrid: false
+          paths:
+          - /Maps/_OuterHorizons/Direlicts/Kurlum.yml
+          - /Maps/_OuterHorizons/Direlicts/Kurlum_2.yml
+          - /Maps/_OuterHorizons/Direlicts/TinCan.yml
+          - /Maps/_OuterHorizons/Direlicts/TinCan_2.yml
+          - /Maps/_OuterHorizons/Direlicts/TinCan_3.yml
+        tincan: !type:GridSpawnGroup
+          minimumDistance: 5000
+          maximumDistance: 10000
+          hide: true
+          nameGrid: true
+          minCount: 1
+          maxCount: 1
+          stationGrid: false
+          paths:
+          - /Maps/_OuterHorizons/Direlicts/TinCan.yml
+          - /Maps/_OuterHorizons/Direlicts/TinCan_2.yml
+          - /Maps/_OuterHorizons/Direlicts/TinCan_3.yml
