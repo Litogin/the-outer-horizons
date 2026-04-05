@@ -1,0 +1,13 @@
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Dirt
+  name: stack-tile
+  icon: { sprite: "_OuterHorizons/Objects/Materials/planet.rsi", state: dirt }
+  spawn: OH14_Dirt1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Rock
+  name: stack-tile
+  icon: { sprite: "_OuterHorizons/Objects/Materials/planet.rsi", state: rock }
+  spawn: OH14_Rock1

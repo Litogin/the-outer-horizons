@@ -1,0 +1,151 @@
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_SheetOre
+  name: руда
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Ore: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Ore
+    baseLayer: base
+    layerStates:
+    - ore
+    - ore_2
+    - ore_3
+  - type: Sprite
+    state: ore_3
+    layers:
+    - state: ore_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: ore
+  - type: Appearance
+  - type: Tag
+    tags:
+    - OH14_Ore
+
+- type: entity
+  parent: OH14_SheetOre
+  id: OH14_SheetOre1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: ore
+  - type: Stack
+    stackType: OH14_Ore
+    count: 1
+
+# Земля
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_Dirt
+  name: земля
+  suffix: Full
+  components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/dirt_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/dirt_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/dirt_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/dirt_drop.ogg
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Dirt: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Dirt
+    baseLayer: base
+    layerStates:
+    - dirt
+    - dirt_2
+    - dirt_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    state: dirt_3
+    layers:
+    - state: dirt_3
+      map: ["base"]
+  - type: Item
+  - type: Appearance
+  - type: FloorTile
+    placeTileSound: /Audio/_OuterHorizons/Items/dirt_drop.ogg
+    outputs:
+    - OH14_FloorDirt
+
+- type: entity
+  parent: OH14_Dirt
+  id: OH14_Dirt1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: dirt
+  - type: Stack
+    stackType: OH14_Dirt
+    count: 1
+
+# Булыжник
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_Rock
+  name: булыжник
+  suffix: Full
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Rock: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Rock
+    baseLayer: base
+    layerStates:
+    - rock
+    - rock_2
+    - rock_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    state: rock_3
+    layers:
+    - state: rock_3
+      map: ["base"]
+  - type: Item
+  - type: Appearance
+  # - type: FloorTile
+  #   outputs:
+  #   - OH14_Lattice
+
+- type: entity
+  parent: OH14_Rock
+  id: OH14_Rock1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: rock
+  - type: Stack
+    stackType: OH14_Rock
+    count: 1
