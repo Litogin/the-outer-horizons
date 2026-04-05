@@ -1,16 +1,9 @@
 - type: entity
-  name: картошка
-  parent: [ FoodProduceBase, OH14_BaseItem ]
-  id: OH14_FoodPotato
-  description: Съедобная кроха, посреди бесконечной пустоты.
+  abstract: true
+  parent: [ FoodInjectableBase, OH14_BaseItem ]
+  id: OH14_BasicFoodMeal
+  description: A delicious meal, cooked with love.
   components:
-  - type: Perishable
-    rotAfter: 1800
-    molsPerSecondPerUnitMass: 0
-  - type: RotInto
-    entity: OH14_FoodPotatoRotten
-    # once it would say bloated, turn into the rotten prototype
-    stage: 1
   - type: Appearance
   - type: InworldSprite
   - type: GenericVisualizer
@@ -19,6 +12,32 @@
         base:
           True: {state: icon}
           False: {state: icon_inworld}
+  - type: Item
+    size: Tiny
+  # - type: Sprite
+  #   sprite: Objects/Consumable/Food/meals.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 31
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 25
+
+# ----------- Картошка
+
+- type: entity
+  name: картофель
+  parent: OH14_BasicFoodMeal
+  id: OH14_FoodPotato
+  description: Съедобная кроха, посреди бесконечной пустоты.
+  components:
+  - type: Perishable
+    rotAfter: 1800
+    molsPerSecondPerUnitMass: 0
+  - type: RotInto
+    entity: OH14_FoodPotatoRotten
+    stage: 1
   - type: FlavorProfile
     flavors:
       - potatoes
@@ -58,7 +77,7 @@
       Taco: Potato
 
 - type: entity
-  name: гнилая картошка
+  name: гнилой картофель
   parent: [ FoodProduceBase, OH14_BaseItem ]
   id: OH14_FoodPotatoRotten
   components:
@@ -91,3 +110,33 @@
     tags:
     - Potato
     - Vegetable
+
+- type: entity
+  parent: OH14_BasicFoodMeal
+  id: OH14_FoodPotatoLoaded
+  name: приготовленный картофель
+  description: ВОТ ЭТО ЯВНО ЛУЧШЕ, ЧЕМ ЕБУЧАЯ ПИТАТЕЛЬНАЯ ПАСТА.
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon_cooked}
+          False: {state: icon_cooked_inworld}
+  - type: Perishable
+    rotAfter: 300
+    molsPerSecondPerUnitMass: 0
+  - type: RotInto
+    entity: OH14_FoodPotato
+    stage: 0
+  - type: Item
+    size: Tiny
+  - type: FlavorProfile
+    flavors:
+      - cheesy
+      - potatoes
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Food/potato.rsi
+    layers:
+      - state: icon_cooked_inworld
+        map: ["base"]

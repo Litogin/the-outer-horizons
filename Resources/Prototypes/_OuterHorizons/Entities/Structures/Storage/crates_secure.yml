@@ -4,6 +4,9 @@
   name: грузовой ящик
   description: Маленькое хранилище для особо не ценного груза, использовался для межпланетной перевозки. Не хотели бы сыграть в ящик?.
   components:
+  - type: ExplosionResistance
+    damageCoefficient: 0.50
+  - type: AntiRottingContainer
   - type: AccessReader
     # access: [["Captain"]]
   - type: Lock
