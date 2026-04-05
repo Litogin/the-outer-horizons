@@ -1,0 +1,93 @@
+- type: entity
+  name: картошка
+  parent: [ FoodProduceBase, OH14_BaseItem ]
+  id: OH14_FoodPotato
+  description: Съедобная кроха, посреди бесконечной пустоты.
+  components:
+  - type: Perishable
+    rotAfter: 1800
+    molsPerSecondPerUnitMass: 0
+  - type: RotInto
+    entity: OH14_FoodPotatoRotten
+    # once it would say bloated, turn into the rotten prototype
+    stage: 1
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: icon_inworld}
+  - type: FlavorProfile
+    flavors:
+      - potatoes
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Vitamin
+          Quantity: 4
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Food/potato.rsi
+    layers:
+      - state: icon_inworld
+        map: ["base"]
+  - type: Item
+    size: Tiny
+    # heldPrefix: produce
+  - type: Produce
+    seedId: OH14_Potato
+  - type: Seed
+    seedId: OH14_Potato
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuicePotato
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Potato
+    - Vegetable
+  - type: FoodSequenceElement
+    entries:
+      Burger: Potato
+      Taco: Potato
+
+- type: entity
+  name: гнилая картошка
+  parent: [ FoodProduceBase, OH14_BaseItem ]
+  id: OH14_FoodPotatoRotten
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: icon_inworld}
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: GastroToxin
+          Quantity: 10
+        - ReagentId: Nutriment
+          Quantity: 4
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Food/potato.rsi
+    layers:
+      - state: icon_inworld
+        map: ["base"]
+        color: "#ABC4BA"
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - Potato
+    - Vegetable

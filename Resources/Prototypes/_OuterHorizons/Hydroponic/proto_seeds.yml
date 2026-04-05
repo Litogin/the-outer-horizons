@@ -1,0 +1,25 @@
+- type: seed
+  id: OH14_Potato
+  name: seeds-potato-name
+  noun: seeds-noun-seeds
+  displayName: seeds-potato-display-name
+  plantRsi: _OuterHorizons/Objects/Specific/Hydro/potato.rsi
+  packetPrototype: OH14_PotatoSeed
+  productPrototypes:
+    - OH14_FoodPotato
+  lifespan: 120
+  maturation: 30 # было 10, потом поменяй
+  production: 3
+  yield: 6
+  potency: 10
+  growthStages: 6
+  waterConsumption: 0.60
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    Vitamin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25

@@ -15,6 +15,7 @@
   - type: Transform
     noRot: true
   - type: Sprite
+    drawdepth: Mobs
     sprite: _OuterHorizons/Structures/Storage/cabinet.rsi
     noRot: true
     layers:
