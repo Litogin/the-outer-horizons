@@ -1,0 +1,42 @@
+- type: entity
+  parent: [ OH14_BaseItem, ClothingShoesBase, BaseToggleClothing]
+  id: OH14_ClothingShoesBootsMagBasic
+  name: магнитные ботинки
+  description: Позволяют вам крепко закрепится к металлической обшивке корабля. Однако учтите, что передвигаться в них будет так же тяжело как и без гравитации.
+  # abstract: true
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Shoes/magboots.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Shoes/magboots.rsi
+    equipDelay: 2
+    unequipDelay: 1.5
+  - type: ToggleClothing
+    action: ActionToggleMagboots
+    mustEquip: false
+  - type: ComponentToggler
+    components:
+    - type: NoSlip
+  - type: ItemTogglePrefix
+    prefixOn: on
+  - type: ToggleClothingPrefix
+    prefixOn: on
+  - type: Magboots
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: icon-on}
+          False: {state: icon}
+  # - type: StaticPrice
+  #   price: 200
+  # - type: Tag
+  #   tags:
+  #   - WhitelistChameleon

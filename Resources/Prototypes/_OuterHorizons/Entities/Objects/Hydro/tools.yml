@@ -1,0 +1,145 @@
+- type: entity
+  name: тяпка
+  parent: OH14_BaseItem
+  id: OH14_ToolMiniHoe
+  description: Используй чтобы убрать ебучие сорняки с гидропоники.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: icon_inworld}
+  - type: Tag
+    tags:
+    - Hoe
+    - BotanyHoe
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/hoe.rsi
+    layers:
+    - state: icon_inworld
+      map: ["base"]
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    swingLeft: true
+    damage:
+      types:
+        Slash: 3
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/hoe.rsi
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+
+- type: entity
+  name: кусачки
+  parent: OH14_BaseItem
+  id: OH14_ToolClippers
+  description: Можно типо образец у растения забрать хз.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: icon_inworld}
+  - type: Tag
+    tags:
+    - PlantSampleTaker
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/clippers.rsi
+    layers:
+    - state: icon_inworld
+      map: ["base"]
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    damage:
+      types:
+        Slash: 3
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/clippers.rsi
+    storedRotation: -90
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+
+- type: entity
+  name: топорик
+  parent: OH14_BaseItem
+  id: OH14_ToolHatchet
+  description: По задумке конструкторов этого изделия, вы должны использовать его исключительно при работе с растениями, однако никто не запрещает устроить с его помощью вторую резню на целадон мисс.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: icon_inworld}
+  - type: Tag
+    tags:
+    - BotanyHatchet
+  - type: Sharp
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/hatchet.rsi
+    layers:
+    - state: icon_inworld
+      map: ["base"]
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    swingLeft: true
+    attackRate: 0.75
+    damage:
+      types:
+        Slash: 10
+        Piercing: 4
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/hatchet.rsi
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+
+- type: entity
+  name: лопатка
+  parent: OH14_BaseItem
+  id: OH14_ToolSpade
+  description: Вырой себе моги-.. Ах да, тебе бы еще землю найти.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: icon_inworld}
+  - type: Tag
+    tags:
+    - BotanyShovel
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/spade.rsi
+    layers:
+    - state: icon_inworld
+      map: ["base"]
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    damage:
+      types:
+        Blunt: 5
+        Piercing: 1
+    soundHit:
+      collection: MetalThud
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/spade.rsi
+  - type: Shovel
+    speedModifier: 0.75
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100

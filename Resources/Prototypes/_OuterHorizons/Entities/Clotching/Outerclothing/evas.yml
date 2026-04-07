@@ -21,9 +21,6 @@
   - type: Tag
     tags:
     - SuitEVA
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: OH14_FootstepsHeavySuit
 
 - type: entity
   parent: OH14_ClothingOuterHardsuitEVABasic
