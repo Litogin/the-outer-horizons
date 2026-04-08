@@ -1,0 +1,13 @@
+- type: material
+  id: OH14_Dirt
+  stackEntity: OH14_Dirt1
+  name: земля
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 0.1
+
+- type: material
+  id: OH14_Rock
+  stackEntity: OH14_Rock1
+  name: камни
+  icon: { sprite: _OuterHorizons/Objects/Materials/piping.rsi, state: girder_3 }
+  price: 0.1
