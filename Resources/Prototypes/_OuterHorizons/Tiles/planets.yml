@@ -15,12 +15,13 @@
   editorHidden: false
   name: земля
   sprite: /Textures/_OuterHorizons/Tiles/dirt.png
-  heatCapacity: 10000
+  # heatCapacity: 10000
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
   weather: true
   baseTurf: OH14_Plating
+  deconstructTools: [ OH14_Digging ]
   itemDrop: OH14_Dirt1
   # indestructible: true
 

@@ -1,0 +1,64 @@
+- type: constructionGraph
+  id: OH14_Hydroponic
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: OH14_HydroponicEmpty
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Dirt
+              amount: 3
+              doAfter: 1
+    - node: OH14_HydroponicEmpty
+      entity: OH14_HydroponicEmpty
+
+- type: constructionGraph
+  id: OH14_HydroPot
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: OH14_PlantPotDirtEmpty
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Materials
+              amount: 3
+              doAfter: 2
+    - node: OH14_PlantPotDirtEmpty
+      entity: OH14_PlantPotDirtEmpty
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 3
+            - !type:DeleteEntity
+          steps:
+            - tool: Prying
+              doAfter: 2
+        - to: OH14_PlantPotEmpty
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Dirt
+              amount: 3
+              doAfter: 1
+    - node: OH14_PlantPotEmpty
+      entity: OH14_PlantPotEmpty
+      edges:
+        - to: OH14_PlantPotDirtEmpty
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_Dirt1
+              amount: 3
+            - !type:DeleteEntity
+          steps:
+            - tool: Prying
+              doAfter: 2
+

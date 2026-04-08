@@ -65,9 +65,10 @@
   name: горшок
   description: Горшок для растений с кучкой земли, твоя неловкая попытка озеленить эту консервную банку.
   categories: [ ForkFiltered ]
-  placement:
-    mode: SnapgridCenter
   components:
+  - type: Construction
+    graph: OH14_HydroPot
+    node: OH14_PlantPotEmpty
   - type: Pullable
   - type: Clickable
   - type: InteractionOutline
@@ -126,3 +127,40 @@
   - type: PlantHolder
     waterLevel: 0
     nutritionLevel: 0
+
+- type: entity
+  id: OH14_PlantPotDirtEmpty
+  parent: OH14_BaseStructureDynamic
+  name: горшок
+  suffix: Без земли
+  description: Твоя неловкая попытка озеленить эту консервную банку.. Бтв тебе нужна земля чтобы тут можно было что то посадить.
+  categories: [ ForkFiltered ]
+  components:
+  - type: Construction
+    graph: OH14_HydroPot
+    node: OH14_PlantPotDirtEmpty
+  - type: Pullable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _OuterHorizons/Structures/Hydro/main.rsi
+    noRot: true
+    offset: "0, 0.35"
+    layers:
+      - state: hydrotray
+        offset: "0, -0.35"
+  - type: Transform
+    anchored: true
+  - type: Anchorable

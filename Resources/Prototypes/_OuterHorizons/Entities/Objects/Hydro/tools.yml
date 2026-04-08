@@ -136,6 +136,12 @@
         Piercing: 1
     soundHit:
       collection: MetalThud
+  - type: ToolTileCompatible
+  - type: Tool
+    qualities:
+      - OH14_Digging
+    useSound:
+      path: /Audio/Items/shovel_dig.ogg
   - type: Item
     sprite: _OuterHorizons/Objects/Tools/Hydroponics/spade.rsi
   - type: Shovel
