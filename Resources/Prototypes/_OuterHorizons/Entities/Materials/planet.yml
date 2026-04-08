@@ -84,6 +84,14 @@
     - state: dirt_3
       map: ["base"]
   - type: Item
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#4D3C2C"
+      right:
+      - state: inhand-right
+        color: "#4D3C2C"
   - type: Appearance
   - type: FloorTile
     placeTileSound: /Audio/_OuterHorizons/Items/dirt_drop.ogg
@@ -134,10 +142,15 @@
     - state: rock_3
       map: ["base"]
   - type: Item
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        # color: "#466982"
+      right:
+      - state: inhand-right
+        # color: "#466982"
   - type: Appearance
-  # - type: FloorTile
-  #   outputs:
-  #   - OH14_Lattice
 
 - type: entity
   parent: OH14_Rock
@@ -148,4 +161,74 @@
     state: rock
   - type: Stack
     stackType: OH14_Rock
+    count: 1
+
+# Ледышка
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_Ice
+  name: лед
+  suffix: Full
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:SpillBehavior
+        solution: ice
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: SolutionContainerManager
+    solutions:
+      ice:
+        reagents:
+        - ReagentId: Water
+          Quantity: 30
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Ice: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Ice
+    baseLayer: base
+    layerStates:
+    - ice
+    - ice_2
+    - ice_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    state: ice_3
+    layers:
+    - state: ice_3
+      map: ["base"]
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#67E9FF"
+      right:
+      - state: inhand-right
+        color: "#67E9FF"
+  - type: Appearance
+
+- type: entity
+  parent: OH14_Ice
+  id: OH14_Ice1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: ice
+  - type: Stack
+    stackType: OH14_Ice
     count: 1

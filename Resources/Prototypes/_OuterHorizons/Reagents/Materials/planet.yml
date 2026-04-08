@@ -11,3 +11,10 @@
   name: камни
   icon: { sprite: _OuterHorizons/Objects/Materials/piping.rsi, state: girder_3 }
   price: 0.1
+
+- type: material
+  id: OH14_Ice
+  stackEntity: OH14_Ice1
+  name: лед
+  icon: { sprite: _OuterHorizons/Objects/Materials/piping.rsi, state: girder_3 }
+  price: 0.1
