@@ -19,7 +19,7 @@
     - state: inworld
       map: ["base"]
   - type: Item
-    size: Small
+    size: Normal
     sprite: _OuterHorizons/Objects/Tanks/white.rsi
   - type: Clothing
     quickEquip: false

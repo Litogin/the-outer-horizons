@@ -11,6 +11,20 @@
   # indestructible: true
 
 - type: tile
+  id: OH14_Ice
+  editorHidden: false
+  name: поверхность ледяного астероида
+  sprite: /Textures/_OuterHorizons/Tiles/ice.png
+  isSubfloor: true
+  friction: 0.05
+  mobAcceleration: 0.1
+  # footstepSounds:
+  #   collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+  # indestructible: true
+
+- type: tile
   id: OH14_FloorDirt
   editorHidden: false
   name: земля

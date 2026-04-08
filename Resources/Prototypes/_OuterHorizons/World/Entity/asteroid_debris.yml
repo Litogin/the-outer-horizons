@@ -17,14 +17,17 @@
           - id: OH14_BaseWallStone
             prob: 0.5
             orGroup: rock
+          - id: OH14_BaseWallIce
+            prob: 0.1
+            orGroup: rock
           - id: OH14_BaseWallStoneOre
-            prob: 0.15
+            prob: 0.02
             orGroup: rock
     - type: IFF
       flags: HideLabel
-      color: "#d49979"
+      color: "#BDA89A"
     - type: Shuttle
-      bodyModifier: 1
+      bodyModifier: 5
 
 - type: entity
   id: OH14_AsteroidDebrisSmall
@@ -74,50 +77,83 @@
       radius: 23
       floorPlacements: 500
 
-# - type: entity
-#   id: AsteroidSalvageSmall
-#   parent: OH14_BaseAsteroidDebris
-#   name: salvage asteroid small
-#   categories: [ HideSpawnMenu ]
-#   components:
-#     - type: MapGrid
-#     - type: BlobFloorPlanBuilder
-#       blobDrawProb: 0.66
-#       radius: 15
-#       floorPlacements: 100
+# Ледяное
 
-# - type: entity
-#   id: AsteroidSalvageMedium
-#   parent: OH14_BaseAsteroidDebris
-#   name: salvage asteroid medium
-#   categories: [ HideSpawnMenu ]
-#   components:
-#     - type: MapGrid
-#     - type: BlobFloorPlanBuilder
-#       blobDrawProb: 0.66
-#       radius: 17
-#       floorPlacements: 150
+- type: entity
+  id: OH14_IceDebris
+  parent: OH14_BaseAsteroidDebris
+  name: ice debris
+  abstract: true
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - OH14_Ice
+      blobDrawProb: 0.5
+      radius: 6
+      floorPlacements: 16
+    - type: SimpleFloorPlanPopulator
+      entries:
+        OH14_Ice:
+          - id: OH14_BaseWallStone
+            prob: 0.05
+            orGroup: rock
+          - id: OH14_BaseWallIce
+            prob: 0.5
+            orGroup: rock
+          - id: OH14_BaseWallStoneOre
+            prob: 0.005
+            orGroup: rock
+    - type: IFF
+      flags: HideLabel
+      color: "#97A2B8"
+    - type: Shuttle
+      bodyModifier: 5
 
-# - type: entity
-#   id: AsteroidSalvageLarge
-#   parent: OH14_BaseAsteroidDebris
-#   name: salvage asteroid large
-#   categories: [ HideSpawnMenu ]
-#   components:
-#     - type: MapGrid
-#     - type: BlobFloorPlanBuilder
-#       blobDrawProb: 0.66
-#       radius: 20
-#       floorPlacements: 200
+- type: entity
+  id: OH14_IceDebrisSmall
+  parent: OH14_IceDebris
+  name: ice debris small
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      blobDrawProb: 0.66
+      radius: 15
+      floorPlacements: 50
 
-# - type: entity
-#   id: AsteroidSalvageHuge
-#   parent: OH14_BaseAsteroidDebris
-#   name: salvage asteroid huge
-#   categories: [ HideSpawnMenu ]
-#   components:
-#     - type: MapGrid
-#     - type: BlobFloorPlanBuilder
-#       blobDrawProb: 0.66
-#       radius: 23
-#       floorPlacements: 250
+- type: entity
+  id: OH14_IceDebrisMedium
+  parent: OH14_IceDebris
+  name: ice debris medium
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      blobDrawProb: 0.66
+      radius: 17
+      floorPlacements: 200
+
+- type: entity
+  id: OH14_IceDebrisLarge
+  parent: OH14_IceDebris
+  name: ice debris large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      blobDrawProb: 0.66
+      radius: 20
+      floorPlacements: 450
+
+- type: entity
+  id: OH14_IceDebrisLarger
+  parent: OH14_IceDebris
+  name: ice debris larger
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      blobDrawProb: 0.66
+      radius: 23
+      floorPlacements: 500
