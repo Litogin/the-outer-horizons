@@ -118,7 +118,7 @@
     - FoodRecipes
   - type: Item
     sprite: _OuterHorizons/Structures/Machines/microwave.rsi
-    size: Ginormous
+    size: Huge
   # - type: MultiHandedItem
   - type: MeleeWeapon
     attackRate: 0.5

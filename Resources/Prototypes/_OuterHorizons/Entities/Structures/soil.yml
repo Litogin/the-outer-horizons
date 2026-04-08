@@ -61,11 +61,13 @@
 
 - type: entity
   id: OH14_PlantPot
-  parent: OH14_BaseStructureDynamic
+  parent: [ OH14_BaseItem, OH14_BaseStructureDynamic ]
   name: горшок
   description: Горшок для растений с кучкой земли, твоя неловкая попытка озеленить эту консервную банку.
   categories: [ ForkFiltered ]
   components:
+  - type: Item
+    size: Ginormous
   - type: Construction
     graph: OH14_HydroPot
     node: OH14_PlantPotEmpty
@@ -130,12 +132,14 @@
 
 - type: entity
   id: OH14_PlantPotDirtEmpty
-  parent: OH14_BaseStructureDynamic
+  parent: [ OH14_BaseItem, OH14_BaseStructureDynamic ]
   name: горшок
   suffix: Без земли
   description: Твоя неловкая попытка озеленить эту консервную банку.. Бтв тебе нужна земля чтобы тут можно было что то посадить.
   categories: [ ForkFiltered ]
   components:
+  - type: Item
+    size: Ginormous
   - type: Construction
     graph: OH14_HydroPot
     node: OH14_PlantPotDirtEmpty

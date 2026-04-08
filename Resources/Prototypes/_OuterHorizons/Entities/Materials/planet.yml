@@ -181,6 +181,8 @@
         solution: ice
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: Extractable
+    grindableSolutionName: ice
   - type: SolutionContainerManager
     solutions:
       ice:

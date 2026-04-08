@@ -1,0 +1,45 @@
+- type: entity
+  id: OH14_ReagentGrinder
+  parent: [OH14_BaseStructureDynamic, BaseMachinePowered ]
+  name: измельчитель
+  description: Предоставленная БлендерТек - промышленный измельчитель, незаменимый помошник в быту каждого дома (отсека)!
+  components:
+  - type: Transform
+    anchored: true
+  - type: ReagentGrinder
+  - type: ActivatableUI
+    key: enum.ReagentGrinderUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ReagentGrinderUiKey.Key:
+        type: ReagentGrinderBoundUserInterface
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ReagentGrinderVisualState.BeakerAttached:
+        grinder:
+          True: {state: "grinder_beaker_attached"}
+          False: {state: "grinder_empty"}
+  - type: Physics
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/grinder.rsi
+    drawdepth: Mobs
+    noRot: true
+    layers:
+    - map: [ "grinder" ]
+      state: "grinder_empty"
+  - type: ApcPowerReceiver
+    powerLoad: 0
+  - type: PowerState
+    idlePowerDraw: 0
+    workingPowerDraw: 750 # medium power blender
+  - type: ItemSlots
+    slots:
+      beakerSlot:
+        whitelist:
+          components:
+          - FitsInDispenser
+  - type: ContainerContainer
+    containers:
+      beakerSlot: !type:ContainerSlot
+      inputContainer: !type:Container
