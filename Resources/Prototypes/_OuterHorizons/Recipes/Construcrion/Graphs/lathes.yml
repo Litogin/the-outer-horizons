@@ -83,6 +83,17 @@
               doAfter: 1
             - tool: Screwing
               doAfter: 1
+        - to: OH14_AutoLatheTools
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tag: OH14_AutoLatheUpgradeTools
+              store: board
+              name: construction-graph-tag-board
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
     - node: OH14_Autolathe
       entity: OH14_AutoLathe
       edges:
@@ -91,6 +102,19 @@
             - !type:SpawnPrototype
               prototype: OH14_SheetMaterials1
               amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 1
+    - node: OH14_AutoLatheTools
+      entity: OH14_AutoLatheTools
+      edges:
+        - to: frame3
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_CircuitboardUpgradeAutolathe
+              amount: 1
           steps:
             - tool: Screwing
               doAfter: 1

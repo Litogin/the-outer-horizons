@@ -79,3 +79,13 @@
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
+
+- type: entity
+  parent: OH14_FireExtinguisher
+  id: OH14_FireExtinguisherEmpty
+  suffix: Empty
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 100
