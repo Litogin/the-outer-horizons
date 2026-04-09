@@ -166,16 +166,23 @@
 # Ледышка
 
 - type: entity
-  parent: OH14_SheetBase
+  parent: OH14_BaseItem
   id: OH14_Ice
+  abstract: true
   name: лед
-  suffix: Full
+  # suffix: Full
   components:
+  - type: RandomSprite
+    available:
+      - base:
+          ice: ""
+          ice_2: ""
+          ice_3: ""
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 10
+        damage: 1
       behaviors:
       - !type:SpillBehavior
         solution: ice
@@ -188,7 +195,7 @@
       ice:
         reagents:
         - ReagentId: Water
-          Quantity: 30
+          Quantity: 10
   - type: GenericVisualizer
     visuals:
       enum.InworldSpriteState.State:
@@ -199,22 +206,23 @@
   - type: PhysicalComposition
     materialComposition:
       OH14_Ice: 100
-  - type: Stack
-    count: 16
-    stackType: OH14_Ice
-    baseLayer: base
-    layerStates:
-    - ice
-    - ice_2
-    - ice_3
+  # - type: Stack
+  #   count: 16
+  #   stackType: OH14_Ice
+  #   baseLayer: base
+  #   layerStates:
+  #   - ice
+  #   - ice_2
+  #   - ice_3
   - type: Sprite
     sprite: _OuterHorizons/Objects/Materials/planet.rsi
-    state: ice_3
+    # state: ice_3
     layers:
     - state: ice_3
       map: ["base"]
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    size: Tiny
     inhandVisuals:
       left:
       - state: inhand-left
@@ -227,10 +235,10 @@
 - type: entity
   parent: OH14_Ice
   id: OH14_Ice1
-  suffix: Single
+  # suffix: Single
   components:
   - type: Sprite
     state: ice
-  - type: Stack
-    stackType: OH14_Ice
-    count: 1
+  # - type: Stack
+  #   stackType: OH14_Ice
+  #   count: 1

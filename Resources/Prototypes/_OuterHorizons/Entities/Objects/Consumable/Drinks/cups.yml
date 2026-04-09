@@ -1,0 +1,38 @@
+- type: entity
+  parent: [OH14_DrinkBase, OH14_DrinkVisualsFill]
+  id: OH14_DrinkCup
+  name: кружка
+  description: Обыкновенная пластиковая кружка, созданная явно под условия искуственной гравитации.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 15
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/cup_inworld.rsi
+    layers:
+    - state: icon
+      map: ["enum.OpenableVisuals.Layer"]
+    - state: fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        enum.SolutionContainerLayers.Fill:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup_inworld.rsi}
+        enum.OpenableVisuals.Layer:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup_inworld.rsi}
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    inHandsFillBaseName: null
+  - type: SpillWhenWorn
+    solution: drink
+  - type: FitsInDispenser
+    solution: drink
