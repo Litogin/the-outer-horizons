@@ -71,11 +71,13 @@
   # - type: ExaminableSolution
   #   solution: lube
 
+# Автолат
+
 - type: entity
   id: OH14_AutoLathe
   parent: OH14_BasicLathe
   name: автолат
-  description: Базовая автоматизированная установка для вашего крафта, чья крышка забрала на себя половину дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
+  description: Базовая автоматизированная установка для вашего крафта, чья крышка забрала на себя половину бюджета дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
   components:
   - type: Construction
     graph: OH14_AutolatheFrame
@@ -127,10 +129,59 @@
     - blueprint
 
 - type: entity
+  id: OH14_AutoLatheTools
+  parent: OH14_BasicLathe
+  name: фабрикатор снаряжения
+  description: Продвинутая автоматизированная установка для создания снаряжения, чей корпус забрал на себя половину бюджета дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
+  components:
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: Construction
+    graph: OH14_AutolatheFrame
+    node: OH14_AutoLatheTools
+  - type: PointLight
+    radius: 2
+    energy: 5.0
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.5" # shine from the top, not bottom of the computer
+    castShadows: false
+    color: "#4eec45"
+  - type: LitOnPowered
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/autolathe_tools.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: MaterialStorage
+    whitelist: *OH14_MaterialWhitelist
+  # - type: OreSiloClient
+  - type: Lathe
+    producingSound: /Audio/_OuterHorizons/Machines/print.ogg
+    idleState: icon
+    runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - OH14_AdvToolStatic
+    - OH14_AdvEqpmentStatic
+    - OH14_BotanyStatic
+
+# Протолат
+
+- type: entity
   id: OH14_ProtoLathe
   parent: OH14_BasicLathe
   name: протолат
-  description: Продвинутая автоматизированная установка для вашего крафта, чья крышка забрала на себя половину дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
+  description: Продвинутая автоматизированная установка для вашей электроники, чья крышка забрала на себя половину бюджета дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
   components:
   - type: Construction
     graph: OH14_ProtolatheFrame
@@ -167,6 +218,9 @@
     unlitRunningState: unlit-building
     staticPacks:
     - OH14_ElectronicStatic
+    - OH14_DeviesStatic
+
+# Печь
 
 - type: entity
   id: OH14_ArcFurnance
@@ -207,6 +261,8 @@
     containers:
       machine_board: !type:Container
       machine_parts: !type:Container
+
+# Трубогиб (вырезан)
 
 # - type: entity
 #   id: OH14_AtmosLathe

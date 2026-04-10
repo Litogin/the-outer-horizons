@@ -7,14 +7,22 @@
       densityNoiseChannel: Density
     - type: SimpleDebrisSelector
       debrisTable:
-        - id: OH14_AsteroidDebrisSmall
+        - id: OH14_IceDebrisSmall
           prob: 0.5
-        - id: OH14_AsteroidDebrisMedium
+        - id: OH14_IceDebrisMedium
           prob: 0.4
-        - id: OH14_AsteroidDebrisLarge
+        - id: OH14_IceDebrisLarge
           prob: 0.3
-        - id: OH14_AsteroidDebrisLarger
+        - id: OH14_IceDebrisLarger
           prob: 0.2
+        - id: OH14_AsteroidDebrisSmall
+          prob: 0.3
+        - id: OH14_AsteroidDebrisMedium
+          prob: 0.2
+        - id: OH14_AsteroidDebrisLarge
+          prob: 0.15
+        - id: OH14_AsteroidDebrisLarger
+          prob: 0.1
     # - type: NoiseDrivenDebrisSelector
     #   noiseChannel: Wreck
     #   debrisTable:

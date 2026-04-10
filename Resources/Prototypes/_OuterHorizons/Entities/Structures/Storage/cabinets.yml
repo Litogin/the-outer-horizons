@@ -15,6 +15,7 @@
   - type: Transform
     noRot: true
   - type: Sprite
+    drawdepth: Mobs
     sprite: _OuterHorizons/Structures/Storage/cabinet.rsi
     noRot: true
     layers:
@@ -56,7 +57,7 @@
     storageRemoveSound: /Audio/_OuterHorizons/Items/pickup.ogg
     grid:
     - 0,0,3,7
-    maxItemSize: Ginormous
+    maxItemSize: Huge
   - type: ContainerContainer
     containers:
       storagebase: !type:Container

@@ -19,7 +19,6 @@
   icon: { sprite: "_OuterHorizons/Objects/Tiles/tiles.rsi", state: steel }
   spawn: OH14_TileItemSteelDark
 
-
 - type: stack
   parent: OH14_BaseMediumStack
   id: OH14_TileGlass

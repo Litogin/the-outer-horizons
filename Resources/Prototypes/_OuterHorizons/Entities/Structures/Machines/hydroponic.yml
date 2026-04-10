@@ -1,0 +1,151 @@
+- type: entity
+  name: гидропоника
+  parent: [ OH14_BaseStructureDynamic, OH14_Soil ]
+  id: OH14_Hydroponic
+  description: Лоток для земли, но межпланетного класса. Имеет несколько датчиков, которые заставляют светиться непонятные для вас лампочки.
+  components:
+  - type: Construction
+    graph: OH14_Hydroponic
+    node: OH14_HydroponicEmpty
+  - type: Transform
+    anchored: true
+  - type: Anchorable
+  - type: Pullable
+  - type: Sprite
+    drawdepth: Mobs
+    offset: "0, 0.35"
+    layers:
+      - sprite: _OuterHorizons/Structures/Hydro/main.rsi
+        state: hydrotray2-filled
+        offset: "0, -0.35"
+      - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
+        state: lowhealth3
+        map: [ "health_alert" ]
+        visible: false
+        offset: "0, -0.35"
+        shader: unshaded
+      - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
+        state: lowwater3
+        map: [ "water_alert" ]
+        visible: false
+        offset: "0, -0.35"
+        shader: unshaded
+      - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
+        state: lownutri3
+        map: [ "nutri_alert" ]
+        visible: false
+        offset: "0, -0.35"
+        shader: unshaded
+      - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
+        state: alert3
+        map: [ "undefined_alert" ]
+        visible: false
+        offset: "0, -0.35"
+        shader: unshaded
+      - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
+        state: harvest3
+        map: [ "harvest_alert" ]
+        visible: false
+        offset: "0, -0.35"
+        shader: unshaded
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PlantHolderVisuals.HealthLight:
+        health_alert:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PlantHolderVisuals.WaterLight:
+        water_alert:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PlantHolderVisuals.NutritionLight:
+        nutri_alert:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PlantHolderVisuals.AlertLight:
+        undefined_alert:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PlantHolderVisuals.HarvestLight:
+        harvest_alert:
+          True: { visible: true }
+          False: { visible: false }
+  - type: PlantHolder
+    drawWarnings: true
+    wateringSound:
+      path: /Audio/Effects/Fluids/slosh.ogg
+      params:
+        volume: -10
+        variation: 0.20
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  # - type: Machine
+  #   board: HydroponicsTrayMachineCircuitboard
+  # - type: WiresPanel
+  - type: AmbientSound
+    volume: -4
+    range: 8
+    sound:
+      path: /Audio/Ambience/Objects/flowing_water_open.ogg
+  - type: GuideHelp
+    guides:
+    - Botany
+    - Chemicals
+
+- type: entity
+  parent: OH14_Hydroponic
+  id: OH14_HydroponicEmpty
+  suffix: Empty
+  components:
+  - type: PlantHolder
+    waterLevel: 0
+    nutritionLevel: 0
+    # for the lights to update immediately
+    updateSpriteAfterUpdate: true
+
+- type: entity
+  name: гидропоника
+  parent: [ OH14_BaseStructureDynamic, OH14_Soil ]
+  id: OH14_HydroponicDirtEmpty
+  suffix: Без земли
+  description: Лоток для земли, но межпланетного класса. Имеет несколько датчиков, которые заставляют светиться непонятные для вас лампочки.
+  components:
+  - type: Construction
+    graph: OH14_Hydroponic
+    node: start
+  - type: Transform
+    anchored: true
+  - type: Anchorable
+  - type: Pullable
+  - type: Sprite
+    drawdepth: Mobs
+    offset: "0, 0.35"
+    layers:
+      - sprite: _OuterHorizons/Structures/Hydro/main.rsi
+        state: hydrotray2-filled
+        offset: "0, -0.35"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]

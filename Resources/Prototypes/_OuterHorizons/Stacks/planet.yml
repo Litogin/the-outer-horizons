@@ -1,0 +1,20 @@
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Dirt
+  name: земля
+  icon: { sprite: "_OuterHorizons/Objects/Materials/planet.rsi", state: dirt }
+  spawn: OH14_Dirt1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Rock
+  name: камни
+  icon: { sprite: "_OuterHorizons/Objects/Materials/planet.rsi", state: rock }
+  spawn: OH14_Rock1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Ice
+  name: лед
+  icon: { sprite: "_OuterHorizons/Objects/Materials/planet.rsi", state: rock }
+  spawn: OH14_Ice1

@@ -163,6 +163,17 @@
 
 - type: entity
   parent: OH14_BasicLightTube
+  id: OH14_LightTube
+  components:
+  - type: LightBulb
+    color: "#967396" # FFE4CE > c1cbce
+    lightEnergy: 0.8
+    lightRadius: 10
+    lightSoftness: 1
+    PowerUse: 25
+
+- type: entity
+  parent: OH14_BasicLightTube
   id: OH14_LightTubeWarm
   name: теплая лампа-трубка
   components:
@@ -171,17 +182,6 @@
     lightEnergy: 0.8
     lightRadius: 10
     lightSoftness: 0.5
-    PowerUse: 25
-
-- type: entity
-  parent: OH14_BasicLightTube
-  id: OH14_LightTube
-  components:
-  - type: LightBulb
-    color: "#c1cbce" # FFE4CE > c1cbce
-    lightEnergy: 0.8
-    lightRadius: 10
-    lightSoftness: 1
     PowerUse: 25
 
 - type: entity

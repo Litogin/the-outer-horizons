@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: outer_horizons
   forkVersion: demo
-  time: 03/12/2026 19:36:23
-  entityCount: 429
+  time: 04/05/2026 14:58:24
+  entityCount: 430
 maps:
 - 127
 grids:
@@ -86,39 +86,108 @@ entities:
           -1,0:
             0: 61183
           0,1:
-            0: 15
+            0: 32575
           -1,1:
-            0: 15
+            0: 65039
+          0,2:
+            0: 382
+          -1,2:
+            0: 2071
+          0,3:
+            0: 1992
+          -1,3:
+            0: 3840
           1,0:
             0: 63359
           1,1:
             0: 7
+          1,3:
+            0: 31
           1,-1:
             0: 30583
+          1,2:
+            0: 32768
           2,0:
             0: 65287
+            1: 8
           2,1:
-            0: 15
+            0: 52751
+          2,2:
+            0: 30664
           2,-1:
-            0: 12288
+            0: 12527
+            1: 34816
           3,0:
-            0: 29440
+            0: 29511
           3,1:
+            0: 14147
+          3,2:
             0: 3
+          3,-1:
+            1: 4915
+            0: 8192
+          0,-3:
+            0: 61440
+          0,-2:
+            0: 1023
+          -1,-3:
+            0: 57344
+          -1,-2:
+            0: 3839
           -1,-1:
             0: 65263
+          1,-3:
+            0: 28672
+          1,-2:
+            0: 143
+          2,-2:
+            0: 65395
+          3,-2:
+            0: 4096
+            1: 8192
+          -4,0:
+            0: 140
+          -4,-1:
+            0: 52424
+          -4,1:
+            0: 19592
+          -4,2:
+            0: 140
+          -3,0:
+            0: 4368
+          -3,1:
+            0: 17
+          -3,2:
+            0: 190
           -2,0:
             0: 65535
           -2,1:
             0: 15
+          -2,2:
+            0: 12568
           -2,-1:
             0: 65535
+          -2,3:
+            0: 3302
+          -3,-1:
+            0: 17
+          -3,-2:
+            0: 13182
+          -3,-3:
+            0: 49152
+          -2,-3:
+            0: 12288
+          -2,-2:
+            0: 231
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
           moles:
             Oxygen: 21.824879
             Nitrogen: 82.10312
+        - volume: 2500
+          immutable: True
+          moles: {}
         chunkSize: 4
     - type: BecomesStation
       id: Dev
@@ -151,17 +220,6 @@ entities:
       - OH14_AsteroidsStandard
       - AsteroidsFallback
       - Failsafe
-- proto: ActionToggleLight
-  entities:
-  - uid: 243
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 178
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 178
 - proto: OH14_AirAlarm
   entities:
   - uid: 125
@@ -1846,6 +1904,13 @@ entities:
     - type: Transform
       pos: -6.5,3.5
       parent: 2
+- proto: OH14_Defibrillator
+  entities:
+  - uid: 430
+    components:
+    - type: Transform
+      pos: 1.6149893,-1.2030057
+      parent: 2
 - proto: OH14_DrillBasic
   entities:
   - uid: 162
@@ -1867,27 +1932,13 @@ entities:
     - type: Transform
       pos: 10.609417,4.717317
       parent: 2
-- proto: OH14_FlashlightBasic
+- proto: OH14_FlashlightFilled
   entities:
-  - uid: 178
+  - uid: 131
     components:
     - type: Transform
-      pos: 1.4402308,-1.5812222
+      pos: 1.3493643,-1.6092557
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 243
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 243
-    - type: ActionsContainer
 - proto: OH14_FoodHrumka
   entities:
   - uid: 251
@@ -2018,12 +2069,11 @@ entities:
     - type: Transform
       pos: 5.2299123,2.625359
       parent: 2
-- proto: OH14_GeneratorMiniNuclearReactor
+- proto: OH14_GeneratorTEF
   entities:
-  - uid: 268
+  - uid: 178
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: -6.5,2.5
       parent: 2
 - proto: OH14_GravityGeneratorMini
@@ -2457,13 +2507,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 14.5,3.5
       parent: 2
-- proto: OH14_SolderingIron
-  entities:
-  - uid: 131
-    components:
-    - type: Transform
-      pos: 3.4765792,2.6174102
-      parent: 2
 - proto: OH14_StairsBasic
   entities:
   - uid: 62
@@ -2581,6 +2624,11 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-1.5
+      parent: 2
+  - uid: 268
+    components:
+    - type: Transform
+      pos: -0.5,2.5
       parent: 2
   - uid: 395
     components:
@@ -2735,6 +2783,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.789079,2.5705352
+      parent: 2
+- proto: OH14_Workbench
+  entities:
+  - uid: 243
+    components:
+    - type: Transform
+      pos: -0.5,3.5
       parent: 2
 - proto: OH14_WrenchBasic
   entities:

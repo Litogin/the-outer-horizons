@@ -1,6 +1,6 @@
 - type: entity
   id: OH14_GravityGeneratorMini
-  parent: [ GravityGenerator, ConstructibleMachine ]
+  parent: GravityGenerator
   categories: [ ForkFiltered ]
   name: генератор гравитации
   description: Вы не знаете как это работает, ваши коллеги не знают как это работает, никто не знает как это работает, используйте на свой страх и риск.

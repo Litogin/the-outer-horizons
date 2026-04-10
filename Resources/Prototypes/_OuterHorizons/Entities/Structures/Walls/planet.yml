@@ -1,0 +1,136 @@
+- type: entity
+  parent: BaseWall
+  id: OH14_BaseWallStone
+  categories: [ ForkFiltered ]
+  name: каменная порода
+  suffix: Астероид
+  description: Хранит руды внутри и грейтайдов снаружи.
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_rock.rsi
+    state: full
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_rock.rsi
+    state: full
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_Rock1:
+            min: 1
+            max: 3
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Rock
+  - type: IconSmooth
+    key: walls
+    base: wall
+
+- type: entity
+  parent: OH14_BaseWallStone
+  id: OH14_BaseWallStoneOre
+  categories: [ ForkFiltered ]
+  name: рудная порода
+  description: Хранит руды внутри и грейтайдов снаружи.
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_ore_rock.rsi
+    layers:
+    - state: full
+    - state: ore
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_ore_rock.rsi
+    state: full
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetOre1:
+            min: 1
+            max: 3
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+
+# Лед
+
+- type: entity
+  parent: BaseWall
+  id: OH14_BaseWallIce
+  categories: [ ForkFiltered ]
+  name: ледяная скала
+  suffix: Астероид
+  description: Просвечивая фонариком, за ним МОЖЕТ БЫТЬ можно увидеть руду.
+  components:
+  - type: Occluder
+    enabled: false
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Planet/ice.rsi
+    # state: full
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Planet/ice.rsi
+    state: full
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_Ice1:
+            min: 1
+            max: 3
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Rock
+  - type: IconSmooth
+    key: walls
+    base: wall

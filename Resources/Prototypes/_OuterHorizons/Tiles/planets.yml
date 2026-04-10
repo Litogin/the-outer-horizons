@@ -8,4 +8,45 @@
     collection: FootstepAsteroid
   heatCapacity: 10000
   weather: true
+  # indestructible: true
+
+- type: tile
+  id: OH14_Ice
+  editorHidden: false
+  name: поверхность ледяного астероида
+  sprite: /Textures/_OuterHorizons/Tiles/ice.png
+  isSubfloor: true
+  friction: 0.05
+  mobAcceleration: 0.1
+  # footstepSounds:
+  #   collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+  # indestructible: true
+
+- type: tile
+  id: OH14_FloorDirt
+  editorHidden: false
+  name: земля
+  sprite: /Textures/_OuterHorizons/Tiles/dirt.png
+  # heatCapacity: 10000
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  weather: true
+  baseTurf: OH14_Plating
+  deconstructTools: [ OH14_Digging ]
+  itemDrop: OH14_Dirt1
+  # indestructible: true
+
+- type: tile
+  id: OH14_FloorDirtIndestructible
+  editorHidden: false
+  name: неразрушимая земля
+  sprite: /Textures/_OuterHorizons/Tiles/dirt.png
+  heatCapacity: 10000
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  weather: true
   indestructible: true

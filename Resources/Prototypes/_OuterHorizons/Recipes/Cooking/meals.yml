@@ -1,0 +1,8 @@
+- type: microwaveMealRecipe
+  id: OH14_FoodPotatoLoaded
+  name: рецепт приготовленного картофеля
+  result: OH14_FoodPotatoLoaded
+  time: 15
+  group: Savory
+  solids:
+    OH14_FoodPotato: 1

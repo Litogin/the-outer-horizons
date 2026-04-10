@@ -166,7 +166,7 @@
     anchored: true
   - type: Sprite
     layers:
-    - sprite: Fluids/puddle.rsi
+    - sprite: _OuterHorizons/Fluids/puddle.rsi # OH14-Changes
       state: splat0
     drawdepth: Puddles
     color: "#FFFFFF80"

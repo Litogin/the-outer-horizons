@@ -60,11 +60,11 @@
         - MidImpassable
         - LowImpassable
   - type: Anchorable
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepSkates
-      params:
-        variation: 0.08
+  # - type: FootstepModifier
+  #   footstepSoundCollection:
+  #     collection: FootstepSkates
+  #     params:
+  #       variation: 0.08
 
 - type: entity
   id: OH14_StructureWheeled

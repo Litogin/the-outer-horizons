@@ -1,0 +1,39 @@
+- type: latheRecipe
+  id: OH14_ToolMiniHoe
+  completetime: 2
+  result: OH14_ToolMiniHoe
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/hoe.rsi
+    state: icon
+  materials:
+    OH14_Materials: 250
+
+- type: latheRecipe
+  id: OH14_ToolClippers
+  completetime: 2
+  result: OH14_ToolClippers
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/clippers.rsi
+    state: icon
+  materials:
+    OH14_Materials: 250
+
+- type: latheRecipe
+  id: OH14_ToolHatchet
+  completetime: 2
+  result: OH14_ToolHatchet
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/hatchet.rsi
+    state: icon
+  materials:
+    OH14_Materials: 700
+
+- type: latheRecipe
+  id: OH14_ToolSpade
+  completetime: 2
+  result: OH14_ToolSpade
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/Hydroponics/spade.rsi
+    state: icon
+  materials:
+    OH14_Materials: 300

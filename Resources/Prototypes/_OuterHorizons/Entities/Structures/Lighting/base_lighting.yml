@@ -29,7 +29,7 @@
       shader: unshaded
     state: base
   - type: PointLight
-    color: "#c1cbce" # FFE4CE > c1cbce
+    color: "#967396" # FFE4CE > c1cbce
     energy: 0.8
     radius: 10
     softness: 1
@@ -309,9 +309,9 @@
   components:
   - type: PointLight
     color: "#C71A1C"
-    energy: 1.5
+    energy: 2
     radius: 5
-    softness: 1.5
+    softness: 2
     offset: "0, -0.6"
   - type: Sprite
     state: base

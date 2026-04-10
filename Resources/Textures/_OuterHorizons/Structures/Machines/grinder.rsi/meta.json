@@ -1,0 +1,17 @@
+{
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "version":1,
+    "size":{
+        "x":32,
+        "y":32
+    },
+    "states":[
+        {
+            "name":"grinder_empty"
+        },
+        {
+            "name":"grinder_beaker_attached"
+        }
+    ]
+}

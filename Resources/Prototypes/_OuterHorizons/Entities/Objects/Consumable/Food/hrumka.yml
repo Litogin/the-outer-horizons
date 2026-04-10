@@ -1,8 +1,7 @@
 - type: entity
-  parent: BaseItem
+  parent: OH14_BaseItem
   id: OH14_FoodHrumka
-  categories: [ ForkFiltered ]
-  name: сухой перекус Hrumka
+  name: сухой перекус
   suffix: Еда
   description: Питательный батончик неизвестного происхождения, ешьте на свой страх и риск.
   components:

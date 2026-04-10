@@ -2,12 +2,26 @@
   parent:  [ OH14_BaseItem, ClothingShoesBaseButcherable ]
   id: OH14_ClothingShoesBasic
   name: туфли
-  description: Революционное изобретение в области ношения одежды, защищает паши ступни от холодного металлического пола.
+  description: Революционное изобретение в области ношения одежды, защищает ваши ступни от холодного металлического пола.
   components:
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Shoes/basic.rsi
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Shoes/basic.rsi
+    equipDelay: 2
+    unequipDelay: 1.5
+  - type: Matchbox
+
+- type: entity
+  parent:  [ OH14_BaseItem, ClothingShoesBaseButcherable ]
+  id: OH14_ClothingBoots
+  name: берцы
+  description: Стандартные берцы любого уважающего себя офицера.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Shoes/boots.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Shoes/boots.rsi
     equipDelay: 2
     unequipDelay: 1.5
   - type: Matchbox

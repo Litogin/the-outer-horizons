@@ -1,0 +1,6 @@
+- type: tool
+  id: OH14_Digging
+  name: tool-quality-digging-name
+  toolName: tool-quality-digging-tool-name
+  spawn: OH14_ToolSpade
+  icon: { sprite: Objects/Specific/Janitorial/wirebrush.rsi, state: icon }

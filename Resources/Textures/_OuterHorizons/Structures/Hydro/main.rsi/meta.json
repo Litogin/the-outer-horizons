@@ -8,11 +8,11 @@
   },
   "states": [
     {
-      "name": "claypot-inhand-left",
+      "name": "inhand-left",
         "directions": 4
     },
     {
-      "name": "claypot-inhand-right",
+      "name": "inhand-right",
         "directions": 4
     },
     {

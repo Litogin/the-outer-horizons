@@ -1,7 +1,7 @@
 - type: latheRecipe
   id: OH14_FireExtinguisher
   completetime: 5
-  result: OH14_FireExtinguisher
+  result: OH14_FireExtinguisherEmpty
   icon:
     sprite: _OuterHorizons/Objects/Misc/fire_extinguisher.rsi
     state: fire_extinguisher_closed

@@ -12,6 +12,9 @@
     },
     {
       "name": "Board_inworld"
+    },
+    {
+      "name": "upgrade"
     }
   ]
 }

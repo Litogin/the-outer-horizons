@@ -6,7 +6,7 @@
   minPlayers: 0
   stations:
     UcoStation:
-      stationProto: OH14_StandardStation
+      stationProto: OH14_StationWithDirelicts
       components:
         - type: StationNameSetup
           mapNameTemplate: "UCO Station"
@@ -14,7 +14,7 @@
           availableJobs:
             OH14_UcoRole: [ 8, 8 ]
     RreStation:
-      stationProto: OH14_StandardStation
+      stationProto: OH14_StationWithDirelicts
       components:
         - type: StationNameSetup
           mapNameTemplate: "RRE Station"
