@@ -21,7 +21,7 @@ public sealed class PlumbingConnectorAppearanceSystem : EntitySystem
     [Dependency] private readonly SpriteSystem _sprite = default!;
 
     private static readonly Color InletColor = new(1.0f, 0.35f, 0.35f);  // Vibrant Red
-    private static readonly Color OutletColor = new(0.35f, 0.6f, 1.0f);  // Vibrant Blue
+    private static readonly Color OutletColor = new(0.57f, 0.56f, 0.35f);  // Vibrant Blue
     private static readonly Color MixingInletColor = new(0.35f, 0.9f, 0.35f);  // Vibrant Green
     private static readonly PlumbingConnectionLayer[] ConnectionLayers = Enum.GetValues<PlumbingConnectionLayer>();
 

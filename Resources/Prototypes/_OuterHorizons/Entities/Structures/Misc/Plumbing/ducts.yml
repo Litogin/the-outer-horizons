@@ -2,7 +2,7 @@
 # Plumbing Ducts
 # ============================================================================
 # Ducts allow transport of reagents through the plumbing network.
-# All ducts inherit from PlumbingDuctBase for common components.
+# All ducts inherit from OH14_PlumbingDuctBase for common components.
 # ============================================================================
 
 # ============================================================================
@@ -11,10 +11,10 @@
 
 - type: entity
   abstract: true
-  parent: BaseItem
-  id: PlumbingDuctBase
-  name: fluid duct
-  description: A duct for transporting reagents through the plumbing network.
+  parent: OH14_BaseItem
+  id: OH14_PlumbingDuctBase
+  name: трубопровод
+  description: Перемещает ваши жидкости по сети труб.
   placement:
     mode: SnapgridCenter
   components:
@@ -25,13 +25,13 @@
   - type: Transform
     anchored: true
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/fluid_ducts.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/fluid_ducts.rsi
     drawdepth: ThinPipe
     visible: false
   - type: Appearance
   - type: PipeAppearance
     sprite:
-    - sprite: _StarLight/Structures/Piping/Plumbing/fluid_ducts.rsi
+    - sprite: _OuterHorizons/Structures/Misc/Plumbing/fluid_ducts.rsi
       state: ductConnector
   - type: PipeColorVisuals
   - type: AtmosPipeColor
@@ -88,9 +88,8 @@
 # Straight Duct
 # --------------------------------
 - type: entity
-  parent: PlumbingDuctBase
-  id: PlumbingDuctStraight
-  name: fluid duct
+  parent: OH14_PlumbingDuctBase
+  id: OH14_PlumbingDuctStraight
   suffix: Straight
   components:
   - type: NodeContainer
@@ -103,11 +102,9 @@
     layers:
     - state: ductStraight
       map: [ "enum.PipeVisualLayers.Pipe" ]
-      color: "#4169E1"
+      color: "#276189"
   - type: Item
     storedSprite:
-      sprite: _StarLight/Structures/Piping/Plumbing/fluid_ducts.rsi
-      state: storageStraight
     shape:
     - 0,0,0,2
 
@@ -115,9 +112,8 @@
 # Bend Duct
 # --------------------------------
 - type: entity
-  parent: PlumbingDuctBase
-  id: PlumbingDuctBend
-  name: fluid duct
+  parent: OH14_PlumbingDuctBase
+  id: OH14_PlumbingDuctBend
   suffix: Bend
   components:
   - type: NodeContainer
@@ -130,20 +126,16 @@
     layers:
     - state: ductBend
       map: [ "enum.PipeVisualLayers.Pipe" ]
-      color: "#4169E1"
+      color: "#276189"
   - type: Item
     size: Small
-    storedSprite:
-      sprite: _StarLight/Structures/Piping/Plumbing/fluid_ducts.rsi
-      state: storageBend
 
 # --------------------------------
 # T-Junction Duct
 # --------------------------------
 - type: entity
-  parent: PlumbingDuctBase
-  id: PlumbingDuctTJunction
-  name: fluid duct
+  parent: OH14_PlumbingDuctBase
+  id: OH14_PlumbingDuctTJunction
   suffix: T-Junction
   components:
   - type: NodeContainer
@@ -156,19 +148,14 @@
     layers:
     - state: ductTJunction
       map: [ "enum.PipeVisualLayers.Pipe" ]
-      color: "#4169E1"
-  - type: Item
-    storedSprite:
-      sprite: _StarLight/Structures/Piping/Plumbing/fluid_ducts.rsi
-      state: storageTjunction
+      color: "#276189"
 
 # --------------------------------
 # Fourway Duct
 # --------------------------------
 - type: entity
-  parent: PlumbingDuctBase
-  id: PlumbingDuctFourway
-  name: fluid duct
+  parent: OH14_PlumbingDuctBase
+  id: OH14_PlumbingDuctFourway
   suffix: Fourway
   components:
   - type: NodeContainer
@@ -181,9 +168,6 @@
     layers:
     - state: ductFourway
       map: [ "enum.PipeVisualLayers.Pipe" ]
-      color: "#4169E1"
+      color: "#276189"
   - type: Item
     size: Small
-    storedSprite:
-      sprite: _StarLight/Structures/Piping/Plumbing/fluid_ducts.rsi
-      state: storageFourway

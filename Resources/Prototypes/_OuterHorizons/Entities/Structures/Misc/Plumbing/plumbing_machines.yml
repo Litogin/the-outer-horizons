@@ -1,37 +1,38 @@
 # Base plumbing machine entity - all plumbing machines inherit from this
 - type: entity
   abstract: true
-  id: PlumbingMachineBase
+  id: OH14_PlumbingMachineBase
+  parent: OH14_BaseStructure
   placement:
     mode: SnapgridCenter
   components:
+  - type: Physics
+    bodyType: Static
+  # - type: Fixtures
+  #   fixtures:
+  #     fix1:
+  #       shape:
+  #         !type:PhysShapeAabb
+  #         bounds: -0.25,-0.25,0.25,0.25
+  #       density: 190
+  #       mask:
+  #       - MachineMask
+  #       layer:
+  #       - MachineLayer
   - type: Transform
     anchored: true
     noRot: false
   - type: Sprite
-    noRot: false  # Allow rotation so connectors face correct direction
+    noRot: true  # Allow rotation so connectors face correct direction
   - type: Clickable
   - type: Appearance
   - type: PlumbingConnectorAppearance
-    offset: 0.09375
+    # offset: 0.09375
   - type: InteractionOutline
   - type: Anchorable
   - type: Pullable
   - type: Rotatable
     rotateWhileAnchored: true
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: -0.25,-0.25,0.25,0.25
-        density: 190
-        mask:
-        - MachineMask
-        layer:
-        - MachineLayer
   - type: AtmosPipeColor
   - type: RCDDeconstructable
     cost: 2
@@ -46,13 +47,13 @@
 # Plumbing Tank - stores reagents in the network
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingTank
-  name: Plumbing Tank
-  description: Stores up to 2000u of reagents. Use tanks to buffer reagents between production stages or just store large amounts of reagents.
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingTank
+  name: трубопроводный резервуар
+  description: Большой как твоя мать, хранит до 2х тысяч унций жидкостей.
   components:
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/plumbers.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
     - state: tank
   - type: PlumbingDevice
@@ -96,10 +97,10 @@
 # Plumbing Input - pour reagents into the network
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingInput
-  name: Plumbing Input
-  description: A small tank you pour reagents into. Other machines pull from this. Connects in all directions.
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingInput
+  name: водопроводный входной буфер
+  description: Позволит тебе залить в местную сеть трубопровода яд.
   components:
   - type: Physics
     bodyType: Static
@@ -107,7 +108,7 @@
   - type: Fixtures
     fixtures: {}
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/plumbers.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
     - state: pipe_input
   - type: PlumbingInput
@@ -145,11 +146,14 @@
 # Plumbing Sink - draws reagents from the network, has an outlet for solutions dumped into it
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingSink
-  name: Plumbing Sink
-  description: A sink connected to the plumbing network. Draw reagents from it with a container, or dump reagents into it to send them down the drain. Connects in all directions.
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingSink
+  name: Раковина
+  description: Если ты можешь позволить помыть себе руки - ты богат. Если ты можешь позволить себе душ - ты невъебически богат.
   components:
+  - type: Physics
+    bodyType: Static
+    canCollide: false
   - type: Sprite
     sprite: Structures/Furniture/sink.rsi
     drawdepth: FloorObjects
@@ -219,10 +223,10 @@
 # Plumbing Output - draw reagents from the network
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingOutput
-  name: Plumbing Output
-  description: A small tank that pulls reagents from the network. Draw from it with a container. Connects in all directions.
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingOutput
+  name: водопроводный выходной буфер
+  description: Позволит тебе черпнуть небольшой объем жидкостей из водопровода.
   components:
   - type: Physics
     bodyType: Static
@@ -230,7 +234,7 @@
   - type: Fixtures
     fixtures: {}
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/plumbers.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
     - state: pipe_output
   - type: PlumbingDevice
@@ -287,21 +291,49 @@
 # Plumbing Reactor - accumulates reagents and triggers reactions
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingReactor
-  name: Plumbing Reactor
-  description: Pulls target reagents in up to configured quantities from its inlet and triggers reactions. Requires power.
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingReactor
+  name: реакционная камера
+  description: Буфер внутри которого реагенты безопасно (нет) смешиваются для реакции.
   components:
+  - type: EmitSoundOnUIOpen
+    sound:
+      collection: Keyboard
+      params:
+        volume: -5
+        variation: 0.10
+        pitch: 1.10  # low pitch keyboard sounds feel kinda weird
+    blacklist:
+      tags:
+      - NoConsoleSound
+  - type: ActivatableUIRequiresPower
+  - type: PointLight
+    radius: 2
+    energy: 5.0
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.5" # shine from the top, not bottom of the computer
+    castShadows: false
+    color: "#B79036"
+  - type: LitOnPowered
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/plumbers.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
     - state: reaction_chamber
       map: [ "enum.PlumbingVisualLayers.Base" ]
+    - state: reaction_chamber_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
   - type: GenericVisualizer
     visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true, shader: unshaded }
+          False: { visible: false }
       enum.PlumbingVisuals.Running:
         enum.PlumbingVisualLayers.Base:
-          True: { state: reaction_chamber_on }
+          True: { state: reaction_chamber }
           False: { state: reaction_chamber }
   - type: PlumbingDevice
     updateInterval: 2
@@ -360,10 +392,10 @@
 # Plumbing Smart Dispenser - stores reagents from the network, fills labeled jugs
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingSmartDispenser
-  name: Plumbing Smart Dispenser
-  description: Pulls in all reagents from its inlets and stores up to 200u of each type. Use a labeled jug on the dispenser to fill it with the matching reagent. Requires power.
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingSmartDispenser
+  name: химический дозатор
+  description: OH14_PlumbingSmartDispenser
   components:
   - type: Sprite
     sprite: Structures/Machines/smartfridge.rsi
@@ -440,21 +472,49 @@
 # Plumbing Pill Press - automatically creates pills or patches from reagents
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingPillPress
-  name: Plumbing Pill Press
-  description: Pulls in reagents and presses them into pills or patches at a configurable dosage. Has optional mixing inlets for ratio-controlled mixing. Requires power.
+  parent: [ OH14_PlumbingMachineBase, BaseMachinePowered ]
+  id: OH14_PlumbingPillPress
+  name: химический пресс
+  description: Превращает ваши лекарства в колеса.
   components:
+  - type: EmitSoundOnUIOpen
+    sound:
+      collection: Keyboard
+      params:
+        volume: -5
+        variation: 0.10
+        pitch: 1.10  # low pitch keyboard sounds feel kinda weird
+    blacklist:
+      tags:
+      - NoConsoleSound
+  - type: ActivatableUIRequiresPower
+  - type: PointLight
+    radius: 2
+    energy: 5.0
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.5" # shine from the top, not bottom of the computer
+    castShadows: false
+    color: "#B79036"
+  - type: LitOnPowered
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/plumbers.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
     - state: pill_press_off
       map: [ "enum.PlumbingVisualLayers.Base" ]
+    - state: pill_press
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
   - type: GenericVisualizer
     visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true, shader: unshaded }
+          False: { visible: false }
       enum.PlumbingVisuals.Running:
         enum.PlumbingVisualLayers.Base:
-          True: { state: pill_press }
+          True: { state: pill_press_off }
           False: { state: pill_press_off }
   - type: PlumbingDevice
     updateInterval: 2
@@ -462,7 +522,7 @@
     bufferSolutionName: buffer
     dosage: 10
   - type: PlumbingConnectorAppearance
-    offset: 0.09375
+    # offset: 0.09375
     mixingInletNames:
     - mixingInletEast
     - mixingInletWest
@@ -522,10 +582,10 @@
 # Plumbing Filter - separates specific reagents into two outputs
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingFilter
-  name: Plumbing Filter
-  description: Filters specific reagents from a duct network. Filtered reagents are sent to the side outlet while other reagents passthrough.
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingFilter
+  name: водопроводный фильтр
+  description: Вход через желтый порт, выход через красные.
   components:
   - type: Physics
     bodyType: Static
@@ -533,7 +593,7 @@
   - type: Fixtures
     fixtures: {}
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/plumbers.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
     - state: filter
   - type: PlumbingDevice
@@ -595,10 +655,9 @@
     price: 125
 
 - type: entity
-  parent: PlumbingFilter
-  id: PlumbingFilterFlipped
+  parent: OH14_PlumbingFilter
+  id: OH14_PlumbingFilterFlipped
   suffix: Flipped
-  description: Filters specific reagents from a duct network. Filtered reagents are sent to the side outlet while other reagents passthrough.
   components:
   - type: Physics
     bodyType: Static
@@ -606,7 +665,7 @@
   - type: Fixtures
     fixtures: {}
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/plumbers.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
     - state: filterF
   - type: NodeContainer
@@ -630,13 +689,14 @@
 # Plumbing Synthesizer - generates reagents from power
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingSynthesizer
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingSynthesizer
   name: Plumbing Synthesizer
   description: Generates basic reagents using power from an internal battery.
+  suffix: НЕ МАППИТЬ
   components:
   - type: Sprite
-    sprite: _StarLight/Structures/Piping/Plumbing/plumbers.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     noRot: false
     layers:
     - state: synthesizer
@@ -717,10 +777,10 @@
 # Plumbing Drain - floor drain that outputs to plumbing network
 # =============================================================================
 - type: entity
-  parent: PlumbingMachineBase
-  id: PlumbingDrain
-  name: Plumbing Drain
-  description: A floor drain that absorbs puddles and routes them into the plumbing network instead of disposing them.
+  parent: OH14_PlumbingMachineBase
+  id: OH14_PlumbingDrain
+  name: водопроводный слив
+  description: Все стекающие жидкости рядом попадают именно сюда.
   placement:
     mode: SnapgridCenter
   components:
