@@ -4,7 +4,7 @@
   graph: OH14_GasPipe
   startNode: start
   targetNode: OH14_GasPipeStraight
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -14,7 +14,7 @@
   graph: OH14_GasPipe
   startNode: start
   targetNode: OH14_GasPipeBend
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -24,7 +24,7 @@
   graph: OH14_GasPipe
   startNode: start
   targetNode: OH14_GasPipeTJunction
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -34,7 +34,7 @@
   graph: OH14_GasPipe
   startNode: start
   targetNode: OH14_GasPipeFourway
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -44,7 +44,7 @@
   graph: OH14_GasPipe
   startNode: start
   targetNode: OH14_GasPipeManifold
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -56,7 +56,7 @@
   graph: OH14_GasPumps
   startNode: start
   targetNode: OH14_GasPort
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -66,7 +66,7 @@
   graph: OH14_GasPumps
   startNode: start
   targetNode: OH14_GasPressurePump
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -76,7 +76,7 @@
   graph: OH14_GasPumps
   startNode: start
   targetNode: OH14_GasVolumePump
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -86,7 +86,7 @@
   graph: OH14_GasPumps
   startNode: start
   targetNode: OH14_GasPassiveGate
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -96,7 +96,7 @@
   graph: OH14_GasPumps
   startNode: start
   targetNode: OH14_GasValve
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -108,7 +108,7 @@
   graph: OH14_GasPumpsTrinary
   startNode: start
   targetNode: OH14_GasFilter
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -118,7 +118,7 @@
   graph: OH14_GasPumpsTrinary
   startNode: start
   targetNode: OH14_GasFilterF
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -128,7 +128,7 @@
   graph: OH14_GasPumpsTrinary
   startNode: start
   targetNode: OH14_GasMixer
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -138,7 +138,7 @@
   graph: OH14_GasPumpsTrinary
   startNode: start
   targetNode: OH14_GasMixerF
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -150,7 +150,7 @@
   graph: OH14_GasPumpsVent
   startNode: start
   targetNode: OH14_GasVentPump
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -160,7 +160,7 @@
   graph: OH14_GasPumpsVent
   startNode: start
   targetNode: OH14_GasPassiveVent
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -170,7 +170,7 @@
   graph: OH14_GasPumpsVent
   startNode: start
   targetNode: OH14_GasVentScrubber
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -180,7 +180,7 @@
   graph: OH14_GasPumpsVent
   startNode: start
   targetNode: OH14_GasOutletInjector
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -190,7 +190,7 @@
   graph: OH14_GasPumpsVent
   startNode: start
   targetNode: OH14_AirSensor
-  category: construction-category-utilities
+  category: construction-category-atmos
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
 
@@ -202,7 +202,7 @@
   graph: OH14_AirControl
   startNode: start
   targetNode: Frame
-  category: construction-category-utilities
+  category: construction-category-atmos
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -217,7 +217,7 @@
   graph: OH14_GasStorage
   startNode: start
   targetNode: OH14_GasStorage
-  category: construction-category-utilities
+  category: construction-category-atmos
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -228,7 +228,7 @@
   graph: OH14_GasCanister
   startNode: start
   targetNode: OH14_GasCanister
-  category: construction-category-utilities
+  category: construction-category-atmos
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

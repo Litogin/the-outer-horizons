@@ -4,7 +4,7 @@
   graph: OH14_ThrusterR
   startNode: start
   targetNode: OH14_ThrusterR
-  category: construction-category-machines
+  category: construction-category-shuttle
   placementMode: SnapgridCenter
   canBuildInImpassable: false
 
@@ -14,7 +14,7 @@
   graph: OH14_Gyroscope
   startNode: start
   targetNode: OH14_Gyroscope
-  category: construction-category-machines
+  category: construction-category-shuttle
   placementMode: SnapgridCenter
   canRotate: false
   canBuildInImpassable: false

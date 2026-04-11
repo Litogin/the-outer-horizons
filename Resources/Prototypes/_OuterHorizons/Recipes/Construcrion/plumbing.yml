@@ -1,0 +1,39 @@
+- type: construction
+  hide: false
+  id: OH14_PlumbingDuctStraight
+  graph: OH14_PlumbingPipe
+  startNode: start
+  targetNode: OH14_PlumbingDuctStraight
+  category: construction-category-plumbing
+  # placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingDuctBend
+  graph: OH14_PlumbingPipe
+  startNode: start
+  targetNode: OH14_PlumbingDuctBend
+  category: construction-category-plumbing
+  # placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingDuctTJunction
+  graph: OH14_PlumbingPipe
+  startNode: start
+  targetNode: OH14_PlumbingDuctTJunction
+  category: construction-category-plumbing
+  # placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingDuctFourway
+  graph: OH14_PlumbingPipe
+  startNode: start
+  targetNode: OH14_PlumbingDuctFourway
+  category: construction-category-plumbing
+  # placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true

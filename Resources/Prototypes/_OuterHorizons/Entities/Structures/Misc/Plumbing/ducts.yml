@@ -92,6 +92,9 @@
   id: OH14_PlumbingDuctStraight
   suffix: Straight
   components:
+  - type: Construction
+    graph: OH14_PlumbingPipe
+    node: OH14_PlumbingDuctStraight
   - type: NodeContainer
     nodes:
       duct:
@@ -116,6 +119,9 @@
   id: OH14_PlumbingDuctBend
   suffix: Bend
   components:
+  - type: Construction
+    graph: OH14_PlumbingPipe
+    node: OH14_PlumbingDuctBend
   - type: NodeContainer
     nodes:
       duct:
@@ -138,6 +144,9 @@
   id: OH14_PlumbingDuctTJunction
   suffix: T-Junction
   components:
+  - type: Construction
+    graph: OH14_PlumbingPipe
+    node: OH14_PlumbingDuctTJunction
   - type: NodeContainer
     nodes:
       duct:
@@ -158,6 +167,9 @@
   id: OH14_PlumbingDuctFourway
   suffix: Fourway
   components:
+  - type: Construction
+    graph: OH14_PlumbingPipe
+    node: OH14_PlumbingDuctFourway
   - type: NodeContainer
     nodes:
       duct:
