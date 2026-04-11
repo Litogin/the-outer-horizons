@@ -681,7 +681,7 @@
   - type: ActivatableUI
     key: enum.PlumbingFilterUiKey.Key
   - type: Flippable
-    mirrorEntity: PlumbingFilterFlipped
+    mirrorEntity: OH14_PlumbingFilterFlipped
   - type: Destructible
     thresholds:
     - trigger:
@@ -724,7 +724,7 @@
         nodeGroupID: Plumbing
         pipeDirection: North
   - type: Flippable
-    mirrorEntity: PlumbingFilter
+    mirrorEntity: OH14_PlumbingFilter
 
 # =============================================================================
 # Plumbing Synthesizer - generates reagents from power
