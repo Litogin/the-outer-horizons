@@ -4,7 +4,7 @@
   graph: OH14_APC
   startNode: start
   targetNode: OH14_APC
-  category: construction-category-utilities
+  category: construction-category-power
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -17,7 +17,7 @@
   graph: OH14_SubstationWallmount
   startNode: start
   targetNode: OH14_SubstationWallmount
-  category: construction-category-utilities
+  category: construction-category-power
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -30,7 +30,7 @@
   graph: OH14_SubstationFrame
   startNode: start
   targetNode: OH14_Substation
-  category: construction-category-utilities
+  category: construction-category-power
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
@@ -44,7 +44,7 @@
   graph: OH14_BatteryArray
   startNode: start
   targetNode: OH14_BatteryArray
-  category: construction-category-utilities
+  category: construction-category-power
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
@@ -58,7 +58,7 @@
   graph: OH14_GeneratorTEF
   startNode: start
   targetNode: OH14_GeneratorTEF
-  category: construction-category-utilities
+  category: construction-category-power
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
@@ -72,7 +72,7 @@
   graph: OH14_CableTerminal
   startNode: start
   targetNode: cable_terminal
-  category: construction-category-utilities
+  category: construction-category-power
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

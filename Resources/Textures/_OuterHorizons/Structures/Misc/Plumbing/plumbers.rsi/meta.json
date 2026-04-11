@@ -1,0 +1,106 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "bottler",
+            "directions": 4
+        },
+        {
+            "name": "disposal"
+        },
+        {
+            "name": "disposal_working",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "ductConnector",
+            "directions": 4
+        },
+        {
+            "name": "ductConnector_connected",
+            "directions": 4
+        },
+        {
+            "name": "filter",
+            "directions": 4
+        },
+        {
+            "name": "filterF",
+            "directions": 4
+        },
+        {
+            "name": "pill_press"
+        },
+        {
+            "name": "pill_press_off"
+        },
+        {
+            "name": "pill_press_off_frame0"
+        },
+        {
+            "name": "pill_press_off_frame1"
+        },
+        {
+            "name": "pill_press_off_frame2"
+        },
+        {
+            "name": "pipe_input"
+        },
+        {
+            "name": "pipe_output"
+        },
+        {
+            "name": "reaction_chamber"
+        },
+        {
+            "name": "reaction_chamber_frame0"
+        },
+        {
+            "name": "reaction_chamber_frame1"
+        },
+        {
+            "name": "reaction_chamber_frame2"
+        },
+        {
+            "name": "reaction_chamber_on"
+        },
+        {
+            "name": "synthesizer",
+            "directions": 4
+        },
+        {
+            "name": "synthesizer_inactive",
+            "directions": 4
+        },
+        {
+            "name": "synthesizer_overlay",
+            "directions": 4
+        },
+        {
+            "name": "tank"
+        },
+        {
+            "name": "tank_fuel"
+        },
+        {
+            "name": "tank_frame0"
+        },
+        {
+            "name": "tap_output"
+        }
+    ]
+}

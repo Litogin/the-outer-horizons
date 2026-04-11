@@ -76,10 +76,28 @@
 - type: entity
   name: ТЭТ Генератор
   description: Термоэлектрический Топлевный Генератор. В отличие от своих твердотопливных аналогов, потребляет горючее в литрах.
-  parent: OH14_BasicGeneratorSwitchable
+  parent: [ OH14_BasicGeneratorSwitchable, OH14_PlumbingMachineBase ]
   id: OH14_GeneratorTEF
   suffix: Топливо, 20 kW
   components:
+    - type: NodeContainer
+      examinable: true
+      nodes:
+        output_hv:
+          !type:CableDeviceNode
+          nodeGroupID: HVPower
+        output_mv:
+          !type:CableDeviceNode
+          nodeGroupID: MVPower
+          enabled: false
+        inlet:
+          !type:PlumbingNode
+          nodeGroupID: Plumbing
+          pipeDirection: North
+    - type: PlumbingDevice
+      updateInterval: 10
+    - type: PlumbingInlet
+      solutionName: tank
     - type: Construction
       graph: OH14_GeneratorTEF
       node: OH14_GeneratorTEF

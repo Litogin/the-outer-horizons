@@ -1,0 +1,31 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "ductBend",
+            "directions": 4
+        },
+        {
+            "name": "ductConnector",
+            "directions": 4
+        },
+        {
+            "name": "ductFourway",
+            "directions": 4
+        },
+        {
+            "name": "ductStraight",
+            "directions": 4
+        },
+        {
+            "name": "ductTJunction",
+            "directions": 4
+        }
+    ]
+}

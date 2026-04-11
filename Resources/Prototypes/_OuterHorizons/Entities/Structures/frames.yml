@@ -51,7 +51,9 @@
   - type: Clickable
   - type: Anchorable
 
+# =============================================================================
 # Латы
+# =============================================================================
 
 - type: entity
   id: OH14_FrameAutolathe
@@ -95,7 +97,9 @@
     graph: OH14_ArcFurnanceFrame
     node: frame1
 
+# =============================================================================
 # Подстанции
+# =============================================================================
 
 - type: entity
   id: OH14_SubstationFrame
@@ -150,7 +154,9 @@
     node: subFrame
   - type: WallMount
 
+# =============================================================================
 # Аккумы
+# =============================================================================
 
 - type: entity
   id: OH14_BatteryArrayFrame
@@ -197,3 +203,63 @@
   - type: Construction
     graph: OH14_GeneratorTEF
     node: frame
+
+# =============================================================================
+# Пламберы
+# =============================================================================
+
+- type: entity
+  id: OH14_PlumbingPillPressFrame
+  parent: OH14_FrameBasic
+  name: каркас химического пресса
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame: { state: pill_press_off_frame0 }
+          frame2: { state: pill_press_off_frame1 }
+          frame3: { state: pill_press_off_frame2 }
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
+    layers:
+    - state: pill_press_off_frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_PlumbingPillPress
+    node: frame1
+
+- type: entity
+  id: OH14_PlumbingReactorFrame
+  parent: OH14_FrameBasic
+  name: каркас реакционной камеры
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame: { state: reaction_chamber_frame0 }
+          frame2: { state: reaction_chamber_frame1 }
+          frame3: { state: reaction_chamber_frame2 }
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
+    layers:
+    - state: reaction_chamber_frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_PlumbingReactor
+    node: frame1
+
+- type: entity
+  id: OH14_PlumbingTankFrame
+  parent: OH14_FrameBasic
+  name: каркас резервуара
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
+    layers:
+    - state: tank_frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_PlumbingTank
+    node: frame1

@@ -1,9 +1,29 @@
 - type: entity
   name: гидропоника
-  parent: [ OH14_BaseStructureDynamic, OH14_Soil ]
+  parent: [ OH14_BaseStructureDynamic, OH14_Soil, OH14_PlumbingMachineBase ]
   id: OH14_Hydroponic
   description: Лоток для земли, но межпланетного класса. Имеет несколько датчиков, которые заставляют светиться непонятные для вас лампочки.
   components:
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      output_hv:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+      output_mv:
+        !type:CableDeviceNode
+        nodeGroupID: MVPower
+        enabled: false
+      inlet:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: North
+  - type: PlumbingDevice
+    updateInterval: 10
+  - type: PlumbingInlet
+    solutionName: soil
+  - type: PlumbingConnectorAppearance
+    offset: -0.35
   - type: Construction
     graph: OH14_Hydroponic
     node: OH14_HydroponicEmpty

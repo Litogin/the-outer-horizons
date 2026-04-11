@@ -4,7 +4,7 @@
   graph: OH14_HydroPot
   startNode: start
   targetNode: OH14_PlantPotEmpty
-  category: construction-category-furniture
+  category: construction-category-hydroponic
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false

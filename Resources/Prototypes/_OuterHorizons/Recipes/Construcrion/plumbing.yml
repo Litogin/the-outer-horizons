@@ -1,0 +1,77 @@
+- type: construction
+  hide: false
+  id: OH14_PlumbingDuctStraight
+  graph: OH14_PlumbingPipe
+  startNode: start
+  targetNode: OH14_PlumbingDuctStraight
+  category: construction-category-plumbing
+  # placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingDuctBend
+  graph: OH14_PlumbingPipe
+  startNode: start
+  targetNode: OH14_PlumbingDuctBend
+  category: construction-category-plumbing
+  # placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingDuctTJunction
+  graph: OH14_PlumbingPipe
+  startNode: start
+  targetNode: OH14_PlumbingDuctTJunction
+  category: construction-category-plumbing
+  # placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingDuctFourway
+  graph: OH14_PlumbingPipe
+  startNode: start
+  targetNode: OH14_PlumbingDuctFourway
+  category: construction-category-plumbing
+  # placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+
+# Оборудование
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingPillPress
+  graph: OH14_PlumbingPillPress
+  startNode: start
+  targetNode: OH14_PlumbingPillPress
+  category: construction-category-plumbing
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingReactor
+  graph: OH14_PlumbingReactor
+  startNode: start
+  targetNode: OH14_PlumbingReactor
+  category: construction-category-plumbing
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingTank
+  graph: OH14_PlumbingTank
+  startNode: start
+  targetNode: OH14_PlumbingTank
+  category: construction-category-plumbing
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
