@@ -52,6 +52,9 @@
   name: трубопроводный резервуар
   description: Большой как твоя мать, хранит до 2х тысяч унций жидкостей.
   components:
+  - type: Construction
+    graph: OH14_PlumbingTank
+    node: OH14_PlumbingTank
   - type: Sprite
     sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
@@ -328,6 +331,9 @@
   name: реакционная камера
   description: Буфер внутри которого реагенты безопасно (нет) смешиваются для реакции.
   components:
+  - type: Construction
+    graph: OH14_PlumbingReactor
+    node: OH14_PlumbingReactor
   - type: EmitSoundOnUIOpen
     sound:
       collection: Keyboard
@@ -509,6 +515,9 @@
   name: химический пресс
   description: Превращает ваши лекарства в колеса.
   components:
+  - type: Construction
+    graph: OH14_PlumbingPillPress
+    node: OH14_PlumbingPillPress
   - type: EmitSoundOnUIOpen
     sound:
       collection: Keyboard

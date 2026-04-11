@@ -37,3 +37,41 @@
   category: construction-category-plumbing
   # placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: true
+
+# Оборудование
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingPillPress
+  graph: OH14_PlumbingPillPress
+  startNode: start
+  targetNode: OH14_PlumbingPillPress
+  category: construction-category-plumbing
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingReactor
+  graph: OH14_PlumbingReactor
+  startNode: start
+  targetNode: OH14_PlumbingReactor
+  category: construction-category-plumbing
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingTank
+  graph: OH14_PlumbingTank
+  startNode: start
+  targetNode: OH14_PlumbingTank
+  category: construction-category-plumbing
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
