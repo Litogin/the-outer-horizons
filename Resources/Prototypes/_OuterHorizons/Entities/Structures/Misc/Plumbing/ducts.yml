@@ -102,7 +102,7 @@
     layers:
     - state: ductStraight
       map: [ "enum.PipeVisualLayers.Pipe" ]
-      color: "#276189"
+      # color: "#276189"
   - type: Item
     storedSprite:
     shape:
@@ -126,7 +126,7 @@
     layers:
     - state: ductBend
       map: [ "enum.PipeVisualLayers.Pipe" ]
-      color: "#276189"
+      # color: "#276189"
   - type: Item
     size: Small
 
@@ -148,7 +148,7 @@
     layers:
     - state: ductTJunction
       map: [ "enum.PipeVisualLayers.Pipe" ]
-      color: "#276189"
+      # color: "#276189"
 
 # --------------------------------
 # Fourway Duct
@@ -168,6 +168,6 @@
     layers:
     - state: ductFourway
       map: [ "enum.PipeVisualLayers.Pipe" ]
-      color: "#276189"
+      # color: "#276189"
   - type: Item
     size: Small

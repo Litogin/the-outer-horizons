@@ -49,6 +49,15 @@
             "name": "pill_press_off"
         },
         {
+            "name": "pill_press_off_frame0"
+        },
+        {
+            "name": "pill_press_off_frame1"
+        },
+        {
+            "name": "pill_press_off_frame2"
+        },
+        {
             "name": "pipe_input"
         },
         {
@@ -56,6 +65,15 @@
         },
         {
             "name": "reaction_chamber"
+        },
+        {
+            "name": "reaction_chamber_frame0"
+        },
+        {
+            "name": "reaction_chamber_frame1"
+        },
+        {
+            "name": "reaction_chamber_frame2"
         },
         {
             "name": "reaction_chamber_on"
@@ -74,6 +92,12 @@
         },
         {
             "name": "tank"
+        },
+        {
+            "name": "tank_fuel"
+        },
+        {
+            "name": "tank_frame0"
         },
         {
             "name": "tap_output"

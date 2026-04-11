@@ -135,7 +135,7 @@
   parent: [ OH14_BaseItem, OH14_BaseStructureDynamic ]
   name: горшок
   suffix: Без земли
-  description: Твоя неловкая попытка озеленить эту консервную банку.. Бтв тебе нужна земля чтобы тут можно было что то посадить.
+  description: Твоя неловкая попытка озеленить эту консервную банку.. Без земли в ней ничего не вырастет.
   categories: [ ForkFiltered ]
   components:
   - type: Item
