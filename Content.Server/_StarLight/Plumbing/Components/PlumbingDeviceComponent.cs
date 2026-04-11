@@ -23,6 +23,12 @@ public sealed partial class PlumbingDeviceComponent : Component
     public TimeSpan UpdateInterval = TimeSpan.FromSeconds(2);
 
     /// <summary>
+    ///     Попитка в лимиты, OH14-Changes
+    /// </summary>
+    [DataField]
+    public float SolutionLimit = 80f;
+
+    /// <summary>
     ///     Sound played when a UI button is clicked (toggle, select, etc.).
     /// </summary>
     [DataField]

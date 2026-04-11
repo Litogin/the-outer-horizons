@@ -95,7 +95,7 @@
           nodeGroupID: Plumbing
           pipeDirection: North
     - type: PlumbingDevice
-      updateInterval: 10
+      updateInterval: 2
     - type: PlumbingInlet
       solutionName: tank
     - type: Construction

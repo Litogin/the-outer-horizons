@@ -75,6 +75,24 @@ public sealed class PlumbingDeviceSystem : EntitySystem
             if (curTime < device.NextUpdateTime)
                 continue;
 
+            // OH14-Changes start
+            if (!TryComp<SolutionContainerManagerComponent>(uid, out var solutionManager))
+                continue;
+
+            var hasExcessSolution = false;
+            foreach (var (name, soln) in _solutionSystem.EnumerateSolutions((uid, solutionManager)))
+            {
+                if (soln.Comp.Solution.Volume < device.SolutionLimit)
+                {
+                    hasExcessSolution = true;
+                    break;
+                }
+            }
+
+            if (!hasExcessSolution)
+                continue;
+            // OH14-Changes end
+
             devicesToUpdate.Add((uid, device));
         }
 
