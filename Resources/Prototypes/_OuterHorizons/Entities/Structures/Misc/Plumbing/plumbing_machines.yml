@@ -109,6 +109,22 @@
         - ReagentId: WeldingFuel
           Quantity: 1500
 
+- type: entity
+  parent: OH14_PlumbingTank
+  id: OH14_PlumbingTankWater
+  suffix: Вода
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
+    layers:
+    - state: tank
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: Water
+          Quantity: 1500
+
 # =============================================================================
 # Plumbing Input - pour reagents into the network
 # =============================================================================

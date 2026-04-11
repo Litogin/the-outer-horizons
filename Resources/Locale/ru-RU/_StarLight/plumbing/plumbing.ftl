@@ -5,7 +5,7 @@ plumbing-input-poured = Влито { $amount }ед. в водопроводну�
 plumbing-output-empty = Выходной буфер пуст!
 plumbing-output-filled = Контейнер наполнен { $amount }ед. из водопроводной сети.
 # Reactor UI
-plumbing-reactor-window-title = Водопроводный реактор
+plumbing-reactor-window-title = Реакционная камера
 plumbing-reactor-status = Статус:
 plumbing-reactor-enabled = Включено
 plumbing-reactor-disabled = Отключено
