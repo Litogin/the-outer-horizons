@@ -77,6 +77,7 @@
     # - Belt
   - type: UnpoweredFlashlight
   - type: PointLight
+    color: "#8DB5DA"
     enabled: false
     radius: 2
     falloff: 3

@@ -166,7 +166,7 @@
   id: OH14_LightTube
   components:
   - type: LightBulb
-    color: "#967396" # FFE4CE > c1cbce
+    color: "#99A8B2" # FFE4CE > 99A8B2
     lightEnergy: 0.8
     lightRadius: 10
     lightSoftness: 1
