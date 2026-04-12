@@ -61,6 +61,7 @@
     - state: tank
   - type: PlumbingDevice
     updateInterval: 2
+    solutionLimit: 1900
   - type: PlumbingInlet
     solutionName: tank
   - type: Plungeable
