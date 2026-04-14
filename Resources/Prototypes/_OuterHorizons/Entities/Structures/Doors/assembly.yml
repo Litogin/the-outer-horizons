@@ -4,6 +4,9 @@
   name: каркас шлюза
   description: Нет, он не может задушить тебя своими дверьми, пока что.
   components:
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite

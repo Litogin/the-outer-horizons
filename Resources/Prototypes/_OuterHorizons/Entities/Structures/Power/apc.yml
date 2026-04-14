@@ -1,9 +1,10 @@
 - type: entity
   parent: BaseWallmount
-  categories: [ HideSpawnMenu ]
+  categories: [ ForkFiltered ]
   id: OH14_BaseAPC
   name: ЛКП
   description: Щиток для подачи энергии к вашему оборудованию.
+  suffix: Пуст
   placement:
     mode: SnapgridCenter
   components:
