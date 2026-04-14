@@ -75,7 +75,7 @@ public partial class BaseShuttleControl : MapGridControl
             Color.FromSrgb(IFFComponent.SelfColor));
     }
 
-    protected void DrawCircles(DrawingHandleScreen handle)
+    protected void DrawCircles(DrawingHandleScreen handle, Angle angle)
     {
         // Equatorial lines
         var gridLines = Color.LightGray.WithAlpha(0.01f);
@@ -94,24 +94,26 @@ public partial class BaseShuttleControl : MapGridControl
             if (radius > cornerDistance)
                 continue;
 
-            var color = Color.ToSrgb(gridLines).WithAlpha(0.05f);
+            var color = Color.ToSrgb(gridLines).WithAlpha(0.02f);
             var scaledRadius = MinimapScale * radius;
             var text = $"{radius:0}m";
             var textDimensions = handle.GetDimensions(Font, text, UIScale);
 
             handle.DrawCircle(origin, scaledRadius, color, false);
-            handle.DrawString(Font, ScalePosition(new Vector2(0f, -radius)) - new Vector2(0f, textDimensions.Y), text, UIScale, color);
+
+            var textAngle = angle - Math.Tau / 4;
+            var textOffset = textAngle.ToVec() * scaledRadius - new Vector2(0f, textDimensions.Y);
+            handle.DrawString(Font, origin + textOffset, text, UIScale, color);
         }
 
-        const int gridLinesRadial = 8;
+        const int gridLinesRadial = 2;
 
         for (var i = 0; i < gridLinesRadial; i++)
         {
-            Angle angle = (Math.PI / gridLinesRadial) * i;
-            // TODO: Handle distance properly.
-            var aExtent = angle.ToVec() * ScaledMinimapRadius * 1.42f;
-            var lineColor = Color.MediumSpringGreen.WithAlpha(0.02f);
-            handle.DrawLine(origin - aExtent, origin + aExtent, lineColor);
+            var lineAngle = (angle - Math.Tau / 4) + (Math.PI / gridLinesRadial) * i;
+            var lineExtent = lineAngle.ToVec() * ScaledMinimapRadius * 1.42f;
+            var lineColor = Color.LightGray.WithAlpha(0.02f);
+            handle.DrawLine(origin - lineExtent, origin + lineExtent, lineColor);
         }
     }
 

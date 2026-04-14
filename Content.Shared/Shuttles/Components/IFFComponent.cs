@@ -15,7 +15,7 @@ public sealed partial class IFFComponent : Component
     /// <summary>
     /// Default color to use for IFF if no component is found.
     /// </summary>
-    public static readonly Color IFFColor = Color.FromHex("#7A7C82");
+    public static readonly Color IFFColor = Color.FromHex("#bebfc2");
 
     [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
     public IFFFlags Flags = IFFFlags.None;
