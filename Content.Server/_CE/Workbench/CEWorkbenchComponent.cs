@@ -42,5 +42,5 @@ public sealed partial class CEWorkbenchComponent : Component
     /// Played during crafting. Can be overwritten by the crafting sound of a specific recipe.
     /// </summary>
     [DataField]
-    public SoundSpecifier CraftSound = new SoundCollectionSpecifier("CEHammering");
+    public SoundSpecifier CraftSound = new SoundCollectionSpecifier("OH14_Workbench");
 }

@@ -3,7 +3,7 @@
   id: OH14_ClothingHeadHelmetEVABasic
   categories: [ ForkFiltered ]
   name: шлем ЕВА "Пилигримм"
-  description: Интерфейс в комплект не входит.
+  description: Фонарик в комплект не входит.
   components:
   - type: Appearance
   - type: InworldSprite
@@ -50,3 +50,23 @@
     unequipDelay: 0.5
   - type: ImageOverlay
     pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying2.png"
+
+- type: entity
+  parent: OH14_ClothingHeadHelmetEVABasic
+  id: OH14_ClothingHeadHelmetOrange
+  name: шлем ЕВА "BCS"
+  description: Basic Civilian Spacesuit, общественное достояние с публичными реквезитами чертежей, максимально упрощен для возможности сборки на дому.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Head/Hardsuits/orange.rsi
+    layers:
+    - state: inworld
+      map: ["base"]
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Head/Hardsuits/orange.rsi
+    equipSound: /Audio/_OuterHorizons/Clothing/helmet_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/helmet_un.ogg
+    equipDelay: 0.2
+    unequipDelay: 0.5
+  - type: ImageOverlay
+    pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying4.png"

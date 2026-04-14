@@ -3,7 +3,7 @@
   id: OH14_ClothingOuterHardsuitEVABasic
   categories: [ ForkFiltered ]
   name: ЕВА "Пилигримм"
-  description: Наипростейший скафандр с наилучшей гибкостью для работы в открытом космосе.
+  description: Простой и гибкий скафандр с наилучшей гибкостью для работы в открытом космосе.
   components:
   - type: Item
     storedRotation: 90
@@ -31,3 +31,14 @@
     sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/uco.rsi
   - type: Clothing
     sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/uco.rsi
+
+- type: entity
+  parent: OH14_ClothingOuterHardsuitEVABasic
+  id: OH14_ClothingOuterHardsuitOrange
+  name: ЕВА "BCS"
+  description: Basic Civilian Spacesuit, общественное достояние с публичными реквезитами чертежей, максимально упрощен для возможности сборки на дому.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/orange.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/orange.rsi

@@ -8,3 +8,14 @@
     sprite: _OuterHorizons/Clothing/Shirt/basic.rsi
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Shirt/basic.rsi
+
+- type: entity
+  parent: OH14_ClothingShirtBasic
+  id: OH14_ClothingTopic
+  name: топик
+  description: Обычный черный топик. И кажется пора бы уже перестать делать у одежды акцент на сиськах..
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Shirt/topic.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Shirt/topic.rsi
