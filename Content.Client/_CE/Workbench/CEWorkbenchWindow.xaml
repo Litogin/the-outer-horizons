@@ -2,8 +2,8 @@
                xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                Title="{Loc 'ce-workbench-ui-title'}"
-               SetSize="700 500"
-               MinSize="700 300">
+               SetSize="720 500"
+               MinSize="720 300">
     <BoxContainer Orientation="Horizontal">
         <!-- Main -->
         <BoxContainer HorizontalExpand="True" VerticalExpand="True" Orientation="Horizontal">
@@ -11,8 +11,8 @@
             <BoxContainer MinWidth="350" HorizontalExpand="True" Orientation="Vertical" Margin="0 0 10 0">
                 <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
                     <!-- Search Bar -->
-                    <LineEdit Name="SearchBar" Margin="4" PlaceHolder="Search" HorizontalExpand="True" />
-                    <OptionButton Name="OptionCategories" Access="Public" MinSize="130 0" />
+                    <LineEdit Name="SearchBar" Margin="5" PlaceHolder="Search" HorizontalExpand="True" />
+                    <OptionButton Name="OptionCategories" Access="Public" MinSize="120 30" MaxSize="220 30"/>
                 </BoxContainer>
                 <!-- Crafts container -->
                 <ScrollContainer HorizontalExpand="True" VerticalExpand="True" MinSize="0 200" HScrollEnabled="False">
@@ -21,17 +21,17 @@
             </BoxContainer>
 
             <!-- Craft view (right side UI) -->
-            <BoxContainer MinWidth="350" Orientation="Vertical" HorizontalExpand="True"
+            <BoxContainer MinWidth="300" Orientation="Vertical" HorizontalExpand="True"
                           VerticalExpand="True">
                 <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
                     <PanelContainer HorizontalExpand="True" VerticalExpand="True">
                         <!-- Background -->
                         <PanelContainer.PanelOverride>
-                            <graphics:StyleBoxFlat BackgroundColor="#2b3245" />
+                            <graphics:StyleBoxFlat BackgroundColor="#2B3245" />
                         </PanelContainer.PanelOverride>
 
                         <!-- Content -->
-                        <BoxContainer HorizontalExpand="True" VerticalExpand="True" Orientation="Vertical">
+                        <BoxContainer HorizontalExpand="True" VerticalExpand="True" Orientation="Vertical" Margin="5 0 0 0">
                             <!-- Item info -->
                             <!-- icon -->
                             <EntityPrototypeView Name="ItemView"
@@ -48,7 +48,7 @@
                                 <RichTextLabel Name="ItemDescription" Margin="5" />
                             </BoxContainer>
 
-                            <controls:HLine Color="#51b5e0" Thickness="2" Margin="0 5" />
+                            <!-- <controls:HLine Color="#51b5e0" Thickness="2" Margin="0 5" /> -->
 
                             <!-- Required title -->
                             <Label Margin="5 0 0 0" Text="{Loc 'ce-workbench-recipe-list'}" />
@@ -61,10 +61,10 @@
                                 Orientation="Vertical" VerticalExpand="True"
                                 HorizontalExpand="True" />
 
-                            <controls:HLine Color="#51b5e0" Thickness="5" Margin="0 5" />
+                            <!-- <controls:HLine Color="#51b5e0" Thickness="2" Margin="0 5" /> -->
 
                             <!-- Craft button -->
-                            <Button Name="CraftButton" Text="{Loc 'ce-workbench-craft'}" />
+                            <Button Name="CraftButton" Text="{Loc 'ce-workbench-craft'}" Margin="2 2"/>
                         </BoxContainer>
                     </PanelContainer>
                 </ScrollContainer>
