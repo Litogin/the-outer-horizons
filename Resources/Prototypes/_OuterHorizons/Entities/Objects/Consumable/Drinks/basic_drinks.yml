@@ -55,17 +55,17 @@
   - type: Appearance
   - type: Sprite
     layers:
+    - state: icon
+      map: ["enum.OpenableVisuals.Layer"]
     - state: fill-1
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
-    - state: icon
-      map: ["enum.OpenableVisuals.Layer"]
   - type: SolutionContainerVisuals
     solutionName: *sol
     maxFillLevels: 5
     fillBaseName: fill-
-    inHandsMaxFillLevels: 3
-    inHandsFillBaseName: -fill-
+    # inHandsMaxFillLevels: 3
+    # inHandsFillBaseName: -fill-
 
 # ------------------------------------------------- ЗАПОЛНЕННО, ДЛЯ МАППИНГА
 - type: entity
@@ -75,10 +75,10 @@
   components:
   - type: Sprite
     layers:
-    - state: fill-5
-      map: ["enum.SolutionContainerLayers.Fill"]
     - state: icon
       map: ["enum.OpenableVisuals.Layer"]
+    - state: fill-5
+      map: ["enum.SolutionContainerLayers.Fill"]
 
 # ------------------------------------------------- С крышкой
 - type: entity
