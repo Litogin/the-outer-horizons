@@ -56,3 +56,15 @@
   canBuildInImpassable: true
   conditions:
     - !type:WallmountCondition
+
+# - type: construction
+#   hide: false
+#   id: OH14_Microwave
+#   graph: OH14_Microwave
+#   startNode: start
+#   targetNode: OH14_Microwave
+#   category: construction-category-machines
+#   objectType: Structure
+#   placementMode: SnapgridCenter
+#   canRotate: false
+#   canBuildInImpassable: false

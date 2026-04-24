@@ -102,8 +102,8 @@
   - type: PowerState
     idlePowerDraw: 5
     workingPowerDraw: 1000
-  - type: Machine
-    board: MicrowaveMachineCircuitboard
+  # - type: Machine
+  #   board: MicrowaveMachineCircuitboard
   - type: ContainerContainer
     containers:
       microwave_entity_container: !type:Container

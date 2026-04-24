@@ -263,3 +263,27 @@
   - type: Construction
     graph: OH14_PlumbingTank
     node: frame1
+
+# =============================================================================
+# Бытовуха
+# =============================================================================
+
+- type: entity
+  id: OH14_MicrowaveFrame
+  parent: OH14_FrameBasic
+  name: каркас микроволновки
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/microwave.rsi
+    layers:
+    - state: frame1
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame: { state: frame1 }
+          frame2: { state: frame2 }
+  # - type: Construction
+  #   graph: OH14_PlumbingTank
+  #   node: frame1

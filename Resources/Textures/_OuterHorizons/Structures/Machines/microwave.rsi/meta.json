@@ -8,6 +8,12 @@
     "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
     "states": [
         {
+            "name": "frame1"
+        },
+        {
+            "name": "frame2"
+        },
+        {
             "name": "mw"
         },
         {

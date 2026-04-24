@@ -87,8 +87,8 @@
     - state: open
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
       visible: false
-  - type: Machine
-    board: CellRechargerCircuitboard
+  # - type: Machine
+  #   board: CellRechargerCircuitboard
   - type: WiresPanel
     screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
     screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg

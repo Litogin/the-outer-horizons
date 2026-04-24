@@ -120,7 +120,7 @@
   #   board: HydroponicsTrayMachineCircuitboard
   # - type: WiresPanel
   - type: AmbientSound
-    volume: -4
+    volume: -5
     range: 8
     sound:
       path: /Audio/Ambience/Objects/flowing_water_open.ogg

@@ -63,7 +63,6 @@
   # - type: AccessReader
   #   containerAccessProvider: board
   - type: Door
-    bumpOpen: true
     clickOpen: true
     # closeTimeOne: 0.3
     # closeTimeTwo: 0.6
@@ -202,8 +201,12 @@
     bumpOpen: false
     openSound:
       path: /Audio/_OuterHorizons/Machines/Airlock/heavy_open.ogg
+      params:
+        volume: -6
     closeSound:
       path: /Audio/_OuterHorizons/Machines/Airlock/heavy_close.ogg
+      params:
+        volume: -6
 
 # Shuttle
 
