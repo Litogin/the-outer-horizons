@@ -4,3 +4,42 @@
   components:
   - type: GameRule
     hidden: false
+
+- type: entity
+  id: OH14_BaseGameRuleShortDelay
+  parent: OH14_BaseGameRule
+  abstract: true
+  components:
+  - type: GameRule
+    hidden: false
+    delay:
+      min:  10
+      max:  20
+
+- type: entity
+  id: OH14_BaseGameRuleLongDelay
+  parent: OH14_BaseGameRule
+  abstract: true
+  components:
+  - type: GameRule
+    hidden: false
+    delay:
+      min:  30
+      max:  60
+
+# Основное
+
+- type: entityTable
+  id: OH14_BasicGameRulesTable
+  table: !type:AllSelector
+    children:
+      - !type:NestedSelector
+        tableId: OH14_BasicEventsTable
+
+- type: entity
+  id: OH14_BasicStationEventScheduler
+  parent: OH14_BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    scheduledGameRules: !type:NestedSelector
+      tableId: OH14_BasicGameRulesTable

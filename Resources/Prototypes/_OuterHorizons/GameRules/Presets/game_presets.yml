@@ -39,3 +39,4 @@
   description: adventure-description
   rules:
     - OH14_MeteorSwarmScheduler
+    - OH14_BasicStationEventScheduler

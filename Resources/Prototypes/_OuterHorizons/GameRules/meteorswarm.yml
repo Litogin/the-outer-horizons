@@ -33,7 +33,7 @@
 # Game Rules
 
 - type: entity
-  parent: OH14_BaseGameRule
+  parent: OH14_BaseGameRuleShortDelay
   id: OH14_GameRuleMeteorSwarm
   abstract: true
   components:
