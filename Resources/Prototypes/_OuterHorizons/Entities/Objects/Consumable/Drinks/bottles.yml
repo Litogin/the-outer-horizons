@@ -12,7 +12,7 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
+        maxVol: 80
   - type: Sprite
     sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle_inworld.rsi
   - type: GenericVisualizer
@@ -41,7 +41,7 @@
       drink:
         reagents:
         - ReagentId: Water
-          Quantity: 30
+          Quantity: 80
   - type: Label
     currentLabel: reagent-name-water
 
@@ -61,7 +61,7 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 120
+        maxVol: 160
   - type: Sprite
     sprite: _OuterHorizons/Objects/Consumable/Drinks/canister_inworld.rsi
   - type: GenericVisualizer
@@ -90,7 +90,7 @@
       drink:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 120
+          Quantity: 160
   - type: Label
     currentLabel: reagent-name-welding-fuel
 
@@ -110,7 +110,7 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
+        maxVol: 80
   - type: Sprite
     sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas_inworld.rsi
   - type: GenericVisualizer
@@ -139,6 +139,6 @@
       drink:
         reagents:
         - ReagentId: Kvass
-          Quantity: 30
+          Quantity: 80
   - type: Label
     currentLabel: reagent-name-kvass

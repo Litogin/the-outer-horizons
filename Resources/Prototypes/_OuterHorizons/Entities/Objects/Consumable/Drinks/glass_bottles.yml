@@ -1,0 +1,81 @@
+- type: entity
+  parent: [ OH14_ItemSFXGlass, OH14_DrinkBaseOpenable, OH14_DrinkBase, OH14_DrinkVisualsFill ]
+  id: OH14_DrinkGlassBottle
+  name: бутылочка
+  description: Стеклянная бутылочка для ваших реагентов.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: Item
+    sprite: _OuterHorizons/Objects/inhands.rsi
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: s-inhand-left
+        color: "#597398"
+      right:
+      - state: s-inhand-right
+        color: "#597398"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 40
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle_inworld.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"} # lid off
+          False: {state: "icon_empty"} # lid on
+      enum.InworldSpriteState.State:
+        enum.SolutionContainerLayers.Fill:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle_inworld.rsi}
+        enum.OpenableVisuals.Layer:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle_inworld.rsi}
+  - type: FitsInDispenser
+    solution: drink
+
+- type: entity
+  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkGlassBottle]
+  id: OH14_DrinkGlassBottleBicaridine
+  suffix: Бикаредин
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 40
+  - type: Label
+    currentLabel: reagent-name-bicaridine
+
+- type: entity
+  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkGlassBottle]
+  id: OH14_DrinkGlassBottleDexalin
+  suffix: Дексалин
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Dexalin
+          Quantity: 40
+  - type: Label
+    currentLabel: reagent-name-dexalin
+
+- type: entity
+  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkGlassBottle]
+  id: OH14_DrinkGlassBottleOculine
+  suffix: Окулин
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Oculine
+          Quantity: 40
+  - type: Label
+    currentLabel: reagent-name-oculine

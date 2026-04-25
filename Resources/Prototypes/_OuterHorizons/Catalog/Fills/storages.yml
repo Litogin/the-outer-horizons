@@ -86,6 +86,9 @@
           amount: 4
         - id: OH14_MedipenPuncturase
           amount: 4
+        - id: OH14_DrinkGlassBottleOculine
+        - id: OH14_DrinkGlassBottleDexalin
+        - id: OH14_DrinkGlassBottleBicaridine
 
 - type: entity
   parent: OH14_CabinetEngi

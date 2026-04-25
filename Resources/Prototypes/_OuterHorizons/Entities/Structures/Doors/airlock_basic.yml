@@ -64,10 +64,7 @@
   #   containerAccessProvider: board
   - type: Door
     clickOpen: true
-    # closeTimeOne: 0.3
-    # closeTimeTwo: 0.6
-    # openTimeOne: 0.3
-    # openTimeTwo: 0.6
+    bumpOpen: false
     openingAnimationTime: 1
     closingAnimationTime: 1
     crushDamage:
