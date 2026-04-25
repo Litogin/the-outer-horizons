@@ -1,7 +1,7 @@
 - type: job
   id: OH14_UcoRole
-  name: United Colonial Organization
-  description: О.К.О. (Или UCO). Остатки бывшей корпорации по застройке и расширению колоний на дальних планетах.
+  name: Колонист
+  description: Колонист, в бывшем на контракте с United Colonial Organization.
   playTimeTracker: OH14_UcoRole
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone

@@ -1,0 +1,6 @@
+- type: entity
+  id: OH14_BaseGameRule
+  abstract: true
+  components:
+  - type: GameRule
+    hidden: false

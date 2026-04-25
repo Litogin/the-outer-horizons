@@ -1,7 +1,7 @@
 - type: job
   id: OH14_RreRole
-  name: Ringnova Resources Exstraction
-  description: Рингнова Р.Е. Остатки бывшей компании, что была развернута в кольцах сатурна для, как ни странно, добычи ресурсов.
+  name: Поселенец
+  description: Поселенец, в бывшем сотрудник компании Ringnova RE.
   playTimeTracker: OH14_RreRole
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone

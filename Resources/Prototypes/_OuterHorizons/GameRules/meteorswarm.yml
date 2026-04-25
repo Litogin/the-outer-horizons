@@ -1,0 +1,127 @@
+- type: entityTable
+  id: OH14_BasicMeteorSwarmEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: OH14_GameRuleSpaceDustMinor
+    - id: OH14_GameRuleSpaceDustMajor
+    - id: OH14_GameRuleMeteorSwarmSmall
+    - id: OH14_GameRuleMeteorSwarmMedium
+    # - id: OH14_GameRuleMeteorSwarmLarge
+
+- type: weightedRandomEntity
+  id: OH14_MeteorSpawnAsteroidWallTable
+  weights:
+    OH14_BaseWallStone: 3
+    OH14_BaseWallIce: 0.5
+    OH14_BaseWallStoneOre: 0.2
+
+# Event Schedulers
+
+- type: entity
+  parent: OH14_BaseGameRule
+  id: OH14_MeteorSwarmScheduler
+  components:
+  - type: GameRule
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 1
+    minMaxEventTiming:
+      min: 10
+      max: 720
+    scheduledGameRules: !type:NestedSelector
+      tableId: OH14_BasicMeteorSwarmEventsTable
+
+# Game Rules
+
+- type: entity
+  parent: OH14_BaseGameRule
+  id: OH14_GameRuleMeteorSwarm
+  abstract: true
+  components:
+  - type: GameRule
+  - type: StationEvent
+    reoccurrenceDelay: 1
+    earliestStart: 1
+    minimumPlayers: 0
+  - type: MeteorSwarm
+
+- type: entity
+  parent: OH14_GameRuleMeteorSwarm
+  id: OH14_GameRuleSpaceDustMinor
+  components:
+  - type: StationEvent
+    weight: 44
+    earliestStart: 2
+    minimumPlayers: 0
+  - type: MeteorSwarm
+    announcement: null
+    announcementSound: null
+    nonDirectional: true
+    meteors:
+      OH14_SpaceDust: 1
+    waves:
+      min: 2
+      max: 3
+    meteorsPerWave:
+      min: 3
+      max: 5
+
+- type: entity
+  parent: OH14_GameRuleMeteorSwarm
+  id: OH14_GameRuleSpaceDustMajor
+  components:
+  - type: StationEvent
+    weight: 22
+    minimumPlayers: 0
+  - type: MeteorSwarm
+    announcement: Мелкие огоньки мерцают на горизонте, стремительно приближаясь к вам. По всей видимости, прибывает внеочередной дождь из мусора.
+    announcementSound: null
+    nonDirectional: true
+    meteors:
+      OH14_SpaceDust: 1
+    waves:
+      min: 2
+      max: 3
+    meteorsPerWave:
+      min: 8
+      max: 12
+
+- type: entity
+  parent: OH14_GameRuleMeteorSwarm
+  id: OH14_GameRuleMeteorSwarmSmall
+  components:
+  - type: StationEvent
+    weight: 18
+    minimumPlayers: 0
+  - type: MeteorSwarm
+    announcement: Поток каменных глыб маячит на горизонте колец, стремительно приближаясь к вам. По всей видимости, пора искать укрытие.
+    announcementSound: null
+    meteors:
+      OH14_MeteorSmall: 12
+      OH14_MeteorMedium: 2
+
+- type: entity
+  parent: OH14_GameRuleMeteorSwarm
+  id: OH14_GameRuleMeteorSwarmMedium
+  components:
+  - type: StationEvent
+    weight: 10
+  - type: MeteorSwarm
+    announcement: Поток больших каменных глыб маячит на горизонте колец, стремительно приближаясь к вам. По всей видимости, пора искать укрытие.
+    announcementSound: null
+    meteors:
+      OH14_MeteorSmall: 10
+      OH14_MeteorMedium: 6
+
+- type: entity
+  parent: OH14_GameRuleMeteorSwarm
+  id: OH14_GameRuleMeteorSwarmLarge
+  components:
+  - type: StationEvent
+    weight: 5
+  - type: MeteorSwarm
+    announcement: Поток больших каменных глыб маячит на горизонте колец, стремительно приближаясь к вам. По всей видимости, пора искать укрытие.
+    announcementSound: null
+    meteors:
+      OH14_MeteorSmall: 10
+      OH14_MeteorMedium: 8
+      OH14_MeteorLarge: 2

@@ -15,7 +15,7 @@
   - extended
   - shittersafari
   name: extended-title
-  showInVote: true
+  showInVote: false
   description: extended-description
 
 - type: gamePreset
@@ -28,3 +28,14 @@
   maxPlayers: 5
   rules:
     - Sandbox
+
+- type: gamePreset
+  id: OH14_RingaAdventure
+  alias:
+  - adventure
+  - normal_gamemode
+  name: adventure-title
+  showInVote: true
+  description: adventure-description
+  rules:
+    - OH14_MeteorSwarmScheduler
