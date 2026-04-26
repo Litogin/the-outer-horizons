@@ -9,7 +9,7 @@
   - type: SpamEmitSoundRequirePower
   - type: SpamEmitSound
     minInterval: 10
-    maxInterval: 15
+    maxInterval: 25
     sound:
       collection: OH14_ComputerSpam
       params:
