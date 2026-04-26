@@ -8,19 +8,19 @@
     - type: SimpleDebrisSelector
       debrisTable:
         - id: OH14_IceDebrisSmall
-          prob: 0.5
+          prob: 0.1
         - id: OH14_IceDebrisMedium
-          prob: 0.4
+          prob: 0.1
         - id: OH14_IceDebrisLarge
-          prob: 0.3
+          prob: 0.1
         - id: OH14_IceDebrisLarger
-          prob: 0.2
+          prob: 0.1
         - id: OH14_AsteroidDebrisSmall
           prob: 0.3
         - id: OH14_AsteroidDebrisMedium
-          prob: 0.2
+          prob: 0.5
         - id: OH14_AsteroidDebrisLarge
-          prob: 0.15
+          prob: 0.3
         - id: OH14_AsteroidDebrisLarger
           prob: 0.1
     # - type: NoiseDrivenDebrisSelector

@@ -1,0 +1,10 @@
+- type: soundCollection
+  id: OH14_MetalThud
+  files:
+  - /Audio/_OuterHorizons/Effects/metal_hit_1.ogg
+
+- type: soundCollection
+  id: OH14_MetalThudAlt
+  files:
+  - /Audio/_OuterHorizons/Effects/heavy_metal_hit_1.ogg
+  - /Audio/_OuterHorizons/Effects/heavy_metal_hit_2.ogg

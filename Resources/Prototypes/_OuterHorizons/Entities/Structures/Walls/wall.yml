@@ -5,6 +5,10 @@
   name: обыкновенная стена
   description: Держит экипаж внутри и грейтайдов снаружи.
   components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: OH14_MetalThud
   - type: ExaminableDamage
     messages: OH14_WallMessages
   - type: Construction

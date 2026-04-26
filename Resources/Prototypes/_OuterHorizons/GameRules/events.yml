@@ -14,6 +14,7 @@
     duration: 20
     maxDuration: 120
   - type: PowerGridCheckRule
+    powerOnSound: nil
 
 - type: entity
   parent: OH14_BaseGameRule

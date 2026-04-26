@@ -5,6 +5,18 @@
   name: ЕВА "Пилигримм"
   description: Простой и гибкий скафандр с наилучшей гибкостью для работы в открытом космосе.
   components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Clothing/hardsuit_pick.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Clothing/hardsuit_pick.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Clothing/hardsuit_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Clothing/hardsuit_drop.ogg
   - type: Item
     storedRotation: 90
     size: Huge

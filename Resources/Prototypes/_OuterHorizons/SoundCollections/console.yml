@@ -1,0 +1,7 @@
+- type: soundCollection
+  id: OH14_ComputerSpam
+  files:
+  - /Audio/_OuterHorizons/Machines/pc_ambient1.ogg
+  - /Audio/_OuterHorizons/Machines/pc_ambient2.ogg
+  - /Audio/_OuterHorizons/Machines/pc_ambient3.ogg
+  - /Audio/_OuterHorizons/Machines/pc_ambient4.ogg

@@ -1,5 +1,5 @@
 - type: entity
-  parent: IDCardStandard
+  parent: [ OH14_ItemSFXSmall, IDCardStandard ]
   id: OH14_IDCardBasic
   categories: [ ForkFiltered ]
   name: ID карта

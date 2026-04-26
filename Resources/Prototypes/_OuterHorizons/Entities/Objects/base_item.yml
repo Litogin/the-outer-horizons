@@ -143,6 +143,23 @@
       path: /Audio/_OuterHorizons/Items/alt_drop.ogg
 
 - type: entity
+  id: OH14_ItemSFXSmall # Маленькость
+  abstract: true
+  components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/smoll_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/smoll_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/smoll_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/smoll_drop.ogg
+
+- type: entity
   id: OH14_ItemSFXTool # Инструменты
   abstract: true
   components:
