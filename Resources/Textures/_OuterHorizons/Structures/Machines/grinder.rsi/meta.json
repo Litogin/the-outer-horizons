@@ -12,6 +12,9 @@
         },
         {
             "name":"grinder_beaker_attached"
+        },
+        {
+            "name":"frame1"
         }
     ]
 }

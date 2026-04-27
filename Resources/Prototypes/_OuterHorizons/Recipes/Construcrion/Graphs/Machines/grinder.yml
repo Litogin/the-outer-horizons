@@ -1,0 +1,52 @@
+- type: constructionGraph
+  id: OH14_ReagentGrinder
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: frame1
+      entity: OH14_GrinderFrame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: OH14_ReagentGrinder
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Components
+              amount: 4
+              doAfter: 1
+            - material: OH14_Materials
+              amount: 4
+              doAfter: 1
+    - node: OH14_ReagentGrinder
+      entity: OH14_ReagentGrinder
+      edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 4
+          steps:
+            - tool: Prying
+              doAfter: 2
+

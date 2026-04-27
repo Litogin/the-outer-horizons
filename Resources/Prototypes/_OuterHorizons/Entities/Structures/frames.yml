@@ -273,6 +273,17 @@
   parent: OH14_FrameBasic
   name: каркас микроволновки
   components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.16,0.3,0.16"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
   - type: Sprite
     sprite: _OuterHorizons/Structures/Machines/microwave.rsi
     layers:
@@ -284,6 +295,20 @@
         enum.ConstructionVisuals.Layer:
           frame: { state: frame1 }
           frame2: { state: frame2 }
-  # - type: Construction
-  #   graph: OH14_PlumbingTank
-  #   node: frame1
+  - type: Construction
+    graph: OH14_Microwave
+    node: frame1
+
+- type: entity
+  id: OH14_GrinderFrame
+  parent: OH14_FrameBasic
+  name: каркас измельчителя
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/grinder.rsi
+    layers:
+    - state: frame1
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_ReagentGrinder
+    node: frame1
