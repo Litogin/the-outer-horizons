@@ -79,3 +79,17 @@
           Quantity: 40
   - type: Label
     currentLabel: reagent-name-oculine
+
+- type: entity
+  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkGlassBottle]
+  id: OH14_DrinkGlassBottleNutri
+  suffix: Нутриенты
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: EZNutrient
+          Quantity: 40
+  - type: Label
+    currentLabel: reagent-name-e-z-nutrient

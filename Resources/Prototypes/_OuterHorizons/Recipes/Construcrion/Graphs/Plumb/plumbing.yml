@@ -85,3 +85,127 @@
       steps:
       - tool: Prying
         doAfter: 1
+
+# Фильтры
+
+- type: constructionGraph
+  id: OH14_PlumbingFilter
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: OH14_PlumbingFilter
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+    - to: OH14_PlumbingFilterFlipped
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Components
+        amount: 1
+        doAfter: 1
+
+  - node: OH14_PlumbingFilter
+    entity: OH14_PlumbingFilter
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_PlumbingFilterFlipped
+    entity: OH14_PlumbingFilterFlipped
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetComponents1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+
+# Буфера
+
+- type: constructionGraph
+  id: OH14_PlumbingInput
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: OH14_PlumbingInput
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Materials
+        amount: 1
+        doAfter: 1
+    - to: OH14_PlumbingOutput
+      steps:
+      - material: OH14_Piping
+        amount: 1
+        doAfter: 1
+      - material: OH14_Materials
+        amount: 1
+        doAfter: 1
+
+  - node: OH14_PlumbingInput
+    entity: OH14_PlumbingInput
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetMaterials1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1
+  - node: OH14_PlumbingOutput
+    entity: OH14_PlumbingOutput
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: OH14_SheetPipes1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: OH14_SheetMaterials1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Prying
+        doAfter: 1

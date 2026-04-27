@@ -99,6 +99,15 @@
 
 - type: entity
   parent: OH14_PlumbingTank
+  id: OH14_PlumbingTankFuelEmpty
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
+    layers:
+    - state: tank_fuel
+
+- type: entity
+  parent: OH14_PlumbingTank
   id: OH14_PlumbingTankFuel
   suffix: Топливо
   components:
@@ -138,6 +147,9 @@
   name: водопроводный входной буфер
   description: Позволит тебе залить в местную сеть трубопровода яд.
   components:
+  - type: Construction
+    graph: OH14_PlumbingInput
+    node: OH14_PlumbingInput
   - type: Physics
     bodyType: Static
     canCollide: false
@@ -275,6 +287,9 @@
   name: водопроводный выходной буфер
   description: Позволит тебе черпнуть небольшой объем жидкостей из водопровода.
   components:
+  - type: Construction
+    graph: OH14_PlumbingInput
+    node: OH14_PlumbingOutput
   - type: Physics
     bodyType: Static
     canCollide: false
@@ -647,8 +662,11 @@
   parent: OH14_PlumbingMachineBase
   id: OH14_PlumbingFilter
   name: водопроводный фильтр
-  description: Вход через желтый порт, выход через красные.
+  description: Вход через красный порт, выход через желтые.
   components:
+  - type: Construction
+    graph: OH14_PlumbingFilter
+    node: OH14_PlumbingFilter
   - type: Physics
     bodyType: Static
     canCollide: false
@@ -730,6 +748,9 @@
   id: OH14_PlumbingFilterFlipped
   suffix: Flipped
   components:
+  - type: Construction
+    graph: OH14_PlumbingFilter
+    node: OH14_PlumbingFilterFlipped
   - type: Physics
     bodyType: Static
     canCollide: false
