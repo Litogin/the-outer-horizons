@@ -42,6 +42,19 @@
 
 - type: construction
   hide: false
+  id: OH14_WindowDirectional
+  graph: OH14_WindowDirectional
+  startNode: start
+  targetNode: OH14_WindowDirectional
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
   id: OH14_Airlock
   graph: OH14_Airlock
   startNode: start

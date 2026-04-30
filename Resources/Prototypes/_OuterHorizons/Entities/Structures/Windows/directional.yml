@@ -8,6 +8,9 @@
     snap:
     - Wall
   components:
+  - type: Construction
+    graph: OH14_WindowDirectional
+    node: OH14_WindowDirectional
   - type: Destructible
     thresholds:
     - trigger:
