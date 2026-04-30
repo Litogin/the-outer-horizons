@@ -176,8 +176,6 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalBreak
-            - !type:ChangeConstructionNodeBehavior
-              node: machineFrame
             - !type:DoActsBehavior
               acts: ["Destruction"]
         - trigger:

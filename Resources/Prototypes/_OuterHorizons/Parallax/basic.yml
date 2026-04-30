@@ -14,8 +14,15 @@
     - texture:
         !type:ImageParallaxTextureSource
         path: "/Textures/_OuterHorizons/Parallaxes/PlxPlanet_Saturn01.png"
+      slowness: 0.995
+      scale: "1.5, 1.5"
+      tiled: false
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_OuterHorizons/Parallaxes/Enceladus.png"
       slowness: 0.992
-      scale: "1, 1"
+      worldHomePosition: "-5200, -1800"
+      scale: "0.3, 0.3"
       tiled: false
     - texture: # Debris
         !type:ImageParallaxTextureSource

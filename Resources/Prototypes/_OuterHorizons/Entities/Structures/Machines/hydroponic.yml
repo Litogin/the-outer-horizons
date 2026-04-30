@@ -109,8 +109,6 @@
         !type:DamageTrigger
         damage: 100
       behaviors:
-      - !type:ChangeConstructionNodeBehavior
-        node: machineFrame
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
@@ -167,8 +165,6 @@
         !type:DamageTrigger
         damage: 100
       behaviors:
-      - !type:ChangeConstructionNodeBehavior
-        node: machineFrame
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
