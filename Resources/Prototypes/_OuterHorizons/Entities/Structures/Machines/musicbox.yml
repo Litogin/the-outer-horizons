@@ -7,12 +7,12 @@
   - type: Item
     size: Normal
   - type: Sprite
+    noRot: true
     sprite: _OuterHorizons/Objects/Misc/musicbox.rsi
     layers:
     - state: off
       map: ["enum.JukeboxVisualLayers.Base"]
     - state: on_unshaded
-      shader: unshaded
   - type: Transform
     anchored: true
   - type: Jukebox

@@ -5,7 +5,7 @@
   name: атмос терминал
   description: Терминал для работы с вентиляцией и датчиками газа, не вайбовостью.
   components:
-  - type: PowerSwitch
+  # - type: PowerSwitch
   - type: StationAiWhitelist
   - type: Electrified
     enabled: false
@@ -85,7 +85,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
     - state: screen
       map: ["airAlarmState"]
-      shader: unshaded
+      # shader: unshaded
   - type: Construction
     graph: OH14_AirControl
     node: OH14_AirControl

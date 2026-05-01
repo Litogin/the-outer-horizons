@@ -4,6 +4,7 @@
   name: микроволновка
   description: Это магия.
   components:
+  - type: PowerSwitch
   - type: Construction
     graph: OH14_Microwave
     node: OH14_Microwave

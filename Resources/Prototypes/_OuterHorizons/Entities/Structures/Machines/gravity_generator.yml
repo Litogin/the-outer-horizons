@@ -5,6 +5,11 @@
   name: генератор гравитации
   description: Вы не знаете как это работает, ваши коллеги не знают как это работает, никто не знает как это работает, используйте на свой страх и риск.
   components:
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 2
+    totalIntensity: 200
   - type: Sprite
     sprite: _OuterHorizons/Structures/Machines/gravity_generator.rsi
     snapCardinals: true
@@ -36,11 +41,18 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
+      - !type:ExplodeBehavior
       - !type:SpawnEntitiesBehavior
         spawn:
-          MachineFrameDestroyed:
+          OH14_SheetMaterials1:
             min: 1
-            max: 1
+            max: 3
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+            CarbonDioxide: 340.5701689 # carbon dioxide
+          temperature: 373.15
   - type: WiresPanel
     screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
     screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
