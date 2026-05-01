@@ -6,6 +6,13 @@
   suffix: Астероид
   description: Хранит руды внутри и грейтайдов снаружи.
   components:
+  - type: Appearance
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 2
+    trackAllDamage: true
+    damageOverlay:
+      sprite: _OuterHorizons/Structures/Walls/damage.rsi
   - type: Tag
     tags:
       - Wall

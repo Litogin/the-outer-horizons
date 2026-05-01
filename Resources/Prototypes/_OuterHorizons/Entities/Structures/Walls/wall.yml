@@ -5,13 +5,13 @@
   name: обыкновенная стена
   description: Держит экипаж внутри и грейтайдов снаружи.
   components:
-  # - type: Appearance
-  # - type: DamageVisuals
-  #   thresholds: [5, 10, 20]
-  #   damageDivisor: 2
-  #   trackAllDamage: true
-  #   damageOverlay:
-  #     sprite: _OuterHorizons/Structures/Walls/damage.rsi
+  - type: Appearance
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 8
+    trackAllDamage: true
+    damageOverlay:
+      sprite: _OuterHorizons/Structures/Walls/damage.rsi
   - type: MeleeSound
     soundGroups:
       Brute:
@@ -99,6 +99,12 @@
   categories: [ ForkFiltered ]
   name: укрепленная стена
   components:
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 10
+    trackAllDamage: true
+    damageOverlay:
+      sprite: _OuterHorizons/Structures/Walls/damage.rsi
   - type: Sprite
     sprite: _OuterHorizons/Structures/Walls/reinforced.rsi
   - type: Icon
@@ -169,6 +175,12 @@
   id: OH14_WallShuttle
   name: стена шаттла
   components:
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 10
+    trackAllDamage: true
+    damageOverlay:
+      sprite: _OuterHorizons/Structures/Walls/damage.rsi
   - type: Sprite
     sprite: _OuterHorizons/Structures/Walls/shuttle.rsi
   - type: Icon

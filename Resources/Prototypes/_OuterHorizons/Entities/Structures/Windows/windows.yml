@@ -5,6 +5,12 @@
   name: обыкновенное окно
   description: Не бить, очень обидчивое, может разбиться.
   components:
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    # damageDivisor: 8
+    trackAllDamage: true
+    damageOverlay:
+      sprite: _OuterHorizons/Structures/Windows/damage.rsi
   - type: Construction
     graph: OH14_Window
     node: OH14_Window
