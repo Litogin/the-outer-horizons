@@ -15,6 +15,12 @@
     },
     {
       "name": "upgrade"
+    },
+    {
+      "name": "door_board"
+    },
+    {
+      "name": "door_board_inworld"
     }
   ]
 }

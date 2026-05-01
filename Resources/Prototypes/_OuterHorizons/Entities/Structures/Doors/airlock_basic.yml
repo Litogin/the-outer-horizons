@@ -57,11 +57,11 @@
   - type: LayerChangeOnWeld
     unWeldedLayer: AirlockLayer
     weldedLayer: WallLayer
-  # - type: ContainerFill
-  #   containers:
-  #     board: [ DoorElectronics ]
-  # - type: AccessReader
-  #   containerAccessProvider: board
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronics ]
+  - type: AccessReader
+    containerAccessProvider: board
   - type: Door
     clickOpen: true
     bumpOpen: false

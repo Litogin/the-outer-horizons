@@ -1,0 +1,57 @@
+- type: entity
+  id: OH14_DoorElectronics
+  parent: [ OH14_BaseItem, BaseElectronics ]
+  name: плата шлюза
+  description: Плата для настройки доступов к шлюзу.
+  components:
+    - type: Appearance
+    - type: InworldSprite
+    - type: GenericVisualizer
+      visuals:
+        enum.InworldSpriteState.State:
+          base:
+            True: {state: door_board}
+            False: {state: door_board_inworld}
+    - type: Sprite
+      sprite: _OuterHorizons/Objects/Materials/circuitboard.rsi
+      state: door_board_inworld
+    - type: Tag
+      tags:
+        - DoorElectronics
+    - type: DoorElectronics
+    - type: AccessReader
+    - type: ActivatableUI
+      key: enum.DoorElectronicsConfigurationUiKey.Key
+      requiredItems:
+        tags:
+        - DoorElectronicsConfigurator
+    - type: UserInterface
+      interfaces:
+        enum.DoorElectronicsConfigurationUiKey.Key:
+          type: DoorElectronicsBoundUserInterface
+
+# Доступы
+
+- type: entity
+  parent: OH14_DoorElectronics
+  id: OH14_DoorElectronicsSecurity
+  suffix: Security
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  parent: OH14_DoorElectronics
+  id: OH14_DoorElectronicsRRE
+  suffix: RRE
+  components:
+  - type: AccessReader
+    access: [["RRE"]]
+
+- type: entity
+  parent: OH14_DoorElectronics
+  id: OH14_DoorElectronicsUCO
+  suffix: UCO
+  components:
+  - type: AccessReader
+    access: [["UCO"]]

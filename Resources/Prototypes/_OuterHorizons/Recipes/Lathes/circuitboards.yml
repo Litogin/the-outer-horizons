@@ -45,3 +45,11 @@
   materials:
     OH14_Components: 100
     OH14_Electronics: 100
+
+- type: latheRecipe
+  id: OH14_DoorElectronics
+  completetime: 3
+  result: OH14_DoorElectronics
+  materials:
+    OH14_Components: 100
+    OH14_Electronics: 100

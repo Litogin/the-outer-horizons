@@ -109,7 +109,7 @@
         acts: [ "Destruction" ]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronics ]
+      board: [ OH14_DoorElectronics ]
   - type: AccessReader
     containerAccessProvider: board
   - type: ContainerContainer

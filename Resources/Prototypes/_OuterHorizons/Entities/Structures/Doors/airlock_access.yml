@@ -1,0 +1,68 @@
+# UCO
+
+- type: entity
+  id: OH14_AirlockAccessUCO
+  parent: OH14_Airlock
+  suffix: UCO
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronicsUCO ]
+
+- type: entity
+  id: OH14_AirlockGlassAccessUCO
+  parent: OH14_AirlockGlass
+  suffix: UCO
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronicsUCO ]
+
+- type: entity
+  id: OH14_AirlockExternalAccessUCO
+  parent: OH14_AirlockExternal
+  suffix: UCO
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronicsUCO ]
+
+# RRE
+
+- type: entity
+  id: OH14_AirlockAccessRRE
+  parent: OH14_Airlock
+  suffix: RRE
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronicsRRE ]
+
+- type: entity
+  id: OH14_AirlockGlassAccessRRE
+  parent: OH14_AirlockGlass
+  suffix: RRE
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronicsRRE ]
+
+- type: entity
+  id: OH14_AirlockExternalAccessRRE
+  parent: OH14_AirlockExternal
+  suffix: RRE
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronicsSecurity ]
+
+# Security
+
+- type: entity
+  id: OH14_AirlockAccessSecurity
+  parent: OH14_Airlock
+  suffix: Security
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronicsSecurity ]
