@@ -8,6 +8,7 @@
   components:
   - type: SpamEmitSoundRequirePower
   - type: SpamEmitSound
+    enabled: false
     minInterval: 10
     maxInterval: 25
     sound:
@@ -18,6 +19,7 @@
         variation: 0.05
   - type: AmbientOnPowered
   - type: AmbientSound
+    enabled: false
     volume: 1
     range: 4
     sound:

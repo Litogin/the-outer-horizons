@@ -25,7 +25,7 @@
     graph: OH14_Girder
     node: OH14_Girder
   - type: Sprite
-    noRot: true
+    # noRot: true
     sprite: _OuterHorizons/Structures/Walls/girders.rsi
     state: wall_girder
   - type: Damageable
