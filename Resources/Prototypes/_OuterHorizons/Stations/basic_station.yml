@@ -39,9 +39,9 @@
           minimumDistance: 5000
           maximumDistance: 10000
           # hide: true
-          nameGrid: true
-          minCount: 3
-          maxCount: 3
+          # nameGrid: true
+          minCount: 1
+          maxCount: 1
           stationGrid: false
           paths:
           - /Maps/_OuterHorizons/Direlicts/Discovery.yml

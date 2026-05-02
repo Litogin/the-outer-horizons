@@ -7,6 +7,7 @@
       densityNoiseChannel: Density
     - type: SimpleDebrisSelector
       debrisTable:
+        # Простые ебучие камушки
         - id: OH14_IceDebrisSmall
           prob: 0.1
         - id: OH14_IceDebrisMedium
@@ -23,13 +24,47 @@
           prob: 0.3
         - id: OH14_AsteroidDebrisLarger
           prob: 0.1
-    # - type: NoiseDrivenDebrisSelector
-    #   noiseChannel: Wreck
-    #   debrisTable:
-    #     - id: ScrapDebrisSmall
-    #     - id: ScrapDebrisMedium
-    #     - id: ScrapDebrisLarge
-    #       prob: 0.5
+        # Обломки
+        # Кура
+        - id: OH14_BaseDirelictKutlum1
+          prob: 1
+        - id: OH14_BaseDirelictKutlum2
+          prob: 1
+        # Диска
+        - id: OH14_BaseDirelictDiscovery1
+          prob: 1
+        - id: OH14_BaseDirelictDiscovery2
+          prob: 1
+        - id: OH14_BaseDirelictDiscovery3
+          prob: 1
+        # Консерва
+        - id: OH14_BaseDirelictTinCan1
+          prob: 1
+        - id: OH14_BaseDirelictTinCan2
+          prob: 1
+        - id: OH14_BaseDirelictTinCan3
+          prob: 1
+        # Хаулер
+        - id: OH14_BaseDirelictHauler1
+          prob: 1
+        - id: OH14_BaseDirelictHauler2
+          prob: 1
+        - id: OH14_BaseDirelictHauler3
+          prob: 1
+        # Мика
+        - id: OH14_BaseDirelictMika1
+          prob: 1
+        - id: OH14_BaseDirelictMika2
+          prob: 1
+        - id: OH14_BaseDirelictMika3
+          prob: 1
+        # 20б
+        - id: OH14_BaseDirelictTS_20b1
+          prob: 1
+        - id: OH14_BaseDirelictTS_20b2
+          prob: 1
+        - id: OH14_BaseDirelictTS_20b3
+          prob: 1
     - type: NoiseRangeCarver
       ranges:
         - 0.4, 0.6
