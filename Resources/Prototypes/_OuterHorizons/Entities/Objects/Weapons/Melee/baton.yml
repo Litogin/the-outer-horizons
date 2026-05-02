@@ -1,0 +1,37 @@
+- type: entity
+  name: тонфа
+  parent: OH14_BaseItem
+  id: OH14_Baton
+  description: Палочка-выручалочка для всевозможных силовых структур.
+  components:
+  - type: StaminaDamageOnHit
+    damage: 10
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Weapons/Melee/baton.rsi
+    layers:
+    - state: inworld
+      map: ["base"]
+  - type: MeleeWeapon
+    attackRate: 1.5
+    wideAnimationRotation: -135
+    soundHit:
+      path: "/Audio/_OuterHorizons/Guns/Melee/kick4.ogg"
+      params:
+        volume: -5
+    damage:
+      groups:
+        Brute: 5
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,0
+    sprite: _OuterHorizons/Objects/Weapons/Melee/baton.rsi
+    storedRotation: -45

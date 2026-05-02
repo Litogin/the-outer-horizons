@@ -154,6 +154,11 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1
   - type: Construction
     graph: OH14_Airlock
     node: OH14_Airlock
@@ -270,11 +275,11 @@
     node: OH14_AirlockDock
   - type: StaticPrice
     price: 350
-  - type: Destructible # Mono - buff docking port health
+  - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 300
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -282,3 +287,8 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1

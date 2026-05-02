@@ -26,14 +26,3 @@
 
 - type: playTimeTracker
   id: BaselineRole
-
-- type: department
-  id: BaselineDepartment
-  name: baseline-department
-  description: baseline-department-description
-  color: "#A46106"
-  editorHidden: false
-  roles:
-  - BaselineRole
-  - OH14_UcoRole
-  - OH14_RreRole

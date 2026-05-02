@@ -5,6 +5,14 @@
   name: атмос терминал
   description: Терминал для работы с вентиляцией и датчиками газа, не вайбовостью.
   components:
+  - type: PointLight
+    radius: 1.5
+    energy: 3
+    color: "#34e06d" # Corvax-Resprite
+    netsync: false
+    castShadows: false
+    offset: 0, -0.2
+  - type: LitOnPowered
   # - type: PowerSwitch
   - type: StationAiWhitelist
   - type: Electrified

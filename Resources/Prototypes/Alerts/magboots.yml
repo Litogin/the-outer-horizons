@@ -1,7 +1,7 @@
 - type: alert
   id: Magboots
   icons:
-  - sprite: /Textures/Clothing/Shoes/Boots/magboots.rsi
+  - sprite: _OuterHorizons/Clothing/Shoes/magboots.rsi # OH14-Changes
     state: icon-on
   name: alerts-magboots-name
   description: alerts-magboots-desc

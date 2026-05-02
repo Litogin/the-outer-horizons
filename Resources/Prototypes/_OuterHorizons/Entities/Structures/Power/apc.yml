@@ -15,11 +15,11 @@
     sound:
       path: /Audio/Ambience/Objects/hdd_buzz.ogg
   - type: PointLight
-    radius: 1.5
-    energy: 1.0
-    color: "#3db83b"
+    radius: 2
+    energy: 1.5
+    color: "#B9B83B"
     castShadows: false
-    netsync: false
+  # - type: LitOnPowered
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: _OuterHorizons/Structures/Power/apc.rsi

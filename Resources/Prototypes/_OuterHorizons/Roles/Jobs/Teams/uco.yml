@@ -1,3 +1,11 @@
+- type: playTimeTracker
+  id: OH14_UcoRole
+
+- type: playTimeTracker
+  id: OH14_UcoCommanderRole
+
+# Колонист
+
 - type: job
   id: OH14_UcoRole
   name: Колонист
@@ -14,16 +22,44 @@
   id: OH14_UcoGear
   equipment:
     belt: OH14_ClothingBeltWaistbag
-    outerClothing: OH14_ClothingOuterCoatUco
+    # outerClothing: OH14_ClothingOuterCoatUco
     jumpsuit: OH14_ClothingJumpsuitUco
     pants: OH14_ClothingPantsBasic
     back: ClothingBackpackSatchelUco
     shoes: OH14_ClothingBoots
     id: OH14_PDA
     pocket2: OH14_ClothingMaskGas
-  # storage:
-  #   tailbag:
-  #   - OH14_CrowbarBasic
+  storage:
+    back:
+    - OH14_CrowbarBasic
 
-- type: playTimeTracker
-  id: OH14_UcoRole
+# Коммандир
+
+- type: job
+  id: OH14_UcoCommanderRole
+  name: Коммандир
+  description: Колонист, в бывшем на контракте с United Colonial Organization.
+  playTimeTracker: OH14_UcoCommanderRole
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-everyone
+  setPreference: true
+  startingGear: OH14_UcoCommanderGear
+  access:
+  - Security
+  - UCO
+
+- type: startingGear
+  id: OH14_UcoCommanderGear
+  equipment:
+    belt: OH14_ClothingBeltWaistbag
+    # outerClothing: OH14_ClothingOuterCoatUco
+    jumpsuit: OH14_ClothingJumpsuitUCOCommander
+    pants: OH14_ClothingPantsBasic
+    back: ClothingBackpackSatchelUco
+    shoes: OH14_ClothingBoots
+    id: OH14_PDA
+    pocket2: OH14_ClothingMaskGas
+  storage:
+    back:
+    - OH14_Baton
+    - OH14_CrowbarBasic

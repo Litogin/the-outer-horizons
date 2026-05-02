@@ -1,0 +1,28 @@
+- type: department
+  id: BaselineDepartment
+  name: baseline-department
+  description: baseline-department-description
+  color: "#A46106"
+  editorHidden: true
+  roles:
+  - BaselineRole
+
+- type: department
+  id: OH14_UcoDepartment
+  name: Колонисты UCO
+  description: baseline-department-description
+  color: "#802427"
+  editorHidden: false
+  roles:
+  - OH14_UcoCommanderRole
+  - OH14_UcoRole
+
+- type: department
+  id: OH14_RreDepartment
+  name: Поселенцы Ringnova RE
+  description: baseline-department-description
+  color: "#914C00"
+  editorHidden: false
+  roles:
+  - OH14_RreCommanderRole
+  - OH14_RreRole

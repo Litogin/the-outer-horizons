@@ -9,15 +9,17 @@
       stationProto: OH14_StationWithDirelicts
       components:
         - type: StationNameSetup
-          mapNameTemplate: "UCO Station"
+          mapNameTemplate: "Port Colonial"
         - type: StationJobs
           availableJobs:
-            OH14_UcoRole: [ 8, 8 ]
+            OH14_UcoRole: [ 5, 5 ]
+            OH14_UcoCommanderRole: [ 1, 1 ]
     RreStation:
       stationProto: OH14_StationWithDirelicts
       components:
         - type: StationNameSetup
-          mapNameTemplate: "RRE Station"
+          mapNameTemplate: "RRE Hub"
         - type: StationJobs
           availableJobs:
-            OH14_RreRole: [ 8, 8 ]
+            OH14_RreRole: [ 5, 5 ]
+            OH14_RreCommanderRole: [ 1, 1 ]
