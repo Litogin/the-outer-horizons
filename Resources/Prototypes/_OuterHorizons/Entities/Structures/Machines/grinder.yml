@@ -4,6 +4,9 @@
   name: измельчитель
   description: Предоставленная БлендерТек - промышленный измельчитель, незаменимый помошник в быту каждого дома (отсека)!
   components:
+  - type: Construction
+    graph: OH14_ReagentGrinder
+    node: OH14_ReagentGrinder
   - type: Transform
     anchored: true
   - type: ReagentGrinder

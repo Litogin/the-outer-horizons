@@ -1,0 +1,233 @@
+- type: entity
+  parent: OH14_BaseStructure
+  id: OH14_BaseRailing
+  abstract: true
+  name: перила
+  description: Обыкновенные перила желтого цвета, дабы спасти от падения различных идиотов.
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    sprite: _OuterHorizons/Structures/Walls/railing.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/railing.rsi
+  - type: Physics
+    bodyType: Static
+  - type: InteractionOutline
+  - type: Repairable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: FlimsyMetallic
+  - type: Climbable
+  # - type: Construction
+  #   graph: Railing
+
+- type: entity
+  parent: OH14_BaseRailing
+  id: OH14_Railing
+  components:
+  - type: Sprite
+    state: side
+  - type: Icon
+    state: side
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,-0.39"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  # - type: Construction
+  #   node: railing
+
+- type: entity
+  parent: OH14_BaseRailing
+  id: OH14_RailingCorner
+  components:
+  - type: Sprite
+    state: corner
+  - type: Icon
+    state: corner
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,-0.39"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+      fix2:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.39,-0.49,0.49,0.49"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  # - type: Construction
+  #   node: railingCorner
+
+- type: entity
+  parent: OH14_BaseRailing
+  id: OH14_RailingCornerSmall
+  components:
+  - type: Sprite
+    state: corner_small
+  - type: Icon
+    state: corner_small
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,0.39,-0.39,0.49"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  # - type: Construction
+  #   node: railingCornerSmall
+
+- type: entity
+  parent: OH14_BaseRailing
+  id: OH14_RailingRound
+  components:
+  - type: Sprite
+    state: round
+  - type: Icon
+    state: round
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,-0.39"
+        density: 1000
+        mask:
+          - TableMask
+        layer:
+          - TableLayer
+      fix2:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,-0.39,0.49"
+        density: 1000
+        mask:
+          - TableMask
+        layer:
+          - TableLayer
+      fix3:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.39,-0.49,0.49,0.49"
+        density: 1000
+        mask:
+          - TableMask
+        layer:
+          - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  # - type: Construction
+  #   node: railingRound

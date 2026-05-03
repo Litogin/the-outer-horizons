@@ -1,0 +1,137 @@
+- type: entity
+  id: OH14_BaseDirelicts
+  # parent: BaseDebris
+  name: direlict
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Kurlum.yml
+
+- type: entity
+  id: OH14_BaseDirelictKutlum1
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Kurlum.yml
+
+- type: entity
+  id: OH14_BaseDirelictKutlum2
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Kurlum_2.yml
+
+# Дискавери
+
+- type: entity
+  id: OH14_BaseDirelictDiscovery1
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Discovery.yml
+
+- type: entity
+  id: OH14_BaseDirelictDiscovery2
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Discovery_2.yml
+
+- type: entity
+  id: OH14_BaseDirelictDiscovery3
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Discovery_3.yml
+
+# Консерва
+
+- type: entity
+  id: OH14_BaseDirelictTinCan1
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/TinCan.yml
+
+- type: entity
+  id: OH14_BaseDirelictTinCan2
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/TinCan_2.yml
+
+- type: entity
+  id: OH14_BaseDirelictTinCan3
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/TinCan_3.yml
+
+# Хаулер
+
+- type: entity
+  id: OH14_BaseDirelictHauler1
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Hauler.yml
+
+- type: entity
+  id: OH14_BaseDirelictHauler2
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Hauler_2.yml
+
+- type: entity
+  id: OH14_BaseDirelictHauler3
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Hauler_3.yml
+
+# Мика
+
+- type: entity
+  id: OH14_BaseDirelictMika1
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Mika.yml
+
+- type: entity
+  id: OH14_BaseDirelictMika2
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Mika_2.yml
+
+- type: entity
+  id: OH14_BaseDirelictMika3
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/Mika_3.yml
+
+# 20б
+
+- type: entity
+  id: OH14_BaseDirelictTS_20b1
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/TS_20b.yml
+
+- type: entity
+  id: OH14_BaseDirelictTS_20b2
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/TS_20b_2.yml
+
+- type: entity
+  id: OH14_BaseDirelictTS_20b3
+  parent: OH14_BaseDirelicts
+  components:
+    - type: GridSpawner
+      path: /Maps/_OuterHorizons/Direlicts/TS_20b_3.yml

@@ -201,8 +201,8 @@
   description: Старый, но вполне рабочий RCS, потребляющий топливо для своей работы. За ним имеется порт для трубы.
   parent: OH14_BaseThrusterPressure
   components:
-  - type: Machine
-    board: ThrusterMachineCircuitboard
+  # - type: Machine
+  #   board: ThrusterMachineCircuitboard
   - type: Thruster
     thrust: 60
   - type: PressureThruster

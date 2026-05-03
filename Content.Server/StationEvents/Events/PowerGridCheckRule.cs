@@ -59,7 +59,7 @@ namespace Content.Server.StationEvents.Events
             component.AnnounceCancelToken = new CancellationTokenSource();
             Timer.Spawn(3000, () =>
             {
-                Audio.PlayGlobal(component.PowerOnSound, Filter.Broadcast(), true);
+                // Audio.PlayGlobal(component.PowerOnSound, Filter.Broadcast(), true); // OH14-Changes, mute
             }, component.AnnounceCancelToken.Token);
             component.Unpowered.Clear();
         }

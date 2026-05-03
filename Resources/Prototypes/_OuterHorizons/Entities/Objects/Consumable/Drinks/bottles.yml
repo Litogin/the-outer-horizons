@@ -2,7 +2,7 @@
   parent: [ OH14_DrinkBaseOpenable, OH14_DrinkBase, OH14_DrinkVisualsFill ]
   id: OH14_DrinkBottleWater
   name: бутылка
-  description: Небольшая бутылка для жидкостей, с навороченой крышкой для питья. Роскошь.
+  description: Небольшая бутылка для жидкостей. Как на зло пластиковая крышка соеденина с горлышком.
   components:
   - type: Appearance
   - type: InworldSprite
@@ -12,7 +12,7 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
+        maxVol: 80
   - type: Sprite
     sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle_inworld.rsi
   - type: GenericVisualizer
@@ -41,7 +41,7 @@
       drink:
         reagents:
         - ReagentId: Water
-          Quantity: 30
+          Quantity: 80
   - type: Label
     currentLabel: reagent-name-water
 
@@ -51,7 +51,7 @@
   parent: [ OH14_DrinkBaseOpenable, OH14_DrinkBase, OH14_DrinkVisualsFill ]
   id: OH14_DrinkCanister
   name: канистра
-  description: Большая канистра для жидкостей, большая как ваша мать.
+  description: Большая канистра для жидкостей, в частости горючего.
   components:
   - type: Appearance
   - type: InworldSprite
@@ -61,7 +61,7 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 120
+        maxVol: 160
   - type: Sprite
     sprite: _OuterHorizons/Objects/Consumable/Drinks/canister_inworld.rsi
   - type: GenericVisualizer
@@ -82,20 +82,6 @@
 
 - type: entity
   parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkCanister]
-  id: OH14_DrinkCanisterFullWater
-  suffix: Вода
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Water
-          Quantity: 120
-  - type: Label
-    currentLabel: reagent-name-water
-
-- type: entity
-  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkCanister]
   id: OH14_DrinkCanisterFullFuel
   suffix: Топливо
   components:
@@ -104,6 +90,55 @@
       drink:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 120
+          Quantity: 160
   - type: Label
     currentLabel: reagent-name-welding-fuel
+
+# Квас
+
+- type: entity
+  parent: [ OH14_DrinkBaseOpenable, OH14_DrinkBase, OH14_DrinkVisualsFill ]
+  id: OH14_DrinkBottleKvas
+  name: бутылка
+  description: Изза нетерпимости к алкоголю на орбите, умельцы стали готовить здесь квас.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: Item
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas.rsi
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 80
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas_inworld.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"} # lid off
+          False: {state: "icon_empty"} # lid on
+      enum.InworldSpriteState.State:
+        enum.SolutionContainerLayers.Fill:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas_inworld.rsi}
+        enum.OpenableVisuals.Layer:
+          True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas_inworld.rsi}
+  - type: FitsInDispenser
+    solution: drink
+
+- type: entity
+  parent: [OH14_DrinkVisualsFillFilled, OH14_DrinkBottleKvas]
+  id: OH14_DrinkBottleKvasFull
+  suffix: Квас
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Kvass
+          Quantity: 80
+  - type: Label
+    currentLabel: reagent-name-kvass

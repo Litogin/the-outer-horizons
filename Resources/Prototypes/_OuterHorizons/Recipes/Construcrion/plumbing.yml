@@ -5,7 +5,7 @@
   startNode: start
   targetNode: OH14_PlumbingDuctStraight
   category: construction-category-plumbing
-  # placementMode: AlignAtmosPipeLayers
+  placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
@@ -15,7 +15,7 @@
   startNode: start
   targetNode: OH14_PlumbingDuctBend
   category: construction-category-plumbing
-  # placementMode: AlignAtmosPipeLayers
+  placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
@@ -25,7 +25,7 @@
   startNode: start
   targetNode: OH14_PlumbingDuctTJunction
   category: construction-category-plumbing
-  # placementMode: AlignAtmosPipeLayers
+  placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
@@ -35,7 +35,51 @@
   startNode: start
   targetNode: OH14_PlumbingDuctFourway
   category: construction-category-plumbing
-  # placementMode: AlignAtmosPipeLayers
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+# Фильтры
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingFilter
+  graph: OH14_PlumbingFilter
+  startNode: start
+  targetNode: OH14_PlumbingFilter
+  category: construction-category-plumbing
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingFilterFlipped
+  graph: OH14_PlumbingFilter
+  startNode: start
+  targetNode: OH14_PlumbingFilterFlipped
+  category: construction-category-plumbing
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+# Буфера
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingInput
+  graph: OH14_PlumbingInput
+  startNode: start
+  targetNode: OH14_PlumbingInput
+  category: construction-category-plumbing
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  hide: false
+  id: OH14_PlumbingOutput
+  graph: OH14_PlumbingInput
+  startNode: start
+  targetNode: OH14_PlumbingOutput
+  category: construction-category-plumbing
+  placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 # Оборудование

@@ -5,6 +5,19 @@
   name: цистерна
   description: Большое хранилище для хранения газов. Переносу не подлежит.
   components:
+    - type: Rotatable
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 800
+          mask:
+          - MachineMask
+          layer:
+          - MidImpassable
+          - LowImpassable
     - type: Appearance
     - type: PipeColorVisuals
     - type: AtmosPipeColor

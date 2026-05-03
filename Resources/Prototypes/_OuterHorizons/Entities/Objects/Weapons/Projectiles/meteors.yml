@@ -1,0 +1,181 @@
+- type: entity
+  id: OH14_BasicMeteor
+  name: астероид
+  description: МОЖЕТ БЫТЬ УЖЕ НАЧНЕШЬ УВОРАЧИВАТЬСЯ?!
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Misc/meteor.rsi
+  - type: Projectile
+    damage: {}
+    deleteOnCollide: false
+  - type: Meteor
+    damageTypes:
+      types:
+        Blunt: 1
+  - type: TimedDespawn
+    lifetime: 120
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+    bodyStatus: InAir
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 100
+        hard: false
+        layer:
+        - LargeMobLayer
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Explosive
+    explosionType: Default
+    intensitySlope: 1
+    maxIntensity: 10
+    maxTileBreak: 1
+    tileBreakScale: 2
+  - type: TileFrictionModifier
+    modifier: 0
+
+
+- type: entity
+  parent: OH14_BasicMeteor
+  id: OH14_SpaceDust
+  name: мусор
+  description: Маленький мусор на огромной скорости, превращающий вашу станцию в сыр.
+  components:
+  - type: Sprite
+    state: space_dust
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 100
+        hard: false
+        layer:
+        - LargeMobLayer
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Explosive
+    totalIntensity: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+
+- type: entity
+  parent: OH14_BasicMeteor
+  id: OH14_MeteorSmall
+  suffix: Small
+  components:
+  - type: Sprite
+    state: small
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 100
+        hard: false
+        layer:
+        - LargeMobLayer
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Explosive
+    totalIntensity: 3
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+
+- type: entity
+  parent: OH14_BasicMeteor
+  id: OH14_MeteorMedium
+  suffix: Medium
+  components:
+  - type: Sprite
+    state: medium
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 100
+        hard: false
+        layer:
+        - LargeMobLayer
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Explosive
+    totalIntensity: 5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+
+- type: entity
+  parent: OH14_BasicMeteor
+  id: OH14_MeteorLarge
+  suffix: Large
+  components:
+  - type: Sprite
+    state: big
+  - type: Explosive
+    totalIntensity: 15
+    maxIntensity: 20
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+      - !type:WeightedSpawnEntityBehavior
+        weightedEntityTable: "OH14_MeteorSpawnAsteroidWallTable"
+        spawnOffset: 1
+        minSpawn: 0
+        maxSpawn: 3
+        spawnAfter: 0.5

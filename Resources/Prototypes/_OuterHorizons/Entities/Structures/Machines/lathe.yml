@@ -79,6 +79,13 @@
   name: автолат
   description: Базовая автоматизированная установка для вашего крафта, чья крышка забрала на себя половину бюджета дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
   components:
+  - type: AmbientSound
+    enabled: false
+    volume: -2
+    range: 4
+    sound:
+      path: /Audio/_OuterHorizons/Machines/computer.ogg
+  - type: AmbientOnPowered
   - type: Construction
     graph: OH14_AutolatheFrame
     node: OH14_Autolathe
@@ -134,6 +141,13 @@
   name: фабрикатор снаряжения
   description: Продвинутая автоматизированная установка для создания снаряжения, чей корпус забрал на себя половину бюджета дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
   components:
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    enabled: false
+    volume: -2
+    range: 4
+    sound:
+      path: /Audio/_OuterHorizons/Machines/computer.ogg
   - type: ContainerContainer
     containers:
       board: !type:Container
@@ -183,6 +197,13 @@
   name: протолат
   description: Продвинутая автоматизированная установка для вашей электроники, чья крышка забрала на себя половину бюджета дизайна, дабы вы не лезли руками внутрь во время работы оборудования.
   components:
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    enabled: false
+    volume: -2
+    range: 4
+    sound:
+      path: /Audio/_OuterHorizons/Machines/computer.ogg
   - type: Construction
     graph: OH14_ProtolatheFrame
     node: OH14_Protolathe

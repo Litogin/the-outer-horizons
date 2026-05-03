@@ -12,7 +12,7 @@
   - type: CargoSellBlacklist
   - type: MovementSpeedModifier
     baseSprintSpeed: 12
-    baseWalkSpeed: 8
+    baseWalkSpeed: 32 # OH14-Changes
   - type: MovementIgnoreGravity
   - type: Physics
     bodyType: KinematicController
@@ -39,6 +39,18 @@
   description: Boo!
   categories: [ HideSpawnMenu ]
   components:
+   # OH14-Changes start
+  - type: RadarConsole
+    followEntity: true
+  - type: UserInterface
+    interfaces:
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      enum.RadarConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowRadar
+   # OH14-Changes end
   - type: Sprite
     sprite: Mobs/Ghosts/ghost_human.rsi
     color: "#fff8"
@@ -71,7 +83,7 @@
           ghost_Explosion1: { state: ghost_Explosion1 }
           ghost_Explosion2: { state: ghost_Explosion2 }
   - type: ContentEye
-    maxZoom: 1.44,1.44
+    maxZoom: 8.916104, 8.916104 # OH14-Changes
   - type: Eye
     drawFov: false
   - type: Input
@@ -79,6 +91,7 @@
   - type: Examiner
     skipChecks: true
   - type: Ghost
+    canInteract: true # OH14-Changes
   - type: GhostSpriteState
     damageMap:
       Blunt: 3

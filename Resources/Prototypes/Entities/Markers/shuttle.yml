@@ -2,6 +2,7 @@
   id: FTLPoint
   parent: MarkerBase
   name: FTL point
+  categories: [ ForkFiltered ] # OH14-Changes
   components:
     - type: FTLSmashImmune
     - type: FTLBeacon
@@ -12,6 +13,7 @@
   id: FTLExclusion
   parent: MarkerBase
   name: FTL exclusion point
+  categories: [ ForkFiltered ] # OH14-Changes
   components:
     - type: FTLExclusion
       range: 32

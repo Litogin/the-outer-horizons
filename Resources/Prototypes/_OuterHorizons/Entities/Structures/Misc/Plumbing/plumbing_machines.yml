@@ -61,6 +61,7 @@
     - state: tank
   - type: PlumbingDevice
     updateInterval: 2
+    solutionLimit: 1900
   - type: PlumbingInlet
     solutionName: tank
   - type: Plungeable
@@ -95,6 +96,15 @@
         acts: ["Destruction"]
   - type: StaticPrice
     price: 100
+
+- type: entity
+  parent: OH14_PlumbingTank
+  id: OH14_PlumbingTankFuelEmpty
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
+    layers:
+    - state: tank_fuel
 
 - type: entity
   parent: OH14_PlumbingTank
@@ -137,11 +147,23 @@
   name: водопроводный входной буфер
   description: Позволит тебе залить в местную сеть трубопровода яд.
   components:
+  - type: Construction
+    graph: OH14_PlumbingInput
+    node: OH14_PlumbingInput
   - type: Physics
     bodyType: Static
     canCollide: false
   - type: Fixtures
-    fixtures: {}
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
   - type: Sprite
     sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
@@ -183,17 +205,19 @@
 - type: entity
   parent: OH14_PlumbingMachineBase
   id: OH14_PlumbingSink
-  name: Раковина
+  name: раковина
   description: Если ты можешь позволить помыть себе руки - ты богат. Если ты можешь позволить себе душ - ты невъебически богат.
   components:
   - type: Physics
     bodyType: Static
     canCollide: false
   - type: Sprite
-    sprite: Structures/Furniture/sink.rsi
-    drawdepth: FloorObjects
+    noRot: false
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/sink.rsi
+    # drawdepth: FloorObjects
     layers:
-    - state: sink_wide
+    - state: sink
+      offset: 0, 0.3
   - type: Rotatable
     rotateWhileAnchored: false
   - type: PlumbingDevice
@@ -263,11 +287,23 @@
   name: водопроводный выходной буфер
   description: Позволит тебе черпнуть небольшой объем жидкостей из водопровода.
   components:
+  - type: Construction
+    graph: OH14_PlumbingInput
+    node: OH14_PlumbingOutput
   - type: Physics
     bodyType: Static
     canCollide: false
   - type: Fixtures
-    fixtures: {}
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
   - type: Sprite
     sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
@@ -626,13 +662,25 @@
   parent: OH14_PlumbingMachineBase
   id: OH14_PlumbingFilter
   name: водопроводный фильтр
-  description: Вход через желтый порт, выход через красные.
+  description: Вход через красный порт, выход через желтые.
   components:
+  - type: Construction
+    graph: OH14_PlumbingFilter
+    node: OH14_PlumbingFilter
   - type: Physics
     bodyType: Static
     canCollide: false
   - type: Fixtures
-    fixtures: {}
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
   - type: Sprite
     sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
@@ -700,11 +748,23 @@
   id: OH14_PlumbingFilterFlipped
   suffix: Flipped
   components:
+  - type: Construction
+    graph: OH14_PlumbingFilter
+    node: OH14_PlumbingFilterFlipped
   - type: Physics
     bodyType: Static
     canCollide: false
   - type: Fixtures
-    fixtures: {}
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
   - type: Sprite
     sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
@@ -827,17 +887,26 @@
   components:
   - type: Sprite
     drawdepth: FloorObjects
-    sprite: Objects/Specific/Janitorial/drain.rsi
+    sprite: _OuterHorizons/Structures/Misc/Plumbing/plumbers.rsi
     layers:
-    - state: icon
+    - state: drain
     - map: [ "enum.SolutionContainerLayers.Fill" ]
-      state: fill-1
+      state: drain-fill-1
       visible: false
   - type: Physics
     bodyType: Static
     canCollide: false
   - type: Fixtures
-    fixtures: {}
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
   - type: AmbientSound
     enabled: false
     volume: -8
@@ -851,7 +920,7 @@
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 1
-    fillBaseName: fill-
+    fillBaseName: drain-fill-
     solutionName: drainBuffer
   - type: PlumbingOutlet
     solutionName: drainBuffer

@@ -1,0 +1,8 @@
+- type: speechSounds
+  id: OH14_Radio
+  saySound:
+    path: /Audio/_OuterHorizons/Effects/message.ogg
+  askSound:
+    path: /Audio/_OuterHorizons/Effects/message.ogg
+  exclaimSound:
+    path: /Audio/_OuterHorizons/Effects/message.ogg

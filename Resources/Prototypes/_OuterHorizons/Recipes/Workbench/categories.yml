@@ -1,6 +1,6 @@
-- type: CERecipeCategory
-  id: FloorTile
-  name: ce-recipe-category-tile
+# - type: CERecipeCategory
+#   id: FloorTile
+#   name: ce-recipe-category-tile
 
 - type: CERecipeCategory
   id: Tools
@@ -18,13 +18,13 @@
   id: Armor
   name: ce-recipe-category-armor
 
-- type: CERecipeCategory
-  id: Carpet
-  name: ce-recipe-category-carpet
+# - type: CERecipeCategory
+#   id: Carpet
+#   name: ce-recipe-category-carpet
 
-- type: CERecipeCategory
-  id: Wallpaper
-  name: ce-recipe-category-wallpaper
+# - type: CERecipeCategory
+#   id: Wallpaper
+#   name: ce-recipe-category-wallpaper
 
 - type: CERecipeCategory
   id: Clothing

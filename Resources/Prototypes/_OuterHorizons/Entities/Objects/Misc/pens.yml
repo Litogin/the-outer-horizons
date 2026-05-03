@@ -1,6 +1,6 @@
 - type: entity
   name: ручка
-  parent: OH14_BaseItem
+  parent: [ OH14_ItemSFXSmall, OH14_BaseItem ]
   id: OH14_Pen
   description: После изобретения разноцветных вариаций ручек, акции компании БюрократКо сильно увеличились, однако конкуренты, копировав их идею, не оставили им и шанса
   components:

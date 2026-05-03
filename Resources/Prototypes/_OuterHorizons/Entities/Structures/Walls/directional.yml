@@ -14,8 +14,6 @@
   - type: Tag
     tags:
       - Wall
-  - type: Occluder
-    boundingBox: "-0.5,-0.5,0.5,-0.3"
   - type: Sprite
     drawdepth: Mobs
     sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
@@ -85,6 +83,8 @@
     snap:
     - Wall
   components:
+  - type: Occluder
+    boundingBox: "-0.5,-0.5,0.5,-0.3"
   - type: Sprite
     sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
     state: state0

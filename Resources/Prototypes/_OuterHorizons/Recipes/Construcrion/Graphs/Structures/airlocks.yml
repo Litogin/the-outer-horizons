@@ -28,40 +28,54 @@
         - to: OH14_Airlock
           steps:
             - material: OH14_Materials
-              amount: 3
+              amount: 2
               doAfter: 1
-            - material: OH14_Electronic
-              amount: 1
+            - material: OH14_Components
+              amount: 4
               doAfter: 1
+            - component: DoorElectronics
+              store: board
+              name: construction-graph-component-door-electronics-circuit-board
+              icon:
+                sprite: "_OuterHorizons/Objects/Materials/circuitboard.rsi"
+                state: "door_board"
+              doAfter: 3
         - to: OH14_AirlockDock
           steps:
             - material: OH14_Components
-              amount: 3
+              amount: 8
               doAfter: 1
             - material: OH14_Materials
-              amount: 3
+              amount: 2
               doAfter: 1
-            - material: OH14_Electronic
-              amount: 1
-              doAfter: 1
+            - component: DoorElectronics
+              store: board
+              name: construction-graph-component-door-electronics-circuit-board
+              icon:
+                sprite: "_OuterHorizons/Objects/Materials/circuitboard.rsi"
+                state: "door_board"
+              doAfter: 3
     - node: OH14_Airlock
       entity: OH14_Airlock
       edges:
         - to: OH14_AirlockGirder
           conditions:
           - !type:EntityAnchored {}
-          - !type:DoorWelded {}
+          # - !type:DoorWelded {}
           - !type:DoorBolted
             value: false
           - !type:WirePanel {}
           - !type:AllWiresCut
           completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
             - !type:SpawnPrototype
               prototype: OH14_SheetMaterials1
-              amount: 3
+              amount: 2
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics
-              amount: 1
+              prototype: OH14_SheetComponents1
+              amount: 4
           steps:
             - tool: Prying
               doAfter: 1
@@ -71,21 +85,21 @@
         - to: OH14_AirlockGirder
           conditions:
           - !type:EntityAnchored {}
-          - !type:DoorWelded {}
+          # - !type:DoorWelded {}
           - !type:DoorBolted
             value: false
           - !type:WirePanel {}
           - !type:AllWiresCut
           completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
             - !type:SpawnPrototype
               prototype: OH14_SheetMaterials1
-              amount: 3
+              amount: 2
             - !type:SpawnPrototype
               prototype: OH14_SheetComponents1
-              amount: 3
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics
-              amount: 1
+              amount: 8
           steps:
             - tool: Prying
               doAfter: 1

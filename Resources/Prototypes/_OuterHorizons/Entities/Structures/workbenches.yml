@@ -6,9 +6,10 @@
   components:
   - type: Transform
     anchored: true
+    noRot: true
   - type: Anchorable
   - type: Sprite
-    snapCardinals: true
+    noRot: true
     sprite: _OuterHorizons/Structures/workbench.rsi
     state: icon
   - type: Icon
@@ -99,9 +100,9 @@
   #- type: FireVisuals
   #  sprite: _CE/Effects/fire.rsi
   #  normalState: full
-  # - type: Construction
-  #   graph: CEWorkbench
-  #   node: CEWorkbench
+  - type: Construction
+    graph: OH14_Table
+    node: OH14_Workbench
   - type: CEWorkbench
     recipeTags:
     - CERecipeWorkbench

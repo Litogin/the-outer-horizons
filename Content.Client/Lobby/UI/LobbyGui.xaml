@@ -33,7 +33,7 @@
 
             <!-- Новая панелька старт -->
 
-            <PanelContainer Name="New_MainPanel" HorizontalAlignment="Center" MinHeight="400" MinWidth="550" MaxWidth="550" Margin="2 2 2 2">
+            <PanelContainer Name="New_MainPanel" HorizontalAlignment="Left" MinHeight="400" MinWidth="550" MaxWidth="550" Margin="2 2 2 2">
             <PanelContainer.PanelOverride>
                 <gfx:StyleBoxFlat BackgroundColor="#050c0d" BorderColor="#4bb2b5" BorderThickness="3"/>
             </PanelContainer.PanelOverride>

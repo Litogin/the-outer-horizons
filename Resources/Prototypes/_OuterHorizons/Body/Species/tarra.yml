@@ -114,19 +114,20 @@
     # Extremities
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]
-    # Tail
-    - map: [ "enum.HumanoidVisualLayers.Tail" ]
-    - map: [ "enum.HumanoidVisualLayers.TailOverlay" ]
     # Stuff that goes over the body but below equipment
     - map: ["enum.HumanoidVisualLayers.Overlay"]
     # More equipment
     - map: [ "gloves" ]
     - map: [ "shoes" ]
+    # Tail
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "enum.HumanoidVisualLayers.TailOverlay" ]
+    # More equipment
     - map: [ "ears" ]
     - map: [ "eyes" ]
+    - map: [ "outerClothing" ]
     - map: [ "belt" ]
     - map: [ "id" ]
-    - map: [ "outerClothing" ]
     - map: [ "back" ]
     - map: [ "neck" ]
     - map: ["tailbag"]

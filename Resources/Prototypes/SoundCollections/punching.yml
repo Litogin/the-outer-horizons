@@ -1,7 +1,13 @@
 - type: soundCollection
   id: Punch
   files:
-    - /Audio/Weapons/punch1.ogg
-    - /Audio/Weapons/punch2.ogg
-    - /Audio/Weapons/punch3.ogg
-    - /Audio/Weapons/punch4.ogg
+    # OH14-Changes start
+    # - /Audio/Weapons/punch1.ogg
+    # - /Audio/Weapons/punch2.ogg
+    # - /Audio/Weapons/punch3.ogg
+    # - /Audio/Weapons/punch4.ogg
+    - /Audio/_OuterHorizons/Guns/Melee/kick1.ogg
+    - /Audio/_OuterHorizons/Guns/Melee/kick2.ogg
+    - /Audio/_OuterHorizons/Guns/Melee/kick3.ogg
+    - /Audio/_OuterHorizons/Guns/Melee/kick4.ogg
+    # OH14-Changes end

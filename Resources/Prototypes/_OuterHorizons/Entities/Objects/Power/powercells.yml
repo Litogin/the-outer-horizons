@@ -50,7 +50,7 @@
 
 - type: entity
   id: OH14_PowerCellMedium # Обычная
-  parent: OH14_BasicPowerCell
+  parent: [ OH14_ItemSFXSmall, OH14_BasicPowerCell ]
   name: батарейка
   description: Обычная батарейка МКП3 класса. Не поджигать, не мочить и не вскрывать, на вкус как смерть в отравлении тяжелыми металлами. Я вас предупредил
   suffix: Full

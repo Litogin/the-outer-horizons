@@ -8,6 +8,12 @@
     },
     "states": [
         {
+            "name": "drain"
+        },
+        {
+            "name": "drain-fill-1"
+        },
+        {
             "name": "bottler",
             "directions": 4
         },

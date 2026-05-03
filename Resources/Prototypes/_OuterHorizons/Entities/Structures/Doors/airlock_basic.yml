@@ -57,18 +57,14 @@
   - type: LayerChangeOnWeld
     unWeldedLayer: AirlockLayer
     weldedLayer: WallLayer
-  # - type: ContainerFill
-  #   containers:
-  #     board: [ DoorElectronics ]
-  # - type: AccessReader
-  #   containerAccessProvider: board
+  - type: ContainerFill
+    containers:
+      board: [ OH14_DoorElectronics ]
+  - type: AccessReader
+    containerAccessProvider: board
   - type: Door
-    bumpOpen: true
     clickOpen: true
-    # closeTimeOne: 0.3
-    # closeTimeTwo: 0.6
-    # openTimeOne: 0.3
-    # openTimeTwo: 0.6
+    bumpOpen: false
     openingAnimationTime: 1
     closingAnimationTime: 1
     crushDamage:
@@ -158,6 +154,11 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1
   - type: Construction
     graph: OH14_Airlock
     node: OH14_Airlock
@@ -202,8 +203,12 @@
     bumpOpen: false
     openSound:
       path: /Audio/_OuterHorizons/Machines/Airlock/heavy_open.ogg
+      params:
+        volume: -6
     closeSound:
       path: /Audio/_OuterHorizons/Machines/Airlock/heavy_close.ogg
+      params:
+        volume: -6
 
 # Shuttle
 
@@ -270,11 +275,11 @@
     node: OH14_AirlockDock
   - type: StaticPrice
     price: 350
-  - type: Destructible # Mono - buff docking port health
+  - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 300
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -282,3 +287,8 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1

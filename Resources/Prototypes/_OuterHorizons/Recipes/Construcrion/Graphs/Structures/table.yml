@@ -30,6 +30,11 @@
             - material: OH14_Materials
               amount: 1
               doAfter: 1
+        - to: OH14_Workbench
+          steps:
+            - material: OH14_Components
+              amount: 4
+              doAfter: 1
     - node: OH14_Table
       entity: OH14_TableMetal
       edges:
@@ -40,4 +45,15 @@
               amount: 1
           steps:
             - tool: Anchoring
+              doAfter: 1
+    - node: OH14_Workbench
+      entity: OH14_Workbench
+      edges:
+        - to: TableFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 4
+          steps:
+            - tool: Prying
               doAfter: 1

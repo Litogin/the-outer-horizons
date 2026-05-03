@@ -29,7 +29,7 @@
       shader: unshaded
     state: base
   - type: PointLight
-    color: "#967396" # FFE4CE > c1cbce
+    color: "#99A8B2" # FFE4CE > c1cbce
     energy: 0.8
     radius: 10
     softness: 1

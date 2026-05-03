@@ -129,9 +129,6 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     {
         base.Draw(handle);
 
-        DrawBacking(handle);
-        DrawCircles(handle);
-
         // No data
         if (_coordinates == null || _rotation == null)
         {
@@ -156,6 +153,13 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var shuttleToWorld = Matrix3x2.Multiply(posMatrix, ourEntMatrix);
         Matrix3x2.Invert(shuttleToWorld, out var worldToShuttle);
         var shuttleToView = Matrix3x2.CreateScale(new Vector2(MinimapScale, -MinimapScale)) * Matrix3x2.CreateTranslation(MidPointVector);
+
+        // OH14-Changes start
+        var rot = ourEntRot + _rotation.Value;
+
+        DrawBacking(handle); // OH14 TODO
+        DrawCircles(handle, rot);
+        // OH14-Changes end
 
         // Draw our grid in detail
         var ourGridId = xform.GridUid;
@@ -183,7 +187,6 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         handle.DrawPrimitives(DrawPrimitiveTopology.TriangleFan, radarPosVerts, Color.Lime);
 
-        var rot = ourEntRot + _rotation.Value;
         var viewBounds = new Box2Rotated(new Box2(-WorldRange, -WorldRange, WorldRange, WorldRange).Translated(mapPos.Position), rot, mapPos.Position);
         var viewAABB = viewBounds.CalcBoundingBox();
 
@@ -229,11 +232,10 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                     ("distance", $"{gridDistance:0.0}"));
 
                 // yes 1.0 scale is intended here.
-                var labelDimensions = handle.GetDimensions(Font, labelText, 1f);
+                var labelDimensions = handle.GetDimensions(Font, labelText, 0.7f);
                 var coordsDimensions = handle.GetDimensions(Font, coordsText, 0.7f);
-
                 // y-offset the control to always render below the grid (vertically)
-                var yOffset = Math.Max(gridBounds.Height, gridBounds.Width) * MinimapScale / 1.8f;
+                var yOffset = Math.Max(gridBounds.Height, gridBounds.Width) * MinimapScale / 2.6f;
 
                 // The actual position in the UI.
                 var gridScaledPosition = gridCentre - new Vector2(0, -yOffset);
@@ -258,12 +260,13 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                 labelUiPosition = Vector2.Clamp(labelUiPosition, Vector2.Zero, controlExtents);
 
                 // draw IFF label
-                handle.DrawString(Font, labelUiPosition, labelText, labelColor);
+                // handle.DrawString(Font, labelUiPosition, labelText, labelColor); // OH14-Changes, показываем имя грида только при приблежении
 
                 // only draw coords label if close enough
                 if (offsetMax < 1)
                 {
-                    handle.DrawString(Font, coordUiPosition, coordsText, 0.7f, coordColor);
+                    handle.DrawString(Font, coordUiPosition, coordsText, 0.6f, coordColor);
+                    handle.DrawString(Font, labelUiPosition, labelText, 0.9f, labelColor); // OH14-Changes, показываем имя грида только при приблежении
                 }
             }
 

@@ -4,6 +4,10 @@
   id: OH14_Hydroponic
   description: Лоток для земли, но межпланетного класса. Имеет несколько датчиков, которые заставляют светиться непонятные для вас лампочки.
   components:
+  - type: SolutionContainerManager
+    solutions:
+      soil:
+        maxVol: 50
   - type: NodeContainer
     examinable: true
     nodes:
@@ -19,7 +23,8 @@
         nodeGroupID: Plumbing
         pipeDirection: North
   - type: PlumbingDevice
-    updateInterval: 10
+    updateInterval: 5
+    solutionLimit: 5
   - type: PlumbingInlet
     solutionName: soil
   - type: PlumbingConnectorAppearance
@@ -104,8 +109,6 @@
         !type:DamageTrigger
         damage: 100
       behaviors:
-      - !type:ChangeConstructionNodeBehavior
-        node: machineFrame
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
@@ -115,7 +118,7 @@
   #   board: HydroponicsTrayMachineCircuitboard
   # - type: WiresPanel
   - type: AmbientSound
-    volume: -4
+    volume: -5
     range: 8
     sound:
       path: /Audio/Ambience/Objects/flowing_water_open.ogg
@@ -162,8 +165,6 @@
         !type:DamageTrigger
         damage: 100
       behaviors:
-      - !type:ChangeConstructionNodeBehavior
-        node: machineFrame
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak

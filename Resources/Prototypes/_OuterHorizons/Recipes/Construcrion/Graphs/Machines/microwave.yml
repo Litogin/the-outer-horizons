@@ -1,0 +1,69 @@
+- type: constructionGraph
+  id: OH14_Microwave
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: frame1
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_MicrowaveFrame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame2
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Components
+              amount: 2
+              doAfter: 1
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_MicrowaveFrame
+      edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 2
+        - to: OH14_Microwave
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Materials
+              amount: 2
+              doAfter: 1
+    - node: OH14_Microwave
+      entity: OH14_Microwave
+      edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 2
+

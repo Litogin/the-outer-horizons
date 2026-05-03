@@ -1,0 +1,44 @@
+- type: entity
+  id: OH14_DecorationAntenna
+  parent: OH14_BaseStructure
+  name: антенна
+  description: На деле же это несколько антенн, с непонятными лампочками на концах.
+  components:
+  - type: Sprite
+    drawdepth: BlastDoors
+    sprite: _OuterHorizons/Structures/Decoration/antenna.rsi
+    offset: 0, 1.25
+    layers:
+    - state: icon
+    - state: unshaded
+      shader: unshaded
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  # - type: Construction
+  #   graph: OH14_Table
+  #   node: TableFrame

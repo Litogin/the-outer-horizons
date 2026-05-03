@@ -1,6 +1,6 @@
 - type: species
   id: OH14_Tarrantok
-  name: species-name-tarrantok
+  name: Тарра
   roundStart: true
   prototype: OH14_MobTarrantok
   defaultSkinTone: "#faf7f7"

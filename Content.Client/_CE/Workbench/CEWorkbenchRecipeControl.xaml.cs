@@ -47,7 +47,7 @@ public sealed partial class CEWorkbenchRecipeControl : Control
         if (_craftable)
             return;
 
-        Button.ModulateSelfOverride = Color.FromHex("#2b3245");
+        Button.ModulateSelfOverride = Color.FromHex("#161922");
     }
 
     private void UpdateView()

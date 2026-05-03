@@ -9,3 +9,41 @@
   placementMode: SnapgridCenter
   canRotate: false
   canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_Workbench
+  graph: OH14_Table
+  startNode: start
+  targetNode: OH14_Workbench
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  canRotate: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_Microwave
+  graph: OH14_Microwave
+  startNode: start
+  targetNode: OH14_Microwave
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_ReagentGrinder
+  graph: OH14_ReagentGrinder
+  startNode: start
+  targetNode: OH14_ReagentGrinder
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false

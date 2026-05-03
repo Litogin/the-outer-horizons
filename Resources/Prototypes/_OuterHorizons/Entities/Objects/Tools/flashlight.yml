@@ -72,6 +72,7 @@
     sprite: _OuterHorizons/Objects/Tools/flashlight.rsi
     storedRotation: -90
   - type: PointLight
+    color: "#dabeab"
     enabled: false
     mask: /Textures/_OuterHorizons/Effects/LightMasks/cone_smoll.png
     autoRot: true

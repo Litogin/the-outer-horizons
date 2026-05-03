@@ -4,6 +4,10 @@
   name: микроволновка
   description: Это магия.
   components:
+  - type: PowerSwitch
+  - type: Construction
+    graph: OH14_Microwave
+    node: OH14_Microwave
   - type: Microwave
     capacity: 10
   - type: Appearance
@@ -102,16 +106,13 @@
   - type: PowerState
     idlePowerDraw: 5
     workingPowerDraw: 1000
-  - type: Machine
-    board: MicrowaveMachineCircuitboard
+  # - type: Machine
+  #   board: MicrowaveMachineCircuitboard
   - type: ContainerContainer
     containers:
       microwave_entity_container: !type:Container
       machine_board: !type:Container
       machine_parts: !type:Container
-  - type: EmptyOnMachineDeconstruct
-    containers:
-    - microwave_entity_container
   - type: GuideHelp
     guides:
     - Chef

@@ -1,0 +1,45 @@
+- type: entityTable
+  id: OH14_BasicEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: OH14_PowerCheck
+    - id: OH14_SolarFlare
+
+- type: entity
+  id: OH14_PowerCheck
+  parent: OH14_BaseGameRuleShortDelay
+  components:
+  - type: StationEvent
+    weight: 5
+    duration: 20
+    maxDuration: 120
+  - type: PowerGridCheckRule
+    powerOnSound: nil
+
+- type: entity
+  parent: OH14_BaseGameRule
+  id: OH14_SolarFlare
+  components:
+  - type: StationEvent
+    weight: 8
+    startAudio:
+      path: /Audio/_OuterHorizons/StationEvents/radiation.ogg
+      params:
+        volume: -4
+    duration: 20
+    maxDuration: 240
+  - type: SolarFlareRule
+    # onlyJamHeadsets: true
+    affectedChannels:
+    - Common
+    extraChannels:
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    extraCount: 2
+    lightBreakChancePerSecond: 0.001
+    doorToggleChancePerSecond: 0.01

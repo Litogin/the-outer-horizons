@@ -1,0 +1,65 @@
+- type: playTimeTracker
+  id: OH14_RreRole
+
+- type: playTimeTracker
+  id: OH14_RreCommanderRole
+
+# Базовая ролька
+
+- type: job
+  id: OH14_RreRole
+  name: Поселенец
+  description: Поселенец, в бывшем сотрудник компании Ringnova RE.
+  playTimeTracker: OH14_RreRole
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-everyone
+  setPreference: true
+  startingGear: OH14_RreGear
+  access:
+  - RRE
+
+- type: startingGear
+  id: OH14_RreGear
+  equipment:
+    belt: OH14_ClothingBeltWaistbag
+    # outerClothing: OH14_ClothingOuterCoatRre
+    jumpsuit: OH14_ClothingJumpsuitXimura
+    pants: OH14_ClothingPantsBasic
+    back: ClothingBackpackSatchelBasic
+    shoes: OH14_ClothingShoesBasic
+    id: OH14_PDA
+    pocket2: OH14_ClothingMaskGas
+  storage:
+    back:
+    - OH14_CrowbarBasic
+
+# Коммандир
+
+- type: job
+  id: OH14_RreCommanderRole
+  name: Старпом
+  description: Поселенец, в бывшем сотрудник компании Ringnova RE.
+  playTimeTracker: OH14_RreCommanderRole
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-everyone
+  setPreference: true
+  startingGear: OH14_RreCommanderGear
+  access:
+  - Security
+  - RRE
+
+- type: startingGear
+  id: OH14_RreCommanderGear
+  equipment:
+    belt: OH14_ClothingBeltWaistbag
+    # outerClothing: OH14_ClothingOuterCoatRre
+    jumpsuit: OH14_ClothingJumpsuitRRECommander
+    pants: OH14_ClothingPantsBasic
+    back: ClothingBackpackSatchelBasic
+    shoes: OH14_ClothingShoesBasic
+    id: OH14_PDA
+    pocket2: OH14_ClothingMaskGas
+  storage:
+    back:
+    - OH14_Baton
+    - OH14_CrowbarBasic

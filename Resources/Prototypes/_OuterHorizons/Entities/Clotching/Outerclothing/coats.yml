@@ -2,7 +2,7 @@
   parent: [ OH14_ItemSFXFabric, ClothingOuterStorageBase ]
   id: OH14_ClothingOuterCoatUco
   categories: [ ForkFiltered ]
-  name: бордовая жилетка
+  name: жилетка
   description: Толстая жилетка из синтетической ткани. Рукава отсутствуют, перчатки не помогут, вы обречены.
   components:
   - type: Sprite
@@ -38,7 +38,7 @@
   parent: OH14_ClothingOuterCoatUco
   id: OH14_ClothingOuterCoatRre
   categories: [ ForkFiltered ]
-  name: темная куртка
+  name: куртка
   description: Легкая куртка для ветренной погоды. Без понятия, каким образом вы здесь найдете ветер, но все именно так.
   components:
   - type: Sprite

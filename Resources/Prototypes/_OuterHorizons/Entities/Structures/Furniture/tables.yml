@@ -6,6 +6,7 @@
   description: 9 мая в Анталии трое русских в течение восьми часов держали оборону шведского стола от немцев.
   components:
   - type: Sprite
+    noRot: true
     sprite: _OuterHorizons/Structures/Decoration/Tables/generic.rsi
   - type: Icon
     sprite: _OuterHorizons/Structures/Decoration/Tables/generic.rsi
@@ -68,6 +69,7 @@
   description: Металлический каркас стола, у меня нет идеи для этого описания.
   components:
   - type: Sprite
+    noRot: true
     sprite: _OuterHorizons/Structures/Decoration/Tables/frame.rsi
     state: frame
   - type: Fixtures

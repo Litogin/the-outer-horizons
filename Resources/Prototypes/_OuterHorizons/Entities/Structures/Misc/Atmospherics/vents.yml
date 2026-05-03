@@ -61,6 +61,7 @@
             Welded: { state: vent_welded }
             Lockout: { state: vent_off }
     - type: GasVentPump
+      underPressureLockoutThreshold: 40
     - type: Construction
       graph: OH14_GasPumpsVent
       node: OH14_GasVentPump

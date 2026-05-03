@@ -6,6 +6,24 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: SpamEmitSoundRequirePower
+  - type: SpamEmitSound
+    enabled: false
+    minInterval: 10
+    maxInterval: 25
+    sound:
+      collection: OH14_ComputerSpam
+      params:
+        volume: -2
+        maxDistance: 6
+        variation: 0.05
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    enabled: false
+    volume: 1
+    range: 4
+    sound:
+      path: /Audio/_OuterHorizons/Machines/computer.ogg
   - type: PowerSwitch
   - type: Animateable
   - type: MeleeSound
@@ -310,6 +328,7 @@
   - type: Intercom
   - type: Speech
     speechVerb: Robotic
+    speechSounds: OH14_Radio
   - type: VoiceOverride # This is for the wire that makes an electricity zapping noise.
     speechVerbOverride: Electricity
     enabled: false

@@ -5,3 +5,11 @@
   - /Audio/_CE/Effects/nailing2.ogg
   - /Audio/_CE/Effects/nailing3.ogg
   - /Audio/_CE/Effects/nailing4.ogg
+
+- type: soundCollection
+  id: OH14_Workbench
+  files:
+  - /Audio/_OuterHorizons/Machines/workbench1.ogg
+  - /Audio/_OuterHorizons/Machines/workbench2.ogg
+  - /Audio/_OuterHorizons/Machines/workbench3.ogg
+  - /Audio/_OuterHorizons/Machines/workbench4.ogg

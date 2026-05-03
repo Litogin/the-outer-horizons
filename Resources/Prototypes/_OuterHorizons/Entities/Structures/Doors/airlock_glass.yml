@@ -1,7 +1,7 @@
 - type: entity
   id: OH14_AirlockGlass
   parent: OH14_Airlock
-  suffix: Стеклянный
+  name: стеклянный шлюз
   components:
   - type: MeleeSound
     soundGroups:

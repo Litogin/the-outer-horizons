@@ -3,3 +3,10 @@
   files:
     - /Audio/_OuterHorizons/Soundtracks/main_theme.ogg
     - /Audio/_OuterHorizons/Soundtracks/bar.ogg
+
+- type: soundCollection
+  id: OH14_RoundEnd
+  files:
+  - /Audio/_OuterHorizons/StationEvents/RoundEnd/pyshnoy.ogg
+  - /Audio/_OuterHorizons/StationEvents/RoundEnd/Ponabirayt.ogg
+  - /Audio/_OuterHorizons/StationEvents/RoundEnd/Goida.ogg
