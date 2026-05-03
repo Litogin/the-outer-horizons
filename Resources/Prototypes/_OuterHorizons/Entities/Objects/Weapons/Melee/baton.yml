@@ -32,6 +32,6 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,2,0
+    - 0,0,0,2
     sprite: _OuterHorizons/Objects/Weapons/Melee/baton.rsi
-    storedRotation: -45
+    storedRotation:   45
