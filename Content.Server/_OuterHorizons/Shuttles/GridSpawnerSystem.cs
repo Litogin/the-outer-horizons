@@ -1,51 +1,40 @@
-using Content.Server.Shuttles.Systems;
-using Content.Server.Shuttles.Components;
-using Content.Shared.Shuttles.Components;
-using Content.Shared.Random.Helpers;
+using System.Linq;
+using Content.Server.Station.Systems;
+using Content.Shared.GridControl.Components;
+using JetBrains.Annotations;
+using Robust.Server.GameObjects;
 using Robust.Shared.EntitySerialization.Systems;
-using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Server._OuterHorizons.Spawning;
+namespace Content.Server.GridControl.Systems;
 
-public sealed partial class GridSpawnerSystem : EntitySystem
+[UsedImplicitly]
+public sealed class GridSpawnerSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly MapLoaderSystem _loader = default!;
-    [Dependency] private readonly MetaDataSystem _metadata = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly MapSystem _mapSystem = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
+    [Dependency] private readonly StationSystem _station = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<GridSpawnerComponent, MapInitEvent>(OnInit);
+        SubscribeLocalEvent<GridSpawnerComponent, MapInitEvent>(OnSpawnerMapInit);
     }
 
-    private void OnInit(Entity<GridSpawnerComponent> ent, ref MapInitEvent args)
+    private void OnSpawnerMapInit(Entity<GridSpawnerComponent> ent, ref MapInitEvent args)
     {
-        var xform = Transform(ent.Owner);
-
-        if (_loader.TryLoadGrid(xform.MapID, ent.Comp.Path, out var grid, offset: _transform.GetWorldPosition(xform)))
+        var entMap = _transform.GetMapId(ent.Owner);
+        if (_loader.TryLoadGrid(entMap, ent.Comp.GridPath, out var grid, offset: _transform.GetMapCoordinates(ent.Owner).Position) && grid != null && ent.Comp.AddComponents != null)
         {
-            if (ent.Comp.NameGrid)
+            EntityManager.AddComponents(grid.Value.Owner, ent.Comp.AddComponents);
+            if (ent.Comp.StationGrid)
             {
-                if (_proto.TryIndex(ent.Comp.NameDataset, out var dataset))
-                {
-                    _metadata.SetEntityName(grid.Value, _random.Pick(dataset));
-                }
-                else
-                {
-                    var name = ent.Comp.Path.FilenameWithoutExtension;
-                    _metadata.SetEntityName(grid.Value, name);
-                }
+                var station = _station.GetStations().FirstOrDefault(EntityUid.Invalid);
+                if (station != EntityUid.Invalid)
+                    _station.AddGridToStation(station, grid.Value);
             }
-
-            EntityManager.AddComponents(grid.Value, ent.Comp.AddComponents);
         }
     }
 }

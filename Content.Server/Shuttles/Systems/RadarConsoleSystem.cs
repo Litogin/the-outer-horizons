@@ -19,6 +19,18 @@ public sealed class RadarConsoleSystem : SharedRadarConsoleSystem
     {
         base.Initialize();
         SubscribeLocalEvent<RadarConsoleComponent, ComponentStartup>(OnRadarStartup);
+
+        // OH14-Changes start
+        Subs.BuiEvents<RadarConsoleComponent>(RadarConsoleUiKey.Key, subs =>
+        {
+            subs.Event<BoundUIOpenedEvent>(UpdateUserInterface);
+        });
+    }
+
+    private void UpdateUserInterface(EntityUid uid, RadarConsoleComponent component, BoundUIOpenedEvent args)
+    {
+        UpdateState(uid, component);
+        // OH14-Changes end
     }
 
     private void OnRadarStartup(EntityUid uid, RadarConsoleComponent component, ComponentStartup args)

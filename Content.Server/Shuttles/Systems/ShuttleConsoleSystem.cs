@@ -62,6 +62,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
             subs.Event<ShuttleConsoleFTLBeaconMessage>(OnBeaconFTLMessage);
             subs.Event<ShuttleConsoleFTLPositionMessage>(OnPositionFTLMessage);
             subs.Event<BoundUIClosedEvent>(OnConsoleUIClose);
+            subs.Event<BoundUIOpenedEvent>(OnConsoleUIOpen); // OH14-Changes
         });
 
         SubscribeLocalEvent<DroneConsoleComponent, ConsoleShuttleEvent>(OnCargoGetConsole);
@@ -148,6 +149,14 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 
         RemovePilot(args.Actor);
     }
+
+    // OH14-Changes start
+    private void OnConsoleUIOpen(EntityUid uid, ShuttleConsoleComponent component, BoundUIOpenedEvent args)
+    {
+        DockingInterfaceState? dock = null;
+        UpdateState(uid, ref dock);
+    }
+    // OH14-Changes end
 
     private void OnConsoleUIOpenAttempt(EntityUid uid, ShuttleConsoleComponent component,
         AfterActivatableUIOpenEvent args)
@@ -385,7 +394,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     public NavInterfaceState GetNavState(Entity<RadarConsoleComponent?, TransformComponent?> entity, Dictionary<NetEntity, List<DockingPortState>> docks)
     {
         if (!Resolve(entity, ref entity.Comp1, ref entity.Comp2))
-            return new NavInterfaceState(SharedRadarConsoleSystem.DefaultMaxRange, null, null, docks);
+            return new NavInterfaceState(entity.Comp1!.MaxRange, null, null, docks); // OH14-Changes
 
         return GetNavState(
             entity,
@@ -401,7 +410,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         Angle angle)
     {
         if (!Resolve(entity, ref entity.Comp1, ref entity.Comp2))
-            return new NavInterfaceState(SharedRadarConsoleSystem.DefaultMaxRange, GetNetCoordinates(coordinates), angle, docks);
+            return new NavInterfaceState(entity.Comp1!.MaxRange, GetNetCoordinates(coordinates), angle, docks); // OH14-Changes
 
         return new NavInterfaceState(
             entity.Comp1.MaxRange,
