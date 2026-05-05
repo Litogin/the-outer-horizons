@@ -1,7 +1,22 @@
 - type: entity
   id: BaseMCTNode
+  categories: [ ForkFiltered ]
   abstract: true
   components:
+    - type: Physics
+      bodyType: Static
+      canCollide: false
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 20
+          mask:
+          - ItemMask
+          restitution: 0.3
+          friction: 0.2
     - type: ActivatableUI
       key: enum.MCTNConsoleUiKey.Key
     - type: UserInterface
@@ -40,6 +55,7 @@
           pipeDirection: All
           pipeLayer: 2
     - type: MCTN
+      maxRange: 16
     - type: AccessReader
 
 - type: entity
@@ -49,12 +65,14 @@
 - type: entity
   parent: [BaseMCTNode, BaseMachinePowered]
   id: MCTNodeMachine
-  name: Multi-Channel Transfer Node
+  name: МТ узел
+  description: Многопоточный трасфер-узел, своего рода поводок для вашего корабля, если у вас нет электричества или топлива.
   components:
   - type: ApcPowerReceiver
     powerLoad: 0
     needsPower: false
   - type: Sprite
-    sprite: Structures/Piping/Atmospherics/miners.rsi
-    state: miner
-    drawdepth: Overdoors
+    snapCardinals: true
+    sprite: _OuterHorizons/Structures/Misc/mctn.rsi
+    state: icon
+    # drawdepth: Overdoors

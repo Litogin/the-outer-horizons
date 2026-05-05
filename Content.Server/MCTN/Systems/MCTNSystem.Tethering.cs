@@ -119,7 +119,7 @@ public sealed partial class MCTNSystem : EntitySystem
             visuals.OffsetB = new Vector2(_random.NextFloat(-MaxJointOffset, MaxJointOffset), _random.NextFloat(-MaxJointOffset, MaxJointOffset));
             visuals.OffsetRotationMode = JointOffsetRotationMode.TowardsTarget;
             visuals.Target = anchorB;
-            visuals.Sprite = new SpriteSpecifier.Rsi(new ResPath("Structures/Power/Cables/lv_cable.rsi"), "lvcable_3");
+            visuals.Sprite = new SpriteSpecifier.Rsi(new ResPath("_OuterHorizons/Structures/Power/Cables/lv_cable.rsi"), "lvcable_3");
 
             // Find sprite.
             var node = GetPlugNode(anchorA, key);
@@ -127,7 +127,7 @@ public sealed partial class MCTNSystem : EntitySystem
             var physicalNode = node?.NodeGroup?.Nodes.FirstOrDefault(x => x is not PortPipeNode && x is not CableDeviceNode);
             if (physicalNode != null && physicalNode is PipeNode pipe && TryComp<AtmosPipeColorComponent>(pipe.Owner, out var pipeColor))
             {
-                visuals.Sprite = new SpriteSpecifier.Rsi(new ResPath("Structures/Piping/Atmospherics/pipe.rsi"), "pipeStraight");
+                visuals.Sprite = new SpriteSpecifier.Rsi(new ResPath("_OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi"), "pipeStraight");
                 visuals.Modulate = pipeColor.Color;
             }
             else if (physicalNode != null && physicalNode is CableNode cable)
@@ -138,13 +138,13 @@ public sealed partial class MCTNSystem : EntitySystem
                 {
                     case NodeGroupID.HVPower:
                         {
-                            visuals.Sprite = new SpriteSpecifier.Rsi(new ResPath("Structures/Power/Cables/hv_cable.rsi"), "hvcable_3");
+                            visuals.Sprite = new SpriteSpecifier.Rsi(new ResPath("_OuterHorizons/Structures/Power/Cables/hv_cable.rsi"), "hvcable_3");
                             break;
                         }
                     case NodeGroupID.MVPower:
                         {
-                            visuals.Sprite = new SpriteSpecifier.Rsi(new ResPath("Structures/Power/Cables/mv_cable.rsi"), "mvcable_3");
-                            visuals.SpriteOverlay = new SpriteSpecifier.Rsi(new ResPath("Structures/Power/Cables/mv_cable.rsi"), "mvstripes_3");
+                            visuals.Sprite = new SpriteSpecifier.Rsi(new ResPath("_OuterHorizons/Structures/Power/Cables/mv_cable.rsi"), "mvcable_3");
+                            visuals.SpriteOverlay = new SpriteSpecifier.Rsi(new ResPath("_OuterHorizons/Structures/Power/Cables/mv_cable.rsi"), "mvstripes_3");
                             break;
                         }
                 }
