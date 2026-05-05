@@ -1,26 +1,19 @@
-using Content.Shared.Dataset;
+using Content.Server.GridControl.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server._OuterHorizons.Spawning;
+namespace Content.Shared.GridControl.Components;
 
-/// <summary>
-/// Immediately loads in a grid at the location of this entity.
-/// </summary>
-[RegisterComponent]
+[RegisterComponent, EntityCategory("Spawner")]
+[Access(typeof(GridSpawnerSystem))]
 public sealed partial class GridSpawnerComponent : Component
 {
     [DataField(required: true)]
-    public ResPath Path = new("Maps/_OuterHorizons/Direlicts/TinCan.yml");
+    public ResPath GridPath { get; set; }
 
     [DataField]
-    public ProtoId<LocalizedDatasetPrototype>? NameDataset = null;
-
-    [DataField, AlwaysPushInheritance]
-    public ComponentRegistry AddComponents = new();
+    public ComponentRegistry? AddComponents { get; set; } = null;
 
     [DataField]
-    public bool NameGrid = true;
+    public bool StationGrid { get; set; } = false;
 }
-
-
