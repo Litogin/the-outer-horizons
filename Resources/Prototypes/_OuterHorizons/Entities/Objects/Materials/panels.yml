@@ -31,8 +31,20 @@
     - state: panel_3
       map: ["base"]
   - type: Item
+    sprite: _OuterHorizons/Objects/Materials/panels.rsi
     heldPrefix: panel
   - type: Appearance
+
+- type: entity
+  parent: OH14_SheetPanelsBasic
+  id: OH14_SheetPanelsBasic8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: panel_2
+  - type: Stack
+    stackType: OH14_Panels
+    count: 8
 
 - type: entity
   parent: OH14_SheetPanelsBasic

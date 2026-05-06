@@ -1,0 +1,305 @@
+# Канистры
+
+- type: entity
+  id: LootSpawnerGasCans75
+  name: спавнер канистры
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%, Любая
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Storage/canister.rsi
+        state: yellow
+  - type: RandomSpawner
+    prototypes:
+    - OH14_StorageCanister
+    - OH14_AirCanister
+    - OH14_OxygenCanister
+    - OH14_NitrogenCanister
+    - OH14_PlasmaCanister
+    - OH14_StorageCanisterBroken
+    - OH14_AirCanisterBroken
+    - OH14_OxygenCanisterBroken
+    - OH14_NitrogenCanisterBroken
+    - OH14_PlasmaCanisterBroken
+    - OH14_GasCanisterFrame
+    chance: 0.75
+    offset: 0
+
+- type: entity
+  id: LootSpawnerGasCansOxy75
+  name: спавнер канистры
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%, Воздух
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Storage/canister.rsi
+        state: yellow
+  - type: RandomSpawner
+    prototypes:
+    - OH14_AirCanister
+    - OH14_OxygenCanister
+    - OH14_AirCanisterBroken
+    - OH14_OxygenCanisterBroken
+    chance: 0.75
+    offset: 0
+
+# Латы
+
+- type: entity
+  id: LootSpawnerAutolathe
+  name: спавнер автолата
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Machines/autolathe.rsi
+        state: icon
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_SheetGirder1
+    rareChance: 0.3
+    prototypes:
+    - OH14_AutoLathe
+    - OH14_FrameAutolathe
+    - OH14_FrameAutolathe
+    chance: 1
+    offset: 0
+
+- type: entity
+  id: LootSpawnerProtolathe
+  name: спавнер протолата
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Machines/protolathe.rsi
+        state: icon
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_SheetGirder1
+    rareChance: 0.3
+    prototypes:
+    - OH14_ProtoLathe
+    - OH14_FrameProtolathe
+    - OH14_FrameProtolathe
+    chance: 1
+    offset: 0
+
+# Гидро
+
+- type: entity
+  id: LootSpawnerHydropot
+  name: спавнер горшок
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Hydro/main.rsi
+        state: hydrotray-filled
+  - type: RandomSpawner
+    prototypes:
+    - OH14_PlantPot
+    - OH14_PlantPotEmpty
+    - OH14_PlantPotDirtEmpty
+    - OH14_PlantPotDirtEmpty
+    - OH14_PlantPotDirtEmpty
+    chance: 1
+    offset: 0
+
+# Ресурсы
+
+- type: entity
+  id: LootSpawnerSecCrate75
+  name: спавнер грузовой ящик
+  suffix: 75%
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Storage/crate_sec.rsi
+        state: basic
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_CrateSecFillWeapons
+    rareChance: 0.1
+    prototypes:
+    - OH14_CrateSec
+    - OH14_CrateSec
+    - OH14_CrateSec
+    - OH14_CrateSec
+    - OH14_CrateSec
+    - OH14_CrateSec
+    - OH14_CrateSecFillFood
+    - OH14_CrateSecFillFood
+    - OH14_CrateSecFillHeals
+    chance: 0.75
+    offset: 0
+
+- type: entity
+  id: LootSpawnerTankWater75
+  name: спавнер резервуар
+  suffix: 75%, Вода
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Storage/tanks.rsi
+        state: watertank-2
+  - type: RandomSpawner
+    prototypes:
+    - OH14_StorageTankWater
+    - OH14_StorageTankWaterFull
+    chance: 0.75
+    offset: 0
+
+- type: entity
+  id: LootSpawnerTankFuel75
+  name: спавнер резервуар
+  suffix: 75%, Топливо
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Storage/tanks.rsi
+        state: fueltank-2
+  - type: RandomSpawner
+    prototypes:
+    - OH14_StorageTankFuel
+    - OH14_StorageTankFuelFull
+    chance: 0.75
+    offset: 0
+
+# Энергетика
+
+- type: entity
+  id: LootSpawnerSubstation
+  name: спавнер подстанция
+  suffix: 75%
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Power/substation.rsi
+        state: substation
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_Substation
+    rareChance: 0.1
+    prototypes:
+    - OH14_SubstationFrame
+    - OH14_SubstationEmpty
+    - OH14_SheetGirder1
+    chance: 0.75
+    offset: 0
+
+- type: entity
+  id: LootSpawnerSubstation
+  name: спавнер подстанция
+  suffix: 75%
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Power/substation.rsi
+        state: substation
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_Substation
+    rareChance: 0.1
+    prototypes:
+    - OH14_SubstationFrame
+    - OH14_SubstationEmpty
+    - OH14_SheetGirder1
+    chance: 0.75
+    offset: 0
+
+- type: entity
+  id: LootSpawnerBatteryArray
+  name: спавнер аккамуляторы
+  suffix: 75%
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Power/smes.rsi
+        state: smes
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_BatteryArray
+    rareChance: 0.1
+    prototypes:
+    - OH14_BatteryArrayFrame
+    - OH14_BatteryArrayEmpty
+    - OH14_SheetGirder1
+    chance: 0.75
+    offset: 0
+
+- type: entity
+  id: LootSpawnerGeneratorTEF
+  name: спавнер ТЭТ генератор
+  suffix: 75%
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Power/fuel_generator.rsi
+        state: icon
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_GeneratorTEF
+    rareChance: 0.2
+    prototypes:
+    - OH14_GeneratorTEFFrame
+    - OH14_SheetGirder1
+    chance: 0.75
+    offset: 0
+
+# Шаттловое
+
+- type: entity
+  id: LootSpawnerGyroscope
+  name: спавнер гиродин
+  suffix: 75%
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Structures/Shuttles/gyroscope.rsi
+        state: base
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_Gyroscope
+    rareChance: 0.3
+    prototypes:
+    - OH14_FrameGyroscope
+    - OH14_SheetGirder1
+    chance: 0.75
+    offset: 0

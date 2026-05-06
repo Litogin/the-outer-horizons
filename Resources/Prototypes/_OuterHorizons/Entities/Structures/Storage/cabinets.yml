@@ -170,12 +170,26 @@
   id: OH14_CabinetEngi
   parent: OH14_CabinetBasic
   description: Я должен тебе тулбокс.
-  suffix: Инж
+  suffix: Инженерный
   components:
   - type: Sprite
     sprite: _OuterHorizons/Structures/Storage/cabinet.rsi
     layers:
     - state: engi
     - state: engi_open
+      map: [ top ]
+      visible: false
+
+- type: entity
+  id: OH14_CabinetHydro
+  parent: OH14_CabinetBasic
+  description: Я должен тебе EZ-Нутриенты.
+  suffix: Гидропоника
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/cabinet.rsi
+    layers:
+    - state: hydro
+    - state: hydro_open
       map: [ top ]
       visible: false

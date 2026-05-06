@@ -36,6 +36,12 @@
     },
     {
       "name": "engi_open"
+    },
+    {
+      "name": "hydro"
+    },
+    {
+      "name": "hydro_open"
     }
   ]
 }

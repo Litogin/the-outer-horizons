@@ -39,11 +39,11 @@
 # Инструменты
 
 - type: entity
-  id: LootSpawnerToolbox100
+  id: LootSpawnerToolbox75
   name: спавнер ящик инструментов
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 100%
+  suffix: 75%
   components:
   - type: Sprite
     layers:
@@ -248,5 +248,29 @@
     - OH14_CableCoilHV8
     - OH14_CableCoilMV8
     - OH14_CableCoilLV8
+    chance: 0.75
+    offset: 0.1
+
+# Провиант
+
+- type: entity
+  id: LootSpawnerFoodDrinks
+  name: спавнер напитки
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+    - OH14_DrinkCup
+    - OH14_DrinkBottleWater
+    - OH14_DrinkBottleKvas
+    - OH14_DrinkBottleWaterFull
+    - OH14_DrinkBottleKvasFull
     chance: 0.75
     offset: 0.1
