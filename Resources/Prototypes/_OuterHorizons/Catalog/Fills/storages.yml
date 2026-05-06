@@ -10,9 +10,11 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_ClothingHeadHelmetUCO
-          amount: 2
         - id: OH14_ClothingOuterHardsuitUCO
-          amount: 2
+        - id: OH14_ClothingHeadHelmetUCO
+          prob: 0.8
+        - id: OH14_ClothingOuterHardsuitUCO
+          prob: 0.8
         # - id: OH14_OxygenTankWhiteFilled
         #   amount: 2
         # - id: OH14_MedkitBasicFilled
@@ -30,9 +32,11 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_ClothingHeadHelmetEVABasic
-          amount: 2
         - id: OH14_ClothingOuterHardsuitEVABasic
-          amount: 2
+        - id: OH14_ClothingHeadHelmetEVABasic
+          prob: 0.8
+        - id: OH14_ClothingOuterHardsuitEVABasic
+          prob: 0.8
         # - id: OH14_OxygenTankRedFilled
         #   amount: 2
         # - id: OH14_MedkitBasicFilled
@@ -50,9 +54,11 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_OxygenTankWhiteFilled
-          amount: 2
         - id: OH14_JetpackWhite
-          amount: 2
+        - id: OH14_OxygenTankWhiteFilled
+          prob: 0.8
+        - id: OH14_JetpackWhite
+          prob: 0.8
         # - id: OH14_OxygenTankWhiteFilled
         #   amount: 2
         # - id: OH14_MedkitBasicFilled
@@ -87,8 +93,11 @@
         - id: OH14_MedipenPuncturase
           amount: 4
         - id: OH14_DrinkGlassBottleOculine
+          prob: 0.8
         - id: OH14_DrinkGlassBottleDexalin
+          prob: 0.8
         - id: OH14_DrinkGlassBottleBicaridine
+          prob: 0.8
 
 - type: entity
   parent: OH14_CabinetEngi
@@ -123,8 +132,10 @@
         children:
         - id: OH14_DrinkBottleWaterFull
           amount: 6
-        - id: OH14_DrinkBottleWater
-          amount: 2
+        - id: OH14_DrinkBottleKvasFull
+          prob: 0.9
+        - id: OH14_DrinkBottleKvasFull
+          prob: 0.8
         - id: OH14_FoodHrumka
           amount: 16
 
@@ -138,17 +149,23 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_FlashlightFilled
+          prob: 0.9
         - id: OH14_CrowbarBasic
+          prob: 0.9
           amount: 2
         - id: OH14_WrenchBasic
+          prob: 0.9
           amount: 2
         - id: OH14_WirecutterBasic
+          prob: 0.9
           amount: 2
         - id: OH14_ScrewdriverBasic
+          prob: 0.9
           amount: 2
         - id: OH14_MultitoolBasic
           prob: 0.2
         - id: OH14_GeigerCounter
+          prob: 0.2
         - id: OH14_NuclearRod
           prob: 0.1
         - id: OH14_ToolboxBlueFilled
@@ -224,15 +241,21 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_NuclearRod
-          prob: 0.3
+          prob: 0.05
         - id: OH14_MedkitBasicFilled
-          prob: 0.3
+          prob: 0.1
         - id: OH14_ToolboxRedFilled
-          prob: 0.3
+          prob: 0.1
+        - id: OH14_DrinkBottleWater
+          prob: 0.5
         - id: OH14_DrinkBottleWater
           prob: 0.5
         - id: OH14_FoodHrumkaTrash
-          prob: 0.4
+          prob: 0.1
+        - id: OH14_FoodHrumkaTrash
+          prob: 0.1
+        - id: OH14_FoodHrumkaTrash
+          prob: 0.1
         - id: OH14_PowerCellMediumEmpty
           prob: 0.5
         - id: OH14_PowerCellMediumEmpty
@@ -249,3 +272,5 @@
           prob: 0.5
         - id: OH14_Pen
           prob: 0.5
+        - id: OH14_DrinkGlassBottleNutri
+          prob: 0.1

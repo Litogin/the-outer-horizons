@@ -67,8 +67,19 @@
 
 - type: entity
   parent: OH14_SheetMaterials
+  id: OH14_SheetMaterials8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: material_2
+  - type: Stack
+    stackType: OH14_Materials
+    count: 8
+
+- type: entity
+  parent: OH14_SheetMaterials
   id: OH14_SheetMaterials1
-  suffix: Single
+  suffix: 1
   components:
   - type: Sprite
     state: material
@@ -111,7 +122,7 @@
 - type: entity
   parent: OH14_SheetComponents
   id: OH14_SheetComponents5
-  suffix: Single
+  suffix: 5
   components:
   - type: Sprite
     state: mechanic
@@ -122,7 +133,7 @@
 - type: entity
   parent: OH14_SheetComponents
   id: OH14_SheetComponents1
-  suffix: Single
+  suffix: 1
   components:
   - type: Sprite
     state: mechanic

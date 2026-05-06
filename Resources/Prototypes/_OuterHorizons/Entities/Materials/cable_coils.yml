@@ -89,6 +89,18 @@
 
 - type: entity
   parent: OH14_CableCoilHV
+  id: OH14_CableCoilHV8
+  suffix: 8
+  components:
+  - type: Sprite
+    layers:
+    - state: coilhv-20
+      map: ["base"]
+  - type: Stack
+    count: 8
+
+- type: entity
+  parent: OH14_CableCoilHV
   id: OH14_CableCoilHV1
   suffix: 1
   components:
@@ -135,6 +147,18 @@
 
 - type: entity
   parent: OH14_CableCoilMV
+  id: OH14_CableCoilMV8
+  suffix: 8
+  components:
+  - type: Sprite
+    layers:
+    - state: coilmv-20
+      map: ["base"]
+  - type: Stack
+    count: 8
+
+- type: entity
+  parent: OH14_CableCoilMV
   id: OH14_CableCoilMV1
   suffix: 1
   components:
@@ -178,6 +202,18 @@
           Quantity: 3
         - ReagentId: Copper
           Quantity: 2
+
+- type: entity
+  parent: OH14_CableCoilLV
+  id: OH14_CableCoilLV8
+  suffix: 8
+  components:
+  - type: Sprite
+    layers:
+    - state: coillv-20
+      map: ["base"]
+  - type: Stack
+    count: 8
 
 - type: entity
   parent: OH14_CableCoilLV

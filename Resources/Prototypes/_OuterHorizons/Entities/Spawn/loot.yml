@@ -1,0 +1,252 @@
+# ЕВА
+
+- type: entity
+  id: LootSpawnerEVA75
+  name: спавнер ЕВА
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/orange.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+    - OH14_ClothingOuterHardsuitOrange
+    chance: 0.75
+    offset: 0
+
+- type: entity
+  id: LootSpawnerEVAHelmet75
+  name: спавнер шлем ЕВА
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Clothing/Head/Hardsuits/orange.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+    - OH14_ClothingHeadHelmetOrange
+    chance: 0.75
+    offset: 0
+
+# Инструменты
+
+- type: entity
+  id: LootSpawnerToolbox100
+  name: спавнер ящик инструментов
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 100%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+    - OH14_ToolboxRed
+    - OH14_ToolboxBlue
+    - OH14_ToolboxYellow
+    - OH14_ToolboxRedFilled
+    - OH14_ToolboxBlueFilled
+    - OH14_ToolboxYellowFilled
+    chance: 1
+    offset: 0.1
+
+- type: entity
+  id: LootSpawnerToolbox50
+  name: спавнер ящик инструментов
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 50%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+    - OH14_ToolboxRed
+    - OH14_ToolboxBlue
+    - OH14_ToolboxYellow
+    - OH14_ToolboxRedFilled
+    - OH14_ToolboxBlueFilled
+    - OH14_ToolboxYellowFilled
+    chance: 0.5
+    offset: 0.1
+
+- type: entity
+  id: LootSpawnerTools75
+  name: спавнер инструмента
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Tools/crowbar.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+    - OH14_CrowbarBasic
+    - OH14_WirecutterBasic
+    - OH14_ScrewdriverBasic
+    - OH14_WrenchBasic
+    - OH14_FlashlightFilled
+    chance: 0.75
+    offset: 0.1
+
+- type: entity
+  id: LootSpawnerTools75
+  name: спавнер продвинутого инструмента
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 50%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Tools/drill.rsi
+        state: drill_screw
+  - type: RandomSpawner
+    prototypes:
+    - OH14_GeigerCounter
+    - OH14_DrillBasic
+    - OH14_MultitoolBasic
+    - OH14_WelderBasic
+    - OH14_ToolMassScannerEmpty
+    chance: 0.5
+    offset: 0.1
+
+- type: entity
+  id: LootSpawnerMiningTools75
+  name: спавнер кирка или бур
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75-10%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
+        state: pickaxe
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_MiningDrill
+    rareChance: 0.1
+    prototypes:
+    - OH14_Pickaxe
+    chance: 0.75
+    offset: 0.1
+
+# Меды
+
+- type: entity
+  id: LootSpawnerMedical75
+  name: спавнер медикаментов
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
+        state: ointment_3
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_MedkitBasic
+    rareChance: 0.1
+    prototypes:
+    - OH14_Ointment
+    - OH14_Ointment1
+    - OH14_Brutepack
+    - OH14_Brutepack1
+    - OH14_Bloodpack
+    - OH14_Bloodpack1
+    - OH14_Gauze
+    - OH14_Gauze1
+    chance: 0.75
+    offset: 0.1
+
+- type: entity
+  id: LootSpawnerBottles75
+  name: спавнер бутылочек
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi
+        state: icon
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_DrinkGlassBottleNutri # У меня пока что не особо идей куда еще это запихнуть
+    rareChance: 0.1
+    prototypes:
+    - OH14_DrinkGlassBottle
+    - OH14_DrinkGlassBottleBicaridine
+    - OH14_DrinkGlassBottleDexalin
+    - OH14_DrinkGlassBottleOculine
+    chance: 0.75
+    offset: 0.2
+
+# Ресурсы
+
+- type: entity
+  id: LootSpawnerResources75
+  name: спавнер ресурсов
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+        state: material_3
+  - type: RandomSpawner
+    rarePrototypes:
+    - OH14_SheetComponents5
+    - OH14_SheetElectronics5
+    rareChance: 0.1
+    prototypes:
+    - OH14_SheetMaterials8
+    - OH14_SheetMaterials8
+    - OH14_SheetMaterials8
+    - OH14_SheetIngot1
+    - OH14_SheetGirder8
+    chance: 0.75
+    offset: 0.1
+
+- type: entity
+  id: LootSpawnerCables75
+  name: спавнер кабелей
+  categories: [ ForkFiltered ]
+  parent: MarkerBase
+  suffix: 75%
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
+        state: coilhv-30
+  - type: RandomSpawner
+    prototypes:
+    - OH14_CableCoilHV8
+    - OH14_CableCoilMV8
+    - OH14_CableCoilLV8
+    chance: 0.75
+    offset: 0.1
