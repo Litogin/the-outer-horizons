@@ -36,8 +36,20 @@
 - type: entity
   parent: OH14_BaseBlueprint
   id: OH14_BlueprintTest
-  name: тестовый чертеж
+  name: чертеж
   components:
   - type: Blueprint
     providedRecipes:
     - SeismicCharge
+
+- type: entity
+  parent: OH14_BaseBlueprint
+  id: OH14_BlueprintShuttleWalls
+  name: чертеж
+  suffix: Стена шаттла
+  components:
+  - type: Label
+    currentLabel: стена шаттла
+  - type: Blueprint
+    providedRecipes:
+    - OH14_PanelsShuttle

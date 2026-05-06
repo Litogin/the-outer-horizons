@@ -107,7 +107,7 @@
     offset: 0.1
 
 - type: entity
-  id: LootSpawnerTools75
+  id: LootSpawnerAdvTools75
   name: спавнер продвинутого инструмента
   categories: [ ForkFiltered ]
   parent: MarkerBase

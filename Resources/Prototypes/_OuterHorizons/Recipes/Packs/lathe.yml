@@ -12,6 +12,7 @@
 - type: latheRecipePack
   id: OH14_MaterialsStatic
   recipes:
+  - OH14_Panels
   - OH14_Components
   - OH14_Girders
   - OH14_Pipes
