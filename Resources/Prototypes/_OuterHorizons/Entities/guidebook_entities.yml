@@ -1,0 +1,13 @@
+- type: entity
+  id: OH14_GuidebookTinCan
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/GuidebookEntities.rsi
+    state: TinCan
+
+- type: entity
+  id: OH14_GuidebookFireCam
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/GuidebookEntities.rsi
+    state: FireCam
