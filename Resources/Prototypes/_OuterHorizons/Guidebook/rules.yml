@@ -1,0 +1,6 @@
+- type: guideEntry
+  hidden: false
+  locFilter: "ru-RU"
+  id: OH14_Rules
+  name: Правила
+  text: "/ServerInfo/_OuterHorizons/Rules.xml"

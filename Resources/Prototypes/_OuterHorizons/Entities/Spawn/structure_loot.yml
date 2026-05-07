@@ -213,29 +213,6 @@
     offset: 0
 
 - type: entity
-  id: LootSpawnerSubstation
-  name: спавнер подстанция
-  suffix: 75%
-  categories: [ ForkFiltered ]
-  parent: MarkerBase
-  components:
-  - type: Sprite
-    layers:
-      - state: red
-      - sprite: _OuterHorizons/Structures/Power/substation.rsi
-        state: substation
-  - type: RandomSpawner
-    rarePrototypes:
-    - OH14_Substation
-    rareChance: 0.1
-    prototypes:
-    - OH14_SubstationFrame
-    - OH14_SubstationEmpty
-    - OH14_SheetGirder1
-    chance: 0.75
-    offset: 0
-
-- type: entity
   id: LootSpawnerBatteryArray
   name: спавнер аккамуляторы
   suffix: 75%
