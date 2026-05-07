@@ -1,5 +1,5 @@
 - type: entity
-  id: BaseMCTNode
+  id: OH14_BasicMCTNode
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -63,11 +63,14 @@
   save: false
 
 - type: entity
-  parent: [BaseMCTNode, BaseMachinePowered]
-  id: MCTNodeMachine
+  parent: [OH14_BasicMCTNode, BaseMachinePowered]
+  id: OH14_MCTNode
   name: МТ узел
   description: Многопоточный трасфер-узел, своего рода поводок для вашего корабля, если у вас нет электричества или топлива.
   components:
+  - type: Construction
+    graph: OH14_MCTNode
+    node: OH14_MCTNode
   - type: ApcPowerReceiver
     powerLoad: 0
     needsPower: false
@@ -75,4 +78,32 @@
     snapCardinals: true
     sprite: _OuterHorizons/Structures/Misc/mctn.rsi
     state: icon
+    # drawdepth: Overdoors
+
+- type: entity
+  parent: OH14_FrameBasic
+  id: OH14_MCTNodeFrame
+  name: каркас МТ узла
+  components:
+  - type: Construction
+    graph: OH14_MCTNode
+    node: OH14_MCTNodeFrame
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: Sprite
+    snapCardinals: true
+    sprite: _OuterHorizons/Structures/Misc/mctn.rsi
+    state: frame
     # drawdepth: Overdoors

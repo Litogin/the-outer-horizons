@@ -1,0 +1,41 @@
+- type: constructionGraph
+  id: OH14_MCTNode
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_MCTNodeFrame
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: OH14_MCTNodeFrame
+      entity: OH14_MCTNodeFrame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+          steps:
+            - tool: Screwing
+              doAfter: 1
+        - to: OH14_MCTNode
+          steps:
+            - material: OH14_Components
+              amount: 4
+              doAfter: 1
+    - node: OH14_MCTNode
+      entity: OH14_MCTNode
+      edges:
+        - to: OH14_MCTNodeFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 4
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 1

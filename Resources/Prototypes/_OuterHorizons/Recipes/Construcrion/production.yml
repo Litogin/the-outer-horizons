@@ -30,7 +30,7 @@
   graph: OH14_Microwave
   startNode: start
   targetNode: OH14_Microwave
-  category: construction-category-utilities
+  category: construction-category-machines
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
@@ -42,7 +42,7 @@
   graph: OH14_ReagentGrinder
   startNode: start
   targetNode: OH14_ReagentGrinder
-  category: construction-category-utilities
+  category: construction-category-machines
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
