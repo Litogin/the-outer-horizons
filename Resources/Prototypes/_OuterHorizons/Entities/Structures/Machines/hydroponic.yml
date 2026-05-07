@@ -140,7 +140,7 @@
 
 - type: entity
   name: гидропоника
-  parent: [ OH14_BaseStructureDynamic, OH14_Soil ]
+  parent: OH14_BaseStructureDynamic
   id: OH14_HydroponicDirtEmpty
   suffix: Без земли
   description: Лоток для земли, но межпланетного класса. Имеет несколько датчиков, которые заставляют светиться непонятные для вас лампочки.
@@ -157,7 +157,7 @@
     offset: "0, 0.35"
     layers:
       - sprite: _OuterHorizons/Structures/Hydro/main.rsi
-        state: hydrotray2-filled
+        state: hydrotray2
         offset: "0, -0.35"
   - type: Destructible
     thresholds:

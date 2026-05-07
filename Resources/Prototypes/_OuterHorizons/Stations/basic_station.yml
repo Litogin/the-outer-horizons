@@ -38,7 +38,7 @@
         direlicts: !type:GridSpawnGroup
           minimumDistance: 5000
           maximumDistance: 10000
-          # hide: true
+          hide: true
           nameGrid: true
           minCount: 1
           maxCount: 1

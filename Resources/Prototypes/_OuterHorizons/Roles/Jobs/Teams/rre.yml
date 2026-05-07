@@ -27,7 +27,7 @@
     pants: OH14_ClothingPantsBasic
     back: ClothingBackpackSatchelBasic
     shoes: OH14_ClothingShoesBasic
-    id: OH14_PDA
+    id: OH14_PDARRE
     pocket2: OH14_ClothingMaskGas
   storage:
     back:
@@ -57,7 +57,7 @@
     pants: OH14_ClothingPantsBasic
     back: ClothingBackpackSatchelBasic
     shoes: OH14_ClothingShoesBasic
-    id: OH14_PDA
+    id: OH14_PDARRECommander
     pocket2: OH14_ClothingMaskGas
   storage:
     back:

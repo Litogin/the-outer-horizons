@@ -18,7 +18,7 @@ public sealed partial class IFFComponent : Component
     public static readonly Color IFFColor = Color.FromHex("#bebfc2"); // OH14-Changes
 
     [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
-    public IFFFlags Flags = IFFFlags.None;
+    public IFFFlags Flags = IFFFlags.HideLabel; // OH14-Changes, None > HideLabel
 
     /// <summary>
     /// Color for this to show up on IFF.

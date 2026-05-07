@@ -4,6 +4,14 @@
   name: гермозатвор
   description: Легко разломает тебе череп, когда дверка начнет спускаться вниз.
   components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: AccessReader
     containerAccessProvider: board
   - type: Sprite
