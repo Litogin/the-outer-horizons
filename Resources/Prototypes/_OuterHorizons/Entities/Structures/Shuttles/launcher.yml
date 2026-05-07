@@ -1,0 +1,91 @@
+- type: entity
+  id: OH14_BasicShuttleGun
+  parent: OH14_BaseStructure
+  name: shittle gun
+  abstract: true
+  components:
+  - type: Appearance
+  - type: InteractionOutline
+  - type: Anchorable
+  - type: Rotatable
+  - type: ContainerContainer
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Electronic
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - Trigger
+    - Toggle
+    - On
+    - Off
+  - type: AutoShootGun
+  - type: GunSignalControl
+
+- type: entity
+  id: OH14_ShuttleGunRockets
+  parent: OH14_BasicShuttleGun
+  name: пусковая установка
+  description: Небольшая пусковая установка для ракет. Готовы взорвать все к чертовой матери?
+  components:
+  - type: Airtight
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Shuttles/Cannons/launcher.rsi
+    layers:
+    - state: icon
+    - state: mag-2
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+            params:
+              volume: -4
+  - type: Gun
+    projectileSpeed: 120
+    fireRate: 1
+    angleDecay: 45
+    minAngle: 0
+    maxAngle: 5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
+      params:
+        pitch: 0.8
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+      params:
+        volume: -16
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - Grenade
+    capacity: 2
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: Machine
+    board: ShuttleGunFriendshipCircuitboard
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false

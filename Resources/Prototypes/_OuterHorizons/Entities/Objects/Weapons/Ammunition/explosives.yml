@@ -1,0 +1,59 @@
+# Grenades
+
+- type: entity
+  abstract: true
+  parent: OH14_BaseItem
+  id: OH14_BasicGrenade
+  name: base grenade
+  components:
+  - type: Tag
+    tags:
+    - Grenade
+  - type: Item
+    size: Normal
+
+- type: entity
+  parent: OH14_BasicGrenade
+  id: OH14_GrenadeRocket
+  name: ракета
+  description: Создана явно не для мирных целей.
+  components:
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 120
+    intensitySlope: 5
+    maxIntensity: 10
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        enum.AmmoVisualLayers.Base:
+          True: {state: icon}
+          False: {state: inworld}
+  - type: CartridgeAmmo
+    proto: OH14_ProjectileRocket
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Weapons/Guns/Ammunition/rocket.rsi
+    layers:
+    - state: inworld
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  # - type: SpentAmmoVisuals
+  #   state: icon
+  #   suffix: false
