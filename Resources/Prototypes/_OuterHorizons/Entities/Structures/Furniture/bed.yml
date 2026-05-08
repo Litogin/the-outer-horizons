@@ -64,7 +64,7 @@
 - type: entity
   parent: OH14_Bed
   id: OH14_MedicalBed
-  name: медецинская койка
+  name: медицинская койка
   description: Склепаная на скорую руку койка для пациентов медблока. Ходят слухи что она обладает удивительными лечебными свойствами.
   components:
   - type: Sprite

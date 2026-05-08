@@ -152,7 +152,7 @@
   categories: [ ForkFiltered ]
   id: OH14_FrameAPC
   name: каркас ЛКП
-  description: A control terminal for the area's electrical systems, lacking the electronics.
+  description: Старк Тони собрал ЛКП сидя в ледяной яме, из металлолома своего корабля!
   placement:
     mode: SnapgridCenter
   components:
