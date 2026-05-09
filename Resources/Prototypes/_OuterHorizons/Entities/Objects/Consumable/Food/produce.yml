@@ -32,6 +32,18 @@
   id: OH14_FoodPotato
   description: Съедобная кроха, посреди бесконечной пустоты.
   components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_drop.ogg
   - type: Perishable
     rotAfter: 1800
     molsPerSecondPerUnitMass: 0
@@ -71,16 +83,28 @@
     tags:
     - Potato
     - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Burger: Potato
-      Taco: Potato
+  # - type: FoodSequenceElement
+  #   entries:
+  #     Burger: Potato
+  #     Taco: Potato
 
 - type: entity
   name: гнилой картофель
   parent: [ FoodProduceBase, OH14_BaseItem ]
   id: OH14_FoodPotatoRotten
   components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_drop.ogg
   - type: Appearance
   - type: InworldSprite
   - type: GenericVisualizer
@@ -115,8 +139,20 @@
   parent: OH14_BasicFoodMeal
   id: OH14_FoodPotatoLoaded
   name: приготовленный картофель
-  description: ВОТ ЭТО ЯВНО ЛУЧШЕ, ЧЕМ ЕБУЧАЯ ПИТАТЕЛЬНАЯ ПАСТА.
+  description: Это явно лучше чем питательная паста.
   components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/potato_drop.ogg
   - type: GenericVisualizer
     visuals:
       enum.InworldSpriteState.State:
@@ -140,3 +176,113 @@
     layers:
       - state: icon_cooked_inworld
         map: ["base"]
+
+# ----------- Дыня
+
+- type: entity
+  name: мраморная дыня
+  parent: OH14_BasicFoodMeal
+  id: OH14_FoodMarblemelon
+  description: Дынька. Потребляет и содержит в себе много воды.
+  components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/melon_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/melon_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/melon_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/melon_drop.ogg
+  # - type: Perishable
+  #   rotAfter: 1800
+  #   molsPerSecondPerUnitMass: 0
+  # - type: RotInto
+  #   entity: OH14_FoodPotatoRotten
+  #   stage: 1
+  - type: FlavorProfile
+    flavors:
+      - marblemelon
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 25
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Water
+          Quantity: 15
+        - ReagentId: Vitamin
+          Quantity: 5
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Food/marblemelon.rsi
+    layers:
+      - state: icon_inworld
+        map: ["base"]
+  - type: Item
+    size: Normal
+    # heldPrefix: produce
+  - type: Produce
+    seedId: OH14_Marblemelon
+  - type: Seed
+    seedId: OH14_Marblemelon
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 20
+      - ReagentId: Nutriment
+        Quantity: 5
+
+# ----------- Воксельный цветок
+
+- type: entity
+  name: бутон воксельного цветка
+  parent: OH14_BasicFoodMeal
+  id: OH14_VoxelFlower
+  description: Можно переработать в медецинских целях.
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: harvest_item}
+          False: {state: harvest_item}
+  - type: FlavorProfile
+    flavors:
+      - flower
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Vitamin
+          Quantity: 10
+        - ReagentId: Bicaridine
+          Quantity: 5
+        - ReagentId: Dexalin
+          Quantity: 5
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Specific/Hydro/voxel.rsi
+    layers:
+      - state: harvest_item
+        map: ["base"]
+  - type: Item
+    size: Normal
+    # heldPrefix: produce
+  - type: Produce
+    seedId: OH14_VoxelFlower
+  - type: Seed
+    seedId: OH14_VoxelFlower
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Vitamin
+        Quantity: 10
+      - ReagentId: Bicaridine
+        Quantity: 5
+      - ReagentId: Dexalin
+        Quantity: 5

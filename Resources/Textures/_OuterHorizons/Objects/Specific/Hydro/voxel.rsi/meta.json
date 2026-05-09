@@ -14,6 +14,9 @@
             "name": "harvest"
         },
         {
+            "name": "harvest_item"
+        },
+        {
             "name": "stage-1"
         },
         {

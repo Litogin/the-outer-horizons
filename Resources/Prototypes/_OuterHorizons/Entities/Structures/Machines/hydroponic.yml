@@ -38,40 +38,33 @@
   - type: Pullable
   - type: Sprite
     drawdepth: Mobs
-    offset: "0, 0.35"
     layers:
       - sprite: _OuterHorizons/Structures/Hydro/main.rsi
         state: hydrotray2-filled
-        offset: "0, -0.35"
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: lowhealth3
         map: [ "health_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: lowwater3
         map: [ "water_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: lownutri3
         map: [ "nutri_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: alert3
         map: [ "undefined_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: harvest3
         map: [ "harvest_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
   - type: Appearance
   - type: GenericVisualizer
@@ -154,11 +147,9 @@
   - type: Pullable
   - type: Sprite
     drawdepth: Mobs
-    offset: "0, 0.35"
     layers:
       - sprite: _OuterHorizons/Structures/Hydro/main.rsi
         state: hydrotray2
-        offset: "0, -0.35"
   - type: Destructible
     thresholds:
     - trigger:

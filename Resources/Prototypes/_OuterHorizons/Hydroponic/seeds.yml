@@ -1,0 +1,89 @@
+- type: seed
+  id: OH14_Potato #кртшка
+  name: seeds-potato-name
+  noun: seeds-noun-seeds
+  displayName: seeds-potato-display-name
+  plantRsi: _OuterHorizons/Objects/Specific/Hydro/potato.rsi
+  packetPrototype: OH14_PotatoSeed
+  productPrototypes:
+    - OH14_FoodPotato
+  lifespan: 140
+  maturation: 15 # было 10, потом поменяй
+  production: 3
+  yield: 4
+  potency: 10
+  growthStages: 4
+  waterConsumption: 0.50
+  nutrientConsumption: 0
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    Vitamin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+
+- type: seed
+  id: OH14_Marblemelon #дыня
+  name: seeds-marblemelon-name
+  noun: seeds-noun-seeds
+  displayName: seeds-marblemelon-display-name
+  plantRsi: _OuterHorizons/Objects/Specific/Hydro/marblemelon.rsi
+  packetPrototype: OH14_MarblemelonSeeds
+  productPrototypes:
+    - OH14_FoodMarblemelon
+  lifespan: 100
+  maturation: 25
+  production: 1
+  yield: 1
+  potency: 1
+  growthStages: 4
+  waterConsumption: 0.80
+  nutrientConsumption: 0
+  idealLight: 12
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 10
+    Water:
+      Min: 1
+      Max: 15
+      PotencyDivisor: 10
+    Vitamin:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+
+- type: seed
+  id: OH14_VoxelFlower #цветок
+  name: seeds-voxelflower-name
+  noun: seeds-voxelflower-seeds
+  displayName: seeds-voxelflower-display-name
+  plantRsi: _OuterHorizons/Objects/Specific/Hydro/voxel.rsi
+  packetPrototype: OH14_VoxelFlower
+  productPrototypes:
+    - OH14_VoxelFlower
+  lifespan: 180
+  maturation: 5
+  production: 3
+  yield: 3
+  potency: 2
+  growthStages: 4
+  waterConsumption: 0.40
+  nutrientConsumption: 0
+  chemicals:
+    Vitamin:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    Bicaridine:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 10
+    Dexalin:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 10

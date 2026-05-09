@@ -185,7 +185,20 @@
         - id: OH14_DrinkBottleKvasFull
           prob: 0.8
         - id: OH14_FoodHrumka
-          amount: 16
+          amount: 2
+          prob: 0.9
+        - id: OH14_FoodPotato
+          amount: 2
+          prob: 0.9
+        - id: OH14_FoodPotatoLoaded
+          amount: 2
+          prob: 0.9
+        - id: OH14_FoodPotatoLoaded
+          amount: 2
+          prob: 0.9
+        - id: OH14_FoodMarblemelon
+          amount: 2
+          prob: 0.9
 
 - type: entity
   parent: OH14_CabinetEngi

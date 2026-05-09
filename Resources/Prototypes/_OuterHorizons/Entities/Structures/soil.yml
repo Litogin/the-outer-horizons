@@ -89,10 +89,8 @@
     drawdepth: Mobs
     sprite: _OuterHorizons/Structures/Hydro/main.rsi
     noRot: true
-    offset: "0, 0.35"
     layers:
       - state: hydrotray-filled
-        offset: "0, -0.35"
   - type: PlantHolder
     wateringSound:
       path: /Audio/Effects/Fluids/slosh.ogg
@@ -161,10 +159,8 @@
     drawdepth: Mobs
     sprite: _OuterHorizons/Structures/Hydro/main.rsi
     noRot: true
-    offset: "0, 0.35"
     layers:
       - state: hydrotray
-        offset: "0, -0.35"
   - type: Transform
     anchored: true
   - type: Anchorable

@@ -204,11 +204,11 @@
     openSound:
       path: /Audio/_OuterHorizons/Machines/Airlock/heavy_open.ogg
       params:
-        volume: -6
+        volume: -10
     closeSound:
       path: /Audio/_OuterHorizons/Machines/Airlock/heavy_close.ogg
       params:
-        volume: -6
+        volume: -10
 
 # Shuttle
 
