@@ -1,0 +1,88 @@
+- type: entity
+  parent: BaseWallmountMetallic
+  id: OH14_BasicSign
+  name: base sign
+  categories: [ ForkFiltered ]
+  abstract: true
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Rotatable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Wallmounts/sign.rsi
+    # snapCardinals: true
+  - type: Transform
+    # anchored: false
+
+# Основное
+
+- type: entity
+  parent: OH14_BasicSign
+  id: OH14_SignRadiation
+  name: знак "радиация"
+  description: По всей видимости, гдето здесь подтекает контейнер с плутонием.
+  components:
+  - type: Sprite
+    state: rad
+
+- type: entity
+  parent: OH14_BasicSign
+  id: OH14_SignElectricity
+  name: знак "электричество"
+  description: Не стоит лапать таблички под напряжением. Да, мы это все знаем.
+  components:
+  - type: Sprite
+    state: engi
+
+- type: entity
+  parent: OH14_BasicSign
+  id: OH14_SignHydroponics
+  name: знак "значимость гидропоники"
+  description: Здесь описано по какой причине мы не можем переоборудовать гидропонный отсек в квасогонною.
+  components:
+  - type: Sprite
+    state: hydro
+
+- type: entity
+  parent: OH14_BasicSign
+  id: OH14_SignACORP
+  name: знак "ACORP"
+  description: Не забыто, не простительно.
+  components:
+  - type: Sprite
+    state: acorp
+
+- type: entity
+  parent: OH14_BasicSign
+  id: OH14_SignUCO
+  name: знак "UCO"
+  description: По странным стечениям обстоятельв, большая буква U напоминает тебе магнит.
+  components:
+  - type: Sprite
+    state: uco
+
+- type: entity
+  parent: OH14_BasicSign
+  id: OH14_SignRRE
+  name: знак "RRE"
+  description: В далеке это было похоже на цветок, но даже так, оторвите руки дизайнеру этой хуйни.
+  components:
+  - type: Sprite
+    state: rre
+
+- type: entity
+  parent: OH14_BasicSign
+  id: OH14_SignRREAlt
+  name: знак "RRE"
+  description: Ладно, просто оторвите руки дизайнеру этой хуйни.
+  components:
+  - type: Sprite
+    state: rre_alt

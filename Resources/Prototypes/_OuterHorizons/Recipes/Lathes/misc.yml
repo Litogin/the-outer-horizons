@@ -112,3 +112,23 @@
   result: OH14_DrinkCanister
   materials:
     OH14_Materials: 100
+
+- type: latheRecipe
+  id: OH14_Mop
+  completetime: 5
+  result: OH14_Mop
+  icon:
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi
+    state: mop
+  materials:
+    OH14_Materials: 300
+
+- type: latheRecipe
+  id: OH14_Bucket
+  completetime: 2
+  result: OH14_Bucket
+  icon:
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi
+    state: icon
+  materials:
+    OH14_Materials: 200

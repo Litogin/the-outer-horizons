@@ -55,6 +55,8 @@
   - OH14_Igniter
   - OH14_PowerCellMedium
   - OH14_DrinkCanister
+  - OH14_Mop
+  - OH14_Bucket
 
 - type: latheRecipePack
   id: OH14_OreStatic

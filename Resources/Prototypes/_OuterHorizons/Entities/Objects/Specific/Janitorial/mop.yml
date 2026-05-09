@@ -1,0 +1,71 @@
+- type: entity
+  parent: OH14_BaseItem
+  name: швабра
+  id: OH14_Mop
+  description: Пока одни делают дубинки с гвоздями, другие изобретают палку с тряпкой.
+  components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop_inworld.rsi}
+        enum.SolutionContainerLayers.Fill:
+          True: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop_inworld.rsi}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/mop_inworld.rsi
+    layers:
+      - state: mop
+        map: ["base"]
+      - map: ["enum.SolutionContainerLayers.Fill"]
+        state: fill-3
+        visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    fillBaseName: fill-
+    inHandsFillBaseName: -fill-
+    inHandsMaxFillLevels: 2
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud
+      params:
+        volume: -5
+  - type: Spillable
+    solution: absorbed
+    spillWhenThrown: false
+    preventMelee: false
+  - type: DrainableSolution
+    solution: absorbed
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 5
+  - type: Item
+    size: Large
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi
+  - type: Absorbent
+    useAbsorberSolution: true
+  - type: SolutionContainerManager
+    solutions:
+      absorbed:
+        maxVol: 100
+  - type: UseDelay
+    delay: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  - type: Tag
+    tags:
+      - Mop
+      - MopBasic
+  - type: GuideHelp
+    guides:
+    - Janitorial
+  - type: DnaSubstanceTrace

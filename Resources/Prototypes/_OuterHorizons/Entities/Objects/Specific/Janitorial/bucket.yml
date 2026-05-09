@@ -1,0 +1,46 @@
+- type: entity
+  parent: [ OH14_DrinkBase, OH14_DrinkVisualsFill ]
+  id: OH14_Bucket
+  name: ведро
+  description: Это - ведро. Да неужели. Я хочу ведро!
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        enum.SolutionContainerLayers.Fill:
+          True: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket_inworld.rsi}
+        enum.OpenableVisuals.Layer:
+          True: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket_inworld.rsi}
+  - type: Appearance
+  - type: InworldSprite
+  - type: Edible
+    utensil: Spoon
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket_inworld.rsi
+    layers:
+    - state: icon
+      map: ["enum.OpenableVisuals.Layer"]
+    - state: fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Item
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi
+    size: Normal
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 240
+  - type: SolutionTransfer
+    transferAmount: 80
+    maxTransferAmount: 80
+    minTransferAmount: 10
+  - type: SpillWhenWorn
+    solution: drink
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    inHandsFillBaseName: null
+  - type: Tag
+    tags:
+      - Bucket
