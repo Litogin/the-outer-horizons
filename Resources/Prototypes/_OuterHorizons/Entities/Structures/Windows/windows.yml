@@ -34,9 +34,9 @@
           OH14_SheetMaterials1:
             min: 0
             max: 1
-          OH14_WindowGirder:
-            min: 1
-            max: 1
+          # OH14_WindowGirder:
+          #   min: 1
+          #   max: 1
       - !type:PlaySoundBehavior
         sound:
           collection: WindowShatter
@@ -73,9 +73,9 @@
           OH14_SheetMaterials1:
             min: 0
             max: 1
-          OH14_WindowGirder:
-            min: 1
-            max: 1
+          # OH14_WindowGirder:
+          #   min: 1
+          #   max: 1
       - !type:PlaySoundBehavior
         sound:
           collection: WindowShatter
@@ -158,9 +158,9 @@
           OH14_SheetMaterials1:
             min: 0
             max: 1
-          OH14_WindowGirder:
-            min: 1
-            max: 1
+          # OH14_WindowGirder:
+          #   min: 1
+          #   max: 1
       - !type:PlaySoundBehavior
         sound:
           collection: WindowShatter

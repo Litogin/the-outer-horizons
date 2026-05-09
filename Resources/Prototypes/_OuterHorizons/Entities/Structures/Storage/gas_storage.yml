@@ -88,7 +88,7 @@
             acts: [ "Destruction" ]
       - trigger:
           !type:DamageTrigger
-          damage: 300
+          damage: 180
         behaviors:
         - !type:PlaySoundBehavior
           sound:

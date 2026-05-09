@@ -1,0 +1,19 @@
+- type: entity
+  id: OH14_ProjectileRocket
+  name: ракета
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Weapons/Guns/Ammunition/rocket.rsi
+    layers:
+      - state: projectile
+      - state: projectile_unshaded
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 120
+    intensitySlope: 5
+    maxIntensity: 10
+    # canCreateVacuum: false

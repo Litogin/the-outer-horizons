@@ -1,0 +1,234 @@
+- type: entity
+  abstract: true
+  parent: OH14_BaseItem
+  id: OH14_SheetBase
+  description: Различные приколы из которых можно сделать все что душе угодно. Я не шучу.
+  components:
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials_inworld.rsi}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials_inworld.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+    size: Normal
+  - type: StaticPrice
+    price: 0
+  - type: Tag
+    tags:
+    - OH14_Sheet
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: [ OH14_ItemSFXMetallic, OH14_SheetBase ]
+  id: OH14_SheetMaterials
+  name: Материалы
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Materials: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Materials
+    baseLayer: base
+    layerStates:
+    - material
+    - material_2
+    - material_3
+  - type: Sprite
+    state: material_3
+    layers:
+    - state: material_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: material
+  - type: Appearance
+  - type: FloorTile
+    outputs:
+    - OH14_PlatingLattice
+    - OH14_Plating
+
+- type: entity
+  parent: OH14_SheetMaterials
+  id: OH14_SheetMaterials8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: material_2
+  - type: Stack
+    stackType: OH14_Materials
+    count: 8
+
+- type: entity
+  parent: OH14_SheetMaterials
+  id: OH14_SheetMaterials1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: material
+  - type: Stack
+    stackType: OH14_Materials
+    count: 1
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_SheetComponents
+  name: Компоненты
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - OH14_Sheet
+    - OH14_Tools
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Components: 100
+  - type: Stack
+    count: 8
+    stackType: OH14_Components
+    baseLayer: base
+    layerStates:
+    - mechanic
+    - mechanic_2
+    - mechanic_3
+  - type: Sprite
+    state: mechanic_3
+    layers:
+    - state: mechanic_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: mechanic
+    size: Tiny
+  - type: Appearance
+
+- type: entity
+  parent: OH14_SheetComponents
+  id: OH14_SheetComponents5
+  suffix: 5
+  components:
+  - type: Sprite
+    state: mechanic
+  - type: Stack
+    stackType: OH14_Components
+    count: 5
+
+- type: entity
+  parent: OH14_SheetComponents
+  id: OH14_SheetComponents1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: mechanic
+  - type: Stack
+    stackType: OH14_Components
+    count: 1
+
+- type: entity
+  parent: OH14_SheetBase
+  id: OH14_SheetElectronics
+  name: Электроника
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - OH14_Sheet
+    - OH14_Tools
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Electronics: 100
+  - type: Stack
+    count: 8
+    stackType: OH14_Electronic
+    baseLayer: base
+    layerStates:
+    - electronic
+    - electronic_2
+    - electronic_3
+  - type: Sprite
+    state: electronic_3
+    layers:
+    - state: electronic_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: electronic
+    size: Tiny
+  - type: Appearance
+
+- type: entity
+  parent: OH14_SheetElectronics
+  id: OH14_SheetElectronics5
+  suffix: Single
+  components:
+  - type: Sprite
+    state: electronic
+  - type: Stack
+    stackType: OH14_Electronic
+    count: 5
+
+- type: entity
+  parent: OH14_SheetElectronics
+  id: OH14_SheetElectronics1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: electronic
+  - type: Stack
+    stackType: OH14_Electronic
+    count: 1
+
+- type: entity
+  parent: [ OH14_ItemSFXMetallic, OH14_SheetBase ]
+  id: OH14_SheetIngot
+  name: Слиток
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Materials: 300
+  - type: Stack
+    count: 16
+    stackType: OH14_Ingot
+    baseLayer: base
+    layerStates:
+    - ingot
+    - ingot_2
+    - ingot_3
+  - type: Sprite
+    state: ingot_3
+    layers:
+    - state: ingot_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: ingot
+  - type: Appearance
+
+- type: entity
+  parent: OH14_SheetIngot
+  id: OH14_SheetIngot1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: ingot
+  - type: Stack
+    stackType: OH14_Ingot
+    count: 1

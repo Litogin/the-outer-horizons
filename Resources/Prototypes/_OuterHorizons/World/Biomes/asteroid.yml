@@ -27,44 +27,44 @@
         # Обломки
         # Кура
         - id: OH14_BaseDirelictKutlum1
-          prob: 0.2
+          prob: 0.001
         - id: OH14_BaseDirelictKutlum2
-          prob: 0.2
+          prob: 0.001
         # Диска
         - id: OH14_BaseDirelictDiscovery1
-          prob: 0.0008
+          prob: 0.0005
         - id: OH14_BaseDirelictDiscovery2
-          prob: 0.2
+          prob: 0.001
         - id: OH14_BaseDirelictDiscovery3
-          prob: 0.2
+          prob: 0.001
         # Консерва
         - id: OH14_BaseDirelictTinCan1
-          prob: 0.0008
+          prob: 0.0005
         - id: OH14_BaseDirelictTinCan2
-          prob: 0.2
+          prob: 0.001
         - id: OH14_BaseDirelictTinCan3
-          prob: 0.2
+          prob: 0.001
         # Хаулер
         - id: OH14_BaseDirelictHauler1
-          prob: 0.0008
+          prob: 0.0005
         - id: OH14_BaseDirelictHauler2
-          prob: 0.2
+          prob: 0.001
         - id: OH14_BaseDirelictHauler3
-          prob: 0.2
+          prob: 0.001
         # Мика
         - id: OH14_BaseDirelictMika1
-          prob: 0.0008
+          prob: 0.0005
         - id: OH14_BaseDirelictMika2
-          prob: 0.2
+          prob: 0.001
         - id: OH14_BaseDirelictMika3
-          prob: 0.2
+          prob: 0.001
         # 20б
         - id: OH14_BaseDirelictTS_20b1
-          prob: 0.0008
+          prob: 0.0005
         - id: OH14_BaseDirelictTS_20b2
-          prob: 0.2
+          prob: 0.001
         - id: OH14_BaseDirelictTS_20b3
-          prob: 0.2
+          prob: 0.001
     - type: NoiseRangeCarver
       ranges:
         - 0.4, 0.6

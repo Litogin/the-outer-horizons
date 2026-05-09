@@ -59,6 +59,9 @@
       "directions": 4
     },
     {
+      "name": "ore_powder"
+    },
+    {
       "name": "ore"
     },
     {

@@ -1,0 +1,96 @@
+- type: entity
+  parent: [ OH14_ItemSFXMetallic, OH14_SheetBase ]
+  id: OH14_SheetPanelsBasic
+  name: панели
+  description: Плоские панели для будущих стен. Герметичны, но все еще разрушаемые.
+  suffix: Full
+  components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/panels.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/panels_inworld.rsi}
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Panels: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Panels
+    baseLayer: base
+    layerStates:
+    - panel
+    - panel_2
+    - panel_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/panels_inworld.rsi
+    state: panel_3
+    layers:
+    - state: panel_3
+      map: ["base"]
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/panels.rsi
+    heldPrefix: panel
+  - type: Appearance
+
+- type: entity
+  parent: OH14_SheetPanelsBasic
+  id: OH14_SheetPanelsBasic8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: panel_2
+  - type: Stack
+    stackType: OH14_Panels
+    count: 8
+
+- type: entity
+  parent: OH14_SheetPanelsBasic
+  id: OH14_SheetPanelsBasic1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: panel
+  - type: Stack
+    stackType: OH14_Panels
+    count: 1
+
+
+- type: entity
+  parent: OH14_SheetPanelsBasic
+  id: OH14_SheetPanelsShuttle
+  name: панели шаттла
+  description: Плоские панели для будущих стен. Герметичные и прочные.
+  suffix: Full
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_PanelsShuttle: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_PanelsShuttle
+    baseLayer: base
+    layerStates:
+    - shuttle
+    - shuttle_2
+    - shuttle_3
+  - type: Sprite
+    state: shuttle_3
+    layers:
+    - state: shuttle_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: shuttle
+
+- type: entity
+  parent: OH14_SheetPanelsShuttle
+  id: OH14_SheetPanelsShuttle1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: shuttle
+  - type: Stack
+    stackType: OH14_PanelsShuttle
+    count: 1

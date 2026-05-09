@@ -82,6 +82,8 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Rotatable
+    rotateWhileAnchored: true
   - type: Sprite
     state: shuttle
   - type: Physics

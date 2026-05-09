@@ -175,6 +175,9 @@
   id: OH14_WallShuttle
   name: стена шаттла
   components:
+  - type: Construction
+    graph: OH14_Girder
+    node: OH14_WallShuttle
   - type: DamageVisuals
     thresholds: [5, 10, 20]
     damageDivisor: 10
@@ -186,9 +189,6 @@
   - type: Icon
     sprite: _OuterHorizons/Structures/Walls/shuttle.rsi
     state: full
-  - type: Construction
-    graph: OH14_Girder
-    node: OH14_Wall
   - type: Destructible
     thresholds:
     - trigger:
@@ -202,7 +202,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 450
       behaviors:
       - !type:PlaySoundBehavior
         sound:

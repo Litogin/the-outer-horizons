@@ -38,40 +38,33 @@
   - type: Pullable
   - type: Sprite
     drawdepth: Mobs
-    offset: "0, 0.35"
     layers:
       - sprite: _OuterHorizons/Structures/Hydro/main.rsi
         state: hydrotray2-filled
-        offset: "0, -0.35"
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: lowhealth3
         map: [ "health_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: lowwater3
         map: [ "water_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: lownutri3
         map: [ "nutri_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: alert3
         map: [ "undefined_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
       - sprite: _OuterHorizons/Structures/Hydro/overlays.rsi
         state: harvest3
         map: [ "harvest_alert" ]
         visible: false
-        offset: "0, -0.35"
         shader: unshaded
   - type: Appearance
   - type: GenericVisualizer
@@ -140,7 +133,7 @@
 
 - type: entity
   name: гидропоника
-  parent: [ OH14_BaseStructureDynamic, OH14_Soil ]
+  parent: OH14_BaseStructureDynamic
   id: OH14_HydroponicDirtEmpty
   suffix: Без земли
   description: Лоток для земли, но межпланетного класса. Имеет несколько датчиков, которые заставляют светиться непонятные для вас лампочки.
@@ -154,11 +147,9 @@
   - type: Pullable
   - type: Sprite
     drawdepth: Mobs
-    offset: "0, 0.35"
     layers:
       - sprite: _OuterHorizons/Structures/Hydro/main.rsi
-        state: hydrotray2-filled
-        offset: "0, -0.35"
+        state: hydrotray2
   - type: Destructible
     thresholds:
     - trigger:

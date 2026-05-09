@@ -149,3 +149,41 @@
     id: OH14_IDCardBasic
   - type: PdaBorderColor
     borderColor: "#6E6A69"
+
+# Должности
+
+- type: entity
+  parent: OH14_PDA
+  id: OH14_PDARRE
+  components:
+  - type: Pda
+    id: OH14_IDCardRRE
+  - type: PdaBorderColor
+    borderColor: "#6E6A69"
+
+- type: entity
+  parent: OH14_PDA
+  id: OH14_PDARRECommander
+  components:
+  - type: Pda
+    id: OH14_IDCardRRECommander
+  - type: PdaBorderColor
+    borderColor: "#6E6A69"
+
+- type: entity
+  parent: OH14_PDA
+  id: OH14_PDAUCO
+  components:
+  - type: Pda
+    id: OH14_IDCardUCO
+  - type: PdaBorderColor
+    borderColor: "#6E6A69"
+
+- type: entity
+  parent: OH14_PDA
+  id: OH14_PDAUCOCommander
+  components:
+  - type: Pda
+    id: OH14_IDCardUCOCommander
+  - type: PdaBorderColor
+    borderColor: "#6E6A69"

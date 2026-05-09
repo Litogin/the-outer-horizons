@@ -1,0 +1,46 @@
+- type: entity
+  parent: [ OH14_BaseItem, BasePaperLabelable ] #TODO: Add sprites for different types of paper, replace BasePaperLabelable with BasePaperLabelableVisualized
+  id: OH14_BasicSeed
+  name: ну семена блять
+  suffix: Не использовать
+  abstract: true
+  components:
+    - type: SolutionContainerManager
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/seeds.rsi
+      layers:
+      - state: seed
+      - state: paper
+        visible: false
+        map: ["enum.PaperLabelVisuals.Layer"]
+        sprite: Objects/Specific/Hydroponics/seeds.rsi
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.PaperLabelVisuals.HasLabel:
+          enum.PaperLabelVisuals.Layer:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Item
+      size: Tiny
+    - type: StaticPrice
+      price: 20
+    - type: PhysicalComposition
+
+- type: entity
+  parent: OH14_BasicSeed
+  id: OH14_PotatoSeed
+  components:
+    - type: Seed
+      seedId: OH14_Potato
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/wheat.rsi
+
+- type: entity
+  parent: OH14_BasicSeed
+  id: OH14_MarblemelonSeeds
+  components:
+    - type: Seed
+      seedId: OH14_Marblemelon
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/wheat.rsi

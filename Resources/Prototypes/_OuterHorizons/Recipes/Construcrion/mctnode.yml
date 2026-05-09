@@ -1,0 +1,13 @@
+- type: construction
+  hide: false
+  id: OH14_MCTNode
+  graph: OH14_MCTNode
+  startNode: start
+  targetNode: OH14_MCTNode
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: true
+  conditions:
+    - !type:TileNotBlocked

@@ -14,6 +14,48 @@
 
 - type: construction
   hide: false
+  id: OH14_Wall
+  graph: OH14_Girder
+  startNode: start
+  targetNode: OH14_Wall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_ReinforcedWall
+  graph: OH14_Girder
+  startNode: start
+  targetNode: OH14_ReinforcedWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_WallShuttle
+  graph: OH14_Girder
+  startNode: start
+  targetNode: OH14_WallShuttle
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
   id: OH14_Window
   graph: OH14_Window
   startNode: start

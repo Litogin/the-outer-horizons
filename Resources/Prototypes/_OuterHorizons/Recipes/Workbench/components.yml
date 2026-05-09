@@ -45,3 +45,15 @@
     count: 1
   result: OH14_SheetPipes1
   resultCount: 2
+
+- type: CERecipe
+  id: OH14_SheetPanelsBasic
+  tag: CERecipeWorkbench
+  category: Materials
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_Materials
+    count: 2
+  result: OH14_SheetPanelsBasic1
+  resultCount: 1

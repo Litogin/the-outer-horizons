@@ -311,8 +311,9 @@
     color: "#C71A1C"
     energy: 2
     radius: 5
-    softness: 2
+    softness: 1
     offset: "0, -0.6"
+    enabled: true
   - type: Sprite
     state: base
   - type: PoweredLight

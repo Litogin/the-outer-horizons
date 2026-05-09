@@ -12,6 +12,7 @@
 - type: latheRecipePack
   id: OH14_MaterialsStatic
   recipes:
+  - OH14_Panels
   - OH14_Components
   - OH14_Girders
   - OH14_Pipes
@@ -54,6 +55,8 @@
   - OH14_Igniter
   - OH14_PowerCellMedium
   - OH14_DrinkCanister
+  - OH14_Mop
+  - OH14_Bucket
 
 - type: latheRecipePack
   id: OH14_OreStatic
