@@ -1,3 +1,5 @@
+# Уши
+
 - type: marking
   id: TarraBaseEars
   bodyPart: HeadTop
@@ -6,6 +8,62 @@
   sprites:
   - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
     state: Tarrantok
+
+# - type: marking
+#   id: TarraBaseStripes
+#   bodyPart: HeadTop
+#   forcedColoring: true
+#   groupWhitelist: [OH14_Tarrantok]
+#   sprites:
+#   - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
+#     state: Tarrantok_stripes
+
+- type: marking
+  id: TarraEarsDirect
+  bodyPart: HeadTop
+  forcedColoring: true
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
+    state: direct
+
+- type: marking
+  id: TarraEarsRounded
+  bodyPart: HeadTop
+  forcedColoring: true
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
+    state: rounded
+
+- type: marking
+  id: TarraEarsSpicy
+  bodyPart: HeadTop
+  forcedColoring: true
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/ears.rsi
+    state: spicy
+
+# Лицо
+
+- type: marking
+  id: TarraSnoutBrows
+  bodyPart: Snout
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/face.rsi
+    state: eyebrows
+
+- type: marking
+  id: TarraSnoutBrowsDark
+  bodyPart: Snout
+  groupWhitelist: [OH14_Tarrantok]
+  sprites:
+  - sprite: _OuterHorizons/Mobs/Customization/face.rsi
+    state: eyebrows_dark
+
+# Хвост
 
 - type: marking
   id: TarraBaseTail
