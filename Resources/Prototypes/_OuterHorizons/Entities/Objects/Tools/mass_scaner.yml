@@ -42,7 +42,7 @@
   - type: ToggleCellDraw
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
-    inHandsOnly: true
+    # inHandsOnly: true
     singleUser: true
   - type: UserInterface
     interfaces:
