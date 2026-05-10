@@ -5,6 +5,11 @@
   name: шлем ЕВА "Пилигримм"
   description: Фонарик в комплект не входит.
   components:
+  - type: HideLayerClothing
+    layers:
+      HeadTop : HEAD
+    slots:
+    - HeadTop
   - type: Appearance
   - type: InworldSprite
   - type: GenericVisualizer

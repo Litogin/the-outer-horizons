@@ -222,8 +222,9 @@
   components:
   - type: VisualOrganMarkings
     hideableLayers:
-    - enum.HumanoidVisualLayers.Hair
     - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.HeadSide
 
 - type: entity
   parent: [ OrganBaseArmLeft, OH14_TarrantokOrganExternal ]
