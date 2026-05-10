@@ -8,23 +8,11 @@
     "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
     "states": [
         {
-            "name": "Tarrantok",
+            "name": "eyebrows",
             "directions": 4
         },
         {
-            "name": "direct",
-            "directions": 4
-        },
-        {
-            "name": "rounded",
-            "directions": 4
-        },
-        {
-            "name": "spicy",
-            "directions": 4
-        },
-        {
-            "name": "Tarrantok_stripes",
+            "name": "eyebrows_dark",
             "directions": 4
         }
     ]

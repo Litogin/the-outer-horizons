@@ -84,6 +84,19 @@
 
 - type: construction
   hide: false
+  id: OH14_ShuttleWallDirectional
+  graph: OH14_WallDirectional
+  startNode: start
+  targetNode: OH14_ShuttleWallDirectional
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
   id: OH14_WindowDirectional
   graph: OH14_WindowDirectional
   startNode: start

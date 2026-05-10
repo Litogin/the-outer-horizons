@@ -1,0 +1,119 @@
+- type: entity
+  name: прожектор
+  id: OH14_Floodlight
+  parent: OH14_FlashlightBasic
+  description: Очень яркий и очень ослепляющий. То что нужно для ваших и без того больных глаз, да?
+  components:
+  - type: HandheldLight
+    wattage: .2
+  - type: Rotatable
+  - type: ToggleableVisuals
+    spriteLayer: light
+    inhandVisuals:
+      left:
+      - state: on-inhand-left
+        shader: unshaded
+      right:
+      - state: on-inhand-right
+        shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/floodlight.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/floodlight.rsi}
+        light:
+          True: {sprite: _OuterHorizons/Objects/Tools/floodlight.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/floodlight.rsi}
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/floodlight.rsi
+    size: Normal
+  - type: Sprite
+    noRot: true
+    sprite: _OuterHorizons/Objects/Tools/floodlight.rsi
+    layers:
+      - state: floodlight
+        map: [ "base" ]
+      - state: floodlight-on
+        shader: unshaded
+        visible: false
+        map: [ "light" ]
+  - type: Physics
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2, -0.5, 0.2, 0.5"
+        density: 50
+        mask:
+        - HighImpassable
+  - type: PointLight
+    mask: /Textures/_OuterHorizons/Effects/LightMasks/circle.png
+    color: "#dabeab"
+    enabled: false
+    radius: 8
+    energy: 1.5
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        # startingItem: PowerCellMedium
+  - type: Anchorable
+
+- type: entity
+  suffix: Заполнен
+  id: OH14_FloodlightFilled
+  parent: OH14_Floodlight
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: OH14_PowerCellMedium
+
+# Альт
+
+- type: entity
+  name: направленный прожектор
+  id: OH14_FloodlightAlt
+  parent: OH14_Floodlight
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Tools/floodlight_alt.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/floodlight_alt.rsi}
+        light:
+          True: {sprite: _OuterHorizons/Objects/Tools/floodlight_alt.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/floodlight_alt.rsi}
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tools/floodlight_alt.rsi
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/floodlight_alt.rsi
+    layers:
+      - state: floodlight
+        map: [ "base" ]
+      - state: floodlight-on
+        shader: unshaded
+        visible: false
+        map: [ "light" ]
+  - type: PointLight
+    mask: /Textures/_OuterHorizons/Effects/LightMasks/cone.png
+    color: "#dabeab"
+    enabled: false
+    radius: 12
+    energy: 1.5
+
+- type: entity
+  suffix: Заполнен
+  id: OH14_FloodlightAltFilled
+  parent: OH14_FloodlightAlt
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: OH14_PowerCellMedium

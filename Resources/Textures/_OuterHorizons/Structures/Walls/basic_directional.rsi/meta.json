@@ -12,6 +12,10 @@
             "directions": 4
         },
         {
+            "name": "shuttle",
+            "directions": 4
+        },
+        {
             "name": "frame",
             "directions": 4
         }

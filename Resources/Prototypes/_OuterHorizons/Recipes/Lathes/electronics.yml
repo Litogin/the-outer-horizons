@@ -7,7 +7,7 @@
     state: electronic_3
   materials:
     OH14_Materials: 200
-    OH14_Components: 500
+    OH14_Components: 400
 
 - type: latheRecipe
   id: OH14_NuclearRod

@@ -1,7 +1,7 @@
 - type: entity
   id: OH14_BasicDirectionalStructure
   abstract: true
-  parent: [ BaseDeltaPressureReinforcedGlassQuarter, OH14_BaseStructure ]
+  parent: OH14_BaseStructure
   placement:
     mode: SnapgridCenter
     snap:
@@ -75,7 +75,7 @@
 
 - type: entity
   id: OH14_WallDirectional
-  parent: OH14_BasicDirectionalStructure
+  parent: [ BaseDeltaPressureReinforcedGlassQuarter, OH14_BasicDirectionalStructure ]
   name: направленная стена
   description: Крайне восприимчима к повреждениям, не протыкать отверткой!
   placement:
@@ -91,6 +91,28 @@
   - type: Icon
     sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
     state: state0
+
+- type: entity
+  id: OH14_ShuttleWallDirectional
+  parent: OH14_BasicDirectionalStructure
+  name: направленная стена шаттла
+  description: Крайне восприимчима к повреждениям, однако, термостойкая.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Construction
+    graph: OH14_WallDirectional
+    node: OH14_ShuttleWallDirectional
+  - type: Occluder
+    boundingBox: "-0.5,-0.5,0.5,-0.3"
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: shuttle
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: shuttle
 
 - type: entity
   id: OH14_WallDirectionalFrame
