@@ -224,6 +224,17 @@
 
 - type: entity
   parent: OH14_SheetIngot
+  id: OH14_SheetIngot8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: ingot_2
+  - type: Stack
+    stackType: OH14_Ingot
+    count: 8
+
+- type: entity
+  parent: OH14_SheetIngot
   id: OH14_SheetIngot1
   suffix: Single
   components:
