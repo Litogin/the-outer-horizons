@@ -54,7 +54,7 @@
   components:
   - type: ContainerFill
     containers:
-      board: [ OH14_DoorElectronicsSecurity ]
+      board: [ OH14_DoorElectronicsRRE ]
 
 # Security
 
