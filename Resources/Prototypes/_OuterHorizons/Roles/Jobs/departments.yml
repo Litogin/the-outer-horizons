@@ -9,7 +9,7 @@
 
 - type: department
   id: OH14_UcoDepartment
-  name: Колонисты UCO
+  name: Колониальный Порт
   description: baseline-department-description
   color: "#802427"
   editorHidden: false
@@ -19,7 +19,7 @@
 
 - type: department
   id: OH14_RreDepartment
-  name: Поселенцы Ringnova RE
+  name: Хаб Ringnova RE
   description: baseline-department-description
   color: "#914C00"
   editorHidden: false

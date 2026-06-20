@@ -5,7 +5,7 @@
   description: Очень яркий и очень ослепляющий. То что нужно для ваших и без того больных глаз, да?
   components:
   - type: HandheldLight
-    wattage: .2
+    wattage: .6
   - type: Rotatable
   - type: ToggleableVisuals
     spriteLayer: light

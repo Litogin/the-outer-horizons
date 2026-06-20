@@ -32,6 +32,7 @@
   storage:
     back:
     - OH14_CrowbarBasic
+    - OH14_FlashlightFilled
 
 # Коммандир
 
@@ -63,3 +64,4 @@
     back:
     - OH14_Baton
     - OH14_CrowbarBasic
+    - OH14_FlashlightFilled
