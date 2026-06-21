@@ -55,7 +55,7 @@
           pipeDirection: All
           pipeLayer: 2
     - type: MCTN
-      maxRange: 16
+      maxRange: 4
     - type: AccessReader
 
 - type: entity

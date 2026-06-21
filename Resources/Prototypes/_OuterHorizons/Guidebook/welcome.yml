@@ -34,6 +34,7 @@
   text: "/ServerInfo/_OuterHorizons/Guides/Lore.xml"
   children:
   - OH14_GuideCharacter
+  - OH14_GuideCorps
 
 - type: guideEntry
   hidden: false
@@ -41,3 +42,10 @@
   id: OH14_GuideCharacter
   name: Кто ты такой
   text: "/ServerInfo/_OuterHorizons/Guides/Character.xml"
+
+- type: guideEntry
+  hidden: false
+  locFilter: "ru-RU"
+  id: OH14_GuideCorps
+  name: Организации
+  text: "/ServerInfo/_OuterHorizons/Guides/Corps.xml"
