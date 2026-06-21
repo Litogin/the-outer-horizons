@@ -10,11 +10,9 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_ClothingHeadHelmetUCO
+          amount: 2
         - id: OH14_ClothingOuterHardsuitUCO
-        - id: OH14_ClothingHeadHelmetUCO
-          prob: 0.8
-        - id: OH14_ClothingOuterHardsuitUCO
-          prob: 0.8
+          amount: 2
         # - id: OH14_OxygenTankWhiteFilled
         #   amount: 2
         # - id: OH14_MedkitBasicFilled
@@ -32,11 +30,9 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_ClothingHeadHelmetEVABasic
+          amount: 2
         - id: OH14_ClothingOuterHardsuitEVABasic
-        - id: OH14_ClothingHeadHelmetEVABasic
-          prob: 0.8
-        - id: OH14_ClothingOuterHardsuitEVABasic
-          prob: 0.8
+          amount: 2
         # - id: OH14_OxygenTankRedFilled
         #   amount: 2
         # - id: OH14_MedkitBasicFilled
