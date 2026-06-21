@@ -41,6 +41,10 @@
   name: Старпом
   description: Поселенец, в бывшем сотрудник компании Ringnova RE.
   playTimeTracker: OH14_RreCommanderRole
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: OH14_RreDepartment
+      time: 2h
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
   setPreference: true
