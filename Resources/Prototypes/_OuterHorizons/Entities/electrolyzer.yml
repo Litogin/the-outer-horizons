@@ -1,0 +1,62 @@
+- type: entity
+  parent: [ BaseMachinePowered, OH14_BaseItem ]
+  id: OH14_Electrolyzer
+  name: electrolyzer
+  description: Splits water into oxygen and hydrogen via electrolysis.
+  components:
+    - type: AtmosDevice
+    - type: Tag
+      tags:
+        - Unstackable
+#    - type: SubFloorHide
+#      blockInteractions: false
+#      blockAmbience: false
+#      visibleLayers:
+#        - enum.SubfloorLayers.FirstLayer
+    - type: NodeContainer
+      nodes:
+        inlet:
+          !type:PlumbingNode
+          nodeGroupID: Plumbing
+          pipeDirection: North
+        outletOxygen:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: South
+        outletHydrogen:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: East
+    - type: PlumbingDevice
+      updateInterval: 2
+    - type: PlumbingInlet
+      solutionName: tank
+    - type: SolutionContainerManager
+      solutions:
+        tank:
+          maxVol: 50
+#    - type: Sprite
+#      sprite: Structures/Piping/Atmospherics/gasfilter.rsi  # Временный спрайт
+#      layers:
+#        - sprite: Structures/Piping/Atmospherics/pipe.rsi
+#          state: pipeTrinaryConnectors
+#          map: [ "enum.PipeVisualLayers.Pipe" ]
+#        - state: gasFilter
+#          map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Machines/electrolyzer.rsi  # Временный спрайт
+      state: electrolyzer
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.FilterVisuals.Enabled:
+          enabled:
+            True: { state: gasFilterOn }
+            False: { state: gasFilter }
+    - type: PipeColorVisuals
+    - type: Electrolyzer
+      enabled: false
+      transferRate: 100
+      maxTransferRate: 1000
+    - type: Anchorable
+    - type: Rotatable
