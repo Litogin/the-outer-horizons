@@ -33,55 +33,48 @@ public sealed partial class ElectrolyzerSystem : EntitySystem
         if (TryComp<ApcPowerReceiverComponent>(uid, out var apcPowerReceiver) && !apcPowerReceiver.Powered)
             return;
 
-        // Получаем выходную трубу
         if (!_nodeContainer.TryGetNode(uid, comp.Outlet,
                 out PipeNode? outlet))
             return;
 
-        // Не работаем, если выход забит
         if (outlet.Air.Pressure >= Atmospherics.MaxOutputPressure)
             return;
 
-        // Получаем solution с жидкостью
         if (!_solutionContainer.TryGetSolution(uid, comp.SolutionName, out var solution, out _))
             return;
 
-        // Сколько жидкости доступно
-        var waterAvailable = solution.Value.Comp.Solution.GetTotalPrototypeQuantity(comp.LiquidToConsume);
-        if (waterAvailable <= 0)
+        var liquidAvailable = solution.Value.Comp.Solution.GetTotalPrototypeQuantity(comp.LiquidToConsume);
+        if (liquidAvailable <= 0)
             return;
 
-        // Считаем, сколько жидкости потратить за этот тик
-        var waterToConsume = FixedPoint2.Min(
-            waterAvailable,
+        var liquidToConsume = FixedPoint2.Min(
+            liquidAvailable,
             FixedPoint2.New(comp.LiquidConsumptionRate * args.dt)
         );
 
-        if (waterToConsume <= 0)
+        if (liquidToConsume <= 0)
             return;
 
-        // Удаляем жидкость из solution
-        _solutionContainer.RemoveReagent(solution.Value, comp.LiquidToConsume, waterToConsume);
+        _solutionContainer.RemoveReagent(solution.Value, comp.LiquidToConsume, liquidToConsume);
 
         var temperature = solution.Value.Comp.Solution.Temperature;
 
         foreach (var gas in comp.ReleasedGases.Keys)
         {
-            // Переводим единицы жидкости в моли газа
-            var moles = (float)waterToConsume * comp.ReleasedGases[gas];
+            var moles = (float)liquidToConsume * comp.ReleasedGases[gas];
             if (moles > 0)
             {
-                var limitOxygen = AtmosphereSystem.MolesToMaxPressure(
+                var limitGas = AtmosphereSystem.MolesToMaxPressure(
                     new GasMixture { Temperature = temperature },
                     outlet.Air,
                     Atmospherics.MaxOutputPressure);
 
-                var actualOxygen = Math.Min(moles.Float(), Math.Max(limitOxygen, 0));
-                if (actualOxygen > 0)
+                var actualGas = Math.Min(moles.Float(), Math.Max(limitGas, 0));
+                if (actualGas > 0)
                 {
-                    var oxygenMix = new GasMixture { Temperature = temperature };
-                    oxygenMix.SetMoles(gas, actualOxygen);
-                    _atmosphereSystem.Merge(outlet.Air, oxygenMix);
+                    var gasMix = new GasMixture { Temperature = temperature };
+                    gasMix.SetMoles(gas, actualGas);
+                    _atmosphereSystem.Merge(outlet.Air, gasMix);
                 }
             }
         }

@@ -1,8 +1,8 @@
 - type: entity
   parent: [ BaseMachinePowered, OH14_BaseItem ]
   id: OH14_Electrolyzer
-  name: electrolyzer
-  description: Splits water into oxygen and hydrogen via electrolysis.
+  name: электролизер
+  description: Разделяет воду на кислород и водород через электролиз.
   components:
     - type: AtmosDevice
     - type: Tag

@@ -1,5 +1,7 @@
 using Content.Shared.Atmos;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared._OuterHorizons.Electrolyzer;
 
@@ -10,13 +12,13 @@ public sealed partial class ElectrolyzerComponent : Component
     public bool Enabled = true;
 
     [DataField("releasedGases")]
-    public Dictionary<Gas, FixedPoint2> ReleasedGases = new() { { Gas.Oxygen, 1/4f }, { Gas.Tritium, 1/4f }, { Gas.Plasma, 2/4f } };
+    public Dictionary<Gas, FixedPoint2> ReleasedGases = new() { { Gas.Oxygen, 1/3f }, { Gas.Tritium, 2/3f } };
 
     /// <summary>
     /// Выходная труба для кислорода.
     /// </summary>
     [DataField]
-    public string LiquidToConsume = "Water";
+    public ProtoId<ReagentPrototype> LiquidToConsume = "Water";
 
     /// <summary>
     /// Выходная труба.
