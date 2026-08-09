@@ -1,0 +1,36 @@
+- type: entity
+  parent: [ BaseMachinePowered, OH14_BaseItem ]
+  id: OH14_Electrolyzer
+  name: электролизер
+  description: Разделяет воду на кислород и водород через электролиз.
+  components:
+    - type: AtmosDevice
+    - type: Tag
+      tags:
+        - Unstackable
+    - type: NodeContainer
+      nodes:
+        inlet:
+          !type:PlumbingNode
+          nodeGroupID: Plumbing
+          pipeDirection: North
+        outlet:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: South
+    - type: PlumbingDevice
+      updateInterval: 2
+    - type: PlumbingInlet
+      solutionName: tank
+    - type: SolutionContainerManager
+      solutions:
+        tank:
+          maxVol: 50
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Machines/electrolyzer.rsi  # Временный спрайт
+      state: electrolyzer
+    - type: Appearance
+    - type: PipeColorVisuals
+    - type: Electrolyzer
+    - type: Anchorable
+    - type: Rotatable
