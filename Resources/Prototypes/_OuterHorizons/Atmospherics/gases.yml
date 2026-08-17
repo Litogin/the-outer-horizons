@@ -1,9 +1,9 @@
 - type: gas
   id: Hydrogen
-  name: gases-hydrogen
+  name: Водород
   specificHeat: 15
   heatCapacityRatio: 1.4
   molarMass: 2
-  color: FFFFFF
+  color: cccccc
   reagent: Hydrogen
   pricePerMole: 5
