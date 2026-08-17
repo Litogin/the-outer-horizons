@@ -208,7 +208,7 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     Total number of gases. Increase this if you want to add more!
         /// </summary>
-        public const int TotalNumberOfGases = 9;
+        public const int TotalNumberOfGases = 10; // OH14-Changes, new gas
 
         /// <summary>
         ///     This is the actual length of the gases arrays in mixtures.
@@ -245,6 +245,12 @@ namespace Content.Shared.Atmos
         public const float TritiumBurnFuelRatio = 2f;
 
         public const float FrezonCoolLowerTemperature = 23.15f;
+
+        // OH14-Changes start, new gas
+        public const float FireH2EnergyReleased = 2800000f;
+        public const float H2OxygenFullBurn = 10f;
+        public const float FireH2BurnRateDelta = 2f;
+        // OH14-Changes end
 
         /// <summary>
         ///     Frezon cools better at higher temperatures.
@@ -372,6 +378,7 @@ namespace Content.Shared.Atmos
         WaterVapor = 5,
         Ammonia = 6,
         NitrousOxide = 7,
-        Frezon = 8
+        Frezon = 8,
+        Hydrogen = 9 // OH14-Changes, new gas
     }
 }

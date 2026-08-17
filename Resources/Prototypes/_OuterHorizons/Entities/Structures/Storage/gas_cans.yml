@@ -144,6 +144,53 @@
 
 - type: entity
   parent: OH14_StorageCanister
+  id: OH14_HydrogenCanister
+  suffix: Водород
+  components:
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: GasCanister
+    gasMixture:
+      volume: 1500
+      moles:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2769.36 # hydrogen
+      temperature: 293.15
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_OxygenCanisterBroken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:DumpCanisterBehavior
+
+- type: entity
+  parent: OH14_StorageCanister
   id: OH14_NitrogenCanister
   suffix: Азот
   components:

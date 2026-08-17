@@ -29,7 +29,8 @@ namespace Content.Server.Atmos.Portable
             Gas.WaterVapor,
             Gas.Ammonia,
             Gas.NitrousOxide,
-            Gas.Frezon
+            Gas.Frezon,
+            Gas.Hydrogen // OH14-Changes, new gas
         };
 
         [ViewVariables(VVAccess.ReadWrite)]
