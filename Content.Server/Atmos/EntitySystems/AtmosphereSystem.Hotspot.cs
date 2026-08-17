@@ -225,14 +225,16 @@ public sealed partial class AtmosphereSystem
             return;
         }
 
-        if (exposedTemperature > Atmospherics.PlasmaMinimumBurnTemperature && (plasma > 0.5f || tritium > 0.5f || hydrogen > 0.5f)) // OH14-Changes, new gas
+        if (exposedTemperature > Atmospherics.PlasmaMinimumBurnTemperature && (plasma > 0.5f || tritium > 0.5f || hydrogen > 0.5f))
         {
-            if (sparkSourceUid.HasValue)
-            {
-                _adminLog.Add(LogType.Flammable,
-                    LogImpact.High,
-                    $"Heat/spark of {ToPrettyString(sparkSourceUid.Value)} caused atmos ignition of gas: {tile.Air.Temperature.ToString():temperature}K - {oxygen}mol Oxygen, {plasma}mol Plasma, {tritium}mol Tritium, {hydrogen}mol Hydrogen"); // OH14-Changes, new gas
-            }
+            // OH14-Changes start, изза моей криворукости этим логом начинает спамить, если загоревшийся игрок делает малейший шаг. Восстановлю после апстрима.
+            // if (sparkSourceUid.HasValue)
+            // {
+            //     _adminLog.Add(LogType.Flammable,
+            //         LogImpact.High,
+            //         $"Heat/spark of {ToPrettyString(sparkSourceUid.Value)} caused atmos ignition of gas: {tile.Air.Temperature.ToString():temperature}K - {oxygen}mol Oxygen, {plasma}mol Plasma, {tritium}mol Tritium, {hydrogen}mol Hydrogen"); // OH14-Changes, new gas
+            // }
+             // OH14-Changes end
 
             tile.Hotspot = new Hotspot
             {
