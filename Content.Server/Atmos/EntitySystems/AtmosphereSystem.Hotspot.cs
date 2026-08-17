@@ -88,7 +88,7 @@ public sealed partial class AtmosphereSystem
             tile.Hotspot.Volume <= 1f ||
             tile.Air == null ||
             tile.Air.GetMoles(Gas.Oxygen) < 0.5f ||
-            tile.Air.GetMoles(Gas.Plasma) < 0.5f && tile.Air.GetMoles(Gas.Tritium) < 0.5f)
+            tile.Air.GetMoles(Gas.Plasma) < 0.5f && tile.Air.GetMoles(Gas.Tritium) < 0.5f && tile.Air.GetMoles(Gas.Hydrogen) < 0.5f) // OH14-Changes, new gas
         {
             tile.Hotspot = new Hotspot();
             InvalidateVisuals(ent, tile);
@@ -209,11 +209,13 @@ public sealed partial class AtmosphereSystem
         var plasma = tile.Air.GetMoles(Gas.Plasma);
         var tritium = tile.Air.GetMoles(Gas.Tritium);
 
+        var hydrogen = tile.Air.GetMoles(Gas.Hydrogen); // OH14-Changes, new gas
+
         if (tile.Hotspot.Valid)
         {
             if (soh)
             {
-                if (plasma > 0.5f || tritium > 0.5f)
+                if (plasma > 0.5f || tritium > 0.5f || hydrogen > 0.5f) // OH14-Changes, new gas
                 {
                     tile.Hotspot.Temperature = MathF.Max(tile.Hotspot.Temperature, exposedTemperature);
                     tile.Hotspot.Volume = MathF.Max(tile.Hotspot.Volume, exposedVolume);
@@ -223,14 +225,16 @@ public sealed partial class AtmosphereSystem
             return;
         }
 
-        if (exposedTemperature > Atmospherics.PlasmaMinimumBurnTemperature && (plasma > 0.5f || tritium > 0.5f))
+        if (exposedTemperature > Atmospherics.PlasmaMinimumBurnTemperature && (plasma > 0.5f || tritium > 0.5f || hydrogen > 0.5f))
         {
-            if (sparkSourceUid.HasValue)
-            {
-                _adminLog.Add(LogType.Flammable,
-                    LogImpact.High,
-                    $"Heat/spark of {ToPrettyString(sparkSourceUid.Value)} caused atmos ignition of gas: {tile.Air.Temperature.ToString():temperature}K - {oxygen}mol Oxygen, {plasma}mol Plasma, {tritium}mol Tritium");
-            }
+            // OH14-Changes start, изза моей криворукости этим логом начинает спамить, если загоревшийся игрок делает малейший шаг. Восстановлю после апстрима.
+            // if (sparkSourceUid.HasValue)
+            // {
+            //     _adminLog.Add(LogType.Flammable,
+            //         LogImpact.High,
+            //         $"Heat/spark of {ToPrettyString(sparkSourceUid.Value)} caused atmos ignition of gas: {tile.Air.Temperature.ToString():temperature}K - {oxygen}mol Oxygen, {plasma}mol Plasma, {tritium}mol Tritium, {hydrogen}mol Hydrogen"); // OH14-Changes, new gas
+            // }
+             // OH14-Changes end
 
             tile.Hotspot = new Hotspot
             {

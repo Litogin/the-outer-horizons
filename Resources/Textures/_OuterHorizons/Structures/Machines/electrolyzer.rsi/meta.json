@@ -1,7 +1,7 @@
 {
     "version": 1,
-    "license": "CC-BY-NC-SA-4.0",
-    "copyright": "NES-Station, by Aserovich",
+    "license": "All right reserved",
+    "copyright": "Created by Aserovich (Aska) for Outer Horizons project. Do not use, copy, or modify without permission.",
     "size": {
       "x": 32,
       "y": 32
@@ -9,6 +9,9 @@
     "states": [
       {
         "name": "electrolyzer"
+      },
+      {
+        "name": "electrolyzer-on"
       }
     ]
 }

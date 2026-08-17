@@ -12,7 +12,7 @@ public sealed partial class ElectrolyzerComponent : Component
     public bool Enabled = true;
 
     [DataField("releasedGases")]
-    public Dictionary<Gas, FixedPoint2> ReleasedGases = new() { { Gas.Oxygen, 1/3f }, { Gas.Tritium, 2/3f } };
+    public Dictionary<Gas, FixedPoint2> ReleasedGases = new() { { Gas.Oxygen, 1/3f }, { Gas.Hydrogen, 2/3f } };
 
     [DataField]
     public ProtoId<ReagentPrototype> LiquidToConsume = "Water";
