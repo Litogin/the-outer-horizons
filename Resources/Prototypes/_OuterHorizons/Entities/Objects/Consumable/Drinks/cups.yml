@@ -13,7 +13,7 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Consumable/Drinks/cup_inworld.rsi
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/cup.rsi
     layers:
     - state: icon
       map: ["enum.OpenableVisuals.Layer"]
@@ -25,10 +25,10 @@
       enum.InworldSpriteState.State:
         enum.SolutionContainerLayers.Fill:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup.rsi}
         enum.OpenableVisuals.Layer:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/cup.rsi}
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     inHandsFillBaseName: null

@@ -11,9 +11,9 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi}
-          False: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials_inworld.rsi
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
     size: Normal

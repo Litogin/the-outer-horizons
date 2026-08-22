@@ -10,7 +10,7 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Materials/girder.rsi}
-          False: {sprite: _OuterHorizons/Objects/Materials/girder_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/girder.rsi}
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -24,7 +24,7 @@
     - girder_2
     - girder_3
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/girder_inworld.rsi
+    sprite: _OuterHorizons/Objects/Materials/girder.rsi
     state: girder_3
     layers:
     - state: girder_3
@@ -70,7 +70,7 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Materials/piping.rsi}
-          False: {sprite: _OuterHorizons/Objects/Materials/piping_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/piping.rsi}
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -84,7 +84,7 @@
     - girder_2
     - girder_3
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/piping_inworld.rsi
+    sprite: _OuterHorizons/Objects/Materials/piping.rsi
     state: girder_3
     layers:
     - state: girder_3

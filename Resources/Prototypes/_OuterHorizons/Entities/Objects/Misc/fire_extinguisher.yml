@@ -5,7 +5,7 @@
   description: О! Это же этот, как его... Ах да! Наипростейший реактивный двигатель!
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/fire_extinguisher_inworld.rsi
+    sprite: _OuterHorizons/Objects/Misc/fire_extinguisher.rsi
     layers:
     - state: fire_extinguisher_closed
       map: [ "enum.ToggleableVisuals.Layer" ]
@@ -75,7 +75,7 @@
       enum.InworldSpriteState.State:
         enum.ToggleableVisuals.Layer:
           True: {sprite: _OuterHorizons/Objects/Misc/fire_extinguisher.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/fire_extinguisher_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/fire_extinguisher.rsi}
   - type: PhysicalComposition
     materialComposition:
       Steel: 100

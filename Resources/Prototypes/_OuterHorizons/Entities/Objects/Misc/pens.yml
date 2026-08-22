@@ -11,9 +11,9 @@
       enum.InworldSpriteState.State:
         color:
           True: {sprite: _OuterHorizons/Objects/Misc/pens.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/pens_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/pens.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/pens_inworld.rsi
+    sprite: _OuterHorizons/Objects/Misc/pens.rsi
     layers:
     - state: 1
       map: ["color"]
