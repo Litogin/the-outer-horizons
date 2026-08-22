@@ -11,20 +11,20 @@
       enum.InworldSpriteState.State:
         enum.PdaVisualLayers.Base:
           True: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
-          False: {sprite: _OuterHorizons/Objects/Devices/pda_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
         enum.PdaVisualLayers.IdLight:
           True: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
-          False: {sprite: _OuterHorizons/Objects/Devices/pda_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
         enum.PdaVisualLayers.Flashlight:
           True: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
-          False: {sprite: _OuterHorizons/Objects/Devices/pda_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Devices/pda.rsi}
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
        pda
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Devices/pda_inworld.rsi
+    sprite: _OuterHorizons/Objects/Devices/pda.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
       state: "pda"

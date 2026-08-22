@@ -11,7 +11,7 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Materials/panels.rsi}
-          False: {sprite: _OuterHorizons/Objects/Materials/panels_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/panels.rsi}
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -25,7 +25,7 @@
     - panel_2
     - panel_3
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/panels_inworld.rsi
+    sprite: _OuterHorizons/Objects/Materials/panels.rsi
     state: panel_3
     layers:
     - state: panel_3

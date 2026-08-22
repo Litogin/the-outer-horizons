@@ -17,7 +17,7 @@
           name: power-cell-slot-component-slot-name-default
           startingItem: OH14_PowerCellMedium
     - type: Sprite
-      sprite: _OuterHorizons/Objects/Specific/Medical/defib_inworld.rsi
+      sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi
       layers:
         - state: icon
           map: ["base"]
@@ -35,10 +35,10 @@
         enum.InworldSpriteState.State:
           base:
             True: {sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi}
-            False: {sprite: _OuterHorizons/Objects/Specific/Medical/defib_inworld.rsi}
+            False: {sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi}
           enum.ToggleableVisuals.Layer:
             True: {sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi}
-            False: {sprite: _OuterHorizons/Objects/Specific/Medical/defib_inworld.rsi}
+            False: {sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi}
     - type: Item
       sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi
       size: Normal

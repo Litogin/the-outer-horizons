@@ -14,7 +14,7 @@
     maxIntensity: 200
     intensitySlope: 1.5
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi
+    sprite: _OuterHorizons/Objects/Power/power_cells.rsi
   - type: SolutionContainerManager
     solutions:
       battery:
@@ -41,10 +41,10 @@
       enum.InworldSpriteState.State:
         enum.PowerCellVisualLayers.Base:
           True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
         enum.PowerCellVisualLayers.Unshaded:
           True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
 
 # Основные
 
@@ -79,10 +79,10 @@
       enum.InworldSpriteState.State:
         enum.PowerCellVisualLayers.Base:
           True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
         enum.PowerCellVisualLayers.Unshaded:
           True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
 
 - type: entity
   id: OH14_PowerCellMediumEmpty
@@ -134,10 +134,10 @@
       enum.InworldSpriteState.State:
         enum.PowerCellVisualLayers.Base:
           True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
         enum.PowerCellVisualLayers.Unshaded:
           True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
 
 - type: entity
   id: OH14_PowerCellBigEmpty

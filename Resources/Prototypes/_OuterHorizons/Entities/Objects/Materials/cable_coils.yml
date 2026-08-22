@@ -11,7 +11,7 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi}
-          False: {sprite: _OuterHorizons/Objects/Materials/cable_coils_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi}
   - type: Tag
     tags:
     - CableCoil
@@ -20,7 +20,7 @@
     count: 16
     stackType: Cable
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/cable_coils_inworld.rsi
+    sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
     size: Small

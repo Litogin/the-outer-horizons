@@ -12,12 +12,12 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
         icon:
           True: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
     layers:
     - state: silver
       map: ["base"]
@@ -39,7 +39,7 @@
   id: OH14_IDCardRRE
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
     layers:
     - state: centcom
       map: ["base"]
@@ -53,7 +53,7 @@
   id: OH14_IDCardRRECommander
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
     layers:
     - state: centcom
       map: ["base"]
@@ -67,7 +67,7 @@
   id: OH14_IDCardUCO
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
     layers:
     - state: silver
       map: ["base"]
@@ -81,7 +81,7 @@
   id: OH14_IDCardUCOCommander
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
     layers:
     - state: silver
       map: ["base"]

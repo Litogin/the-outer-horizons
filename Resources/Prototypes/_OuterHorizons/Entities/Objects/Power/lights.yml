@@ -11,13 +11,13 @@
       enum.InworldSpriteState.State:
         enum.LightBulbVisualLayers.Base:
           True: {sprite: _OuterHorizons/Objects/Power/light_bulb.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/light_bulb_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/light_bulb.rsi}
   - type: MeleeSound
     soundGroups:
       Brute:
         collection: GlassSmash
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Power/light_bulb_inworld.rsi
+    sprite: _OuterHorizons/Objects/Power/light_bulb.rsi
     layers:
       - map: [ enum.LightBulbVisualLayers.Base ]
         state: normal
@@ -88,9 +88,9 @@
       enum.InworldSpriteState.State:
         enum.LightBulbVisualLayers.Base:
           True: {sprite: _OuterHorizons/Objects/Power/light_tube.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/light_tube_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/light_tube.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Power/light_tube_inworld.rsi
+    sprite: _OuterHorizons/Objects/Power/light_tube.rsi
     layers:
       - map: [ enum.LightBulbVisualLayers.Base ]
         state: normal

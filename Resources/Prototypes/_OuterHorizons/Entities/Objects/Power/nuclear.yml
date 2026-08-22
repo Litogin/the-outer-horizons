@@ -12,10 +12,10 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/nuclear_tube_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi}
         unshaded:
           True: {sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi}
-          False: {sprite: _OuterHorizons/Objects/Power/nuclear_tube_inworld.rsi}
+          False: {sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi}
   - type: PointLight
     radius: 1.5
     energy: 1.0
@@ -27,7 +27,7 @@
       OH14_NuclearRod: 100
   - type: Material
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Power/nuclear_tube_inworld.rsi
+    sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi
     layers:
       - state: icon
         map: ["base"]
