@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "license": "All right reserved",
+  "copyright": "Created by Aserovich (Aska) for Outer Horizons project. Do not use, copy, or modify without permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "girder"
+    },
+    {
+      "name": "girder_2"
+    },
+    {
+      "name": "girder_3"
+    },
+    {
+      "name": "girder-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "girder-inhand-right",
+      "directions": 4
+    }
+  ]
+}
