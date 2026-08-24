@@ -8,6 +8,15 @@
   },
   "states": [
     {
+      "name": "basic"
+    },
+    {
+      "name": "basic_2"
+    },
+    {
+      "name": "basic_3"
+    },
+    {
       "name": "iron"
     },
     {

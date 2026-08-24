@@ -1,8 +1,27 @@
+# Legacy
 - type: Tag
   id: OH14_Sheet
 
 - type: Tag
   id: OH14_Ore
+
+# Materials
+
+- type: Tag
+  id: OH14_MaterialStack
+
+- type: Tag
+  id: OH14_StackOre
+
+# Craft
+
+- type: Tag
+  id: CERecipeWorkbench
+
+- type: Tag
+  id: OH14_AutoLatheUpgradeTools
+
+# Items
 
 - type: Tag
   id: OH14_Tools
@@ -12,9 +31,3 @@
 
 - type: Tag
   id: OH14_PowerCellBig
-
-- type: Tag
-  id: CERecipeWorkbench
-
-- type: Tag
-  id: OH14_AutoLatheUpgradeTools

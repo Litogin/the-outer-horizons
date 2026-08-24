@@ -195,6 +195,25 @@
     sound:
       path: /Audio/_OuterHorizons/Items/paper_drop.ogg
 
+# Камень
+
+- type: entity
+  id: OH14_ItemSFXStone # Камень
+  abstract: true
+  components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/stone_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/stone_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/stone_kick.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/stone_drop.ogg
+
 # Ткань
 
 - type: entity
