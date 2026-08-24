@@ -195,7 +195,7 @@
     sound:
       path: /Audio/_OuterHorizons/Items/paper_drop.ogg
 
-# Камень
+# Руда
 
 - type: entity
   id: OH14_ItemSFXStone # Камень
@@ -213,6 +213,40 @@
   - type: EmitSoundOnDrop
     sound:
       path: /Audio/_OuterHorizons/Items/stone_drop.ogg
+
+- type: entity
+  id: OH14_ItemSFXHOre # Тяжелая руда
+  abstract: true
+  components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/h_ore_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/h_ore_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/h_ore_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/h_ore_drop.ogg
+
+- type: entity
+  id: OH14_ItemSFXLOre # Легкая руда
+  abstract: true
+  components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/l_ore_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/l_ore_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/l_ore_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/l_ore_drop.ogg
 
 # Ткань
 

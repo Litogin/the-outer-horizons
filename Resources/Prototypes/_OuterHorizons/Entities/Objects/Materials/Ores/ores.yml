@@ -1,0 +1,233 @@
+# База
+
+- type: entity
+  parent: [ OH14_ItemSFXStone, OH14_BasicMaterialStack ]
+  id: OH14_BasicStackOre
+  abstract: true
+  name: руда
+  description: Обработанный кусок руды для переплавки
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/ores.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+    heldPrefix: ore
+  - type: Appearance
+  - type: Tag
+    tags:
+    - OH14_StackOre
+
+# Железо
+
+- type: entity
+  parent: OH14_BasicStackOre
+  id: OH14_OreIron
+  name: железная руда
+  suffix: 16
+  components:
+  - type: Stack
+    count: 16
+    stackType: OH14_StackIron
+    baseLayer: base
+    layerStates:
+    - iron
+    - iron_2
+    - iron_3
+  - type: Sprite
+    layers:
+    - state: iron_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_OreIron
+  id: OH14_OreIron8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: iron_2
+  - type: Stack
+    stackType: OH14_StackIron
+    count: 8
+
+- type: entity
+  parent: OH14_OreIron
+  id: OH14_OreIron1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: iron
+  - type: Stack
+    stackType: OH14_StackIron
+    count: 1
+
+# Медь
+
+- type: entity
+  parent: OH14_BasicStackOre
+  id: OH14_OreCopper
+  name: медная руда
+  suffix: 16
+  components:
+  - type: Stack
+    count: 16
+    stackType: OH14_StackCopper
+    baseLayer: base
+    layerStates:
+    - copper
+    - copper_2
+    - copper_3
+  - type: Sprite
+    layers:
+    - state: copper_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_OreCopper
+  id: OH14_OreCopper8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: copper_2
+  - type: Stack
+    stackType: OH14_StackCopper
+    count: 8
+
+- type: entity
+  parent: OH14_OreCopper
+  id: OH14_OreCopper1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: copper
+  - type: Stack
+    stackType: OH14_StackCopper
+    count: 1
+
+# Золото
+
+- type: entity
+  parent: OH14_BasicStackOre
+  id: OH14_OreGold
+  name: золотая руда
+  suffix: 16
+  components:
+  - type: Stack
+    count: 16
+    stackType: OH14_StackGold
+    baseLayer: base
+    layerStates:
+    - gold
+    - gold_2
+    - gold_3
+  - type: Sprite
+    layers:
+    - state: gold_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_OreGold
+  id: OH14_OreGold8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: gold_2
+  - type: Stack
+    stackType: OH14_StackGold
+    count: 8
+
+- type: entity
+  parent: OH14_OreGold
+  id: OH14_OreGold1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: gold
+  - type: Stack
+    stackType: OH14_StackGold
+    count: 1
+
+# Платина
+
+- type: entity
+  parent: OH14_BasicStackOre
+  id: OH14_OrePlatinum
+  name: платиновая руда
+  suffix: 16
+  components:
+  - type: Stack
+    count: 16
+    stackType: OH14_StackPlatinum
+    baseLayer: base
+    layerStates:
+    - platinum
+    - platinum_2
+    - platinum_3
+  - type: Sprite
+    layers:
+    - state: platinum_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_OrePlatinum
+  id: OH14_OrePlatinum8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: platinum_2
+  - type: Stack
+    stackType: OH14_StackPlatinum
+    count: 8
+
+- type: entity
+  parent: OH14_OrePlatinum
+  id: OH14_OrePlatinum1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: platinum
+  - type: Stack
+    stackType: OH14_StackPlatinum
+    count: 1
+
+# Кремний
+
+- type: entity
+  parent: OH14_BasicStackOre
+  id: OH14_OreSilicon
+  name: кремниевая руда
+  suffix: 16
+  components:
+  - type: Stack
+    count: 16
+    stackType: OH14_StackSilicon
+    baseLayer: base
+    layerStates:
+    - silicon
+    - silicon_2
+    - silicon_3
+  - type: Sprite
+    layers:
+    - state: silicon_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_OreSilicon
+  id: OH14_OreSilicon8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: silicon_2
+  - type: Stack
+    stackType: OH14_StackSilicon
+    count: 8
+
+- type: entity
+  parent: OH14_OreSilicon
+  id: OH14_OreSilicon1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: silicon
+  - type: Stack
+    stackType: OH14_StackSilicon
+    count: 1
