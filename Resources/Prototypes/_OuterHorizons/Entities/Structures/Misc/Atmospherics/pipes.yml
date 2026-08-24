@@ -101,6 +101,7 @@
     nodes:
       pipe:
         !type:PipeNode
+        volume: 10
         nodeGroupID: Pipe
         pipeDirection: South
   - type: Sprite
@@ -136,6 +137,7 @@
     nodes:
       pipe:
         !type:PipeNode
+        volume: 10
         nodeGroupID: Pipe
         pipeDirection: Longitudinal
   - type: Sprite
@@ -179,6 +181,7 @@
     nodes:
       pipe:
         !type:PipeNode
+        volume: 10
         nodeGroupID: Pipe
         pipeDirection: SWBend
   - type: Sprite
@@ -229,6 +232,7 @@
     nodes:
       pipe:
         !type:PipeNode
+        volume: 10
         nodeGroupID: Pipe
         pipeDirection: TSouth
   - type: Sprite
@@ -274,6 +278,7 @@
     nodes:
       pipe:
         !type:PipeNode
+        volume: 10
         nodeGroupID: Pipe
         pipeDirection: Fourway
   - type: Sprite

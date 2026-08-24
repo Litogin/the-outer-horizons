@@ -16,6 +16,7 @@
       nodes:
         pipe:
           !type:PipeNode
+          volume: 50
           nodeGroupID: Pipe
           pipeDirection: South
     - type: CollideOnAnchor
