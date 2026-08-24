@@ -278,10 +278,42 @@
     - OH14_OreStatic
   - type: LatheHeatProducing
     energyPerSecond: 20000
-  - type: ContainerContainer
-    containers:
-      machine_board: !type:Container
-      machine_parts: !type:Container
+
+# Печь
+
+- type: entity
+  id: OH14_OreProcessor
+  parent: OH14_BasicLathe
+  name: очиститель руды
+  description: Не самая замысловатая конструкция для очистки руды от мусора.
+  components:
+  # - type: Construction
+  #   graph: OH14_ArcFurnanceFrame
+  #   node: OH14_ArcFurnance
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/ore_processor.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: MaterialStorage
+    ignoreColor: true
+    whitelist: &OH14_MaterialWhitelistOreProcessor
+      tags:
+        - OH14_Ore
+  - type: Lathe
+    producingSound: /Audio/_OuterHorizons/Machines/centrifugeOperate.ogg
+    idleState: icon
+    runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - OH14_OreStatic
 
 # Трубогиб (вырезан)
 

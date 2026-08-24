@@ -13,6 +13,9 @@
 - type: Tag
   id: OH14_StackOre
 
+- type: Tag
+  id: OH14_StackCobblestone
+
 # Craft
 
 - type: Tag
