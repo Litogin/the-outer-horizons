@@ -12,6 +12,15 @@
       },
       {
         "name": "electrolyzer-on"
+      },
+      {
+        "name": "frame0"
+      },
+      {
+        "name": "frame1"
+      },
+      {
+        "name": "frame2"
       }
     ]
 }
