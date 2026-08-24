@@ -1,0 +1,239 @@
+# База
+
+- type: entity
+  parent: [ OH14_ItemSFXMetallic, OH14_BasicMaterialStack ]
+  id: OH14_BasicStackPanels
+  abstract: true
+  name: панель
+  description: Большой конструкционный лист. Абляция в комплект не входит.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/panels.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/panels.rsi
+  - type: Appearance
+
+# Обычная
+
+- type: entity
+  parent: OH14_BasicStackPanels
+  id: OH14_Panel
+  name: панель
+  suffix: 16
+  components:
+  - type: Item
+    heldPrefix: panel
+  - type: Stack
+    count: 16
+    stackType: OH14_StackPanel
+    baseLayer: base
+    layerStates:
+    - panel
+    - panel_2
+    - panel_3
+  - type: Sprite
+    layers:
+    - state: panel_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_Panel
+  id: OH14_Panel8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: panel_2
+  - type: Stack
+    stackType: OH14_StackPanel
+    count: 8
+
+- type: entity
+  parent: OH14_Panel
+  id: OH14_Panel1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: panel
+  - type: Stack
+    stackType: OH14_StackPanel
+    count: 1
+
+# Укрепленная
+
+- type: entity
+  parent: OH14_BasicStackPanels
+  id: OH14_PanelHeavy
+  name: укрепленная панель
+  suffix: 16
+  components:
+  - type: Item
+    heldPrefix: panel
+  - type: Stack
+    count: 16
+    stackType: OH14_StackPanelHeavy
+    baseLayer: base
+    layerStates:
+    - h_panel
+    - h_panel_2
+    - h_panel_3
+  - type: Sprite
+    layers:
+    - state: h_panel_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_PanelHeavy
+  id: OH14_PanelHeavy8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: h_panel_2
+  - type: Stack
+    stackType: OH14_StackPanelHeavy
+    count: 8
+
+- type: entity
+  parent: OH14_PanelHeavy
+  id: OH14_PanelHeavy1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: h_panel
+  - type: Stack
+    stackType: OH14_StackPanelHeavy
+    count: 1
+
+# Теплозащита
+
+- type: entity
+  parent: OH14_BasicStackPanels
+  id: OH14_PanelHeat
+  name: термостойкая панель
+  suffix: 16
+  components:
+  - type: Item
+    heldPrefix: heat
+  - type: Stack
+    count: 16
+    stackType: OH14_StackPanelHeat
+    baseLayer: base
+    layerStates:
+    - heat
+    - heat_2
+    - heat_3
+  - type: Sprite
+    layers:
+    - state: heat_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_PanelHeat
+  id: OH14_PanelHeat8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: heat_2
+  - type: Stack
+    stackType: OH14_StackPanelHeat
+    count: 8
+
+- type: entity
+  parent: OH14_PanelHeat
+  id: OH14_PanelHeat1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: heat
+  - type: Stack
+    stackType: OH14_StackPanelHeat
+    count: 1
+
+# Шаттла
+
+- type: entity
+  parent: OH14_BasicStackPanels
+  id: OH14_PanelShuttle
+  name: панель шаттла
+  suffix: 16
+  components:
+  - type: Item
+    heldPrefix: shuttle
+  - type: Stack
+    count: 16
+    stackType: OH14_StackPanelShuttle
+    baseLayer: base
+    layerStates:
+    - l_shuttle
+    - l_shuttle_2
+    - l_shuttle_3
+  - type: Sprite
+    layers:
+    - state: l_shuttle_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_PanelShuttle
+  id: OH14_PanelShuttle8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: l_shuttle_2
+  - type: Stack
+    stackType: OH14_StackPanelShuttle
+    count: 8
+
+- type: entity
+  parent: OH14_PanelShuttle
+  id: OH14_PanelShuttle1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: l_shuttle
+  - type: Stack
+    stackType: OH14_StackPanelShuttle
+    count: 1
+
+# Укрепленный аттла
+
+- type: entity
+  parent: OH14_BasicStackPanels
+  id: OH14_PanelShuttleHeavy
+  name: панель шаттла
+  suffix: 16
+  components:
+  - type: Item
+    heldPrefix: shuttle
+  - type: Stack
+    count: 16
+    stackType: OH14_StackPanelShuttleHeavy
+    baseLayer: base
+    layerStates:
+    - shuttle
+    - shuttle_2
+    - shuttle_3
+  - type: Sprite
+    layers:
+    - state: shuttle_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_PanelShuttleHeavy
+  id: OH14_PanelShuttleHeavy8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: shuttle_2
+  - type: Stack
+    stackType: OH14_StackPanelShuttleHeavy
+    count: 8
+
+- type: entity
+  parent: OH14_PanelShuttleHeavy
+  id: OH14_PanelShuttleHeavy1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: shuttle
+  - type: Stack
+    stackType: OH14_StackPanelShuttleHeavy
+    count: 1

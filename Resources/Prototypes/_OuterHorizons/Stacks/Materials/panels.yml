@@ -1,0 +1,34 @@
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_StackPanel
+  name: stack-panel
+  icon: { sprite: "_OuterHorizons/Objects/Materials/panels.rsi", state: panel_3 }
+  spawn: OH14_Panel1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_StackPanelHeavy
+  name: stack-panel-heavy
+  icon: { sprite: "_OuterHorizons/Objects/Materials/panels.rsi", state: h_panel_3 }
+  spawn: OH14_PanelHeavy1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_StackPanelHeat
+  name: stack-panel-heat
+  icon: { sprite: "_OuterHorizons/Objects/Materials/panels.rsi", state: heat_3 }
+  spawn: OH14_PanelHeat1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_StackPanelShuttle
+  name: stack-panel-shuttle
+  icon: { sprite: "_OuterHorizons/Objects/Materials/panels.rsi", state: l_shuttle_3 }
+  spawn: OH14_PanelShuttle1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_StackPanelShuttleHeavy
+  name: stack-panel-shuttleheavy
+  icon: { sprite: "_OuterHorizons/Objects/Materials/panels.rsi", state: shuttle_3 }
+  spawn: OH14_PanelShuttleHeavy1
