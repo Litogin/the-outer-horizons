@@ -1,0 +1,173 @@
+# База
+
+- type: entity
+  parent: [ OH14_ItemSFXSmall, OH14_BaseItem ]
+  id: OH14_BasicComponents
+  abstract: true
+  name: компонент
+  suffix: "Компоненты"
+  description: Бесполезная хрень, которая почему то требуется для ваших кустарных изысканий.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/components.rsi
+  - type: Item
+    # sprite: _OuterHorizons/Objects/Materials/components.rsi
+  - type: Appearance
+
+### Рукоятка
+# Обычная и длинная. Ну и приклад
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_Handle
+  name: рукоятка
+  description: Ну не держать ведь тебе инструменты за корпус?
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    state: l_handle
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_MediumHandle
+  name: длинная рукоятка
+  description: Ну не держать ведь тебе инструменты за корпус?
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    state: m_handle
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_Buttstock
+  name: приклад
+  description: Уверяю вас, это не для огнестрельного оружия.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    state: buttstock
+
+### Камеры сгорания
+# Медная и теплоустойчивая
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_CopperChamber
+  name: медная камера
+  description: Горячая штучка, если приложить достаточно сил.
+  components:
+  - type: Sprite
+    state: c_chamber
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_HeatChamber
+  name: теплоустойчивая камера
+  description: Горячая штучка, если приложить достаточно сил.
+  components:
+  - type: Sprite
+    state: p_chamber
+
+### Электроника
+# Экран
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_CrtScreen
+  name: ЭЛТ трубка
+  description: Основная причина громозкости консолей, если не считать их все остальные компоненты.
+  components:
+  - type: Sprite
+    state: crt_screen
+
+# Плата
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_AnalogBoard
+  name: аналоговая плата
+  description: Простейшее вычислительное устройство. К сожалению не потянет крафтмайн.
+  components:
+  - type: Sprite
+    state: analog_board
+  # TODO: Сборка в 3 этапа с изменением спрайта
+
+### Моторы и их компоненты
+# Медное
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_CopperStator
+  name: медный статор
+  description: Статор от слова.. Статичный?
+  components:
+  - type: Sprite
+    state: c_stator
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_CopperRotor
+  name: медный ротор
+  description: Он вертится вместо белки в колесе.
+  components:
+  - type: Sprite
+    state: c_rotor
+
+# Золотое
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_GoldStator
+  name: золотой статор
+  description: Статор от слова.. Статичный?
+  components:
+  - type: Sprite
+    state: g_stator
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_GoldRotor
+  name: золотой ротор
+  description: Он вертится вместо белки в колесе.
+  components:
+  - type: Sprite
+    state: g_rotor
+
+# Мотор
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_Motor
+  name: мотор
+  description: Бжжжжж. Что говоришь? ДжжжЖж. Не слышу.
+  components:
+  - type: Sprite
+    state: motor
+
+### Корпуса
+# Питания
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_PowerUnit
+  name: блок питания
+  description: Нужен чтобы подать адекватое напряжение в устройство.
+  components:
+  - type: Sprite
+    state: power_unit
+  # TODO: Сборка в 3 этапа с изменением спрайта
+
+# Контроля
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_ControlUnit
+  name: блок контроля
+  description: Нужен чтобы подать команду сложнее чем вкл/выкл.
+  components:
+  - type: Sprite
+    state: control_unit
+  # TODO: Сборка в 3 этапа с изменением спрайта

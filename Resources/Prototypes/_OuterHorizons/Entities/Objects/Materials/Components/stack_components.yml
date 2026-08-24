@@ -21,7 +21,7 @@
   id: OH14_Component
   name: компонент
   description: Механический компонент для более продвинутых структур и устройств.
-  suffix: 8
+  suffix: "8, Компоненты"
   components:
   - type: Item
     size: Tiny
@@ -41,7 +41,7 @@
 - type: entity
   parent: OH14_Component
   id: OH14_Component4
-  suffix: 4
+  suffix: "4, Компоненты"
   components:
   - type: Sprite
     state: sparepart_2
@@ -52,7 +52,7 @@
 - type: entity
   parent: OH14_Component
   id: OH14_Component1
-  suffix: 1
+  suffix: "1, Компоненты"
   components:
   - type: Sprite
     state: sparepart
@@ -67,7 +67,7 @@
   id: OH14_ComponentAdv
   name: улучшенный компонент
   description: Механический компонент для более продвинутых структур и устройств.
-  suffix: 8
+  suffix: "8, Компоненты"
   components:
   - type: Item
     size: Tiny
@@ -87,7 +87,7 @@
 - type: entity
   parent: OH14_ComponentAdv
   id: OH14_ComponentAdv4
-  suffix: 4
+  suffix: "4, Компоненты"
   components:
   - type: Sprite
     state: adv_sparepart_2
@@ -98,7 +98,7 @@
 - type: entity
   parent: OH14_ComponentAdv
   id: OH14_ComponentAdv1
-  suffix: 1
+  suffix: "1, Компоненты"
   components:
   - type: Sprite
     state: adv_sparepart
@@ -114,7 +114,7 @@
   id: OH14_VacuumTube
   name: вакуумная лампа
   description: Кроме того что это светильник, в крайней ситуации это вычислительный компонент. Ах да...
-  suffix: 8
+  suffix: "8, Компоненты"
   components:
   - type: Item
     size: Small
@@ -134,7 +134,7 @@
 - type: entity
   parent: OH14_VacuumTube
   id: OH14_VacuumTube4
-  suffix: 4
+  suffix: "4, Компоненты"
   components:
   - type: Sprite
     state: lamp_2
@@ -145,7 +145,7 @@
 - type: entity
   parent: OH14_VacuumTube
   id: OH14_VacuumTube1
-  suffix: 1
+  suffix: "1, Компоненты"
   components:
   - type: Sprite
     state: lamp
@@ -159,7 +159,7 @@
   parent: OH14_BasicStackComponents
   id: OH14_Capacitor
   name: конденсатор
-  suffix: 8
+  suffix: "8, Компоненты"
   components:
   - type: Item
     size: Small
@@ -179,7 +179,7 @@
 - type: entity
   parent: OH14_Capacitor
   id: OH14_Capacitor4
-  suffix: 4
+  suffix: "4, Компоненты"
   components:
   - type: Sprite
     state: capacitor_2
@@ -190,7 +190,7 @@
 - type: entity
   parent: OH14_Capacitor
   id: OH14_Capacitor1
-  suffix: 1
+  suffix: "1, Компоненты"
   components:
   - type: Sprite
     state: capacitor
@@ -204,7 +204,7 @@
   parent: OH14_BasicStackComponents
   id: OH14_Circuit
   name: печатная плата
-  suffix: 8
+  suffix: "8, Компоненты"
   components:
   - type: Item
     size: Small
@@ -224,7 +224,7 @@
 - type: entity
   parent: OH14_Circuit
   id: OH14_Circuit4
-  suffix: 4
+  suffix: "4, Компоненты"
   components:
   - type: Sprite
     state: circuit_2
@@ -235,7 +235,7 @@
 - type: entity
   parent: OH14_Circuit
   id: OH14_Circuit1
-  suffix: 1
+  suffix: "1, Компоненты"
   components:
   - type: Sprite
     state: circuit
@@ -249,7 +249,7 @@
   parent: OH14_BasicStackComponents
   id: OH14_Battery
   name: заготовка аккумулятора
-  suffix: 8
+  suffix: "8, Компоненты"
   components:
   - type: Item
     size: Small
@@ -269,7 +269,7 @@
 - type: entity
   parent: OH14_Battery
   id: OH14_Battery4
-  suffix: 4
+  suffix: "4, Компоненты"
   components:
   - type: Sprite
     state: battery_2
@@ -280,7 +280,7 @@
 - type: entity
   parent: OH14_Battery
   id: OH14_Battery1
-  suffix: 1
+  suffix: "1, Компоненты"
   components:
   - type: Sprite
     state: battery

@@ -232,3 +232,47 @@
   - type: Stack
     stackType: OH14_StackSheetSilicon
     count: 1
+
+# Стекло
+
+- type: entity
+  parent: [ OH14_ItemSFXHightGlass, OH14_BasicStackSheet ]
+  id: OH14_SheetGlass
+  name: стеклянный лист
+  description: Лучше бы мы делали транзисторы.
+  suffix: 16
+  components:
+  - type: Stack
+    count: 16
+    stackType: OH14_StackSheetGlass
+    baseLayer: base
+    layerStates:
+    - glass
+    - glass_2
+    - glass_3
+  - type: Sprite
+    layers:
+    - state: glass_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_SheetGlass
+  id: OH14_SheetGlass8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: glass_2
+  - type: Stack
+    stackType: OH14_StackSheetGlass
+    count: 8
+
+- type: entity
+  parent: OH14_SheetGlass
+  id: OH14_SheetGlass1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: glass
+  - type: Stack
+    stackType: OH14_StackSheetGlass
+    count: 1

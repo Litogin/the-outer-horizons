@@ -8,6 +8,15 @@
   },
   "states": [
     {
+      "name": "buttstock"
+    },
+    {
+      "name": "l_handle"
+    },
+    {
+      "name": "m_handle"
+    },
+    {
       "name": "sparepart"
     },
     {
