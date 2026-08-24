@@ -1,0 +1,41 @@
+- type: stack
+  parent: OH14_BaseSmallStack
+  id: OH14_StackComponent
+  name: stack-component-sparepart
+  icon: { sprite: "_OuterHorizons/Objects/Materials/components.rsi", state: sparepart_3 }
+  spawn: OH14_Component1
+
+- type: stack
+  parent: OH14_BaseSmallStack
+  id: OH14_StackComponentAdv
+  name: stack-component-sparepart-adv
+  icon: { sprite: "_OuterHorizons/Objects/Materials/components.rsi", state: adv_sparepart_3 }
+  spawn: OH14_ComponentAdv1
+
+- type: stack
+  parent: OH14_BaseSmallStack
+  id: OH14_StackVacuumTube
+  name: stack-component-vacuum-tube
+  icon: { sprite: "_OuterHorizons/Objects/Materials/components.rsi", state: lamp_3 }
+  spawn: OH14_VacuumTube1
+
+- type: stack
+  parent: OH14_BaseSmallStack
+  id: OH14_StackCapacitor
+  name: stack-component-capacitor
+  icon: { sprite: "_OuterHorizons/Objects/Materials/components.rsi", state: capacitor_3 }
+  spawn: OH14_Capacitor1
+
+- type: stack
+  parent: OH14_BaseSmallStack
+  id: OH14_StackCircuit
+  name: stack-component-circuit
+  icon: { sprite: "_OuterHorizons/Objects/Materials/components.rsi", state: circuit_3 }
+  spawn: OH14_Circuit1
+
+- type: stack
+  parent: OH14_BaseSmallStack
+  id: OH14_StackBattery
+  name: stack-component-battery
+  icon: { sprite: "_OuterHorizons/Objects/Materials/components.rsi", state: battery_3 }
+  spawn: OH14_Battery1
