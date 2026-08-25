@@ -1,0 +1,41 @@
+- type: material
+  id: OH14_Cobblestone
+  stackEntity: OH14_Cobblestone1
+  name: булыжник
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_CobblestoneIron
+  stackEntity: OH14_CobblestoneIron1
+  name: железный булыжник
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_CobblestoneCopper
+  stackEntity: OH14_CobblestoneCopper1
+  name: медный булыжник
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_CobblestoneGold
+  stackEntity: OH14_CobblestoneGold1
+  name: золотой булыжник
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_CobblestonePlatinum
+  stackEntity: OH14_CobblestonePlatinum1
+  name: платиновый булыжник
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_CobblestoneSilicon
+  stackEntity: OH14_CobblestoneSilicon1
+  name: кремниевый булыжник
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2

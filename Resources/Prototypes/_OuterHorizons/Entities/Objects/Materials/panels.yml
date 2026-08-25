@@ -21,6 +21,10 @@
   name: панель
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Panel: 100
   - type: Item
     heldPrefix: panel
   - type: Stack
@@ -66,6 +70,10 @@
   name: укрепленная панель
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_PanelHeavy: 100
   - type: Item
     heldPrefix: panel
   - type: Stack
@@ -111,6 +119,10 @@
   name: термостойкая панель
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_PanelHeat: 100
   - type: Item
     heldPrefix: heat
   - type: Stack
@@ -156,6 +168,10 @@
   name: панель шаттла
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_PanelShuttle: 100
   - type: Item
     heldPrefix: shuttle
   - type: Stack
@@ -201,6 +217,10 @@
   name: панель шаттла
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_PanelShuttleHeavy: 100
   - type: Item
     heldPrefix: shuttle
   - type: Stack

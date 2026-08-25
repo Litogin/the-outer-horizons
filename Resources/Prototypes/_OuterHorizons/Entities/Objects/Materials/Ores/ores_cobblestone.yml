@@ -26,6 +26,10 @@
   description: Горстка каменных облокмков
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Cobblestone: 100
   - type: Stack
     count: 16
     stackType: OH14_StackCobblestone
@@ -69,6 +73,10 @@
   name: железный булыжник
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneIron: 100
   - type: Stack
     count: 16
     stackType: OH14_StackCobblestoneIron
@@ -112,6 +120,10 @@
   name: медный булыжник
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneCopper: 100
   - type: Stack
     count: 16
     stackType: OH14_StackCobblestoneCopper
@@ -155,6 +167,10 @@
   name: золотой булыжник
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneGold: 100
   - type: Stack
     count: 16
     stackType: OH14_StackCobblestoneGold
@@ -198,6 +214,10 @@
   name: платиновый булыжник
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestonePlatinum: 100
   - type: Stack
     count: 16
     stackType: OH14_StackCobblestonePlatinum
@@ -241,6 +261,10 @@
   name: кремниевый булыжник
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneSilicon: 100
   - type: Stack
     count: 16
     stackType: OH14_StackCobblestoneSilicon

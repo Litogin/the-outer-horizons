@@ -24,6 +24,10 @@
   name: железный лист
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetIron: 100
   - type: Item
     heldPrefix: iron
   - type: Stack
@@ -69,6 +73,10 @@
   name: медный лист
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetCopper: 100
   - type: Stack
     count: 16
     stackType: OH14_StackSheetCopper
@@ -112,6 +120,10 @@
   name: золотой лист
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetGold: 100
   - type: Stack
     count: 16
     stackType: OH14_StackSheetGold
@@ -155,6 +167,10 @@
   name: платиновый лист
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetPlatinum: 100
   - type: Stack
     count: 16
     stackType: OH14_StackSheetPlatinum
@@ -198,6 +214,10 @@
   name: кремниевый лист
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetSilicon: 100
   - type: Stack
     count: 16
     stackType: OH14_StackSheetSilicon
@@ -242,6 +262,10 @@
   description: Лучше бы мы делали транзисторы.
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetGlass: 100
   - type: Stack
     count: 16
     stackType: OH14_StackSheetGlass

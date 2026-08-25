@@ -1,0 +1,34 @@
+- type: material
+  id: OH14_OreIron
+  stackEntity: OH14_OreIron1
+  name: железная руда
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_OreCopper
+  stackEntity: OH14_OreCopper1
+  name: медная руда
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_OreGold
+  stackEntity: OH14_OreGold1
+  name: золотая руда
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_OrePlatinum
+  stackEntity: OH14_OrePlatinum1
+  name: платиновая руда
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_OreSilicon
+  stackEntity: OH14_OreSilicon1
+  name: кремниевая руда
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2

@@ -23,6 +23,10 @@
   description: Механический компонент для более продвинутых структур и устройств.
   suffix: "8, Компоненты"
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Component: 100
   - type: Item
     size: Tiny
   - type: Stack
@@ -69,6 +73,10 @@
   description: Механический компонент для более продвинутых структур и устройств.
   suffix: "8, Компоненты"
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_ComponentAdv: 100
   - type: Item
     size: Tiny
   - type: Stack
@@ -116,6 +124,10 @@
   description: Кроме того что это светильник, в крайней ситуации это вычислительный компонент. Ах да...
   suffix: "8, Компоненты"
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_VacuumTube: 100
   - type: Item
     size: Small
   - type: Stack
@@ -161,6 +173,10 @@
   name: конденсатор
   suffix: "8, Компоненты"
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Capacitor: 100
   - type: Item
     size: Small
   - type: Stack
@@ -206,6 +222,10 @@
   name: печатная плата
   suffix: "8, Компоненты"
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Circuit: 100
   - type: Item
     size: Small
   - type: Stack
@@ -251,6 +271,10 @@
   name: заготовка аккумулятора
   suffix: "8, Компоненты"
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Battery: 100
   - type: Item
     size: Small
   - type: Stack

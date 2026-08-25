@@ -25,6 +25,10 @@
   name: железная руда
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_OreIron: 100
   - type: Stack
     count: 16
     stackType: OH14_StackIron
@@ -68,6 +72,10 @@
   name: медная руда
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_OreCopper: 100
   - type: Stack
     count: 16
     stackType: OH14_StackCopper
@@ -111,6 +119,10 @@
   name: золотая руда
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_OreGold: 100
   - type: Stack
     count: 16
     stackType: OH14_StackGold
@@ -154,6 +166,10 @@
   name: платиновая руда
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_OrePlatinum: 100
   - type: Stack
     count: 16
     stackType: OH14_StackPlatinum
@@ -197,6 +213,10 @@
   name: кремниевая руда
   suffix: 16
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_OreSilicon: 100
   - type: Stack
     count: 16
     stackType: OH14_StackSilicon
