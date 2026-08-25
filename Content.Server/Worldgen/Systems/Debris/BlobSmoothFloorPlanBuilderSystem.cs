@@ -187,9 +187,8 @@ public sealed class BlobSmoothFloorPlanBuilderSystem : BaseWorldSystem
         // Финальная отрисовка
         var taken = new Dictionary<Vector2i, Tile>(activeTiles.Count);
 
-        // Переменные для хранения определений тайлов (замените CrustTileset на ваш реальный прототип, если нужно)
+        // Переменные для хранения определений тайлов
         var mainTileset = comp.FloorTileset;
-        // Если в компоненте еще нет поля CrustTileset, временно берем тот же или другой доступный ID:
         var crustTileset = comp.CrustTileset;
 
         foreach (var point in activeTiles)
