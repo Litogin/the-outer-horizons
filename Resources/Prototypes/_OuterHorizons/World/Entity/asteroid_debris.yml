@@ -5,15 +5,12 @@
   abstract: true
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       floorTileset:
       - OH14_IceMoon
-      crustTileset:
-      - OH14_Ice
       blobDrawProb: 0.5
       radius: 6
       floorPlacements: 16
-      crustLayers: 4
     - type: SimpleFloorPlanPopulator
       entries:
         OH14_IceMoon:
@@ -39,7 +36,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 15
       floorPlacements: 50
@@ -51,7 +48,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 17
       floorPlacements: 200
@@ -63,7 +60,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 20
       floorPlacements: 450
@@ -75,7 +72,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 23
       floorPlacements: 500
@@ -89,10 +86,8 @@
   abstract: true
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       floorTileset:
-      - OH14_IceMoon
-      crustTileset:
       - OH14_Ice
       blobDrawProb: 0.5
       radius: 6
@@ -122,7 +117,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 15
       floorPlacements: 50
@@ -134,7 +129,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 17
       floorPlacements: 200
@@ -146,7 +141,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 20
       floorPlacements: 450
@@ -158,7 +153,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobSmoothFloorPlanBuilder
+    - type: BlobFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 23
       floorPlacements: 500
