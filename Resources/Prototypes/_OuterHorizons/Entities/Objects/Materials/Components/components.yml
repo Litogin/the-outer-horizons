@@ -88,8 +88,8 @@
 - type: entity
   parent: OH14_BasicComponents
   id: OH14_AnalogBoard
-  name: аналоговая плата
-  description: Простейшее вычислительное устройство. К сожалению не потянет крафтмайн.
+  name: каркас анал. платы
+  description: Простейшее вычислительное устройство. К сожалению не потянет крафтмайн. И тебе бы припаять сюда пару деталек.
   components:
   - type: Sprite
     state: analog_board
@@ -154,7 +154,7 @@
   parent: OH14_BasicComponents
   id: OH14_PowerUnit
   name: каркас БП
-  description: Нужен чтобы подать адекватое напряжение в устройство.
+  description: Нужен чтобы подать адекватое напряжение в устройство. И тебе бы припаять сюда пару деталек.
   components:
   - type: Sprite
     state: power_unit
@@ -166,7 +166,7 @@
   parent: OH14_BasicComponents
   id: OH14_ControlUnit
   name: каркас БУ
-  description: Нужен чтобы подать команду сложнее чем вкл/выкл.
+  description: Нужен чтобы подать команду сложнее чем вкл/выкл. И тебе бы припаять сюда пару деталек.
   components:
   - type: Sprite
     state: control_unit

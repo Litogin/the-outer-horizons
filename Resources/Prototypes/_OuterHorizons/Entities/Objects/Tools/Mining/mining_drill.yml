@@ -1,0 +1,103 @@
+# Буры
+
+- type: entity
+  parent: OH14_BaseItem
+  id: OH14_MiningDrill
+  name: обыкновенный ручной бур
+  description: Компактный бур для шахтерских изысканий. В отличие от обычных инструментов, имеет фирменную бирюзовую расцветку.
+  components:
+  - type: Appearance
+  # - type: InworldSprite
+  # - type: GenericVisualizer
+  #   visuals:
+  #     enum.InworldSpriteState.State:
+  #       base:
+  #         True: {state: icon}
+  #         False: {state: inworld}
+  - type: Item
+    size: Normal
+    storedRotation: 0
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
+    layers:
+    - state: l-icon
+      map: ["base"]
+  - type: MeleeWeapon
+    autoAttack: true
+    angle: 0
+    wideAnimationRotation: -90
+    soundHit:
+      path: "/Audio/Items/drill_hit.ogg"
+    attackRate: 1.5
+    damage:
+      groups:
+        Brute: 5
+      types:
+        Structural: 25
+
+- type: entity
+  parent: OH14_MiningDrill
+  id: OH14_MiningDrillT2
+  name: улучшенный ручной бур
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
+    layers:
+    - state: m-icon
+      map: ["base"]
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 10
+      types:
+        Structural: 30
+
+- type: entity
+  parent: OH14_MiningDrill
+  id: OH14_MiningDrillT3
+  name: продвинутый ручной бур
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
+    layers:
+    - state: h-icon
+      map: ["base"]
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 10
+      types:
+        Structural: 40
+
+# Их наконечники
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_MiningDrillTip
+  name: наконечник бура
+  suffix: Железный
+  description: Обычный.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
+    state: l-tip
+
+- type: entity
+  parent: OH14_MiningDrillTip
+  id: OH14_MiningDrillTipT2
+  suffix: Кобальтовый
+  description: Улучшенный.
+  components:
+  - type: Sprite
+    state: m-tip
+
+- type: entity
+  parent: OH14_MiningDrillTip
+  id: OH14_MiningDrillTipT3
+  suffix: Платиновый
+  description: Пиздатый.
+  components:
+  - type: Sprite
+    state: h-tip

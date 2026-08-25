@@ -13,4 +13,4 @@ ce-recipe-category-components = Компоненты
 ce-recipe-category-structures = Структуры
 ce-recipe-category-electronics = Электроника
 ce-recipe-category-power = Энергия
-ce-recipe-category-units = Блоки
+ce-recipe-category-units = Заготовки

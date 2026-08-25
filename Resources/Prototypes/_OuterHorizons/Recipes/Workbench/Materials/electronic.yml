@@ -91,3 +91,23 @@
     count: 1
   result: OH14_Circuit1
   resultCount: 1
+
+# Аналоговая плата
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_AnalogBoard
+  category: Electronics
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackCircuit
+    count: 4
+  - !type:StackResource
+    stack: OH14_StackCoilCopper
+    count: 2
+  - !type:StackResource
+    stack: OH14_StackCoilGold
+    count: 2
+  result: OH14_AnalogBoard
+  resultCount: 1

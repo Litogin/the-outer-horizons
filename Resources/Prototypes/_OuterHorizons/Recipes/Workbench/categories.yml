@@ -1,8 +1,4 @@
 - type: CERecipeCategory
-  id: Tools
-  name: ce-recipe-category-tool
-
-- type: CERecipeCategory
   id: Components
   name: ce-recipe-category-components
 
@@ -21,6 +17,10 @@
 - type: CERecipeCategory
   id: Units
   name: ce-recipe-category-units
+
+- type: CERecipeCategory
+  id: Tools
+  name: ce-recipe-category-tool
 
 - type: CERecipeCategory
   id: Weapon

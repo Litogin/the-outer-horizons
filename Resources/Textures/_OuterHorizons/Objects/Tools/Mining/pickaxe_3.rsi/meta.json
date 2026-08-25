@@ -22,6 +22,9 @@
             "name": "inworld"
         },
         {
+            "name": "tip"
+        },
+        {
             "name": "wielded-inhand-left",
             "directions": 4
         },
