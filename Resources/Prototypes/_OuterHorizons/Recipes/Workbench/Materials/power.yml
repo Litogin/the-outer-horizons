@@ -137,6 +137,9 @@
   category: Power
   craftTime: 4
   requirements:
+  - !type:StackResource
+    stack: OH14_StackComponent
+    count: 2
   - !type:ProtoIdResource
     protoId: OH14_CopperRotor
     count: 1

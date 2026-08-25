@@ -42,6 +42,9 @@
     - 0,0,1,2
     storedRotation: -45
   - type: UseDelay
+  - type: Construction
+    graph: OH14_PickaxeTip
+    node: OH14_Pickaxe
 
 - type: entity
   name: улучшенная кирка
@@ -57,6 +60,9 @@
         Brute: 10
       types:
         Structural: 20
+  - type: Construction
+    graph: OH14_PickaxeTipT2
+    node: OH14_PickaxeT2
 
 - type: entity
   name: продвинутая кирка
@@ -72,6 +78,9 @@
         Brute: 10
       types:
         Structural: 30
+  - type: Construction
+    graph: OH14_PickaxeTipT3
+    node: OH14_PickaxeT3
 
 # Их наконечники
 
@@ -87,6 +96,9 @@
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe.rsi
     state: tip
+  - type: Construction
+    graph: OH14_PickaxeTip
+    node: start
 
 - type: entity
   parent: OH14_PickaxeTip
@@ -96,6 +108,9 @@
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_2.rsi
+  - type: Construction
+    graph: OH14_PickaxeTipT2
+    node: start
 
 - type: entity
   parent: OH14_PickaxeTip
@@ -105,3 +120,6 @@
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_3.rsi
+  - type: Construction
+    graph: OH14_PickaxeTipT3
+    node: start

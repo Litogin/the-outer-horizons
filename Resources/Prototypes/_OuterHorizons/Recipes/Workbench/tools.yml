@@ -82,6 +82,29 @@
   result: OH14_PickaxeTipT3
   resultCount: 1
 
+# Бур
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_MiningDrillConstruction
+  category: Tools
+  craftTime: 6
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackBattery
+    count: 4
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_StackComponent
+    count: 2
+  - !type:ProtoIdResource
+    protoId: OH14_Motor
+    count: 1
+  result: OH14_MiningDrillConstruction
+  resultCount: 1
+
 # Наконечники бура
 
 - type: CERecipe

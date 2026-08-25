@@ -6,6 +6,9 @@
   name: обыкновенный ручной бур
   description: Компактный бур для шахтерских изысканий. В отличие от обычных инструментов, имеет фирменную бирюзовую расцветку.
   components:
+  - type: Construction
+    graph: OH14_MiningDrill
+    node: OH14_MiningDrill
   - type: Appearance
   # - type: InworldSprite
   # - type: GenericVisualizer
@@ -40,6 +43,9 @@
   id: OH14_MiningDrillT2
   name: улучшенный ручной бур
   components:
+  - type: Construction
+    graph: OH14_MiningDrill
+    node: OH14_MiningDrillT2
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
     layers:
@@ -57,6 +63,9 @@
   id: OH14_MiningDrillT3
   name: продвинутый ручной бур
   components:
+  - type: Construction
+    graph: OH14_MiningDrill
+    node: OH14_MiningDrillT3
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
     layers:
@@ -78,6 +87,9 @@
   suffix: Железный
   description: Обычный.
   components:
+  - type: Tag
+    tags:
+    - OH14_MiningDrillTip
   - type: Item
     size: Small
   - type: Sprite
@@ -90,6 +102,9 @@
   suffix: Кобальтовый
   description: Улучшенный.
   components:
+  - type: Tag
+    tags:
+    - OH14_MiningDrillTipT2
   - type: Sprite
     state: m-tip
 
@@ -99,5 +114,33 @@
   suffix: Платиновый
   description: Пиздатый.
   components:
+  - type: Tag
+    tags:
+    - OH14_MiningDrillTipT3
   - type: Sprite
     state: h-tip
+
+# Каркас
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_MiningDrillConstruction
+  name: каркас ручного бура
+  description: Пока что он еще не БЖЖ-БЖЖ.
+  components:
+  - type: Construction
+    graph: OH14_MiningDrill
+    node: start
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
+    state: construction-icon-0
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          start: { state: construction-icon-0 }
+          OH14_Frame1: { state: construction-icon-1 }
+          OH14_Frame2: { state: construction-icon-2 }

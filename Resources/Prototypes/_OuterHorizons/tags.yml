@@ -24,6 +24,24 @@
 - type: Tag
   id: OH14_AutoLatheUpgradeTools
 
+- type: Tag
+  id: OH14_Handle
+
+- type: Tag
+  id: OH14_MediumHandle
+
+- type: Tag
+  id: OH14_Buttstock
+
+- type: Tag
+  id: OH14_MiningDrillTip
+
+- type: Tag
+  id: OH14_MiningDrillTipT2
+
+- type: Tag
+  id: OH14_MiningDrillTipT3
+
 # Items
 
 - type: Tag

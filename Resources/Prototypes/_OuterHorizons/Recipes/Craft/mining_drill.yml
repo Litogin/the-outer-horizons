@@ -1,0 +1,72 @@
+- type: constructionGraph
+  id: OH14_MiningDrill
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: OH14_Frame1
+          steps:
+            - tag: OH14_Buttstock
+              doAfter: 1
+    - node: OH14_Frame1
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_MiningDrillConstruction
+      edges:
+        - to: OH14_Frame2
+          steps:
+            - tag: OH14_Handle
+              doAfter: 1
+    - node: OH14_Frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_MiningDrillConstruction
+      edges:
+        - to: OH14_MiningDrill
+          steps:
+            - tag: OH14_MiningDrillTip
+              doAfter: 1
+        - to: OH14_MiningDrillT2
+          steps:
+            - tag: OH14_MiningDrillTipT2
+              doAfter: 1
+        - to: OH14_MiningDrillT3
+          steps:
+            - tag: OH14_MiningDrillTipT3
+              doAfter: 1
+
+    - node: OH14_MiningDrill
+      entity: OH14_MiningDrill
+      edges:
+        - to: OH14_Frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_MiningDrillTip
+              amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: OH14_MiningDrillT2
+      entity: OH14_MiningDrillT2
+      edges:
+        - to: OH14_Frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_MiningDrillTipT2
+              amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: OH14_MiningDrillT3
+      entity: OH14_MiningDrillT3
+      edges:
+        - to: OH14_Frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_MiningDrillTipT3
+              amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 2

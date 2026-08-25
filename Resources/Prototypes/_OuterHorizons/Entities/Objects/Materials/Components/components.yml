@@ -23,6 +23,9 @@
   name: рукоятка
   description: Ну не держать ведь тебе инструменты за корпус?
   components:
+  - type: Tag
+    tags:
+    - OH14_Handle
   - type: Item
     size: Small
   - type: Sprite
@@ -34,6 +37,9 @@
   name: длинная рукоятка
   description: Ну не держать ведь тебе инструменты за корпус?
   components:
+  - type: Tag
+    tags:
+    - OH14_MediumHandle
   - type: Item
     size: Small
   - type: Sprite
@@ -45,6 +51,9 @@
   name: приклад
   description: Уверяю вас, это не для огнестрельного оружия.
   components:
+  - type: Tag
+    tags:
+    - OH14_Buttstock
   - type: Item
     size: Small
   - type: Sprite
