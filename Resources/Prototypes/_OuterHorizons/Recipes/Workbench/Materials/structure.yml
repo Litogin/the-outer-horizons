@@ -1,0 +1,113 @@
+# Каркасы
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_SheetGirder
+  category: Structures
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_SheetGirder1
+  resultCount: 1
+
+# Трубки
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_SheetPipes
+  category: Structures
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 4
+  result: OH14_SheetPipes8
+  resultCount: 1
+
+### Панели
+# Обычная
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Panel
+  category: Structures
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackSheetPlatinum
+    count: 1
+  result: OH14_Panel1
+  resultCount: 1
+
+# Укрепленная
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_PanelHeavy
+  category: Structures
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 4
+  - !type:StackResource
+    stack: OH14_StackSheetPlatinum
+    count: 2
+  result: OH14_PanelHeavy1
+  resultCount: 1
+
+# Теплостойкая
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_PanelHeat
+  category: Structures
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 4
+  - !type:StackResource
+    stack: OH14_StackSheetCobalt
+    count: 2
+  result: OH14_PanelHeat1
+  resultCount: 1
+
+# Шаттла
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_PanelShuttle
+  category: Structures
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackPanelHeat
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackSheetPlatinum
+    count: 1
+  result: OH14_PanelShuttle1
+  resultCount: 1
+
+# Укрепленная шаттла
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_PanelShuttleHeavy
+  category: Structures
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackPanelHeat
+    count: 2
+  - !type:StackResource
+    stack: OH14_StackSheetPlatinum
+    count: 2
+  result: OH14_PanelShuttleHeavy
+  resultCount: 1

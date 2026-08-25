@@ -32,3 +32,10 @@
   name: stack-ore-silicon
   icon: { sprite: "_OuterHorizons/Objects/Materials/ores.rsi", state: silicon_3 }
   spawn: OH14_OreSilicon1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_StackCobalt
+  name: stack-ore-cobalt
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores.rsi", state: cobalt_3 }
+  spawn: OH14_OreCobalt1

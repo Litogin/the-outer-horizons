@@ -209,7 +209,7 @@
     stackType: OH14_StackPanelShuttle
     count: 1
 
-# Укрепленный аттла
+# Укрепленный шаттла
 
 - type: entity
   parent: OH14_BasicStackPanels

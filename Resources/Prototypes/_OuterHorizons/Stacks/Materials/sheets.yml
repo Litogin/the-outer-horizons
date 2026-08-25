@@ -39,3 +39,10 @@
   name: stack-sheet-glass
   icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: glass_3 }
   spawn: OH14_SheetGlass1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_StackSheetCobalt
+  name: stack-sheet-cobalt
+  icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: cobalt_3 }
+  spawn: OH14_SheetCobalt1

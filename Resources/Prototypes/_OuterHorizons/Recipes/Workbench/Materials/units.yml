@@ -1,0 +1,23 @@
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_PowerUnit
+  category: Units
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_PowerUnit
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ControlUnit
+  category: Units
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 4
+  result: OH14_ControlUnit
+  resultCount: 1

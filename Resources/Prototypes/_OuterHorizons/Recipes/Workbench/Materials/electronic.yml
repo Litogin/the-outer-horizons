@@ -1,0 +1,93 @@
+# Лампа
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_VacuumTube
+  category: Electronics
+  craftTime: 3
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackCoilIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackSheetGlass
+    count: 1
+  result: OH14_VacuumTube4
+  resultCount: 1
+
+# Конденсатор
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Capacitor
+  category: Electronics
+  craftTime: 3
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackCoilCopper
+    count: 1
+  result: OH14_Capacitor4
+  resultCount: 1
+
+# Аккумулятор
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Battery
+  category: Electronics
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackSheetCobalt
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackCoilCopper
+    count: 2
+  result: OH14_Battery1
+  resultCount: 1
+
+# Экран
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CrtScreen
+  category: Electronics
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackSheetGlass
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackVacuumTube
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackCoilCopper
+    count: 2
+  result: OH14_CrtScreen
+  resultCount: 1
+
+# печатная плата
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Circuit
+  category: Electronics
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetCopper
+    count: 1
+  - !type:StackResource
+    stack: OH14_StackSheetGold
+    count: 1
+  result: OH14_Circuit1
+  resultCount: 1

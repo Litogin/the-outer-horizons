@@ -299,3 +299,50 @@
   - type: Stack
     stackType: OH14_StackCobblestoneSilicon
     count: 1
+
+# Кобальт
+
+- type: entity
+  parent: OH14_BasicStackCobblestone
+  id: OH14_CobblestoneCobalt
+  name: кобальтовый булыжник
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneCobalt: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_StackCobblestoneCobalt
+    baseLayer: base
+    layerStates:
+    - cobalt
+    - cobalt_2
+    - cobalt_3
+  - type: Sprite
+    layers:
+    - state: cobalt_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CobblestoneCobalt
+  id: OH14_CobblestoneCobalt8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: cobalt_2
+  - type: Stack
+    stackType: OH14_StackCobblestoneCobalt
+    count: 8
+
+- type: entity
+  parent: OH14_CobblestoneCobalt
+  id: OH14_CobblestoneCobalt1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: cobalt
+  - type: Stack
+    stackType: OH14_StackCobblestoneCobalt
+    count: 1

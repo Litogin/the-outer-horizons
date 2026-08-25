@@ -39,3 +39,10 @@
   name: stack-cobblestone-silicon
   icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: silicon_3 }
   spawn: OH14_CobblestoneSilicon1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_StackCobblestoneCobalt
+  name: stack-cobblestone-cobalt
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: cobalt_3 }
+  spawn: OH14_CobblestoneCobalt1
