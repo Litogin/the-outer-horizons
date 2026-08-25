@@ -6,7 +6,7 @@ namespace Content.Shared._OuterHorizons.Movement;
 public sealed partial class MapBoundsComponent : Component
 {
     [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
-    public float Radius { get; set; } = 4000f;
+    public float Radius { get; set; } = 5000f;
 
     [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
     public float BaseImpulseVelocity { get; set; } = 1f;
