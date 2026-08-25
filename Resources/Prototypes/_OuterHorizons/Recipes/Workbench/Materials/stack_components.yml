@@ -1,0 +1,11 @@
+# - type: CERecipe
+#   tag: CERecipeWorkbench
+#   id: OH14_SimpleComponent
+#   category: Materials
+#   craftTime: 2
+#   requirements:
+#   - !type:StackResource
+#     stack: OH14_Materials
+#     count: 2
+#   result: OH14_SheetComponents1
+#   resultCount: 1
