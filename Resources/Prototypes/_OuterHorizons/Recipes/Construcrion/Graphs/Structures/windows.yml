@@ -19,7 +19,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
           steps:
@@ -40,7 +40,7 @@
           completed:
             - !type:SnapToGrid
               southRotation: true
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGlass
               amount: 4
           steps:
@@ -67,7 +67,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGlass
               amount: 2
           steps:

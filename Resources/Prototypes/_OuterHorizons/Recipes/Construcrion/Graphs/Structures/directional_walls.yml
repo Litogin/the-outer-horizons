@@ -16,7 +16,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
                 prototype: OH14_SheetGirder1
                 amount: 1
           steps:
@@ -42,7 +42,7 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Panel1
               amount: 1
           steps:
@@ -55,7 +55,7 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Panel
               amount: 1
           steps:
@@ -68,7 +68,7 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_PanelHeat
               amount: 1
           steps:

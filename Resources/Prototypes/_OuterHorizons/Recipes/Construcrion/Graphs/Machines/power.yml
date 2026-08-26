@@ -24,7 +24,7 @@
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -36,7 +36,7 @@
       edges:
         - to: apcFrame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CopperStator
               amount: 2
           conditions:
@@ -80,7 +80,7 @@
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -99,7 +99,7 @@
               doAfter: 1
         - to: subFrame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CopperStator
               amount: 4
           steps:
@@ -110,7 +110,7 @@
       edges:
         - to: subFrame2
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_AnalogBoardComplete
               amount: 1
           conditions:
@@ -154,7 +154,7 @@
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -173,7 +173,7 @@
               doAfter: 1
         - to: subFrame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CopperStator
               amount: 4
           steps:
@@ -184,7 +184,7 @@
       edges:
         - to: subFrame2
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_AnalogBoardComplete
               amount: 1
           conditions:
@@ -219,7 +219,7 @@
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -239,7 +239,7 @@
               doAfter: 1
         - to: frame1
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 4
           steps:
@@ -250,7 +250,7 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Circuit1
               amount: 1
             - !type:EmptyAllContainers
@@ -285,7 +285,7 @@
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -307,7 +307,7 @@
               doAfter: 1
         - to: frame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CopperChamber
               amount: 1
           steps:
@@ -320,10 +320,10 @@
           completed:
             - !type:SnapToGrid
               southRotation: true
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CopperStator
               amount: 1
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CopperRotor
               amount: 1
           # conditions:

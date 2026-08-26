@@ -19,7 +19,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
           steps:
@@ -70,10 +70,10 @@
             - !type:EmptyAllContainers
               pickup: true
               emptyAtUser: true
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 2
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component1
               amount: 4
           steps:
@@ -94,10 +94,10 @@
             - !type:EmptyAllContainers
               pickup: true
               emptyAtUser: true
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 2
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component1
               amount: 8
           steps:

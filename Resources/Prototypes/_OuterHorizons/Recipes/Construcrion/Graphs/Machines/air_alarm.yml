@@ -25,10 +25,10 @@
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component1
               amount: 1
             - !type:DeleteEntity {}
@@ -40,10 +40,10 @@
       edges:
         - to: Frame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_AnalogBoardComplete
               amount: 1
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CrtScreen
               amount: 1
           conditions:

@@ -16,7 +16,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 2
           steps:
@@ -43,7 +43,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 3
           steps:
@@ -70,7 +70,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 5
           steps:
@@ -97,7 +97,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 3
           steps:
@@ -129,7 +129,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
                 prototype: OH14_SheetGirder1
                 amount: 2
           steps:
@@ -145,7 +145,7 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 5
             - !type:DumpCanister
@@ -183,7 +183,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
                 prototype: OH14_SheetGirder1
                 amount: 1
           steps:
@@ -202,10 +202,10 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetIron1
               amount: 3
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component1
               amount: 1
             - !type:DumpCanister

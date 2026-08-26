@@ -16,7 +16,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component1
           steps:
             - tool: Screwing

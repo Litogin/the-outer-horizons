@@ -53,10 +53,10 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetIron1
         amount: 1
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
@@ -71,10 +71,10 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
@@ -89,10 +89,10 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
@@ -107,10 +107,10 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
@@ -125,10 +125,10 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity

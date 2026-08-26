@@ -19,7 +19,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity
@@ -41,7 +41,7 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component1
               amount: 2
           steps:
@@ -60,7 +60,7 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_AnalogBoardComplete
               amount: 1
           steps:

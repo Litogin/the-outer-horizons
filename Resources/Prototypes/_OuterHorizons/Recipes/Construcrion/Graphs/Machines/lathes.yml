@@ -17,7 +17,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -42,7 +42,7 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component1
               amount: 2
           steps:
@@ -63,7 +63,7 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_AnalogBoardComplete
               amount: 1
           steps:
@@ -91,7 +91,7 @@
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CrtScreen
               amount: 1
           steps:
@@ -104,7 +104,7 @@
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CircuitboardUpgradeAutolathe
               amount: 1
           steps:
@@ -132,7 +132,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -157,7 +157,7 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_ComponentAdv
               amount: 2
           steps:
@@ -178,7 +178,7 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_ControlUnitComplete
               amount: 1
           steps:
@@ -197,7 +197,7 @@
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component
               amount: 4
           steps:
@@ -225,7 +225,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -250,7 +250,7 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component1
               amount: 4
           steps:
@@ -271,7 +271,7 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CoilIron
               amount: 8
           steps:
@@ -290,7 +290,7 @@
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_AnalogBoardComplete
               amount: 1
           steps:
@@ -320,7 +320,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -345,7 +345,7 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Motor
               amount: 1
           steps:
@@ -366,7 +366,7 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_AnalogBoardComplete
               amount: 1
           steps:
@@ -385,7 +385,7 @@
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Component
               amount: 2
           steps:

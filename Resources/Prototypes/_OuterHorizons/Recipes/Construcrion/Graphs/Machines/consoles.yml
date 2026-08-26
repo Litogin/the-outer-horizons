@@ -28,7 +28,7 @@
 
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -74,7 +74,7 @@
           conditions:
             - !type:EntityAnchored { }
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_PowerUnitComplete
               amount: 1
           steps:
@@ -91,7 +91,7 @@
           completed:
             - !type:RaiseEvent
                 event: !type:MachineDeconstructedEvent
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_ControlUnitComplete
               amount: 1
           steps:
@@ -105,7 +105,7 @@
           conditions:
             - !type:EntityAnchored {}
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Circuit1
               amount: 2
           steps:
