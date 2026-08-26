@@ -6,6 +6,7 @@
   suffix: Астероид
   description: Хранит руды внутри и грейтайдов снаружи.
   components:
+  - type: SpaceGarbage
   - type: Appearance
   - type: DamageVisuals
     thresholds: [5, 10, 20]

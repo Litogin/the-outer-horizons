@@ -4,6 +4,7 @@
   name: каркас
   description: Большая заготовка для самого интересного что есть в этой игре - ебучие текстурки стенок.
   components:
+  - type: SpaceGarbage
   - type: Transform
     anchored: true
     # noRot: true
