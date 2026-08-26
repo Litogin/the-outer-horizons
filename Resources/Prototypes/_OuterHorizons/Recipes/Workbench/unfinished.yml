@@ -1,0 +1,71 @@
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Crowbar
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_CrowbarBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Flashlight
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_FlashlightBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Wirecutter
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_WirecutterBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Screwdriver
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_ScrewdriverBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Wrench
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_WrenchBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Knife
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_Knife
+  resultCount: 1

@@ -14,3 +14,5 @@ ce-recipe-category-structures = Структуры
 ce-recipe-category-electronics = Электроника
 ce-recipe-category-power = Энергия
 ce-recipe-category-units = Заготовки
+
+ce-recipe-category-unfinished = Не закончил, сорян

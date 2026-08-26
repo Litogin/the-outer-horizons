@@ -33,3 +33,7 @@
 - type: CERecipeCategory
   id: Clothing
   name: ce-recipe-category-clothing
+
+- type: CERecipeCategory
+  id: Unfinished
+  name: ce-recipe-category-unfinished
