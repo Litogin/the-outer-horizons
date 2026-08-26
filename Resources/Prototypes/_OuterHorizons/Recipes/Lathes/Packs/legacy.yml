@@ -1,0 +1,91 @@
+- type: latheRecipePack
+  id: OH14_ToolsStatic
+  recipes:
+  - OH14_Crowbar
+  - OH14_Flashlight
+  - OH14_Wirecutter
+  - OH14_Screwdriver
+  - OH14_Wrench
+  - OH14_Pickaxe
+  - OH14_Knife
+
+- type: latheRecipePack
+  id: OH14_MaterialsStatic
+  recipes:
+  - OH14_Panels
+  - OH14_Component
+  - OH14_Girders
+  - OH14_Pipes
+  - OH14_CableCoilMV
+  - OH14_CableCoilHV
+  - OH14_CableCoilLV
+
+- type: latheRecipePack
+  id: OH14_ElectronicStatic
+  recipes:
+  - OH14_CircuitboardUpgradeAutolathe
+  - OH14_Component
+  - OH14_Circuit
+  - OH14_DoorElectronics
+  - OH14_CircuitboardShuttle
+  - OH14_CircuitboardRadar
+  - OH14_CircuitboardAtmos
+  - OH14_CircuitboardPower
+  - OH14_CircuitboardComms
+  - OH14_NuclearRod # ВРЕМЕННО
+  - OH14_PowerCellMedium
+  - OH14_PowerCellBig
+
+- type: latheRecipePack
+  id: OH14_DeviesStatic
+  recipes:
+  - OH14_ToolMassScanner
+  - OH14_GeigerCounter
+  - OH14_Multitool
+
+- type: latheRecipePack
+  id: OH14_MiscStatic
+  recipes:
+  - OH14_FireExtinguisher
+  - OH14_OxygenTankRed
+  - OH14_OxygenTankWhite
+  - OH14_LightTube
+  - OH14_LightTubeWarm
+  - OH14_LightBulb
+  - OH14_Igniter
+  - OH14_PowerCellMedium
+  - OH14_DrinkCanister
+  - OH14_Mop
+  - OH14_Bucket
+
+- type: latheRecipePack
+  id: OH14_OreStatic
+  recipes:
+  - OH14_Ore
+
+- type: latheRecipePack
+  id: OH14_AdvToolStatic
+  recipes:
+  - OH14_Crowbar
+  - OH14_Flashlight
+  - OH14_Welder
+  - OH14_Wirecutter
+  - OH14_Screwdriver
+  - OH14_Wrench
+  - OH14_Drill
+  - OH14_Pickaxe
+  - OH14_MiningDrill
+  - OH14_Knife
+
+- type: latheRecipePack
+  id: OH14_BotanyStatic
+  recipes:
+  - OH14_ToolMiniHoe
+  - OH14_ToolClippers
+  - OH14_ToolHatchet
+  - OH14_ToolSpade
+
+- type: latheRecipePack
+  id: OH14_AdvEqpmentStatic
+  recipes:
+  - OH14_ClothingHeadWeldingMask

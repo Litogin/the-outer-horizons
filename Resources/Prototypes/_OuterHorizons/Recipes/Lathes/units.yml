@@ -1,0 +1,13 @@
+- type: latheRecipe
+  id: OH14_PowerUnit
+  result: OH14_PowerUnit
+  materials:
+    OH14_SheetIron: 200
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_ControlUnit
+  result: OH14_ControlUnit
+  materials:
+    OH14_SheetIron: 400
+  completetime: 4

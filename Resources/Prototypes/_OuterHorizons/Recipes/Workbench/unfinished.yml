@@ -69,3 +69,53 @@
     count: 2
   result: OH14_Knife
   resultCount: 1
+
+# Гидро
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolMiniHoe
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_ToolMiniHoe
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolClippers
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_ToolClippers
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolHatchet
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_ToolHatchet
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolSpade
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackSheetIron
+    count: 2
+  result: OH14_ToolSpade
+  resultCount: 1

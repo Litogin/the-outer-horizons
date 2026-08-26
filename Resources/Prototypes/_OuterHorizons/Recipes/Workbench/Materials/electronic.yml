@@ -79,18 +79,27 @@
 
 - type: CERecipe
   tag: CERecipeWorkbench
-  id: OH14_Circuit
+  id: OH14_CircuitCopper
   category: Electronics
   craftTime: 2
   requirements:
   - !type:StackResource
     stack: OH14_StackSheetCopper
     count: 1
+  result: OH14_Circuit1
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CircuitGold
+  category: Electronics
+  craftTime: 2
+  requirements:
   - !type:StackResource
     stack: OH14_StackSheetGold
     count: 1
   result: OH14_Circuit1
-  resultCount: 1
+  resultCount: 2
 
 # Аналоговая плата
 

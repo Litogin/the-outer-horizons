@@ -1,91 +1,42 @@
 - type: latheRecipePack
-  id: OH14_ToolsStatic
+  id: OH14_ComponentsStatic
   recipes:
-  - OH14_Crowbar
-  - OH14_Flashlight
-  - OH14_Wirecutter
-  - OH14_Screwdriver
-  - OH14_Wrench
-  - OH14_Pickaxe
-  - OH14_Knife
-
-- type: latheRecipePack
-  id: OH14_MaterialsStatic
-  recipes:
-  - OH14_Panels
   - OH14_Component
-  - OH14_Girders
-  - OH14_Pipes
-  - OH14_CableCoilMV
-  - OH14_CableCoilHV
-  - OH14_CableCoilLV
+  - OH14_ComponentAdv
 
 - type: latheRecipePack
-  id: OH14_ElectronicStatic
+  id: OH14_ElectrStatic
   recipes:
-  - OH14_CircuitboardUpgradeAutolathe
-  - OH14_Component
-  - OH14_Circuit
-  - OH14_DoorElectronics
-  - OH14_CircuitboardShuttle
-  - OH14_CircuitboardRadar
-  - OH14_CircuitboardAtmos
-  - OH14_CircuitboardPower
-  - OH14_CircuitboardComms
-  - OH14_NuclearRod # ВРЕМЕННО
-  - OH14_PowerCellMedium
-  - OH14_PowerCellBig
+  - OH14_VacuumTube
+  - OH14_Capacitor
+  - OH14_Battery
+  - OH14_CircuitCopper
+  - OH14_CircuitGold
 
 - type: latheRecipePack
-  id: OH14_DeviesStatic
+  id: OH14_PowerStatic
   recipes:
-  - OH14_ToolMassScanner
-  - OH14_GeigerCounter
-  - OH14_Multitool
+  - OH14_CoilIron
+  - OH14_CoilCopper
+  - OH14_CoilGold
+  - OH14_CopperChamber
+  - OH14_HeatChamber
+  - OH14_CopperStator
+  - OH14_CopperRotor
+  - OH14_GoldStator
+  - OH14_GoldRotor
 
 - type: latheRecipePack
-  id: OH14_MiscStatic
+  id: OH14_ContructionStatic
   recipes:
-  - OH14_FireExtinguisher
-  - OH14_OxygenTankRed
-  - OH14_OxygenTankWhite
-  - OH14_LightTube
-  - OH14_LightTubeWarm
-  - OH14_LightBulb
-  - OH14_Igniter
-  - OH14_PowerCellMedium
-  - OH14_DrinkCanister
-  - OH14_Mop
-  - OH14_Bucket
+  - OH14_SheetGirder
+  - OH14_SheetPipes
+  - OH14_Panel
+  - OH14_PanelHeavy
+  - OH14_PanelHeat
 
 - type: latheRecipePack
-  id: OH14_OreStatic
+  id: OH14_UnitsStatic
   recipes:
-  - OH14_Ore
-
-- type: latheRecipePack
-  id: OH14_AdvToolStatic
-  recipes:
-  - OH14_Crowbar
-  - OH14_Flashlight
-  - OH14_Welder
-  - OH14_Wirecutter
-  - OH14_Screwdriver
-  - OH14_Wrench
-  - OH14_Drill
-  - OH14_Pickaxe
-  - OH14_MiningDrill
-  - OH14_Knife
-
-- type: latheRecipePack
-  id: OH14_BotanyStatic
-  recipes:
-  - OH14_ToolMiniHoe
-  - OH14_ToolClippers
-  - OH14_ToolHatchet
-  - OH14_ToolSpade
-
-- type: latheRecipePack
-  id: OH14_AdvEqpmentStatic
-  recipes:
-  - OH14_ClothingHeadWeldingMask
+  - OH14_PowerUnit
+  - OH14_ControlUnit
