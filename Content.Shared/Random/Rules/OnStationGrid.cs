@@ -1,3 +1,7 @@
+//
+// Created by Outer Horizons project
+//
+
 using Content.Shared.Station.Components;
 
 namespace Content.Shared.Random.Rules;
