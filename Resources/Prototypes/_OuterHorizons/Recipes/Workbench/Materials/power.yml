@@ -36,6 +36,44 @@
   result: OH14_CoilGold8
   resultCount: 1
 
+# Кабеля
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CableCoilLV
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackCoilCopper
+    count: 2
+  result: OH14_CableCoilLV8
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CableCoilMV
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackCoilCopper
+    count: 4
+  result: OH14_CableCoilMV8
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CableCoilHV
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_StackCoilCopper
+    count: 8
+  result: OH14_CableCoilHV8
+  resultCount: 1
+
 # Камеры сгорания
 
 - type: CERecipe

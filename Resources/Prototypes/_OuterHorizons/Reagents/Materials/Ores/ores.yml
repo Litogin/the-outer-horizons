@@ -32,3 +32,10 @@
   name: кремниевая руда
   icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
   price: 2
+
+- type: material
+  id: OH14_OreCobalt
+  stackEntity: OH14_OreCobalt1
+  name: кобальтовая руда
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2

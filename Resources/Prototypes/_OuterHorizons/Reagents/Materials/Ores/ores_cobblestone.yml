@@ -39,3 +39,10 @@
   name: кремниевый булыжник
   icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
   price: 2
+
+- type: material
+  id: OH14_CobblestoneCobalt
+  stackEntity: OH14_CobblestoneCobalt1
+  name: кобальтовый булыжник
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2

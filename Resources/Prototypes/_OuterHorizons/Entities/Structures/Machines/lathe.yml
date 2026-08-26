@@ -278,11 +278,11 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
-    - OH14_OreStatic
+    - OH14_FurnanceStatic
   - type: LatheHeatProducing
-    energyPerSecond: 20000
+    energyPerSecond: 10000
 
-# Печь
+# Очиститель
 
 - type: entity
   id: OH14_OreProcessor
@@ -310,13 +310,13 @@
       tags:
         - OH14_StackCobblestone
   - type: Lathe
-    producingSound: /Audio/_OuterHorizons/Machines/centrifugeOperate.ogg
+    producingSound: /Audio/_OuterHorizons/Machines/processor.ogg
     idleState: icon
     runningState: building
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
-    - OH14_OreStatic
+    - OH14_ProcessorStatic
 
 # Трубогиб (вырезан)
 
