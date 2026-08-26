@@ -2,7 +2,7 @@
 #   parent: BaseToolRecipe
 #   id: OH14_Component
 #   completetime: 1
-#   result: OH14_SheetComponents1
+#   result: OH14_Component1
 #   icon:
 #     sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
 #     state: mechanic_3

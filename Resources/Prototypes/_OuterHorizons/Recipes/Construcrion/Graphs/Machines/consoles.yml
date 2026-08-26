@@ -67,7 +67,7 @@
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 1
               doAfter: 1
 
@@ -88,7 +88,7 @@
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - material: OH14_Electronic
+            - material: OH14_Circuit
               amount: 2
               doAfter: 1
 
@@ -97,7 +97,7 @@
             - !type:EntityAnchored { }
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 1
           steps:
             - tool: Prying
@@ -120,7 +120,7 @@
             - !type:EntityAnchored {}
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+              prototype: OH14_Circuit1
               amount: 2
           steps:
             - tool: Prying
@@ -145,7 +145,7 @@
             - !type:EntityAnchored {}
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+              prototype: OH14_Circuit1
               amount: 1
           steps:
             - tool: Prying

@@ -5,7 +5,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_PowerUnit
   resultCount: 1
@@ -17,7 +17,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 4
   result: OH14_ControlUnit
   resultCount: 1

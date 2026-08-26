@@ -270,7 +270,7 @@
     ignoreColor: true
     whitelist: &OH14_MaterialWhitelistFurnance
       tags:
-        - OH14_StackOre
+        - OH14_Ore
   - type: Lathe
     producingSound: /Audio/_OuterHorizons/Machines/furnance.ogg
     idleState: icon
@@ -308,7 +308,7 @@
     ignoreColor: true
     whitelist: &OH14_MaterialWhitelistOreProcessor
       tags:
-        - OH14_StackCobblestone
+        - OH14_Cobblestone
   - type: Lathe
     producingSound: /Audio/_OuterHorizons/Machines/processor.ogg
     idleState: icon

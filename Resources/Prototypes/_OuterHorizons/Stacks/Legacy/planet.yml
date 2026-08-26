@@ -12,9 +12,9 @@
   icon: { sprite: "_OuterHorizons/Objects/Materials/planet.rsi", state: rock }
   spawn: OH14_Rock1
 
-- type: stack
-  parent: OH14_BaseMediumStack
-  id: OH14_Ice
-  name: лед
-  icon: { sprite: "_OuterHorizons/Objects/Materials/planet.rsi", state: rock }
-  spawn: OH14_Ice1
+# - type: stack
+#   parent: OH14_BaseMediumStack
+#   id: OH14_Ice
+#   name: лед
+#   icon: { sprite: "_OuterHorizons/Objects/Materials/planet.rsi", state: rock }
+#   spawn: OH14_Ice1

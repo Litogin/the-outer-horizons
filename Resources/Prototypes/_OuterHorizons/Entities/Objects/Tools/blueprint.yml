@@ -52,4 +52,4 @@
     currentLabel: стена шаттла
   - type: Blueprint
     providedRecipes:
-    - OH14_PanelsShuttle
+    - SeismicCharge # TODO

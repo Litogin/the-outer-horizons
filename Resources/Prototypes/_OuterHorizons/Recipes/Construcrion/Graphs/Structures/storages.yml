@@ -8,7 +8,7 @@
       edges:
         - to: OH14_Crate
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 2
               doAfter: 3
     - node: OH14_Crate
@@ -17,7 +17,7 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 2
           steps:
             - tool: Screwing
@@ -35,7 +35,7 @@
       edges:
         - to: OH14_CabinetBasic
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 3
               doAfter: 4
     - node: OH14_CabinetBasic
@@ -44,7 +44,7 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 3
           steps:
             - tool: Screwing
@@ -62,7 +62,7 @@
       edges:
         - to: OH14_CabinetBig
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 5
               doAfter: 5
     - node: OH14_CabinetBig
@@ -71,7 +71,7 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 5
           steps:
             - tool: Screwing
@@ -89,7 +89,7 @@
       edges:
         - to: OH14_CabinetWallmount
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 3
               doAfter: 3
     - node: OH14_CabinetWallmount
@@ -98,7 +98,7 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 3
           steps:
             - tool: Screwing
@@ -137,7 +137,7 @@
               doAfter: 1
         - to: OH14_GasStorage
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 5
               doAfter: 1
     - node: OH14_GasStorage
@@ -146,7 +146,7 @@
         - to: frame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 5
             - !type:DumpCanister
           conditions:
@@ -191,10 +191,10 @@
               doAfter: 1
         - to: OH14_GasCanister
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 3
               doAfter: 1
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 1
               doAfter: 1
     - node: OH14_GasCanister
@@ -203,10 +203,10 @@
         - to: frame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 3
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 1
             - !type:DumpCanister
           conditions:

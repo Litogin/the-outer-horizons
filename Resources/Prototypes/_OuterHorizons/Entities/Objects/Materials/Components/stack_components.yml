@@ -31,7 +31,7 @@
     size: Tiny
   - type: Stack
     count: 8
-    stackType: OH14_StackComponent
+    stackType: OH14_Component
     baseLayer: base
     layerStates:
     - sparepart
@@ -50,7 +50,7 @@
   - type: Sprite
     state: sparepart_2
   - type: Stack
-    stackType: OH14_StackComponent
+    stackType: OH14_Component
     count: 4
 
 - type: entity
@@ -61,7 +61,7 @@
   - type: Sprite
     state: sparepart
   - type: Stack
-    stackType: OH14_StackComponent
+    stackType: OH14_Component
     count: 1
 
 # Продвинутые
@@ -81,7 +81,7 @@
     size: Tiny
   - type: Stack
     count: 8
-    stackType: OH14_StackComponentAdv
+    stackType: OH14_ComponentAdv
     baseLayer: base
     layerStates:
     - adv_sparepart
@@ -100,7 +100,7 @@
   - type: Sprite
     state: adv_sparepart_2
   - type: Stack
-    stackType: OH14_StackComponentAdv
+    stackType: OH14_ComponentAdv
     count: 4
 
 - type: entity
@@ -111,7 +111,7 @@
   - type: Sprite
     state: adv_sparepart
   - type: Stack
-    stackType: OH14_StackComponentAdv
+    stackType: OH14_ComponentAdv
     count: 1
 
 ### Электроника
@@ -132,7 +132,7 @@
     size: Small
   - type: Stack
     count: 8
-    stackType: OH14_StackVacuumTube
+    stackType: OH14_VacuumTube
     baseLayer: base
     layerStates:
     - lamp
@@ -151,7 +151,7 @@
   - type: Sprite
     state: lamp_2
   - type: Stack
-    stackType: OH14_StackVacuumTube
+    stackType: OH14_VacuumTube
     count: 4
 
 - type: entity
@@ -162,7 +162,7 @@
   - type: Sprite
     state: lamp
   - type: Stack
-    stackType: OH14_StackVacuumTube
+    stackType: OH14_VacuumTube
     count: 1
 
 # Конденсатор
@@ -181,7 +181,7 @@
     size: Small
   - type: Stack
     count: 8
-    stackType: OH14_StackCapacitor
+    stackType: OH14_Capacitor
     baseLayer: base
     layerStates:
     - capacitor
@@ -200,7 +200,7 @@
   - type: Sprite
     state: capacitor_2
   - type: Stack
-    stackType: OH14_StackCapacitor
+    stackType: OH14_Capacitor
     count: 4
 
 - type: entity
@@ -211,7 +211,7 @@
   - type: Sprite
     state: capacitor
   - type: Stack
-    stackType: OH14_StackCapacitor
+    stackType: OH14_Capacitor
     count: 1
 
 # Плата
@@ -230,7 +230,7 @@
     size: Small
   - type: Stack
     count: 8
-    stackType: OH14_StackCircuit
+    stackType: OH14_Circuit
     baseLayer: base
     layerStates:
     - circuit
@@ -249,7 +249,7 @@
   - type: Sprite
     state: circuit_2
   - type: Stack
-    stackType: OH14_StackCircuit
+    stackType: OH14_Circuit
     count: 4
 
 - type: entity
@@ -260,7 +260,7 @@
   - type: Sprite
     state: circuit
   - type: Stack
-    stackType: OH14_StackCircuit
+    stackType: OH14_Circuit
     count: 1
 
 # Батарейка
@@ -279,7 +279,7 @@
     size: Small
   - type: Stack
     count: 8
-    stackType: OH14_StackBattery
+    stackType: OH14_Battery
     baseLayer: base
     layerStates:
     - battery
@@ -298,7 +298,7 @@
   - type: Sprite
     state: battery_2
   - type: Stack
-    stackType: OH14_StackBattery
+    stackType: OH14_Battery
     count: 4
 
 - type: entity
@@ -309,5 +309,5 @@
   - type: Sprite
     state: battery
   - type: Stack
-    stackType: OH14_StackBattery
+    stackType: OH14_Battery
     count: 1

@@ -16,7 +16,7 @@
       edges:
         - to: OH14_APC
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 2
               doAfter: 1
             - tool: Screwing
@@ -36,7 +36,7 @@
         - to: apcFrame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 2
           conditions:
             - !type:WirePanel
@@ -65,7 +65,7 @@
       edges:
         - to: subFrame2
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 4
               doAfter: 1
             - tool: Screwing
@@ -86,7 +86,7 @@
       edges:
         - to: OH14_SubstationWallmount
           steps:
-            - material: OH14_Electronic
+            - material: OH14_Circuit
               amount: 1
               doAfter: 1
             - tool: Screwing
@@ -94,7 +94,7 @@
         - to: subFrame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 4
           steps:
             - tool: Screwing
@@ -105,7 +105,7 @@
         - to: subFrame2
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+              prototype: OH14_Circuit1
               amount: 1
           conditions:
             - !type:WirePanel
@@ -134,7 +134,7 @@
       edges:
         - to: subFrame2
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 4
               doAfter: 1
             - tool: Screwing
@@ -155,7 +155,7 @@
       edges:
         - to: OH14_Substation
           steps:
-            - material: OH14_Electronic
+            - material: OH14_Circuit
               amount: 1
               doAfter: 1
             - tool: Screwing
@@ -163,7 +163,7 @@
         - to: subFrame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 4
           steps:
             - tool: Screwing
@@ -174,7 +174,7 @@
         - to: subFrame2
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+              prototype: OH14_Circuit1
               amount: 1
           conditions:
             - !type:WirePanel
@@ -203,7 +203,7 @@
       edges:
         - to: frame2
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 4
               doAfter: 1
         - to: start
@@ -229,7 +229,7 @@
         - to: frame1
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 4
           steps:
             - tool: Screwing
@@ -240,7 +240,7 @@
         - to: frame2
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+              prototype: OH14_Circuit1
               amount: 1
             - !type:EmptyAllContainers
               pickup: true
@@ -269,7 +269,7 @@
       edges:
         - to: frame2
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 5
               doAfter: 1
         - to: start
@@ -288,13 +288,13 @@
       edges:
         - to: OH14_GeneratorTEF
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 4
               doAfter: 1
         - to: frame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 5
           steps:
             - tool: Screwing
@@ -307,7 +307,7 @@
             - !type:SnapToGrid
               southRotation: true
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 4
           # conditions:
           #   - !type:WirePanel

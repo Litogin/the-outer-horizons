@@ -100,9 +100,31 @@
   name: каркас анал. платы
   description: Простейшее вычислительное устройство. К сожалению не потянет крафтмайн. И тебе бы припаять сюда пару деталек.
   components:
+  - type: Construction
+    graph: OH14_AnalogBoard
+    node: start
   - type: Sprite
     state: analog_board
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          start: { state: analog_board }
+          frame1: { state: analog_board_2 }
   # TODO: Сборка в 3 этапа с изменением спрайта
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_AnalogBoardComplete
+  name: аналоговая плата
+  description: Простейшее вычислительное устройство. К сожалению не потянет крафтмайн.
+  components:
+  - type: Construction
+    graph: OH14_AnalogBoard
+    node: OH14_AnalogBoardComplete
+  - type: Sprite
+    state: analog_board_3
 
 ### Моторы и их компоненты
 # Медное

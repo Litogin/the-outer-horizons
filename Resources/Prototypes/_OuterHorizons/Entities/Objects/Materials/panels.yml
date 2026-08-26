@@ -29,7 +29,7 @@
     heldPrefix: panel
   - type: Stack
     count: 16
-    stackType: OH14_StackPanel
+    stackType: OH14_Panel
     baseLayer: base
     layerStates:
     - panel
@@ -48,7 +48,7 @@
   - type: Sprite
     state: panel_2
   - type: Stack
-    stackType: OH14_StackPanel
+    stackType: OH14_Panel
     count: 8
 
 - type: entity
@@ -59,7 +59,7 @@
   - type: Sprite
     state: panel
   - type: Stack
-    stackType: OH14_StackPanel
+    stackType: OH14_Panel
     count: 1
 
 # Укрепленная
@@ -78,7 +78,7 @@
     heldPrefix: panel
   - type: Stack
     count: 16
-    stackType: OH14_StackPanelHeavy
+    stackType: OH14_PanelHeavy
     baseLayer: base
     layerStates:
     - h_panel
@@ -97,7 +97,7 @@
   - type: Sprite
     state: h_panel_2
   - type: Stack
-    stackType: OH14_StackPanelHeavy
+    stackType: OH14_PanelHeavy
     count: 8
 
 - type: entity
@@ -108,7 +108,7 @@
   - type: Sprite
     state: h_panel
   - type: Stack
-    stackType: OH14_StackPanelHeavy
+    stackType: OH14_PanelHeavy
     count: 1
 
 # Теплозащита
@@ -127,7 +127,7 @@
     heldPrefix: heat
   - type: Stack
     count: 16
-    stackType: OH14_StackPanelHeat
+    stackType: OH14_PanelHeat
     baseLayer: base
     layerStates:
     - heat
@@ -146,7 +146,7 @@
   - type: Sprite
     state: heat_2
   - type: Stack
-    stackType: OH14_StackPanelHeat
+    stackType: OH14_PanelHeat
     count: 8
 
 - type: entity
@@ -157,7 +157,7 @@
   - type: Sprite
     state: heat
   - type: Stack
-    stackType: OH14_StackPanelHeat
+    stackType: OH14_PanelHeat
     count: 1
 
 # Шаттла
@@ -176,7 +176,7 @@
     heldPrefix: shuttle
   - type: Stack
     count: 16
-    stackType: OH14_StackPanelShuttle
+    stackType: OH14_PanelShuttle
     baseLayer: base
     layerStates:
     - l_shuttle
@@ -195,7 +195,7 @@
   - type: Sprite
     state: l_shuttle_2
   - type: Stack
-    stackType: OH14_StackPanelShuttle
+    stackType: OH14_PanelShuttle
     count: 8
 
 - type: entity
@@ -206,7 +206,7 @@
   - type: Sprite
     state: l_shuttle
   - type: Stack
-    stackType: OH14_StackPanelShuttle
+    stackType: OH14_PanelShuttle
     count: 1
 
 # Укрепленный шаттла
@@ -225,7 +225,7 @@
     heldPrefix: shuttle
   - type: Stack
     count: 16
-    stackType: OH14_StackPanelShuttleHeavy
+    stackType: OH14_PanelShuttleHeavy
     baseLayer: base
     layerStates:
     - shuttle
@@ -244,7 +244,7 @@
   - type: Sprite
     state: shuttle_2
   - type: Stack
-    stackType: OH14_StackPanelShuttleHeavy
+    stackType: OH14_PanelShuttleHeavy
     count: 8
 
 - type: entity
@@ -255,5 +255,5 @@
   - type: Sprite
     state: shuttle
   - type: Stack
-    stackType: OH14_StackPanelShuttleHeavy
+    stackType: OH14_PanelShuttleHeavy
     count: 1

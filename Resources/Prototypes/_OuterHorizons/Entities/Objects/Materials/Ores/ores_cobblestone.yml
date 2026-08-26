@@ -15,7 +15,7 @@
   - type: Appearance
   - type: Tag
     tags:
-    - OH14_StackCobblestone
+    - OH14_Cobblestone
 
 # Камень
 
@@ -32,7 +32,7 @@
       OH14_Cobblestone: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCobblestone
+    stackType: OH14_Cobblestone
     baseLayer: base
     layerStates:
     - basic
@@ -51,7 +51,7 @@
   - type: Sprite
     state: basic_2
   - type: Stack
-    stackType: OH14_StackCobblestone
+    stackType: OH14_Cobblestone
     count: 8
 
 - type: entity
@@ -62,7 +62,7 @@
   - type: Sprite
     state: basic
   - type: Stack
-    stackType: OH14_StackCobblestone
+    stackType: OH14_Cobblestone
     count: 1
 
 # Железо
@@ -79,7 +79,7 @@
       OH14_CobblestoneIron: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCobblestoneIron
+    stackType: OH14_CobblestoneIron
     baseLayer: base
     layerStates:
     - iron
@@ -98,7 +98,7 @@
   - type: Sprite
     state: iron_2
   - type: Stack
-    stackType: OH14_StackCobblestoneIron
+    stackType: OH14_CobblestoneIron
     count: 8
 
 - type: entity
@@ -109,7 +109,7 @@
   - type: Sprite
     state: iron
   - type: Stack
-    stackType: OH14_StackCobblestoneIron
+    stackType: OH14_CobblestoneIron
     count: 1
 
 # Медь
@@ -126,7 +126,7 @@
       OH14_CobblestoneCopper: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCobblestoneCopper
+    stackType: OH14_CobblestoneCopper
     baseLayer: base
     layerStates:
     - copper
@@ -145,7 +145,7 @@
   - type: Sprite
     state: copper_2
   - type: Stack
-    stackType: OH14_StackCobblestoneCopper
+    stackType: OH14_CobblestoneCopper
     count: 8
 
 - type: entity
@@ -156,7 +156,7 @@
   - type: Sprite
     state: copper
   - type: Stack
-    stackType: OH14_StackCobblestoneCopper
+    stackType: OH14_CobblestoneCopper
     count: 1
 
 # Золото
@@ -173,7 +173,7 @@
       OH14_CobblestoneGold: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCobblestoneGold
+    stackType: OH14_CobblestoneGold
     baseLayer: base
     layerStates:
     - gold
@@ -192,7 +192,7 @@
   - type: Sprite
     state: gold_2
   - type: Stack
-    stackType: OH14_StackCobblestoneGold
+    stackType: OH14_CobblestoneGold
     count: 8
 
 - type: entity
@@ -203,7 +203,7 @@
   - type: Sprite
     state: gold
   - type: Stack
-    stackType: OH14_StackCobblestoneGold
+    stackType: OH14_CobblestoneGold
     count: 1
 
 # Платина
@@ -220,7 +220,7 @@
       OH14_CobblestonePlatinum: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCobblestonePlatinum
+    stackType: OH14_CobblestonePlatinum
     baseLayer: base
     layerStates:
     - platinum
@@ -239,7 +239,7 @@
   - type: Sprite
     state: platinum_2
   - type: Stack
-    stackType: OH14_StackCobblestonePlatinum
+    stackType: OH14_CobblestonePlatinum
     count: 8
 
 - type: entity
@@ -250,7 +250,7 @@
   - type: Sprite
     state: platinum
   - type: Stack
-    stackType: OH14_StackCobblestonePlatinum
+    stackType: OH14_CobblestonePlatinum
     count: 1
 
 # Кремний
@@ -267,7 +267,7 @@
       OH14_CobblestoneSilicon: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCobblestoneSilicon
+    stackType: OH14_CobblestoneSilicon
     baseLayer: base
     layerStates:
     - silicon
@@ -286,7 +286,7 @@
   - type: Sprite
     state: silicon_2
   - type: Stack
-    stackType: OH14_StackCobblestoneSilicon
+    stackType: OH14_CobblestoneSilicon
     count: 8
 
 - type: entity
@@ -297,7 +297,7 @@
   - type: Sprite
     state: silicon
   - type: Stack
-    stackType: OH14_StackCobblestoneSilicon
+    stackType: OH14_CobblestoneSilicon
     count: 1
 
 # Кобальт
@@ -314,7 +314,7 @@
       OH14_CobblestoneCobalt: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCobblestoneCobalt
+    stackType: OH14_CobblestoneCobalt
     baseLayer: base
     layerStates:
     - cobalt
@@ -333,7 +333,7 @@
   - type: Sprite
     state: cobalt_2
   - type: Stack
-    stackType: OH14_StackCobblestoneCobalt
+    stackType: OH14_CobblestoneCobalt
     count: 8
 
 - type: entity
@@ -344,5 +344,5 @@
   - type: Sprite
     state: cobalt
   - type: Stack
-    stackType: OH14_StackCobblestoneCobalt
+    stackType: OH14_CobblestoneCobalt
     count: 1

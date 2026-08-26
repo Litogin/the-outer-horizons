@@ -14,10 +14,10 @@
       edges:
         - to: OH14_AirControl
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 1
               doAfter: 1
-            - material: OH14_Electronic
+            - material: OH14_Circuit
               amount: 1
               doAfter: 1
             - tool: Screwing
@@ -37,10 +37,10 @@
         - to: Frame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 1
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+              prototype: OH14_Circuit1
               amount: 1
           conditions:
             - !type:WirePanel

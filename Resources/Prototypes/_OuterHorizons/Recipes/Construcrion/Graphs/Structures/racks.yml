@@ -8,7 +8,7 @@
       edges:
         - to: OH14_Racks
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 1
               doAfter: 1
     - node: OH14_Racks
@@ -17,7 +17,7 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
           steps:
             - tool: Screwing
               doAfter: 1

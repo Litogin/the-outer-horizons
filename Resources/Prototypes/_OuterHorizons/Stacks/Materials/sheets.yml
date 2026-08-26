@@ -1,48 +1,48 @@
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackSheetIron
+  id: OH14_SheetIron
   name: stack-sheet-iron
   icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: iron_3 }
   spawn: OH14_SheetIron1
 
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackSheetCopper
+  id: OH14_SheetCopper
   name: stack-sheet-copper
   icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: copper_3 }
   spawn: OH14_SheetCopper1
 
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackSheetGold
+  id: OH14_SheetGold
   name: stack-sheet-gold
   icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: gold_3 }
   spawn: OH14_SheetGold1
 
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackSheetPlatinum
+  id: OH14_SheetPlatinum
   name: stack-sheet-platinum
   icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: platinum_3 }
   spawn: OH14_SheetPlatinum1
 
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackSheetSilicon
+  id: OH14_SheetSilicon
   name: stack-sheet-silicon
   icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: silicon_3 }
   spawn: OH14_SheetSilicon1
 
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackSheetGlass
+  id: OH14_SheetGlass
   name: stack-sheet-glass
   icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: glass_3 }
   spawn: OH14_SheetGlass1
 
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackSheetCobalt
+  id: OH14_SheetCobalt
   name: stack-sheet-cobalt
   icon: { sprite: "_OuterHorizons/Objects/Materials/sheets.rsi", state: cobalt_3 }
   spawn: OH14_SheetCobalt1

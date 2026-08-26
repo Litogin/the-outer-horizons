@@ -5,7 +5,7 @@
 #   craftTime: 1
 #   requirements:
 #   - !type:StackResource
-#     stack: OH14_Materials
+#     stack: OH14_SheetIron
 #     count: 1
 #   result: OH14_DEBUG1
 #   resultCount: 1

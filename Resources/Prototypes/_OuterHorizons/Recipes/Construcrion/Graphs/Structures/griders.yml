@@ -34,7 +34,7 @@
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - material: OH14_Panels
+            - material: OH14_Panel
               amount: 1
               doAfter: 2
         - to: OH14_WallShuttle
@@ -44,7 +44,7 @@
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - material: OH14_PanelsShuttle
+            - material: OH14_PanelShuttle
               amount: 1
               doAfter: 2
         - to: OH14_ReinforcedGirder
@@ -54,7 +54,7 @@
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 1
               doAfter: 1
     - node: OH14_Wall
@@ -63,7 +63,7 @@
         - to: OH14_Girder
           completed:
             - !type:GivePrototype
-              prototype: OH14_SheetPanelsBasic1
+              prototype: OH14_Panel1
               amount: 1
           steps:
             - tool: Screwing
@@ -76,7 +76,7 @@
         - to: OH14_Girder
           completed:
             - !type:GivePrototype
-              prototype: OH14_SheetPanelsShuttle1
+              prototype: OH14_PanelShuttle1
               amount: 1
           steps:
             - tool: Screwing
@@ -91,7 +91,7 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 1
             - !type:DeleteEntity {}
           conditions:
@@ -107,7 +107,7 @@
           conditions:
             - !type:EntityAnchored { }
           steps:
-            - material: OH14_Panels
+            - material: OH14_Panel
               amount: 1
               doAfter: 1
         - to: OH14_Girder
@@ -115,7 +115,7 @@
             - !type:SnapToGrid
               southRotation: true
             - !type:GivePrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 1
           conditions:
             - !type:EntityAnchored { }
@@ -128,7 +128,7 @@
         - to: OH14_ReinforcedGirder
           completed:
             - !type:GivePrototype
-              prototype: OH14_SheetPanelsBasic1
+              prototype: OH14_Panel1
               amount: 1
           steps:
             - tool: Screwing

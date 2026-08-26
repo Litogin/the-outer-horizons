@@ -19,7 +19,7 @@
       OH14_Girders: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackGirders
+    stackType: OH14_Girders
     baseLayer: base
     layerStates:
     - girder
@@ -45,7 +45,7 @@
   - type: Sprite
     state: girder_2
   - type: Stack
-    stackType: OH14_StackGirders
+    stackType: OH14_Girders
     count: 8
 
 - type: entity
@@ -56,7 +56,7 @@
   - type: Sprite
     state: girder
   - type: Stack
-    stackType: OH14_StackGirders
+    stackType: OH14_Girders
     count: 1
 
 # Трубки
@@ -80,7 +80,7 @@
       OH14_Piping: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackPiping
+    stackType: OH14_Piping
     baseLayer: base
     layerStates:
     - girder
@@ -104,7 +104,7 @@
   - type: Sprite
     state: girder_2
   - type: Stack
-    stackType: OH14_StackPiping
+    stackType: OH14_Piping
     count: 8
 
 - type: entity
@@ -115,5 +115,5 @@
   - type: Sprite
     state: girder
   - type: Stack
-    stackType: OH14_StackPiping
+    stackType: OH14_Piping
     count: 1

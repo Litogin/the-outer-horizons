@@ -24,12 +24,12 @@
               doAfter: 1
         - to: OH14_WallDirectional
           steps:
-            - material: OH14_Panels
+            - material: OH14_Panel
               amount: 1
               doAfter: 1
         - to: OH14_ShuttleWallDirectional
           steps:
-            - material: OH14_PanelsShuttle
+            - material: OH14_PanelShuttle
               amount: 1
               doAfter: 1
     - node: OH14_WallDirectional
@@ -38,7 +38,7 @@
         - to: frame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetPanelsBasic1
+              prototype: OH14_Panel1
               amount: 1
           steps:
             - tool: Screwing
@@ -51,7 +51,7 @@
         - to: frame
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetPanelsShuttle1
+              prototype: OH14_PanelShuttle1
               amount: 1
           steps:
             - tool: Screwing

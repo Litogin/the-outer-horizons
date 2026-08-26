@@ -15,7 +15,7 @@
   - type: Appearance
   - type: Tag
     tags:
-    - OH14_StackOre
+    - OH14_Ore
 
 # Железо
 
@@ -31,7 +31,7 @@
       OH14_OreIron: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackIron
+    stackType: OH14_Iron
     baseLayer: base
     layerStates:
     - iron
@@ -50,7 +50,7 @@
   - type: Sprite
     state: iron_2
   - type: Stack
-    stackType: OH14_StackIron
+    stackType: OH14_Iron
     count: 8
 
 - type: entity
@@ -61,7 +61,7 @@
   - type: Sprite
     state: iron
   - type: Stack
-    stackType: OH14_StackIron
+    stackType: OH14_Iron
     count: 1
 
 # Медь
@@ -78,7 +78,7 @@
       OH14_OreCopper: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCopper
+    stackType: OH14_Copper
     baseLayer: base
     layerStates:
     - copper
@@ -97,7 +97,7 @@
   - type: Sprite
     state: copper_2
   - type: Stack
-    stackType: OH14_StackCopper
+    stackType: OH14_Copper
     count: 8
 
 - type: entity
@@ -108,7 +108,7 @@
   - type: Sprite
     state: copper
   - type: Stack
-    stackType: OH14_StackCopper
+    stackType: OH14_Copper
     count: 1
 
 # Золото
@@ -125,7 +125,7 @@
       OH14_OreGold: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackGold
+    stackType: OH14_Gold
     baseLayer: base
     layerStates:
     - gold
@@ -144,7 +144,7 @@
   - type: Sprite
     state: gold_2
   - type: Stack
-    stackType: OH14_StackGold
+    stackType: OH14_Gold
     count: 8
 
 - type: entity
@@ -155,7 +155,7 @@
   - type: Sprite
     state: gold
   - type: Stack
-    stackType: OH14_StackGold
+    stackType: OH14_Gold
     count: 1
 
 # Платина
@@ -172,7 +172,7 @@
       OH14_OrePlatinum: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackPlatinum
+    stackType: OH14_Platinum
     baseLayer: base
     layerStates:
     - platinum
@@ -191,7 +191,7 @@
   - type: Sprite
     state: platinum_2
   - type: Stack
-    stackType: OH14_StackPlatinum
+    stackType: OH14_Platinum
     count: 8
 
 - type: entity
@@ -202,7 +202,7 @@
   - type: Sprite
     state: platinum
   - type: Stack
-    stackType: OH14_StackPlatinum
+    stackType: OH14_Platinum
     count: 1
 
 # Кремний
@@ -219,7 +219,7 @@
       OH14_OreSilicon: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackSilicon
+    stackType: OH14_Silicon
     baseLayer: base
     layerStates:
     - silicon
@@ -238,7 +238,7 @@
   - type: Sprite
     state: silicon_2
   - type: Stack
-    stackType: OH14_StackSilicon
+    stackType: OH14_Silicon
     count: 8
 
 - type: entity
@@ -249,7 +249,7 @@
   - type: Sprite
     state: silicon
   - type: Stack
-    stackType: OH14_StackSilicon
+    stackType: OH14_Silicon
     count: 1
 
 # Кобальт
@@ -266,7 +266,7 @@
       OH14_OreCobalt: 100
   - type: Stack
     count: 16
-    stackType: OH14_StackCobalt
+    stackType: OH14_Cobalt
     baseLayer: base
     layerStates:
     - cobalt
@@ -285,7 +285,7 @@
   - type: Sprite
     state: cobalt_2
   - type: Stack
-    stackType: OH14_StackCobalt
+    stackType: OH14_Cobalt
     count: 8
 
 - type: entity
@@ -296,5 +296,5 @@
   - type: Sprite
     state: cobalt
   - type: Stack
-    stackType: OH14_StackCobalt
+    stackType: OH14_Cobalt
     count: 1

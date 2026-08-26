@@ -5,10 +5,10 @@
 #   craftTime: 8
 #   requirements:
 #   - !type:StackResource
-#     stack: OH14_Materials
+#     stack: OH14_SheetIron
 #     count: 10
 #   - !type:StackResource
-#     stack: OH14_Components
+#     stack: OH14_Component
 #     count: 6
 #   result: OH14_ClothingOuterHardsuitOrange
 #   resultCount: 1
@@ -20,10 +20,10 @@
 #   craftTime: 6
 #   requirements:
 #   - !type:StackResource
-#     stack: OH14_Materials
+#     stack: OH14_SheetIron
 #     count: 4
 #   - !type:StackResource
-#     stack: OH14_Components
+#     stack: OH14_Component
 #     count: 4
 #   result: OH14_ClothingHeadHelmetOrange
 #   resultCount: 1

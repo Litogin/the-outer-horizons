@@ -5,7 +5,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_CrowbarBasic
   resultCount: 1
@@ -17,7 +17,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_FlashlightBasic
   resultCount: 1
@@ -29,7 +29,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_WirecutterBasic
   resultCount: 1
@@ -41,7 +41,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_ScrewdriverBasic
   resultCount: 1
@@ -53,7 +53,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_WrenchBasic
   resultCount: 1
@@ -65,7 +65,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_Knife
   resultCount: 1
@@ -79,7 +79,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_ToolMiniHoe
   resultCount: 1
@@ -91,7 +91,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_ToolClippers
   resultCount: 1
@@ -103,7 +103,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_ToolHatchet
   resultCount: 1
@@ -115,7 +115,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_ToolSpade
   resultCount: 1

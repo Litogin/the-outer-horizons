@@ -7,10 +7,10 @@
   craftTime: 3
   requirements:
   - !type:StackResource
-    stack: OH14_StackCoilIron
+    stack: OH14_CoilIron
     count: 1
   - !type:StackResource
-    stack: OH14_StackSheetGlass
+    stack: OH14_SheetGlass
     count: 1
   result: OH14_VacuumTube4
   resultCount: 1
@@ -24,10 +24,10 @@
   craftTime: 3
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 1
   - !type:StackResource
-    stack: OH14_StackCoilCopper
+    stack: OH14_CoilCopper
     count: 1
   result: OH14_Capacitor4
   resultCount: 1
@@ -41,13 +41,13 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 1
   - !type:StackResource
-    stack: OH14_StackSheetCobalt
+    stack: OH14_SheetCobalt
     count: 1
   - !type:StackResource
-    stack: OH14_StackCoilCopper
+    stack: OH14_CoilCopper
     count: 2
   result: OH14_Battery1
   resultCount: 1
@@ -61,16 +61,16 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 1
   - !type:StackResource
-    stack: OH14_StackSheetGlass
+    stack: OH14_SheetGlass
     count: 1
   - !type:StackResource
-    stack: OH14_StackVacuumTube
+    stack: OH14_VacuumTube
     count: 1
   - !type:StackResource
-    stack: OH14_StackCoilCopper
+    stack: OH14_CoilCopper
     count: 2
   result: OH14_CrtScreen
   resultCount: 1
@@ -84,7 +84,7 @@
   craftTime: 2
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetCopper
+    stack: OH14_SheetCopper
     count: 1
   result: OH14_Circuit1
   resultCount: 1
@@ -96,7 +96,7 @@
   craftTime: 2
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetGold
+    stack: OH14_SheetGold
     count: 1
   result: OH14_Circuit1
   resultCount: 2
@@ -110,13 +110,13 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackCircuit
+    stack: OH14_Circuit
     count: 4
   - !type:StackResource
-    stack: OH14_StackCoilCopper
+    stack: OH14_CoilCopper
     count: 2
   - !type:StackResource
-    stack: OH14_StackCoilGold
+    stack: OH14_CoilGold
     count: 2
   result: OH14_AnalogBoard
   resultCount: 1

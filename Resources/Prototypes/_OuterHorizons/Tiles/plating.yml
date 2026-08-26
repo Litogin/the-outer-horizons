@@ -18,7 +18,7 @@
   footstepSounds:
     collection: FootstepPlating
   heatCapacity: 450
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_SheetIron1
 
 - type: tile
   id: OH14_PlatingLattice
@@ -31,7 +31,7 @@
   deconstructTools: [ Cutting ]
   footstepSounds:
     collection: FootstepPlating
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_SheetIron1
   heatCapacity: 10000
 
 # - type: tile
@@ -45,7 +45,7 @@
 #   footstepSounds:
 #     collection: FootstepPlating
 #   friction: 0.3
-#   itemDrop: OH14_SheetMaterials1
+#   itemDrop: OH14_SheetIron1
 #   heatCapacity: 10000
 
 - type: tile
@@ -76,7 +76,7 @@
   footstepSounds:
     collection: FootstepCatwalk
   isSpace: true
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_SheetIron1
   heatCapacity: 10000
 
 - type: tile
@@ -91,7 +91,7 @@
   footstepSounds:
     collection: FootstepCatwalk
   isSpace: true
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_SheetIron1
   heatCapacity: 10000
 
 - type: tile
@@ -106,7 +106,7 @@
   footstepSounds:
     collection: FootstepCatwalk
   isSpace: true
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_SheetIron1
   heatCapacity: 10000
 
 - type: tile
@@ -121,5 +121,5 @@
   footstepSounds:
     collection: FootstepCatwalk
   isSpace: true
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_SheetIron1
   heatCapacity: 10000

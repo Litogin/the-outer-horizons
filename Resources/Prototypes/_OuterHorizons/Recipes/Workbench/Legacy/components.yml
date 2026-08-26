@@ -1,13 +1,13 @@
 # - type: CERecipe
-#   id: OH14_Components
+#   id: OH14_Component
 #   tag: CERecipeWorkbench
 #   category: Materials
 #   craftTime: 2
 #   requirements:
 #   - !type:StackResource
-#     stack: OH14_Materials
+#     stack: OH14_SheetIron
 #     count: 2
-#   result: OH14_SheetComponents1
+#   result: OH14_Component1
 #   resultCount: 1
 
 # - type: CERecipe
@@ -17,7 +17,7 @@
 #   craftTime: 2
 #   requirements:
 #   - !type:StackResource
-#     stack: OH14_Materials
+#     stack: OH14_SheetIron
 #     count: 1
 #   result: OH14_SheetGirder1
 #   resultCount: 2
@@ -31,7 +31,7 @@
 #   - !type:StackResource
 #     stack: OH14_Ingot
 #     count: 1
-#   result: OH14_SheetMaterials1
+#   result: OH14_SheetIron1
 #   resultCount: 3
 
 # - type: CERecipe
@@ -41,7 +41,7 @@
 #   craftTime: 2
 #   requirements:
 #   - !type:StackResource
-#     stack: OH14_Materials
+#     stack: OH14_SheetIron
 #     count: 1
 #   result: OH14_SheetPipes1
 #   resultCount: 2
@@ -53,7 +53,7 @@
 #   craftTime: 2
 #   requirements:
 #   - !type:StackResource
-#     stack: OH14_Materials
+#     stack: OH14_SheetIron
 #     count: 2
-#   result: OH14_SheetPanelsBasic1
+#   result: OH14_Panel1
 #   resultCount: 1

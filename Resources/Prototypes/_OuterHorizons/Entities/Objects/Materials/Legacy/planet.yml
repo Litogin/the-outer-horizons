@@ -1,48 +1,48 @@
-- type: entity
-  parent: OH14_SheetBase
-  id: OH14_SheetOre
-  name: руда
-  suffix: Full
-  components:
-  - type: Material
-  - type: PhysicalComposition
-    materialComposition:
-      OH14_Ore: 100
-  - type: Stack
-    count: 16
-    stackType: OH14_Ore
-    baseLayer: base
-    layerStates:
-    - ore
-    - ore_2
-    - ore_3
-  - type: Sprite
-    state: ore_3
-    layers:
-    - state: ore_3
-      map: ["base"]
-  - type: Item
-    heldPrefix: ore
-  - type: Appearance
-  - type: Tag
-    tags:
-    - OH14_Ore
+# - type: entity
+#   parent: OH14_BasicMaterialStack
+#   id: OH14_SheetOre
+#   name: руда
+#   suffix: Full
+#   components:
+#   - type: Material
+#   - type: PhysicalComposition
+#     materialComposition:
+#       OH14_Ore: 100
+#   - type: Stack
+#     count: 16
+#     stackType: OH14_Ore
+#     baseLayer: base
+#     layerStates:
+#     - ore
+#     - ore_2
+#     - ore_3
+#   - type: Sprite
+#     state: ore_3
+#     layers:
+#     - state: ore_3
+#       map: ["base"]
+#   - type: Item
+#     heldPrefix: ore
+#   - type: Appearance
+#   - type: Tag
+#     tags:
+#     - OH14_Ore
 
-- type: entity
-  parent: OH14_SheetOre
-  id: OH14_SheetOre1
-  suffix: Single
-  components:
-  - type: Sprite
-    state: ore
-  - type: Stack
-    stackType: OH14_Ore
-    count: 1
+# - type: entity
+#   parent: OH14_SheetOre
+#   id: OH14_CobblestoneIron1
+#   suffix: Single
+#   components:
+#   - type: Sprite
+#     state: ore
+#   - type: Stack
+#     stackType: OH14_Ore
+#     count: 1
 
 # Земля
 
 - type: entity
-  parent: OH14_SheetBase
+  parent: OH14_BasicMaterialStack
   id: OH14_Dirt
   name: земля
   suffix: Full
@@ -112,7 +112,7 @@
 # Булыжник
 
 - type: entity
-  parent: OH14_SheetBase
+  parent: OH14_BasicMaterialStack
   id: OH14_Rock
   name: булыжник
   suffix: Full
@@ -202,10 +202,10 @@
         base:
           True: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
           False: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
-  - type: Material
-  - type: PhysicalComposition
-    materialComposition:
-      OH14_Ice: 100
+  # - type: Material
+  # - type: PhysicalComposition
+  #   materialComposition:
+  #     OH14_Ice: 100
   # - type: Stack
   #   count: 16
   #   stackType: OH14_Ice
@@ -232,13 +232,13 @@
         color: "#67E9FF"
   - type: Appearance
 
-- type: entity
-  parent: OH14_Ice
-  id: OH14_Ice1
-  # suffix: Single
-  components:
-  - type: Sprite
-    state: ice
+# - type: entity
+#   parent: OH14_Ice
+#   id: OH14_Ice1
+#   # suffix: Single
+#   components:
+#   - type: Sprite
+#     state: ice
   # - type: Stack
   #   stackType: OH14_Ice
   #   count: 1

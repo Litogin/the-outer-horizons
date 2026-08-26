@@ -29,7 +29,7 @@
     heldPrefix: iron
   - type: Stack
     count: 16
-    stackType: OH14_StackCoilIron
+    stackType: OH14_CoilIron
     baseLayer: base
     layerStates:
     - iron
@@ -48,7 +48,7 @@
   - type: Sprite
     state: iron_2
   - type: Stack
-    stackType: OH14_StackCoilIron
+    stackType: OH14_CoilIron
     count: 8
 
 - type: entity
@@ -59,7 +59,7 @@
   - type: Sprite
     state: iron
   - type: Stack
-    stackType: OH14_StackCoilIron
+    stackType: OH14_CoilIron
     count: 1
 
 # Медная
@@ -78,7 +78,7 @@
     heldPrefix: copper
   - type: Stack
     count: 16
-    stackType: OH14_StackCoilCopper
+    stackType: OH14_CoilCopper
     baseLayer: base
     layerStates:
     - copper
@@ -97,7 +97,7 @@
   - type: Sprite
     state: copper_2
   - type: Stack
-    stackType: OH14_StackCoilCopper
+    stackType: OH14_CoilCopper
     count: 8
 
 - type: entity
@@ -108,7 +108,7 @@
   - type: Sprite
     state: copper
   - type: Stack
-    stackType: OH14_StackCoilCopper
+    stackType: OH14_CoilCopper
     count: 1
 
 # Золотая
@@ -127,7 +127,7 @@
     heldPrefix: gold
   - type: Stack
     count: 16
-    stackType: OH14_StackCoilGold
+    stackType: OH14_CoilGold
     baseLayer: base
     layerStates:
     - gold
@@ -146,7 +146,7 @@
   - type: Sprite
     state: gold_2
   - type: Stack
-    stackType: OH14_StackCoilGold
+    stackType: OH14_CoilGold
     count: 8
 
 - type: entity
@@ -157,5 +157,5 @@
   - type: Sprite
     state: gold
   - type: Stack
-    stackType: OH14_StackCoilGold
+    stackType: OH14_CoilGold
     count: 1

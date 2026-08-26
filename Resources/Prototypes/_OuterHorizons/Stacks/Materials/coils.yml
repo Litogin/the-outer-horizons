@@ -1,20 +1,20 @@
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackCoilIron
+  id: OH14_CoilIron
   name: stack-coil-iron
   icon: { sprite: "_OuterHorizons/Objects/Materials/coils.rsi", state: iron_3 }
   spawn: OH14_CoilIron1
 
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackCoilCopper
+  id: OH14_CoilCopper
   name: stack-coil-copper
   icon: { sprite: "_OuterHorizons/Objects/Materials/coils.rsi", state: copper_3 }
   spawn: OH14_CoilCopper1
 
 - type: stack
   parent: OH14_BaseMediumStack
-  id: OH14_StackCoilGold
+  id: OH14_CoilGold
   name: stack-coil-gold
   icon: { sprite: "_OuterHorizons/Objects/Materials/coils.rsi", state: gold_3 }
   spawn: OH14_CoilGold1

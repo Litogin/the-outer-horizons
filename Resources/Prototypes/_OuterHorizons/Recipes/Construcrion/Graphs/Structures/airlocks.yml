@@ -27,10 +27,10 @@
               doAfter: 1
         - to: OH14_Airlock
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 2
               doAfter: 1
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 4
               doAfter: 1
             - component: DoorElectronics
@@ -42,10 +42,10 @@
               doAfter: 3
         - to: OH14_AirlockDock
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 8
               doAfter: 1
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 2
               doAfter: 1
             - component: DoorElectronics
@@ -71,10 +71,10 @@
               pickup: true
               emptyAtUser: true
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 2
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 4
           steps:
             - tool: Prying
@@ -95,10 +95,10 @@
               pickup: true
               emptyAtUser: true
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 2
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 8
           steps:
             - tool: Prying

@@ -152,17 +152,17 @@
           prob: 0.4
         - id: OH14_SheetPipes
           prob: 0.2
-        - id: OH14_SheetMaterials8
+        - id: OH14_SheetIron8
           prob: 0.8
-        - id: OH14_SheetMaterials8
+        - id: OH14_SheetIron8
           prob: 0.2
-        - id: OH14_SheetPanelsBasic8
+        - id: OH14_Panel8
           prob: 0.6
-        - id: OH14_SheetPanelsBasic8
+        - id: OH14_Panel8
           prob: 0.2
-        - id: OH14_SheetComponents5
+        - id: OH14_Component4
           prob: 0.2
-        - id: OH14_SheetElectronics5
+        - id: OH14_Circuit4
           prob: 0.2
 
 - type: entity
@@ -241,13 +241,13 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: OH14_SheetPanelsBasic8
+        - id: OH14_Panel8
           prob: 0.2
         - id: OH14_SheetGirder
           prob: 0.2
         - id: OH14_SheetPipes
           prob: 0.2
-        - id: OH14_SheetMaterials8
+        - id: OH14_SheetIron8
           prob: 0.2
 
 # Ящики с замком

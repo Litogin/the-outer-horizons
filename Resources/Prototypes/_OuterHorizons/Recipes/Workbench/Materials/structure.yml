@@ -7,7 +7,7 @@
   craftTime: 2
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 1
   result: OH14_SheetGirder1
   resultCount: 1
@@ -21,7 +21,7 @@
   craftTime: 2
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 2
   result: OH14_SheetPipes1
   resultCount: 1
@@ -36,10 +36,10 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 1
   - !type:StackResource
-    stack: OH14_StackSheetPlatinum
+    stack: OH14_SheetPlatinum
     count: 1
   result: OH14_Panel1
   resultCount: 1
@@ -53,10 +53,10 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 4
   - !type:StackResource
-    stack: OH14_StackSheetPlatinum
+    stack: OH14_SheetPlatinum
     count: 2
   result: OH14_PanelHeavy1
   resultCount: 1
@@ -70,10 +70,10 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 4
   - !type:StackResource
-    stack: OH14_StackSheetCobalt
+    stack: OH14_SheetCobalt
     count: 2
   result: OH14_PanelHeat1
   resultCount: 1
@@ -87,10 +87,10 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackPanelHeat
+    stack: OH14_PanelHeat
     count: 1
   - !type:StackResource
-    stack: OH14_StackSheetPlatinum
+    stack: OH14_SheetPlatinum
     count: 1
   result: OH14_PanelShuttle1
   resultCount: 1
@@ -104,10 +104,10 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackPanelHeat
+    stack: OH14_PanelHeat
     count: 2
   - !type:StackResource
-    stack: OH14_StackSheetPlatinum
+    stack: OH14_SheetPlatinum
     count: 2
   result: OH14_PanelShuttleHeavy
   resultCount: 1

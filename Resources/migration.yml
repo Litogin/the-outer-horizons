@@ -835,3 +835,5 @@ OH14_SheetOre1: OH14_CobblestoneIron1
 
 OH14_Rock: OH14_Cobblestone
 OH14_Rock1: OH14_Cobblestone1
+
+OH14_GeneratorMiniNuclearReactor: null

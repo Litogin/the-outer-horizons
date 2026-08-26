@@ -12,7 +12,7 @@
 - type: latheRecipePack
   id: OH14_MaterialsStatic
   recipes:
-  - OH14_Panels
+  - OH14_Panel
   - OH14_Component
   - OH14_Girders
   - OH14_Pipes
@@ -57,11 +57,6 @@
   - OH14_DrinkCanister
   - OH14_Mop
   - OH14_Bucket
-
-- type: latheRecipePack
-  id: OH14_OreStatic
-  recipes:
-  - OH14_Ore
 
 - type: latheRecipePack
   id: OH14_AdvToolStatic

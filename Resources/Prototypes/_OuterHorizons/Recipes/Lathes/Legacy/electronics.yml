@@ -1,7 +1,7 @@
 - type: latheRecipe
   id: OH14_Circuit
   completetime: 5
-  result: OH14_SheetElectronics1
+  result: OH14_Circuit1
   icon:
     sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
     state: electronic_3

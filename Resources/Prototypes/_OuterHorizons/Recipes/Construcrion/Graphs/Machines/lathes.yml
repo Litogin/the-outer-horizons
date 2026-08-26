@@ -32,7 +32,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 2
               doAfter: 1
     - node: frame2
@@ -43,7 +43,7 @@
         - to: frame1
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 2
           steps:
             - tool: Prying
@@ -53,7 +53,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Electronic
+            - material: OH14_Circuit
               amount: 1
               doAfter: 1
     - node: frame3
@@ -64,7 +64,7 @@
         - to: frame2
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+              prototype: OH14_Circuit1
               amount: 1
           steps:
             - tool: Prying
@@ -74,7 +74,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 2
               doAfter: 1
         - to: OH14_AutoLatheTools
@@ -92,7 +92,7 @@
         - to: frame3
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 2
           steps:
             - tool: Screwing
@@ -147,7 +147,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 3
               doAfter: 1
     - node: frame2
@@ -158,7 +158,7 @@
         - to: frame1
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 3
           steps:
             - tool: Prying
@@ -168,7 +168,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Electronic
+            - material: OH14_Circuit
               amount: 2
               doAfter: 1
     - node: frame3
@@ -179,7 +179,7 @@
         - to: frame2
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+              prototype: OH14_Circuit1
               amount: 2
           steps:
             - tool: Prying
@@ -189,7 +189,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 2
               doAfter: 1
     - node: OH14_Protolathe
@@ -198,7 +198,7 @@
         - to: frame3
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 2
           steps:
             - tool: Screwing
@@ -240,7 +240,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 2
               doAfter: 1
     - node: frame2
@@ -251,7 +251,7 @@
         - to: frame1
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 2
           steps:
             - tool: Prying
@@ -261,7 +261,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 5
               doAfter: 1
     - node: frame3
@@ -272,7 +272,7 @@
         - to: frame2
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+              prototype: OH14_SheetIron1
               amount: 5
           steps:
             - tool: Prying
@@ -282,7 +282,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 2
               doAfter: 1
     - node: OH14_ArcFurnance
@@ -291,7 +291,7 @@
         - to: frame3
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+              prototype: OH14_Component1
               amount: 2
           steps:
             - tool: Screwing

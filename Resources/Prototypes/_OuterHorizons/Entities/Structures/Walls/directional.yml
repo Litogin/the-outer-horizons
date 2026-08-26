@@ -60,7 +60,7 @@
         node: frame
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 0
             max: 1
       - !type:DoActsBehavior
@@ -174,7 +174,7 @@
           collection: MetalSlam
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 0
             max: 1
       - !type:DoActsBehavior

@@ -219,14 +219,14 @@
         state: material_3
   - type: RandomSpawner
     rarePrototypes:
-    - OH14_SheetComponents5
-    - OH14_SheetElectronics5
+    - OH14_Component4
+    - OH14_Circuit4
     rareChance: 0.1
     prototypes:
-    - OH14_SheetMaterials8
-    - OH14_SheetMaterials8
-    - OH14_SheetMaterials8
-    - OH14_SheetIngot1
+    - OH14_SheetIron8
+    - OH14_SheetIron8
+    - OH14_SheetIron8
+    - OH14_SheetIron8
     - OH14_SheetGirder8
     chance: 0.75
     offset: 0.1

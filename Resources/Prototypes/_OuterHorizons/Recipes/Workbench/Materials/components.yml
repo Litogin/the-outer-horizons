@@ -7,7 +7,7 @@
   craftTime: 2
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetIron
+    stack: OH14_SheetIron
     count: 4
   result: OH14_Component1
   resultCount: 1
@@ -19,7 +19,7 @@
   craftTime: 4
   requirements:
   - !type:StackResource
-    stack: OH14_StackSheetPlatinum
+    stack: OH14_SheetPlatinum
     count: 4
   result: OH14_ComponentAdv1
   resultCount: 1
