@@ -6,7 +6,7 @@
     sprite: _OuterHorizons/Objects/Tools/Hydroponics/hoe.rsi
     state: icon
   materials:
-    OH14_Materials: 250
+    OH14_SheetIron: 250
 
 - type: latheRecipe
   id: OH14_ToolClippers
@@ -16,7 +16,7 @@
     sprite: _OuterHorizons/Objects/Tools/Hydroponics/clippers.rsi
     state: icon
   materials:
-    OH14_Materials: 250
+    OH14_SheetIron: 250
 
 - type: latheRecipe
   id: OH14_ToolHatchet
@@ -26,7 +26,7 @@
     sprite: _OuterHorizons/Objects/Tools/Hydroponics/hatchet.rsi
     state: icon
   materials:
-    OH14_Materials: 700
+    OH14_SheetIron: 700
 
 - type: latheRecipe
   id: OH14_ToolSpade
@@ -36,4 +36,4 @@
     sprite: _OuterHorizons/Objects/Tools/Hydroponics/spade.rsi
     state: icon
   materials:
-    OH14_Materials: 300
+    OH14_SheetIron: 300

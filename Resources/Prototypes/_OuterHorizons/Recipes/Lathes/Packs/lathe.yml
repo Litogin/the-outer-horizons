@@ -13,7 +13,7 @@
   id: OH14_MaterialsStatic
   recipes:
   - OH14_Panels
-  - OH14_Components
+  - OH14_Component
   - OH14_Girders
   - OH14_Pipes
   - OH14_CableCoilMV
@@ -24,8 +24,8 @@
   id: OH14_ElectronicStatic
   recipes:
   - OH14_CircuitboardUpgradeAutolathe
-  - OH14_Components
-  - OH14_Electronics
+  - OH14_Component
+  - OH14_Circuit
   - OH14_DoorElectronics
   - OH14_CircuitboardShuttle
   - OH14_CircuitboardRadar

@@ -1,10 +1,10 @@
 - type: latheRecipe
   parent: BaseToolRecipe
-  id: OH14_Components
+  id: OH14_Component
   completetime: 1
   result: OH14_SheetComponents1
   icon:
     sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
     state: mechanic_3
   materials:
-    OH14_Materials: 200
+    OH14_SheetIron: 200

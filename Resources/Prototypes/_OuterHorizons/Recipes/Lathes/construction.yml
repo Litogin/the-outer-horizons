@@ -6,7 +6,7 @@
     sprite: _OuterHorizons/Objects/Materials/panels.rsi
     state: panel_3
   materials:
-    OH14_Materials: 200
+    OH14_SheetIron: 200
 
 - type: latheRecipe
   id: OH14_PanelsShuttle
@@ -16,5 +16,5 @@
     sprite: _OuterHorizons/Objects/Materials/panels.rsi
     state: shuttle_3
   materials:
-    OH14_Materials: 200
-    OH14_Components: 100
+    OH14_SheetIron: 200
+    OH14_Component: 100

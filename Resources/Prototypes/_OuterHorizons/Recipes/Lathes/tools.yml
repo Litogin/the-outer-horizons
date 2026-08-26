@@ -7,7 +7,7 @@
     sprite: _OuterHorizons/Objects/Tools/crowbar.rsi
     state: icon
   materials:
-    OH14_Materials: 600
+    OH14_SheetIron: 600
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -18,7 +18,7 @@
     sprite: _OuterHorizons/Objects/Tools/flashlight.rsi
     state: flashlight
   materials:
-    OH14_Materials: 200
+    OH14_SheetIron: 200
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -29,7 +29,7 @@
     sprite: _OuterHorizons/Objects/Tools/wirecutters.rsi
     state: cutters
   materials:
-    OH14_Materials: 200
+    OH14_SheetIron: 200
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -40,7 +40,7 @@
     sprite: _OuterHorizons/Objects/Tools/screwdriver.rsi
     state: screwdriver
   materials:
-    OH14_Materials: 200
+    OH14_SheetIron: 200
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -51,7 +51,7 @@
     sprite: _OuterHorizons/Objects/Tools/wrench.rsi
     state: icon
   materials:
-    OH14_Materials: 700
+    OH14_SheetIron: 700
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -62,7 +62,7 @@
     sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
     state: pickaxe
   materials:
-    OH14_Materials: 800
+    OH14_SheetIron: 800
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -73,9 +73,9 @@
     sprite: _OuterHorizons/Objects/Tools/multitool.rsi
     state: icon
   materials:
-    OH14_Materials: 300
-    OH14_Components: 100
-    OH14_Electronics: 200
+    OH14_SheetIron: 300
+    OH14_Component: 100
+    OH14_Circuit: 200
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -86,8 +86,8 @@
     sprite: _OuterHorizons/Objects/Tools/welder.rsi
     state: icon
   materials:
-    OH14_Materials: 500
-    OH14_Components: 400
+    OH14_SheetIron: 500
+    OH14_Component: 400
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -98,8 +98,8 @@
     sprite: _OuterHorizons/Objects/Tools/drill.rsi
     state: drill_screw
   materials:
-    OH14_Materials: 500
-    OH14_Components: 300
+    OH14_SheetIron: 500
+    OH14_Component: 300
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -110,9 +110,9 @@
     sprite: _OuterHorizons/Objects/Tools/geiger.rsi
     state: geiger_base
   materials:
-    OH14_Materials: 200
-    OH14_Components: 100
-    OH14_Electronics: 100
+    OH14_SheetIron: 200
+    OH14_Component: 100
+    OH14_Circuit: 100
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -120,8 +120,8 @@
   completetime: 3
   result: OH14_SolderingIron
   materials:
-    OH14_Materials: 300
-    OH14_Components: 100
+    OH14_SheetIron: 300
+    OH14_Component: 100
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -132,9 +132,9 @@
     sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi
     state: icon
   materials:
-    OH14_Materials: 200
-    OH14_Components: 100
-    OH14_Electronics: 100
+    OH14_SheetIron: 200
+    OH14_Component: 100
+    OH14_Circuit: 100
 
 - type: latheRecipe
   id: OH14_Knife
@@ -144,7 +144,7 @@
     sprite: _OuterHorizons/Objects/Weapons/Melee/knife.rsi
     state: icon
   materials:
-    OH14_Materials: 300
+    OH14_SheetIron: 300
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -155,5 +155,5 @@
     sprite: _OuterHorizons/Objects/Tools/mining_drill.rsi
     state: icon
   materials:
-    OH14_Materials: 600
-    OH14_Components: 400
+    OH14_SheetIron: 600
+    OH14_Component: 400
