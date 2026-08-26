@@ -68,6 +68,9 @@
   name: медная камера
   description: Горячая штучка, если приложить достаточно сил.
   components:
+  - type: Tag
+    tags:
+    - OH14_CopperChamber
   - type: Sprite
     state: c_chamber
 
@@ -77,6 +80,9 @@
   name: теплоустойчивая камера
   description: Горячая штучка, если приложить достаточно сил.
   components:
+  - type: Tag
+    tags:
+    - OH14_HeatChamber
   - type: Sprite
     state: p_chamber
 
@@ -89,6 +95,9 @@
   name: ЭЛТ трубка
   description: Основная причина громозкости консолей, если не считать их все остальные компоненты.
   components:
+  - type: Tag
+    tags:
+    - OH14_CrtScreen
   - type: Sprite
     state: crt_screen
 
@@ -112,7 +121,6 @@
         enum.ConstructionVisuals.Layer:
           start: { state: analog_board }
           frame1: { state: analog_board_2 }
-  # TODO: Сборка в 3 этапа с изменением спрайта
 
 - type: entity
   parent: OH14_BasicComponents
@@ -120,6 +128,9 @@
   name: аналоговая плата
   description: Простейшее вычислительное устройство. К сожалению не потянет крафтмайн.
   components:
+  - type: Tag
+    tags:
+    - OH14_AnalogBoardComplete
   - type: Construction
     graph: OH14_AnalogBoard
     node: OH14_AnalogBoardComplete
@@ -132,9 +143,12 @@
 - type: entity
   parent: OH14_BasicComponents
   id: OH14_CopperStator
-  name: медный статор
+  name: медная катушка
   description: Статор от слова.. Статичный?
   components:
+  - type: Tag
+    tags:
+    - OH14_CopperStator
   - type: Sprite
     state: c_stator
 
@@ -144,6 +158,9 @@
   name: медный ротор
   description: Он вертится вместо белки в колесе.
   components:
+  - type: Tag
+    tags:
+    - OH14_CopperRotor
   - type: Sprite
     state: c_rotor
 
@@ -152,9 +169,12 @@
 - type: entity
   parent: OH14_BasicComponents
   id: OH14_GoldStator
-  name: золотой статор
+  name: золотая катушка
   description: Статор от слова.. Статичный?
   components:
+  - type: Tag
+    tags:
+    - OH14_GoldStator
   - type: Sprite
     state: g_stator
 
@@ -164,6 +184,9 @@
   name: золотой ротор
   description: Он вертится вместо белки в колесе.
   components:
+  - type: Tag
+    tags:
+    - OH14_GoldRotor
   - type: Sprite
     state: g_rotor
 
@@ -175,6 +198,9 @@
   name: мотор
   description: Бжжжжж. Что говоришь? ДжжжЖж. Не слышу.
   components:
+  - type: Tag
+    tags:
+    - OH14_Motor
   - type: Sprite
     state: motor
 
@@ -187,9 +213,33 @@
   name: каркас БП
   description: Нужен чтобы подать адекватое напряжение в устройство. И тебе бы припаять сюда пару деталек.
   components:
+  - type: Construction
+    graph: OH14_PowerUnit
+    node: start
   - type: Sprite
     state: power_unit
-  # TODO: Сборка в 3 этапа с изменением спрайта
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          start: { state: power_unit }
+          frame1: { state: power_unit_2 }
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_PowerUnitComplete
+  name: блок питания
+  description: Нужен чтобы подать адекватое напряжение в устройство.
+  components:
+  - type: Tag
+    tags:
+    - OH14_PowerUnitComplete
+  - type: Construction
+    graph: OH14_PowerUnit
+    node: OH14_PowerUnitComplete
+  - type: Sprite
+    state: power_unit_3
 
 # Контроля
 
@@ -199,6 +249,30 @@
   name: каркас БУ
   description: Нужен чтобы подать команду сложнее чем вкл/выкл. И тебе бы припаять сюда пару деталек.
   components:
+  - type: Construction
+    graph: OH14_ControlUnit
+    node: start
   - type: Sprite
     state: control_unit
-  # TODO: Сборка в 3 этапа с изменением спрайта
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          start: { state: control_unit }
+          frame1: { state: control_unit_2 }
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_ControlUnitComplete
+  name: каркас БУ
+  description: Нужен чтобы подать команду сложнее чем вкл/выкл.
+  components:
+  - type: Tag
+    tags:
+    - OH14_ControlUnitComplete
+  - type: Construction
+    graph: OH14_ControlUnit
+    node: OH14_ControlUnitComplete
+  - type: Sprite
+    state: control_unit_3

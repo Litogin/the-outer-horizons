@@ -97,7 +97,7 @@
   id: OH14_ShuttleWallDirectional
   parent: OH14_BasicDirectionalStructure
   name: направленная стена шаттла
-  description: Крайне восприимчима к повреждениям, однако, термостойкая.
+  description: Крайне восприимчима к повреждениям, однако, красивая.
   placement:
     mode: SnapgridCenter
     snap:
@@ -114,6 +114,28 @@
   - type: Icon
     sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
     state: shuttle
+
+- type: entity
+  id: OH14_HeatWallDirectional
+  parent: OH14_BasicDirectionalStructure
+  name: теплоустойчивая направленная стена
+  description: Крайне восприимчима к повреждениям, однако, термостойкая.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Construction
+    graph: OH14_WallDirectional
+    node: OH14_HeatWallDirectional
+  - type: Occluder
+    boundingBox: "-0.5,-0.5,0.5,-0.3"
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: heat
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/basic_directional.rsi
+    state: heat
 
 - type: entity
   id: OH14_WallDirectionalFrame

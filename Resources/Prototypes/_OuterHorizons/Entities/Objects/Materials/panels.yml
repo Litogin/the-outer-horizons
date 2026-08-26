@@ -116,7 +116,7 @@
 - type: entity
   parent: OH14_BasicStackPanels
   id: OH14_PanelHeat
-  name: термостойкая панель
+  name: теплоустойчивая панель
   suffix: 16
   components:
   - type: Material

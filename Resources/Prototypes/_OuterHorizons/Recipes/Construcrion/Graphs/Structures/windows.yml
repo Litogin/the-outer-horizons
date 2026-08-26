@@ -30,8 +30,8 @@
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: OH14_SheetIron
-              amount: 3
+            - material: OH14_SheetGlass
+              amount: 4
               doAfter: 1
     - node: OH14_Window
       entity: OH14_BaseWindow
@@ -41,8 +41,8 @@
             - !type:SnapToGrid
               southRotation: true
             - !type:SpawnPrototype
-              prototype: OH14_SheetIron1
-              amount: 3
+              prototype: OH14_SheetGlass
+              amount: 4
           steps:
             - tool: Screwing
               doAfter: 2
@@ -59,8 +59,8 @@
       edges:
         - to: OH14_WindowDirectional
           steps:
-            - material: OH14_SheetIron
-              amount: 4
+            - material: OH14_SheetGlass
+              amount: 2
               doAfter: 1
     - node: OH14_WindowDirectional
       entity: OH14_WindowDirectional
@@ -68,8 +68,8 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetIron1
-              amount: 4
+              prototype: OH14_SheetGlass
+              amount: 2
           steps:
             - tool: Screwing
               doAfter: 2

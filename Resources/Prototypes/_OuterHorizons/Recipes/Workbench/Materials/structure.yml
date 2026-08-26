@@ -97,17 +97,17 @@
 
 # Укрепленная шаттла
 
-- type: CERecipe
-  tag: CERecipeWorkbench
-  id: OH14_PanelShuttleHeavy
-  category: Structures
-  craftTime: 4
-  requirements:
-  - !type:StackResource
-    stack: OH14_PanelHeat
-    count: 2
-  - !type:StackResource
-    stack: OH14_SheetPlatinum
-    count: 2
-  result: OH14_PanelShuttleHeavy
-  resultCount: 1
+# - type: CERecipe
+#   tag: CERecipeWorkbench
+#   id: OH14_PanelShuttleHeavy
+#   category: Structures
+#   craftTime: 4
+#   requirements:
+#   - !type:StackResource
+#     stack: OH14_PanelHeat
+#     count: 2
+#   - !type:StackResource
+#     stack: OH14_SheetPlatinum
+#     count: 2
+#   result: OH14_PanelShuttleHeavy
+#   resultCount: 1

@@ -97,6 +97,20 @@
     graph: OH14_ArcFurnanceFrame
     node: frame1
 
+- type: entity
+  id: OH14_FrameOreProcessor
+  parent: OH14_FrameBasic
+  name: каркас очистителя руды
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/ore_processor.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_FrameOreProcessor
+    node: frame1
+
 # =============================================================================
 # Подстанции
 # =============================================================================

@@ -52,8 +52,8 @@
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: OH14_SheetIron
-              amount: 2
+            - tag: OH14_AnalogBoardComplete
+              name: construction-graph-tag-analogboard
               doAfter: 1
     - node: OH14_Microwave
       entity: OH14_Microwave
@@ -61,8 +61,8 @@
         - to: frame2
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetIron1
-              amount: 2
+              prototype: OH14_AnalogBoardComplete
+              amount: 1
           steps:
             - tool: Prying
               doAfter: 2

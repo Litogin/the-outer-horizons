@@ -12,6 +12,7 @@
             - material: OH14_Girders
               amount: 2
               doAfter: 1
+
     - node: frame1
       entity: OH14_FrameThrusterR
       edges:
@@ -35,6 +36,7 @@
             - material: OH14_SheetIron
               amount: 2
               doAfter: 1
+
     - node: frame2
       actions:
       - !type:AppearanceChange
@@ -53,8 +55,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Component
-              amount: 5
+            - tag: OH14_HeatChamber
+              name: construction-graph-tag-heatchamber
               doAfter: 1
     - node: frame3
       actions:
@@ -64,8 +66,8 @@
         - to: frame2
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_Component1
-              amount: 5
+              prototype: OH14_HeatChamber
+              amount: 1
           steps:
             - tool: Screwing
               doAfter: 2
@@ -74,8 +76,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_SheetIron
-              amount: 5
+            - tag: OH14_Motor
+              name: construction-graph-tag-motor
               doAfter: 1
     - node: OH14_ThrusterR
       entity: OH14_ThrusterPressureRed
@@ -83,8 +85,8 @@
         - to: frame3
           completed:
             - !type:SpawnPrototype
-              prototype: OH14_SheetIron1
-              amount: 5
+              prototype: OH14_Motor
+              amount: 1
           conditions:
             - !type:EntityAnchored
               anchored: false

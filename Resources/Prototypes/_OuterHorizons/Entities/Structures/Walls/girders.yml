@@ -71,6 +71,7 @@
 - type: entity
   id: OH14_ReinforcedGirder
   parent: OH14_Girder
+  suffix : Устарело
   name: укрепленный каркас
   description: A large structural assembly made out of metal and plasteel; It requires a layer of plasteel before it can be considered a reinforced wall.
   components:
@@ -79,4 +80,4 @@
       state: reinforced_wall_girder
     - type: Construction
       graph: OH14_Girder
-      node: OH14_ReinforcedGirder
+      node: OH14_Girder

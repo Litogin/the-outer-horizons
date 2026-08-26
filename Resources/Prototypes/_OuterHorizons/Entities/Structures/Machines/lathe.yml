@@ -290,9 +290,9 @@
   name: очиститель руды
   description: Не самая замысловатая конструкция для очистки руды от мусора.
   components:
-  # - type: Construction
-  #   graph: OH14_ArcFurnanceFrame
-  #   node: OH14_ArcFurnance
+  - type: Construction
+    graph: OH14_FrameOreProcessor
+    node: OH14_OreProcessor
   - type: Sprite
     sprite: _OuterHorizons/Structures/Machines/ore_processor.rsi
     snapCardinals: true
