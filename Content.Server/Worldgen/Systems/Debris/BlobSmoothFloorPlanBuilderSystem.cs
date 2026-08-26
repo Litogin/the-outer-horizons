@@ -1,4 +1,5 @@
-using System.Linq;
+using System;
+using System.Collections.Generic;
 using Content.Server.Worldgen.Components.Debris;
 using Content.Shared.Maps;
 using Robust.Shared.Map;
@@ -7,9 +8,6 @@ using Robust.Shared.Random;
 
 namespace Content.Server.Worldgen.Systems.Debris;
 
-/// <summary>
-///     This handles building the floor plans for smooth asteroid debris with adjustable crust layers.
-/// </summary>
 public sealed class BlobSmoothFloorPlanBuilderSystem : BaseWorldSystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -17,21 +15,31 @@ public sealed class BlobSmoothFloorPlanBuilderSystem : BaseWorldSystem
     [Dependency] private readonly TileSystem _tiles = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
 
+    // Кэшируем направления для ортогонального обхода, чтобы избежать аллокаций массивов в циклах
+    private static readonly Vector2i[] OrthogonalNeighbors =
+    {
+        new(0, 1),  // North
+        new(0, -1), // South
+        new(1, 0),  // East
+        new(-1, 0)  // West
+    };
+
     public override void Initialize()
     {
         SubscribeLocalEvent<BlobSmoothFloorPlanBuilderComponent, ComponentStartup>(OnBlobFloorPlanBuilderStartup);
     }
 
-    private void OnBlobFloorPlanBuilderStartup(EntityUid uid, BlobSmoothFloorPlanBuilderComponent component,
-        ComponentStartup args)
+    private void OnBlobFloorPlanBuilderStartup(EntityUid uid, BlobSmoothFloorPlanBuilderComponent component, ComponentStartup args)
     {
         PlaceFloorplanTiles(uid, component, Comp<MapGridComponent>(uid));
     }
 
     private void PlaceFloorplanTiles(EntityUid gridUid, BlobSmoothFloorPlanBuilderComponent comp, MapGridComponent grid)
     {
-        var spawnPoints = new List<Vector2i>(comp.FloorPlacements * 2);
-        var activeTiles = new HashSet<Vector2i>(comp.FloorPlacements * 2);
+        var capacity = comp.FloorPlacements * 2;
+        var spawnPoints = new List<Vector2i>(capacity);
+        var spawnPointsSet = new HashSet<Vector2i>(capacity); // Быстрая O(1) проверка вместо .Contains() на List
+        var activeTiles = new HashSet<Vector2i>(capacity);
 
         double radsq = Math.Pow(comp.Radius, 2);
         double stretchX = _random.NextFloat(0.65f, 1.0f);
@@ -39,35 +47,30 @@ public sealed class BlobSmoothFloorPlanBuilderSystem : BaseWorldSystem
 
         void AddSpawnNeighbors(Vector2i point)
         {
-            var neighbors = new[]
+            foreach (var offset in OrthogonalNeighbors)
             {
-                point.Offset(Direction.North),
-                point.Offset(Direction.South),
-                point.Offset(Direction.East),
-                point.Offset(Direction.West)
-            };
-
-            foreach (var n in neighbors)
-            {
+                var n = point + offset;
                 double evalX = n.X * stretchX;
                 double evalY = n.Y * stretchY;
 
-                if (!activeTiles.Contains(n) && (evalX * evalX + evalY * evalY) <= radsq && !spawnPoints.Contains(n))
+                if (!activeTiles.Contains(n) && (evalX * evalX + evalY * evalY) <= radsq && !spawnPointsSet.Contains(n))
                 {
                     spawnPoints.Add(n);
+                    spawnPointsSet.Add(n);
                 }
             }
         }
 
-        // Органическое расширение основной массы
         activeTiles.Add(Vector2i.Zero);
         AddSpawnNeighbors(Vector2i.Zero);
 
+        // 1. Органическое расширение
         for (var i = 1; i < comp.FloorPlacements; i++)
         {
             if (spawnPoints.Count == 0) break;
 
             Vector2i bestPoint = Vector2i.Zero;
+            int bestIndex = -1;
             double minScore = double.MaxValue;
 
             int sampleCount = Math.Min(5, spawnPoints.Count);
@@ -87,19 +90,29 @@ public sealed class BlobSmoothFloorPlanBuilderSystem : BaseWorldSystem
                 {
                     minScore = score;
                     bestPoint = candidate;
+                    bestIndex = randomIndex;
                 }
             }
 
-            spawnPoints.Remove(bestPoint);
-            activeTiles.Add(bestPoint);
-            AddSpawnNeighbors(bestPoint);
+            if (bestIndex != -1)
+            {
+                // Быстрое удаление из List за O(1) вместо O(N) сдвига элементов
+                int lastIndex = spawnPoints.Count - 1;
+                spawnPoints[bestIndex] = spawnPoints[lastIndex];
+                spawnPoints.RemoveAt(lastIndex);
+
+                spawnPointsSet.Remove(bestPoint);
+                activeTiles.Add(bestPoint);
+                AddSpawnNeighbors(bestPoint);
+            }
         }
 
-        // Клеточный автомат (сглаживание форм)
+        // 2. Клеточный автомат (Сглаживание)
+        var customBoundaries = new HashSet<Vector2i>(capacity);
         for (int step = 0; step < 2; step++)
         {
             var nextStepTiles = new HashSet<Vector2i>(activeTiles);
-            var customBoundaries = new HashSet<Vector2i>();
+            customBoundaries.Clear();
 
             foreach (var tile in activeTiles)
             {
@@ -142,41 +155,31 @@ public sealed class BlobSmoothFloorPlanBuilderSystem : BaseWorldSystem
             activeTiles = nextStepTiles;
         }
 
-        // Разделение тайлов на внутренние и внешние
-        var crustTiles = new HashSet<Vector2i>();
-        // Копируем оставшееся ядро, которое будем уменьшать с каждым слоем коры
+        // 3. Выделение слоев коры (Crust)
+        var crustTiles = new HashSet<Vector2i>(activeTiles.Count / 2);
         var coreTilesRemaining = new HashSet<Vector2i>(activeTiles);
+        var currentLayerCrust = new List<Vector2i>(); // Используем List для итерации слоя
 
-        // Количество слоёв корочки (настройте под ваши нужды, например, вынесите в компонент)
-        var crustLayersCount = comp.CrustLayers;
-
-        for (int layer = 0; layer < crustLayersCount; layer++)
+        for (int layer = 0; layer < comp.CrustLayers; layer++)
         {
-            var currentLayerCrust = new HashSet<Vector2i>();
+            currentLayerCrust.Clear();
 
             foreach (var tile in coreTilesRemaining)
             {
-                // Проверяем 4 ортогональных соседа
-                var n = tile.Offset(Direction.North);
-                var s = tile.Offset(Direction.South);
-                var e = tile.Offset(Direction.East);
-                var w = tile.Offset(Direction.West);
-
-                // Если тайл граничит с пустотой ИЛИ с внешним пространством, не занятым ядром
-                if (!coreTilesRemaining.Contains(n) ||
-                    !coreTilesRemaining.Contains(s) ||
-                    !coreTilesRemaining.Contains(e) ||
-                    !coreTilesRemaining.Contains(w))
+                foreach (var offset in OrthogonalNeighbors)
                 {
-                    currentLayerCrust.Add(tile);
+                    if (!coreTilesRemaining.Contains(tile + offset))
+                    {
+                        currentLayerCrust.Add(tile);
+                        break;
+                    }
                 }
             }
 
-            // Защита: не даем корочке поглотить абсолютно весь астероид, если он слишком мал
+            // Исправленная защита: прерываемся ДО того, как испортим или "потеряем" слой тайлов
             if (coreTilesRemaining.Count - currentLayerCrust.Count < 3)
                 break;
 
-            // Убираем найденную кору из ядра и переносим в общий пул корочки
             foreach (var crustTile in currentLayerCrust)
             {
                 coreTilesRemaining.Remove(crustTile);
@@ -184,22 +187,21 @@ public sealed class BlobSmoothFloorPlanBuilderSystem : BaseWorldSystem
             }
         }
 
-        // Финальная отрисовка
-        var taken = new Dictionary<Vector2i, Tile>(activeTiles.Count);
-
-        // Переменные для хранения определений тайлов
+        // 4. Финальная отрисовка структуры
+        var tilesToSet = new List<(Vector2i, Tile)>(activeTiles.Count);
         var mainTileset = comp.FloorTileset;
         var crustTileset = comp.CrustTileset;
 
         foreach (var point in activeTiles)
         {
-            // Определяем, какой тип тайла ставить: корочку или внутреннее ядро
             var chosenTileset = crustTiles.Contains(point) ? crustTileset : mainTileset;
-
             var tileDef = _tileDefinition[_random.Pick(chosenTileset)];
-            taken.Add(point, new Tile(tileDef.TileId, 0, _tiles.PickVariant((ContentTileDefinition)tileDef)));
+            var tile = new Tile(tileDef.TileId, 0, _tiles.PickVariant((ContentTileDefinition)tileDef));
+
+            tilesToSet.Add((point, tile));
         }
 
-        _map.SetTiles(gridUid, grid, taken.Select(x => (x.Key, x.Value)).ToList());
+        // Избавились от LINQ Select().ToList(), передаем чистый готовый список
+        _map.SetTiles(gridUid, grid, tilesToSet);
     }
 }
