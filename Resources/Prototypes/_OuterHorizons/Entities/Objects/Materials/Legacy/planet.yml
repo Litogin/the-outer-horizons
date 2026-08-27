@@ -168,7 +168,7 @@
 - type: entity
   parent: OH14_BaseItem
   id: OH14_Ice
-  abstract: true
+  # abstract: true
   name: лед
   # suffix: Full
   components:

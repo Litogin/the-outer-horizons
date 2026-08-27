@@ -28,7 +28,7 @@
         volume: -5
     damage:
       groups:
-        Brute: 10
+        Brute: 5
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:

@@ -36,7 +36,7 @@
       groups:
         Brute: 5
       types:
-        Structural: 25
+        Structural: 10
 
 - type: entity
   parent: OH14_MiningDrill
@@ -56,7 +56,7 @@
       groups:
         Brute: 10
       types:
-        Structural: 30
+        Structural: 25
 
 - type: entity
   parent: OH14_MiningDrill
@@ -76,7 +76,7 @@
       groups:
         Brute: 10
       types:
-        Structural: 40
+        Structural: 30
 
 # Их наконечники
 

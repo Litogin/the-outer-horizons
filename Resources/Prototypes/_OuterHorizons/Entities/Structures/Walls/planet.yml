@@ -1,11 +1,15 @@
 - type: entity
   parent: BaseWall
-  id: OH14_BaseWallStone
+  id: OH14_BaseWallRock
   categories: [ ForkFiltered ]
   name: каменная порода
   suffix: Астероид
-  description: Хранит руды внутри и грейтайдов снаружи.
+  description: Хранит камни внутри и грейтайдов снаружи.
   components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: OH14_StoneDamage
   - type: SpaceGarbage
   - type: Appearance
   - type: DamageVisuals
@@ -33,7 +37,7 @@
         acts: ["Destruction"]
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 40
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -44,18 +48,61 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_Rock1:
-            min: 1
-            max: 3
+          OH14_Cobblestone1:
+            min: 0
+            max: 1
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: Rock
+    damageModifierSet: OH14_Rock
   - type: IconSmooth
     key: walls
     base: wall
 
 - type: entity
-  parent: OH14_BaseWallStone
+  parent: OH14_BaseWallRock
+  id: OH14_BaseWallStone
+  name: плотная каменная порода
+  suffix: Астероид
+  description: Защищает руды внутри от грейтайдов снаружи.
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: OH14_HeavyRock
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 120
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_Cobblestone1:
+            min: 0
+            max: 1
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_stone.rsi
+    state: full
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Planet/asteroid_stone.rsi
+    state: full
+
+############### Руды
+
+- type: entity
+  parent: OH14_BaseWallRock
   id: OH14_BaseWallStoneOre
   categories: [ ForkFiltered ]
   name: рудная порода
@@ -76,7 +123,38 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_CobblestoneIron1:
+            min: 0
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+
+- type: entity
+  parent: OH14_BaseWallStoneOre
+  id: OH14_WallStoneOreIron
+  categories: [ ForkFiltered ]
+  suffix: Железо
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -84,12 +162,197 @@
         spawn:
           OH14_CobblestoneIron1:
             min: 1
-            max: 3
+            max: 2
       - !type:PlaySoundBehavior
         sound:
           path: /Audio/Effects/break_stone.ogg
           params:
             volume: -6
+  - type: Sprite
+    layers:
+    - state: full
+    - state: ore
+      color: "#94493C"
+
+- type: entity
+  parent: OH14_BaseWallStoneOre
+  id: OH14_WallStoneOreCopper
+  categories: [ ForkFiltered ]
+  suffix: Медь
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_CobblestoneCopper1:
+            min: 1
+            max: 2
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: Sprite
+    layers:
+    - state: full
+    - state: ore
+      color: "#AF613A"
+
+- type: entity
+  parent: OH14_BaseWallStoneOre
+  id: OH14_WallStoneOreGold
+  categories: [ ForkFiltered ]
+  suffix: Золото
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_CobblestoneGold1:
+            min: 1
+            max: 2
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: Sprite
+    layers:
+    - state: full
+    - state: ore
+      color: "#E0AF41"
+
+- type: entity
+  parent: OH14_BaseWallStoneOre
+  id: OH14_WallStoneOrePlatinum
+  categories: [ ForkFiltered ]
+  suffix: Платина
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_CobblestonePlatinum1:
+            min: 1
+            max: 2
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: Sprite
+    layers:
+    - state: full
+    - state: ore
+      color: "#8C897D"
+
+- type: entity
+  parent: OH14_BaseWallStoneOre
+  id: OH14_WallStoneOreSilicon
+  categories: [ ForkFiltered ]
+  suffix: Кремний
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_CobblestoneSilicon1:
+            min: 1
+            max: 2
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: Sprite
+    layers:
+    - state: full
+    - state: ore
+      color: "#6A6870"
+
+- type: entity
+  parent: OH14_BaseWallStoneOre
+  id: OH14_WallStoneOreCobalt
+  categories: [ ForkFiltered ]
+  suffix: Кобальт
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_CobblestoneCobalt1:
+            min: 1
+            max: 2
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: Sprite
+    layers:
+    - state: full
+    - state: ore
+      color: "#3C6280"
 
 # Лед
 
@@ -122,7 +385,7 @@
         acts: ["Destruction"]
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 40
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -134,8 +397,8 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           OH14_Ice:
-            min: 1
-            max: 3
+            min: 0
+            max: 2
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Rock
