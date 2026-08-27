@@ -8,14 +8,14 @@
     - type: SimpleDebrisSelector
       debrisTable:
         # Простые ебучие камушки
-        - id: OH14_IceDebrisSmall
-          prob: 0.1
-        - id: OH14_IceDebrisMedium
-          prob: 0.1
-        - id: OH14_IceDebrisLarge
-          prob: 0.1
-        - id: OH14_IceDebrisLarger
-          prob: 0.1
+        # - id: OH14_IceDebrisSmall
+        #   prob: 0.1
+        # - id: OH14_IceDebrisMedium
+        #   prob: 0.1
+        # - id: OH14_IceDebrisLarge
+        #   prob: 0.1
+        # - id: OH14_IceDebrisLarger
+        #   prob: 0.1
         - id: OH14_AsteroidDebrisSmall
           prob: 0.3
         - id: OH14_AsteroidDebrisMedium
