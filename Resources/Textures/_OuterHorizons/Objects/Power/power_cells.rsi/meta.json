@@ -11,6 +11,9 @@
             "name": "small"
         },
         {
+            "name": "small_frame"
+        },
+        {
             "name": "small_o1"
         },
         {
@@ -18,6 +21,9 @@
         },
         {
             "name": "medium"
+        },
+        {
+            "name": "medium_frame"
         },
         {
             "name": "medium_o1"

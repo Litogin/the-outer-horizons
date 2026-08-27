@@ -265,7 +265,7 @@
 - type: entity
   parent: OH14_BasicComponents
   id: OH14_ControlUnitComplete
-  name: каркас БУ
+  name: блок управления
   description: Нужен чтобы подать команду сложнее чем вкл/выкл.
   components:
   - type: Tag
