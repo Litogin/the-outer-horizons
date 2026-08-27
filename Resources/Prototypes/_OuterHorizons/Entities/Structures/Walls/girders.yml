@@ -1,13 +1,12 @@
 - type: entity
   id: OH14_Girder
-  parent: OH14_BaseStructureDynamic
-  name: каркас
+  parent: OH14_BaseStructure
+  name: каркас стены
   description: Большая заготовка для самого интересного что есть в этой игре - ебучие текстурки стенок.
   components:
   - type: SpaceGarbage
   - type: Transform
     anchored: true
-    # noRot: true
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -26,9 +25,13 @@
     graph: OH14_Girder
     node: OH14_Girder
   - type: Sprite
-    # noRot: true
-    sprite: _OuterHorizons/Structures/Walls/girders.rsi
-    state: wall_girder
+    sprite: _OuterHorizons/Structures/Walls/girder_wall.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/girder_wall.rsi
+    state: full
+  - type: IconSmooth
+    key: walls
+    base: wall
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
@@ -46,7 +49,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetIron1:
+          OH14_SheetGirder1:
             min: 1
             max: 1
       - !type:DoActsBehavior
@@ -54,7 +57,6 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-  - type: Climbable
 
 - type: entity
   id: OH14_WindowGirder
@@ -65,19 +67,11 @@
     graph: OH14_Window
     node: OH14_WindowGirder
   - type: Sprite
-    sprite: _OuterHorizons/Structures/Walls/girders.rsi
-    state: window_girder
-
-- type: entity
-  id: OH14_ReinforcedGirder
-  parent: OH14_Girder
-  suffix : Устарело
-  name: укрепленный каркас
-  description: A large structural assembly made out of metal and plasteel; It requires a layer of plasteel before it can be considered a reinforced wall.
-  components:
-    - type: Sprite
-      sprite: _OuterHorizons/Structures/Walls/girders.rsi
-      state: reinforced_wall_girder
-    - type: Construction
-      graph: OH14_Girder
-      node: OH14_Girder
+    sprite: _OuterHorizons/Structures/Walls/grider_window.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/grider_window.rsi
+    state: full
+  - type: IconSmooth
+    key: walls
+    base: wall
+  - type: Climbable
