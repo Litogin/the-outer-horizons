@@ -326,3 +326,17 @@
   - type: Construction
     graph: OH14_ReagentGrinder
     node: frame1
+
+- type: entity
+  id: OH14_FrameElectrolyzer
+  parent: OH14_FrameBasic
+  name: каркас электролизера
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/electrolyzer.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_ElectrolyzerFrame
+    node: frame1
