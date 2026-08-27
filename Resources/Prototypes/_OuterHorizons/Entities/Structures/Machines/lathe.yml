@@ -125,6 +125,7 @@
     - OH14_PowerStatic
     - OH14_ContructionStatic
     - OH14_UnitsStatic
+    - OH14_MiscStatic
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -243,6 +244,8 @@
     staticPacks:
     - OH14_ComponentsStatic
     - OH14_ElectrStatic
+    - OH14_ElectronicStatic
+    - OH14_DeviesStatic
 
 # Печь
 

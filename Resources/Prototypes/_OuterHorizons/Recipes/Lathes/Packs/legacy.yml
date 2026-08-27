@@ -23,18 +23,12 @@
 - type: latheRecipePack
   id: OH14_ElectronicStatic
   recipes:
-  - OH14_CircuitboardUpgradeAutolathe
-  - OH14_Component
-  - OH14_Circuit
   - OH14_DoorElectronics
   - OH14_CircuitboardShuttle
   - OH14_CircuitboardRadar
   - OH14_CircuitboardAtmos
   - OH14_CircuitboardPower
   - OH14_CircuitboardComms
-  - OH14_NuclearRod # ВРЕМЕННО
-  - OH14_PowerCellMedium
-  - OH14_PowerCellBig
 
 - type: latheRecipePack
   id: OH14_DeviesStatic

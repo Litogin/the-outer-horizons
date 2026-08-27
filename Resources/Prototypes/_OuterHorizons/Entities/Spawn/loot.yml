@@ -8,6 +8,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/orange.rsi
@@ -26,6 +27,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Clothing/Head/Hardsuits/orange.rsi
@@ -46,6 +48,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
@@ -69,6 +72,7 @@
   suffix: 50%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
@@ -92,6 +96,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/crowbar.rsi
@@ -114,6 +119,7 @@
   suffix: 50%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/drill.rsi
@@ -136,6 +142,7 @@
   suffix: 75-10%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
@@ -159,6 +166,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
@@ -187,6 +195,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi
@@ -213,6 +222,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
@@ -239,6 +249,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
@@ -261,6 +272,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi

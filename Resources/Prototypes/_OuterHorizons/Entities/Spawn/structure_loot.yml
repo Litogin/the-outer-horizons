@@ -8,6 +8,7 @@
   suffix: 75%, Любая
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Storage/canister.rsi
@@ -36,6 +37,7 @@
   suffix: 75%, Воздух
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Storage/canister.rsi
@@ -58,6 +60,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Machines/autolathe.rsi
@@ -80,6 +83,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Machines/protolathe.rsi
@@ -104,6 +108,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Hydro/main.rsi
@@ -128,6 +133,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Storage/crate_sec.rsi
@@ -157,6 +163,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Storage/tanks.rsi
@@ -176,6 +183,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Storage/tanks.rsi
@@ -197,6 +205,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Power/substation.rsi
@@ -220,6 +229,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Power/smes.rsi
@@ -243,6 +253,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Power/fuel_generator.rsi
@@ -267,6 +278,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Structures/Shuttles/gyroscope.rsi
