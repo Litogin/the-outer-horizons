@@ -8,6 +8,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/orange.rsi
@@ -26,6 +27,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Clothing/Head/Hardsuits/orange.rsi
@@ -46,6 +48,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
@@ -69,6 +72,7 @@
   suffix: 50%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
@@ -92,6 +96,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/crowbar.rsi
@@ -114,6 +119,7 @@
   suffix: 50%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/drill.rsi
@@ -136,6 +142,7 @@
   suffix: 75-10%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
@@ -159,6 +166,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
@@ -187,6 +195,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi
@@ -213,20 +222,21 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
         state: material_3
   - type: RandomSpawner
     rarePrototypes:
-    - OH14_SheetComponents5
-    - OH14_SheetElectronics5
+    - OH14_Component4
+    - OH14_Circuit4
     rareChance: 0.1
     prototypes:
-    - OH14_SheetMaterials8
-    - OH14_SheetMaterials8
-    - OH14_SheetMaterials8
-    - OH14_SheetIngot1
+    - OH14_SheetIron8
+    - OH14_SheetIron8
+    - OH14_SheetIron8
+    - OH14_SheetIron8
     - OH14_SheetGirder8
     chance: 0.75
     offset: 0.1
@@ -239,6 +249,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
@@ -261,6 +272,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi

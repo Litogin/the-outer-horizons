@@ -22,9 +22,9 @@
     color: "#81b981"
     castShadows: false
     netsync: false
-  - type: PhysicalComposition
-    materialComposition:
-      OH14_NuclearRod: 100
+  # - type: PhysicalComposition
+  #   materialComposition:
+  #     OH14_NuclearRod: 100
   - type: Material
   - type: Sprite
     sprite: _OuterHorizons/Objects/Power/nuclear_tube.rsi

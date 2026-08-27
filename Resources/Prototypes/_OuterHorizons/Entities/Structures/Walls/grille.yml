@@ -4,6 +4,7 @@
   name: решетка
   description: Эй друг, видишь провод подомной? Не бойся! Иди ко мне, обними меня! :3
   components:
+    - type: SpaceGarbage
     - type: Transform
       # noRot: true
     - type: MeleeSound

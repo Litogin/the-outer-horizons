@@ -1,0 +1,26 @@
+- type: constructionGraph
+  id: OH14_AnalogBoard
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          steps:
+            - material: OH14_Capacitor
+              amount: 4
+              doAfter: 1
+
+    - node: frame1
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_AnalogBoard
+      edges:
+        - to: OH14_AnalogBoardComplete
+          steps:
+            - material: OH14_VacuumTube
+              amount: 4
+              doAfter: 1
+
+    - node: OH14_AnalogBoardComplete
+      entity: OH14_AnalogBoardComplete
+

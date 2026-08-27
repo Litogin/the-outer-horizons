@@ -5,6 +5,7 @@
   name: перила
   description: Обыкновенные перила желтого цвета, дабы спасти от падения различных идиотов.
   components:
+  - type: SpaceGarbage
   - type: Sprite
     drawdepth: SmallObjects
     sprite: _OuterHorizons/Structures/Walls/railing.rsi
@@ -59,7 +60,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 0
             max: 1
       - !type:DoActsBehavior
@@ -114,7 +115,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 0
             max: 1
       - !type:DoActsBehavior
@@ -160,7 +161,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 0
             max: 1
       - !type:DoActsBehavior
@@ -224,7 +225,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 0
             max: 1
       - !type:DoActsBehavior

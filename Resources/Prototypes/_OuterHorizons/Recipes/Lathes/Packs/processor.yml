@@ -1,0 +1,19 @@
+- type: latheRecipePack
+  id: OH14_ProcessorStatic
+  recipes:
+  - OH14_Cobblestone
+  - OH14_CobblestoneIron
+  - OH14_CobblestoneCopper
+  - OH14_CobblestoneGold
+  - OH14_CobblestoneSilicon
+  - OH14_CobblestoneCobalt
+
+- type: latheRecipePack
+  id: OH14_FurnanceStatic
+  recipes:
+  - OH14_OreIron
+  - OH14_OreCopper
+  - OH14_OreGold
+  # - OH14_OreSilicon
+  - OH14_OreCobalt
+  - OH14_Glass

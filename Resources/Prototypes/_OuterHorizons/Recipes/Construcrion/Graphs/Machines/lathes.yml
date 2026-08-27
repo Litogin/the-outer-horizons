@@ -17,7 +17,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -32,8 +32,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
-              amount: 2
+            - material: OH14_Component
+              amount: 4
               doAfter: 1
     - node: frame2
       actions:
@@ -42,8 +42,8 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_Component1
               amount: 2
           steps:
             - tool: Prying
@@ -53,8 +53,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Electronic
-              amount: 1
+            - tag: OH14_AnalogBoardComplete
+              name: construction-graph-tag-analogboard
               doAfter: 1
     - node: frame3
       actions:
@@ -63,8 +63,8 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+            - !type:GivePrototype
+              prototype: OH14_AnalogBoardComplete
               amount: 1
           steps:
             - tool: Prying
@@ -74,8 +74,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
-              amount: 2
+            - tag: OH14_CrtScreen
+              name: construction-graph-tag-crtscreen
               doAfter: 1
         - to: OH14_AutoLatheTools
           conditions:
@@ -91,9 +91,9 @@
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
-              amount: 2
+            - !type:GivePrototype
+              prototype: OH14_CrtScreen
+              amount: 1
           steps:
             - tool: Screwing
               doAfter: 1
@@ -104,7 +104,7 @@
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_CircuitboardUpgradeAutolathe
               amount: 1
           steps:
@@ -132,7 +132,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -147,8 +147,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
-              amount: 3
+            - material: OH14_ComponentAdv
+              amount: 2
               doAfter: 1
     - node: frame2
       actions:
@@ -157,9 +157,9 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
-              amount: 3
+            - !type:GivePrototype
+              prototype: OH14_ComponentAdv
+              amount: 2
           steps:
             - tool: Prying
               doAfter: 1
@@ -168,8 +168,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Electronic
-              amount: 2
+            - tag: OH14_ControlUnitComplete
+              name: construction-graph-tag-controlunit
               doAfter: 1
     - node: frame3
       actions:
@@ -178,9 +178,9 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
-              amount: 2
+            - !type:GivePrototype
+              prototype: OH14_ControlUnitComplete
+              amount: 1
           steps:
             - tool: Prying
               doAfter: 1
@@ -189,17 +189,17 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
-              amount: 2
+            - material: OH14_Component
+              amount: 4
               doAfter: 1
     - node: OH14_Protolathe
       entity: OH14_ProtoLathe
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
-              amount: 2
+            - !type:GivePrototype
+              prototype: OH14_Component
+              amount: 4
           steps:
             - tool: Screwing
               doAfter: 1
@@ -218,16 +218,16 @@
               southRotation: true
           steps:
             - material: OH14_Girders
-              amount: 3
+              amount: 2
               doAfter: 1
     - node: frame1
       entity: OH14_FrameArcFurnance
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
-              amount: 3
+              amount: 2
             - !type:DeleteEntity {}
           conditions:
             - !type:EntityAnchored
@@ -240,8 +240,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
-              amount: 2
+            - material: OH14_Component
+              amount: 4
               doAfter: 1
     - node: frame2
       actions:
@@ -250,9 +250,9 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
-              amount: 2
+            - !type:GivePrototype
+              prototype: OH14_Component1
+              amount: 4
           steps:
             - tool: Prying
               doAfter: 1
@@ -261,8 +261,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
-              amount: 5
+            - material: OH14_CoilIron
+              amount: 8
               doAfter: 1
     - node: frame3
       actions:
@@ -271,9 +271,9 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
-              amount: 5
+            - !type:GivePrototype
+              prototype: OH14_CoilIron
+              amount: 8
           steps:
             - tool: Prying
               doAfter: 1
@@ -282,16 +282,111 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
-              amount: 2
+            - tag: OH14_AnalogBoardComplete
+              name: construction-graph-tag-analogboard
               doAfter: 1
     - node: OH14_ArcFurnance
       entity: OH14_ArcFurnance
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_AnalogBoardComplete
+              amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 1
+
+
+
+- type: constructionGraph
+  id: OH14_FrameOreProcessor
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 1
+    - node: frame1
+      entity: OH14_FrameOreProcessor
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_SheetGirder1
+              amount: 2
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tag: OH14_Motor
+              name: construction-graph-tag-motor
+              doAfter: 1
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameOreProcessor
+      edges:
+        - to: frame1
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_Motor
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: frame3
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tag: OH14_AnalogBoardComplete
+              name: construction-graph-tag-analogboard
+              doAfter: 1
+    - node: frame3
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameOreProcessor
+      edges:
+        - to: frame2
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_AnalogBoardComplete
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: OH14_OreProcessor
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Component
+              amount: 2
+              doAfter: 1
+    - node: OH14_OreProcessor
+      entity: OH14_OreProcessor
+      edges:
+        - to: frame3
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_Component
               amount: 2
           steps:
             - tool: Screwing

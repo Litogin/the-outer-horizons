@@ -1,0 +1,228 @@
+- type: entity
+  id: OH14_CableCoilBasic
+  abstract: true
+  parent: OH14_BaseItem
+  description: Небольшой моток кабеля. Интересно было бы сделать из этого какоето украшение, пхахахв блять. Пометьте как TODO.
+  components:
+  - type: Appearance
+  # - type: InworldSprite
+  # - type: GenericVisualizer
+  #   visuals:
+  #     enum.InworldSpriteState.State:
+  #       base:
+  #         True: {sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi}
+  #         False: {sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi}
+  - type: Tag
+    tags:
+    - CableCoil
+    - OH14_Tools
+  - type: Stack
+    count: 16
+    stackType: Cable
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
+    size: Small
+  - type: CablePlacer
+  - type: Clickable
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: 2.25
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 15
+  - type: GuideHelp
+    guides:
+    - VoltageNetworks
+    - Power
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+# Кабеля
+
+- type: entity
+  id: OH14_CableCoilHV
+  parent: OH14_CableCoilBasic
+  name: моток ВВ кабелей
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: OH14_CableCoilHV
+    baseLayer: base
+    layerStates:
+    - coilhv-10
+    - coilhv-20
+    - coilhv-30
+  - type: Sprite
+    layers:
+    - state: coilhv-30
+      map: ["base"]
+  - type: Item
+    heldPrefix: coilhv
+  - type: CablePlacer
+    cablePrototypeID: OH14_CableHV
+    blockingWireType: HighVoltage
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: hvcable
+  - type: SolutionContainerManager
+    solutions:
+      hvcable:
+        reagents:
+        - ReagentId: Iron
+          Quantity: 3
+        - ReagentId: Copper
+          Quantity: 2
+        - ReagentId: Carbon #steel-reinforced
+          Quantity: 1
+
+- type: entity
+  parent: OH14_CableCoilHV
+  id: OH14_CableCoilHV8
+  suffix: 8
+  components:
+  - type: Sprite
+    layers:
+    - state: coilhv-20
+      map: ["base"]
+  - type: Stack
+    count: 8
+
+- type: entity
+  parent: OH14_CableCoilHV
+  id: OH14_CableCoilHV1
+  suffix: 1
+  components:
+  - type: Sprite
+    layers:
+    - state: coilhv-30
+      map: ["base"]
+  - type: Stack
+    count: 1
+
+- type: entity
+  id: OH14_CableCoilMV
+  parent: OH14_CableCoilBasic
+  name: моток МВ кабелей
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: OH14_CableCoilMV
+    baseLayer: base
+    layerStates:
+    - coilmv-10
+    - coilmv-20
+    - coilmv-30
+  - type: Sprite
+    layers:
+    - state: coilmv-30
+      map: ["base"]
+  - type: Item
+    heldPrefix: coilmv
+  - type: CablePlacer
+    cablePrototypeID: OH14_CableMV
+    blockingWireType: MediumVoltage
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: mvcable
+  - type: SolutionContainerManager
+    solutions:
+      mvcable:
+        reagents:
+        - ReagentId: Iron
+          Quantity: 3
+        - ReagentId: Copper
+          Quantity: 2
+
+- type: entity
+  parent: OH14_CableCoilMV
+  id: OH14_CableCoilMV8
+  suffix: 8
+  components:
+  - type: Sprite
+    layers:
+    - state: coilmv-20
+      map: ["base"]
+  - type: Stack
+    count: 8
+
+- type: entity
+  parent: OH14_CableCoilMV
+  id: OH14_CableCoilMV1
+  suffix: 1
+  components:
+  - type: Sprite
+    layers:
+    - state: coilmv-10
+      map: ["base"]
+  - type: Stack
+    count: 1
+
+- type: entity
+  id: OH14_CableCoilLV
+  parent: OH14_CableCoilBasic
+  name: моток ЛВ кабелей
+  suffix: Full
+  components:
+  - type: Sprite
+    layers:
+    - state: coillv-30
+      map: ["base"]
+  - type: Item
+    heldPrefix: coillv
+  - type: Stack
+    stackType: OH14_CableCoilLV
+    baseLayer: base
+    layerStates:
+    - coillv-10
+    - coillv-20
+    - coillv-30
+  - type: CablePlacer
+    cablePrototypeID: OH14_CableLV
+    blockingWireType: Apc
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: lvcable
+  - type: SolutionContainerManager
+    solutions:
+      lvcable:
+        reagents:
+        - ReagentId: Iron
+          Quantity: 3
+        - ReagentId: Copper
+          Quantity: 2
+
+- type: entity
+  parent: OH14_CableCoilLV
+  id: OH14_CableCoilLV8
+  suffix: 8
+  components:
+  - type: Sprite
+    layers:
+    - state: coillv-20
+      map: ["base"]
+  - type: Stack
+    count: 8
+
+- type: entity
+  parent: OH14_CableCoilLV
+  id: OH14_CableCoilLV1
+  suffix: 1
+  components:
+  - type: Sprite
+    layers:
+    - state: coillv-10
+      map: ["base"]
+  - type: Stack
+    count: 1

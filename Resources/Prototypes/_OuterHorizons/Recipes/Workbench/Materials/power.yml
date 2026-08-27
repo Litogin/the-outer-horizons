@@ -1,0 +1,188 @@
+# Проволка
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CoilIron
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_CoilIron8
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CoilCopper
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetCopper
+    count: 2
+  result: OH14_CoilCopper8
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CoilGold
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetGold
+    count: 2
+  result: OH14_CoilGold8
+  resultCount: 1
+
+# Кабеля
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CableCoilLV
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 2
+  result: OH14_CableCoilLV8
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CableCoilMV
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 4
+  result: OH14_CableCoilMV8
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CableCoilHV
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 8
+  result: OH14_CableCoilHV8
+  resultCount: 1
+
+# Камеры сгорания
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CopperChamber
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetCopper
+    count: 4
+  result: OH14_CopperChamber
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_HeatChamber
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_SheetCobalt
+    count: 2
+  result: OH14_HeatChamber
+  resultCount: 1
+
+# Статоры
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CopperStator
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 6
+  - !type:StackResource
+    stack: OH14_CoilIron
+    count: 1
+  result: OH14_CopperStator
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_GoldStator
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_CoilGold
+    count: 6
+  - !type:StackResource
+    stack: OH14_CoilIron
+    count: 1
+  result: OH14_GoldStator
+  resultCount: 1
+
+# Роторы
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CopperRotor
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 4
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  result: OH14_CopperRotor
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_GoldRotor
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_CoilGold
+    count: 4
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  result: OH14_GoldRotor
+  resultCount: 1
+
+# Мотор
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Motor
+  category: Power
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_Component
+    count: 2
+  - !type:ProtoIdResource
+    protoId: OH14_CopperRotor
+    count: 1
+  - !type:ProtoIdResource
+    protoId: OH14_CopperStator
+    count: 1
+  result: OH14_Motor
+  resultCount: 1

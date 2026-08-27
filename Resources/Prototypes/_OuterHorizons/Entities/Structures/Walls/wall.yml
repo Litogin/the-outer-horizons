@@ -5,6 +5,7 @@
   name: обыкновенная стена
   description: Держит экипаж внутри и грейтайдов снаружи.
   components:
+  - type: SpaceGarbage
   - type: Appearance
   - type: DamageVisuals
     thresholds: [5, 10, 20]
@@ -63,6 +64,7 @@
   name: диагональная стена
   description: Держит экипаж внутри и грейтайдов снаружи. Теперь с аеродинамическими приколами!
   components:
+  - type: SpaceGarbage
   - type: Sprite
     drawdepth: Walls
     sprite: _OuterHorizons/Structures/Walls/basic_diagonal.rsi

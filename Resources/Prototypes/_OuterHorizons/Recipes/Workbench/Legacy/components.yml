@@ -1,0 +1,59 @@
+# - type: CERecipe
+#   id: OH14_Component
+#   tag: CERecipeWorkbench
+#   category: Materials
+#   craftTime: 2
+#   requirements:
+#   - !type:StackResource
+#     stack: OH14_SheetIron
+#     count: 2
+#   result: OH14_Component1
+#   resultCount: 1
+
+# - type: CERecipe
+#   id: OH14_Girders
+#   tag: CERecipeWorkbench
+#   category: Materials
+#   craftTime: 2
+#   requirements:
+#   - !type:StackResource
+#     stack: OH14_SheetIron
+#     count: 1
+#   result: OH14_SheetGirder1
+#   resultCount: 2
+
+# - type: CERecipe
+#   id: OH14_Ingots
+#   tag: CERecipeWorkbench
+#   category: Materials
+#   craftTime: 2
+#   requirements:
+#   - !type:StackResource
+#     stack: OH14_Ingot
+#     count: 1
+#   result: OH14_SheetIron1
+#   resultCount: 3
+
+# - type: CERecipe
+#   id: OH14_SheetPipes
+#   tag: CERecipeWorkbench
+#   category: Materials
+#   craftTime: 2
+#   requirements:
+#   - !type:StackResource
+#     stack: OH14_SheetIron
+#     count: 1
+#   result: OH14_SheetPipes1
+#   resultCount: 2
+
+# - type: CERecipe
+#   id: OH14_SheetPanelsBasic
+#   tag: CERecipeWorkbench
+#   category: Materials
+#   craftTime: 2
+#   requirements:
+#   - !type:StackResource
+#     stack: OH14_SheetIron
+#     count: 2
+#   result: OH14_Panel1
+#   resultCount: 1

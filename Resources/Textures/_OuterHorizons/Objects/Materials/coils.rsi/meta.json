@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "license": "All right reserved",
+  "copyright": "Created by Aserovich (Aska) for Outer Horizons project. Do not use, copy, or modify without permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "iron"
+    },
+    {
+      "name": "iron_2"
+    },
+    {
+      "name": "iron_3"
+    },
+    {
+      "name": "iron-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "iron-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "copper"
+    },
+    {
+      "name": "copper_2"
+    },
+    {
+      "name": "copper_3"
+    },
+    {
+      "name": "copper-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "copper-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "gold"
+    },
+    {
+      "name": "gold_2"
+    },
+    {
+      "name": "gold_3"
+    },
+    {
+      "name": "gold-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "gold-inhand-right",
+      "directions": 4
+    }
+  ]
+}

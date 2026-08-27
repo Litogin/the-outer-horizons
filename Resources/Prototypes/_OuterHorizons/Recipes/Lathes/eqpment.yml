@@ -1,7 +1,0 @@
-- type: latheRecipe
-  parent: BaseToolRecipe
-  id: OH14_ClothingHeadWeldingMask
-  completetime: 3
-  result: OH14_ClothingHeadWeldingMask
-  materials:
-    OH14_Materials: 500

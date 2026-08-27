@@ -1,0 +1,13 @@
+- type: material
+  id: OH14_Girders
+  stackEntity: OH14_SheetGirder1
+  name: каркасы
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_Piping
+  stackEntity: OH14_SheetPipes1
+  name: трубки
+  icon: { sprite: _OuterHorizons/Objects/Materials/piping.rsi, state: girder_3 }
+  price: 2

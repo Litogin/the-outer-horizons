@@ -1,0 +1,72 @@
+- type: constructionGraph
+  id: OH14_PowerUnit
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          steps:
+            - material: OH14_Circuit
+              amount: 4
+              doAfter: 1
+
+    - node: frame1
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_PowerUnit
+      edges:
+        - to: frame2
+          steps:
+            - material: OH14_Capacitor
+              amount: 2
+              doAfter: 1
+
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_PowerUnit
+      edges:
+        - to: OH14_PowerUnitComplete
+          steps:
+            - tag: OH14_CopperStator
+              doAfter: 1
+
+    - node: OH14_PowerUnitComplete
+      entity: OH14_PowerUnitComplete
+
+
+
+- type: constructionGraph
+  id: OH14_ControlUnit
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          steps:
+            - tag: OH14_AnalogBoardComplete
+              doAfter: 1
+
+    - node: frame1
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_ControlUnit
+      edges:
+        - to: frame2
+          steps:
+            - material: OH14_VacuumTube
+              amount: 4
+              doAfter: 1
+
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_ControlUnit
+      edges:
+        - to: OH14_ControlUnitComplete
+          steps:
+            - tag: OH14_CrtScreen
+              doAfter: 1
+
+    - node: OH14_ControlUnitComplete
+      entity: OH14_ControlUnitComplete

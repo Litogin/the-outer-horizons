@@ -1,0 +1,161 @@
+# База
+
+- type: entity
+  parent: OH14_BasicMaterialStack
+  id: OH14_BasicStackCoil
+  abstract: true
+  name: проволка
+  description: (не) тонкая проволка, специально для ваших кустарных изысканий.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/coils.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/coils.rsi
+  - type: Appearance
+
+# Железная
+
+- type: entity
+  parent: OH14_BasicStackCoil
+  id: OH14_CoilIron
+  name: железная проволка
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CoilIron: 100
+  - type: Item
+    heldPrefix: iron
+  - type: Stack
+    count: 16
+    stackType: OH14_CoilIron
+    baseLayer: base
+    layerStates:
+    - iron
+    - iron_2
+    - iron_3
+  - type: Sprite
+    layers:
+    - state: iron_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CoilIron
+  id: OH14_CoilIron8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: iron_2
+  - type: Stack
+    stackType: OH14_CoilIron
+    count: 8
+
+- type: entity
+  parent: OH14_CoilIron
+  id: OH14_CoilIron1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: iron
+  - type: Stack
+    stackType: OH14_CoilIron
+    count: 1
+
+# Медная
+
+- type: entity
+  parent: OH14_BasicStackCoil
+  id: OH14_CoilCopper
+  name: медная проволка
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CoilCopper: 100
+  - type: Item
+    heldPrefix: copper
+  - type: Stack
+    count: 16
+    stackType: OH14_CoilCopper
+    baseLayer: base
+    layerStates:
+    - copper
+    - copper_2
+    - copper_3
+  - type: Sprite
+    layers:
+    - state: copper_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CoilCopper
+  id: OH14_CoilCopper8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: copper_2
+  - type: Stack
+    stackType: OH14_CoilCopper
+    count: 8
+
+- type: entity
+  parent: OH14_CoilCopper
+  id: OH14_CoilCopper1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: copper
+  - type: Stack
+    stackType: OH14_CoilCopper
+    count: 1
+
+# Золотая
+
+- type: entity
+  parent: OH14_BasicStackCoil
+  id: OH14_CoilGold
+  name: золотая проволка
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CoilGold: 100
+  - type: Item
+    heldPrefix: gold
+  - type: Stack
+    count: 16
+    stackType: OH14_CoilGold
+    baseLayer: base
+    layerStates:
+    - gold
+    - gold_2
+    - gold_3
+  - type: Sprite
+    layers:
+    - state: gold_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CoilGold
+  id: OH14_CoilGold8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: gold_2
+  - type: Stack
+    stackType: OH14_CoilGold
+    count: 8
+
+- type: entity
+  parent: OH14_CoilGold
+  id: OH14_CoilGold1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: gold
+  - type: Stack
+    stackType: OH14_CoilGold
+    count: 1

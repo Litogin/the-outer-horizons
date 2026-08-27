@@ -1,0 +1,25 @@
+# Мех компоненты
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Component
+  category: Components
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 4
+  result: OH14_Component1
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ComponentAdv
+  category: Components
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetPlatinum
+    count: 4
+  result: OH14_ComponentAdv1
+  resultCount: 1

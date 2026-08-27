@@ -1,0 +1,119 @@
+# Каркасы
+
+- type: entity
+  parent: [ OH14_ItemSFXMetallic, OH14_BasicMaterialStack ]
+  id: OH14_SheetGirder
+  name: каркасы
+  suffix: 16
+  components:
+  # - type: InworldSprite
+  # - type: GenericVisualizer
+  #   visuals:
+  #     enum.InworldSpriteState.State:
+  #       base:
+  #         True: {sprite: _OuterHorizons/Objects/Materials/girder.rsi}
+  #         False: {sprite: _OuterHorizons/Objects/Materials/girder.rsi}
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Girders: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Girders
+    baseLayer: base
+    layerStates:
+    - girder
+    - girder_2
+    - girder_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/girder.rsi
+    layers:
+    - state: girder_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: girder
+  - type: Appearance
+  - type: FloorTile
+    outputs:
+    - OH14_Lattice
+
+- type: entity
+  parent: OH14_SheetGirder
+  id: OH14_SheetGirder8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: girder_2
+  - type: Stack
+    stackType: OH14_Girders
+    count: 8
+
+- type: entity
+  parent: OH14_SheetGirder
+  id: OH14_SheetGirder1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: girder
+  - type: Stack
+    stackType: OH14_Girders
+    count: 1
+
+# Трубки
+
+- type: entity
+  parent:  [ OH14_ItemSFXLowMetallic, OH14_BasicMaterialStack ]
+  id: OH14_SheetPipes
+  name: трубки
+  suffix: 16
+  components:
+  # - type: InworldSprite
+  # - type: GenericVisualizer
+  #   visuals:
+  #     enum.InworldSpriteState.State:
+  #       base:
+  #         True: {sprite: _OuterHorizons/Objects/Materials/piping.rsi}
+  #         False: {sprite: _OuterHorizons/Objects/Materials/piping.rsi}
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Piping: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Piping
+    baseLayer: base
+    layerStates:
+    - girder
+    - girder_2
+    - girder_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/piping.rsi
+    layers:
+    - state: girder_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: girder
+    size: Small
+  - type: Appearance
+
+- type: entity
+  parent: OH14_SheetPipes
+  id: OH14_SheetPipes8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: girder_2
+  - type: Stack
+    stackType: OH14_Piping
+    count: 8
+
+- type: entity
+  parent: OH14_SheetPipes
+  id: OH14_SheetPipes1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: girder
+  - type: Stack
+    stackType: OH14_Piping
+    count: 1

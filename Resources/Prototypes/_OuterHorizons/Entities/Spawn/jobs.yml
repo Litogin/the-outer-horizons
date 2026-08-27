@@ -1,3 +1,5 @@
+# Лейтджойн
+
 - type: entity
   id: OH14_SpawnPointUcoLateJoin
   suffix: UCO, Latejoin
@@ -9,8 +11,10 @@
     job_id: OH14_UcoRole
     spawn_type: LateJoin
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
-      - state: green
+      - state: basic
+      - state: uco
 
 - type: entity
   id: OH14_SpawnPointRreLateJoin
@@ -23,8 +27,44 @@
     job_id: OH14_RreRole
     spawn_type: LateJoin
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
-      - state: green
+      - state: basic
+      - state: rre
+
+- type: entity
+  id: OH14_SpawnPointUcoCommanderLateJoin
+  suffix: UCO Commander, Latejoin
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: точка спавна
+  components:
+  - type: SpawnPoint
+    job_id: OH14_UcoCommanderRole
+    spawn_type: LateJoin
+  - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
+    layers:
+      - state: basic
+      - state: uco_commander
+
+- type: entity
+  id: OH14_SpawnPointRreCommanderLateJoin
+  suffix: RRE Commander, Latejoin
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: точка спавна
+  components:
+  - type: SpawnPoint
+    job_id: OH14_RreCommanderRole
+    spawn_type: LateJoin
+  - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
+    layers:
+      - state: basic
+      - state: rre_commander
+
+# Болваны
 
 - type: entity
   id: OH14_SpawnPointUco
@@ -37,8 +77,10 @@
     job_id: OH14_UcoRole
     spawn_type: Job
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
-      - state: green
+      - state: basic
+      - state: uco
 
 - type: entity
   id: OH14_SpawnPointRre
@@ -51,5 +93,39 @@
     job_id: OH14_RreRole
     spawn_type: Job
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
-      - state: green
+      - state: basic
+      - state: rre
+
+- type: entity
+  id: OH14_SpawnPointUcoCommander
+  suffix: UCO Commander
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: точка спавна
+  components:
+  - type: SpawnPoint
+    job_id: OH14_UcoCommanderRole
+    spawn_type: Job
+  - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
+    layers:
+      - state: basic
+      - state: uco_commander
+
+- type: entity
+  id: OH14_SpawnPointRreCommander
+  suffix: RRE Commander
+  parent: SpawnPointJobBase
+  categories: [ ForkFiltered ]
+  name: точка спавна
+  components:
+  - type: SpawnPoint
+    job_id: OH14_RreCommanderRole
+    spawn_type: Job
+  - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
+    layers:
+      - state: basic
+      - state: rre_commander

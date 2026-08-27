@@ -1,0 +1,37 @@
+- type: latheRecipe
+  id: OH14_SheetGirder
+  result: OH14_SheetGirder1
+  materials:
+    OH14_SheetIron: 100
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_SheetPipes
+  result: OH14_SheetPipes1
+  materials:
+    OH14_SheetIron: 200
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_Panel
+  result: OH14_Panel1
+  materials:
+    OH14_SheetIron: 100
+    OH14_SheetPlatinum: 100
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_PanelHeavy
+  result: OH14_PanelHeavy1
+  materials:
+    OH14_SheetIron: 400
+    OH14_SheetPlatinum: 200
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_PanelHeat
+  result: OH14_PanelHeat1
+  materials:
+    OH14_SheetIron: 400
+    OH14_SheetCobalt: 200
+  completetime: 4

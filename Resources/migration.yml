@@ -804,3 +804,38 @@ TowelColorYellow: null
 TowelColorMaroon: null
 TowelColorSilver: null
 TowelColorMime: null
+
+# OH14-Changes 25/08/2026
+
+OH14_SheetMaterials: OH14_SheetIron
+OH14_SheetMaterials8: OH14_SheetIron8
+OH14_SheetMaterials1: OH14_SheetIron1
+
+OH14_SheetComponents: OH14_Component1
+OH14_SheetComponents5: OH14_Component1
+OH14_SheetComponents1: OH14_Component1
+
+OH14_SheetElectronics: OH14_VacuumTube
+OH14_SheetElectronics5: OH14_Capacitor1
+OH14_SheetElectronics1: OH14_Circuit1
+
+OH14_SheetIngot: OH14_SheetIron
+OH14_SheetIngot8: OH14_SheetIron8
+OH14_SheetIngot1: OH14_SheetIron1
+
+OH14_SheetPanelsBasic: OH14_Panel
+OH14_SheetPanelsBasic8: OH14_Panel8
+OH14_SheetPanelsBasic1: OH14_Panel1
+
+OH14_SheetPanelsShuttle: OH14_Panel
+OH14_SheetPanelsShuttle1: OH14_Panel1
+
+OH14_SheetOre: OH14_CobblestoneIron
+OH14_SheetOre1: OH14_CobblestoneIron1
+
+OH14_Rock: OH14_Cobblestone
+OH14_Rock1: OH14_Cobblestone1
+
+OH14_GeneratorMiniNuclearReactor: null
+
+OH14_ReinforcedGirder: null

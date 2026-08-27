@@ -26,7 +26,7 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_FlashlightFilled
-        - id: OH14_SheetComponents1
+        - id: OH14_Component1
           prob: 0.2
         - id: OH14_CrowbarBasic
 

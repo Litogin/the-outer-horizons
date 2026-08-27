@@ -1,0 +1,111 @@
+- type: entity
+  abstract: true
+  parent: [ OH14_ItemSFXSmall, OH14_BaseItem ]
+  id: OH14_BasicShard
+  description: Очень веселая штука, если наступить без обуви.
+  components:
+  - type: Sharp
+  - type: Execution
+    doAfterDuration: 4.0
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/glass_shard.rsi
+    state: inworld
+  - type: Appearance
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: icon}
+          False: {state: inworld}
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Slash: 4
+  - type: Item
+    sprite: _OuterHorizons/Objects/inhands.rsi
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: m-inhand-left
+        color: "#526C86"
+      right:
+      - state: m-inhand-right
+        color: "#526C86"
+  - type: CollisionWake
+    enabled: false
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+        - LowImpassable
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        density: 30
+        mask:
+        - ItemMask
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 2
+  - type: Tag
+    tags:
+    - Trash
+  - type: SpaceGarbage
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Glass
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: PreventableStepTrigger
+  - type: Slippery
+    slipSound:
+      path: /Audio/Effects/glass_step.ogg
+    slipData:
+      launchForwardsMultiplier: 0
+  - type: TriggerOnStepTrigger
+  - type: DamageOnTrigger
+    targetUser: true
+    damage:
+      types:
+        Piercing: 5
+  - type: DeleteOnTrigger
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: OH14_BasicShard
+  id: OH14_ShardGlass
+  name: осколки стекла
+  components:
+  - type: DamageOnTrigger
+    damage:
+      types:
+        Piercing: 4
+  - type: Tag
+    tags:
+      - GlassShard
+      - Trash
+  - type: Extractable
+    grindableSolutionName: shardglass
+  - type: SolutionContainerManager
+    solutions:
+      shardglass:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 5

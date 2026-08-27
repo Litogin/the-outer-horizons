@@ -1,8 +1,80 @@
+# Legacy
 - type: Tag
   id: OH14_Sheet
 
+# Materials
+
+- type: Tag
+  id: OH14_MaterialStack
+
 - type: Tag
   id: OH14_Ore
+
+- type: Tag
+  id: OH14_Cobblestone
+
+# Craft
+
+- type: Tag
+  id: CERecipeWorkbench
+
+- type: Tag
+  id: OH14_AutoLatheUpgradeTools
+
+- type: Tag
+  id: OH14_Handle
+
+- type: Tag
+  id: OH14_MediumHandle
+
+- type: Tag
+  id: OH14_Buttstock
+
+- type: Tag
+  id: OH14_AnalogBoardComplete
+
+- type: Tag
+  id: OH14_CrtScreen
+
+- type: Tag
+  id: OH14_Motor
+
+- type: Tag
+  id: OH14_PowerUnitComplete
+
+- type: Tag
+  id: OH14_ControlUnitComplete
+
+- type: Tag
+  id: OH14_CopperStator
+
+- type: Tag
+  id: OH14_CopperRotor
+
+- type: Tag
+  id: OH14_GoldStator
+
+- type: Tag
+  id: OH14_GoldRotor
+
+- type: Tag
+  id: OH14_CopperChamber
+
+- type: Tag
+  id: OH14_HeatChamber
+
+# For mining drill
+
+- type: Tag
+  id: OH14_MiningDrillTip
+
+- type: Tag
+  id: OH14_MiningDrillTipT2
+
+- type: Tag
+  id: OH14_MiningDrillTipT3
+
+# Items
 
 - type: Tag
   id: OH14_Tools
@@ -12,9 +84,3 @@
 
 - type: Tag
   id: OH14_PowerCellBig
-
-- type: Tag
-  id: CERecipeWorkbench
-
-- type: Tag
-  id: OH14_AutoLatheUpgradeTools

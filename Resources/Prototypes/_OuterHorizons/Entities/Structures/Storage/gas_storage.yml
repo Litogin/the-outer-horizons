@@ -5,6 +5,14 @@
   name: цистерна
   description: Большое хранилище для хранения газов. Переносу не подлежит.
   components:
+    - type: GenericVisualizer
+      visuals:
+        enum.GasCanisterVisuals.PressureState:
+          pressureLight:
+            0: { state: fill0, shader: unshaded }
+            1: { state: fill1, shader: unshaded }
+            2: { state: fill2, shader: unshaded }
+            3: { state: fill3, shader: unshaded }
     - type: Rotatable
     - type: Fixtures
       fixtures:
@@ -12,7 +20,7 @@
           shape:
             !type:PhysShapeCircle
             radius: 0.45
-          density: 800
+          density: 2000
           mask:
           - MachineMask
           layer:
@@ -66,7 +74,7 @@
           # map: [ "enum.SubfloorLayers.FirstLayer" ]
     - type: GasCanister
       gasMixture:
-        volume: 6000
+        volume: 5000
         moles: # List of gasses for easy reference
           - 0 # oxygen
           - 0 # nitrogen
@@ -138,6 +146,19 @@
 
 - type: entity
   parent: OH14_BaseGasStorage
+  id: OH14_GasStorageBlueIthink
+  suffix: Пусто, Водород
+  components:
+   - type: Sprite
+     layers:
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+      - state: blue_ithink
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
+
+- type: entity
+  parent: OH14_BaseGasStorage
   id: OH14_GasStorageRed
   suffix: Пусто, Азот
   components:
@@ -171,9 +192,9 @@
   components:
    - type: GasCanister
      gasMixture:
-      volume: 6000
+      volume: 5000
       moles: # List of gasses for easy reference
-        - 6000 # oxygen
+        - 5000 # oxygen
         - 0 # nitrogen
         - 0 # CO2
         - 0 # Plasma
@@ -185,16 +206,37 @@
       temperature: 293.15
 
 - type: entity
+  parent: OH14_GasStorageBlueIthink
+  id: OH14_GasStorageBlueIthinkFilled
+  suffix: Заполнен, Водород
+  components:
+   - type: GasCanister
+     gasMixture:
+      volume: 5000
+      moles: # List of gasses for easy reference
+        - 0 # oxygen
+        - 0 # nitrogen
+        - 0 # CO2
+        - 0 # Plasma
+        - 0 # Tritium
+        - 0 # Water vapor
+        - 0 # Ammonia
+        - 0 # N2O
+        - 0 # Frezon
+        - 5000 # hydrogen
+      temperature: 293.15
+
+- type: entity
   parent: OH14_GasStorageRed
   id: OH14_GasStorageRedFilled
   suffix: Заполнен, Азот
   components:
    - type: GasCanister
      gasMixture:
-      volume: 6000
+      volume: 5000
       moles: # List of gasses for easy reference
         - 0 # oxygen
-        - 6000 # nitrogen
+        - 5000 # nitrogen
         - 0 # CO2
         - 0 # Plasma
         - 0 # Tritium
@@ -211,12 +253,12 @@
   components:
    - type: GasCanister
      gasMixture:
-      volume: 6000
+      volume: 5000
       moles: # List of gasses for easy reference
         - 0 # oxygen
         - 0 # nitrogen
         - 0 # CO2
-        - 6000 # Plasma
+        - 5000 # Plasma
         - 0 # Tritium
         - 0 # Water vapor
         - 0 # Ammonia
@@ -257,7 +299,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 1
             max: 2
       - !type:DoActsBehavior

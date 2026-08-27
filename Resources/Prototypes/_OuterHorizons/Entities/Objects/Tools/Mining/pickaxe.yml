@@ -1,0 +1,125 @@
+# Основные кирки
+
+- type: entity
+  name: обыкновенная кирка
+  parent: OH14_BaseItem
+  id: OH14_Pickaxe
+  description: Доисторическая ковырялка для каменных пород.
+  components:
+  - type: Appearance
+  # - type: InworldSprite
+  # - type: GenericVisualizer
+  #   visuals:
+  #     enum.InworldSpriteState.State:
+  #       base:
+  #         True: {state: pickaxe}
+  #         False: {state: inworld}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe.rsi
+    layers:
+    - state: pickaxe
+      map: ["base"]
+  - type: MeleeWeapon
+    attackRate: 0.7
+    wideAnimationRotation: -135
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+      params:
+        volume: -5
+    damage:
+      groups:
+        Brute: 5
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 10
+      types:
+        Structural: 10
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,2
+    storedRotation: -45
+  - type: UseDelay
+  - type: Construction
+    graph: OH14_PickaxeTip
+    node: OH14_Pickaxe
+
+- type: entity
+  name: улучшенная кирка
+  parent: OH14_Pickaxe
+  id: OH14_PickaxeT2
+  description: Ковырялка для каменных пород с улучшенным наконечником.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_2.rsi
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 10
+      types:
+        Structural: 20
+  - type: Construction
+    graph: OH14_PickaxeTipT2
+    node: OH14_PickaxeT2
+
+- type: entity
+  name: продвинутая кирка
+  parent: OH14_Pickaxe
+  id: OH14_PickaxeT3
+  description: Инструмент для каменных пород с улучшенным наконечником.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_3.rsi
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 10
+      types:
+        Structural: 30
+  - type: Construction
+    graph: OH14_PickaxeTipT3
+    node: OH14_PickaxeT3
+
+# Их наконечники
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_PickaxeTip
+  name: наконечник кирки
+  suffix: Железный
+  description: Обычный.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe.rsi
+    state: tip
+  - type: Construction
+    graph: OH14_PickaxeTip
+    node: start
+
+- type: entity
+  parent: OH14_PickaxeTip
+  id: OH14_PickaxeTipT2
+  suffix: Кобальтовый
+  description: Улучшенный.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_2.rsi
+  - type: Construction
+    graph: OH14_PickaxeTipT2
+    node: start
+
+- type: entity
+  parent: OH14_PickaxeTip
+  id: OH14_PickaxeTipT3
+  suffix: Платиновый
+  description: Пиздатый.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_3.rsi
+  - type: Construction
+    graph: OH14_PickaxeTipT3
+    node: start

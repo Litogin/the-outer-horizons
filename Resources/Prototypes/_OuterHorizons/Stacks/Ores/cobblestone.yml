@@ -1,0 +1,48 @@
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Cobblestone
+  name: stack-cobblestone
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: basic_3 }
+  spawn: OH14_Cobblestone1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_CobblestoneIron
+  name: stack-cobblestone-iron
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: iron_3 }
+  spawn: OH14_CobblestoneIron1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_CobblestoneCopper
+  name: stack-cobblestone-copper
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: copper_3 }
+  spawn: OH14_CobblestoneCopper1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_CobblestoneGold
+  name: stack-cobblestone-gold
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: gold_3 }
+  spawn: OH14_CobblestoneGold1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_CobblestonePlatinum
+  name: stack-cobblestone-platinum
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: platinum_3 }
+  spawn: OH14_CobblestonePlatinum1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_CobblestoneSilicon
+  name: stack-cobblestone-silicon
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: silicon_3 }
+  spawn: OH14_CobblestoneSilicon1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_CobblestoneCobalt
+  name: stack-cobblestone-cobalt
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores_cobblestone.rsi", state: cobalt_3 }
+  spawn: OH14_CobblestoneCobalt1

@@ -1,0 +1,35 @@
+- type: entity
+  abstract: true
+  parent: OH14_BaseItem
+  id: OH14_BasicMaterialStack
+  description: Кучка предметов, из которых ты можешь сделать все что угодно! (в рамках раннего доступа)
+  components:
+  - type: Appearance
+  # - type: InworldSprite
+  # - type: GenericVisualizer
+  #   visuals:
+  #     enum.InworldSpriteState.State:
+  #       base:
+  #         True: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi}
+  #         False: {sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+    size: Normal
+  - type: StaticPrice
+    price: 0
+  - type: Tag
+    tags:
+    - OH14_MaterialStack
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

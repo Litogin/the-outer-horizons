@@ -9,23 +9,27 @@
             - material: OH14_Girders
               amount: 1
               doAfter: 1
+            - material: OH14_Component
+              amount: 1
+              doAfter: 1
     - node: Frame
       entity: OH14_AirAlarmAssembly
       edges:
         - to: OH14_AirControl
           steps:
-            - material: OH14_Components
-              amount: 1
+            - tag: OH14_AnalogBoardComplete
+              name: construction-graph-tag-analogboard
               doAfter: 1
-            - material: OH14_Electronic
-              amount: 1
-              doAfter: 1
-            - tool: Screwing
+            - tag: OH14_CrtScreen
+              name: construction-graph-tag-crtscreen
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:GivePrototype
+              prototype: OH14_Component1
               amount: 1
             - !type:DeleteEntity {}
           steps:
@@ -36,11 +40,11 @@
       edges:
         - to: Frame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_AnalogBoardComplete
               amount: 1
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+            - !type:GivePrototype
+              prototype: OH14_CrtScreen
               amount: 1
           conditions:
             - !type:WirePanel

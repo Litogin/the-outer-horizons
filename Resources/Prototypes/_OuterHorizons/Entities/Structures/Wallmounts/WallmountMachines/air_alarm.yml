@@ -114,7 +114,7 @@
         behaviors:
           - !type:SpawnEntitiesBehavior
             spawn:
-              OH14_SheetMaterials1:
+              OH14_SheetIron1:
                 min: 1
                 max: 2
           - !type:DoActsBehavior

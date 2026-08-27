@@ -30,9 +30,9 @@
   - type: Tag
     tags:
       - Catwalk
-  # - type: Construction
-  #   graph: Catwalk
-  #   node: Catwalk
+  - type: Construction
+    graph: OH14_Catwalk
+    node: OH14_Catwalk
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic

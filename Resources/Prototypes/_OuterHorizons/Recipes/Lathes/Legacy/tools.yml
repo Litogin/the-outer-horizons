@@ -1,0 +1,159 @@
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Crowbar
+  completetime: 3
+  result: OH14_CrowbarBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/crowbar.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 600
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Flashlight
+  completetime: 3
+  result: OH14_FlashlightBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/flashlight.rsi
+    state: flashlight
+  materials:
+    OH14_SheetIron: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Wirecutter
+  completetime: 3
+  result: OH14_WirecutterBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/wirecutters.rsi
+    state: cutters
+  materials:
+    OH14_SheetIron: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Screwdriver
+  completetime: 3
+  result: OH14_ScrewdriverBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/screwdriver.rsi
+    state: screwdriver
+  materials:
+    OH14_SheetIron: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Wrench
+  completetime: 3
+  result: OH14_WrenchBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/wrench.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 700
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Pickaxe
+  completetime: 3
+  result: OH14_Pickaxe
+  icon:
+    sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
+    state: pickaxe
+  materials:
+    OH14_SheetIron: 800
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Multitool
+  completetime: 3
+  result: OH14_MultitoolBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/multitool.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 300
+    OH14_Component: 100
+    OH14_Circuit: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Welder
+  completetime: 3
+  result: OH14_WelderBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/welder.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 500
+    OH14_Component: 400
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_Drill
+  completetime: 3
+  result: OH14_DrillBasic
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/drill.rsi
+    state: drill_screw
+  materials:
+    OH14_SheetIron: 500
+    OH14_Component: 300
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_GeigerCounter
+  completetime: 3
+  result: OH14_GeigerCounter
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/geiger.rsi
+    state: geiger_base
+  materials:
+    OH14_SheetIron: 200
+    OH14_Component: 100
+    OH14_Circuit: 100
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_SolderingIron
+  completetime: 3
+  result: OH14_SolderingIron
+  materials:
+    OH14_SheetIron: 300
+    OH14_Component: 100
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_ToolMassScanner
+  completetime: 3
+  result: OH14_ToolMassScannerEmpty
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 200
+    OH14_Component: 100
+    OH14_Circuit: 100
+
+- type: latheRecipe
+  id: OH14_Knife
+  completetime: 3
+  result: OH14_Knife
+  icon:
+    sprite: _OuterHorizons/Objects/Weapons/Melee/knife.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 300
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_MiningDrill
+  completetime: 3
+  result: OH14_MiningDrill
+  icon:
+    sprite: _OuterHorizons/Objects/Tools/mining_drill.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 600
+    OH14_Component: 400

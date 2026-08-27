@@ -1,0 +1,48 @@
+- type: material
+  id: OH14_SheetIron
+  stackEntity: OH14_SheetIron1
+  name: железный лист
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_SheetCopper
+  stackEntity: OH14_SheetCopper1
+  name: медный лист
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_SheetGold
+  stackEntity: OH14_SheetGold1
+  name: золотой лист
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_SheetPlatinum
+  stackEntity: OH14_SheetPlatinum1
+  name: платиновый лист
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_SheetSilicon
+  stackEntity: OH14_SheetSilicon1
+  name: кремниевый лист
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_SheetCobalt
+  stackEntity: OH14_SheetCobalt1
+  name: кобальтовый лист
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_SheetGlass
+  stackEntity: OH14_SheetGlass1
+  name: стеклянная панель
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2

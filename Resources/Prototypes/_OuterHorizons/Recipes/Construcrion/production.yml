@@ -47,3 +47,15 @@
   placementMode: SnapgridCenter
   canRotate: false
   canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_Electrolyzer
+  graph: OH14_ElectrolyzerFrame
+  startNode: start
+  targetNode: OH14_Electrolyzer
+  category: construction-category-machines
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false

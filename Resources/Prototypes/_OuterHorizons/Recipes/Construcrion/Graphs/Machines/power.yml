@@ -16,14 +16,15 @@
       edges:
         - to: OH14_APC
           steps:
-            - material: OH14_Components
-              amount: 2
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
               doAfter: 1
-            - tool: Screwing
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -35,8 +36,8 @@
       edges:
         - to: apcFrame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_CopperStator
               amount: 2
           conditions:
             - !type:WirePanel
@@ -65,14 +66,21 @@
       edges:
         - to: subFrame2
           steps:
-            - material: OH14_Components
-              amount: 4
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
               doAfter: 1
-            - tool: Screwing
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
+              doAfter: 1
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
+              doAfter: 1
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -86,15 +94,13 @@
       edges:
         - to: OH14_SubstationWallmount
           steps:
-            - material: OH14_Electronic
-              amount: 1
-              doAfter: 1
-            - tool: Screwing
+            - tag: OH14_AnalogBoardComplete
+              name: construction-graph-tag-analogboard
               doAfter: 1
         - to: subFrame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_CopperStator
               amount: 4
           steps:
             - tool: Screwing
@@ -104,8 +110,8 @@
       edges:
         - to: subFrame2
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+            - !type:GivePrototype
+              prototype: OH14_AnalogBoardComplete
               amount: 1
           conditions:
             - !type:WirePanel
@@ -134,14 +140,21 @@
       edges:
         - to: subFrame2
           steps:
-            - material: OH14_Components
-              amount: 4
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
               doAfter: 1
-            - tool: Screwing
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
+              doAfter: 1
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
+              doAfter: 1
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-stator
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -155,15 +168,13 @@
       edges:
         - to: OH14_Substation
           steps:
-            - material: OH14_Electronic
-              amount: 1
-              doAfter: 1
-            - tool: Screwing
+            - tag: OH14_AnalogBoardComplete
+              name: construction-graph-tag-analogboard
               doAfter: 1
         - to: subFrame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_CopperStator
               amount: 4
           steps:
             - tool: Screwing
@@ -173,8 +184,8 @@
       edges:
         - to: subFrame2
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+            - !type:GivePrototype
+              prototype: OH14_AnalogBoardComplete
               amount: 1
           conditions:
             - !type:WirePanel
@@ -203,12 +214,12 @@
       edges:
         - to: frame2
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 4
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -228,8 +239,8 @@
               doAfter: 1
         - to: frame1
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 4
           steps:
             - tool: Screwing
@@ -239,8 +250,8 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
+            - !type:GivePrototype
+              prototype: OH14_Circuit1
               amount: 1
             - !type:EmptyAllContainers
               pickup: true
@@ -269,12 +280,12 @@
       edges:
         - to: frame2
           steps:
-            - material: OH14_Materials
-              amount: 5
+            - tag: OH14_CopperChamber
+              name: construction-graph-tag-copperchamber
               doAfter: 1
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -288,14 +299,17 @@
       edges:
         - to: OH14_GeneratorTEF
           steps:
-            - material: OH14_Components
-              amount: 4
+            - tag: OH14_CopperStator
+              name: construction-graph-tag-copper-rotor
+              doAfter: 1
+            - tag: OH14_CopperRotor
+              name: construction-graph-tag-copper-stator
               doAfter: 1
         - to: frame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
-              amount: 5
+            - !type:GivePrototype
+              prototype: OH14_CopperChamber
+              amount: 1
           steps:
             - tool: Screwing
               doAfter: 2
@@ -306,9 +320,12 @@
           completed:
             - !type:SnapToGrid
               southRotation: true
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
-              amount: 4
+            - !type:GivePrototype
+              prototype: OH14_CopperStator
+              amount: 1
+            - !type:GivePrototype
+              prototype: OH14_CopperRotor
+              amount: 1
           # conditions:
           #   - !type:WirePanel
           #     open: true

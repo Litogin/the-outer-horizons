@@ -1,0 +1,67 @@
+- type: latheRecipe
+  id: OH14_CoilIron
+  result: OH14_CoilIron1
+  materials:
+    OH14_SheetIron: 10
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_CoilCopper
+  result: OH14_CoilCopper1
+  materials:
+    OH14_SheetCopper: 10
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_CoilGold
+  result: OH14_CoilGold1
+  materials:
+    OH14_SheetGold: 10
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_CopperChamber
+  result: OH14_CopperChamber
+  materials:
+    OH14_SheetCopper: 400
+  completetime: 6
+
+- type: latheRecipe
+  id: OH14_HeatChamber
+  result: OH14_HeatChamber
+  materials:
+    OH14_SheetIron: 200
+    OH14_SheetCobalt: 200
+  completetime: 6
+
+- type: latheRecipe
+  id: OH14_CopperStator
+  result: OH14_CopperStator
+  materials:
+    OH14_SheetCopper: 150
+    OH14_SheetIron: 10
+  completetime: 6
+
+- type: latheRecipe
+  id: OH14_GoldStator
+  result: OH14_GoldStator
+  materials:
+    OH14_SheetGold: 150
+    OH14_SheetIron: 10
+  completetime: 6
+
+- type: latheRecipe
+  id: OH14_CopperRotor
+  result: OH14_CopperRotor
+  materials:
+    OH14_SheetCopper: 100
+    OH14_SheetIron: 10
+  completetime: 6
+
+- type: latheRecipe
+  id: OH14_GoldRotor
+  result: OH14_GoldRotor
+  materials:
+    OH14_SheetGold: 100
+    OH14_SheetIron: 10
+  completetime: 6

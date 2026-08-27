@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "license": "All right reserved",
+  "copyright": "Created by Aserovich (Aska) for Outer Horizons project. Do not use, copy, or modify without permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "l-icon"
+    },
+    {
+      "name": "m-icon"
+    },
+    {
+      "name": "h-icon"
+    },
+    {
+      "name": "l-inworld"
+    },
+    {
+      "name": "m-inworld"
+    },
+    {
+      "name": "h-inworld"
+    },
+    {
+      "name": "l-tip"
+    },
+    {
+      "name": "m-tip"
+    },
+    {
+      "name": "h-tip"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "construction-icon-0"
+    },
+    {
+      "name": "construction-icon-1"
+    },
+    {
+      "name": "construction-icon-2"
+    }
+  ]
+}
