@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "license": "All right reserved",
+  "copyright": "Created by The_ClownHONKEY and Aserovich (Aska) for Outer Horizons project. Do not use, copy, or modify without permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "buttstock"
+    },
+    {
+      "name": "l_handle"
+    },
+    {
+      "name": "m_handle"
+    },
+    {
+      "name": "sparepart"
+    },
+    {
+      "name": "sparepart_2"
+    },
+    {
+      "name": "sparepart_3"
+    },
+    {
+      "name": "adv_sparepart"
+    },
+    {
+      "name": "adv_sparepart_2"
+    },
+    {
+      "name": "adv_sparepart_3"
+    },
+    {
+      "name": "capacitor"
+    },
+    {
+      "name": "capacitor_2"
+    },
+    {
+      "name": "capacitor_3"
+    },
+    {
+      "name": "lamp"
+    },
+    {
+      "name": "lamp_2"
+    },
+    {
+      "name": "lamp_3"
+    },
+    {
+      "name": "battery"
+    },
+    {
+      "name": "battery_2"
+    },
+    {
+      "name": "battery_3"
+    },
+    {
+      "name": "analog_board"
+    },
+    {
+      "name": "analog_board_2"
+    },
+    {
+      "name": "analog_board_3"
+    },
+    {
+      "name": "circuit"
+    },
+    {
+      "name": "circuit_2"
+    },
+    {
+      "name": "circuit_3"
+    },
+    {
+      "name": "c_rotor"
+    },
+    {
+      "name": "c_stator"
+    },
+    {
+      "name": "g_rotor"
+    },
+    {
+      "name": "g_stator"
+    },
+    {
+      "name": "crt_screen"
+    },
+    {
+      "name": "c_chamber"
+    },
+    {
+      "name": "p_chamber"
+    },
+    {
+      "name": "motor"
+    },
+    {
+      "name": "power_unit"
+    },
+    {
+      "name": "power_unit_2"
+    },
+    {
+      "name": "power_unit_3"
+    },
+    {
+      "name": "control_unit"
+    },
+    {
+      "name": "control_unit_2"
+    },
+    {
+      "name": "control_unit_3"
+    }
+  ]
+}

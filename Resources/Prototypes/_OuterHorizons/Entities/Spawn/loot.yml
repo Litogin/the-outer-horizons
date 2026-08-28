@@ -145,7 +145,7 @@
     sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
-      - sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
+      - sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe.rsi
         state: pickaxe
   - type: RandomSpawner
     rarePrototypes:

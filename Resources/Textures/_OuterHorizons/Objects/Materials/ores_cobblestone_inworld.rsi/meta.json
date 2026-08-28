@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "license": "All right reserved",
+  "copyright": "Created by Aserovich (Aska) for Outer Horizons project. Do not use, copy, or modify without permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "basic"
+    },
+    {
+      "name": "basic_2"
+    },
+    {
+      "name": "basic_3"
+    },
+    {
+      "name": "iron"
+    },
+    {
+      "name": "iron_2"
+    },
+    {
+      "name": "iron_3"
+    },
+    {
+      "name": "copper"
+    },
+    {
+      "name": "copper_2"
+    },
+    {
+      "name": "copper_3"
+    },
+    {
+      "name": "gold"
+    },
+    {
+      "name": "gold_2"
+    },
+    {
+      "name": "gold_3"
+    },
+    {
+      "name": "cobalt"
+    },
+    {
+      "name": "cobalt_2"
+    },
+    {
+      "name": "cobalt_3"
+    },
+    {
+      "name": "platinum"
+    },
+    {
+      "name": "platinum_2"
+    },
+    {
+      "name": "platinum_3"
+    },
+    {
+      "name": "silicon"
+    },
+    {
+      "name": "silicon_2"
+    },
+    {
+      "name": "silicon_3"
+    }
+  ]
+}

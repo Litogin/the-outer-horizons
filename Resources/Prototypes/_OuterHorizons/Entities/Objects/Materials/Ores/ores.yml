@@ -7,8 +7,15 @@
   name: руда
   description: Обработанный кусок руды для переплавки
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/ores.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/ores_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/ores.rsi
+    sprite: _OuterHorizons/Objects/Materials/ores_inworld.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
     heldPrefix: ore

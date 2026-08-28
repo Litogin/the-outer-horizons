@@ -12,12 +12,12 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi}
         icon:
           True: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/id_cards.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
     layers:
     - state: silver
       map: ["base"]
@@ -40,7 +40,7 @@
   suffix: Ringnova
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
     layers:
     - state: centcom
       map: ["base"]
@@ -55,7 +55,7 @@
   suffix: Ringnova Commander
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
     layers:
     - state: centcom
       map: ["base"]
@@ -70,7 +70,7 @@
   suffix: Colonist
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
     layers:
     - state: silver
       map: ["base"]
@@ -85,7 +85,7 @@
   suffix: Colonist Commander
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/id_cards.rsi
+    sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
     layers:
     - state: silver
       map: ["base"]

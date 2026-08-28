@@ -12,17 +12,17 @@
       enum.InworldSpriteState.State:
         enum.GunVisualLayers.Base:
           True: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi}
-          False: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi}
+          False: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch_inworld.rsi}
         enum.GunVisualLayers.Mag:
           True: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi}
-          False: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi}
+          False: {sprite: _OuterHorizons/Objects/Weapons/Guns/atarch_inworld.rsi}
   - type: Clothing
     sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi
     quickEquip: false
     slots:
     - suitStorage
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Weapons/Guns/atarch.rsi
+    sprite: _OuterHorizons/Objects/Weapons/Guns/atarch_inworld.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

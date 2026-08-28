@@ -14,7 +14,7 @@
       drink:
         maxVol: 80
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle_inworld.rsi
   - type: GenericVisualizer
     visuals:
       enum.OpenableVisuals.Opened:
@@ -24,10 +24,10 @@
       enum.InworldSpriteState.State:
         enum.SolutionContainerLayers.Fill:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle_inworld.rsi}
         enum.OpenableVisuals.Layer:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle_inworld.rsi}
   - type: FitsInDispenser
     solution: drink
 
@@ -63,7 +63,7 @@
       drink:
         maxVol: 160
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/canister_inworld.rsi
   - type: GenericVisualizer
     visuals:
       enum.OpenableVisuals.Opened:
@@ -73,10 +73,10 @@
       enum.InworldSpriteState.State:
         enum.SolutionContainerLayers.Fill:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister_inworld.rsi}
         enum.OpenableVisuals.Layer:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/canister_inworld.rsi}
   - type: FitsInDispenser
     solution: drink
 
@@ -112,7 +112,7 @@
       drink:
         maxVol: 80
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas.rsi
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas_inworld.rsi
   - type: GenericVisualizer
     visuals:
       enum.OpenableVisuals.Opened:
@@ -122,10 +122,10 @@
       enum.InworldSpriteState.State:
         enum.SolutionContainerLayers.Fill:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas_inworld.rsi}
         enum.OpenableVisuals.Layer:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/kvas_inworld.rsi}
   - type: FitsInDispenser
     solution: drink
 

@@ -25,6 +25,9 @@
             "name": "tip"
         },
         {
+            "name": "tip_inworld"
+        },
+        {
             "name": "wielded-inhand-left",
             "directions": 4
         },

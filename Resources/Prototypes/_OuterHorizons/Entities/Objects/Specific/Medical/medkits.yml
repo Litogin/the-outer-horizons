@@ -5,7 +5,7 @@
   id: OH14_MedkitBasic
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Specific/Medical/firstaidkits.rsi
+    sprite: _OuterHorizons/Objects/Specific/Medical/firstaidkits_inworld.rsi
     state: firstaid
   - type: InworldSprite
   - type: GenericVisualizer
@@ -17,7 +17,7 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Specific/Medical/firstaidkits.rsi}
-          False: {sprite: _OuterHorizons/Objects/Specific/Medical/firstaidkits.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Medical/firstaidkits_inworld.rsi}
   - type: MeleeWeapon
     damage:
       types:
