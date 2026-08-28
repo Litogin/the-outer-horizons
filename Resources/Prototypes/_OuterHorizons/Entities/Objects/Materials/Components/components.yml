@@ -8,8 +8,15 @@
   suffix: "Компоненты"
   description: Бесполезная хрень, которая почему то требуется для ваших кустарных изысканий.
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/components.rsi
+    sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi
   - type: Item
     # sprite: _OuterHorizons/Objects/Materials/components.rsi
   - type: Appearance

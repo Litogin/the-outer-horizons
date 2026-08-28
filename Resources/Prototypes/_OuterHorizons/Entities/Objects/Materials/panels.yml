@@ -7,8 +7,15 @@
   name: панель
   description: Большой конструкционный лист. Абляция в комплект не входит.
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/panels.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/panels_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/panels.rsi
+    sprite: _OuterHorizons/Objects/Materials/panels_inworld.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/panels.rsi
   - type: Appearance

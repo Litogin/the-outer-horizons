@@ -7,8 +7,15 @@
   name: рудный булыжник
   description: Горстка каменных облокмков, по всей видимости с рудой внутри
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/ores_cobblestone.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/ores_cobblestone_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/ores_cobblestone.rsi
+    sprite: _OuterHorizons/Objects/Materials/ores_cobblestone_inworld.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
     heldPrefix: ore

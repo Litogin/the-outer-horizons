@@ -7,8 +7,15 @@
   name: лист
   description: Выплавленный из руды лист
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/sheets.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/sheets_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/sheets.rsi
+    sprite: _OuterHorizons/Objects/Materials/sheets_inworld.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/sheets.rsi
   - type: Appearance

@@ -7,8 +7,15 @@
   name: проволка
   description: (не) тонкая проволка, специально для ваших кустарных изысканий.
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/coils.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/coils_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/coils.rsi
+    sprite: _OuterHorizons/Objects/Materials/coils_inworld.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/coils.rsi
   - type: Appearance
