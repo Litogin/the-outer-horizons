@@ -17,6 +17,15 @@
       "name": "panel_3"
     },
     {
+      "name": "h_panel"
+    },
+    {
+      "name": "h_panel_2"
+    },
+    {
+      "name": "h_panel_3"
+    },
+    {
       "name": "shuttle"
     },
     {
@@ -24,6 +33,24 @@
     },
     {
       "name": "shuttle_3"
+    },
+    {
+      "name": "l_shuttle"
+    },
+    {
+      "name": "l_shuttle_2"
+    },
+    {
+      "name": "l_shuttle_3"
+    },
+    {
+      "name": "heat"
+    },
+    {
+      "name": "heat_2"
+    },
+    {
+      "name": "heat_3"
     }
   ]
 }
