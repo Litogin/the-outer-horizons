@@ -31,7 +31,7 @@
   - !type:StackResource
     stack: OH14_SheetIron
     count: 2
-  result: OH14_PowerCellMediumEmpty
+  result: OH14_PowerCellMediumFrame
   resultCount: 2
 
 - type: CERecipe
@@ -43,5 +43,5 @@
   - !type:StackResource
     stack: OH14_SheetIron
     count: 2
-  result: OH14_PowerCellBigEmpty
+  result: OH14_PowerCellBigFrame
   resultCount: 1

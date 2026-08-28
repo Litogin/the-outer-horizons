@@ -69,8 +69,8 @@
         visible: false
         map: [ "light" ]
   - type: Item
+    size: Normal
     sprite: _OuterHorizons/Objects/Tools/flashlight.rsi
-    storedRotation: -90
   - type: PointLight
     color: "#dabeab"
     enabled: false
