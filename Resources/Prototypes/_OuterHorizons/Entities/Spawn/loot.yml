@@ -41,11 +41,10 @@
 # Инструменты
 
 - type: entity
-  id: LootSpawnerToolbox75
+  id: LootSpawnerToolbox
   name: спавнер ящик инструментов
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%
   components:
   - type: Sprite
     sprite: _OuterHorizons/spawn.rsi
@@ -89,11 +88,10 @@
     offset: 0.1
 
 - type: entity
-  id: LootSpawnerTools75
+  id: LootSpawnerTools
   name: спавнер инструмента
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%
   components:
   - type: Sprite
     sprite: _OuterHorizons/spawn.rsi
@@ -108,7 +106,6 @@
     - OH14_ScrewdriverBasic
     - OH14_WrenchBasic
     - OH14_FlashlightFilled
-    chance: 0.75
     offset: 0.1
 
 - type: entity
@@ -135,11 +132,10 @@
     offset: 0.1
 
 - type: entity
-  id: LootSpawnerMiningTools75
+  id: LootSpawnerMiningTools
   name: спавнер кирка или бур
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75-10%
   components:
   - type: Sprite
     sprite: _OuterHorizons/spawn.rsi
@@ -153,17 +149,15 @@
     rareChance: 0.1
     prototypes:
     - OH14_Pickaxe
-    chance: 0.75
     offset: 0.1
 
 # Меды
 
 - type: entity
-  id: LootSpawnerMedical75
+  id: LootSpawnerMedical
   name: спавнер медикаментов
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%
   components:
   - type: Sprite
     sprite: _OuterHorizons/spawn.rsi
@@ -184,11 +178,10 @@
     - OH14_Bloodpack1
     - OH14_Gauze
     - OH14_Gauze1
-    chance: 0.75
     offset: 0.1
 
 - type: entity
-  id: LootSpawnerBottles75
+  id: LootSpawnerBottles
   name: спавнер бутылочек
   categories: [ ForkFiltered ]
   parent: MarkerBase
@@ -209,7 +202,6 @@
     - OH14_DrinkGlassBottleBicaridine
     - OH14_DrinkGlassBottleDexalin
     - OH14_DrinkGlassBottleOculine
-    chance: 0.75
     offset: 0.2
 
 # Ресурсы
@@ -234,10 +226,8 @@
     rareChance: 0.1
     prototypes:
     - OH14_SheetIron8
-    - OH14_SheetIron8
-    - OH14_SheetIron8
-    - OH14_SheetIron8
-    - OH14_SheetGirder8
+    - OH14_SheetCopper8
+    - OH14_SheetSilicon8
     chance: 0.75
     offset: 0.1
 
@@ -269,7 +259,6 @@
   name: спавнер напитки
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%
   components:
   - type: Sprite
     sprite: _OuterHorizons/spawn.rsi
@@ -284,5 +273,4 @@
     - OH14_DrinkBottleKvas
     - OH14_DrinkBottleWaterFull
     - OH14_DrinkBottleKvasFull
-    chance: 0.75
     offset: 0.1

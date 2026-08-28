@@ -36,7 +36,9 @@
   - type: Item
     size: Small
   - type: Sprite
-    state: l_handle
+    layers:
+    - state: l_handle
+      map: ["base"]
 
 - type: entity
   parent: OH14_BasicComponents
@@ -50,7 +52,9 @@
   - type: Item
     size: Small
   - type: Sprite
-    state: m_handle
+    layers:
+    - state: m_handle
+      map: ["base"]
 
 - type: entity
   parent: OH14_BasicComponents
@@ -64,7 +68,9 @@
   - type: Item
     size: Small
   - type: Sprite
-    state: buttstock
+    layers:
+    - state: buttstock
+      map: ["base"]
 
 ### Камеры сгорания
 # Медная и теплоустойчивая
@@ -79,7 +85,9 @@
     tags:
     - OH14_CopperChamber
   - type: Sprite
-    state: c_chamber
+    layers:
+    - state: c_chamber
+      map: ["base"]
 
 - type: entity
   parent: OH14_BasicComponents
@@ -91,7 +99,9 @@
     tags:
     - OH14_HeatChamber
   - type: Sprite
-    state: p_chamber
+    layers:
+    - state: p_chamber
+      map: ["base"]
 
 ### Электроника
 # Экран
@@ -106,7 +116,9 @@
     tags:
     - OH14_CrtScreen
   - type: Sprite
-    state: crt_screen
+    layers:
+    - state: crt_screen
+      map: ["base"]
 
 # Плата
 
@@ -120,10 +132,16 @@
     graph: OH14_AnalogBoard
     node: start
   - type: Sprite
-    state: analog_board
+    layers:
+    - state: analog_board
+      map: ["base"]
   - type: Appearance
   - type: GenericVisualizer
     visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
       enum.ConstructionVisuals.Key:
         enum.ConstructionVisuals.Layer:
           start: { state: analog_board }
@@ -142,7 +160,9 @@
     graph: OH14_AnalogBoard
     node: OH14_AnalogBoardComplete
   - type: Sprite
-    state: analog_board_3
+    layers:
+    - state: analog_board_3
+      map: ["base"]
 
 ### Моторы и их компоненты
 # Медное
@@ -157,7 +177,9 @@
     tags:
     - OH14_CopperStator
   - type: Sprite
-    state: c_stator
+    layers:
+    - state: c_stator
+      map: ["base"]
 
 - type: entity
   parent: OH14_BasicComponents
@@ -169,7 +191,9 @@
     tags:
     - OH14_CopperRotor
   - type: Sprite
-    state: c_rotor
+    layers:
+    - state: c_rotor
+      map: ["base"]
 
 # Золотое
 
@@ -183,7 +207,9 @@
     tags:
     - OH14_GoldStator
   - type: Sprite
-    state: g_stator
+    layers:
+    - state: g_stator
+      map: ["base"]
 
 - type: entity
   parent: OH14_BasicComponents
@@ -195,7 +221,9 @@
     tags:
     - OH14_GoldRotor
   - type: Sprite
-    state: g_rotor
+    layers:
+    - state: g_rotor
+      map: ["base"]
 
 # Мотор
 
@@ -209,7 +237,9 @@
     tags:
     - OH14_Motor
   - type: Sprite
-    state: motor
+    layers:
+    - state: motor
+      map: ["base"]
 
 ### Корпуса
 # Питания
@@ -224,10 +254,16 @@
     graph: OH14_PowerUnit
     node: start
   - type: Sprite
-    state: power_unit
+    layers:
+    - state: power_unit
+      map: ["base"]
   - type: Appearance
   - type: GenericVisualizer
     visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
       enum.ConstructionVisuals.Key:
         enum.ConstructionVisuals.Layer:
           start: { state: power_unit }
@@ -246,7 +282,9 @@
     graph: OH14_PowerUnit
     node: OH14_PowerUnitComplete
   - type: Sprite
-    state: power_unit_3
+    layers:
+    - state: power_unit_3
+      map: ["base"]
 
 # Контроля
 
@@ -260,10 +298,16 @@
     graph: OH14_ControlUnit
     node: start
   - type: Sprite
-    state: control_unit
+    layers:
+    - state: control_unit
+      map: ["base"]
   - type: Appearance
   - type: GenericVisualizer
     visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
       enum.ConstructionVisuals.Key:
         enum.ConstructionVisuals.Layer:
           start: { state: control_unit }
@@ -282,4 +326,6 @@
     graph: OH14_ControlUnit
     node: OH14_ControlUnitComplete
   - type: Sprite
-    state: control_unit_3
+    layers:
+    - state: control_unit_3
+      map: ["base"]

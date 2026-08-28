@@ -1,11 +1,11 @@
 # Канистры
 
 - type: entity
-  id: LootSpawnerGasCans75
+  id: LootSpawnerGasCans
   name: спавнер канистры
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%, Любая
+  suffix: Любая
   components:
   - type: Sprite
     sprite: _OuterHorizons/spawn.rsi
@@ -16,6 +16,7 @@
   - type: RandomSpawner
     prototypes:
     - OH14_StorageCanister
+    - OH14_HydrogenCanister
     - OH14_AirCanister
     - OH14_OxygenCanister
     - OH14_NitrogenCanister
@@ -26,15 +27,14 @@
     - OH14_NitrogenCanisterBroken
     - OH14_PlasmaCanisterBroken
     - OH14_GasCanisterFrame
-    chance: 0.75
     offset: 0
 
 - type: entity
-  id: LootSpawnerGasCansOxy75
+  id: LootSpawnerGasCansOxy
   name: спавнер канистры
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%, Воздух
+  suffix: Воздух
   components:
   - type: Sprite
     sprite: _OuterHorizons/spawn.rsi
@@ -48,7 +48,6 @@
     - OH14_OxygenCanister
     - OH14_AirCanisterBroken
     - OH14_OxygenCanisterBroken
-    chance: 0.75
     offset: 0
 
 # Латы

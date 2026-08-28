@@ -52,9 +52,7 @@
         - id: OH14_OxygenTankWhiteFilled
         - id: OH14_JetpackWhite
         - id: OH14_OxygenTankWhiteFilled
-          prob: 0.8
         - id: OH14_JetpackWhite
-          prob: 0.8
         # - id: OH14_OxygenTankWhiteFilled
         #   amount: 2
         # - id: OH14_MedkitBasicFilled
@@ -74,13 +72,10 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_ClothingTopic
-          prob: 0.6
         - id: OH14_ClothingShirtBasic
-          prob: 0.6
         - id: OH14_ClothingPantsBasic
-          prob: 0.6
         - id: OH14_ClothingJumpsuitRealXimura
-          prob: 0.6
+          prob: 0.8
 
 - type: entity
   parent: OH14_CabinetHydro
@@ -92,19 +87,15 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_ToolMiniHoe
-          prob: 0.9
         - id: OH14_ToolClippers
-          prob: 0.9
         - id: OH14_ToolHatchet
-          prob: 0.9
         - id: OH14_ToolSpade
-          prob: 0.9
-        - id: OH14_DrinkGlassBottleNutri
-          prob: 0.9
-        - id: OH14_DrinkGlassBottleNutri
-          prob: 0.5
-        - id: OH14_DrinkGlassBottleNutri
-          prob: 0.25
+        # - id: OH14_DrinkGlassBottleNutri
+        #   prob: 0.9
+        # - id: OH14_DrinkGlassBottleNutri
+        #   prob: 0.5
+        # - id: OH14_DrinkGlassBottleNutri
+        #   prob: 0.25
 
 - type: entity
   parent: OH14_CabinetMedical
@@ -115,27 +106,18 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: OH14_Ointment
-        - id: OH14_Ointment
-          prob: 0.4
-        - id: OH14_Brutepack
-        - id: OH14_Brutepack
-          prob: 0.8
-        - id: OH14_Bloodpack
-        - id: OH14_Gauze
-          amount: 2
-        - id: OH14_Gauze
-          prob: 0.5
+        - id: OH14_MedkitBasicFilled
+          amount: 4
         - id: OH14_MedipenEmergency
-          amount: 4
+          amount: 2
         - id: OH14_MedipenPuncturase
-          amount: 4
+          amount: 2
         - id: OH14_DrinkGlassBottleOculine
-          prob: 0.8
+          amount: 2
         - id: OH14_DrinkGlassBottleDexalin
-          prob: 0.8
+          amount: 4
         - id: OH14_DrinkGlassBottleBicaridine
-          prob: 0.8
+          amount: 2
 
 - type: entity
   parent: OH14_CabinetEngi
@@ -147,17 +129,11 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_SheetGirder
-          prob: 0.8
-        - id: OH14_SheetGirder
-          prob: 0.4
         - id: OH14_SheetPipes
           prob: 0.2
         - id: OH14_SheetIron8
-          prob: 0.8
-        - id: OH14_SheetIron8
-          prob: 0.2
+        - id: OH14_SheetCopper8
         - id: OH14_Panel8
-          prob: 0.6
         - id: OH14_Panel8
           prob: 0.2
         - id: OH14_Component4
@@ -177,24 +153,19 @@
         - id: OH14_DrinkBottleWaterFull
           amount: 6
         - id: OH14_DrinkBottleKvasFull
-          prob: 0.9
         - id: OH14_DrinkBottleKvasFull
-          prob: 0.8
         - id: OH14_FoodHrumka
           amount: 2
           prob: 0.9
         - id: OH14_FoodPotato
           amount: 2
-          prob: 0.9
         - id: OH14_FoodPotatoLoaded
           amount: 2
-          prob: 0.9
         - id: OH14_FoodPotatoLoaded
           amount: 2
-          prob: 0.9
+          prob: 0.8
         - id: OH14_FoodMarblemelon
           amount: 2
-          prob: 0.9
 
 - type: entity
   parent: OH14_CabinetEngi
@@ -206,29 +177,18 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_FlashlightFilled
-          prob: 0.9
         - id: OH14_CrowbarBasic
-          prob: 0.9
           amount: 2
         - id: OH14_WrenchBasic
-          prob: 0.9
           amount: 2
         - id: OH14_WirecutterBasic
-          prob: 0.9
           amount: 2
         - id: OH14_ScrewdriverBasic
-          prob: 0.9
           amount: 2
         - id: OH14_MultitoolBasic
-          prob: 0.2
         - id: OH14_GeigerCounter
-          prob: 0.2
-        - id: OH14_NuclearRod
-          prob: 0.1
         - id: OH14_ToolboxBlueFilled
-          prob: 0.2
         - id: OH14_ToolboxYellowFilled
-          prob: 0.2
 
 # Ящики
 
@@ -242,13 +202,13 @@
       storagebase: !type:AllSelector
         children:
         - id: OH14_Panel8
-          prob: 0.2
+          prob: 0.8
         - id: OH14_SheetGirder
-          prob: 0.2
+          prob: 0.8
         - id: OH14_SheetPipes
-          prob: 0.2
+          prob: 0.8
         - id: OH14_SheetIron8
-          prob: 0.2
+          prob: 0.4
 
 # Ящики с замком
 
@@ -322,8 +282,6 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: OH14_NuclearRod
-          prob: 0.05
         - id: OH14_MedkitBasicFilled
           prob: 0.1
         - id: OH14_ToolboxRedFilled
