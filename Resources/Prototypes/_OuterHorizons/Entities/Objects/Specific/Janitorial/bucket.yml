@@ -9,16 +9,16 @@
       enum.InworldSpriteState.State:
         enum.SolutionContainerLayers.Fill:
           True: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi}
-          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket_inworld.rsi}
         enum.OpenableVisuals.Layer:
           True: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi}
-          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket_inworld.rsi}
   - type: Appearance
   - type: InworldSprite
   - type: Edible
     utensil: Spoon
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket_inworld.rsi
     layers:
     - state: icon
       map: ["enum.OpenableVisuals.Layer"]

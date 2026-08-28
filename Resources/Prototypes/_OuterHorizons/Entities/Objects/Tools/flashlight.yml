@@ -11,10 +11,10 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Tools/flashlight.rsi}
-          False: {sprite: _OuterHorizons/Objects/Tools/flashlight.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/flashlight_inworld.rsi}
         light:
           True: {sprite: _OuterHorizons/Objects/Tools/flashlight.rsi}
-          False: {sprite: _OuterHorizons/Objects/Tools/flashlight.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/flashlight_inworld.rsi}
   - type: Tag
     tags:
     - OH14_Tools
@@ -60,7 +60,7 @@
         name: power-cell-slot-component-slot-name-default
         # startingItem: OH14_PowerCellMedium
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/flashlight.rsi
+    sprite: _OuterHorizons/Objects/Tools/flashlight_inworld.rsi
     layers:
       - state: flashlight
         map: [ "base" ]

@@ -74,15 +74,15 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Misc/paper.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/paper.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/paper_inworld.rsi}
         enum.PaperVisualLayers.Writing:
           True: {sprite: _OuterHorizons/Objects/Misc/paper.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/paper.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/paper_inworld.rsi}
         enum.PaperVisualLayers.Stamp:
           True: {sprite: _OuterHorizons/Objects/Misc/paper.rsi}
-          False: {sprite: _OuterHorizons/Objects/Misc/paper.rsi}
+          False: {sprite: _OuterHorizons/Objects/Misc/paper_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Misc/paper.rsi
+    sprite: _OuterHorizons/Objects/Misc/paper_inworld.rsi
     layers:
     - state: paper
       map: ["base"]

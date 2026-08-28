@@ -10,12 +10,12 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi}
-          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop_inworld.rsi}
         enum.SolutionContainerLayers.Fill:
           True: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi}
-          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi}
+          False: {sprite: _OuterHorizons/Objects/Specific/Janitorial/mop_inworld.rsi}
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/mop_inworld.rsi
     layers:
       - state: mop
         map: ["base"]

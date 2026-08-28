@@ -59,7 +59,7 @@
   completetime: 3
   result: OH14_Pickaxe
   icon:
-    sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
+    sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe.rsi
     state: pickaxe
   materials:
     OH14_SheetIron: 800
@@ -152,8 +152,8 @@
   completetime: 3
   result: OH14_MiningDrill
   icon:
-    sprite: _OuterHorizons/Objects/Tools/mining_drill.rsi
-    state: icon
+    sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
+    state: m-icon
   materials:
     OH14_SheetIron: 600
     OH14_Component: 400

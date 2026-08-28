@@ -9,7 +9,7 @@
     sprite: _OuterHorizons/Objects/inhands.rsi
     heldPrefix: m
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi
+    sprite: _OuterHorizons/Objects/Tools/mass_scaner_inworld.rsi
     state: icon
     layers:
       - state: icon
@@ -33,10 +33,10 @@
       enum.InworldSpriteState.State:
         base:
           True: {sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi}
-          False: {sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/mass_scaner_inworld.rsi}
         enum.PowerDeviceVisualLayers.Powered:
           True: {sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi}
-          False: {sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi}
+          False: {sprite: _OuterHorizons/Objects/Tools/mass_scaner_inworld.rsi}
   - type: PowerCellDraw
     drawRate: 1
   - type: ToggleCellDraw

@@ -21,7 +21,7 @@
       drink:
         maxVol: 40
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle_inworld.rsi
   - type: GenericVisualizer
     visuals:
       enum.OpenableVisuals.Opened:
@@ -31,10 +31,10 @@
       enum.InworldSpriteState.State:
         enum.SolutionContainerLayers.Fill:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle_inworld.rsi}
         enum.OpenableVisuals.Layer:
           True: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi}
-          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi}
+          False: {sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle_inworld.rsi}
   - type: FitsInDispenser
     solution: drink
 

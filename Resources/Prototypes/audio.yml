@@ -159,6 +159,8 @@
 
     - /Audio/_OuterHorizons/Soundtracks/Ambience_2.ogg
     - /Audio/_OuterHorizons/Soundtracks/Ambience_3.ogg
+    - /Audio/_OuterHorizons/Soundtracks/Ambience_1.ogg
+    - /Audio/_OuterHorizons/Soundtracks/Ambience_4.ogg
     # OH14-Changes end, new ambients
 
 - type: soundCollection
@@ -238,18 +240,12 @@
 - type: soundCollection
   id: AmbienceSpace
   files:
-    # OH14-Changes start, new ambients
-    # - /Audio/Ambience/constellations.ogg
-    # - /Audio/Ambience/starlight.ogg
-    # - /Audio/Ambience/drifting.ogg
-    # - /Audio/Ambience/spookyspace1.ogg
-    # - /Audio/Ambience/spookyspace2.ogg
-    # - /Audio/Ambience/ambispace2.ogg
-    - /Audio/_OuterHorizons/Soundtracks/ambient11.ogg
-    - /Audio/_OuterHorizons/Soundtracks/ambient7.ogg
-    - /Audio/_OuterHorizons/Soundtracks/ambient6.ogg
-    - /Audio/_OuterHorizons/Soundtracks/ambient5.ogg
-    # OH14-Changes end, new ambients
+    - /Audio/Ambience/constellations.ogg
+    - /Audio/Ambience/starlight.ogg
+    - /Audio/Ambience/drifting.ogg
+    - /Audio/Ambience/spookyspace1.ogg
+    - /Audio/Ambience/spookyspace2.ogg
+    - /Audio/Ambience/ambispace2.ogg
 
 - type: soundCollection
   id: AmbienceSpooky

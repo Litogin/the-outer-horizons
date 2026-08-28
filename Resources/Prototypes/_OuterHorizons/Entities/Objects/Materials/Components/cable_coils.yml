@@ -5,13 +5,13 @@
   description: Небольшой моток кабеля. Интересно было бы сделать из этого какоето украшение, пхахахв блять. Пометьте как TODO.
   components:
   - type: Appearance
-  # - type: InworldSprite
-  # - type: GenericVisualizer
-  #   visuals:
-  #     enum.InworldSpriteState.State:
-  #       base:
-  #         True: {sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi}
-  #         False: {sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi}
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/cable_coils_inworld.rsi}
   - type: Tag
     tags:
     - CableCoil
@@ -20,7 +20,7 @@
     count: 16
     stackType: Cable
   - type: Sprite
-    sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
+    sprite: _OuterHorizons/Objects/Materials/cable_coils_inworld.rsi
   - type: Item
     sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
     size: Small
