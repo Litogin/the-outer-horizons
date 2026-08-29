@@ -81,6 +81,8 @@ public partial class RadiationSystem
                         rads = 0f;
                     else
                         rads = source.Entity.Comp1.Intensity;
+
+                    continue;
                 }
                 //OuterHorizons-End
                     
