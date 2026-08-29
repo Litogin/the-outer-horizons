@@ -1,3 +1,4 @@
+using Content.Server._OuterHorizons.SolarFlare.Components;
 using Content.Server.Radiation.Components;
 using Content.Server.Radiation.Events;
 using Content.Shared.Hands;

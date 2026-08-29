@@ -3,7 +3,7 @@
   name: генератор магнитных полей
   parent: BaseMachinePowered
   categories: [ ForkFiltered ]
-  description: Машина которая может спасти вас от неминуемой смерти. Большое потребление энергии, НЕ ДЕРЖИТЕ ВО ВКЛЮЧЕНОМ СОСТОЯНИИ ПРОСТО ТАК.
+  description: Машина которая может спасти вас от неминуемой смерти? Держитесь на расстоянии не более 2х метров от него чтобы радиация вас не убила. Большое потребление энергии, НЕ ДЕРЖИТЕ ВО ВКЛЮЧЕНОМ СОСТОЯНИИ ПРОСТО ТАК.
   components:
   - type: Construction
     graph: OH14_MagneticFiledGenerator
@@ -50,4 +50,9 @@
       map: ["enum.PowerDeviceVisualLayers.Powered"]
   - type: ApcPowerReceiver
     powerLoad: 8000
+  - type: MagneticFieldGenerator
+    spawn: OH14_MagneticFild
+  - type: PowerCharge
+    idlePower: 15
+    activePower: 7000
   - type: PowerSwitch
