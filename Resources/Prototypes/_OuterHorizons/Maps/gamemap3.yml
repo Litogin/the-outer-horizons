@@ -1,0 +1,52 @@
+- type: gameMap
+  id: OH14_GameMap3
+  mapName: OH14_GameMap3
+  mapPath: /Maps/_OuterHorizons/_TheGamemap3.yml
+  maxRandomOffset: 10
+  minPlayers: 0
+  stations:
+    Envelope:
+      stationProto: OH14_StationWithDirelicts
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: UCO "Envelope"
+        - type: StationJobs
+          availableJobs:
+            OH14_UcoRole: [ 4, 4 ]
+            OH14_UcoCommanderRole: [ 1, 1 ]
+    Kermer:
+      stationProto: OH14_StationWithDirelicts
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: UCO "Kermer"
+        - type: StationJobs
+          availableJobs:
+            OH14_UcoRole: [ 4, 4 ]
+            OH14_UcoCommanderRole: [ 1, 1 ]
+    Emmy:
+      stationProto: OH14_StationWithDirelicts
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: UCO "Emmy"
+        - type: StationJobs
+          availableJobs:
+            OH14_UcoRole: [ 4, 4 ]
+            OH14_UcoCommanderRole: [ 1, 1 ]
+    Ellesmere:
+      stationProto: OH14_StationWithDirelicts
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: RRE "Ellesmere"
+        - type: StationJobs
+          availableJobs:
+            OH14_RreRole: [ 4, 4 ]
+            OH14_RreCommanderRole: [ 1, 1 ]
+    Barla:
+      stationProto: OH14_StationWithDirelicts
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: RRE "Barla"
+        - type: StationJobs
+          availableJobs:
+            OH14_RreRole: [ 4, 4 ]
+            OH14_RreCommanderRole: [ 1, 1 ]
