@@ -275,6 +275,21 @@
   result: OH14_ClothingHeadHelmetOrange
   resultCount: 1
 
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_OxygenTankWhite
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 6
+  - !type:StackResource
+    stack: OH14_Component
+    count: 1
+  result: OH14_OxygenTankWhite
+  resultCount: 1
+
 # Уборка
 
 - type: CERecipe

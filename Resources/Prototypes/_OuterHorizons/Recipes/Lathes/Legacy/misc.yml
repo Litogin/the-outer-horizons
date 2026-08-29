@@ -37,7 +37,7 @@
   result: OH14_LightTube
   materials:
     OH14_SheetIron: 100
-    OH14_Component: 100
+    OH14_SheetGlass: 100
 
 - type: latheRecipe
   id: OH14_LightTubeWarm
@@ -45,7 +45,7 @@
   result: OH14_LightTubeWarm
   materials:
     OH14_SheetIron: 100
-    OH14_Component: 100
+    OH14_SheetGlass: 100
 
 - type: latheRecipe
   id: OH14_LightBulb
@@ -53,7 +53,7 @@
   result: OH14_LightBulb
   materials:
     OH14_SheetIron: 100
-    OH14_Component: 100
+    OH14_SheetGlass: 100
 
 - type: latheRecipe
   id: OH14_Girders
