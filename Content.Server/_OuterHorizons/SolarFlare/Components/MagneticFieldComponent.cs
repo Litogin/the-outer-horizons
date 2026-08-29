@@ -1,7 +1,7 @@
 namespace Content.Server._OuterHorizons.SolarFlare.Components;
 
 [RegisterComponent]
-public sealed partial class MagneticFiledComponent : Component
+public sealed partial class MagneticFieldComponent : Component
 {
 
 }

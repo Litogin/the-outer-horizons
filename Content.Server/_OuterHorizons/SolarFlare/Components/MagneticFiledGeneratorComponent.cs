@@ -1,8 +1,13 @@
+using Robust.Shared.Prototypes;
+
 namespace Content.Server._OuterHorizons.SolarFlare.Components;
 
 [RegisterComponent]
-public sealed partial class MagneticFiledGeneratorComponent : Component
+public sealed partial class MagneticFieldGeneratorComponent : Component
 {
     [ViewVariables(VVAccess.ReadOnly)]
-    public Entity<MagneticFiledComponent> Filed = default!;
+    public EntityUid? Filed = null;
+
+    [DataField("spawn", required: true)]
+    public string ProtoSpawnId = null!;
 }

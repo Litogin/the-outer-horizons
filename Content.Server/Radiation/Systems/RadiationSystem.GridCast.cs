@@ -75,17 +75,20 @@ public partial class RadiationSystem
             foreach (var source in _sources)
             {
                 //OuterHorizons-Start
-                if (source.Entity.Comp1.IgnoreDistation) //OuterHorizons
+                if (HasComp<RadiationImmuneComponent>(destUid))
                 {
-                    if (HasComp<ProtectSolarRadiationComponent>(destUid))
-                        rads = 0f;
-                    else
-                        rads = source.Entity.Comp1.Intensity;
+                    rads = 0f;
+                    break;
+                }
+
+                if (source.Entity.Comp1.IgnoreDistation)
+                {
+                    rads += source.Entity.Comp1.Intensity;
 
                     continue;
                 }
                 //OuterHorizons-End
-                    
+
                 // send ray towards destination entity
                 if (Irradiate(source, destUid, destTrs, destWorld, debug) is not { } ray)
                     continue;

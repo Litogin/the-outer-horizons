@@ -9,18 +9,17 @@ public sealed class MagneticFiledSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<MagneticFiledComponent, StartCollideEvent>(OnStartCollide);
-        SubscribeLocalEvent<MagneticFiledComponent, EndCollideEvent>(OnEndCollide);
+        SubscribeLocalEvent<MagneticFieldComponent, StartCollideEvent>(OnStartCollide);
+        SubscribeLocalEvent<MagneticFieldComponent, EndCollideEvent>(OnEndCollide);
     }
 
-    private void OnStartCollide(Entity<MagneticFiledComponent> entity, ref StartCollideEvent args)
+    private void OnStartCollide(Entity<MagneticFieldComponent> entity, ref StartCollideEvent args)
     {
-        if (!HasComp<ProtectSolarRadiationComponent>(args.OtherEntity))
-            AddComp<ProtectSolarRadiationComponent>(args.OtherEntity);
+        EnsureComp<RadiationImmuneComponent>(args.OtherEntity);
     }
 
-    private void OnEndCollide(Entity<MagneticFiledComponent> entity, ref EndCollideEvent args)
+    private void OnEndCollide(Entity<MagneticFieldComponent> entity, ref EndCollideEvent args)
     {
-        RemComp<ProtectSolarRadiationComponent>(args.OtherEntity);
+        RemComp<RadiationImmuneComponent>(args.OtherEntity);
     }
 }

@@ -1,15 +1,15 @@
 - type: entity
-  id: OH14_MagneticFiled
-  name: magnetic filed
+  id: OH14_MagneticFild
+  name: magnetic fild
   components:
-  - type: MagneticFiled
+  - type: MagneticField
   - type: Fixtures
     fixtures:
       fix1:
         hard: false
         shape:
-          !type:PhysShapeAabb
-          bounds: "-2,-2,2,2"
+          !type:PhysShapeCircle
+            radius: 6
         mask:
         - ItemMask
         layer:

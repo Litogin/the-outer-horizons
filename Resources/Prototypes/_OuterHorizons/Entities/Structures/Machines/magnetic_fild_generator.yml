@@ -1,6 +1,6 @@
 - type: entity
-  id: OH14_MagneticFiledGenerator
-  name: magnetic filed generator
+  id: OH14_MagneticFieldGenerator
+  name: magnetic fild generator
   parent: BaseMachinePowered
   categories: [ ForkFiltered ]
   description: A machine capable of protecting against a malevolent star that sneezed out its radiation
@@ -15,4 +15,10 @@
         shader: unshaded
         map: ["enum.GravityGeneratorVisualLayers.Core"]
   - type: ApcPowerReceiver
-    powerLoad: 4000
+    powerLoad: 7000
+  - type: MagneticFieldGenerator
+    spawn: OH14_MagneticFild
+  - type: PowerCharge
+    idlePower: 15
+    activePower: 7000
+  - type: PowerSwitch
