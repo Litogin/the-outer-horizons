@@ -8,7 +8,7 @@
   requirements:
   - !type:StackResource
     stack: OH14_SheetIron
-    count: 4
+    count: 2
   result: OH14_Component1
   resultCount: 1
 
@@ -20,6 +20,6 @@
   requirements:
   - !type:StackResource
     stack: OH14_SheetPlatinum
-    count: 4
+    count: 2
   result: OH14_ComponentAdv1
   resultCount: 1

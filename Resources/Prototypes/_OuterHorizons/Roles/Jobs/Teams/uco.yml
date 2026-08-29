@@ -39,12 +39,12 @@
 - type: job
   id: OH14_UcoCommanderRole
   name: Коммандир
-  description: Колонист, в бывшем на контракте с United Colonial Organization.
+  description: Глава поселения, по какойто причине выбранный экипажем.
   playTimeTracker: OH14_UcoCommanderRole
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: OH14_UcoDepartment
-      time: 2h
+  # requirements:
+  #   - !type:DepartmentTimeRequirement
+  #     department: OH14_UcoDepartment
+  #     time: 2h
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
   setPreference: true

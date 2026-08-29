@@ -35,6 +35,15 @@
       "name": "h-tip"
     },
     {
+      "name": "l-tip_inworld"
+    },
+    {
+      "name": "m-tip_inworld"
+    },
+    {
+      "name": "h-tip_inworld"
+    },
+    {
       "name": "inhand-left",
       "directions": 4
     },

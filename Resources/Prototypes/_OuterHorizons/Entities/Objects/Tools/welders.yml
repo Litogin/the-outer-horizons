@@ -105,16 +105,25 @@
   - type: ItemTogglePointLight
   - type: Appearance
   - type: RequiresEyeProtection
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 200
-  - type: StaticPrice
-    price: 40
   - type: IgnitionSource
     temperature: 700
   - type: Tag
     tags:
     - OH14_Tools
+
+- type: entity
+  name: ваккумная сварка
+  parent: OH14_WelderBasic
+  id: OH14_WelderEmpty
+  suffix: Пуст
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 0
+        maxVol: 200
 
 - type: entity
   name: паяльник

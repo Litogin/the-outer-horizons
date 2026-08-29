@@ -10,20 +10,20 @@
     graph: OH14_MiningDrill
     node: OH14_MiningDrill
   - type: Appearance
-  # - type: InworldSprite
-  # - type: GenericVisualizer
-  #   visuals:
-  #     enum.InworldSpriteState.State:
-  #       base:
-  #         True: {state: icon}
-  #         False: {state: inworld}
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: l-icon}
+          False: {state: l-inworld}
   - type: Item
     size: Normal
     storedRotation: 0
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
     layers:
-    - state: l-icon
+    - state: l-inworld
       map: ["base"]
   - type: MeleeWeapon
     autoAttack: true
@@ -46,10 +46,16 @@
   - type: Construction
     graph: OH14_MiningDrill
     node: OH14_MiningDrillT2
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: m-icon}
+          False: {state: m-inworld}
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
     layers:
-    - state: m-icon
+    - state: m-inworld
       map: ["base"]
   - type: MeleeWeapon
     damage:
@@ -66,10 +72,16 @@
   - type: Construction
     graph: OH14_MiningDrill
     node: OH14_MiningDrillT3
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: h-icon}
+          False: {state: h-inworld}
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
     layers:
-    - state: h-icon
+    - state: h-inworld
       map: ["base"]
   - type: MeleeWeapon
     damage:
@@ -87,14 +99,23 @@
   suffix: Железный
   description: Обычный.
   components:
+  - type: InworldSprite
   - type: Tag
     tags:
     - OH14_MiningDrillTip
   - type: Item
     size: Small
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: l-tip}
+          False: {state: l-tip_inworld}
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/mining_drill.rsi
-    state: l-tip
+    layers:
+    - state: l-tip_inworld
+      map: ["base"]
 
 - type: entity
   parent: OH14_MiningDrillTip
@@ -105,8 +126,16 @@
   - type: Tag
     tags:
     - OH14_MiningDrillTipT2
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: m-tip}
+          False: {state: m-tip_inworld}
   - type: Sprite
-    state: m-tip
+    layers:
+    - state: m-tip_inworld
+      map: ["base"]
 
 - type: entity
   parent: OH14_MiningDrillTip
@@ -117,8 +146,16 @@
   - type: Tag
     tags:
     - OH14_MiningDrillTipT3
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: h-tip}
+          False: {state: h-tip_inworld}
   - type: Sprite
-    state: h-tip
+    layers:
+    - state: h-tip_inworld
+      map: ["base"]
 
 # Каркас
 

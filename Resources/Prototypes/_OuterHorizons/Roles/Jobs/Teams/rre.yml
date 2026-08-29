@@ -39,12 +39,12 @@
 - type: job
   id: OH14_RreCommanderRole
   name: Старпом
-  description: Поселенец, в бывшем сотрудник компании Ringnova RE.
+  description: Глава поселения, по какойто причине выбранный экипажем.
   playTimeTracker: OH14_RreCommanderRole
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: OH14_RreDepartment
-      time: 2h
+  # requirements:
+  #   - !type:DepartmentTimeRequirement
+  #     department: OH14_RreDepartment
+  #     time: 2h
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
   setPreference: true

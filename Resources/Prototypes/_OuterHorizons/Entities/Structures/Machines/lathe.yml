@@ -245,7 +245,7 @@
     - OH14_ComponentsStatic
     - OH14_ElectrStatic
     - OH14_ElectronicStatic
-    - OH14_DeviesStatic
+    # - OH14_DeviesStatic
 
 # Печь
 

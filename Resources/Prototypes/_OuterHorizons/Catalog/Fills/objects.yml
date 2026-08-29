@@ -41,7 +41,6 @@
         children:
         - id: OH14_WelderBasic
         - id: OH14_ClothingHeadWeldingMask
-          prob: 0.8
         - id: OH14_CrowbarBasic
         - id: OH14_WrenchBasic
 
@@ -59,4 +58,3 @@
         - id: OH14_CableCoilLV
         - id: OH14_CableCoilMV
         - id: ClothingHandsInsulatedGloves
-          prob: 0.8

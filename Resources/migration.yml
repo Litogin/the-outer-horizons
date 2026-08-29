@@ -839,3 +839,11 @@ OH14_Rock1: OH14_Cobblestone1
 OH14_GeneratorMiniNuclearReactor: null
 
 OH14_ReinforcedGirder: null
+
+LootSpawnerToolbox75: LootSpawnerToolbox
+LootSpawnerTools75: LootSpawnerTools
+LootSpawnerMiningTools75: LootSpawnerMiningTools
+LootSpawnerMedical75: LootSpawnerMedical
+LootSpawnerBottles75: LootSpawnerBottles
+LootSpawnerGasCans75: LootSpawnerGasCans
+LootSpawnerGasCansOxy75: LootSpawnerGasCansOxy
