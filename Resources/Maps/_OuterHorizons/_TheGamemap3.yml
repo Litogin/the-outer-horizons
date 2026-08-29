@@ -51,6 +51,8 @@ entities:
     - type: OccluderTree
     - type: Parallax
       parallax: OH14_SaturnRings
+    - type: MapLight
+      ambientLightColor: "#37524E"
     - type: WorldController
       chunks: {}
     - type: BiomeSelection

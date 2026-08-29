@@ -209,10 +209,7 @@ entities:
     - type: Parallax
       parallax: OH14_SaturnRings
     - type: MapLight
-      ambientLightColor: '#79716AFF'
-    - type: Roof
-      data: {}
-    - type: SunShadow
+      ambientLightColor: "#37524E"
     - type: WorldController
       chunks: {}
     - type: BiomeSelection
