@@ -1,0 +1,38 @@
+- type: constructionGraph
+  id: OH14_MagneticFiledGenerator
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: frame1
+          steps:
+            - material: OH14_Girders
+              amount: 4
+              doAfter: 2
+    - node: frame1
+      entity: OH14_MagneticFiledGeneratorFrame
+      edges:
+        - to: OH14_MagneticFiledGenerator
+          steps:
+            - tag: OH14_PowerUnitComplete
+              name: construction-graph-tag-powerunit
+              doAfter: 1
+            - tag: OH14_ControlUnitComplete
+              name: construction-graph-tag-controlunit
+              doAfter: 1
+            - material: OH14_ComponentAdv
+              amount: 16
+              doAfter: 1
+            - tag: OH14_GoldStator
+              name: construction-graph-tag-gold-stator
+              doAfter: 1
+            - tag: OH14_GoldStator
+              name: construction-graph-tag-gold-stator
+              doAfter: 1
+            - material: OH14_SheetCobalt
+              amount: 10
+              doAfter: 1
+    - node: OH14_MagneticFiledGenerator
+      entity: OH14_MagneticFiledGenerator

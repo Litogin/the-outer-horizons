@@ -340,3 +340,18 @@
   - type: Construction
     graph: OH14_ElectrolyzerFrame
     node: frame1
+
+## Геник
+
+- type: entity
+  id: OH14_MagneticFiledGeneratorFrame
+  parent: OH14_FrameBasic
+  name: каркас генератора магнитных полей
+  components:
+  - type: Sprite
+    offset: "0, 0.3"
+    sprite: _OuterHorizons/Structures/Machines/shield_generator.rsi
+    state: frame0
+  - type: Construction
+    graph: OH14_MagneticFiledGenerator
+    node: frame1

@@ -1,0 +1,53 @@
+- type: entity
+  id: OH14_MagneticFiledGenerator
+  name: генератор магнитных полей
+  parent: BaseMachinePowered
+  categories: [ ForkFiltered ]
+  description: Машина которая может спасти вас от неминуемой смерти. Большое потребление энергии, НЕ ДЕРЖИТЕ ВО ВКЛЮЧЕНОМ СОСТОЯНИИ ПРОСТО ТАК.
+  components:
+  - type: Construction
+    graph: OH14_MagneticFiledGenerator
+    node: OH14_MagneticFiledGenerator
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Appearance
+  - type: PointLight
+    radius: 5
+    energy: 2.0
+    enabled: false
+    color: "#65B4BD"
+  - type: LitOnPowered
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    enabled: false
+    volume: 3
+    range: 8
+    sound:
+      path: /Audio/_OuterHorizons/Machines/reactor_working.ogg
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/shield_generator.rsi
+    noRot: true
+    offset: "0, 0.3"
+    layers:
+    - state: icon
+    - state: on_unshaded
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: ApcPowerReceiver
+    powerLoad: 8000
+  - type: PowerSwitch

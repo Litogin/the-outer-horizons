@@ -1,5 +1,15 @@
 - type: construction
   hide: false
+  id: OH14_MagneticFiledGenerator
+  graph: OH14_MagneticFiledGenerator
+  startNode: start
+  targetNode: OH14_MagneticFiledGenerator
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
   id: OH14_Console
   graph: OH14_Console
   startNode: start
