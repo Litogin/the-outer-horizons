@@ -18,16 +18,16 @@
       entries:
         OH14_IceMoon:
           - id: OH14_BaseWallRock
-            prob: 0.5
+            prob: 0.44
             orGroup: rock
           - id: OH14_BaseWallIce
-            prob: 0.1
+            prob: 0.2
             orGroup: rock
           - id: OH14_WallStoneOreIron
-            prob: 0.08
+            prob: 0.06
             orGroup: rock
           - id: OH14_WallStoneOreCopper
-            prob: 0.06
+            prob: 0.04
             orGroup: rock
           - id: OH14_WallStoneOrePlatinum
             prob: 0.02

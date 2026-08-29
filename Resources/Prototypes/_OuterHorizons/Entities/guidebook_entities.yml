@@ -11,3 +11,10 @@
   - type: Sprite
     sprite: _OuterHorizons/GuidebookEntities.rsi
     state: FireCam
+
+- type: entity
+  id: OH14_GuidebookAsteroids
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/GuidebookEntities.rsi
+    state: Asteroids
