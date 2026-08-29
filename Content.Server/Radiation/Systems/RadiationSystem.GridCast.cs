@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Server._OuterHorizons.SolarFlare.Components;
 using Content.Server.Radiation.Components;
 using Content.Server.Radiation.Events;
 using Content.Shared.Radiation.Components;
@@ -73,6 +74,21 @@ public partial class RadiationSystem
             var rads = 0f;
             foreach (var source in _sources)
             {
+                //OuterHorizons-Start
+                if (HasComp<RadiationImmuneComponent>(destUid))
+                {
+                    rads = 0f;
+                    break;
+                }
+
+                if (source.Entity.Comp1.IgnoreDistation)
+                {
+                    rads += source.Entity.Comp1.Intensity;
+
+                    continue;
+                }
+                //OuterHorizons-End
+
                 // send ray towards destination entity
                 if (Irradiate(source, destUid, destTrs, destWorld, debug) is not { } ray)
                     continue;
