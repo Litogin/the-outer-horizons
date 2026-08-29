@@ -28,22 +28,6 @@ public sealed class SunSystem : EntitySystem
 
     private void OnSolarFlare(EntityUid uid, SolarFlareComponent comp, ComponentInit arg)
     {
-        var mapIds = _mapSystem.GetAllMapIds();
-        var isMap = false;
-        foreach (var mapId in mapIds)
-        {
-            if (uid == _mapSystem.GetMap(mapId))
-            {
-                isMap = true;
-                break;
-            }
-        }
-
-        if (!isMap)
-        {
-            RemComp<SolarFlareComponent>(uid);
-        }
-
         var radSourceComp = AddComp<RadiationSourceComponent>(uid);
         radSourceComp.IgnoreDistation = true;
         radSourceComp.Slope = 0f;
