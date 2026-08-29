@@ -3,8 +3,8 @@
   abstract: true
   id: OH14_BasicBatteryArray
   parent: [ OH14_BaseStructure, BaseMachine ]
-  name: массив аккамуляторов
-  description: 4 высоковольтных аккамулятора сплетенных в одну сеть. Ваш источник бесперебойного питания на этот час.
+  name: массив аккумуляторов
+  description: 4 высоковольтных аккумулятора сплетенных в одну сеть. Ваш источник бесперебойного питания на этот час.
   placement:
     mode: SnapgridCenter
   components:

@@ -2,7 +2,7 @@
   id: OH14_EmergencyLight
   categories: [ ForkFiltered ]
   name: аварийная лампа
-  description: Небольшая аварийная лампа с аккамулятором. Будет пищать еще какое-то время, пока в конце концов, это место не умрет в тишине.
+  description: Небольшая аварийная лампа с аккумулятором. Будет пищать еще какое-то время, пока в конце концов, это место не умрет в тишине.
   parent: AlwaysPoweredWallLight
   suffix: ""
   components:

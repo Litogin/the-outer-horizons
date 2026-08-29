@@ -222,7 +222,7 @@
 
 - type: entity
   id: LootSpawnerBatteryArray
-  name: спавнер аккамуляторы
+  name: спавнер аккумуляторы
   suffix: 75%
   categories: [ ForkFiltered ]
   parent: MarkerBase

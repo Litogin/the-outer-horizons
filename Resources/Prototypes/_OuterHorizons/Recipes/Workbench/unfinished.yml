@@ -220,7 +220,7 @@
   result: OH14_JetpackWhite
   resultCount: 1
 
-# Джетпак
+# Магбутсы
 
 - type: CERecipe
   tag: CERecipeWorkbench
@@ -238,6 +238,41 @@
     stack: OH14_SheetCobalt
     count: 2
   result: OH14_ClothingShoesBootsMagBasic
+  resultCount: 1
+
+# Ева
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ClothingOuterHardsuitOrange
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 3
+  - !type:StackResource
+    stack: OH14_Component
+    count: 2
+  result: OH14_ClothingOuterHardsuitOrange
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ClothingHeadHelmetOrange
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_SheetGlass
+    count: 1
+  - !type:StackResource
+    stack: OH14_Component
+    count: 2
+  result: OH14_ClothingHeadHelmetOrange
   resultCount: 1
 
 # Уборка

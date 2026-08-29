@@ -7,17 +7,17 @@
   description: Доисторическая ковырялка для каменных пород.
   components:
   - type: Appearance
-  # - type: InworldSprite
-  # - type: GenericVisualizer
-  #   visuals:
-  #     enum.InworldSpriteState.State:
-  #       base:
-  #         True: {state: pickaxe}
-  #         False: {state: inworld}
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: pickaxe}
+          False: {state: inworld}
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe.rsi
     layers:
-    - state: pickaxe
+    - state: inworld
       map: ["base"]
   - type: MeleeWeapon
     attackRate: 0.7
@@ -91,11 +91,20 @@
   suffix: Железный
   description: Обычный.
   components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {state: tip}
+          False: {state: tip_inworld}
   - type: Item
     size: Small
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe.rsi
-    state: tip
+    layers:
+    - state: tip_inworld
+      map: ["base"]
   - type: Construction
     graph: OH14_PickaxeTip
     node: start

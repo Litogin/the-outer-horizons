@@ -2,7 +2,7 @@
   id: OH14_CableTerminal
   categories: [ ForkFiltered ]
   name: кабельный терминал
-  description: Позволяет направить поток энергии через аккамулятор. Подключать красной стороной.
+  description: Позволяет направить поток энергии через аккумулятор. Подключать красной стороной.
   placement:
     mode: SnapgridCenter
   components:

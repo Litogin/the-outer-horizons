@@ -175,7 +175,7 @@
 - type: entity
   id: OH14_BatteryArrayFrame
   parent: OH14_FrameBasic
-  name: каркас массива аккамуляторов
+  name: каркас массива аккумуляторов
   components:
   - type: ContainerContainer
     containers:
