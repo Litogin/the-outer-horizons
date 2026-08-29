@@ -86,7 +86,7 @@ public partial class RadiationSystem
                     
                 // send ray towards destination entity
                 if (Irradiate(source, destUid, destTrs, destWorld, debug) is not { } ray)
-                        continue;
+                    continue;
 
                 // add rads to total rad exposure
                 if (ray.ReachedDestination)
