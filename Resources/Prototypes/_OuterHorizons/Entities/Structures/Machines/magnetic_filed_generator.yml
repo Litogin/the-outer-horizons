@@ -1,0 +1,18 @@
+- type: entity
+  id: OH14_MagneticFiledGenerator
+  name: magnetic filed generator
+  parent: BaseMachinePowered
+  categories: [ ForkFiltered ]
+  description: A machine capable of protecting against a malevolent star that sneezed out its radiation
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/gravity_generator.rsi
+    snapCardinals: true
+    layers:
+      - state: on
+        map: ["enum.GravityGeneratorVisualLayers.Base"]
+      - state: idle
+        shader: unshaded
+        map: ["enum.GravityGeneratorVisualLayers.Core"]
+  - type: ApcPowerReceiver
+    powerLoad: 4000
