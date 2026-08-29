@@ -23,9 +23,7 @@ public sealed class SunSystem : EntitySystem
 
         var query = EntityQueryEnumerator<SolarFlareComponent, RadiationSourceComponent>();
         while (query.MoveNext(out var uid, out var solarFlare, out var radiationSource))
-        {
             OnUpdateRad(uid, solarFlare, radiationSource, frameTime);
-        }
     }
 
     private void OnSolarFlare(EntityUid uid, SolarFlareComponent comp, ComponentInit arg)
