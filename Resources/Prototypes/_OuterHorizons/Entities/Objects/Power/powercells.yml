@@ -46,15 +46,18 @@
           True: {sprite: _OuterHorizons/Objects/Power/power_cells.rsi}
           False: {sprite: _OuterHorizons/Objects/Power/power_cells_inworld.rsi}
 
-# Основные
+# Маленькая
 
 - type: entity
-  id: OH14_PowerCellMedium # Обычная
+  id: OH14_PowerCellMedium
   parent: [ OH14_ItemSFXSmall, OH14_BasicPowerCell ]
   name: батарейка
-  description: Обычная батарейка МКП3 класса. Не поджигать, не мочить и не вскрывать, на вкус как смерть в отравлении тяжелыми металлами. Я вас предупредил
+  description: Не поджигать, не мочить и не вскрывать, на вкус как смерть в отравлении тяжелыми металлами. До вас уже все проверяли.
   suffix: Full
   components:
+  - type: Construction
+    graph: OH14_PowerCellMedium
+    node: OH14_PowerCellMediumEmpty
   - type: Tag
     tags:
       - PowerCell
@@ -102,12 +105,30 @@
     startingCharge: 0
 
 - type: entity
-  id: OH14_PowerCellBig # Аккум
+  parent: OH14_BasicComponents
+  id: OH14_PowerCellMediumFrame
+  name: каркас батарейки
+  description: В иной ситуации это был бы патрон.
+  components:
+  - type: Construction
+    graph: OH14_PowerCellMedium
+    node: start
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Power/power_cells.rsi
+    state: small_frame
+
+# Большая
+
+- type: entity
+  id: OH14_PowerCellBig
   parent: [ OH14_ItemSFXAlt, OH14_BasicPowerCell ]
-  name: аккамулятор
+  name: аккумулятор
   description: Огромная батарейка, большая батарейка, хорошая батарейка.
   suffix: Full
   components:
+  - type: Construction
+    graph: OH14_PowerCellBig
+    node: OH14_PowerCellBigEmpty
   - type: Tag
     tags:
       - OH14_PowerCellBig
@@ -159,3 +180,16 @@
   - type: Battery
     maxCharge: 3600
     startingCharge: 0
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_PowerCellBigFrame
+  name: каркас аккумулятора
+  description: В иной ситуации это был бы ящик.
+  components:
+  - type: Construction
+    graph: OH14_PowerCellBig
+    node: start
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Power/power_cells.rsi
+    state: medium_frame

@@ -47,5 +47,5 @@
   hidden: false
   locFilter: "ru-RU"
   id: OH14_GuideCorps
-  name: Организации
+  name: Происхождения
   text: "/ServerInfo/_OuterHorizons/Guides/Corps.xml"

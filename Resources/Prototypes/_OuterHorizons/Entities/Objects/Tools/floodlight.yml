@@ -5,7 +5,7 @@
   description: Очень яркий и очень ослепляющий. То что нужно для ваших и без того больных глаз, да?
   components:
   - type: HandheldLight
-    wattage: .6
+    wattage: .10
   - type: Rotatable
   - type: ToggleableVisuals
     spriteLayer: light
@@ -28,6 +28,8 @@
   - type: Item
     sprite: _OuterHorizons/Objects/Tools/floodlight.rsi
     size: Normal
+    shape:
+    - 0,0,1,2
   - type: Sprite
     noRot: true
     sprite: _OuterHorizons/Objects/Tools/floodlight.rsi

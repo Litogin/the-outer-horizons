@@ -1,0 +1,42 @@
+- type: latheRecipePack
+  id: OH14_ComponentsStatic
+  recipes:
+  - OH14_Component
+  - OH14_ComponentAdv
+
+- type: latheRecipePack
+  id: OH14_ElectrStatic
+  recipes:
+  - OH14_VacuumTube
+  - OH14_Capacitor
+  - OH14_Battery
+  - OH14_CircuitCopper
+  - OH14_CircuitGold
+
+- type: latheRecipePack
+  id: OH14_PowerStatic
+  recipes:
+  - OH14_CoilIron
+  - OH14_CoilCopper
+  - OH14_CoilGold
+  - OH14_CopperChamber
+  - OH14_HeatChamber
+  - OH14_CopperStator
+  - OH14_CopperRotor
+  - OH14_GoldStator
+  - OH14_GoldRotor
+
+- type: latheRecipePack
+  id: OH14_ContructionStatic
+  recipes:
+  - OH14_SheetGirder
+  - OH14_SheetPipes
+  - OH14_Panel
+  - OH14_PanelHeavy
+  - OH14_PanelHeat
+
+- type: latheRecipePack
+  id: OH14_UnitsStatic
+  recipes:
+  - OH14_PowerUnit
+  - OH14_ControlUnit

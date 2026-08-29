@@ -1,0 +1,38 @@
+- type: constructionGraph
+  id: OH14_PickaxeTip
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: OH14_Pickaxe
+          steps:
+            - tag: OH14_MediumHandle
+              doAfter: 1
+    - node: OH14_Pickaxe
+      entity: OH14_Pickaxe
+
+- type: constructionGraph
+  id: OH14_PickaxeTipT2
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: OH14_PickaxeT2
+          steps:
+            - tag: OH14_MediumHandle
+              doAfter: 1
+    - node: OH14_PickaxeT2
+      entity: OH14_PickaxeT2
+
+- type: constructionGraph
+  id: OH14_PickaxeTipT3
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: OH14_PickaxeT3
+          steps:
+            - tag: OH14_MediumHandle
+              doAfter: 1
+    - node: OH14_PickaxeT3
+      entity: OH14_PickaxeT3

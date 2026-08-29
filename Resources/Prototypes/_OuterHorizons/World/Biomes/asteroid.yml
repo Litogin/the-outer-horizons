@@ -8,14 +8,14 @@
     - type: SimpleDebrisSelector
       debrisTable:
         # Простые ебучие камушки
-        - id: OH14_IceDebrisSmall
-          prob: 0.1
-        - id: OH14_IceDebrisMedium
-          prob: 0.1
-        - id: OH14_IceDebrisLarge
-          prob: 0.1
-        - id: OH14_IceDebrisLarger
-          prob: 0.1
+        # - id: OH14_IceDebrisSmall
+        #   prob: 0.1
+        # - id: OH14_IceDebrisMedium
+        #   prob: 0.1
+        # - id: OH14_IceDebrisLarge
+        #   prob: 0.1
+        # - id: OH14_IceDebrisLarger
+        #   prob: 0.1
         - id: OH14_AsteroidDebrisSmall
           prob: 0.3
         - id: OH14_AsteroidDebrisMedium
@@ -24,7 +24,7 @@
           prob: 0.3
         - id: OH14_AsteroidDebrisLarger
           prob: 0.1
-        # Обломки
+        ######################### Обломки
         # Кура
         - id: OH14_BaseDirelictKutlum1
           prob: 0.001
@@ -32,14 +32,14 @@
           prob: 0.001
         # Диска
         - id: OH14_BaseDirelictDiscovery1
-          prob: 0.0005
+          prob: 0.001
         - id: OH14_BaseDirelictDiscovery2
           prob: 0.001
         - id: OH14_BaseDirelictDiscovery3
           prob: 0.001
         # Консерва
         - id: OH14_BaseDirelictTinCan1
-          prob: 0.0005
+          prob: 0.001
         - id: OH14_BaseDirelictTinCan2
           prob: 0.001
         - id: OH14_BaseDirelictTinCan3
@@ -48,12 +48,12 @@
         - id: OH14_BaseDirelictHauler1
           prob: 0.0005
         - id: OH14_BaseDirelictHauler2
-          prob: 0.001
+          prob: 0.0005
         - id: OH14_BaseDirelictHauler3
-          prob: 0.001
+          prob: 0.0005
         # Мика
         - id: OH14_BaseDirelictMika1
-          prob: 0.0005
+          prob: 0.001
         - id: OH14_BaseDirelictMika2
           prob: 0.001
         - id: OH14_BaseDirelictMika3

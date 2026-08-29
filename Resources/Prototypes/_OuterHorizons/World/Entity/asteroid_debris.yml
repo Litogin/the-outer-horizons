@@ -5,24 +5,55 @@
   abstract: true
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
+    - type: BlobSmoothFloorPlanBuilder
       floorTileset:
       - OH14_IceMoon
+      crustTileset:
+      - OH14_IceMoonAlternative
       blobDrawProb: 0.5
       radius: 6
       floorPlacements: 16
+      crustLayers: 4
     - type: SimpleFloorPlanPopulator
       entries:
         OH14_IceMoon:
-          - id: OH14_BaseWallStone
-            prob: 0.5
+          - id: OH14_BaseWallRock
+            prob: 0.44
             orGroup: rock
           - id: OH14_BaseWallIce
-            prob: 0.1
+            prob: 0.2
             orGroup: rock
-          - id: OH14_BaseWallStoneOre
+          - id: OH14_WallStoneOreIron
+            prob: 0.06
+            orGroup: rock
+          - id: OH14_WallStoneOreCopper
+            prob: 0.04
+            orGroup: rock
+          - id: OH14_WallStoneOrePlatinum
             prob: 0.02
             orGroup: rock
+          - id: OH14_WallStoneOreSilicon
+            prob: 0.02
+            orGroup: rock
+          - id: OH14_WallStoneOreCobalt
+            prob: 0.02
+            orGroup: rock
+        OH14_IceMoonAlternative:
+          - id: OH14_BaseWallStone
+            prob: 0.8
+            orGroup: crust_rock
+          - id: OH14_WallStoneOreIron
+            prob: 0.06
+            orGroup: crust_rock
+          - id: OH14_WallStoneOreCopper
+            prob: 0.06
+            orGroup: crust_rock
+          - id: OH14_WallStoneOreSilicon
+            prob: 0.04
+            orGroup: crust_rock
+          - id: OH14_WallStoneOreCobalt
+            prob: 0.04
+            orGroup: crust_rock
     - type: IFF
       flags: HideLabel
       color: "#BDA89A"
@@ -36,7 +67,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
+    - type: BlobSmoothFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 15
       floorPlacements: 50
@@ -48,7 +79,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
+    - type: BlobSmoothFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 17
       floorPlacements: 200
@@ -60,7 +91,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
+    - type: BlobSmoothFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 20
       floorPlacements: 450
@@ -72,88 +103,90 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
+    - type: BlobSmoothFloorPlanBuilder
       blobDrawProb: 0.66
       radius: 23
       floorPlacements: 500
 
 # Ледяное
 
-- type: entity
-  id: OH14_IceDebris
-  parent: OH14_BaseAsteroidDebris
-  name: ice debris
-  abstract: true
-  components:
-    - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      floorTileset:
-      - OH14_Ice
-      blobDrawProb: 0.5
-      radius: 6
-      floorPlacements: 16
-    - type: SimpleFloorPlanPopulator
-      entries:
-        OH14_Ice:
-          - id: OH14_BaseWallStone
-            prob: 0.05
-            orGroup: rock
-          - id: OH14_BaseWallIce
-            prob: 0.5
-            orGroup: rock
-          - id: OH14_BaseWallStoneOre
-            prob: 0.005
-            orGroup: rock
-    - type: IFF
-      flags: HideLabel
-      color: "#97A2B8"
-    - type: Shuttle
-      bodyModifier: 5
+# - type: entity
+#   id: OH14_IceDebris
+#   parent: OH14_BaseAsteroidDebris
+#   name: ice debris
+#   abstract: true
+#   components:
+#     - type: MapGrid
+#     - type: BlobSmoothFloorPlanBuilder
+#       floorTileset:
+#       - OH14_IceMoon
+#       crustTileset:
+#       - OH14_Ice
+#       blobDrawProb: 0.5
+#       radius: 6
+#       floorPlacements: 16
+#     - type: SimpleFloorPlanPopulator
+#       entries:
+#         OH14_Ice:
+#           - id: OH14_BaseWallStone
+#             prob: 0.05
+#             orGroup: rock
+#           - id: OH14_BaseWallIce
+#             prob: 0.5
+#             orGroup: rock
+#           - id: OH14_BaseWallStoneOre
+#             prob: 0.005
+#             orGroup: rock
+#     - type: IFF
+#       flags: HideLabel
+#       color: "#97A2B8"
+#     - type: Shuttle
+#       bodyModifier: 5
 
-- type: entity
-  id: OH14_IceDebrisSmall
-  parent: OH14_IceDebris
-  name: ice debris small
-  categories: [ HideSpawnMenu ]
-  components:
-    - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      blobDrawProb: 0.66
-      radius: 15
-      floorPlacements: 50
+# - type: entity
+#   id: OH14_IceDebrisSmall
+#   parent: OH14_IceDebris
+#   name: ice debris small
+#   categories: [ HideSpawnMenu ]
+#   components:
+#     - type: MapGrid
+#     - type: BlobSmoothFloorPlanBuilder
+#       blobDrawProb: 0.66
+#       radius: 15
+#       floorPlacements: 50
 
-- type: entity
-  id: OH14_IceDebrisMedium
-  parent: OH14_IceDebris
-  name: ice debris medium
-  categories: [ HideSpawnMenu ]
-  components:
-    - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      blobDrawProb: 0.66
-      radius: 17
-      floorPlacements: 200
+# - type: entity
+#   id: OH14_IceDebrisMedium
+#   parent: OH14_IceDebris
+#   name: ice debris medium
+#   categories: [ HideSpawnMenu ]
+#   components:
+#     - type: MapGrid
+#     - type: BlobSmoothFloorPlanBuilder
+#       blobDrawProb: 0.66
+#       radius: 17
+#       floorPlacements: 200
 
-- type: entity
-  id: OH14_IceDebrisLarge
-  parent: OH14_IceDebris
-  name: ice debris large
-  categories: [ HideSpawnMenu ]
-  components:
-    - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      blobDrawProb: 0.66
-      radius: 20
-      floorPlacements: 450
+# - type: entity
+#   id: OH14_IceDebrisLarge
+#   parent: OH14_IceDebris
+#   name: ice debris large
+#   categories: [ HideSpawnMenu ]
+#   components:
+#     - type: MapGrid
+#     - type: BlobSmoothFloorPlanBuilder
+#       blobDrawProb: 0.66
+#       radius: 20
+#       floorPlacements: 450
 
-- type: entity
-  id: OH14_IceDebrisLarger
-  parent: OH14_IceDebris
-  name: ice debris larger
-  categories: [ HideSpawnMenu ]
-  components:
-    - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      blobDrawProb: 0.66
-      radius: 23
-      floorPlacements: 500
+# - type: entity
+#   id: OH14_IceDebrisLarger
+#   parent: OH14_IceDebris
+#   name: ice debris larger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#     - type: MapGrid
+#     - type: BlobSmoothFloorPlanBuilder
+#       blobDrawProb: 0.66
+#       radius: 23
+#       floorPlacements: 500

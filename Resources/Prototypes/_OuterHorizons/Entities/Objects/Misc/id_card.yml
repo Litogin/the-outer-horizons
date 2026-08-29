@@ -37,6 +37,7 @@
 - type: entity
   parent: OH14_IDCardBasic
   id: OH14_IDCardRRE
+  suffix: Ringnova
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
@@ -51,6 +52,7 @@
 - type: entity
   parent: OH14_IDCardBasic
   id: OH14_IDCardRRECommander
+  suffix: Ringnova Commander
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
@@ -65,6 +67,7 @@
 - type: entity
   parent: OH14_IDCardBasic
   id: OH14_IDCardUCO
+  suffix: Colonist
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi
@@ -79,6 +82,7 @@
 - type: entity
   parent: OH14_IDCardBasic
   id: OH14_IDCardUCOCommander
+  suffix: Colonist Commander
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Misc/id_cards_inworld.rsi

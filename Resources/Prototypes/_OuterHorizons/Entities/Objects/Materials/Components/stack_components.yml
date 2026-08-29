@@ -1,0 +1,320 @@
+# База
+
+- type: entity
+  parent: [ OH14_ItemSFXSmall, OH14_BasicMaterialStack ]
+  id: OH14_BasicStackComponents
+  abstract: true
+  name: компонент
+  description: Бесполезная хрень, которая почему то требуется для ваших кустарных изысканий.
+  components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi
+  - type: Item
+    # sprite: _OuterHorizons/Objects/Materials/components.rsi
+  - type: Appearance
+
+### Запчасти
+# Обычные
+
+- type: entity
+  parent: OH14_BasicStackComponents
+  id: OH14_Component
+  name: компонент
+  description: Механический компонент для более продвинутых структур и устройств.
+  suffix: "8, Компоненты"
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Component: 100
+  - type: Item
+    size: Tiny
+  - type: Stack
+    count: 8
+    stackType: OH14_Component
+    baseLayer: base
+    layerStates:
+    - sparepart
+    - sparepart_2
+    - sparepart_3
+  - type: Sprite
+    layers:
+    - state: sparepart_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_Component
+  id: OH14_Component4
+  suffix: "4, Компоненты"
+  components:
+  - type: Sprite
+    state: sparepart_2
+  - type: Stack
+    stackType: OH14_Component
+    count: 4
+
+- type: entity
+  parent: OH14_Component
+  id: OH14_Component1
+  suffix: "1, Компоненты"
+  components:
+  - type: Sprite
+    state: sparepart
+  - type: Stack
+    stackType: OH14_Component
+    count: 1
+
+# Продвинутые
+
+- type: entity
+  parent: OH14_BasicStackComponents
+  id: OH14_ComponentAdv
+  name: улучшенный компонент
+  description: Механический компонент для более продвинутых структур и устройств.
+  suffix: "8, Компоненты"
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_ComponentAdv: 100
+  - type: Item
+    size: Tiny
+  - type: Stack
+    count: 8
+    stackType: OH14_ComponentAdv
+    baseLayer: base
+    layerStates:
+    - adv_sparepart
+    - adv_sparepart_2
+    - adv_sparepart_3
+  - type: Sprite
+    layers:
+    - state: adv_sparepart_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_ComponentAdv
+  id: OH14_ComponentAdv4
+  suffix: "4, Компоненты"
+  components:
+  - type: Sprite
+    state: adv_sparepart_2
+  - type: Stack
+    stackType: OH14_ComponentAdv
+    count: 4
+
+- type: entity
+  parent: OH14_ComponentAdv
+  id: OH14_ComponentAdv1
+  suffix: "1, Компоненты"
+  components:
+  - type: Sprite
+    state: adv_sparepart
+  - type: Stack
+    stackType: OH14_ComponentAdv
+    count: 1
+
+### Электроника
+# Лампочки
+
+- type: entity
+  parent: [ OH14_ItemSFXGlass, OH14_BasicStackComponents ]
+  id: OH14_VacuumTube
+  name: вакуумная лампа
+  description: Кроме того что это светильник, в крайней ситуации это вычислительный компонент. Ах да...
+  suffix: "8, Компоненты"
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_VacuumTube: 100
+  - type: Item
+    size: Small
+  - type: Stack
+    count: 8
+    stackType: OH14_VacuumTube
+    baseLayer: base
+    layerStates:
+    - lamp
+    - lamp_2
+    - lamp_3
+  - type: Sprite
+    layers:
+    - state: lamp_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_VacuumTube
+  id: OH14_VacuumTube4
+  suffix: "4, Компоненты"
+  components:
+  - type: Sprite
+    state: lamp_2
+  - type: Stack
+    stackType: OH14_VacuumTube
+    count: 4
+
+- type: entity
+  parent: OH14_VacuumTube
+  id: OH14_VacuumTube1
+  suffix: "1, Компоненты"
+  components:
+  - type: Sprite
+    state: lamp
+  - type: Stack
+    stackType: OH14_VacuumTube
+    count: 1
+
+# Конденсатор
+
+- type: entity
+  parent: OH14_BasicStackComponents
+  id: OH14_Capacitor
+  name: конденсатор
+  suffix: "8, Компоненты"
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Capacitor: 100
+  - type: Item
+    size: Small
+  - type: Stack
+    count: 8
+    stackType: OH14_Capacitor
+    baseLayer: base
+    layerStates:
+    - capacitor
+    - capacitor_2
+    - capacitor_3
+  - type: Sprite
+    layers:
+    - state: capacitor_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_Capacitor
+  id: OH14_Capacitor4
+  suffix: "4, Компоненты"
+  components:
+  - type: Sprite
+    state: capacitor_2
+  - type: Stack
+    stackType: OH14_Capacitor
+    count: 4
+
+- type: entity
+  parent: OH14_Capacitor
+  id: OH14_Capacitor1
+  suffix: "1, Компоненты"
+  components:
+  - type: Sprite
+    state: capacitor
+  - type: Stack
+    stackType: OH14_Capacitor
+    count: 1
+
+# Плата
+
+- type: entity
+  parent: OH14_BasicStackComponents
+  id: OH14_Circuit
+  name: печатная плата
+  suffix: "8, Компоненты"
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Circuit: 100
+  - type: Item
+    size: Small
+  - type: Stack
+    count: 8
+    stackType: OH14_Circuit
+    baseLayer: base
+    layerStates:
+    - circuit
+    - circuit_2
+    - circuit_3
+  - type: Sprite
+    layers:
+    - state: circuit_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_Circuit
+  id: OH14_Circuit4
+  suffix: "4, Компоненты"
+  components:
+  - type: Sprite
+    state: circuit_2
+  - type: Stack
+    stackType: OH14_Circuit
+    count: 4
+
+- type: entity
+  parent: OH14_Circuit
+  id: OH14_Circuit1
+  suffix: "1, Компоненты"
+  components:
+  - type: Sprite
+    state: circuit
+  - type: Stack
+    stackType: OH14_Circuit
+    count: 1
+
+# Батарейка
+
+- type: entity
+  parent: OH14_BasicStackComponents
+  id: OH14_Battery
+  name: заготовка аккумулятора
+  suffix: "8, Компоненты"
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Battery: 100
+  - type: Item
+    size: Small
+  - type: Stack
+    count: 8
+    stackType: OH14_Battery
+    baseLayer: base
+    layerStates:
+    - battery
+    - battery_2
+    - battery_3
+  - type: Sprite
+    layers:
+    - state: battery_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_Battery
+  id: OH14_Battery4
+  suffix: "4, Компоненты"
+  components:
+  - type: Sprite
+    state: battery_2
+  - type: Stack
+    stackType: OH14_Battery
+    count: 4
+
+- type: entity
+  parent: OH14_Battery
+  id: OH14_Battery1
+  suffix: "1, Компоненты"
+  components:
+  - type: Sprite
+    state: battery
+  - type: Stack
+    stackType: OH14_Battery
+    count: 1

@@ -4,7 +4,7 @@
   graph:
     - node: start
       edges:
-        - to: frameUnsecured
+        - to: frame1
           completed:
             - !type:SetAnchor
               value: false
@@ -13,25 +13,22 @@
               amount: 2
               doAfter: 2
 
-    - node: frameUnsecured
+    - node: frame1
       actions:
       - !type:AppearanceChange
       entity: OH14_ConsoleFrame
       edges:
-        - to: boardUnsecured
+        - to: frame2
           conditions:
             - !type:EntityAnchored {}
           steps:
             - component: ComputerBoard
               store: board
               name: construction-graph-component-any-computer-circuit-board
-              icon:
-                sprite: "Objects/Misc/module.rsi"
-                state: "id_mod"
 
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -39,18 +36,19 @@
             - tool: Screwing
               doAfter: 2
 
-    - node: boardUnsecured
+    - node: frame2
       actions:
       - !type:AppearanceChange
       edges:
-        - to: missingWires
+        - to: frame3
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - tool: Screwing
+            - tag: OH14_PowerUnitComplete
+              name: construction-graph-tag-powerunit
               doAfter: 1
 
-        - to: frameUnsecured
+        - to: frame1
           conditions:
             - !type:EntityAnchored { }
           completed:
@@ -59,80 +57,43 @@
             - tool: Prying
               doAfter: 1
 
-    - node: missingWires
-      actions:
-      - !type:AppearanceChange
-      edges:
-        - to: monitorMissing
-          conditions:
-            - !type:EntityAnchored {}
-          steps:
-            - material: OH14_Components
-              amount: 1
-              doAfter: 1
-
-        - to: boardUnsecured
-          conditions:
-            - !type:EntityAnchored { }
-          steps:
-            - tool: Screwing
-              doAfter: 1
-
-    - node: monitorMissing
+    - node: frame3
       entity: OH14_ConsoleFrame
       actions:
-        - !type:SetAnchor { }
-        - !type:AppearanceChange
-      edges:
-        - to: monitorUnsecured
-          conditions:
-            - !type:EntityAnchored {}
-          steps:
-            - material: OH14_Electronic
-              amount: 2
-              doAfter: 1
-
-        - to: missingWires
-          conditions:
-            - !type:EntityAnchored { }
-          completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
-              amount: 1
-          steps:
-            - tool: Prying
-              doAfter: 1
-
-    - node: monitorUnsecured
-      actions:
       - !type:AppearanceChange
-      entity: OH14_ConsoleFrame
       edges:
         - to: computer
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - tool: Screwing
+            - tag: OH14_ControlUnitComplete
+              name: construction-graph-tag-controlunit
               doAfter: 1
 
-        - to: monitorMissing
+        - to: frame2
           conditions:
-            - !type:EntityAnchored {}
+            - !type:EntityAnchored { }
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
-              amount: 2
+            - !type:GivePrototype
+              prototype: OH14_PowerUnitComplete
+              amount: 1
           steps:
-            - tool: Prying
+            - tool: Screwing
               doAfter: 1
 
     - node: computer
       entity: !type:BoardNodeEntity { container: board }
       edges:
-        - to: monitorUnsecured
+        - to: frame3
+          conditions:
+            - !type:WirePanel
+              open: true
           completed:
             - !type:RaiseEvent
                 event: !type:MachineDeconstructedEvent
+            - !type:GivePrototype
+              prototype: OH14_ControlUnitComplete
+              amount: 1
           steps:
             - tool: Prying
               doAfter: 1
@@ -140,13 +101,13 @@
     - node: monitorBroken
       entity: OH14_ConsoleBroken
       edges:
-        - to: monitorMissing
+        - to: frame1
           conditions:
             - !type:EntityAnchored {}
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetElectronics1
-              amount: 1
+            - !type:GivePrototype
+              prototype: OH14_Circuit1
+              amount: 2
           steps:
             - tool: Prying
               doAfter: 2

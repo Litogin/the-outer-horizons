@@ -12,11 +12,31 @@
       "directions": 4
     },
     {
+      "name": "fill3",
+      "directions": 4
+    },
+    {
+      "name": "fill2",
+      "directions": 4
+    },
+    {
+      "name": "fill1",
+      "directions": 4
+    },
+    {
+      "name": "fill0",
+      "directions": 4
+    },
+    {
       "name": "pipe",
       "directions": 4
     },
     {
       "name": "blue",
+      "directions": 4
+    },
+    {
+      "name": "blue_ithink",
       "directions": 4
     },
     {

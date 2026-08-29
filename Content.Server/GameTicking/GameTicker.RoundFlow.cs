@@ -10,6 +10,7 @@ using Content.Shared.Database;
 using Content.Shared.GameTicking;
 using Content.Shared.Maps;
 using Content.Shared.Mind;
+using Content.Shared._OuterHorizons.Movement; // OH14-Changes
 using Content.Shared.Players;
 using Content.Shared.Preferences;
 using Content.Shared.Roles.Components;
@@ -20,6 +21,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.EntitySerialization;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map;
+using Robust.Shared.Map.Components; // OH14-Changes
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
@@ -136,6 +138,10 @@ namespace Content.Server.GameTicking
             {
                 _map.CreateMap(out var mapId, runMapInit: false);
                 DefaultMap = mapId;
+                // OH14-Changes start
+                var ent = _map.GetMap(mapId);
+                EnsureComp<MapBoundsComponent>(ent);
+                // OH14-Changes end
                 return;
             }
 
@@ -146,6 +152,10 @@ namespace Content.Server.GameTicking
 
                 if (i == 0)
                     DefaultMap = mapId;
+                // OH14-Changes start
+                var ent = _map.GetMap(mapId);
+                EnsureComp<MapBoundsComponent>(ent);
+                // OH14-Changes end
             }
         }
 

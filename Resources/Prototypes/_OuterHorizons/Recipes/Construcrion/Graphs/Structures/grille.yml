@@ -12,8 +12,8 @@
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: OH14_Materials
-              amount: 1
+            - material: OH14_CoilIron
+              amount: 4
               doAfter: 1
 
     - node: grille
@@ -23,28 +23,28 @@
           completed:
             # - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
             #   message: "A grille was cut"
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
-              amount: 1
+            - !type:GivePrototype
+              prototype: OH14_CoilIron
+              amount: 4
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1
+              doAfter: 2
 
     - node: grilleBroken
       entity: OH14_GrilleBroken
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
-              amount: 1
+            - !type:GivePrototype
+              prototype: OH14_CoilIron
+              amount: 2
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1
+              doAfter: 2
         - to: grille
           steps:
-            - material: OH14_Materials
-              amount: 1
+            - material: OH14_CoilIron
+              amount: 2
               doAfter: 1

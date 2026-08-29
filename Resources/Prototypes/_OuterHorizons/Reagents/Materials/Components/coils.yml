@@ -1,0 +1,20 @@
+- type: material
+  id: OH14_CoilIron
+  stackEntity: OH14_CoilIron1
+  name: железная проволка
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_CoilCopper
+  stackEntity: OH14_CoilCopper1
+  name: медная проволка
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_CoilGold
+  stackEntity: OH14_CoilGold1
+  name: золотая проволка
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2

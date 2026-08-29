@@ -1,0 +1,28 @@
+- type: damageModifierSet
+  id: OH14_Rock
+  coefficients:
+    Structural: 1
+    Blunt: 0.25
+    Slash: 0.25
+    Piercing: 0.25
+    Heat: 0.25
+  flatReductions:
+    Blunt: 10
+    Slash: 10
+    Piercing: 10
+    Heat: 10
+    Structural: 10
+- type: damageModifierSet
+  id: OH14_HeavyRock
+  coefficients:
+    Structural: 1
+    Blunt: 0.25
+    Slash: 0.25
+    Piercing: 0.25
+    Heat: 0.25
+  flatReductions:
+    Blunt: 30
+    Slash: 30
+    Piercing: 30
+    Heat: 30
+    Structural: 30

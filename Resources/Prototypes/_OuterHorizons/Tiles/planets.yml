@@ -11,6 +11,17 @@
   # indestructible: true
 
 - type: tile
+  id: OH14_IceMoonAlternative
+  editorHidden: false
+  name: поверхность астероида для разметки
+  sprite: /Textures/_OuterHorizons/Tiles/asteroid.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
   id: OH14_Ice
   editorHidden: false
   name: поверхность ледяного астероида

@@ -1,0 +1,122 @@
+# Лампа
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_VacuumTube
+  category: Electronics
+  craftTime: 3
+  requirements:
+  - !type:StackResource
+    stack: OH14_CoilIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_SheetGlass
+    count: 1
+  result: OH14_VacuumTube4
+  resultCount: 1
+
+# Конденсатор
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Capacitor
+  category: Electronics
+  craftTime: 3
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 1
+  result: OH14_Capacitor4
+  resultCount: 1
+
+# Аккумулятор
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Battery
+  category: Electronics
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_SheetCobalt
+    count: 1
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 2
+  result: OH14_Battery1
+  resultCount: 1
+
+# Экран
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CrtScreen
+  category: Electronics
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_SheetGlass
+    count: 1
+  - !type:StackResource
+    stack: OH14_VacuumTube
+    count: 1
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 2
+  result: OH14_CrtScreen
+  resultCount: 1
+
+# печатная плата
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CircuitCopper
+  category: Electronics
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetCopper
+    count: 1
+  result: OH14_Circuit1
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_CircuitGold
+  category: Electronics
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetGold
+    count: 1
+  result: OH14_Circuit1
+  resultCount: 2
+
+# Аналоговая плата
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_AnalogBoard
+  category: Electronics
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_Circuit
+    count: 4
+  - !type:StackResource
+    stack: OH14_CoilCopper
+    count: 2
+  - !type:StackResource
+    stack: OH14_CoilGold
+    count: 2
+  result: OH14_AnalogBoard
+  resultCount: 1

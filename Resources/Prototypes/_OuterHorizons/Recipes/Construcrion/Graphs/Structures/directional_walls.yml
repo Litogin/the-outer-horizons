@@ -16,7 +16,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
                 prototype: OH14_SheetGirder1
                 amount: 1
           steps:
@@ -24,12 +24,17 @@
               doAfter: 1
         - to: OH14_WallDirectional
           steps:
-            - material: OH14_Panels
+            - material: OH14_Panel
               amount: 1
               doAfter: 1
         - to: OH14_ShuttleWallDirectional
           steps:
-            - material: OH14_PanelsShuttle
+            - material: OH14_PanelShuttle
+              amount: 1
+              doAfter: 1
+        - to: OH14_HeatWallDirectional
+          steps:
+            - material: OH14_PanelHeat
               amount: 1
               doAfter: 1
     - node: OH14_WallDirectional
@@ -37,8 +42,8 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetPanelsBasic1
+            - !type:GivePrototype
+              prototype: OH14_Panel1
               amount: 1
           steps:
             - tool: Screwing
@@ -50,8 +55,21 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetPanelsShuttle1
+            - !type:GivePrototype
+              prototype: OH14_Panel
+              amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 1
+    - node: OH14_HeatWallDirectional
+      entity: OH14_HeatWallDirectional
+      edges:
+        - to: frame
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_PanelHeat
               amount: 1
           steps:
             - tool: Screwing

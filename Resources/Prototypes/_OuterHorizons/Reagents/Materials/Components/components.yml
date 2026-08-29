@@ -1,0 +1,41 @@
+- type: material
+  id: OH14_Component
+  stackEntity: OH14_Component1
+  name: компонент
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_ComponentAdv
+  stackEntity: OH14_ComponentAdv1
+  name: улучшенный компонент
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_VacuumTube
+  stackEntity: OH14_VacuumTube1
+  name: вакуумная трубка
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_Capacitor
+  stackEntity: OH14_Capacitor1
+  name: конденсатор
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_Circuit
+  stackEntity: OH14_Circuit1
+  name: печатна плата
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_Battery
+  stackEntity: OH14_Battery1
+  name: заготовка аккумулятор
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2

@@ -42,7 +42,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 1
             max: 2
       - !type:DoActsBehavior
@@ -95,6 +95,20 @@
       map: [ "enum.ConstructionVisuals.Layer" ]
   - type: Construction
     graph: OH14_ArcFurnanceFrame
+    node: frame1
+
+- type: entity
+  id: OH14_FrameOreProcessor
+  parent: OH14_FrameBasic
+  name: каркас очистителя руды
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/ore_processor.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_FrameOreProcessor
     node: frame1
 
 # =============================================================================
@@ -161,7 +175,7 @@
 - type: entity
   id: OH14_BatteryArrayFrame
   parent: OH14_FrameBasic
-  name: каркас массива аккамуляторов
+  name: каркас массива аккумуляторов
   components:
   - type: ContainerContainer
     containers:
@@ -311,4 +325,18 @@
       map: [ "enum.ConstructionVisuals.Layer" ]
   - type: Construction
     graph: OH14_ReagentGrinder
+    node: frame1
+
+- type: entity
+  id: OH14_FrameElectrolyzer
+  parent: OH14_FrameBasic
+  name: каркас электролизера
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/electrolyzer.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_ElectrolyzerFrame
     node: frame1

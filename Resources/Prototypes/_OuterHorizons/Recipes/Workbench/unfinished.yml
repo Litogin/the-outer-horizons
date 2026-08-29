@@ -1,0 +1,317 @@
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Crowbar
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_CrowbarBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Flashlight
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_FlashlightBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Wirecutter
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_WirecutterBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Screwdriver
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_ScrewdriverBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Wrench
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_WrenchBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Knife
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_Knife
+  resultCount: 1
+
+# Гидро
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolMiniHoe
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_ToolMiniHoe
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolClippers
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_ToolClippers
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolHatchet
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_ToolHatchet
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolSpade
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_ToolSpade
+  resultCount: 1
+
+# Продвинутое
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_WelderEmpty
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_Component
+    count: 2
+  result: OH14_WelderEmpty
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_DrillBasic
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_Component
+    count: 4
+  result: OH14_DrillBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_GeigerCounter
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_Component
+    count: 1
+  result: OH14_GeigerCounter
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_MultitoolBasic
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_Circuit
+    count: 4
+  result: OH14_MultitoolBasic
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ToolMassScannerEmpty
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_Component
+    count: 2
+  - !type:StackResource
+    stack: OH14_Circuit
+    count: 2
+  result: OH14_ToolMassScannerEmpty
+  resultCount: 1
+
+# Джетпак
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_JetpackWhite
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 4
+  - !type:StackResource
+    stack: OH14_Component
+    count: 4
+  - !type:ProtoIdResource
+    protoId: OH14_Motor
+    count: 1
+  result: OH14_JetpackWhite
+  resultCount: 1
+
+# Магбутсы
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ClothingShoesBootsMagBasic
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_Component
+    count: 4
+  - !type:StackResource
+    stack: OH14_SheetCobalt
+    count: 2
+  result: OH14_ClothingShoesBootsMagBasic
+  resultCount: 1
+
+# Ева
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ClothingOuterHardsuitOrange
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 3
+  - !type:StackResource
+    stack: OH14_Component
+    count: 2
+  result: OH14_ClothingOuterHardsuitOrange
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_ClothingHeadHelmetOrange
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  - !type:StackResource
+    stack: OH14_SheetGlass
+    count: 1
+  - !type:StackResource
+    stack: OH14_Component
+    count: 2
+  result: OH14_ClothingHeadHelmetOrange
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_OxygenTankWhite
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 6
+  - !type:StackResource
+    stack: OH14_Component
+    count: 1
+  result: OH14_OxygenTankWhite
+  resultCount: 1
+
+# Уборка
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Bucket
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_Bucket
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Mop
+  category: Unfinished
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_Mop
+  resultCount: 1

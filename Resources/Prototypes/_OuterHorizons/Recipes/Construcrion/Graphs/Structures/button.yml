@@ -8,7 +8,7 @@
       edges:
         - to: OH14_Button
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 1
               doAfter: 1
     - node: OH14_Button
@@ -16,8 +16,8 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_Component1
           steps:
             - tool: Screwing
               doAfter: 1

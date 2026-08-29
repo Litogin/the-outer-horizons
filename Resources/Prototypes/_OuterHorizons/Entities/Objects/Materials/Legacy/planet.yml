@@ -1,0 +1,244 @@
+# - type: entity
+#   parent: OH14_BasicMaterialStack
+#   id: OH14_SheetOre
+#   name: руда
+#   suffix: Full
+#   components:
+#   - type: Material
+#   - type: PhysicalComposition
+#     materialComposition:
+#       OH14_Ore: 100
+#   - type: Stack
+#     count: 16
+#     stackType: OH14_Ore
+#     baseLayer: base
+#     layerStates:
+#     - ore
+#     - ore_2
+#     - ore_3
+#   - type: Sprite
+#     state: ore_3
+#     layers:
+#     - state: ore_3
+#       map: ["base"]
+#   - type: Item
+#     heldPrefix: ore
+#   - type: Appearance
+#   - type: Tag
+#     tags:
+#     - OH14_Ore
+
+# - type: entity
+#   parent: OH14_SheetOre
+#   id: OH14_CobblestoneIron1
+#   suffix: Single
+#   components:
+#   - type: Sprite
+#     state: ore
+#   - type: Stack
+#     stackType: OH14_Ore
+#     count: 1
+
+# Земля
+
+- type: entity
+  parent: OH14_BasicMaterialStack
+  id: OH14_Dirt
+  name: земля
+  suffix: Full
+  components:
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_OuterHorizons/Items/dirt_pickup.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_OuterHorizons/Items/dirt_pickup.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_OuterHorizons/Items/dirt_drop.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_OuterHorizons/Items/dirt_drop.ogg
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Dirt: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Dirt
+    baseLayer: base
+    layerStates:
+    - dirt
+    - dirt_2
+    - dirt_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    state: dirt_3
+    layers:
+    - state: dirt_3
+      map: ["base"]
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#4D3C2C"
+      right:
+      - state: inhand-right
+        color: "#4D3C2C"
+  - type: Appearance
+  - type: FloorTile
+    placeTileSound: /Audio/_OuterHorizons/Items/dirt_drop.ogg
+    outputs:
+    - OH14_FloorDirt
+
+- type: entity
+  parent: OH14_Dirt
+  id: OH14_Dirt1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: dirt
+  - type: Stack
+    stackType: OH14_Dirt
+    count: 1
+
+# Булыжник
+
+- type: entity
+  parent: OH14_BasicMaterialStack
+  id: OH14_Rock
+  name: булыжник
+  suffix: Full
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Rock: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Rock
+    baseLayer: base
+    layerStates:
+    - rock
+    - rock_2
+    - rock_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    state: rock_3
+    layers:
+    - state: rock_3
+      map: ["base"]
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        # color: "#466982"
+      right:
+      - state: inhand-right
+        # color: "#466982"
+  - type: Appearance
+
+- type: entity
+  parent: OH14_Rock
+  id: OH14_Rock1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: rock
+  - type: Stack
+    stackType: OH14_Rock
+    count: 1
+
+# Ледышка
+
+- type: entity
+  parent: OH14_BaseItem
+  id: OH14_Ice
+  # abstract: true
+  name: лед
+  # suffix: Full
+  components:
+  - type: RandomSprite
+    available:
+      - base:
+          ice: ""
+          ice_2: ""
+          ice_3: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:SpillBehavior
+        solution: ice
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Extractable
+    grindableSolutionName: ice
+  - type: SolutionContainerManager
+    solutions:
+      ice:
+        reagents:
+        - ReagentId: Water
+          Quantity: 10
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/planet.rsi}
+  # - type: Material
+  # - type: PhysicalComposition
+  #   materialComposition:
+  #     OH14_Ice: 100
+  # - type: Stack
+  #   count: 16
+  #   stackType: OH14_Ice
+  #   baseLayer: base
+  #   layerStates:
+  #   - ice
+  #   - ice_2
+  #   - ice_3
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    # state: ice_3
+    layers:
+    - state: ice_3
+      map: ["base"]
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/planet.rsi
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#67E9FF"
+      right:
+      - state: inhand-right
+        color: "#67E9FF"
+  - type: Appearance
+
+# - type: entity
+#   parent: OH14_Ice
+#   id: OH14_Ice1
+#   # suffix: Single
+#   components:
+#   - type: Sprite
+#     state: ice
+  # - type: Stack
+  #   stackType: OH14_Ice
+  #   count: 1

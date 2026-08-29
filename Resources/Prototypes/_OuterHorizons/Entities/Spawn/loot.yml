@@ -8,6 +8,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Clothing/OuterClothing/Hardsuits/orange.rsi
@@ -26,6 +27,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Clothing/Head/Hardsuits/orange.rsi
@@ -39,13 +41,13 @@
 # Инструменты
 
 - type: entity
-  id: LootSpawnerToolbox75
+  id: LootSpawnerToolbox
   name: спавнер ящик инструментов
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
@@ -69,6 +71,7 @@
   suffix: 50%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/toolbox_red.rsi
@@ -85,13 +88,13 @@
     offset: 0.1
 
 - type: entity
-  id: LootSpawnerTools75
+  id: LootSpawnerTools
   name: спавнер инструмента
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/crowbar.rsi
@@ -103,7 +106,6 @@
     - OH14_ScrewdriverBasic
     - OH14_WrenchBasic
     - OH14_FlashlightFilled
-    chance: 0.75
     offset: 0.1
 
 - type: entity
@@ -114,6 +116,7 @@
   suffix: 50%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Tools/drill.rsi
@@ -129,16 +132,16 @@
     offset: 0.1
 
 - type: entity
-  id: LootSpawnerMiningTools75
+  id: LootSpawnerMiningTools
   name: спавнер кирка или бур
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75-10%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
-      - sprite: _OuterHorizons/Objects/Weapons/Melee/pickaxe.rsi
+      - sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe.rsi
         state: pickaxe
   - type: RandomSpawner
     rarePrototypes:
@@ -146,19 +149,18 @@
     rareChance: 0.1
     prototypes:
     - OH14_Pickaxe
-    chance: 0.75
     offset: 0.1
 
 # Меды
 
 - type: entity
-  id: LootSpawnerMedical75
+  id: LootSpawnerMedical
   name: спавнер медикаментов
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
@@ -176,17 +178,17 @@
     - OH14_Bloodpack1
     - OH14_Gauze
     - OH14_Gauze1
-    chance: 0.75
     offset: 0.1
 
 - type: entity
-  id: LootSpawnerBottles75
+  id: LootSpawnerBottles
   name: спавнер бутылочек
   categories: [ ForkFiltered ]
   parent: MarkerBase
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Consumable/Drinks/bottle.rsi
@@ -200,7 +202,6 @@
     - OH14_DrinkGlassBottleBicaridine
     - OH14_DrinkGlassBottleDexalin
     - OH14_DrinkGlassBottleOculine
-    chance: 0.75
     offset: 0.2
 
 # Ресурсы
@@ -213,21 +214,20 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
         state: material_3
   - type: RandomSpawner
     rarePrototypes:
-    - OH14_SheetComponents5
-    - OH14_SheetElectronics5
+    - OH14_Component4
+    - OH14_Circuit4
     rareChance: 0.1
     prototypes:
-    - OH14_SheetMaterials8
-    - OH14_SheetMaterials8
-    - OH14_SheetMaterials8
-    - OH14_SheetIngot1
-    - OH14_SheetGirder8
+    - OH14_SheetIron8
+    - OH14_SheetCopper8
+    - OH14_SheetSilicon8
     chance: 0.75
     offset: 0.1
 
@@ -239,6 +239,7 @@
   suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi
@@ -258,9 +259,9 @@
   name: спавнер напитки
   categories: [ ForkFiltered ]
   parent: MarkerBase
-  suffix: 75%
   components:
   - type: Sprite
+    sprite: _OuterHorizons/spawn.rsi
     layers:
       - state: red
       - sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi
@@ -272,5 +273,4 @@
     - OH14_DrinkBottleKvas
     - OH14_DrinkBottleWaterFull
     - OH14_DrinkBottleKvasFull
-    chance: 0.75
     offset: 0.1

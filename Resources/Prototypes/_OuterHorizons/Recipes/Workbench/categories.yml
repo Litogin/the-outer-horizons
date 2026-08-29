@@ -1,14 +1,26 @@
-# - type: CERecipeCategory
-#   id: FloorTile
-#   name: ce-recipe-category-tile
+- type: CERecipeCategory
+  id: Components
+  name: ce-recipe-category-components
+
+- type: CERecipeCategory
+  id: Structures
+  name: ce-recipe-category-structures
+
+- type: CERecipeCategory
+  id: Electronics
+  name: ce-recipe-category-electronics
+
+- type: CERecipeCategory
+  id: Power
+  name: ce-recipe-category-power
+
+- type: CERecipeCategory
+  id: Units
+  name: ce-recipe-category-units
 
 - type: CERecipeCategory
   id: Tools
   name: ce-recipe-category-tool
-
-- type: CERecipeCategory
-  id: Materials
-  name: ce-recipe-category-materials
 
 - type: CERecipeCategory
   id: Weapon
@@ -18,14 +30,10 @@
   id: Armor
   name: ce-recipe-category-armor
 
-# - type: CERecipeCategory
-#   id: Carpet
-#   name: ce-recipe-category-carpet
-
-# - type: CERecipeCategory
-#   id: Wallpaper
-#   name: ce-recipe-category-wallpaper
-
 - type: CERecipeCategory
   id: Clothing
   name: ce-recipe-category-clothing
+
+- type: CERecipeCategory
+  id: Unfinished
+  name: ce-recipe-category-unfinished

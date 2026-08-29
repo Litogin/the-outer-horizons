@@ -113,7 +113,7 @@
   - type: MaterialStorage
     whitelist: &OH14_MaterialWhitelist
       tags:
-        - OH14_Sheet
+        - OH14_MaterialStack
   - type: Lathe
     producingSound: /Audio/_OuterHorizons/Machines/print.ogg
     idleState: icon
@@ -121,8 +121,10 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
-    - OH14_ToolsStatic
-    - OH14_MaterialsStatic
+    - OH14_ComponentsStatic
+    - OH14_PowerStatic
+    - OH14_ContructionStatic
+    - OH14_UnitsStatic
     - OH14_MiscStatic
   - type: BlueprintReceiver
     whitelist:
@@ -134,6 +136,8 @@
   - type: EmptyOnMachineDeconstruct
     containers:
     - blueprint
+
+# Фабрикатор
 
 - type: entity
   id: OH14_AutoLatheTools
@@ -238,8 +242,10 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
+    - OH14_ComponentsStatic
+    - OH14_ElectrStatic
     - OH14_ElectronicStatic
-    - OH14_DeviesStatic
+    # - OH14_DeviesStatic
 
 # Печь
 
@@ -275,13 +281,45 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
-    - OH14_OreStatic
+    - OH14_FurnanceStatic
   - type: LatheHeatProducing
-    energyPerSecond: 20000
-  - type: ContainerContainer
-    containers:
-      machine_board: !type:Container
-      machine_parts: !type:Container
+    energyPerSecond: 10000
+
+# Очиститель
+
+- type: entity
+  id: OH14_OreProcessor
+  parent: OH14_BasicLathe
+  name: очиститель руды
+  description: Не самая замысловатая конструкция для очистки руды от мусора.
+  components:
+  - type: Construction
+    graph: OH14_FrameOreProcessor
+    node: OH14_OreProcessor
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/ore_processor.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: MaterialStorage
+    ignoreColor: true
+    whitelist: &OH14_MaterialWhitelistOreProcessor
+      tags:
+        - OH14_Cobblestone
+  - type: Lathe
+    producingSound: /Audio/_OuterHorizons/Machines/processor.ogg
+    idleState: icon
+    runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - OH14_ProcessorStatic
 
 # Трубогиб (вырезан)
 

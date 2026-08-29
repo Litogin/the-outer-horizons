@@ -1,0 +1,355 @@
+# База
+
+- type: entity
+  parent: [ OH14_ItemSFXStone, OH14_BasicMaterialStack ]
+  id: OH14_BasicStackCobblestone
+  abstract: true
+  name: рудный булыжник
+  description: Горстка каменных облокмков, по всей видимости с рудой внутри
+  components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/ores_cobblestone.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/ores_cobblestone_inworld.rsi}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/ores_cobblestone_inworld.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/DEBUG_materials.rsi
+    heldPrefix: ore
+  - type: Appearance
+  - type: Tag
+    tags:
+    - OH14_Cobblestone
+
+# Камень
+
+- type: entity
+  parent: OH14_BasicStackCobblestone
+  id: OH14_Cobblestone
+  name: булыжник
+  description: Горстка каменных облокмков
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_Cobblestone: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_Cobblestone
+    baseLayer: base
+    layerStates:
+    - basic
+    - basic_2
+    - basic_3
+  - type: Sprite
+    layers:
+    - state: basic_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_Cobblestone
+  id: OH14_Cobblestone8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: basic_2
+  - type: Stack
+    stackType: OH14_Cobblestone
+    count: 8
+
+- type: entity
+  parent: OH14_Cobblestone
+  id: OH14_Cobblestone1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: basic
+  - type: Stack
+    stackType: OH14_Cobblestone
+    count: 1
+
+# Железо
+
+- type: entity
+  parent: OH14_BasicStackCobblestone
+  id: OH14_CobblestoneIron
+  name: железный булыжник
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneIron: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_CobblestoneIron
+    baseLayer: base
+    layerStates:
+    - iron
+    - iron_2
+    - iron_3
+  - type: Sprite
+    layers:
+    - state: iron_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CobblestoneIron
+  id: OH14_CobblestoneIron8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: iron_2
+  - type: Stack
+    stackType: OH14_CobblestoneIron
+    count: 8
+
+- type: entity
+  parent: OH14_CobblestoneIron
+  id: OH14_CobblestoneIron1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: iron
+  - type: Stack
+    stackType: OH14_CobblestoneIron
+    count: 1
+
+# Медь
+
+- type: entity
+  parent: OH14_BasicStackCobblestone
+  id: OH14_CobblestoneCopper
+  name: медный булыжник
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneCopper: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_CobblestoneCopper
+    baseLayer: base
+    layerStates:
+    - copper
+    - copper_2
+    - copper_3
+  - type: Sprite
+    layers:
+    - state: copper_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CobblestoneCopper
+  id: OH14_CobblestoneCopper8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: copper_2
+  - type: Stack
+    stackType: OH14_CobblestoneCopper
+    count: 8
+
+- type: entity
+  parent: OH14_CobblestoneCopper
+  id: OH14_CobblestoneCopper1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: copper
+  - type: Stack
+    stackType: OH14_CobblestoneCopper
+    count: 1
+
+# Золото
+
+- type: entity
+  parent: OH14_BasicStackCobblestone
+  id: OH14_CobblestoneGold
+  name: золотой булыжник
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneGold: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_CobblestoneGold
+    baseLayer: base
+    layerStates:
+    - gold
+    - gold_2
+    - gold_3
+  - type: Sprite
+    layers:
+    - state: gold_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CobblestoneGold
+  id: OH14_CobblestoneGold8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: gold_2
+  - type: Stack
+    stackType: OH14_CobblestoneGold
+    count: 8
+
+- type: entity
+  parent: OH14_CobblestoneGold
+  id: OH14_CobblestoneGold1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: gold
+  - type: Stack
+    stackType: OH14_CobblestoneGold
+    count: 1
+
+# Платина
+
+- type: entity
+  parent: OH14_BasicStackCobblestone
+  id: OH14_CobblestonePlatinum
+  name: платиновый булыжник
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestonePlatinum: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_CobblestonePlatinum
+    baseLayer: base
+    layerStates:
+    - platinum
+    - platinum_2
+    - platinum_3
+  - type: Sprite
+    layers:
+    - state: platinum_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CobblestonePlatinum
+  id: OH14_CobblestonePlatinum8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: platinum_2
+  - type: Stack
+    stackType: OH14_CobblestonePlatinum
+    count: 8
+
+- type: entity
+  parent: OH14_CobblestonePlatinum
+  id: OH14_CobblestonePlatinum1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: platinum
+  - type: Stack
+    stackType: OH14_CobblestonePlatinum
+    count: 1
+
+# Кремний
+
+- type: entity
+  parent: OH14_BasicStackCobblestone
+  id: OH14_CobblestoneSilicon
+  name: кремниевый булыжник
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneSilicon: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_CobblestoneSilicon
+    baseLayer: base
+    layerStates:
+    - silicon
+    - silicon_2
+    - silicon_3
+  - type: Sprite
+    layers:
+    - state: silicon_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CobblestoneSilicon
+  id: OH14_CobblestoneSilicon8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: silicon_2
+  - type: Stack
+    stackType: OH14_CobblestoneSilicon
+    count: 8
+
+- type: entity
+  parent: OH14_CobblestoneSilicon
+  id: OH14_CobblestoneSilicon1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: silicon
+  - type: Stack
+    stackType: OH14_CobblestoneSilicon
+    count: 1
+
+# Кобальт
+
+- type: entity
+  parent: OH14_BasicStackCobblestone
+  id: OH14_CobblestoneCobalt
+  name: кобальтовый булыжник
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_CobblestoneCobalt: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_CobblestoneCobalt
+    baseLayer: base
+    layerStates:
+    - cobalt
+    - cobalt_2
+    - cobalt_3
+  - type: Sprite
+    layers:
+    - state: cobalt_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_CobblestoneCobalt
+  id: OH14_CobblestoneCobalt8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: cobalt_2
+  - type: Stack
+    stackType: OH14_CobblestoneCobalt
+    count: 8
+
+- type: entity
+  parent: OH14_CobblestoneCobalt
+  id: OH14_CobblestoneCobalt1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: cobalt
+  - type: Stack
+    stackType: OH14_CobblestoneCobalt
+    count: 1

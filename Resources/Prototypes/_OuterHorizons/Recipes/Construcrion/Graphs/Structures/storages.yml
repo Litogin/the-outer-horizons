@@ -8,7 +8,7 @@
       edges:
         - to: OH14_Crate
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 2
               doAfter: 3
     - node: OH14_Crate
@@ -16,8 +16,8 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 2
           steps:
             - tool: Screwing
@@ -35,7 +35,7 @@
       edges:
         - to: OH14_CabinetBasic
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 3
               doAfter: 4
     - node: OH14_CabinetBasic
@@ -43,8 +43,8 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 3
           steps:
             - tool: Screwing
@@ -62,7 +62,7 @@
       edges:
         - to: OH14_CabinetBig
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 5
               doAfter: 5
     - node: OH14_CabinetBig
@@ -70,8 +70,8 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 5
           steps:
             - tool: Screwing
@@ -89,7 +89,7 @@
       edges:
         - to: OH14_CabinetWallmount
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 3
               doAfter: 3
     - node: OH14_CabinetWallmount
@@ -97,8 +97,8 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 3
           steps:
             - tool: Screwing
@@ -129,7 +129,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
                 prototype: OH14_SheetGirder1
                 amount: 2
           steps:
@@ -137,7 +137,7 @@
               doAfter: 1
         - to: OH14_GasStorage
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 5
               doAfter: 1
     - node: OH14_GasStorage
@@ -145,8 +145,8 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 5
             - !type:DumpCanister
           conditions:
@@ -183,7 +183,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
                 prototype: OH14_SheetGirder1
                 amount: 1
           steps:
@@ -191,10 +191,10 @@
               doAfter: 1
         - to: OH14_GasCanister
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 3
               doAfter: 1
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 1
               doAfter: 1
     - node: OH14_GasCanister
@@ -202,11 +202,11 @@
       edges:
         - to: frame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 3
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_Component1
               amount: 1
             - !type:DumpCanister
           conditions:

@@ -16,14 +16,14 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
           steps:
             - tool: Screwing
               doAfter: 1
         - to: OH14_MCTNode
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 4
               doAfter: 1
     - node: OH14_MCTNode
@@ -31,8 +31,8 @@
       edges:
         - to: OH14_MCTNodeFrame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_Component1
               amount: 4
           steps:
             - tool: Screwing

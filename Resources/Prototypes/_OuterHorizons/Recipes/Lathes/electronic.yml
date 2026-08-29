@@ -1,0 +1,38 @@
+- type: latheRecipe
+  id: OH14_VacuumTube
+  result: OH14_VacuumTube1
+  materials:
+    OH14_SheetGlass: 25
+    OH14_SheetIron: 25
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_Capacitor
+  result: OH14_Capacitor1
+  materials:
+    OH14_SheetCopper: 25
+    OH14_SheetIron: 25
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_Battery
+  result: OH14_Battery1
+  materials:
+    OH14_SheetCopper: 50
+    OH14_SheetCobalt: 25
+    OH14_SheetIron: 25
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_CircuitCopper
+  result: OH14_Circuit1
+  materials:
+    OH14_SheetCopper: 100
+  completetime: 4
+
+- type: latheRecipe
+  id: OH14_CircuitGold
+  result: OH14_Circuit1
+  materials:
+    OH14_SheetGold: 50
+  completetime: 4

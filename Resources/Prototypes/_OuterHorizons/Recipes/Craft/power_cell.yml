@@ -1,0 +1,29 @@
+- type: constructionGraph
+  id: OH14_PowerCellMedium
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: OH14_PowerCellMedium
+          steps:
+            - material: OH14_Battery
+              amount: 1
+              doAfter: 1
+
+    - node: OH14_PowerCellMedium
+      entity: OH14_PowerCellMediumEmpty
+
+- type: constructionGraph
+  id: OH14_PowerCellBig
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: OH14_PowerCellBig
+          steps:
+            - material: OH14_Battery
+              amount: 4
+              doAfter: 1
+
+    - node: OH14_PowerCellBig
+      entity: OH14_PowerCellBigEmpty

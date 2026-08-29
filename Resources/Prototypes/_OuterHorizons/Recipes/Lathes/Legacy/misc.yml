@@ -1,0 +1,134 @@
+- type: latheRecipe
+  id: OH14_FireExtinguisher
+  completetime: 5
+  result: OH14_FireExtinguisherEmpty
+  icon:
+    sprite: _OuterHorizons/Objects/Misc/fire_extinguisher.rsi
+    state: fire_extinguisher_closed
+  materials:
+    OH14_SheetIron: 500
+    OH14_Component: 200
+
+- type: latheRecipe
+  id: OH14_OxygenTankRed
+  completetime: 5
+  result: OH14_OxygenTankRed
+  icon:
+    sprite: _OuterHorizons/Objects/Tanks/red.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 600
+    OH14_Component: 100
+
+- type: latheRecipe
+  id: OH14_OxygenTankWhite
+  completetime: 5
+  result: OH14_OxygenTankWhite
+  icon:
+    sprite: _OuterHorizons/Objects/Tanks/white.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 600
+    OH14_Component: 100
+
+- type: latheRecipe
+  id: OH14_LightTube
+  completetime: 2
+  result: OH14_LightTube
+  materials:
+    OH14_SheetIron: 100
+    OH14_SheetGlass: 100
+
+- type: latheRecipe
+  id: OH14_LightTubeWarm
+  completetime: 2
+  result: OH14_LightTubeWarm
+  materials:
+    OH14_SheetIron: 100
+    OH14_SheetGlass: 100
+
+- type: latheRecipe
+  id: OH14_LightBulb
+  completetime: 2
+  result: OH14_LightBulb
+  materials:
+    OH14_SheetIron: 100
+    OH14_SheetGlass: 100
+
+- type: latheRecipe
+  id: OH14_Girders
+  completetime: 1
+  result: OH14_SheetGirder1
+  materials:
+    OH14_SheetIron: 50
+
+- type: latheRecipe
+  id: OH14_Pipes
+  completetime: 1
+  result: OH14_SheetPipes1
+  materials:
+    OH14_SheetIron: 50
+
+- type: latheRecipe
+  id: OH14_CableCoilMV
+  completetime: 1
+  result: OH14_CableCoilMV1
+  materials:
+    OH14_SheetIron: 25
+
+- type: latheRecipe
+  id: OH14_CableCoilHV
+  completetime: 1
+  result: OH14_CableCoilHV1
+  materials:
+    OH14_SheetIron: 25
+
+- type: latheRecipe
+  id: OH14_CableCoilLV
+  completetime: 1
+  result: OH14_CableCoilLV1
+  materials:
+    OH14_SheetIron: 25
+
+- type: latheRecipe
+  id: OH14_Igniter
+  completetime: 3
+  result: OH14_Igniter
+  materials:
+    OH14_SheetIron: 50
+    OH14_Component: 100
+
+- type: latheRecipe
+  id: OH14_Radio
+  completetime: 3
+  result: OH14_Radio
+  materials:
+    OH14_SheetIron: 100
+    OH14_Component: 100
+
+- type: latheRecipe
+  id: OH14_DrinkCanister
+  completetime: 2
+  result: OH14_DrinkCanister
+  materials:
+    OH14_SheetIron: 100
+
+- type: latheRecipe
+  id: OH14_Mop
+  completetime: 5
+  result: OH14_Mop
+  icon:
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/mop.rsi
+    state: mop
+  materials:
+    OH14_SheetIron: 300
+
+- type: latheRecipe
+  id: OH14_Bucket
+  completetime: 2
+  result: OH14_Bucket
+  icon:
+    sprite: _OuterHorizons/Objects/Specific/Janitorial/bucket.rsi
+    state: icon
+  materials:
+    OH14_SheetIron: 200

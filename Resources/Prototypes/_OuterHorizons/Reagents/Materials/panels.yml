@@ -1,0 +1,34 @@
+- type: material
+  id: OH14_Panel
+  stackEntity: OH14_Panel1
+  name: панель
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_PanelHeavy
+  stackEntity: OH14_PanelHeavy1
+  name: укрепленная панель
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_PanelHeat
+  stackEntity: OH14_PanelHeat1
+  name: теплоустойчивая панель
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_PanelShuttle
+  stackEntity: OH14_PanelShuttle1
+  name: панель шаттла
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2
+
+- type: material
+  id: OH14_PanelShuttleHeavy
+  stackEntity: OH14_PanelShuttleHeavy1
+  name: укрепленная панель шаттла
+  icon: { sprite: _OuterHorizons/Objects/Materials/girder.rsi, state: girder_3 }
+  price: 2

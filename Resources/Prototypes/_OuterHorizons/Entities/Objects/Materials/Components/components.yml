@@ -1,0 +1,331 @@
+# База
+
+- type: entity
+  parent: [ OH14_ItemSFXSmall, OH14_BaseItem ]
+  id: OH14_BasicComponents
+  abstract: true
+  name: компонент
+  suffix: "Компоненты"
+  description: Бесполезная хрень, которая почему то требуется для ваших кустарных изысканий.
+  components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi
+  - type: Item
+    # sprite: _OuterHorizons/Objects/Materials/components.rsi
+  - type: Appearance
+
+### Рукоятка
+# Обычная и длинная. Ну и приклад
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_Handle
+  name: рукоятка
+  description: Ну не держать ведь тебе инструменты за корпус?
+  components:
+  - type: Tag
+    tags:
+    - OH14_Handle
+  - type: Item
+    size: Small
+  - type: Sprite
+    layers:
+    - state: l_handle
+      map: ["base"]
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_MediumHandle
+  name: длинная рукоятка
+  description: Ну не держать ведь тебе инструменты за корпус?
+  components:
+  - type: Tag
+    tags:
+    - OH14_MediumHandle
+  - type: Item
+    size: Small
+  - type: Sprite
+    layers:
+    - state: m_handle
+      map: ["base"]
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_Buttstock
+  name: приклад
+  description: Уверяю вас, это не для огнестрельного оружия.
+  components:
+  - type: Tag
+    tags:
+    - OH14_Buttstock
+  - type: Item
+    size: Small
+  - type: Sprite
+    layers:
+    - state: buttstock
+      map: ["base"]
+
+### Камеры сгорания
+# Медная и теплоустойчивая
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_CopperChamber
+  name: медная камера
+  description: Горячая штучка, если приложить достаточно сил.
+  components:
+  - type: Tag
+    tags:
+    - OH14_CopperChamber
+  - type: Sprite
+    layers:
+    - state: c_chamber
+      map: ["base"]
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_HeatChamber
+  name: теплоустойчивая камера
+  description: Горячая штучка, если приложить достаточно сил.
+  components:
+  - type: Tag
+    tags:
+    - OH14_HeatChamber
+  - type: Sprite
+    layers:
+    - state: p_chamber
+      map: ["base"]
+
+### Электроника
+# Экран
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_CrtScreen
+  name: ЭЛТ трубка
+  description: Основная причина громозкости консолей, если не считать их все остальные компоненты.
+  components:
+  - type: Tag
+    tags:
+    - OH14_CrtScreen
+  - type: Sprite
+    layers:
+    - state: crt_screen
+      map: ["base"]
+
+# Плата
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_AnalogBoard
+  name: каркас анал. платы
+  description: Простейшее вычислительное устройство. К сожалению не потянет крафтмайн. И тебе бы припаять сюда пару деталек.
+  components:
+  - type: Construction
+    graph: OH14_AnalogBoard
+    node: start
+  - type: Sprite
+    layers:
+    - state: analog_board
+      map: ["base"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          start: { state: analog_board }
+          frame1: { state: analog_board_2 }
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_AnalogBoardComplete
+  name: аналоговая плата
+  description: Простейшее вычислительное устройство. К сожалению не потянет крафтмайн.
+  components:
+  - type: Tag
+    tags:
+    - OH14_AnalogBoardComplete
+  - type: Construction
+    graph: OH14_AnalogBoard
+    node: OH14_AnalogBoardComplete
+  - type: Sprite
+    layers:
+    - state: analog_board_3
+      map: ["base"]
+
+### Моторы и их компоненты
+# Медное
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_CopperStator
+  name: медная катушка
+  description: Статор от слова.. Статичный?
+  components:
+  - type: Tag
+    tags:
+    - OH14_CopperStator
+  - type: Sprite
+    layers:
+    - state: c_stator
+      map: ["base"]
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_CopperRotor
+  name: медный ротор
+  description: Он вертится вместо белки в колесе.
+  components:
+  - type: Tag
+    tags:
+    - OH14_CopperRotor
+  - type: Sprite
+    layers:
+    - state: c_rotor
+      map: ["base"]
+
+# Золотое
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_GoldStator
+  name: золотая катушка
+  description: Статор от слова.. Статичный?
+  components:
+  - type: Tag
+    tags:
+    - OH14_GoldStator
+  - type: Sprite
+    layers:
+    - state: g_stator
+      map: ["base"]
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_GoldRotor
+  name: золотой ротор
+  description: Он вертится вместо белки в колесе.
+  components:
+  - type: Tag
+    tags:
+    - OH14_GoldRotor
+  - type: Sprite
+    layers:
+    - state: g_rotor
+      map: ["base"]
+
+# Мотор
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_Motor
+  name: мотор
+  description: Бжжжжж. Что говоришь? ДжжжЖж. Не слышу.
+  components:
+  - type: Tag
+    tags:
+    - OH14_Motor
+  - type: Sprite
+    layers:
+    - state: motor
+      map: ["base"]
+
+### Корпуса
+# Питания
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_PowerUnit
+  name: каркас БП
+  description: Нужен чтобы подать адекватое напряжение в устройство. И тебе бы припаять сюда пару деталек.
+  components:
+  - type: Construction
+    graph: OH14_PowerUnit
+    node: start
+  - type: Sprite
+    layers:
+    - state: power_unit
+      map: ["base"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          start: { state: power_unit }
+          frame1: { state: power_unit_2 }
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_PowerUnitComplete
+  name: блок питания
+  description: Нужен чтобы подать адекватое напряжение в устройство.
+  components:
+  - type: Tag
+    tags:
+    - OH14_PowerUnitComplete
+  - type: Construction
+    graph: OH14_PowerUnit
+    node: OH14_PowerUnitComplete
+  - type: Sprite
+    layers:
+    - state: power_unit_3
+      map: ["base"]
+
+# Контроля
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_ControlUnit
+  name: каркас БУ
+  description: Нужен чтобы подать команду сложнее чем вкл/выкл. И тебе бы припаять сюда пару деталек.
+  components:
+  - type: Construction
+    graph: OH14_ControlUnit
+    node: start
+  - type: Sprite
+    layers:
+    - state: control_unit
+      map: ["base"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/components.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/components_inworld.rsi}
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          start: { state: control_unit }
+          frame1: { state: control_unit_2 }
+
+- type: entity
+  parent: OH14_BasicComponents
+  id: OH14_ControlUnitComplete
+  name: блок управления
+  description: Нужен чтобы подать команду сложнее чем вкл/выкл.
+  components:
+  - type: Tag
+    tags:
+    - OH14_ControlUnitComplete
+  - type: Construction
+    graph: OH14_ControlUnit
+    node: OH14_ControlUnitComplete
+  - type: Sprite
+    layers:
+    - state: control_unit_3
+      map: ["base"]

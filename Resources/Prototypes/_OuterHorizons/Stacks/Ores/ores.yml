@@ -1,0 +1,41 @@
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Iron
+  name: stack-ore-iron
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores.rsi", state: iron_3 }
+  spawn: OH14_OreIron1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Copper
+  name: stack-ore-copper
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores.rsi", state: copper_3 }
+  spawn: OH14_OreCopper1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Gold
+  name: stack-ore-gold
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores.rsi", state: gold_3 }
+  spawn: OH14_OreGold1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Platinum
+  name: stack-ore-platinum
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores.rsi", state: platinum_3 }
+  spawn: OH14_OrePlatinum1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Silicon
+  name: stack-ore-silicon
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores.rsi", state: silicon_3 }
+  spawn: OH14_OreSilicon1
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_Cobalt
+  name: stack-ore-cobalt
+  icon: { sprite: "_OuterHorizons/Objects/Materials/ores.rsi", state: cobalt_3 }
+  spawn: OH14_OreCobalt1

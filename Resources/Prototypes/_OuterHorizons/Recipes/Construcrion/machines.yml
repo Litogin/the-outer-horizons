@@ -22,6 +22,18 @@
 
 - type: construction
   hide: false
+  id: OH14_FrameOreProcessor
+  graph: OH14_FrameOreProcessor
+  startNode: start
+  targetNode: OH14_OreProcessor
+  category: construction-category-machines
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
   id: OH14_ProtolatheFrame
   graph: OH14_ProtolatheFrame
   startNode: start

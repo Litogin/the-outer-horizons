@@ -19,7 +19,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
                 prototype: OH14_SheetGirder1
                 amount: 1
           steps:
@@ -27,12 +27,12 @@
               doAfter: 1
         - to: OH14_Table
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 1
               doAfter: 1
         - to: OH14_Workbench
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 4
               doAfter: 1
     - node: OH14_Table
@@ -40,8 +40,8 @@
       edges:
         - to: TableFrame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 1
           steps:
             - tool: Anchoring
@@ -51,8 +51,8 @@
       edges:
         - to: TableFrame
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_Component1
               amount: 4
           steps:
             - tool: Prying

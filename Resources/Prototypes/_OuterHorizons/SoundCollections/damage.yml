@@ -8,3 +8,8 @@
   files:
   - /Audio/_OuterHorizons/Effects/heavy_metal_hit_1.ogg
   - /Audio/_OuterHorizons/Effects/heavy_metal_hit_2.ogg
+
+- type: soundCollection
+  id: OH14_StoneDamage
+  files:
+  - /Audio/_OuterHorizons/Effects/stone_damage.ogg

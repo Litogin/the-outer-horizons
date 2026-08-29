@@ -16,6 +16,10 @@
             "directions": 4
         },
         {
+            "name": "heat",
+            "directions": 4
+        },
+        {
             "name": "frame",
             "directions": 4
         }

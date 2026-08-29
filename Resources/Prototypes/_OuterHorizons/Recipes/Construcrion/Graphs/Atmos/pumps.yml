@@ -9,7 +9,7 @@
       - material: OH14_Piping
         amount: 1
         doAfter: 1
-      - material: OH14_Components
+      - material: OH14_Component
         amount: 1
         doAfter: 1
     - to: OH14_GasPressurePump
@@ -17,7 +17,7 @@
       - material: OH14_Piping
         amount: 1
         doAfter: 1
-      - material: OH14_Components
+      - material: OH14_Component
         amount: 1
         doAfter: 1
     - to: OH14_GasVolumePump
@@ -25,7 +25,7 @@
       - material: OH14_Piping
         amount: 1
         doAfter: 1
-      - material: OH14_Components
+      - material: OH14_Component
         amount: 1
         doAfter: 1
     - to: OH14_GasPassiveGate
@@ -33,7 +33,7 @@
       - material: OH14_Piping
         amount: 1
         doAfter: 1
-      - material: OH14_Components
+      - material: OH14_Component
         amount: 1
         doAfter: 1
     - to: OH14_GasValve
@@ -41,7 +41,7 @@
       - material: OH14_Piping
         amount: 1
         doAfter: 1
-      - material: OH14_Components
+      - material: OH14_Component
         amount: 1
         doAfter: 1
 
@@ -53,11 +53,11 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
-        prototype: OH14_SheetComponents1
+      - !type:GivePrototype
+        prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
       steps:
@@ -71,11 +71,11 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
-        prototype: OH14_SheetComponents1
+      - !type:GivePrototype
+        prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
       steps:
@@ -89,11 +89,11 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
-        prototype: OH14_SheetComponents1
+      - !type:GivePrototype
+        prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
       steps:
@@ -107,11 +107,11 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
-        prototype: OH14_SheetComponents1
+      - !type:GivePrototype
+        prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
       steps:
@@ -125,11 +125,11 @@
       - !type:EntityAnchored
         anchored: false
       completed:
-      - !type:SpawnPrototype
+      - !type:GivePrototype
         prototype: OH14_SheetPipes1
         amount: 1
-      - !type:SpawnPrototype
-        prototype: OH14_SheetComponents1
+      - !type:GivePrototype
+        prototype: OH14_Component1
         amount: 1
       - !type:DeleteEntity
       steps:

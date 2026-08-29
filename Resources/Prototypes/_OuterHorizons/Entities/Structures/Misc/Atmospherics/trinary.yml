@@ -16,14 +16,17 @@
       nodes:
         inlet:
           !type:PipeNode
+          volume: 50
           nodeGroupID: Pipe
           pipeDirection: North
         filter:
           !type:PipeNode
+          volume: 50
           nodeGroupID: Pipe
           pipeDirection: West
         outlet:
           !type:PipeNode
+          volume: 50
           nodeGroupID: Pipe
           pipeDirection: South
 
@@ -122,14 +125,17 @@
     nodes:
       inlet:
         !type:PipeNode
+        volume: 50
         nodeGroupID: Pipe
         pipeDirection: South
       filter:
         !type:PipeNode
+        volume: 50
         nodeGroupID: Pipe
         pipeDirection: West
       outlet:
         !type:PipeNode
+        volume: 50
         nodeGroupID: Pipe
         pipeDirection: North
 
@@ -221,14 +227,17 @@
     nodes:
       inlet:
         !type:PipeNode
+        volume: 50
         nodeGroupID: Pipe
         pipeDirection: South
       filter:
         !type:PipeNode
+        volume: 50
         nodeGroupID: Pipe
         pipeDirection: West
       outlet:
         !type:PipeNode
+        volume: 50
         nodeGroupID: Pipe
         pipeDirection: North
   - type: Construction

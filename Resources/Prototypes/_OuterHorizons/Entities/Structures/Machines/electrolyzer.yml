@@ -4,102 +4,105 @@
   name: электролизер
   description: Разделяет воду на кислород и водород через электролиз.
   components:
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 100
-        behaviors:
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalBreak
-        # - !type:ChangeConstructionNodeBehavior
-        #   node: frame3
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
-    - type: Pullable
-    - type: LitOnPowered
-    - type: PointLight
-      radius: 1.5
-      energy: 2
-      castShadows: true
-      enabled: false
-      color: "#b0a531"
-    - type: AmbientOnPowered
-    - type: AmbientSound
-      enabled: false
-      volume: 1
-      range: 4
-      sound:
-        path: /Audio/_OuterHorizons/Machines/computer.ogg
-    - type: PowerSwitch
-    - type: Tag
-      tags:
-        - Unstackable
-    - type: NodeContainer
-      nodes:
-        inlet:
-          !type:PlumbingNode
-          nodeGroupID: Plumbing
-          pipeDirection: North
-          volume: 50
-        outlet:
-          !type:PipeNode
-          nodeGroupID: Pipe
-          pipeDirection: South
-          volume: 50
-    - type: PlumbingDevice
-      updateInterval: 2
-    - type: PlumbingInlet
-      solutionName: tank
-    - type: SolutionContainerManager
-      solutions:
-        tank:
-          maxVol: 50
-    - type: Sprite
-      sprite: _OuterHorizons/Structures/Machines/electrolyzer.rsi
-      noRot: true
-      layers:
-        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
-          state: pipeUnaryConnectors
-          map: [ "enum.PipeVisualLayers.Pipe" ]
-        - state: electrolyzer
-        - state: electrolyzer-on
-          map: ["enum.PowerDeviceVisualLayers.Powered"]
-          shader: unshaded
-    - type: Appearance
-    - type: GenericVisualizer
-      visuals:
-        enum.PowerDeviceVisuals.Powered:
-          enum.PowerDeviceVisualLayers.Powered:
-            True: { visible: true }
-            False: { visible: false }
-    - type: PlumbingConnectorAppearance
-    - type: AtmosDevice
-      joinSystem: true
-    - type: PipeAppearance
-    - type: PipeColorVisuals
-    - type: Electrolyzer
-    - type: Rotatable
-    - type: Transform
-      anchored: true
-      noRot: false
-    - type: Physics
-      bodyType: Static
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.4,-0.4,0.4,0.4"
-          density: 350
-          mask:
-          - MachineMask
-          layer:
-          - MachineLayer
-    - type: AtmosPipeLayers
-      spriteLayersRsiPaths:
-        enum.PipeVisualLayers.Pipe:
-          Primary: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
-          Secondary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
-          Tertiary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+  - type: Construction
+    graph: OH14_ElectrolyzerFrame
+    node: OH14_Electrolyzer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      # - !type:ChangeConstructionNodeBehavior
+      #   node: frame3
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Pullable
+  - type: LitOnPowered
+  - type: PointLight
+    radius: 1.5
+    energy: 2
+    castShadows: true
+    enabled: false
+    color: "#b0a531"
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    enabled: false
+    volume: 1
+    range: 4
+    sound:
+      path: /Audio/_OuterHorizons/Machines/computer.ogg
+  - type: PowerSwitch
+  - type: Tag
+    tags:
+      - Unstackable
+  - type: NodeContainer
+    nodes:
+      inlet:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: North
+        volume: 50
+      outlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        volume: 50
+  - type: PlumbingDevice
+    updateInterval: 2
+  - type: PlumbingInlet
+    solutionName: tank
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 50
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/electrolyzer.rsi
+    noRot: true
+    layers:
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeUnaryConnectors
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+      - state: electrolyzer
+      - state: electrolyzer-on
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+        shader: unshaded
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: PlumbingConnectorAppearance
+  - type: AtmosDevice
+    joinSystem: true
+  - type: PipeAppearance
+  - type: PipeColorVisuals
+  - type: Electrolyzer
+  - type: Rotatable
+  - type: Transform
+    anchored: true
+    noRot: false
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 350
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: AtmosPipeLayers
+    spriteLayersRsiPaths:
+      enum.PipeVisualLayers.Pipe:
+        Primary: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        Secondary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+        Tertiary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi

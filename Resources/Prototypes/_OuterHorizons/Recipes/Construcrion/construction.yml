@@ -59,7 +59,7 @@
   id: OH14_Window
   graph: OH14_Window
   startNode: start
-  targetNode: OH14_WindowGirder
+  targetNode: OH14_Window
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -75,6 +75,19 @@
   graph: OH14_WallDirectional
   startNode: start
   targetNode: OH14_WallDirectional
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_HeatWallDirectional
+  graph: OH14_WallDirectional
+  startNode: start
+  targetNode: OH14_HeatWallDirectional
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -177,3 +190,17 @@
   canBuildInImpassable: true
   conditions:
     - !type:WallmountCondition
+
+- type: construction
+  hide: false
+  id: OH14_Catwalk
+  graph: OH14_Catwalk
+  startNode: start
+  targetNode: OH14_Catwalk
+  category: construction-category-structures
+  conditions:
+    - !type:TileNotBlocked
+      failIfSpace: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false

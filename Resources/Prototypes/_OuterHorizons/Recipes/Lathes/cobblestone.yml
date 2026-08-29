@@ -1,0 +1,41 @@
+- type: latheRecipe
+  id: OH14_Cobblestone
+  result: OH14_OreIron1
+  materials:
+    OH14_Cobblestone: 400
+  completetime: 3
+
+- type: latheRecipe
+  id: OH14_CobblestoneIron
+  result: OH14_OreIron1
+  materials:
+    OH14_CobblestoneIron: 100
+  completetime: 3
+
+- type: latheRecipe
+  id: OH14_CobblestoneCopper
+  result: OH14_OreCopper1
+  materials:
+    OH14_CobblestoneCopper: 100
+  completetime: 3
+
+- type: latheRecipe
+  id: OH14_CobblestoneGold
+  result: OH14_OreGold1
+  materials:
+    OH14_CobblestoneGold: 100
+  completetime: 3
+
+- type: latheRecipe
+  id: OH14_CobblestoneSilicon
+  result: OH14_OreSilicon1
+  materials:
+    OH14_CobblestoneSilicon: 100
+  completetime: 3
+
+- type: latheRecipe
+  id: OH14_CobblestoneCobalt
+  result: OH14_OreCobalt1
+  materials:
+    OH14_CobblestoneCobalt: 100
+  completetime: 3

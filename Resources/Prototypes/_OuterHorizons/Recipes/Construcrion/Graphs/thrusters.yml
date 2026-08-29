@@ -12,12 +12,13 @@
             - material: OH14_Girders
               amount: 2
               doAfter: 1
+
     - node: frame1
       entity: OH14_FrameThrusterR
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 2
             - !type:DeleteEntity {}
@@ -32,9 +33,10 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 2
               doAfter: 1
+
     - node: frame2
       actions:
       - !type:AppearanceChange
@@ -42,8 +44,8 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 2
           steps:
             - tool: Screwing
@@ -53,8 +55,8 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
-              amount: 5
+            - tag: OH14_HeatChamber
+              name: construction-graph-tag-heatchamber
               doAfter: 1
     - node: frame3
       actions:
@@ -63,9 +65,9 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
-              amount: 5
+            - !type:GivePrototype
+              prototype: OH14_HeatChamber
+              amount: 1
           steps:
             - tool: Screwing
               doAfter: 2
@@ -74,17 +76,17 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
-              amount: 5
+            - tag: OH14_Motor
+              name: construction-graph-tag-motor
               doAfter: 1
     - node: OH14_ThrusterR
       entity: OH14_ThrusterPressureRed
       edges:
         - to: frame3
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
-              amount: 5
+            - !type:GivePrototype
+              prototype: OH14_Motor
+              amount: 1
           conditions:
             - !type:EntityAnchored
               anchored: false
@@ -115,7 +117,7 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_SheetGirder1
               amount: 1
             - !type:DeleteEntity {}
@@ -130,7 +132,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 2
               doAfter: 1
     - node: frame2
@@ -140,8 +142,8 @@
       edges:
         - to: frame1
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 2
           steps:
             - tool: Screwing
@@ -151,7 +153,7 @@
             - !type:EntityAnchored
               anchored: true
           steps:
-            - material: OH14_Components
+            - material: OH14_Component
               amount: 4
               doAfter: 1
     - node: OH14_Gyroscope
@@ -159,8 +161,8 @@
       edges:
         - to: frame2
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetComponents1
+            - !type:GivePrototype
+              prototype: OH14_Component1
               amount: 4
           conditions:
             - !type:EntityAnchored

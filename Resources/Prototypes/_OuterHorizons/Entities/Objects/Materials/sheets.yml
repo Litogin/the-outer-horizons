@@ -1,0 +1,356 @@
+# База
+
+- type: entity
+  parent: [ OH14_ItemSFXMetallic, OH14_BasicMaterialStack ]
+  id: OH14_BasicStackSheet
+  abstract: true
+  name: лист
+  description: Выплавленный из руды лист
+  components:
+  - type: InworldSprite
+  - type: GenericVisualizer
+    visuals:
+      enum.InworldSpriteState.State:
+        base:
+          True: {sprite: _OuterHorizons/Objects/Materials/sheets.rsi}
+          False: {sprite: _OuterHorizons/Objects/Materials/sheets_inworld.rsi}
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Materials/sheets_inworld.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Materials/sheets.rsi
+  - type: Appearance
+  - type: Tag
+    tags:
+    - OH14_MaterialStack
+
+# Железо
+
+- type: entity
+  parent: OH14_BasicStackSheet
+  id: OH14_SheetIron
+  name: железный лист
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetIron: 100
+  - type: Item
+    heldPrefix: iron
+  - type: Stack
+    count: 16
+    stackType: OH14_SheetIron
+    baseLayer: base
+    layerStates:
+    - iron
+    - iron_2
+    - iron_3
+  - type: Sprite
+    layers:
+    - state: iron_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_SheetIron
+  id: OH14_SheetIron8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: iron_2
+  - type: Stack
+    stackType: OH14_SheetIron
+    count: 8
+
+- type: entity
+  parent: OH14_SheetIron
+  id: OH14_SheetIron1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: iron
+  - type: Stack
+    stackType: OH14_SheetIron
+    count: 1
+
+# Медь
+
+- type: entity
+  parent: OH14_BasicStackSheet
+  id: OH14_SheetCopper
+  name: медный лист
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetCopper: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_SheetCopper
+    baseLayer: base
+    layerStates:
+    - copper
+    - copper_2
+    - copper_3
+  - type: Sprite
+    layers:
+    - state: copper_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_SheetCopper
+  id: OH14_SheetCopper8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: copper_2
+  - type: Stack
+    stackType: OH14_SheetCopper
+    count: 8
+
+- type: entity
+  parent: OH14_SheetCopper
+  id: OH14_SheetCopper1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: copper
+  - type: Stack
+    stackType: OH14_SheetCopper
+    count: 1
+
+# Золото
+
+- type: entity
+  parent: OH14_BasicStackSheet
+  id: OH14_SheetGold
+  name: золотой лист
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetGold: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_SheetGold
+    baseLayer: base
+    layerStates:
+    - gold
+    - gold_2
+    - gold_3
+  - type: Sprite
+    layers:
+    - state: gold_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_SheetGold
+  id: OH14_SheetGold8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: gold_2
+  - type: Stack
+    stackType: OH14_SheetGold
+    count: 8
+
+- type: entity
+  parent: OH14_SheetGold
+  id: OH14_SheetGold1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: gold
+  - type: Stack
+    stackType: OH14_SheetGold
+    count: 1
+
+# Платина
+
+- type: entity
+  parent: OH14_BasicStackSheet
+  id: OH14_SheetPlatinum
+  name: платиновый лист
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetPlatinum: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_SheetPlatinum
+    baseLayer: base
+    layerStates:
+    - platinum
+    - platinum_2
+    - platinum_3
+  - type: Sprite
+    layers:
+    - state: platinum_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_SheetPlatinum
+  id: OH14_SheetPlatinum8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: platinum_2
+  - type: Stack
+    stackType: OH14_SheetPlatinum
+    count: 8
+
+- type: entity
+  parent: OH14_SheetPlatinum
+  id: OH14_SheetPlatinum1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: platinum
+  - type: Stack
+    stackType: OH14_SheetPlatinum
+    count: 1
+
+# Кремний
+
+- type: entity
+  parent: OH14_BasicStackSheet
+  id: OH14_SheetSilicon
+  name: кремниевый лист
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetSilicon: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_SheetSilicon
+    baseLayer: base
+    layerStates:
+    - silicon
+    - silicon_2
+    - silicon_3
+  - type: Sprite
+    layers:
+    - state: silicon_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_SheetSilicon
+  id: OH14_SheetSilicon8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: silicon_2
+  - type: Stack
+    stackType: OH14_SheetSilicon
+    count: 8
+
+- type: entity
+  parent: OH14_SheetSilicon
+  id: OH14_SheetSilicon1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: silicon
+  - type: Stack
+    stackType: OH14_SheetSilicon
+    count: 1
+
+# Стекло
+
+- type: entity
+  parent: [ OH14_ItemSFXHightGlass, OH14_BasicStackSheet ]
+  id: OH14_SheetGlass
+  name: стеклянный лист
+  description: Лучше бы мы делали транзисторы.
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetGlass: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_SheetGlass
+    baseLayer: base
+    layerStates:
+    - glass
+    - glass_2
+    - glass_3
+  - type: Sprite
+    layers:
+    - state: glass_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_SheetGlass
+  id: OH14_SheetGlass8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: glass_2
+  - type: Stack
+    stackType: OH14_SheetGlass
+    count: 8
+
+- type: entity
+  parent: OH14_SheetGlass
+  id: OH14_SheetGlass1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: glass
+  - type: Stack
+    stackType: OH14_SheetGlass
+    count: 1
+
+# Кобальт
+
+- type: entity
+  parent: OH14_BasicStackSheet
+  id: OH14_SheetCobalt
+  name: кобальтовый лист
+  suffix: 16
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      OH14_SheetCobalt: 100
+  - type: Stack
+    count: 16
+    stackType: OH14_SheetCobalt
+    baseLayer: base
+    layerStates:
+    - cobalt
+    - cobalt_2
+    - cobalt_3
+  - type: Sprite
+    layers:
+    - state: cobalt_3
+      map: ["base"]
+
+- type: entity
+  parent: OH14_SheetCobalt
+  id: OH14_SheetCobalt8
+  suffix: 8
+  components:
+  - type: Sprite
+    state: cobalt_2
+  - type: Stack
+    stackType: OH14_SheetCobalt
+    count: 8
+
+- type: entity
+  parent: OH14_SheetCobalt
+  id: OH14_SheetCobalt1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: cobalt
+  - type: Stack
+    stackType: OH14_SheetCobalt
+    count: 1

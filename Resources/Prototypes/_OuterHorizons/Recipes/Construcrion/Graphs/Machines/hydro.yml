@@ -26,7 +26,7 @@
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: OH14_Materials
+            - material: OH14_SheetIron
               amount: 3
               doAfter: 2
     - node: OH14_PlantPotDirtEmpty
@@ -34,8 +34,8 @@
       edges:
         - to: start
           completed:
-            - !type:SpawnPrototype
-              prototype: OH14_SheetMaterials1
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
               amount: 3
             - !type:DeleteEntity
           steps:
@@ -54,7 +54,7 @@
       edges:
         - to: OH14_PlantPotDirtEmpty
           completed:
-            - !type:SpawnPrototype
+            - !type:GivePrototype
               prototype: OH14_Dirt1
               amount: 3
             - !type:DeleteEntity

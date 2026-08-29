@@ -155,6 +155,7 @@
 - type: entity
   parent: OH14_PDA
   id: OH14_PDARRE
+  suffix: Ringnova
   components:
   - type: Pda
     id: OH14_IDCardRRE
@@ -164,6 +165,7 @@
 - type: entity
   parent: OH14_PDA
   id: OH14_PDARRECommander
+  suffix: RingnovaCom
   components:
   - type: Pda
     id: OH14_IDCardRRECommander
@@ -173,6 +175,7 @@
 - type: entity
   parent: OH14_PDA
   id: OH14_PDAUCO
+  suffix: Colonist
   components:
   - type: Pda
     id: OH14_IDCardUCO
@@ -182,6 +185,7 @@
 - type: entity
   parent: OH14_PDA
   id: OH14_PDAUCOCommander
+  suffix: ColonistCom
   components:
   - type: Pda
     id: OH14_IDCardUCOCommander

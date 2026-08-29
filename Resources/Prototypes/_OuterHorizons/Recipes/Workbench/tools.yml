@@ -1,0 +1,150 @@
+# Рукоятки
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Handle
+  category: Tools
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  result: OH14_Handle
+  resultCount: 2
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_MediumHandle
+  category: Tools
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 1
+  result: OH14_MediumHandle
+  resultCount: 1
+
+# Приклад
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_Buttstock
+  category: Tools
+  craftTime: 2
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  result: OH14_Buttstock
+  resultCount: 1
+
+# Наконечники кирки
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_PickaxeTip
+  category: Tools
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 4
+  result: OH14_PickaxeTip
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_PickaxeTipT2
+  category: Tools
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_SheetCobalt
+    count: 2
+  result: OH14_PickaxeTipT2
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_PickaxeTipT3
+  category: Tools
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_SheetPlatinum
+    count: 2
+  result: OH14_PickaxeTipT3
+  resultCount: 1
+
+# Бур
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_MiningDrillConstruction
+  category: Tools
+  craftTime: 6
+  requirements:
+  - !type:StackResource
+    stack: OH14_Battery
+    count: 4
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_Component
+    count: 2
+  - !type:ProtoIdResource
+    protoId: OH14_Motor
+    count: 1
+  result: OH14_MiningDrillConstruction
+  resultCount: 1
+
+# Наконечники бура
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_MiningDrillTip
+  category: Tools
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 6
+  result: OH14_MiningDrillTip
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_MiningDrillTipT2
+  category: Tools
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_SheetCobalt
+    count: 4
+  result: OH14_MiningDrillTipT2
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_MiningDrillTipT3
+  category: Tools
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_SheetIron
+    count: 2
+  - !type:StackResource
+    stack: OH14_SheetPlatinum
+    count: 4
+  result: OH14_MiningDrillTipT3
+  resultCount: 1

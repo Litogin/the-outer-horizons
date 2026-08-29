@@ -1,0 +1,55 @@
+- type: latheRecipe
+  id: OH14_CircuitboardShuttle
+  completetime: 3
+  result: OH14_CircuitboardShuttle
+  materials:
+    OH14_Component: 100
+    OH14_Circuit: 500
+
+- type: latheRecipe
+  id: OH14_CircuitboardRadar
+  completetime: 3
+  result: OH14_CircuitboardRadar
+  materials:
+    OH14_Component: 100
+    OH14_Circuit: 100
+
+- type: latheRecipe
+  id: OH14_CircuitboardAtmos
+  completetime: 3
+  result: OH14_CircuitboardAtmos
+  materials:
+    OH14_Component: 100
+    OH14_Circuit: 250
+
+- type: latheRecipe
+  id: OH14_CircuitboardPower
+  completetime: 3
+  result: OH14_CircuitboardPower
+  materials:
+    OH14_Component: 100
+    OH14_Circuit: 250
+
+- type: latheRecipe
+  id: OH14_CircuitboardComms
+  completetime: 3
+  result: OH14_CircuitboardComms
+  materials:
+    OH14_Component: 100
+    OH14_Circuit: 100
+
+- type: latheRecipe
+  id: OH14_CircuitboardUpgradeAutolathe
+  completetime: 3
+  result: OH14_CircuitboardUpgradeAutolathe
+  materials:
+    OH14_Component: 100
+    OH14_Circuit: 100
+
+- type: latheRecipe
+  id: OH14_DoorElectronics
+  completetime: 3
+  result: OH14_DoorElectronics
+  materials:
+    OH14_Component: 100
+    OH14_Circuit: 100

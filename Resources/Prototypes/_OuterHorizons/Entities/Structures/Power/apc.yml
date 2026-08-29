@@ -120,10 +120,10 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 1
             max: 2
-          OH14_SheetElectronics1:
+          OH14_Circuit1:
             min: 0
             max: 1
       - !type:DoActsBehavior
@@ -176,7 +176,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 1
             max: 1
       - !type:PlaySoundBehavior

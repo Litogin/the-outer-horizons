@@ -29,7 +29,7 @@
         insertSound: /Audio/_OuterHorizons/Storage/canister_in.ogg
         ejectSound: /Audio/_OuterHorizons/Storage/canister_out.ogg
       gasMixture:
-        volume: 1500
+        volume: 800
         moles: # List of gasses for easy reference
           - 0 # oxygen
           - 0 # nitrogen
@@ -75,10 +75,10 @@
       - state: grey
   - type: GasCanister
     gasMixture:
-      volume: 1500
+      volume: 800
       moles:
-      - 581.56 # oxygen 21%
-      - 2187.79 # nitrogen 79%
+      - 168 # oxygen 21%
+      - 632 # nitrogen 79%
       temperature: 293.15
   - type: Destructible
     thresholds:
@@ -114,9 +114,9 @@
       - state: blue
   - type: GasCanister
     gasMixture:
-      volume: 1500
+      volume: 800
       moles:
-      - 2769.36 # oxygen
+      - 800 # oxygen
       temperature: 293.15
   - type: Destructible
     thresholds:
@@ -149,10 +149,10 @@
   components:
   - type: Sprite
     layers:
-      - state: blue
+      - state: blue_ithink
   - type: GasCanister
     gasMixture:
-      volume: 1500
+      volume: 800
       moles:
       - 0
       - 0
@@ -163,7 +163,7 @@
       - 0
       - 0
       - 0
-      - 2769.36 # hydrogen
+      - 800 # hydrogen
       temperature: 293.15
   - type: Destructible
     thresholds:
@@ -182,7 +182,7 @@
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_OxygenCanisterBroken:
+          OH14_HydrogenCanisterBroken:
             min: 1
             max: 1
       - !type:DoActsBehavior
@@ -199,10 +199,10 @@
         - state: red
     - type: GasCanister
       gasMixture:
-        volume: 1500
+        volume: 800
         moles:
           - 0 # oxygen
-          - 2769.36 # nitrogen
+          - 800 # nitrogen
         temperature: 293.15
     - type: Destructible
       thresholds:
@@ -238,12 +238,12 @@
         - state: orange
     - type: GasCanister
       gasMixture:
-        volume: 1500
+        volume: 800
         moles:
           - 0 # oxygen
           - 0 # nitrogen
           - 0 # carbon dioxide
-          - 2769.36 # plasma
+          - 800 # plasma
         temperature: 293.15
     - type: Destructible
       thresholds:
@@ -294,7 +294,7 @@
             collection: MetalBreak
         - !type:SpawnEntitiesBehavior
           spawn:
-            OH14_SheetMaterials1:
+            OH14_SheetIron1:
               min: 1
               max: 2
         - !type:DoActsBehavior
@@ -348,6 +348,13 @@
 
 - type: entity
   parent: OH14_GasCanisterBrokenBase
+  id: OH14_HydrogenCanisterBroken
+  components:
+  - type: Sprite
+    state: blue_ithink-1
+
+- type: entity
+  parent: OH14_GasCanisterBrokenBase
   id: OH14_NitrogenCanisterBroken
   components:
   - type: Sprite
@@ -393,7 +400,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          OH14_SheetMaterials1:
+          OH14_SheetIron1:
             min: 1
             max: 2
       - !type:DoActsBehavior
