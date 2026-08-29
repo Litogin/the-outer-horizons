@@ -74,31 +74,8 @@ public partial class RadiationSystem
             var rads = 0f;
             foreach (var source in _sources)
             {
-                if (!source.Entity.Comp1.IgnoreDistation) //OuterHorizons
-                {
-                    // send ray towards destination entity
-                    if (Irradiate(source, destUid, destTrs, destWorld, debug) is not { } ray)
-                        continue;
-
-                    // add rads to total rad exposure
-                    if (ray.ReachedDestination)
-                        rads += ray.Rads;
-
-                    if (!debug)
-                        continue;
-
-                    debugRays!.Add(new DebugRadiationRay(
-                        ray.MapId,
-                        GetNetEntity(ray.SourceUid),
-                        ray.Source,
-                        GetNetEntity(ray.DestinationUid),
-                        ray.Destination,
-                        ray.Rads,
-                        ray.Blockers ?? new())
-                    );
                 //OuterHorizons-Start
-                }
-                else
+                if (source.Entity.Comp1.IgnoreDistation) //OuterHorizons
                 {
                     if (HasComp<ProtectSolarRadiationComponent>(destUid))
                         rads = 0f;
@@ -106,6 +83,27 @@ public partial class RadiationSystem
                         rads = source.Entity.Comp1.Intensity;
                 }
                 //OuterHorizons-End
+                    
+                // send ray towards destination entity
+                if (Irradiate(source, destUid, destTrs, destWorld, debug) is not { } ray)
+                        continue;
+
+                // add rads to total rad exposure
+                if (ray.ReachedDestination)
+                    rads += ray.Rads;
+
+                if (!debug)
+                    continue;
+
+                debugRays!.Add(new DebugRadiationRay(
+                    ray.MapId,
+                    GetNetEntity(ray.SourceUid),
+                    ray.Source,
+                    GetNetEntity(ray.DestinationUid),
+                    ray.Destination,
+                    ray.Rads,
+                    ray.Blockers ?? new())
+                );
             }
 
             // Apply modifier if the destination entity is hidden within a radiation blocking container
