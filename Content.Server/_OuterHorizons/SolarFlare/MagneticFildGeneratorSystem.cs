@@ -9,10 +9,10 @@ public sealed class MagneticFieldGeneratorSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<MagneticFieldGeneratorComponent, PowerChangedEvent>(OnPowerChanget);
+        SubscribeLocalEvent<MagneticFieldGeneratorComponent, PowerChangedEvent>(OnPowerChanged);
     }
 
-    public void OnPowerChanget(EntityUid uid, MagneticFieldGeneratorComponent comp, ref PowerChangedEvent args)
+    public void OnPowerChanged(EntityUid uid, MagneticFieldGeneratorComponent comp, ref PowerChangedEvent args)
     {
         if (!args.Powered)
         {
