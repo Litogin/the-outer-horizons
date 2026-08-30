@@ -16,17 +16,17 @@ public sealed class MagneticFieldGeneratorSystem : EntitySystem
     {
         if (!args.Powered)
         {
-            if (comp.Filed is not null)
+            if (comp.FieldUid is not null)
             {
-                QueueDel(comp.Filed);
-                comp.Filed = null;
+                QueueDel(comp.FieldUid);
+                comp.FieldUid = null;
             }
         }
         else
         {
-            if (comp.Filed is null)
+            if (comp.FieldUid is null)
             {
-                comp.Filed = Spawn(comp.ProtoSpawnId, Transform(uid).Coordinates);
+                comp.FieldUid = Spawn(comp.ProtoSpawnId, Transform(uid).Coordinates);
             }
         }
     }
