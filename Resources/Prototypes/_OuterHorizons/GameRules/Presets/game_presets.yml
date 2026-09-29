@@ -40,4 +40,4 @@
   rules:
     - OH14_MeteorSwarmScheduler
     - OH14_BasicStationEventScheduler
-    - OH14_BasicStationEndedRoundScheduler
+    - OH14_BasicRoundEndScheduler

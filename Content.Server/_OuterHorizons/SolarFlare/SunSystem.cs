@@ -1,5 +1,5 @@
 using Content.Server._OuterHorizons.SolarFlare.Components;
-using Content.Server.GameTicking;
+using Content.Server.RoundEnd;
 using Content.Shared.Radiation.Components;
 
 namespace Content.Shared.SolarFlare;
@@ -7,7 +7,7 @@ namespace Content.Shared.SolarFlare;
 public sealed class SunSystem : EntitySystem
 {
 
-    [Dependency] private GameTicker _gameTicker = default!;
+    [Dependency] private readonly RoundEndSystem _roundEnd = default!;
 
     public override void Initialize()
     {
@@ -35,6 +35,7 @@ public sealed class SunSystem : EntitySystem
         var radSourceComp = AddComp<RadiationSourceComponent>(uid);
         radSourceComp.IgnoreDistation = true;
         radSourceComp.Slope = 0f;
+        radSourceComp.Intensity = 0.1f;
         comp.RemainingTime = comp.TimeSolarFlare;
     }
 
@@ -68,7 +69,7 @@ public sealed class SunSystem : EntitySystem
             if (comp.IsEndSolarFlame)
                 return;
 
-            _gameTicker.EndRound();
+            _roundEnd.EndRound();
             comp.SolarFlareOnRadiation = 0;
             comp.IsEndSolarFlame = true;
         }
